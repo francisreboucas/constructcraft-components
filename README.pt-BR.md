@@ -53,7 +53,7 @@ As fontes de paisagismo são geradas: [`tools/vegetation.py`](tools/vegetation.p
 
 ## Compatibilidade
 
-Formato `.ccomp` versão 1, gerado com o ConstructCAD 0.6.0. Os arquivos abrem no ConstructCAD 0.6.0 ou mais recente (portas e janelas exigem a 0.6.0; na 0.5.0 os demais componentes abrem sem os conectores).
+Formato `.ccomp` versão 1, gerado com o ConstructCAD 0.9.0. Os arquivos abrem no ConstructCAD 0.6.0 ou mais recente (portas e janelas exigem a 0.6.0; na 0.5.0 os demais componentes abrem sem os conectores).
 
 ## Licença
 

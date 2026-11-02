@@ -53,7 +53,7 @@ The planting sources are generated: [`tools/vegetation.py`](tools/vegetation.py)
 
 ## Compatibility
 
-`.ccomp` format version 1, built with ConstructCAD 0.6.0. Files load in ConstructCAD 0.6.0 and later (doors and windows need 0.6.0; in 0.5.0 the other components load without their connectors).
+`.ccomp` format version 1, built with ConstructCAD 0.9.0. Files load in ConstructCAD 0.6.0 and later (doors and windows need 0.6.0; in 0.5.0 the other components load without their connectors).
 
 ## License
 
