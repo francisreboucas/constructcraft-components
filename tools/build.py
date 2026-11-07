@@ -4,7 +4,7 @@
     python tools/build.py            build sources/ into components/, validate, write the catalog
     python tools/build.py --check    fail if anything is invalid or out of date (CI)
 
-Every .ccomp is produced and checked by ConstructCAD itself (`ccad`), so the
+Every .ccomp is produced and checked by ConstructCraft itself (`ccad`), so the
 files always match the format the app reads. `ccad` is found through
 `--ccad`, the CCAD environment variable or the PATH.
 """
@@ -117,7 +117,7 @@ def build(exe: str, out_root: Path) -> list[Path]:
             src = json.loads(path.read_text(encoding="utf-8"))
             taken = template_types & ({src["component"]} | {t["name"] for t in src["types"]})
             if taken:
-                raise BuildError(f"names already used by the ConstructCAD template: {', '.join(sorted(taken))}")
+                raise BuildError(f"names already used by the ConstructCraft template: {', '.join(sorted(taken))}")
             script = build_script(src, out.resolve(), template_materials)
             ccad(exe, "script", "-", stdin="\n".join(json.dumps(s, ensure_ascii=False) for s in script))
         except (BuildError, KeyError, json.JSONDecodeError) as e:
