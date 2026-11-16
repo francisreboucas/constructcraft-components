@@ -37,9 +37,10 @@ Depois rode `python tools/build.py --ccad caminho/do/ccad` e inclua no commit a 
 
 ## Convenções
 
-- **Pastas**: `furniture`, `casework`, `plumbing`, `electrical`, `lighting`, `planting`, `doors`, `windows`. Arquivos em minúsculas com hífens, sem acentos: `pia-cozinha.json`.
+- **Pastas**: `furniture`, `casework`, `plumbing`, `fittings`, `electrical`, `lighting`, `planting`, `doors`, `windows`. Arquivos em minúsculas com hífens, sem acentos: `pia-cozinha.json`.
 - **Origem e eixos**: metros; origem no ponto de inserção, X para a direita, Y para o fundo (a parede), Z para cima. Móveis e louças centrados na origem, com o lado encostado à parede em +Y. Dispositivos de parede ocupam `y` de `-Profundidade` a `0` e começam em `z = 0` (o ConstructCraft aplica a altura de montagem). Luminárias de teto ficam abaixo de `z = 0`. Vegetação fica com o tronco na origem e a base no chão (`z = 0`).
 - **Paisagismo**: as fontes de `sources/planting/` saem de `tools/vegetation.py`; altere o gerador, não o JSON. Cada espécie é uma malha fixa no porte adulto, por isso é um componente próprio com um tipo (o ConstructCraft guarda uma definição por componente).
+- **Conexões**: as fontes de `sources/fittings/` saem de `tools/conexoes_pvc.py`; altere o gerador, não o JSON. Os eixos dos tubos ficam no plano `z = 0` (coloque a conexão com `base_offset` na altura dos tubos) e cada conector fica no fundo do encaixe, onde termina o tubo.
 - **Parâmetros**: nomes em português, sem acentos nem espaços (`Largura`, `Profundidade`, `Altura`, `Elevacao`). Marque `instance: true` só no que muda por elemento (altura de instalação, queda de pendente).
 - **Tipos**: um componente com vários tamanhos é melhor que vários componentes. O nome do tipo diz o tamanho (`Balcão 80 cm`).
 - **Nomes únicos**: o componente e os tipos não podem repetir nomes do template do ConstructCraft; o build avisa.

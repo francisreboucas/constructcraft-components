@@ -31,6 +31,7 @@ SECTIONS = {
     "furniture": "Mobiliário · Furniture",
     "casework": "Marcenaria · Casework",
     "plumbing": "Hidrossanitário · Plumbing",
+    "fittings": "Conexões · Fittings",
     "electrical": "Elétrico · Electrical",
     "lighting": "Iluminação · Lighting",
     "planting": "Paisagismo · Planting",

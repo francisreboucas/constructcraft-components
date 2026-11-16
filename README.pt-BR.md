@@ -30,6 +30,7 @@ Cada arquivo traz um componente com vários tipos (tamanhos). Os tipos compartil
 | [`furniture`](components/furniture) | Mesas, cadeiras, camas, sofás, escrivaninhas, criados-mudos |
 | [`casework`](components/casework) | Guarda-roupas, balcões e aéreos de cozinha, estantes |
 | [`plumbing`](components/plumbing) | Bacias, lavatórios, pias, chuveiros, tanques, máquinas de lavar, banheiras, mictórios, bidês, caixas d'água, caixas de inspeção e de gordura |
+| [`fittings`](components/fittings) | Conexões de PVC-U soldável para pressão (EN ISO 1452-3), d16 a d160: joelhos 90°, tês, reduções concêntricas e tampões, com conectores no fundo dos encaixes |
 | [`electrical`](components/electrical) | TUGs, TUEs, pontos de chuveiro, interruptores, quadros de distribuição, pontos de dados e TV |
 | [`lighting`](components/lighting) | Plafons, pendentes, spots, luminárias lineares e arandelas |
 | [`planting`](components/planting) | Árvores, coníferas, palmeiras, arbustos e vasos com planta para paisagismo |

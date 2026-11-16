@@ -1,0 +1,550 @@
+{
+  "component": "Redução concêntrica PVC soldável",
+  "def": {
+    "kind": "Generic",
+    "params": [
+      {
+        "name": "Diametro",
+        "value": 0.02,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Encaixe",
+        "value": 0.016,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Espessura",
+        "value": 0.0015,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Diametro2",
+        "value": 0.016,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Encaixe2",
+        "value": 0.014,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Espessura2",
+        "value": 0.0015,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Transicao",
+        "value": 0.012,
+        "kind": "Length",
+        "instance": false
+      }
+    ],
+    "items": [
+      {
+        "name": "Encaixe maior",
+        "material": "PVC",
+        "in_plan": true,
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0 - (Diametro / 2 + Espessura)",
+                "v": "0",
+                "radius": "(Diametro / 2 + Espessura)"
+              },
+              {
+                "u": "0 + (Diametro / 2 + Espessura)",
+                "v": "0",
+                "radius": "(Diametro / 2 + Espessura)"
+              }
+            ],
+            "offset": "-(Transicao / 2) - Encaixe",
+            "depth": "Encaixe"
+          }
+        }
+      },
+      {
+        "name": "Transição",
+        "material": "PVC",
+        "in_plan": true,
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0",
+                "v": "-(Transicao / 2)"
+              },
+              {
+                "u": "(Diametro / 2 + Espessura)",
+                "v": "-(Transicao / 2)"
+              },
+              {
+                "u": "(Diametro2 / 2 + Espessura2)",
+                "v": "(Transicao / 2)"
+              },
+              {
+                "u": "0",
+                "v": "(Transicao / 2)"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        }
+      },
+      {
+        "name": "Encaixe menor",
+        "material": "PVC",
+        "in_plan": true,
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0 - (Diametro2 / 2 + Espessura2)",
+                "v": "0",
+                "radius": "(Diametro2 / 2 + Espessura2)"
+              },
+              {
+                "u": "0 + (Diametro2 / 2 + Espessura2)",
+                "v": "0",
+                "radius": "(Diametro2 / 2 + Espessura2)"
+              }
+            ],
+            "offset": "(Transicao / 2)",
+            "depth": "Encaixe2"
+          }
+        }
+      },
+      {
+        "name": "Encaixe maior vazio",
+        "material": "PVC",
+        "in_plan": false,
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0 - (Diametro / 2)",
+                "v": "0",
+                "radius": "(Diametro / 2)"
+              },
+              {
+                "u": "0 + (Diametro / 2)",
+                "v": "0",
+                "radius": "(Diametro / 2)"
+              }
+            ],
+            "offset": "-(Transicao / 2) - Encaixe - 0.001",
+            "depth": "Encaixe + 0.001"
+          }
+        },
+        "void": true
+      },
+      {
+        "name": "Transição vazio",
+        "material": "PVC",
+        "in_plan": false,
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0",
+                "v": "-(Transicao / 2) - 0.001"
+              },
+              {
+                "u": "(Diametro / 2 - Espessura)",
+                "v": "-(Transicao / 2) - 0.001"
+              },
+              {
+                "u": "(Diametro2 / 2 - Espessura2)",
+                "v": "(Transicao / 2) + 0.001"
+              },
+              {
+                "u": "0",
+                "v": "(Transicao / 2) + 0.001"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "void": true
+      },
+      {
+        "name": "Encaixe menor vazio",
+        "material": "PVC",
+        "in_plan": false,
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0 - (Diametro2 / 2)",
+                "v": "0",
+                "radius": "(Diametro2 / 2)"
+              },
+              {
+                "u": "0 + (Diametro2 / 2)",
+                "v": "0",
+                "radius": "(Diametro2 / 2)"
+              }
+            ],
+            "offset": "(Transicao / 2)",
+            "depth": "Encaixe2 + 0.001"
+          }
+        },
+        "void": true
+      }
+    ],
+    "connectors": [
+      {
+        "name": "Maior",
+        "system": "ColdWater",
+        "x": "0",
+        "y": "-(Transicao / 2)",
+        "z": "0",
+        "direction": "Front",
+        "diameter": "Diametro"
+      },
+      {
+        "name": "Menor",
+        "system": "ColdWater",
+        "x": "0",
+        "y": "(Transicao / 2)",
+        "z": "0",
+        "direction": "Back",
+        "diameter": "Diametro2"
+      }
+    ]
+  },
+  "types": [
+    {
+      "name": "Redução PVC d20 x d16",
+      "values": {
+        "Diametro": 0.02,
+        "Encaixe": 0.016,
+        "Espessura": 0.0015,
+        "Diametro2": 0.016,
+        "Encaixe2": 0.014,
+        "Espessura2": 0.0015,
+        "Transicao": 0.012
+      },
+      "info": {
+        "description": "Redução concêntrica PVC-U para colar (luva de redução), d20 x d16: encaixes 16 e 14 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+      }
+    },
+    {
+      "name": "Redução PVC d25 x d20",
+      "values": {
+        "Diametro": 0.025,
+        "Encaixe": 0.0185,
+        "Espessura": 0.0019,
+        "Diametro2": 0.02,
+        "Encaixe2": 0.016,
+        "Espessura2": 0.0015,
+        "Transicao": 0.012
+      },
+      "info": {
+        "description": "Redução concêntrica PVC-U para colar (luva de redução), d25 x d20: encaixes 18.5 e 16 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+      }
+    },
+    {
+      "name": "Redução PVC d32 x d25",
+      "values": {
+        "Diametro": 0.032,
+        "Encaixe": 0.022,
+        "Espessura": 0.0024,
+        "Diametro2": 0.025,
+        "Encaixe2": 0.0185,
+        "Espessura2": 0.0019,
+        "Transicao": 0.012
+      },
+      "info": {
+        "description": "Redução concêntrica PVC-U para colar (luva de redução), d32 x d25: encaixes 22 e 18.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+      }
+    },
+    {
+      "name": "Redução PVC d40 x d32",
+      "values": {
+        "Diametro": 0.04,
+        "Encaixe": 0.026,
+        "Espessura": 0.003,
+        "Diametro2": 0.032,
+        "Encaixe2": 0.022,
+        "Espessura2": 0.0024,
+        "Transicao": 0.012
+      },
+      "info": {
+        "description": "Redução concêntrica PVC-U para colar (luva de redução), d40 x d32: encaixes 26 e 22 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+      }
+    },
+    {
+      "name": "Redução PVC d50 x d40",
+      "values": {
+        "Diametro": 0.05,
+        "Encaixe": 0.031,
+        "Espessura": 0.0037,
+        "Diametro2": 0.04,
+        "Encaixe2": 0.026,
+        "Espessura2": 0.003,
+        "Transicao": 0.014
+      },
+      "info": {
+        "description": "Redução concêntrica PVC-U para colar (luva de redução), d50 x d40: encaixes 31 e 26 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+      }
+    },
+    {
+      "name": "Redução PVC d63 x d50",
+      "values": {
+        "Diametro": 0.063,
+        "Encaixe": 0.0375,
+        "Espessura": 0.0047,
+        "Diametro2": 0.05,
+        "Encaixe2": 0.031,
+        "Espessura2": 0.0037,
+        "Transicao": 0.017
+      },
+      "info": {
+        "description": "Redução concêntrica PVC-U para colar (luva de redução), d63 x d50: encaixes 37.5 e 31 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+      }
+    },
+    {
+      "name": "Redução PVC d75 x d63",
+      "values": {
+        "Diametro": 0.075,
+        "Encaixe": 0.0435,
+        "Espessura": 0.0056,
+        "Diametro2": 0.063,
+        "Encaixe2": 0.0375,
+        "Espessura2": 0.0047,
+        "Transicao": 0.016
+      },
+      "info": {
+        "description": "Redução concêntrica PVC-U para colar (luva de redução), d75 x d63: encaixes 43.5 e 37.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+      }
+    },
+    {
+      "name": "Redução PVC d90 x d75",
+      "values": {
+        "Diametro": 0.09,
+        "Encaixe": 0.051,
+        "Espessura": 0.0067,
+        "Diametro2": 0.075,
+        "Encaixe2": 0.0435,
+        "Espessura2": 0.0056,
+        "Transicao": 0.019
+      },
+      "info": {
+        "description": "Redução concêntrica PVC-U para colar (luva de redução), d90 x d75: encaixes 51 e 43.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+      }
+    },
+    {
+      "name": "Redução PVC d110 x d90",
+      "values": {
+        "Diametro": 0.11,
+        "Encaixe": 0.061,
+        "Espessura": 0.0081,
+        "Diametro2": 0.09,
+        "Encaixe2": 0.051,
+        "Espessura2": 0.0067,
+        "Transicao": 0.024
+      },
+      "info": {
+        "description": "Redução concêntrica PVC-U para colar (luva de redução), d110 x d90: encaixes 61 e 51 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+      }
+    },
+    {
+      "name": "Redução PVC d125 x d110",
+      "values": {
+        "Diametro": 0.125,
+        "Encaixe": 0.0685,
+        "Espessura": 0.0092,
+        "Diametro2": 0.11,
+        "Encaixe2": 0.061,
+        "Espessura2": 0.0081,
+        "Transicao": 0.019
+      },
+      "info": {
+        "description": "Redução concêntrica PVC-U para colar (luva de redução), d125 x d110: encaixes 68.5 e 61 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+      }
+    },
+    {
+      "name": "Redução PVC d140 x d125",
+      "values": {
+        "Diametro": 0.14,
+        "Encaixe": 0.076,
+        "Espessura": 0.0103,
+        "Diametro2": 0.125,
+        "Encaixe2": 0.0685,
+        "Espessura2": 0.0092,
+        "Transicao": 0.019
+      },
+      "info": {
+        "description": "Redução concêntrica PVC-U para colar (luva de redução), d140 x d125: encaixes 76 e 68.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+      }
+    },
+    {
+      "name": "Redução PVC d160 x d140",
+      "values": {
+        "Diametro": 0.16,
+        "Encaixe": 0.086,
+        "Espessura": 0.011800000000000001,
+        "Diametro2": 0.14,
+        "Encaixe2": 0.076,
+        "Espessura2": 0.0103,
+        "Transicao": 0.024
+      },
+      "info": {
+        "description": "Redução concêntrica PVC-U para colar (luva de redução), d160 x d140: encaixes 86 e 76 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+      }
+    },
+    {
+      "name": "Redução PVC d32 x d20",
+      "values": {
+        "Diametro": 0.032,
+        "Encaixe": 0.022,
+        "Espessura": 0.0024,
+        "Diametro2": 0.02,
+        "Encaixe2": 0.016,
+        "Espessura2": 0.0015,
+        "Transicao": 0.016
+      },
+      "info": {
+        "description": "Redução concêntrica PVC-U para colar (luva de redução), d32 x d20: encaixes 22 e 16 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+      }
+    },
+    {
+      "name": "Redução PVC d40 x d25",
+      "values": {
+        "Diametro": 0.04,
+        "Encaixe": 0.026,
+        "Espessura": 0.003,
+        "Diametro2": 0.025,
+        "Encaixe2": 0.0185,
+        "Espessura2": 0.0019,
+        "Transicao": 0.019
+      },
+      "info": {
+        "description": "Redução concêntrica PVC-U para colar (luva de redução), d40 x d25: encaixes 26 e 18.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+      }
+    },
+    {
+      "name": "Redução PVC d50 x d32",
+      "values": {
+        "Diametro": 0.05,
+        "Encaixe": 0.031,
+        "Espessura": 0.0037,
+        "Diametro2": 0.032,
+        "Encaixe2": 0.022,
+        "Espessura2": 0.0024,
+        "Transicao": 0.022
+      },
+      "info": {
+        "description": "Redução concêntrica PVC-U para colar (luva de redução), d50 x d32: encaixes 31 e 22 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+      }
+    },
+    {
+      "name": "Redução PVC d63 x d40",
+      "values": {
+        "Diametro": 0.063,
+        "Encaixe": 0.0375,
+        "Espessura": 0.0047,
+        "Diametro2": 0.04,
+        "Encaixe2": 0.026,
+        "Espessura2": 0.003,
+        "Transicao": 0.027
+      },
+      "info": {
+        "description": "Redução concêntrica PVC-U para colar (luva de redução), d63 x d40: encaixes 37.5 e 26 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+      }
+    },
+    {
+      "name": "Redução PVC d75 x d50",
+      "values": {
+        "Diametro": 0.075,
+        "Encaixe": 0.0435,
+        "Espessura": 0.0056,
+        "Diametro2": 0.05,
+        "Encaixe2": 0.031,
+        "Espessura2": 0.0037,
+        "Transicao": 0.029
+      },
+      "info": {
+        "description": "Redução concêntrica PVC-U para colar (luva de redução), d75 x d50: encaixes 43.5 e 31 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+      }
+    },
+    {
+      "name": "Redução PVC d90 x d63",
+      "values": {
+        "Diametro": 0.09,
+        "Encaixe": 0.051,
+        "Espessura": 0.0067,
+        "Diametro2": 0.063,
+        "Encaixe2": 0.0375,
+        "Espessura2": 0.0047,
+        "Transicao": 0.031
+      },
+      "info": {
+        "description": "Redução concêntrica PVC-U para colar (luva de redução), d90 x d63: encaixes 51 e 37.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+      }
+    },
+    {
+      "name": "Redução PVC d110 x d75",
+      "values": {
+        "Diametro": 0.11,
+        "Encaixe": 0.061,
+        "Espessura": 0.0081,
+        "Diametro2": 0.075,
+        "Encaixe2": 0.0435,
+        "Espessura2": 0.0056,
+        "Transicao": 0.039
+      },
+      "info": {
+        "description": "Redução concêntrica PVC-U para colar (luva de redução), d110 x d75: encaixes 61 e 43.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+      }
+    },
+    {
+      "name": "Redução PVC d125 x d90",
+      "values": {
+        "Diametro": 0.125,
+        "Encaixe": 0.0685,
+        "Espessura": 0.0092,
+        "Diametro2": 0.09,
+        "Encaixe2": 0.051,
+        "Espessura2": 0.0067,
+        "Transicao": 0.039
+      },
+      "info": {
+        "description": "Redução concêntrica PVC-U para colar (luva de redução), d125 x d90: encaixes 68.5 e 51 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+      }
+    },
+    {
+      "name": "Redução PVC d160 x d110",
+      "values": {
+        "Diametro": 0.16,
+        "Encaixe": 0.086,
+        "Espessura": 0.011800000000000001,
+        "Diametro2": 0.11,
+        "Encaixe2": 0.061,
+        "Espessura2": 0.0081,
+        "Transicao": 0.054
+      },
+      "info": {
+        "description": "Redução concêntrica PVC-U para colar (luva de redução), d160 x d110: encaixes 86 e 61 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+      }
+    }
+  ]
+}

@@ -30,6 +30,7 @@ Each file holds one component with several types (sizes). Types share the geomet
 | [`furniture`](components/furniture) | Tables, chairs, beds, sofas, desks, nightstands |
 | [`casework`](components/casework) | Wardrobes, kitchen base and wall cabinets, shelving |
 | [`plumbing`](components/plumbing) | Toilets, basins, sinks, showers, laundry tubs, washing machines, bathtubs, urinals, bidets, water tanks, inspection and grease boxes |
+| [`fittings`](components/fittings) | PVC-U solvent-weld pressure fittings (EN ISO 1452-3), d16 to d160: 90° elbows, equal tees, concentric reducers and caps, with connectors at the socket bottoms |
 | [`electrical`](components/electrical) | General and dedicated outlets, shower points, switches, distribution boards, data/TV points |
 | [`lighting`](components/lighting) | Ceiling, pendant, recessed, linear and wall lights |
 | [`planting`](components/planting) | Trees, conifers, palms, shrubs and potted plants for landscaping |

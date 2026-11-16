@@ -787,6 +787,728 @@
       ]
     },
     {
+      "file": "components/fittings/joelho-90-pvc-soldavel.ccomp",
+      "component": "Joelho 90° PVC soldável",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Diametro",
+        "Encaixe",
+        "Espessura",
+        "Afastamento"
+      ],
+      "types": [
+        {
+          "name": "Joelho 90° PVC d16",
+          "values": {
+            "Diametro": 0.016,
+            "Encaixe": 0.014,
+            "Espessura": 0.0015,
+            "Afastamento": 0.009
+          },
+          "description": "Joelho 90° PVC-U para colar, d16: encaixe 14 mm, z 9 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Joelho 90° PVC d20",
+          "values": {
+            "Diametro": 0.02,
+            "Encaixe": 0.016,
+            "Espessura": 0.0015,
+            "Afastamento": 0.011
+          },
+          "description": "Joelho 90° PVC-U para colar, d20: encaixe 16 mm, z 11 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Joelho 90° PVC d25",
+          "values": {
+            "Diametro": 0.025,
+            "Encaixe": 0.0185,
+            "Espessura": 0.0019,
+            "Afastamento": 0.0135
+          },
+          "description": "Joelho 90° PVC-U para colar, d25: encaixe 18.5 mm, z 13.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Joelho 90° PVC d32",
+          "values": {
+            "Diametro": 0.032,
+            "Encaixe": 0.022,
+            "Espessura": 0.0024,
+            "Afastamento": 0.017
+          },
+          "description": "Joelho 90° PVC-U para colar, d32: encaixe 22 mm, z 17 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Joelho 90° PVC d40",
+          "values": {
+            "Diametro": 0.04,
+            "Encaixe": 0.026,
+            "Espessura": 0.003,
+            "Afastamento": 0.021
+          },
+          "description": "Joelho 90° PVC-U para colar, d40: encaixe 26 mm, z 21 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Joelho 90° PVC d50",
+          "values": {
+            "Diametro": 0.05,
+            "Encaixe": 0.031,
+            "Espessura": 0.0037,
+            "Afastamento": 0.026
+          },
+          "description": "Joelho 90° PVC-U para colar, d50: encaixe 31 mm, z 26 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Joelho 90° PVC d63",
+          "values": {
+            "Diametro": 0.063,
+            "Encaixe": 0.0375,
+            "Espessura": 0.0047,
+            "Afastamento": 0.0325
+          },
+          "description": "Joelho 90° PVC-U para colar, d63: encaixe 37.5 mm, z 32.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Joelho 90° PVC d75",
+          "values": {
+            "Diametro": 0.075,
+            "Encaixe": 0.0435,
+            "Espessura": 0.0056,
+            "Afastamento": 0.0385
+          },
+          "description": "Joelho 90° PVC-U para colar, d75: encaixe 43.5 mm, z 38.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Joelho 90° PVC d90",
+          "values": {
+            "Diametro": 0.09,
+            "Encaixe": 0.051,
+            "Espessura": 0.0067,
+            "Afastamento": 0.046
+          },
+          "description": "Joelho 90° PVC-U para colar, d90: encaixe 51 mm, z 46 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Joelho 90° PVC d110",
+          "values": {
+            "Diametro": 0.11,
+            "Encaixe": 0.061,
+            "Espessura": 0.0081,
+            "Afastamento": 0.056
+          },
+          "description": "Joelho 90° PVC-U para colar, d110: encaixe 61 mm, z 56 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Joelho 90° PVC d125",
+          "values": {
+            "Diametro": 0.125,
+            "Encaixe": 0.0685,
+            "Espessura": 0.0092,
+            "Afastamento": 0.0635
+          },
+          "description": "Joelho 90° PVC-U para colar, d125: encaixe 68.5 mm, z 63.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Joelho 90° PVC d140",
+          "values": {
+            "Diametro": 0.14,
+            "Encaixe": 0.076,
+            "Espessura": 0.0103,
+            "Afastamento": 0.071
+          },
+          "description": "Joelho 90° PVC-U para colar, d140: encaixe 76 mm, z 71 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Joelho 90° PVC d160",
+          "values": {
+            "Diametro": 0.16,
+            "Encaixe": 0.086,
+            "Espessura": 0.0118,
+            "Afastamento": 0.081
+          },
+          "description": "Joelho 90° PVC-U para colar, d160: encaixe 86 mm, z 81 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        }
+      ]
+    },
+    {
+      "file": "components/fittings/reducao-concentrica-pvc-soldavel.ccomp",
+      "component": "Redução concêntrica PVC soldável",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Diametro",
+        "Encaixe",
+        "Espessura",
+        "Diametro2",
+        "Encaixe2",
+        "Espessura2",
+        "Transicao"
+      ],
+      "types": [
+        {
+          "name": "Redução PVC d20 x d16",
+          "values": {
+            "Diametro": 0.02,
+            "Encaixe": 0.016,
+            "Espessura": 0.0015,
+            "Diametro2": 0.016,
+            "Encaixe2": 0.014,
+            "Espessura2": 0.0015,
+            "Transicao": 0.012
+          },
+          "description": "Redução concêntrica PVC-U para colar (luva de redução), d20 x d16: encaixes 16 e 14 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Redução PVC d25 x d20",
+          "values": {
+            "Diametro": 0.025,
+            "Encaixe": 0.0185,
+            "Espessura": 0.0019,
+            "Diametro2": 0.02,
+            "Encaixe2": 0.016,
+            "Espessura2": 0.0015,
+            "Transicao": 0.012
+          },
+          "description": "Redução concêntrica PVC-U para colar (luva de redução), d25 x d20: encaixes 18.5 e 16 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Redução PVC d32 x d25",
+          "values": {
+            "Diametro": 0.032,
+            "Encaixe": 0.022,
+            "Espessura": 0.0024,
+            "Diametro2": 0.025,
+            "Encaixe2": 0.0185,
+            "Espessura2": 0.0019,
+            "Transicao": 0.012
+          },
+          "description": "Redução concêntrica PVC-U para colar (luva de redução), d32 x d25: encaixes 22 e 18.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Redução PVC d40 x d32",
+          "values": {
+            "Diametro": 0.04,
+            "Encaixe": 0.026,
+            "Espessura": 0.003,
+            "Diametro2": 0.032,
+            "Encaixe2": 0.022,
+            "Espessura2": 0.0024,
+            "Transicao": 0.012
+          },
+          "description": "Redução concêntrica PVC-U para colar (luva de redução), d40 x d32: encaixes 26 e 22 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Redução PVC d50 x d40",
+          "values": {
+            "Diametro": 0.05,
+            "Encaixe": 0.031,
+            "Espessura": 0.0037,
+            "Diametro2": 0.04,
+            "Encaixe2": 0.026,
+            "Espessura2": 0.003,
+            "Transicao": 0.014
+          },
+          "description": "Redução concêntrica PVC-U para colar (luva de redução), d50 x d40: encaixes 31 e 26 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Redução PVC d63 x d50",
+          "values": {
+            "Diametro": 0.063,
+            "Encaixe": 0.0375,
+            "Espessura": 0.0047,
+            "Diametro2": 0.05,
+            "Encaixe2": 0.031,
+            "Espessura2": 0.0037,
+            "Transicao": 0.017
+          },
+          "description": "Redução concêntrica PVC-U para colar (luva de redução), d63 x d50: encaixes 37.5 e 31 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Redução PVC d75 x d63",
+          "values": {
+            "Diametro": 0.075,
+            "Encaixe": 0.0435,
+            "Espessura": 0.0056,
+            "Diametro2": 0.063,
+            "Encaixe2": 0.0375,
+            "Espessura2": 0.0047,
+            "Transicao": 0.016
+          },
+          "description": "Redução concêntrica PVC-U para colar (luva de redução), d75 x d63: encaixes 43.5 e 37.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Redução PVC d90 x d75",
+          "values": {
+            "Diametro": 0.09,
+            "Encaixe": 0.051,
+            "Espessura": 0.0067,
+            "Diametro2": 0.075,
+            "Encaixe2": 0.0435,
+            "Espessura2": 0.0056,
+            "Transicao": 0.019
+          },
+          "description": "Redução concêntrica PVC-U para colar (luva de redução), d90 x d75: encaixes 51 e 43.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Redução PVC d110 x d90",
+          "values": {
+            "Diametro": 0.11,
+            "Encaixe": 0.061,
+            "Espessura": 0.0081,
+            "Diametro2": 0.09,
+            "Encaixe2": 0.051,
+            "Espessura2": 0.0067,
+            "Transicao": 0.024
+          },
+          "description": "Redução concêntrica PVC-U para colar (luva de redução), d110 x d90: encaixes 61 e 51 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Redução PVC d125 x d110",
+          "values": {
+            "Diametro": 0.125,
+            "Encaixe": 0.0685,
+            "Espessura": 0.0092,
+            "Diametro2": 0.11,
+            "Encaixe2": 0.061,
+            "Espessura2": 0.0081,
+            "Transicao": 0.019
+          },
+          "description": "Redução concêntrica PVC-U para colar (luva de redução), d125 x d110: encaixes 68.5 e 61 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Redução PVC d140 x d125",
+          "values": {
+            "Diametro": 0.14,
+            "Encaixe": 0.076,
+            "Espessura": 0.0103,
+            "Diametro2": 0.125,
+            "Encaixe2": 0.0685,
+            "Espessura2": 0.0092,
+            "Transicao": 0.019
+          },
+          "description": "Redução concêntrica PVC-U para colar (luva de redução), d140 x d125: encaixes 76 e 68.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Redução PVC d160 x d140",
+          "values": {
+            "Diametro": 0.16,
+            "Encaixe": 0.086,
+            "Espessura": 0.0118,
+            "Diametro2": 0.14,
+            "Encaixe2": 0.076,
+            "Espessura2": 0.0103,
+            "Transicao": 0.024
+          },
+          "description": "Redução concêntrica PVC-U para colar (luva de redução), d160 x d140: encaixes 86 e 76 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Redução PVC d32 x d20",
+          "values": {
+            "Diametro": 0.032,
+            "Encaixe": 0.022,
+            "Espessura": 0.0024,
+            "Diametro2": 0.02,
+            "Encaixe2": 0.016,
+            "Espessura2": 0.0015,
+            "Transicao": 0.016
+          },
+          "description": "Redução concêntrica PVC-U para colar (luva de redução), d32 x d20: encaixes 22 e 16 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Redução PVC d40 x d25",
+          "values": {
+            "Diametro": 0.04,
+            "Encaixe": 0.026,
+            "Espessura": 0.003,
+            "Diametro2": 0.025,
+            "Encaixe2": 0.0185,
+            "Espessura2": 0.0019,
+            "Transicao": 0.019
+          },
+          "description": "Redução concêntrica PVC-U para colar (luva de redução), d40 x d25: encaixes 26 e 18.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Redução PVC d50 x d32",
+          "values": {
+            "Diametro": 0.05,
+            "Encaixe": 0.031,
+            "Espessura": 0.0037,
+            "Diametro2": 0.032,
+            "Encaixe2": 0.022,
+            "Espessura2": 0.0024,
+            "Transicao": 0.022
+          },
+          "description": "Redução concêntrica PVC-U para colar (luva de redução), d50 x d32: encaixes 31 e 22 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Redução PVC d63 x d40",
+          "values": {
+            "Diametro": 0.063,
+            "Encaixe": 0.0375,
+            "Espessura": 0.0047,
+            "Diametro2": 0.04,
+            "Encaixe2": 0.026,
+            "Espessura2": 0.003,
+            "Transicao": 0.027
+          },
+          "description": "Redução concêntrica PVC-U para colar (luva de redução), d63 x d40: encaixes 37.5 e 26 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Redução PVC d75 x d50",
+          "values": {
+            "Diametro": 0.075,
+            "Encaixe": 0.0435,
+            "Espessura": 0.0056,
+            "Diametro2": 0.05,
+            "Encaixe2": 0.031,
+            "Espessura2": 0.0037,
+            "Transicao": 0.029
+          },
+          "description": "Redução concêntrica PVC-U para colar (luva de redução), d75 x d50: encaixes 43.5 e 31 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Redução PVC d90 x d63",
+          "values": {
+            "Diametro": 0.09,
+            "Encaixe": 0.051,
+            "Espessura": 0.0067,
+            "Diametro2": 0.063,
+            "Encaixe2": 0.0375,
+            "Espessura2": 0.0047,
+            "Transicao": 0.031
+          },
+          "description": "Redução concêntrica PVC-U para colar (luva de redução), d90 x d63: encaixes 51 e 37.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Redução PVC d110 x d75",
+          "values": {
+            "Diametro": 0.11,
+            "Encaixe": 0.061,
+            "Espessura": 0.0081,
+            "Diametro2": 0.075,
+            "Encaixe2": 0.0435,
+            "Espessura2": 0.0056,
+            "Transicao": 0.039
+          },
+          "description": "Redução concêntrica PVC-U para colar (luva de redução), d110 x d75: encaixes 61 e 43.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Redução PVC d125 x d90",
+          "values": {
+            "Diametro": 0.125,
+            "Encaixe": 0.0685,
+            "Espessura": 0.0092,
+            "Diametro2": 0.09,
+            "Encaixe2": 0.051,
+            "Espessura2": 0.0067,
+            "Transicao": 0.039
+          },
+          "description": "Redução concêntrica PVC-U para colar (luva de redução), d125 x d90: encaixes 68.5 e 51 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Redução PVC d160 x d110",
+          "values": {
+            "Diametro": 0.16,
+            "Encaixe": 0.086,
+            "Espessura": 0.0118,
+            "Diametro2": 0.11,
+            "Encaixe2": 0.061,
+            "Espessura2": 0.0081,
+            "Transicao": 0.054
+          },
+          "description": "Redução concêntrica PVC-U para colar (luva de redução), d160 x d110: encaixes 86 e 61 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        }
+      ]
+    },
+    {
+      "file": "components/fittings/tampao-pvc-soldavel.ccomp",
+      "component": "Tampão PVC soldável",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Diametro",
+        "Encaixe",
+        "Espessura",
+        "Fundo"
+      ],
+      "types": [
+        {
+          "name": "Tampão PVC d16",
+          "values": {
+            "Diametro": 0.016,
+            "Encaixe": 0.014,
+            "Espessura": 0.0015,
+            "Fundo": 0.0025
+          },
+          "description": "Tampão PVC-U para colar, d16: encaixe 14 mm, fundo 2.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante). Origem no fundo do encaixe, onde o tubo termina."
+        },
+        {
+          "name": "Tampão PVC d20",
+          "values": {
+            "Diametro": 0.02,
+            "Encaixe": 0.016,
+            "Espessura": 0.0015,
+            "Fundo": 0.0025
+          },
+          "description": "Tampão PVC-U para colar, d20: encaixe 16 mm, fundo 2.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante). Origem no fundo do encaixe, onde o tubo termina."
+        },
+        {
+          "name": "Tampão PVC d25",
+          "values": {
+            "Diametro": 0.025,
+            "Encaixe": 0.0185,
+            "Espessura": 0.0019,
+            "Fundo": 0.003
+          },
+          "description": "Tampão PVC-U para colar, d25: encaixe 18.5 mm, fundo 3 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante). Origem no fundo do encaixe, onde o tubo termina."
+        },
+        {
+          "name": "Tampão PVC d32",
+          "values": {
+            "Diametro": 0.032,
+            "Encaixe": 0.022,
+            "Espessura": 0.0024,
+            "Fundo": 0.004
+          },
+          "description": "Tampão PVC-U para colar, d32: encaixe 22 mm, fundo 4 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante). Origem no fundo do encaixe, onde o tubo termina."
+        },
+        {
+          "name": "Tampão PVC d40",
+          "values": {
+            "Diametro": 0.04,
+            "Encaixe": 0.026,
+            "Espessura": 0.003,
+            "Fundo": 0.0045
+          },
+          "description": "Tampão PVC-U para colar, d40: encaixe 26 mm, fundo 4.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante). Origem no fundo do encaixe, onde o tubo termina."
+        },
+        {
+          "name": "Tampão PVC d50",
+          "values": {
+            "Diametro": 0.05,
+            "Encaixe": 0.031,
+            "Espessura": 0.0037,
+            "Fundo": 0.006
+          },
+          "description": "Tampão PVC-U para colar, d50: encaixe 31 mm, fundo 6 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante). Origem no fundo do encaixe, onde o tubo termina."
+        },
+        {
+          "name": "Tampão PVC d63",
+          "values": {
+            "Diametro": 0.063,
+            "Encaixe": 0.0375,
+            "Espessura": 0.0047,
+            "Fundo": 0.0075
+          },
+          "description": "Tampão PVC-U para colar, d63: encaixe 37.5 mm, fundo 7.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante). Origem no fundo do encaixe, onde o tubo termina."
+        },
+        {
+          "name": "Tampão PVC d75",
+          "values": {
+            "Diametro": 0.075,
+            "Encaixe": 0.0435,
+            "Espessura": 0.0056,
+            "Fundo": 0.0085
+          },
+          "description": "Tampão PVC-U para colar, d75: encaixe 43.5 mm, fundo 8.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante). Origem no fundo do encaixe, onde o tubo termina."
+        },
+        {
+          "name": "Tampão PVC d90",
+          "values": {
+            "Diametro": 0.09,
+            "Encaixe": 0.051,
+            "Espessura": 0.0067,
+            "Fundo": 0.0105
+          },
+          "description": "Tampão PVC-U para colar, d90: encaixe 51 mm, fundo 10.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante). Origem no fundo do encaixe, onde o tubo termina."
+        },
+        {
+          "name": "Tampão PVC d110",
+          "values": {
+            "Diametro": 0.11,
+            "Encaixe": 0.061,
+            "Espessura": 0.0081,
+            "Fundo": 0.0125
+          },
+          "description": "Tampão PVC-U para colar, d110: encaixe 61 mm, fundo 12.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante). Origem no fundo do encaixe, onde o tubo termina."
+        },
+        {
+          "name": "Tampão PVC d125",
+          "values": {
+            "Diametro": 0.125,
+            "Encaixe": 0.0685,
+            "Espessura": 0.0092,
+            "Fundo": 0.014
+          },
+          "description": "Tampão PVC-U para colar, d125: encaixe 68.5 mm, fundo 14 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante). Origem no fundo do encaixe, onde o tubo termina."
+        },
+        {
+          "name": "Tampão PVC d140",
+          "values": {
+            "Diametro": 0.14,
+            "Encaixe": 0.076,
+            "Espessura": 0.0103,
+            "Fundo": 0.0155
+          },
+          "description": "Tampão PVC-U para colar, d140: encaixe 76 mm, fundo 15.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante). Origem no fundo do encaixe, onde o tubo termina."
+        },
+        {
+          "name": "Tampão PVC d160",
+          "values": {
+            "Diametro": 0.16,
+            "Encaixe": 0.086,
+            "Espessura": 0.0118,
+            "Fundo": 0.018
+          },
+          "description": "Tampão PVC-U para colar, d160: encaixe 86 mm, fundo 18 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante). Origem no fundo do encaixe, onde o tubo termina."
+        }
+      ]
+    },
+    {
+      "file": "components/fittings/te-90-pvc-soldavel.ccomp",
+      "component": "Tê 90° PVC soldável",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Diametro",
+        "Encaixe",
+        "Espessura",
+        "Afastamento"
+      ],
+      "types": [
+        {
+          "name": "Tê PVC d16",
+          "values": {
+            "Diametro": 0.016,
+            "Encaixe": 0.014,
+            "Espessura": 0.0015,
+            "Afastamento": 0.009
+          },
+          "description": "Tê 90° igual PVC-U para colar, d16: encaixe 14 mm, z 9 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Tê PVC d20",
+          "values": {
+            "Diametro": 0.02,
+            "Encaixe": 0.016,
+            "Espessura": 0.0015,
+            "Afastamento": 0.011
+          },
+          "description": "Tê 90° igual PVC-U para colar, d20: encaixe 16 mm, z 11 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Tê PVC d25",
+          "values": {
+            "Diametro": 0.025,
+            "Encaixe": 0.0185,
+            "Espessura": 0.0019,
+            "Afastamento": 0.0135
+          },
+          "description": "Tê 90° igual PVC-U para colar, d25: encaixe 18.5 mm, z 13.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Tê PVC d32",
+          "values": {
+            "Diametro": 0.032,
+            "Encaixe": 0.022,
+            "Espessura": 0.0024,
+            "Afastamento": 0.017
+          },
+          "description": "Tê 90° igual PVC-U para colar, d32: encaixe 22 mm, z 17 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Tê PVC d40",
+          "values": {
+            "Diametro": 0.04,
+            "Encaixe": 0.026,
+            "Espessura": 0.003,
+            "Afastamento": 0.021
+          },
+          "description": "Tê 90° igual PVC-U para colar, d40: encaixe 26 mm, z 21 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Tê PVC d50",
+          "values": {
+            "Diametro": 0.05,
+            "Encaixe": 0.031,
+            "Espessura": 0.0037,
+            "Afastamento": 0.026
+          },
+          "description": "Tê 90° igual PVC-U para colar, d50: encaixe 31 mm, z 26 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Tê PVC d63",
+          "values": {
+            "Diametro": 0.063,
+            "Encaixe": 0.0375,
+            "Espessura": 0.0047,
+            "Afastamento": 0.0325
+          },
+          "description": "Tê 90° igual PVC-U para colar, d63: encaixe 37.5 mm, z 32.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Tê PVC d75",
+          "values": {
+            "Diametro": 0.075,
+            "Encaixe": 0.0435,
+            "Espessura": 0.0056,
+            "Afastamento": 0.0385
+          },
+          "description": "Tê 90° igual PVC-U para colar, d75: encaixe 43.5 mm, z 38.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Tê PVC d90",
+          "values": {
+            "Diametro": 0.09,
+            "Encaixe": 0.051,
+            "Espessura": 0.0067,
+            "Afastamento": 0.046
+          },
+          "description": "Tê 90° igual PVC-U para colar, d90: encaixe 51 mm, z 46 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Tê PVC d110",
+          "values": {
+            "Diametro": 0.11,
+            "Encaixe": 0.061,
+            "Espessura": 0.0081,
+            "Afastamento": 0.056
+          },
+          "description": "Tê 90° igual PVC-U para colar, d110: encaixe 61 mm, z 56 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Tê PVC d125",
+          "values": {
+            "Diametro": 0.125,
+            "Encaixe": 0.0685,
+            "Espessura": 0.0092,
+            "Afastamento": 0.0635
+          },
+          "description": "Tê 90° igual PVC-U para colar, d125: encaixe 68.5 mm, z 63.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Tê PVC d140",
+          "values": {
+            "Diametro": 0.14,
+            "Encaixe": 0.076,
+            "Espessura": 0.0103,
+            "Afastamento": 0.071
+          },
+          "description": "Tê 90° igual PVC-U para colar, d140: encaixe 76 mm, z 71 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        },
+        {
+          "name": "Tê PVC d160",
+          "values": {
+            "Diametro": 0.16,
+            "Encaixe": 0.086,
+            "Espessura": 0.0118,
+            "Afastamento": 0.081
+          },
+          "description": "Tê 90° igual PVC-U para colar, d160: encaixe 86 mm, z 81 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante)"
+        }
+      ]
+    },
+    {
       "file": "components/furniture/cadeira.ccomp",
       "component": "Cadeira com encosto",
       "kind": "Furniture",

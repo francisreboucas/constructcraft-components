@@ -1,0 +1,252 @@
+{
+  "component": "Tampão PVC soldável",
+  "def": {
+    "kind": "Generic",
+    "params": [
+      {
+        "name": "Diametro",
+        "value": 0.016,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Encaixe",
+        "value": 0.014,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Espessura",
+        "value": 0.0015,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Fundo",
+        "value": 0.0025,
+        "kind": "Length",
+        "instance": false
+      }
+    ],
+    "items": [
+      {
+        "name": "Corpo",
+        "material": "PVC",
+        "in_plan": true,
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0 - (Diametro / 2 + Espessura)",
+                "v": "0",
+                "radius": "(Diametro / 2 + Espessura)"
+              },
+              {
+                "u": "0 + (Diametro / 2 + Espessura)",
+                "v": "0",
+                "radius": "(Diametro / 2 + Espessura)"
+              }
+            ],
+            "offset": "-Encaixe",
+            "depth": "Encaixe + Fundo"
+          }
+        }
+      },
+      {
+        "name": "Encaixe vazio",
+        "material": "PVC",
+        "in_plan": false,
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0 - (Diametro / 2)",
+                "v": "0",
+                "radius": "(Diametro / 2)"
+              },
+              {
+                "u": "0 + (Diametro / 2)",
+                "v": "0",
+                "radius": "(Diametro / 2)"
+              }
+            ],
+            "offset": "-Encaixe - 0.001",
+            "depth": "Encaixe + 0.001"
+          }
+        },
+        "void": true
+      }
+    ],
+    "connectors": [
+      {
+        "name": "A",
+        "system": "ColdWater",
+        "x": "0",
+        "y": "0",
+        "z": "0",
+        "direction": "Front",
+        "diameter": "Diametro"
+      }
+    ]
+  },
+  "types": [
+    {
+      "name": "Tampão PVC d16",
+      "values": {
+        "Diametro": 0.016,
+        "Encaixe": 0.014,
+        "Espessura": 0.0015,
+        "Fundo": 0.0025
+      },
+      "info": {
+        "description": "Tampão PVC-U para colar, d16: encaixe 14 mm, fundo 2.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante). Origem no fundo do encaixe, onde o tubo termina."
+      }
+    },
+    {
+      "name": "Tampão PVC d20",
+      "values": {
+        "Diametro": 0.02,
+        "Encaixe": 0.016,
+        "Espessura": 0.0015,
+        "Fundo": 0.0025
+      },
+      "info": {
+        "description": "Tampão PVC-U para colar, d20: encaixe 16 mm, fundo 2.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante). Origem no fundo do encaixe, onde o tubo termina."
+      }
+    },
+    {
+      "name": "Tampão PVC d25",
+      "values": {
+        "Diametro": 0.025,
+        "Encaixe": 0.0185,
+        "Espessura": 0.0019,
+        "Fundo": 0.003
+      },
+      "info": {
+        "description": "Tampão PVC-U para colar, d25: encaixe 18.5 mm, fundo 3 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante). Origem no fundo do encaixe, onde o tubo termina."
+      }
+    },
+    {
+      "name": "Tampão PVC d32",
+      "values": {
+        "Diametro": 0.032,
+        "Encaixe": 0.022,
+        "Espessura": 0.0024,
+        "Fundo": 0.004
+      },
+      "info": {
+        "description": "Tampão PVC-U para colar, d32: encaixe 22 mm, fundo 4 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante). Origem no fundo do encaixe, onde o tubo termina."
+      }
+    },
+    {
+      "name": "Tampão PVC d40",
+      "values": {
+        "Diametro": 0.04,
+        "Encaixe": 0.026,
+        "Espessura": 0.003,
+        "Fundo": 0.0045
+      },
+      "info": {
+        "description": "Tampão PVC-U para colar, d40: encaixe 26 mm, fundo 4.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante). Origem no fundo do encaixe, onde o tubo termina."
+      }
+    },
+    {
+      "name": "Tampão PVC d50",
+      "values": {
+        "Diametro": 0.05,
+        "Encaixe": 0.031,
+        "Espessura": 0.0037,
+        "Fundo": 0.006
+      },
+      "info": {
+        "description": "Tampão PVC-U para colar, d50: encaixe 31 mm, fundo 6 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante). Origem no fundo do encaixe, onde o tubo termina."
+      }
+    },
+    {
+      "name": "Tampão PVC d63",
+      "values": {
+        "Diametro": 0.063,
+        "Encaixe": 0.0375,
+        "Espessura": 0.0047,
+        "Fundo": 0.0075
+      },
+      "info": {
+        "description": "Tampão PVC-U para colar, d63: encaixe 37.5 mm, fundo 7.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante). Origem no fundo do encaixe, onde o tubo termina."
+      }
+    },
+    {
+      "name": "Tampão PVC d75",
+      "values": {
+        "Diametro": 0.075,
+        "Encaixe": 0.0435,
+        "Espessura": 0.0056,
+        "Fundo": 0.0085
+      },
+      "info": {
+        "description": "Tampão PVC-U para colar, d75: encaixe 43.5 mm, fundo 8.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante). Origem no fundo do encaixe, onde o tubo termina."
+      }
+    },
+    {
+      "name": "Tampão PVC d90",
+      "values": {
+        "Diametro": 0.09,
+        "Encaixe": 0.051,
+        "Espessura": 0.0067,
+        "Fundo": 0.0105
+      },
+      "info": {
+        "description": "Tampão PVC-U para colar, d90: encaixe 51 mm, fundo 10.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante). Origem no fundo do encaixe, onde o tubo termina."
+      }
+    },
+    {
+      "name": "Tampão PVC d110",
+      "values": {
+        "Diametro": 0.11,
+        "Encaixe": 0.061,
+        "Espessura": 0.0081,
+        "Fundo": 0.0125
+      },
+      "info": {
+        "description": "Tampão PVC-U para colar, d110: encaixe 61 mm, fundo 12.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante). Origem no fundo do encaixe, onde o tubo termina."
+      }
+    },
+    {
+      "name": "Tampão PVC d125",
+      "values": {
+        "Diametro": 0.125,
+        "Encaixe": 0.0685,
+        "Espessura": 0.0092,
+        "Fundo": 0.014
+      },
+      "info": {
+        "description": "Tampão PVC-U para colar, d125: encaixe 68.5 mm, fundo 14 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante). Origem no fundo do encaixe, onde o tubo termina."
+      }
+    },
+    {
+      "name": "Tampão PVC d140",
+      "values": {
+        "Diametro": 0.14,
+        "Encaixe": 0.076,
+        "Espessura": 0.0103,
+        "Fundo": 0.0155
+      },
+      "info": {
+        "description": "Tampão PVC-U para colar, d140: encaixe 76 mm, fundo 15.5 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante). Origem no fundo do encaixe, onde o tubo termina."
+      }
+    },
+    {
+      "name": "Tampão PVC d160",
+      "values": {
+        "Diametro": 0.16,
+        "Encaixe": 0.086,
+        "Espessura": 0.011800000000000001,
+        "Fundo": 0.018
+      },
+      "info": {
+        "description": "Tampão PVC-U para colar, d160: encaixe 86 mm, fundo 18 mm (EN ISO 1452-3 / NF EN 1452-3; cotas genéricas, sem fabricante). Origem no fundo do encaixe, onde o tubo termina."
+      }
+    }
+  ]
+}
