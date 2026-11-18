@@ -5,6 +5,7 @@
 // listeners. Screenshots go to viewer/.smoke/.
 //
 //   npm run smoke
+//   npm run smoke -- --no-build   (test the dist/ already built by `npm run build`)
 
 import { mkdir, rm, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
@@ -489,8 +490,12 @@ async function main() {
   await rm(outDir, { recursive: true, force: true });
   await mkdir(outDir, { recursive: true });
 
-  console.log('Building...');
-  await build({ root, logLevel: 'warn' });
+  if (process.argv.includes('--no-build')) {
+    console.log('Using the existing dist/ (--no-build)');
+  } else {
+    console.log('Building...');
+    await build({ root, logLevel: 'warn' });
+  }
 
   const server = await preview({ root, logLevel: 'warn', preview: { port: PORT, strictPort: true, host: '127.0.0.1' } });
   const browser = await chromium.launch();
