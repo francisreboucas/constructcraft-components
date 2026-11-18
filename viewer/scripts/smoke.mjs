@@ -17,7 +17,7 @@ const outDir = fileURLToPath(new URL('../.smoke/', import.meta.url));
 const PORT = 4317;
 const ORIGIN = `http://127.0.0.1:${PORT}`;
 const TIMEOUT = 30_000;
-const TOTAL = 74;
+const TOTAL = 87;
 
 const VIEW_ROUTE = 'plumbing/pia-cozinha';
 const DETAIL_ROUTES = [VIEW_ROUTE, 'electrical/tug-100va', 'planting/ipe-amarelo', 'lighting/pendente'];
