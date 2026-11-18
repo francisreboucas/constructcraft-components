@@ -1,0 +1,3969 @@
+{
+  "component": "Tanquinho",
+  "def": {
+    "kind": "Plumbing",
+    "params": [
+      {
+        "name": "Largura",
+        "value": 0.52,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Profundidade",
+        "value": 0.55,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Altura",
+        "value": 0.9,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "AlturaPainel",
+        "value": 0.1,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "DiametroCesto",
+        "value": 0.4,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "AlturaCesto",
+        "value": 0.46,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "AnguloTampa",
+        "value": 0,
+        "kind": "Angle",
+        "instance": true
+      }
+    ],
+    "items": [
+      {
+        "name": "Gabinete simplificado",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2)) + 0.07",
+                "v": "(-Profundidade/2)"
+              },
+              {
+                "u": "((Largura/2)) - 0.07",
+                "v": "(-Profundidade/2)",
+                "radius": "0.07"
+              },
+              {
+                "u": "(Largura/2)",
+                "v": "((-Profundidade/2)) + 0.07"
+              },
+              {
+                "u": "(Largura/2)",
+                "v": "((Profundidade/2 - 0.03)) - 0.07",
+                "radius": "0.07"
+              },
+              {
+                "u": "((Largura/2)) - 0.07",
+                "v": "(Profundidade/2 - 0.03)"
+              },
+              {
+                "u": "((-Largura/2)) + 0.07",
+                "v": "(Profundidade/2 - 0.03)",
+                "radius": "0.07"
+              },
+              {
+                "u": "(-Largura/2)",
+                "v": "((Profundidade/2 - 0.03)) - 0.07"
+              },
+              {
+                "u": "(-Largura/2)",
+                "v": "((-Profundidade/2)) + 0.07",
+                "radius": "0.07"
+              }
+            ],
+            "offset": "0",
+            "depth": "(Altura - AlturaPainel)"
+          }
+        },
+        "material": "Branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Painel simplificado",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.02",
+            "y": "((Profundidade/2 - 0.03) - 0.1)",
+            "z": "(Altura - AlturaPainel)",
+            "width": "Largura - 0.04",
+            "depth": "0.1",
+            "height": "AlturaPainel"
+          }
+        },
+        "material": "Branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Tampa simplificada",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - 0*cos(AnguloTampa) + 0*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + 0*sin(AnguloTampa) + 0*cos(AnguloTampa)"
+              },
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - 0*cos(AnguloTampa) + 0.02*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + 0*sin(AnguloTampa) + 0.02*cos(AnguloTampa)"
+              },
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012))*cos(AnguloTampa) + 0.02*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012))*sin(AnguloTampa) + 0.02*cos(AnguloTampa)"
+              },
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012))*cos(AnguloTampa) + 0*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012))*sin(AnguloTampa) + 0*cos(AnguloTampa)"
+              }
+            ],
+            "offset": "(-Largura/2) + 0.025",
+            "depth": "Largura - 0.05"
+          }
+        },
+        "material": "Plástico fumê",
+        "in_plan": false,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Gabinete",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0",
+                "v": "(-Profundidade/2)"
+              },
+              {
+                "u": "((Largura/2)) - 0.07",
+                "v": "(-Profundidade/2)",
+                "radius": "0.07"
+              },
+              {
+                "u": "(Largura/2)",
+                "v": "((-Profundidade/2)) + 0.07"
+              },
+              {
+                "u": "(Largura/2)",
+                "v": "((Profundidade/2 - 0.03)) - 0.07",
+                "radius": "0.07"
+              },
+              {
+                "u": "((Largura/2)) - 0.07",
+                "v": "(Profundidade/2 - 0.03)"
+              },
+              {
+                "u": "((-Largura/2)) + 0.07",
+                "v": "(Profundidade/2 - 0.03)",
+                "radius": "0.07"
+              },
+              {
+                "u": "(-Largura/2)",
+                "v": "((Profundidade/2 - 0.03)) - 0.07"
+              },
+              {
+                "u": "(-Largura/2)",
+                "v": "((-Profundidade/2)) + 0.07",
+                "radius": "0.07"
+              },
+              {
+                "u": "((-Largura/2)) + 0.07",
+                "v": "(-Profundidade/2)"
+              },
+              {
+                "u": "0",
+                "v": "(-Profundidade/2)"
+              },
+              {
+                "u": "0",
+                "v": "((((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02)) - ((DiametroCesto/2 + 0.005))",
+                "radius": "-((DiametroCesto/2 + 0.005))"
+              },
+              {
+                "u": "0",
+                "v": "((((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02)) + ((DiametroCesto/2 + 0.005))",
+                "radius": "-((DiametroCesto/2 + 0.005))"
+              },
+              {
+                "u": "0",
+                "v": "((((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02)) - ((DiametroCesto/2 + 0.005))"
+              }
+            ],
+            "offset": "0.025",
+            "depth": "(Altura - AlturaPainel) - 0.025 - 0.025"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampo do gabinete",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0",
+                "v": "(-Profundidade/2)"
+              },
+              {
+                "u": "((Largura/2)) - 0.07",
+                "v": "(-Profundidade/2)",
+                "radius": "0.07"
+              },
+              {
+                "u": "(Largura/2)",
+                "v": "((-Profundidade/2)) + 0.07"
+              },
+              {
+                "u": "(Largura/2)",
+                "v": "((Profundidade/2 - 0.03)) - 0.07",
+                "radius": "0.07"
+              },
+              {
+                "u": "((Largura/2)) - 0.07",
+                "v": "(Profundidade/2 - 0.03)"
+              },
+              {
+                "u": "((-Largura/2)) + 0.07",
+                "v": "(Profundidade/2 - 0.03)",
+                "radius": "0.07"
+              },
+              {
+                "u": "(-Largura/2)",
+                "v": "((Profundidade/2 - 0.03)) - 0.07"
+              },
+              {
+                "u": "(-Largura/2)",
+                "v": "((-Profundidade/2)) + 0.07",
+                "radius": "0.07"
+              },
+              {
+                "u": "((-Largura/2)) + 0.07",
+                "v": "(-Profundidade/2)"
+              },
+              {
+                "u": "0",
+                "v": "(-Profundidade/2)"
+              },
+              {
+                "u": "0",
+                "v": "((((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02)) - (((DiametroCesto/2 + 0.005) - 0.035))",
+                "radius": "-(((DiametroCesto/2 + 0.005) - 0.035))"
+              },
+              {
+                "u": "0",
+                "v": "((((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02)) + (((DiametroCesto/2 + 0.005) - 0.035))",
+                "radius": "-(((DiametroCesto/2 + 0.005) - 0.035))"
+              },
+              {
+                "u": "0",
+                "v": "((((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02)) - (((DiametroCesto/2 + 0.005) - 0.035))"
+              }
+            ],
+            "offset": "(Altura - AlturaPainel) - 0.025",
+            "depth": "0.025"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Borda da abertura",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((DiametroCesto/2 + 0.005) - 0.035)",
+                "v": "(Altura - AlturaPainel)"
+              },
+              {
+                "u": "((DiametroCesto/2 + 0.005) - 0.035) + 0.014",
+                "v": "(Altura - AlturaPainel)"
+              },
+              {
+                "u": "((DiametroCesto/2 + 0.005) - 0.035) + 0.014",
+                "v": "(Altura - AlturaPainel) + 0.004"
+              },
+              {
+                "u": "((DiametroCesto/2 + 0.005) - 0.035)",
+                "v": "(Altura - AlturaPainel) + 0.004"
+              }
+            ],
+            "offset": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02)",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Base",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.01) + 0.06",
+                "v": "(-Profundidade/2) + 0.01"
+              },
+              {
+                "u": "((Largura/2) - 0.01) - 0.06",
+                "v": "(-Profundidade/2) + 0.01",
+                "radius": "0.06"
+              },
+              {
+                "u": "(Largura/2) - 0.01",
+                "v": "((-Profundidade/2) + 0.01) + 0.06"
+              },
+              {
+                "u": "(Largura/2) - 0.01",
+                "v": "((Profundidade/2 - 0.03) - 0.01) - 0.06",
+                "radius": "0.06"
+              },
+              {
+                "u": "((Largura/2) - 0.01) - 0.06",
+                "v": "(Profundidade/2 - 0.03) - 0.01"
+              },
+              {
+                "u": "((-Largura/2) + 0.01) + 0.06",
+                "v": "(Profundidade/2 - 0.03) - 0.01",
+                "radius": "0.06"
+              },
+              {
+                "u": "(-Largura/2) + 0.01",
+                "v": "((Profundidade/2 - 0.03) - 0.01) - 0.06"
+              },
+              {
+                "u": "(-Largura/2) + 0.01",
+                "v": "((-Profundidade/2) + 0.01) + 0.06",
+                "radius": "0.06"
+              }
+            ],
+            "offset": "0.025 - 0.004",
+            "depth": "0.004"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Contorno em planta",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2)) + 0.07",
+                "v": "(-Profundidade/2)"
+              },
+              {
+                "u": "((Largura/2)) - 0.07",
+                "v": "(-Profundidade/2)",
+                "radius": "0.07"
+              },
+              {
+                "u": "(Largura/2)",
+                "v": "((-Profundidade/2)) + 0.07"
+              },
+              {
+                "u": "(Largura/2)",
+                "v": "((Profundidade/2 - 0.03)) - 0.07",
+                "radius": "0.07"
+              },
+              {
+                "u": "((Largura/2)) - 0.07",
+                "v": "(Profundidade/2 - 0.03)"
+              },
+              {
+                "u": "((-Largura/2)) + 0.07",
+                "v": "(Profundidade/2 - 0.03)",
+                "radius": "0.07"
+              },
+              {
+                "u": "(-Largura/2)",
+                "v": "((Profundidade/2 - 0.03)) - 0.07"
+              },
+              {
+                "u": "(-Largura/2)",
+                "v": "((-Profundidade/2)) + 0.07",
+                "radius": "0.07"
+              }
+            ],
+            "offset": "0.025",
+            "depth": "0.002"
+          }
+        },
+        "material": "Branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Rodapé - friso",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.07",
+            "y": "(-Profundidade/2) - 0.0008",
+            "z": "0.025 + 0.03",
+            "width": "Largura - 2*0.07",
+            "depth": "0.0008",
+            "height": "0.006"
+          }
+        },
+        "material": "Plástico azul",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Friso superior",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.07",
+            "y": "(-Profundidade/2) - 0.0008",
+            "z": "(Altura - AlturaPainel) - 0.05",
+            "width": "Largura - 2*0.07",
+            "depth": "0.0008",
+            "height": "0.006"
+          }
+        },
+        "material": "Plástico azul",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Etiqueta de capacidade",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(-Largura*0.16) + 0.008",
+                "v": "(Altura - AlturaPainel) - 0.15"
+              },
+              {
+                "u": "(Largura*0.16) - 0.008",
+                "v": "(Altura - AlturaPainel) - 0.15",
+                "radius": "0.008"
+              },
+              {
+                "u": "Largura*0.16",
+                "v": "((Altura - AlturaPainel) - 0.15) + 0.008"
+              },
+              {
+                "u": "Largura*0.16",
+                "v": "((Altura - AlturaPainel) - 0.09) - 0.008",
+                "radius": "0.008"
+              },
+              {
+                "u": "(Largura*0.16) - 0.008",
+                "v": "(Altura - AlturaPainel) - 0.09"
+              },
+              {
+                "u": "(-Largura*0.16) + 0.008",
+                "v": "(Altura - AlturaPainel) - 0.09",
+                "radius": "0.008"
+              },
+              {
+                "u": "-Largura*0.16",
+                "v": "((Altura - AlturaPainel) - 0.09) - 0.008"
+              },
+              {
+                "u": "-Largura*0.16",
+                "v": "((Altura - AlturaPainel) - 0.15) + 0.008",
+                "radius": "0.008"
+              }
+            ],
+            "offset": "(-Profundidade/2) - 0.0008",
+            "depth": "0.0008"
+          }
+        },
+        "material": "Plástico azul",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Etiqueta de capacidade - texto",
+        "shape": {
+          "Box": {
+            "x": "-Largura*0.11",
+            "y": "(-Profundidade/2) - 0.0011",
+            "z": "(Altura - AlturaPainel) - 0.124",
+            "width": "Largura*0.22",
+            "depth": "0.0003",
+            "height": "0.008"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pega lateral esquerda",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) - 0.002",
+            "y": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) - 0.08",
+            "z": "(Altura - AlturaPainel) - 0.11",
+            "width": "0.002",
+            "depth": "0.16",
+            "height": "0.035"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pega lateral esquerda - sombra",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) - 0.0025",
+            "y": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) - 0.07",
+            "z": "(Altura - AlturaPainel) - 0.1",
+            "width": "0.0005",
+            "depth": "0.14",
+            "height": "0.012"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pega lateral direita",
+        "shape": {
+          "Box": {
+            "x": "(Largura/2)",
+            "y": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) - 0.08",
+            "z": "(Altura - AlturaPainel) - 0.11",
+            "width": "0.002",
+            "depth": "0.16",
+            "height": "0.035"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pega lateral direita - sombra",
+        "shape": {
+          "Box": {
+            "x": "(Largura/2) + 0.002",
+            "y": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) - 0.07",
+            "z": "(Altura - AlturaPainel) - 0.1",
+            "width": "0.0005",
+            "depth": "0.14",
+            "height": "0.012"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pé dianteiro esquerdo - sapata",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(-Largura/2) + 0.06",
+                "v": "0"
+              },
+              {
+                "u": "((-Largura/2) + 0.06) + 0.021",
+                "v": "0"
+              },
+              {
+                "u": "((-Largura/2) + 0.06) + 0.021",
+                "v": "0.005"
+              },
+              {
+                "u": "((-Largura/2) + 0.06) + 0.016",
+                "v": "0.008"
+              },
+              {
+                "u": "(-Largura/2) + 0.06",
+                "v": "0.008"
+              }
+            ],
+            "offset": "(-Profundidade/2) + 0.06",
+            "axis": "(-Largura/2) + 0.06",
+            "angle": "360"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pé dianteiro esquerdo - haste",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(-Largura/2) + 0.06",
+                "v": "0.008"
+              },
+              {
+                "u": "((-Largura/2) + 0.06) + 0.011",
+                "v": "0.008"
+              },
+              {
+                "u": "((-Largura/2) + 0.06) + 0.011",
+                "v": "0.012"
+              },
+              {
+                "u": "((-Largura/2) + 0.06) + 0.005",
+                "v": "0.012"
+              },
+              {
+                "u": "((-Largura/2) + 0.06) + 0.005",
+                "v": "0.025 - 0.004"
+              },
+              {
+                "u": "(-Largura/2) + 0.06",
+                "v": "0.025 - 0.004"
+              }
+            ],
+            "offset": "(-Profundidade/2) + 0.06",
+            "axis": "(-Largura/2) + 0.06",
+            "angle": "360"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pé dianteiro direito - sapata",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(Largura/2) - 0.06",
+                "v": "0"
+              },
+              {
+                "u": "((Largura/2) - 0.06) + 0.021",
+                "v": "0"
+              },
+              {
+                "u": "((Largura/2) - 0.06) + 0.021",
+                "v": "0.005"
+              },
+              {
+                "u": "((Largura/2) - 0.06) + 0.016",
+                "v": "0.008"
+              },
+              {
+                "u": "(Largura/2) - 0.06",
+                "v": "0.008"
+              }
+            ],
+            "offset": "(-Profundidade/2) + 0.06",
+            "axis": "(Largura/2) - 0.06",
+            "angle": "360"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pé dianteiro direito - haste",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(Largura/2) - 0.06",
+                "v": "0.008"
+              },
+              {
+                "u": "((Largura/2) - 0.06) + 0.011",
+                "v": "0.008"
+              },
+              {
+                "u": "((Largura/2) - 0.06) + 0.011",
+                "v": "0.012"
+              },
+              {
+                "u": "((Largura/2) - 0.06) + 0.005",
+                "v": "0.012"
+              },
+              {
+                "u": "((Largura/2) - 0.06) + 0.005",
+                "v": "0.025 - 0.004"
+              },
+              {
+                "u": "(Largura/2) - 0.06",
+                "v": "0.025 - 0.004"
+              }
+            ],
+            "offset": "(-Profundidade/2) + 0.06",
+            "axis": "(Largura/2) - 0.06",
+            "angle": "360"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pé traseiro esquerdo - sapata",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(-Largura/2) + 0.06",
+                "v": "0"
+              },
+              {
+                "u": "((-Largura/2) + 0.06) + 0.021",
+                "v": "0"
+              },
+              {
+                "u": "((-Largura/2) + 0.06) + 0.021",
+                "v": "0.005"
+              },
+              {
+                "u": "((-Largura/2) + 0.06) + 0.016",
+                "v": "0.008"
+              },
+              {
+                "u": "(-Largura/2) + 0.06",
+                "v": "0.008"
+              }
+            ],
+            "offset": "(Profundidade/2 - 0.03) - 0.06",
+            "axis": "(-Largura/2) + 0.06",
+            "angle": "360"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pé traseiro esquerdo - haste",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(-Largura/2) + 0.06",
+                "v": "0.008"
+              },
+              {
+                "u": "((-Largura/2) + 0.06) + 0.011",
+                "v": "0.008"
+              },
+              {
+                "u": "((-Largura/2) + 0.06) + 0.011",
+                "v": "0.012"
+              },
+              {
+                "u": "((-Largura/2) + 0.06) + 0.005",
+                "v": "0.012"
+              },
+              {
+                "u": "((-Largura/2) + 0.06) + 0.005",
+                "v": "0.025 - 0.004"
+              },
+              {
+                "u": "(-Largura/2) + 0.06",
+                "v": "0.025 - 0.004"
+              }
+            ],
+            "offset": "(Profundidade/2 - 0.03) - 0.06",
+            "axis": "(-Largura/2) + 0.06",
+            "angle": "360"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pé traseiro direito - sapata",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(Largura/2) - 0.06",
+                "v": "0"
+              },
+              {
+                "u": "((Largura/2) - 0.06) + 0.021",
+                "v": "0"
+              },
+              {
+                "u": "((Largura/2) - 0.06) + 0.021",
+                "v": "0.005"
+              },
+              {
+                "u": "((Largura/2) - 0.06) + 0.016",
+                "v": "0.008"
+              },
+              {
+                "u": "(Largura/2) - 0.06",
+                "v": "0.008"
+              }
+            ],
+            "offset": "(Profundidade/2 - 0.03) - 0.06",
+            "axis": "(Largura/2) - 0.06",
+            "angle": "360"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pé traseiro direito - haste",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(Largura/2) - 0.06",
+                "v": "0.008"
+              },
+              {
+                "u": "((Largura/2) - 0.06) + 0.011",
+                "v": "0.008"
+              },
+              {
+                "u": "((Largura/2) - 0.06) + 0.011",
+                "v": "0.012"
+              },
+              {
+                "u": "((Largura/2) - 0.06) + 0.005",
+                "v": "0.012"
+              },
+              {
+                "u": "((Largura/2) - 0.06) + 0.005",
+                "v": "0.025 - 0.004"
+              },
+              {
+                "u": "(Largura/2) - 0.06",
+                "v": "0.025 - 0.004"
+              }
+            ],
+            "offset": "(Profundidade/2 - 0.03) - 0.06",
+            "axis": "(Largura/2) - 0.06",
+            "angle": "360"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cesto",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "((Altura - AlturaPainel) - 0.025 - AlturaCesto)"
+              },
+              {
+                "u": "(DiametroCesto/2 + 0.005) - 0.03",
+                "v": "((Altura - AlturaPainel) - 0.025 - AlturaCesto)"
+              },
+              {
+                "u": "(DiametroCesto/2 + 0.005) - 0.001",
+                "v": "((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.03"
+              },
+              {
+                "u": "(DiametroCesto/2 + 0.005) - 0.001",
+                "v": "((Altura - AlturaPainel) - 0.025)"
+              },
+              {
+                "u": "(DiametroCesto/2 + 0.005) - 0.001 - 0.005",
+                "v": "((Altura - AlturaPainel) - 0.025)"
+              },
+              {
+                "u": "(DiametroCesto/2 + 0.005) - 0.001 - 0.005",
+                "v": "((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.03 + 0.005"
+              },
+              {
+                "u": "(DiametroCesto/2 + 0.005) - 0.03",
+                "v": "((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005"
+              },
+              {
+                "u": "0",
+                "v": "((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005"
+              }
+            ],
+            "offset": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02)",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cesto - nervura 1",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(DiametroCesto/2 + 0.005) - 0.001 - 0.005 - 0.003",
+                "v": "((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.08 + 0*AlturaCesto*0.13"
+              },
+              {
+                "u": "(DiametroCesto/2 + 0.005) - 0.005",
+                "v": "((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.08 + 0*AlturaCesto*0.13"
+              },
+              {
+                "u": "(DiametroCesto/2 + 0.005) - 0.005",
+                "v": "((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.084 + 0*AlturaCesto*0.13"
+              },
+              {
+                "u": "(DiametroCesto/2 + 0.005) - 0.001 - 0.005 - 0.003",
+                "v": "((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.084 + 0*AlturaCesto*0.13"
+              }
+            ],
+            "offset": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02)",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cesto - nervura 2",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(DiametroCesto/2 + 0.005) - 0.001 - 0.005 - 0.003",
+                "v": "((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.08 + 1*AlturaCesto*0.13"
+              },
+              {
+                "u": "(DiametroCesto/2 + 0.005) - 0.005",
+                "v": "((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.08 + 1*AlturaCesto*0.13"
+              },
+              {
+                "u": "(DiametroCesto/2 + 0.005) - 0.005",
+                "v": "((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.084 + 1*AlturaCesto*0.13"
+              },
+              {
+                "u": "(DiametroCesto/2 + 0.005) - 0.001 - 0.005 - 0.003",
+                "v": "((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.084 + 1*AlturaCesto*0.13"
+              }
+            ],
+            "offset": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02)",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cesto - nervura 3",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(DiametroCesto/2 + 0.005) - 0.001 - 0.005 - 0.003",
+                "v": "((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.08 + 2*AlturaCesto*0.13"
+              },
+              {
+                "u": "(DiametroCesto/2 + 0.005) - 0.005",
+                "v": "((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.08 + 2*AlturaCesto*0.13"
+              },
+              {
+                "u": "(DiametroCesto/2 + 0.005) - 0.005",
+                "v": "((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.084 + 2*AlturaCesto*0.13"
+              },
+              {
+                "u": "(DiametroCesto/2 + 0.005) - 0.001 - 0.005 - 0.003",
+                "v": "((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.084 + 2*AlturaCesto*0.13"
+              }
+            ],
+            "offset": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02)",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cesto - nervura 4",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(DiametroCesto/2 + 0.005) - 0.001 - 0.005 - 0.003",
+                "v": "((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.08 + 3*AlturaCesto*0.13"
+              },
+              {
+                "u": "(DiametroCesto/2 + 0.005) - 0.005",
+                "v": "((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.08 + 3*AlturaCesto*0.13"
+              },
+              {
+                "u": "(DiametroCesto/2 + 0.005) - 0.005",
+                "v": "((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.084 + 3*AlturaCesto*0.13"
+              },
+              {
+                "u": "(DiametroCesto/2 + 0.005) - 0.001 - 0.005 - 0.003",
+                "v": "((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.084 + 3*AlturaCesto*0.13"
+              }
+            ],
+            "offset": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02)",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cesto - nervura 5",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(DiametroCesto/2 + 0.005) - 0.001 - 0.005 - 0.003",
+                "v": "((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.08 + 4*AlturaCesto*0.13"
+              },
+              {
+                "u": "(DiametroCesto/2 + 0.005) - 0.005",
+                "v": "((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.08 + 4*AlturaCesto*0.13"
+              },
+              {
+                "u": "(DiametroCesto/2 + 0.005) - 0.005",
+                "v": "((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.084 + 4*AlturaCesto*0.13"
+              },
+              {
+                "u": "(DiametroCesto/2 + 0.005) - 0.001 - 0.005 - 0.003",
+                "v": "((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.084 + 4*AlturaCesto*0.13"
+              }
+            ],
+            "offset": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02)",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cesto - nervura 6",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(DiametroCesto/2 + 0.005) - 0.001 - 0.005 - 0.003",
+                "v": "((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.08 + 5*AlturaCesto*0.13"
+              },
+              {
+                "u": "(DiametroCesto/2 + 0.005) - 0.005",
+                "v": "((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.08 + 5*AlturaCesto*0.13"
+              },
+              {
+                "u": "(DiametroCesto/2 + 0.005) - 0.005",
+                "v": "((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.084 + 5*AlturaCesto*0.13"
+              },
+              {
+                "u": "(DiametroCesto/2 + 0.005) - 0.001 - 0.005 - 0.003",
+                "v": "((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.084 + 5*AlturaCesto*0.13"
+              }
+            ],
+            "offset": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02)",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Batedor - disco",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "(((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005)"
+              },
+              {
+                "u": "DiametroCesto*0.3",
+                "v": "(((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005)"
+              },
+              {
+                "u": "DiametroCesto*0.3",
+                "v": "(((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005) + 0.008"
+              },
+              {
+                "u": "DiametroCesto*0.12",
+                "v": "(((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005) + 0.03",
+                "radius": "0.06"
+              },
+              {
+                "u": "0",
+                "v": "(((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005) + 0.032"
+              }
+            ],
+            "offset": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02)",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico azul",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Batedor - coluna",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "(((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005) + 0.03"
+              },
+              {
+                "u": "0.032",
+                "v": "(((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005) + 0.03"
+              },
+              {
+                "u": "0.024",
+                "v": "(((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005) + (AlturaCesto*0.62)"
+              },
+              {
+                "u": "0",
+                "v": "(((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005) + (AlturaCesto*0.62)"
+              }
+            ],
+            "offset": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02)",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico azul",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Batedor - tampa",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "(((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005) + (AlturaCesto*0.62)"
+              },
+              {
+                "u": "0.03",
+                "v": "(((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005) + (AlturaCesto*0.62)"
+              },
+              {
+                "u": "0.03",
+                "v": "(((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005) + (AlturaCesto*0.62) + 0.012",
+                "radius": "0.012"
+              },
+              {
+                "u": "0.018",
+                "v": "(((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005) + (AlturaCesto*0.62) + 0.022"
+              },
+              {
+                "u": "0",
+                "v": "(((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005) + (AlturaCesto*0.62) + 0.024"
+              }
+            ],
+            "offset": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02)",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Batedor - aleta esquerda",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(-0.016)",
+                "v": "(((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005) + (AlturaCesto*0.62)*0.95"
+              },
+              {
+                "u": "(-0.045)",
+                "v": "(((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005) + (AlturaCesto*0.62)*0.8"
+              },
+              {
+                "u": "(-0.075)",
+                "v": "(((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005) + 0.05"
+              },
+              {
+                "u": "(-0.02)",
+                "v": "(((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005) + 0.03"
+              }
+            ],
+            "offset": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) - 0.004",
+            "depth": "0.008"
+          }
+        },
+        "material": "Plástico azul",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Batedor - aleta direita",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0.02",
+                "v": "(((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005) + 0.03"
+              },
+              {
+                "u": "0.075",
+                "v": "(((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005) + 0.05"
+              },
+              {
+                "u": "0.045",
+                "v": "(((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005) + (AlturaCesto*0.62)*0.8"
+              },
+              {
+                "u": "0.016",
+                "v": "(((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005) + (AlturaCesto*0.62)*0.95"
+              }
+            ],
+            "offset": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) - 0.004",
+            "depth": "0.008"
+          }
+        },
+        "material": "Plástico azul",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Batedor - aleta frontal",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) + (-0.016)",
+                "v": "(((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005) + (AlturaCesto*0.62)*0.95"
+              },
+              {
+                "u": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) + (-0.045)",
+                "v": "(((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005) + (AlturaCesto*0.62)*0.8"
+              },
+              {
+                "u": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) + (-0.075)",
+                "v": "(((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005) + 0.05"
+              },
+              {
+                "u": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) + (-0.02)",
+                "v": "(((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005) + 0.03"
+              }
+            ],
+            "offset": "-0.004",
+            "depth": "0.008"
+          }
+        },
+        "material": "Plástico azul",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Batedor - aleta traseira",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) + 0.02",
+                "v": "(((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005) + 0.03"
+              },
+              {
+                "u": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) + 0.075",
+                "v": "(((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005) + 0.05"
+              },
+              {
+                "u": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) + 0.045",
+                "v": "(((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005) + (AlturaCesto*0.62)*0.8"
+              },
+              {
+                "u": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) + 0.016",
+                "v": "(((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005) + (AlturaCesto*0.62)*0.95"
+              }
+            ],
+            "offset": "-0.004",
+            "depth": "0.008"
+          }
+        },
+        "material": "Plástico azul",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Batedor - nervura 1",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.04097*DiametroCesto/0.4",
+                "v": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) + 0.01904*DiametroCesto/0.4"
+              },
+              {
+                "u": "0.09676*DiametroCesto/0.4",
+                "v": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) + 0.0524*DiametroCesto/0.4"
+              },
+              {
+                "u": "0.09376*DiametroCesto/0.4",
+                "v": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) + 0.0576*DiametroCesto/0.4"
+              },
+              {
+                "u": "0.03697*DiametroCesto/0.4",
+                "v": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) + 0.02596*DiametroCesto/0.4"
+              }
+            ],
+            "offset": "(((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005) + 0.006",
+            "depth": "0.012"
+          }
+        },
+        "material": "Plástico azul",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Batedor - nervura 2",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.004*DiametroCesto/0.4",
+                "v": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) + 0.045*DiametroCesto/0.4"
+              },
+              {
+                "u": "0.003*DiametroCesto/0.4",
+                "v": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) + 0.11*DiametroCesto/0.4"
+              },
+              {
+                "u": "(-0.003)*DiametroCesto/0.4",
+                "v": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) + 0.11*DiametroCesto/0.4"
+              },
+              {
+                "u": "(-0.004)*DiametroCesto/0.4",
+                "v": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) + 0.045*DiametroCesto/0.4"
+              }
+            ],
+            "offset": "(((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005) + 0.006",
+            "depth": "0.012"
+          }
+        },
+        "material": "Plástico azul",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Batedor - nervura 3",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-0.03697)*DiametroCesto/0.4",
+                "v": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) + 0.02596*DiametroCesto/0.4"
+              },
+              {
+                "u": "(-0.09376)*DiametroCesto/0.4",
+                "v": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) + 0.0576*DiametroCesto/0.4"
+              },
+              {
+                "u": "(-0.09676)*DiametroCesto/0.4",
+                "v": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) + 0.0524*DiametroCesto/0.4"
+              },
+              {
+                "u": "(-0.04097)*DiametroCesto/0.4",
+                "v": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) + 0.01904*DiametroCesto/0.4"
+              }
+            ],
+            "offset": "(((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005) + 0.006",
+            "depth": "0.012"
+          }
+        },
+        "material": "Plástico azul",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Batedor - nervura 4",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-0.04097)*DiametroCesto/0.4",
+                "v": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) + (-0.01904)*DiametroCesto/0.4"
+              },
+              {
+                "u": "(-0.09676)*DiametroCesto/0.4",
+                "v": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) + (-0.0524)*DiametroCesto/0.4"
+              },
+              {
+                "u": "(-0.09376)*DiametroCesto/0.4",
+                "v": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) + (-0.0576)*DiametroCesto/0.4"
+              },
+              {
+                "u": "(-0.03697)*DiametroCesto/0.4",
+                "v": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) + (-0.02596)*DiametroCesto/0.4"
+              }
+            ],
+            "offset": "(((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005) + 0.006",
+            "depth": "0.012"
+          }
+        },
+        "material": "Plástico azul",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Batedor - nervura 5",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-0.004)*DiametroCesto/0.4",
+                "v": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) + (-0.045)*DiametroCesto/0.4"
+              },
+              {
+                "u": "(-0.003)*DiametroCesto/0.4",
+                "v": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) + (-0.11)*DiametroCesto/0.4"
+              },
+              {
+                "u": "0.003*DiametroCesto/0.4",
+                "v": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) + (-0.11)*DiametroCesto/0.4"
+              },
+              {
+                "u": "0.004*DiametroCesto/0.4",
+                "v": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) + (-0.045)*DiametroCesto/0.4"
+              }
+            ],
+            "offset": "(((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005) + 0.006",
+            "depth": "0.012"
+          }
+        },
+        "material": "Plástico azul",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Batedor - nervura 6",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.03697*DiametroCesto/0.4",
+                "v": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) + (-0.02596)*DiametroCesto/0.4"
+              },
+              {
+                "u": "0.09376*DiametroCesto/0.4",
+                "v": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) + (-0.0576)*DiametroCesto/0.4"
+              },
+              {
+                "u": "0.09676*DiametroCesto/0.4",
+                "v": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) + (-0.0524)*DiametroCesto/0.4"
+              },
+              {
+                "u": "0.04097*DiametroCesto/0.4",
+                "v": "(((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) + (-0.01904)*DiametroCesto/0.4"
+              }
+            ],
+            "offset": "(((Altura - AlturaPainel) - 0.025 - AlturaCesto) + 0.005) + 0.006",
+            "depth": "0.012"
+          }
+        },
+        "material": "Plástico azul",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Filtro de fiapos - moldura",
+        "shape": {
+          "Box": {
+            "x": "-0.045",
+            "y": "((((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) - (DiametroCesto/2 + 0.005) + 0.006 + 0.005)",
+            "z": "((Altura - AlturaPainel) - 0.025) - 0.2",
+            "width": "0.09",
+            "depth": "0.022",
+            "height": "0.16"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Filtro de fiapos - tela",
+        "shape": {
+          "Box": {
+            "x": "-0.038",
+            "y": "((((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) - (DiametroCesto/2 + 0.005) + 0.006 + 0.005) + 0.022",
+            "z": "((Altura - AlturaPainel) - 0.025) - 0.19",
+            "width": "0.076",
+            "depth": "0.001",
+            "height": "0.14"
+          }
+        },
+        "material": "Tela perfurada",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Filtro de fiapos - gancho",
+        "shape": {
+          "Box": {
+            "x": "-0.015",
+            "y": "((((-Profundidade/2) + (Profundidade/2 - 0.03))/2 - 0.02) - (DiametroCesto/2 + 0.005) + 0.006 + 0.005) - 0.004",
+            "z": "((Altura - AlturaPainel) - 0.025) - 0.045",
+            "width": "0.03",
+            "depth": "0.01",
+            "height": "0.045"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porta-sabão",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.06)",
+                "v": "(Altura - AlturaPainel)"
+              },
+              {
+                "u": "((-Largura/2) + 0.06) + 0.032",
+                "v": "(Altura - AlturaPainel)"
+              },
+              {
+                "u": "((-Largura/2) + 0.06) + 0.032",
+                "v": "(Altura - AlturaPainel) + 0.012"
+              },
+              {
+                "u": "((-Largura/2) + 0.06) + 0.028",
+                "v": "(Altura - AlturaPainel) + 0.012"
+              },
+              {
+                "u": "((-Largura/2) + 0.06) + 0.026",
+                "v": "(Altura - AlturaPainel) + 0.004"
+              },
+              {
+                "u": "((-Largura/2) + 0.06)",
+                "v": "(Altura - AlturaPainel) + 0.004"
+              }
+            ],
+            "offset": "((-Profundidade/2) + 0.06)",
+            "axis": "((-Largura/2) + 0.06)",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Painel",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((Profundidade/2 - 0.03) - 0.1)",
+                "v": "(Altura - AlturaPainel)"
+              },
+              {
+                "u": "(Profundidade/2 - 0.03)",
+                "v": "(Altura - AlturaPainel)"
+              },
+              {
+                "u": "(Profundidade/2 - 0.03)",
+                "v": "Altura"
+              },
+              {
+                "u": "((Profundidade/2 - 0.03) - 0.1) + 0.035",
+                "v": "Altura",
+                "radius": "0.035"
+              },
+              {
+                "u": "((Profundidade/2 - 0.03) - 0.1)",
+                "v": "Altura - 0.035"
+              }
+            ],
+            "offset": "(-Largura/2) + 0.02",
+            "depth": "Largura - 0.04"
+          }
+        },
+        "material": "Branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Painel - faixa",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.04) + 0.01",
+                "v": "((Altura - AlturaPainel) + AlturaPainel*0.48) - 0.03"
+              },
+              {
+                "u": "((Largura/2) - 0.04) - 0.01",
+                "v": "((Altura - AlturaPainel) + AlturaPainel*0.48) - 0.03",
+                "radius": "0.01"
+              },
+              {
+                "u": "(Largura/2) - 0.04",
+                "v": "(((Altura - AlturaPainel) + AlturaPainel*0.48) - 0.03) + 0.01"
+              },
+              {
+                "u": "(Largura/2) - 0.04",
+                "v": "(((Altura - AlturaPainel) + AlturaPainel*0.48) + 0.03) - 0.01",
+                "radius": "0.01"
+              },
+              {
+                "u": "((Largura/2) - 0.04) - 0.01",
+                "v": "((Altura - AlturaPainel) + AlturaPainel*0.48) + 0.03"
+              },
+              {
+                "u": "((-Largura/2) + 0.04) + 0.01",
+                "v": "((Altura - AlturaPainel) + AlturaPainel*0.48) + 0.03",
+                "radius": "0.01"
+              },
+              {
+                "u": "(-Largura/2) + 0.04",
+                "v": "(((Altura - AlturaPainel) + AlturaPainel*0.48) + 0.03) - 0.01"
+              },
+              {
+                "u": "(-Largura/2) + 0.04",
+                "v": "(((Altura - AlturaPainel) + AlturaPainel*0.48) - 0.03) + 0.01",
+                "radius": "0.01"
+              }
+            ],
+            "offset": "((Profundidade/2 - 0.03) - 0.1) - 0.001",
+            "depth": "0.001"
+          }
+        },
+        "material": "Plástico azul",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Timer - base",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "Largura*0.24",
+                "v": "((Profundidade/2 - 0.03) - 0.1) - 0.003"
+              },
+              {
+                "u": "Largura*0.24 + 0.026 + 0.006",
+                "v": "((Profundidade/2 - 0.03) - 0.1) - 0.003"
+              },
+              {
+                "u": "Largura*0.24 + 0.026 + 0.006",
+                "v": "((Profundidade/2 - 0.03) - 0.1) - 0.001"
+              },
+              {
+                "u": "Largura*0.24",
+                "v": "((Profundidade/2 - 0.03) - 0.1) - 0.001"
+              }
+            ],
+            "offset": "((Altura - AlturaPainel) + AlturaPainel*0.48)",
+            "axis": "Largura*0.24",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Timer",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "Largura*0.24",
+                "v": "((Profundidade/2 - 0.03) - 0.1) - 0.026"
+              },
+              {
+                "u": "Largura*0.24 + 0.026 - 0.003",
+                "v": "((Profundidade/2 - 0.03) - 0.1) - 0.026"
+              },
+              {
+                "u": "Largura*0.24 + 0.026",
+                "v": "((Profundidade/2 - 0.03) - 0.1) - 0.022"
+              },
+              {
+                "u": "Largura*0.24 + 0.026",
+                "v": "((Profundidade/2 - 0.03) - 0.1) - 0.003"
+              },
+              {
+                "u": "Largura*0.24",
+                "v": "((Profundidade/2 - 0.03) - 0.1) - 0.003"
+              }
+            ],
+            "offset": "((Altura - AlturaPainel) + AlturaPainel*0.48)",
+            "axis": "Largura*0.24",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Timer - pega",
+        "shape": {
+          "Box": {
+            "x": "Largura*0.24 - 0.005",
+            "y": "((Profundidade/2 - 0.03) - 0.1) - 0.04",
+            "z": "((Altura - AlturaPainel) + AlturaPainel*0.48) - 0.026 + 0.004",
+            "width": "0.01",
+            "depth": "0.016",
+            "height": "2*0.026 - 0.008"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Timer - marca",
+        "shape": {
+          "Box": {
+            "x": "Largura*0.24 - 0.0012",
+            "y": "((Profundidade/2 - 0.03) - 0.1) - 0.0405",
+            "z": "((Altura - AlturaPainel) + AlturaPainel*0.48) + 0.026 - 0.016",
+            "width": "0.0024",
+            "depth": "0.0005",
+            "height": "0.01"
+          }
+        },
+        "material": "Plástico azul",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Timer - escala 1",
+        "shape": {
+          "Box": {
+            "x": "Largura*0.24 + 0 + (0.026 + 0.009)*0 - 0.001",
+            "y": "((Profundidade/2 - 0.03) - 0.1) - 0.0013",
+            "z": "((Altura - AlturaPainel) + AlturaPainel*0.48) + (0.026 + 0.009)*1 - 0.001",
+            "width": "0.002",
+            "depth": "0.0003",
+            "height": "0.002"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Timer - escala 2",
+        "shape": {
+          "Box": {
+            "x": "Largura*0.24 + 0.003 + (0.026 + 0.009)*0.5 - 0.001",
+            "y": "((Profundidade/2 - 0.03) - 0.1) - 0.0013",
+            "z": "((Altura - AlturaPainel) + AlturaPainel*0.48) + (0.026 + 0.009)*0.86603 - 0.001",
+            "width": "0.002",
+            "depth": "0.0003",
+            "height": "0.002"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Timer - escala 3",
+        "shape": {
+          "Box": {
+            "x": "Largura*0.24 + 0.0052 + (0.026 + 0.009)*0.86603 - 0.001",
+            "y": "((Profundidade/2 - 0.03) - 0.1) - 0.0013",
+            "z": "((Altura - AlturaPainel) + AlturaPainel*0.48) + (0.026 + 0.009)*0.5 - 0.001",
+            "width": "0.002",
+            "depth": "0.0003",
+            "height": "0.002"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Timer - escala 4",
+        "shape": {
+          "Box": {
+            "x": "Largura*0.24 + 0.006 + (0.026 + 0.009)*1 - 0.001",
+            "y": "((Profundidade/2 - 0.03) - 0.1) - 0.0013",
+            "z": "((Altura - AlturaPainel) + AlturaPainel*0.48) + (0.026 + 0.009)*0 - 0.001",
+            "width": "0.002",
+            "depth": "0.0003",
+            "height": "0.002"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Timer - escala 5",
+        "shape": {
+          "Box": {
+            "x": "Largura*0.24 + 0.0052 + (0.026 + 0.009)*0.86603 - 0.001",
+            "y": "((Profundidade/2 - 0.03) - 0.1) - 0.0013",
+            "z": "((Altura - AlturaPainel) + AlturaPainel*0.48) + (0.026 + 0.009)*(-0.5) - 0.001",
+            "width": "0.002",
+            "depth": "0.0003",
+            "height": "0.002"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Timer - escala 6",
+        "shape": {
+          "Box": {
+            "x": "Largura*0.24 + 0.003 + (0.026 + 0.009)*0.5 - 0.001",
+            "y": "((Profundidade/2 - 0.03) - 0.1) - 0.0013",
+            "z": "((Altura - AlturaPainel) + AlturaPainel*0.48) + (0.026 + 0.009)*(-0.86603) - 0.001",
+            "width": "0.002",
+            "depth": "0.0003",
+            "height": "0.002"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Timer - escala 7",
+        "shape": {
+          "Box": {
+            "x": "Largura*0.24 + 0 + (0.026 + 0.009)*0 - 0.001",
+            "y": "((Profundidade/2 - 0.03) - 0.1) - 0.0013",
+            "z": "((Altura - AlturaPainel) + AlturaPainel*0.48) + (0.026 + 0.009)*(-1) - 0.001",
+            "width": "0.002",
+            "depth": "0.0003",
+            "height": "0.002"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Timer - escala 8",
+        "shape": {
+          "Box": {
+            "x": "Largura*0.24 + (-0.003) + (0.026 + 0.009)*(-0.5) - 0.001",
+            "y": "((Profundidade/2 - 0.03) - 0.1) - 0.0013",
+            "z": "((Altura - AlturaPainel) + AlturaPainel*0.48) + (0.026 + 0.009)*(-0.86603) - 0.001",
+            "width": "0.002",
+            "depth": "0.0003",
+            "height": "0.002"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Timer - escala 9",
+        "shape": {
+          "Box": {
+            "x": "Largura*0.24 + (-0.0052) + (0.026 + 0.009)*(-0.86603) - 0.001",
+            "y": "((Profundidade/2 - 0.03) - 0.1) - 0.0013",
+            "z": "((Altura - AlturaPainel) + AlturaPainel*0.48) + (0.026 + 0.009)*(-0.5) - 0.001",
+            "width": "0.002",
+            "depth": "0.0003",
+            "height": "0.002"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Timer - escala 10",
+        "shape": {
+          "Box": {
+            "x": "Largura*0.24 + (-0.006) + (0.026 + 0.009)*(-1) - 0.001",
+            "y": "((Profundidade/2 - 0.03) - 0.1) - 0.0013",
+            "z": "((Altura - AlturaPainel) + AlturaPainel*0.48) + (0.026 + 0.009)*0 - 0.001",
+            "width": "0.002",
+            "depth": "0.0003",
+            "height": "0.002"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Seletor de função - base",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-Largura*0.24",
+                "v": "((Profundidade/2 - 0.03) - 0.1) - 0.003"
+              },
+              {
+                "u": "-Largura*0.24 + 0.02 + 0.006",
+                "v": "((Profundidade/2 - 0.03) - 0.1) - 0.003"
+              },
+              {
+                "u": "-Largura*0.24 + 0.02 + 0.006",
+                "v": "((Profundidade/2 - 0.03) - 0.1) - 0.001"
+              },
+              {
+                "u": "-Largura*0.24",
+                "v": "((Profundidade/2 - 0.03) - 0.1) - 0.001"
+              }
+            ],
+            "offset": "((Altura - AlturaPainel) + AlturaPainel*0.48)",
+            "axis": "-Largura*0.24",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Seletor de função",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-Largura*0.24",
+                "v": "((Profundidade/2 - 0.03) - 0.1) - 0.026"
+              },
+              {
+                "u": "-Largura*0.24 + 0.02 - 0.003",
+                "v": "((Profundidade/2 - 0.03) - 0.1) - 0.026"
+              },
+              {
+                "u": "-Largura*0.24 + 0.02",
+                "v": "((Profundidade/2 - 0.03) - 0.1) - 0.022"
+              },
+              {
+                "u": "-Largura*0.24 + 0.02",
+                "v": "((Profundidade/2 - 0.03) - 0.1) - 0.003"
+              },
+              {
+                "u": "-Largura*0.24",
+                "v": "((Profundidade/2 - 0.03) - 0.1) - 0.003"
+              }
+            ],
+            "offset": "((Altura - AlturaPainel) + AlturaPainel*0.48)",
+            "axis": "-Largura*0.24",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Seletor de função - pega",
+        "shape": {
+          "Box": {
+            "x": "-Largura*0.24 - 0.005",
+            "y": "((Profundidade/2 - 0.03) - 0.1) - 0.04",
+            "z": "((Altura - AlturaPainel) + AlturaPainel*0.48) - 0.02 + 0.004",
+            "width": "0.01",
+            "depth": "0.016",
+            "height": "2*0.02 - 0.008"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Seletor de função - marca",
+        "shape": {
+          "Box": {
+            "x": "-Largura*0.24 - 0.0012",
+            "y": "((Profundidade/2 - 0.03) - 0.1) - 0.0405",
+            "z": "((Altura - AlturaPainel) + AlturaPainel*0.48) + 0.02 - 0.016",
+            "width": "0.0024",
+            "depth": "0.0005",
+            "height": "0.01"
+          }
+        },
+        "material": "Plástico azul",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Seletor de função - escala 1",
+        "shape": {
+          "Box": {
+            "x": "-Largura*0.24 + 0 + (0.02 + 0.009)*0 - 0.001",
+            "y": "((Profundidade/2 - 0.03) - 0.1) - 0.0013",
+            "z": "((Altura - AlturaPainel) + AlturaPainel*0.48) + (0.02 + 0.009)*1 - 0.001",
+            "width": "0.002",
+            "depth": "0.0003",
+            "height": "0.002"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Seletor de função - escala 2",
+        "shape": {
+          "Box": {
+            "x": "-Largura*0.24 + 0.003 + (0.02 + 0.009)*0.5 - 0.001",
+            "y": "((Profundidade/2 - 0.03) - 0.1) - 0.0013",
+            "z": "((Altura - AlturaPainel) + AlturaPainel*0.48) + (0.02 + 0.009)*0.86603 - 0.001",
+            "width": "0.002",
+            "depth": "0.0003",
+            "height": "0.002"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Seletor de função - escala 3",
+        "shape": {
+          "Box": {
+            "x": "-Largura*0.24 + 0.0052 + (0.02 + 0.009)*0.86603 - 0.001",
+            "y": "((Profundidade/2 - 0.03) - 0.1) - 0.0013",
+            "z": "((Altura - AlturaPainel) + AlturaPainel*0.48) + (0.02 + 0.009)*0.5 - 0.001",
+            "width": "0.002",
+            "depth": "0.0003",
+            "height": "0.002"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Seletor de função - escala 4",
+        "shape": {
+          "Box": {
+            "x": "-Largura*0.24 + 0.006 + (0.02 + 0.009)*1 - 0.001",
+            "y": "((Profundidade/2 - 0.03) - 0.1) - 0.0013",
+            "z": "((Altura - AlturaPainel) + AlturaPainel*0.48) + (0.02 + 0.009)*0 - 0.001",
+            "width": "0.002",
+            "depth": "0.0003",
+            "height": "0.002"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Seletor de função - escala 5",
+        "shape": {
+          "Box": {
+            "x": "-Largura*0.24 + 0.0052 + (0.02 + 0.009)*0.86603 - 0.001",
+            "y": "((Profundidade/2 - 0.03) - 0.1) - 0.0013",
+            "z": "((Altura - AlturaPainel) + AlturaPainel*0.48) + (0.02 + 0.009)*(-0.5) - 0.001",
+            "width": "0.002",
+            "depth": "0.0003",
+            "height": "0.002"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Seletor de função - escala 6",
+        "shape": {
+          "Box": {
+            "x": "-Largura*0.24 + 0.003 + (0.02 + 0.009)*0.5 - 0.001",
+            "y": "((Profundidade/2 - 0.03) - 0.1) - 0.0013",
+            "z": "((Altura - AlturaPainel) + AlturaPainel*0.48) + (0.02 + 0.009)*(-0.86603) - 0.001",
+            "width": "0.002",
+            "depth": "0.0003",
+            "height": "0.002"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Seletor de função - escala 7",
+        "shape": {
+          "Box": {
+            "x": "-Largura*0.24 + 0 + (0.02 + 0.009)*0 - 0.001",
+            "y": "((Profundidade/2 - 0.03) - 0.1) - 0.0013",
+            "z": "((Altura - AlturaPainel) + AlturaPainel*0.48) + (0.02 + 0.009)*(-1) - 0.001",
+            "width": "0.002",
+            "depth": "0.0003",
+            "height": "0.002"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Seletor de função - escala 8",
+        "shape": {
+          "Box": {
+            "x": "-Largura*0.24 + (-0.003) + (0.02 + 0.009)*(-0.5) - 0.001",
+            "y": "((Profundidade/2 - 0.03) - 0.1) - 0.0013",
+            "z": "((Altura - AlturaPainel) + AlturaPainel*0.48) + (0.02 + 0.009)*(-0.86603) - 0.001",
+            "width": "0.002",
+            "depth": "0.0003",
+            "height": "0.002"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Seletor de função - escala 9",
+        "shape": {
+          "Box": {
+            "x": "-Largura*0.24 + (-0.0052) + (0.02 + 0.009)*(-0.86603) - 0.001",
+            "y": "((Profundidade/2 - 0.03) - 0.1) - 0.0013",
+            "z": "((Altura - AlturaPainel) + AlturaPainel*0.48) + (0.02 + 0.009)*(-0.5) - 0.001",
+            "width": "0.002",
+            "depth": "0.0003",
+            "height": "0.002"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Seletor de função - escala 10",
+        "shape": {
+          "Box": {
+            "x": "-Largura*0.24 + (-0.006) + (0.02 + 0.009)*(-1) - 0.001",
+            "y": "((Profundidade/2 - 0.03) - 0.1) - 0.0013",
+            "z": "((Altura - AlturaPainel) + AlturaPainel*0.48) + (0.02 + 0.009)*0 - 0.001",
+            "width": "0.002",
+            "depth": "0.0003",
+            "height": "0.002"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Luz piloto",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0",
+                "v": "((Profundidade/2 - 0.03) - 0.1) - 0.003"
+              },
+              {
+                "u": "0 + 0.004",
+                "v": "((Profundidade/2 - 0.03) - 0.1) - 0.003"
+              },
+              {
+                "u": "0 + 0.004",
+                "v": "(((Profundidade/2 - 0.03) - 0.1) - 0.003) + 0.002"
+              },
+              {
+                "u": "0",
+                "v": "(((Profundidade/2 - 0.03) - 0.1) - 0.003) + 0.002"
+              }
+            ],
+            "offset": "((Altura - AlturaPainel) + AlturaPainel*0.48) + 0.012",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico vermelho",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Painel - etiqueta",
+        "shape": {
+          "Box": {
+            "x": "-0.04",
+            "y": "((Profundidade/2 - 0.03) - 0.1) - 0.0013",
+            "z": "((Altura - AlturaPainel) + AlturaPainel*0.48) - 0.018",
+            "width": "0.08",
+            "depth": "0.0003",
+            "height": "0.012"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa - aro traseiro",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - 0*cos(AnguloTampa) + 0*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + 0*sin(AnguloTampa) + 0*cos(AnguloTampa)"
+              },
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - 0*cos(AnguloTampa) + 0.018*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + 0*sin(AnguloTampa) + 0.018*cos(AnguloTampa)"
+              },
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - 0.03*cos(AnguloTampa) + 0.018*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + 0.03*sin(AnguloTampa) + 0.018*cos(AnguloTampa)"
+              },
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - 0.03*cos(AnguloTampa) + 0*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + 0.03*sin(AnguloTampa) + 0*cos(AnguloTampa)"
+              }
+            ],
+            "offset": "((-Largura/2) + 0.025)",
+            "depth": "(Largura - 0.05)"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa - aro frontal",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) - 0.03)*cos(AnguloTampa) + 0*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) - 0.03)*sin(AnguloTampa) + 0*cos(AnguloTampa)"
+              },
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) - 0.03)*cos(AnguloTampa) + 0.018*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) - 0.03)*sin(AnguloTampa) + 0.018*cos(AnguloTampa)"
+              },
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012))*cos(AnguloTampa) + 0.018*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012))*sin(AnguloTampa) + 0.018*cos(AnguloTampa)"
+              },
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012))*cos(AnguloTampa) + 0*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012))*sin(AnguloTampa) + 0*cos(AnguloTampa)"
+              }
+            ],
+            "offset": "((-Largura/2) + 0.025)",
+            "depth": "(Largura - 0.05)"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa - aro esquerdo",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - 0.03*cos(AnguloTampa) + 0*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + 0.03*sin(AnguloTampa) + 0*cos(AnguloTampa)"
+              },
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - 0.03*cos(AnguloTampa) + 0.018*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + 0.03*sin(AnguloTampa) + 0.018*cos(AnguloTampa)"
+              },
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) - 0.03)*cos(AnguloTampa) + 0.018*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) - 0.03)*sin(AnguloTampa) + 0.018*cos(AnguloTampa)"
+              },
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) - 0.03)*cos(AnguloTampa) + 0*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) - 0.03)*sin(AnguloTampa) + 0*cos(AnguloTampa)"
+              }
+            ],
+            "offset": "((-Largura/2) + 0.025)",
+            "depth": "0.03"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa - aro direito",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - 0.03*cos(AnguloTampa) + 0*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + 0.03*sin(AnguloTampa) + 0*cos(AnguloTampa)"
+              },
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - 0.03*cos(AnguloTampa) + 0.018*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + 0.03*sin(AnguloTampa) + 0.018*cos(AnguloTampa)"
+              },
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) - 0.03)*cos(AnguloTampa) + 0.018*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) - 0.03)*sin(AnguloTampa) + 0.018*cos(AnguloTampa)"
+              },
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) - 0.03)*cos(AnguloTampa) + 0*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) - 0.03)*sin(AnguloTampa) + 0*cos(AnguloTampa)"
+              }
+            ],
+            "offset": "((-Largura/2) + 0.025) + (Largura - 0.05) - 0.03",
+            "depth": "0.03"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa - visor",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - 0.03*cos(AnguloTampa) + 0.008*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + 0.03*sin(AnguloTampa) + 0.008*cos(AnguloTampa)"
+              },
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - 0.03*cos(AnguloTampa) + 0.014*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + 0.03*sin(AnguloTampa) + 0.014*cos(AnguloTampa)"
+              },
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) - 0.03)*cos(AnguloTampa) + 0.014*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) - 0.03)*sin(AnguloTampa) + 0.014*cos(AnguloTampa)"
+              },
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) - 0.03)*cos(AnguloTampa) + 0.008*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) - 0.03)*sin(AnguloTampa) + 0.008*cos(AnguloTampa)"
+              }
+            ],
+            "offset": "((-Largura/2) + 0.025) + 0.03",
+            "depth": "(Largura - 0.05) - 2*0.03"
+          }
+        },
+        "material": "Plástico fumê",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa - puxador",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) - 0.006)*cos(AnguloTampa) + (-0.006)*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) - 0.006)*sin(AnguloTampa) + (-0.006)*cos(AnguloTampa)"
+              },
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) - 0.006)*cos(AnguloTampa) + 0.02*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) - 0.006)*sin(AnguloTampa) + 0.02*cos(AnguloTampa)"
+              },
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) + 0.012)*cos(AnguloTampa) + 0.02*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) + 0.012)*sin(AnguloTampa) + 0.02*cos(AnguloTampa)"
+              },
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) + 0.012)*cos(AnguloTampa) + (-0.006)*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) + 0.012)*sin(AnguloTampa) + (-0.006)*cos(AnguloTampa)"
+              }
+            ],
+            "offset": "-Largura*0.15",
+            "depth": "Largura*0.3"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa - puxador - friso",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) + 0.012)*cos(AnguloTampa) + 0*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) + 0.012)*sin(AnguloTampa) + 0*cos(AnguloTampa)"
+              },
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) + 0.012)*cos(AnguloTampa) + 0.014*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) + 0.012)*sin(AnguloTampa) + 0.014*cos(AnguloTampa)"
+              },
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) + 0.013)*cos(AnguloTampa) + 0.014*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) + 0.013)*sin(AnguloTampa) + 0.014*cos(AnguloTampa)"
+              },
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) + 0.013)*cos(AnguloTampa) + 0*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) + 0.013)*sin(AnguloTampa) + 0*cos(AnguloTampa)"
+              }
+            ],
+            "offset": "-Largura*0.13",
+            "depth": "Largura*0.26"
+          }
+        },
+        "material": "Plástico azul",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa - batente 1",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) - 0.025)*cos(AnguloTampa) + (-0.004)*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) - 0.025)*sin(AnguloTampa) + (-0.004)*cos(AnguloTampa)"
+              },
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) - 0.025)*cos(AnguloTampa) + 0*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) - 0.025)*sin(AnguloTampa) + 0*cos(AnguloTampa)"
+              },
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) - 0.01)*cos(AnguloTampa) + 0*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) - 0.01)*sin(AnguloTampa) + 0*cos(AnguloTampa)"
+              },
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) - 0.01)*cos(AnguloTampa) + (-0.004)*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) - 0.01)*sin(AnguloTampa) + (-0.004)*cos(AnguloTampa)"
+              }
+            ],
+            "offset": "-1*Largura*0.3 - 0.01",
+            "depth": "0.02"
+          }
+        },
+        "material": "Borracha cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça 1",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - 0.006",
+                "v": "(Altura - AlturaPainel) + 0.004",
+                "radius": "0.006"
+              },
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) + 0.006",
+                "v": "(Altura - AlturaPainel) + 0.004",
+                "radius": "0.006"
+              }
+            ],
+            "offset": "-1*Largura*0.3 - 0.02",
+            "depth": "0.04"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça 1 - base",
+        "shape": {
+          "Box": {
+            "x": "-1*Largura*0.3 - 0.02",
+            "y": "((Profundidade/2 - 0.03) - 0.1) - 0.002",
+            "z": "(Altura - AlturaPainel)",
+            "width": "0.04",
+            "depth": "0.012",
+            "height": "0.004"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa - batente 2",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) - 0.025)*cos(AnguloTampa) + (-0.004)*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) - 0.025)*sin(AnguloTampa) + (-0.004)*cos(AnguloTampa)"
+              },
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) - 0.025)*cos(AnguloTampa) + 0*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) - 0.025)*sin(AnguloTampa) + 0*cos(AnguloTampa)"
+              },
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) - 0.01)*cos(AnguloTampa) + 0*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) - 0.01)*sin(AnguloTampa) + 0*cos(AnguloTampa)"
+              },
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) - 0.01)*cos(AnguloTampa) + (-0.004)*sin(AnguloTampa)",
+                "v": "((Altura - AlturaPainel) + 0.004) + ((((Profundidade/2 - 0.03) - 0.1) - 0.002 - (-Profundidade/2) - 0.012) - 0.01)*sin(AnguloTampa) + (-0.004)*cos(AnguloTampa)"
+              }
+            ],
+            "offset": "1*Largura*0.3 - 0.01",
+            "depth": "0.02"
+          }
+        },
+        "material": "Borracha cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça 2",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) - 0.006",
+                "v": "(Altura - AlturaPainel) + 0.004",
+                "radius": "0.006"
+              },
+              {
+                "u": "(((Profundidade/2 - 0.03) - 0.1) - 0.002) + 0.006",
+                "v": "(Altura - AlturaPainel) + 0.004",
+                "radius": "0.006"
+              }
+            ],
+            "offset": "1*Largura*0.3 - 0.02",
+            "depth": "0.04"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça 2 - base",
+        "shape": {
+          "Box": {
+            "x": "1*Largura*0.3 - 0.02",
+            "y": "((Profundidade/2 - 0.03) - 0.1) - 0.002",
+            "z": "(Altura - AlturaPainel)",
+            "width": "0.04",
+            "depth": "0.012",
+            "height": "0.004"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída de esgoto - bocal",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((Largura/2) - 0.12)",
+                "v": "(Profundidade/2 - 0.03) - 0.001"
+              },
+              {
+                "u": "(((Largura/2) - 0.12)) + 0.016",
+                "v": "(Profundidade/2 - 0.03) - 0.001"
+              },
+              {
+                "u": "(((Largura/2) - 0.12)) + 0.016",
+                "v": "((Profundidade/2 - 0.03) - 0.001) + 0.008"
+              },
+              {
+                "u": "((Largura/2) - 0.12)",
+                "v": "((Profundidade/2 - 0.03) - 0.001) + 0.008"
+              }
+            ],
+            "offset": "(0.025 + 0.05)",
+            "axis": "((Largura/2) - 0.12)",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Mangueira de esgoto - curva 1",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((Largura/2) - 0.12)",
+                "v": "((0.025 + 0.05)) - 0.012",
+                "radius": "0.012"
+              },
+              {
+                "u": "((Largura/2) - 0.12)",
+                "v": "((0.025 + 0.05)) + 0.012"
+              }
+            ],
+            "offset": "((Profundidade/2 - 0.03) + 0.015)",
+            "axis": "((Largura/2) - 0.12)",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Mangueira de esgoto",
+        "shape": {
+          "Cylinder": {
+            "x": "((Largura/2) - 0.12)",
+            "y": "((Profundidade/2 - 0.03) + 0.015)",
+            "z": "(0.025 + 0.05)",
+            "radius": "0.012",
+            "height": "((Altura - AlturaPainel) - 0.06) - (0.025 + 0.05)"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Mangueira de esgoto - curva 2",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((Largura/2) - 0.12)",
+                "v": "(((Altura - AlturaPainel) - 0.06)) - 0.012",
+                "radius": "0.012"
+              },
+              {
+                "u": "((Largura/2) - 0.12)",
+                "v": "(((Altura - AlturaPainel) - 0.06)) + 0.012"
+              }
+            ],
+            "offset": "((Profundidade/2 - 0.03) + 0.015)",
+            "axis": "((Largura/2) - 0.12)",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Mangueira de esgoto - ponta",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((Largura/2) - 0.12)",
+                "v": "((Profundidade/2 - 0.03) + 0.015)"
+              },
+              {
+                "u": "(((Largura/2) - 0.12)) + 0.012",
+                "v": "((Profundidade/2 - 0.03) + 0.015)"
+              },
+              {
+                "u": "(((Largura/2) - 0.12)) + 0.012",
+                "v": "(((Profundidade/2 - 0.03) + 0.015)) + ((Profundidade/2) - ((Profundidade/2 - 0.03) + 0.015))"
+              },
+              {
+                "u": "((Largura/2) - 0.12)",
+                "v": "(((Profundidade/2 - 0.03) + 0.015)) + ((Profundidade/2) - ((Profundidade/2 - 0.03) + 0.015))"
+              }
+            ],
+            "offset": "((Altura - AlturaPainel) - 0.06)",
+            "axis": "((Largura/2) - 0.12)",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gancho da mangueira",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2) - 0.12) - 0.02",
+            "y": "(Profundidade/2 - 0.03)",
+            "z": "((Altura - AlturaPainel) - 0.06) - 0.03",
+            "width": "0.04",
+            "depth": "0.03",
+            "height": "0.012"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Mangueira de esgoto - anel 1",
+        "shape": {
+          "Cylinder": {
+            "x": "((Largura/2) - 0.12)",
+            "y": "((Profundidade/2 - 0.03) + 0.015)",
+            "z": "(0.025 + 0.05) + 0.03 + 0*(((Altura - AlturaPainel) - 0.06) - (0.025 + 0.05) - 0.06)/9",
+            "radius": "0.0135",
+            "height": "0.005"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Mangueira de esgoto - anel 2",
+        "shape": {
+          "Cylinder": {
+            "x": "((Largura/2) - 0.12)",
+            "y": "((Profundidade/2 - 0.03) + 0.015)",
+            "z": "(0.025 + 0.05) + 0.03 + 1*(((Altura - AlturaPainel) - 0.06) - (0.025 + 0.05) - 0.06)/9",
+            "radius": "0.0135",
+            "height": "0.005"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Mangueira de esgoto - anel 3",
+        "shape": {
+          "Cylinder": {
+            "x": "((Largura/2) - 0.12)",
+            "y": "((Profundidade/2 - 0.03) + 0.015)",
+            "z": "(0.025 + 0.05) + 0.03 + 2*(((Altura - AlturaPainel) - 0.06) - (0.025 + 0.05) - 0.06)/9",
+            "radius": "0.0135",
+            "height": "0.005"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Mangueira de esgoto - anel 4",
+        "shape": {
+          "Cylinder": {
+            "x": "((Largura/2) - 0.12)",
+            "y": "((Profundidade/2 - 0.03) + 0.015)",
+            "z": "(0.025 + 0.05) + 0.03 + 3*(((Altura - AlturaPainel) - 0.06) - (0.025 + 0.05) - 0.06)/9",
+            "radius": "0.0135",
+            "height": "0.005"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Mangueira de esgoto - anel 5",
+        "shape": {
+          "Cylinder": {
+            "x": "((Largura/2) - 0.12)",
+            "y": "((Profundidade/2 - 0.03) + 0.015)",
+            "z": "(0.025 + 0.05) + 0.03 + 4*(((Altura - AlturaPainel) - 0.06) - (0.025 + 0.05) - 0.06)/9",
+            "radius": "0.0135",
+            "height": "0.005"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Mangueira de esgoto - anel 6",
+        "shape": {
+          "Cylinder": {
+            "x": "((Largura/2) - 0.12)",
+            "y": "((Profundidade/2 - 0.03) + 0.015)",
+            "z": "(0.025 + 0.05) + 0.03 + 5*(((Altura - AlturaPainel) - 0.06) - (0.025 + 0.05) - 0.06)/9",
+            "radius": "0.0135",
+            "height": "0.005"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Mangueira de esgoto - anel 7",
+        "shape": {
+          "Cylinder": {
+            "x": "((Largura/2) - 0.12)",
+            "y": "((Profundidade/2 - 0.03) + 0.015)",
+            "z": "(0.025 + 0.05) + 0.03 + 6*(((Altura - AlturaPainel) - 0.06) - (0.025 + 0.05) - 0.06)/9",
+            "radius": "0.0135",
+            "height": "0.005"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Mangueira de esgoto - anel 8",
+        "shape": {
+          "Cylinder": {
+            "x": "((Largura/2) - 0.12)",
+            "y": "((Profundidade/2 - 0.03) + 0.015)",
+            "z": "(0.025 + 0.05) + 0.03 + 7*(((Altura - AlturaPainel) - 0.06) - (0.025 + 0.05) - 0.06)/9",
+            "radius": "0.0135",
+            "height": "0.005"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Mangueira de esgoto - anel 9",
+        "shape": {
+          "Cylinder": {
+            "x": "((Largura/2) - 0.12)",
+            "y": "((Profundidade/2 - 0.03) + 0.015)",
+            "z": "(0.025 + 0.05) + 0.03 + 8*(((Altura - AlturaPainel) - 0.06) - (0.025 + 0.05) - 0.06)/9",
+            "radius": "0.0135",
+            "height": "0.005"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Mangueira de esgoto - anel 10",
+        "shape": {
+          "Cylinder": {
+            "x": "((Largura/2) - 0.12)",
+            "y": "((Profundidade/2 - 0.03) + 0.015)",
+            "z": "(0.025 + 0.05) + 0.03 + 9*(((Altura - AlturaPainel) - 0.06) - (0.025 + 0.05) - 0.06)/9",
+            "radius": "0.0135",
+            "height": "0.005"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Entrada de água - bocal",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.09)",
+                "v": "(Profundidade/2 - 0.03) - 0.001"
+              },
+              {
+                "u": "(((-Largura/2) + 0.09)) + 0.012",
+                "v": "(Profundidade/2 - 0.03) - 0.001"
+              },
+              {
+                "u": "(((-Largura/2) + 0.09)) + 0.012",
+                "v": "((Profundidade/2 - 0.03) - 0.001) + 0.01"
+              },
+              {
+                "u": "((-Largura/2) + 0.09)",
+                "v": "((Profundidade/2 - 0.03) - 0.001) + 0.01"
+              }
+            ],
+            "offset": "(Altura - 0.04)",
+            "axis": "((-Largura/2) + 0.09)",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico azul",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Mangueira de entrada - curva 1",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.09)",
+                "v": "((Altura - 0.04)) - 0.009",
+                "radius": "0.009"
+              },
+              {
+                "u": "((-Largura/2) + 0.09)",
+                "v": "((Altura - 0.04)) + 0.009"
+              }
+            ],
+            "offset": "((Profundidade/2 - 0.03) + 0.015)",
+            "axis": "((-Largura/2) + 0.09)",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico translúcido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Mangueira de entrada",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((Profundidade/2 - 0.03) + 0.015)) - 0.009",
+                "v": "(Altura - 0.04)",
+                "radius": "0.009"
+              },
+              {
+                "u": "(((Profundidade/2 - 0.03) + 0.015)) + 0.009",
+                "v": "(Altura - 0.04)",
+                "radius": "0.009"
+              }
+            ],
+            "offset": "((-Largura/2) + 0.09)",
+            "depth": "0.1"
+          }
+        },
+        "material": "Plástico translúcido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Mangueira de entrada - curva 2",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(((-Largura/2) + 0.09) + 0.1)",
+                "v": "((Altura - 0.04)) - 0.009",
+                "radius": "0.009"
+              },
+              {
+                "u": "(((-Largura/2) + 0.09) + 0.1)",
+                "v": "((Altura - 0.04)) + 0.009"
+              }
+            ],
+            "offset": "((Profundidade/2 - 0.03) + 0.015)",
+            "axis": "(((-Largura/2) + 0.09) + 0.1)",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico translúcido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Mangueira de entrada - ponta",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2) + 0.09) + 0.1)",
+                "v": "((Profundidade/2 - 0.03) + 0.015)"
+              },
+              {
+                "u": "((((-Largura/2) + 0.09) + 0.1)) + 0.009",
+                "v": "((Profundidade/2 - 0.03) + 0.015)"
+              },
+              {
+                "u": "((((-Largura/2) + 0.09) + 0.1)) + 0.009",
+                "v": "(((Profundidade/2 - 0.03) + 0.015)) + ((Profundidade/2) - ((Profundidade/2 - 0.03) + 0.015) - 0.008)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.09) + 0.1)",
+                "v": "(((Profundidade/2 - 0.03) + 0.015)) + ((Profundidade/2) - ((Profundidade/2 - 0.03) + 0.015) - 0.008)"
+              }
+            ],
+            "offset": "(Altura - 0.04)",
+            "axis": "(((-Largura/2) + 0.09) + 0.1)",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico translúcido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Mangueira de entrada - porca da torneira",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2) + 0.09) + 0.1)",
+                "v": "(Profundidade/2) - 0.01"
+              },
+              {
+                "u": "((((-Largura/2) + 0.09) + 0.1)) + 0.015",
+                "v": "(Profundidade/2) - 0.01"
+              },
+              {
+                "u": "((((-Largura/2) + 0.09) + 0.1)) + 0.015",
+                "v": "((Profundidade/2) - 0.01) + 0.01"
+              },
+              {
+                "u": "(((-Largura/2) + 0.09) + 0.1)",
+                "v": "((Profundidade/2) - 0.01) + 0.01"
+              }
+            ],
+            "offset": "(Altura - 0.04)",
+            "axis": "(((-Largura/2) + 0.09) + 0.1)",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico azul",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cabo de força - passa-fio",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((Largura/2) - 0.06)",
+                "v": "(Profundidade/2 - 0.03) - 0.001"
+              },
+              {
+                "u": "(((Largura/2) - 0.06)) + 0.008",
+                "v": "(Profundidade/2 - 0.03) - 0.001"
+              },
+              {
+                "u": "(((Largura/2) - 0.06)) + 0.008",
+                "v": "((Profundidade/2 - 0.03) - 0.001) + 0.01"
+              },
+              {
+                "u": "((Largura/2) - 0.06)",
+                "v": "((Profundidade/2 - 0.03) - 0.001) + 0.01"
+              }
+            ],
+            "offset": "(Altura - 0.05)",
+            "axis": "((Largura/2) - 0.06)",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cabo de força - curva",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((Largura/2) - 0.06)",
+                "v": "((Altura - 0.05)) - 0.0045",
+                "radius": "0.0045"
+              },
+              {
+                "u": "((Largura/2) - 0.06)",
+                "v": "((Altura - 0.05)) + 0.0045"
+              }
+            ],
+            "offset": "(Profundidade/2 - 0.03) + 0.009",
+            "axis": "((Largura/2) - 0.06)",
+            "angle": "360"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cabo de força",
+        "shape": {
+          "Cylinder": {
+            "x": "((Largura/2) - 0.06)",
+            "y": "(Profundidade/2 - 0.03) + 0.009",
+            "z": "(Altura - 0.05) - 0.4",
+            "radius": "0.0045",
+            "height": "0.4"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cabo de força - plugue",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2) - 0.06) - 0.018",
+            "y": "(Profundidade/2 - 0.03) + 0.001",
+            "z": "(Altura - 0.05) - 0.445",
+            "width": "0.036",
+            "depth": "0.018",
+            "height": "0.045"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cabo de força - pino 1",
+        "shape": {
+          "Cylinder": {
+            "x": "((Largura/2) - 0.06) + -0.0095",
+            "y": "(Profundidade/2 - 0.03) + 0.01",
+            "z": "(Altura - 0.05) - 0.463",
+            "radius": "0.002",
+            "height": "0.018"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cabo de força - pino 2",
+        "shape": {
+          "Cylinder": {
+            "x": "((Largura/2) - 0.06) + 0",
+            "y": "(Profundidade/2 - 0.03) + 0.01",
+            "z": "(Altura - 0.05) - 0.463",
+            "radius": "0.002",
+            "height": "0.018"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cabo de força - pino 3",
+        "shape": {
+          "Cylinder": {
+            "x": "((Largura/2) - 0.06) + 0.0095",
+            "y": "(Profundidade/2 - 0.03) + 0.01",
+            "z": "(Altura - 0.05) - 0.463",
+            "radius": "0.002",
+            "height": "0.018"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Etiqueta de identificação",
+        "shape": {
+          "Box": {
+            "x": "-Largura*0.12",
+            "y": "(Profundidade/2 - 0.03)",
+            "z": "(Altura - AlturaPainel) - 0.25",
+            "width": "Largura*0.24",
+            "depth": "0.0006",
+            "height": "0.06"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      }
+    ],
+    "mep": {
+      "Fixture": {
+        "drain_units": 3,
+        "supply_weight": 1.0,
+        "hot_water": false
+      }
+    },
+    "connectors": [
+      {
+        "name": "Esgoto",
+        "system": "Sanitary",
+        "x": "((Largura/2) - 0.12)",
+        "y": "(Profundidade/2)",
+        "z": "((Altura - AlturaPainel) - 0.06)",
+        "direction": "Back",
+        "diameter": "0.04"
+      },
+      {
+        "name": "Água fria",
+        "system": "ColdWater",
+        "x": "(((-Largura/2) + 0.09) + 0.1)",
+        "y": "(Profundidade/2)",
+        "z": "(Altura - 0.04)",
+        "direction": "Back",
+        "diameter": "0.02"
+      }
+    ]
+  },
+  "types": [
+    {
+      "name": "Tanquinho 10 kg",
+      "values": {},
+      "info": {
+        "description": "Lavadora semiautomática (tanquinho) de 10 kg, 52 x 55 x 90 cm, batedor central e timer; ponto de água fria e esgoto; TUG"
+      }
+    },
+    {
+      "name": "Tanquinho 15 kg",
+      "values": {
+        "Largura": 0.56,
+        "Profundidade": 0.6,
+        "Altura": 0.97,
+        "DiametroCesto": 0.46,
+        "AlturaCesto": 0.52
+      },
+      "info": {
+        "description": "Lavadora semiautomática (tanquinho) de 15 kg, 56 x 60 x 97 cm, batedor central e timer; ponto de água fria e esgoto; TUG"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "name": "Branco",
+      "color": [
+        244,
+        244,
+        240
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico fumê",
+      "color": [
+        60,
+        62,
+        66
+      ],
+      "class": "Plastic",
+      "finish": "Glossy",
+      "transparency": 0.5
+    },
+    {
+      "name": "Plástico cinza claro",
+      "color": [
+        196,
+        198,
+        200
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico cinza",
+      "color": [
+        120,
+        122,
+        126
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico azul",
+      "color": [
+        126,
+        176,
+        222
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico preto",
+      "color": [
+        34,
+        34,
+        37
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Borracha",
+      "color": [
+        30,
+        30,
+        30
+      ],
+      "class": "Plastic",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Aço galvanizado",
+      "color": [
+        160,
+        165,
+        170
+      ],
+      "class": "Metal",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Tela perfurada",
+      "color": [
+        24,
+        24,
+        26
+      ],
+      "class": "Metal",
+      "finish": "Matte",
+      "transparency": 0.4
+    },
+    {
+      "name": "Cromado",
+      "color": [
+        226,
+        229,
+        233
+      ],
+      "class": "Metal",
+      "finish": "Polished",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico vermelho",
+      "color": [
+        196,
+        56,
+        48
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Borracha cinza",
+      "color": [
+        150,
+        152,
+        154
+      ],
+      "class": "Plastic",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico translúcido",
+      "color": [
+        222,
+        236,
+        240
+      ],
+      "class": "Plastic",
+      "finish": "Glossy",
+      "transparency": 0.6
+    },
+    {
+      "name": "Latão",
+      "color": [
+        192,
+        160,
+        84
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    }
+  ]
+}
