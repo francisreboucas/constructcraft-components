@@ -1,4 +1,4 @@
-// User-facing (pt-BR) error messages for the placeholder pages.
+// User-facing (pt-BR) error messages.
 
 import { CatalogError } from '../catalog';
 import { ComponentLoadError } from '../engine';

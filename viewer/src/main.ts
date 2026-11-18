@@ -1,42 +1,44 @@
 import './styles/fonts';
 import './styles/tokens.css';
 import './styles/base.css';
-import { parseRoute } from './catalog';
+import './styles/app.css';
+import { parseRoute, type Route } from './catalog';
 import { detailPage } from './pages/detail';
-import { errorElement } from './pages/errors';
-import { homePage } from './pages/home';
-import { setPageState } from './pages/page';
+import { galleryPage } from './pages/gallery';
+import { notFoundPage } from './pages/not-found';
+import type { Page } from './pages/page';
+import { createShell } from './shell';
 
 const root = document.getElementById('app');
 if (!root) throw new Error('#app is missing');
-const app: HTMLElement = root;
 
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+
+const shell = createShell(root);
 let cleanup: (() => void) | null = null;
+let previous: Route | null = null;
 
-function navigate(): void {
-  cleanup?.();
-  cleanup = null;
-  app.replaceChildren();
-  setPageState('loading');
-  const route = parseRoute(location.hash);
+function pageFor(route: Route): Page {
   switch (route.name) {
     case 'home':
-    case 'folder': // No folder page yet: the home lists every folder.
-      cleanup = homePage(app, route);
-      break;
+    case 'folder':
+      return galleryPage;
     case 'component':
-      cleanup = detailPage(app, route);
-      break;
-    case 'not-found': {
-      const main = document.createElement('main');
-      main.className = 'page';
-      main.append(errorElement(`Página não encontrada: ${route.hash}`));
-      app.append(main);
-      setPageState('error');
-      break;
-    }
+      return detailPage;
+    case 'not-found':
+      return notFoundPage;
   }
+}
+
+function navigate(): void {
+  // Cleanup first: pages save their scroll position before the content goes.
+  cleanup?.();
+  cleanup = null;
+  shell.main.replaceChildren();
   window.scrollTo(0, 0);
+  const route = parseRoute(location.hash);
+  cleanup = pageFor(route)(shell, route, { previous });
+  previous = route;
 }
 
 window.addEventListener('hashchange', navigate);
