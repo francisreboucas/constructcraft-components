@@ -1,3 +1,5 @@
 __pycache__/
 *.ccomp.tmp
 /ccad/
+/previews/
+/bin/
