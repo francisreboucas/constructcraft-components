@@ -14,50 +14,1746 @@
         "value": 0.5,
         "kind": "Length",
         "instance": true
+      },
+      {
+        "name": "AberturaTampa",
+        "value": 0.0,
+        "kind": "Length",
+        "instance": true
       }
     ],
     "items": [
       {
-        "name": "Caixa",
-        "material": "PVC",
-        "in_plan": true,
+        "name": "Caixa simplificada",
         "shape": {
           "Cylinder": {
             "x": "0",
             "y": "0",
             "z": "-Fundo - 0.06",
-            "radius": "Diametro / 2 + 0.03",
+            "radius": "((Diametro / 2)) + 0.03",
             "height": "Fundo + 0.06"
           }
+        },
+        "material": "PVC",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
         }
       },
       {
-        "name": "Interior vazio",
-        "material": "PVC",
-        "in_plan": false,
+        "name": "Tampa simplificada",
         "shape": {
           "Cylinder": {
             "x": "0",
             "y": "0",
-            "z": "-Fundo",
-            "radius": "Diametro / 2",
-            "height": "Fundo + 0.01"
+            "z": "AberturaTampa",
+            "radius": "((Diametro / 2)) + 0.05",
+            "height": "0.03"
           }
         },
-        "void": true
+        "material": "Plástico cinza",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Corpo",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "((-Fundo)) - 0.014"
+              },
+              {
+                "u": "(((Diametro / 2)) + 0.008) - 0.012",
+                "v": "((-Fundo)) - 0.014"
+              },
+              {
+                "u": "((Diametro / 2)) + 0.008",
+                "v": "((-Fundo)) - 0.002"
+              },
+              {
+                "u": "((Diametro / 2)) + 0.008",
+                "v": "-0.07"
+              },
+              {
+                "u": "((Diametro / 2)) + 0.05",
+                "v": "-0.07"
+              },
+              {
+                "u": "((Diametro / 2)) + 0.05",
+                "v": "-0.008"
+              },
+              {
+                "u": "(((Diametro / 2)) + 0.05) - 0.012",
+                "v": "0"
+              },
+              {
+                "u": "(Diametro / 2)",
+                "v": "0"
+              },
+              {
+                "u": "(Diametro / 2)",
+                "v": "(-Fundo)"
+              },
+              {
+                "u": "0",
+                "v": "(-Fundo)"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "PVC",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Base de apoio",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "((-Fundo)) - 0.06"
+              },
+              {
+                "u": "(((Diametro / 2)) + 0.008) + 0.02",
+                "v": "((-Fundo)) - 0.06"
+              },
+              {
+                "u": "(((Diametro / 2)) + 0.008) + 0.02",
+                "v": "((-Fundo)) - 0.014"
+              },
+              {
+                "u": "0",
+                "v": "((-Fundo)) - 0.014"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Concreto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Nervura 1",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((((Diametro / 2)) + 0.008) - 0.002)*(0.92388)) + 0.002296",
+                "v": "(((((Diametro / 2)) + 0.008) - 0.002)*(0.38268)) - 0.005543"
+              },
+              {
+                "u": "(((((Diametro / 2)) + 0.008) + 0.014)*(0.92388)) + 0.001913",
+                "v": "(((((Diametro / 2)) + 0.008) + 0.014)*(0.38268)) - 0.004619"
+              },
+              {
+                "u": "(((((Diametro / 2)) + 0.008) + 0.014)*(0.92388)) - 0.001913",
+                "v": "(((((Diametro / 2)) + 0.008) + 0.014)*(0.38268)) + 0.004619"
+              },
+              {
+                "u": "(((((Diametro / 2)) + 0.008) - 0.002)*(0.92388)) - 0.002296",
+                "v": "(((((Diametro / 2)) + 0.008) - 0.002)*(0.38268)) + 0.005543"
+              }
+            ],
+            "offset": "((-Fundo)) + 0.02",
+            "depth": "Fundo - 0.11"
+          }
+        },
+        "material": "PVC",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Nervura 2",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((((Diametro / 2)) + 0.008) - 0.002)*(0.38268)) + 0.005543",
+                "v": "(((((Diametro / 2)) + 0.008) - 0.002)*(0.92388)) - 0.002296"
+              },
+              {
+                "u": "(((((Diametro / 2)) + 0.008) + 0.014)*(0.38268)) + 0.004619",
+                "v": "(((((Diametro / 2)) + 0.008) + 0.014)*(0.92388)) - 0.001913"
+              },
+              {
+                "u": "(((((Diametro / 2)) + 0.008) + 0.014)*(0.38268)) - 0.004619",
+                "v": "(((((Diametro / 2)) + 0.008) + 0.014)*(0.92388)) + 0.001913"
+              },
+              {
+                "u": "(((((Diametro / 2)) + 0.008) - 0.002)*(0.38268)) - 0.005543",
+                "v": "(((((Diametro / 2)) + 0.008) - 0.002)*(0.92388)) + 0.002296"
+              }
+            ],
+            "offset": "((-Fundo)) + 0.02",
+            "depth": "Fundo - 0.11"
+          }
+        },
+        "material": "PVC",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Nervura 3",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((((Diametro / 2)) + 0.008) - 0.002)*(-0.38268)) + 0.005543",
+                "v": "(((((Diametro / 2)) + 0.008) - 0.002)*(0.92388)) + 0.002296"
+              },
+              {
+                "u": "(((((Diametro / 2)) + 0.008) + 0.014)*(-0.38268)) + 0.004619",
+                "v": "(((((Diametro / 2)) + 0.008) + 0.014)*(0.92388)) + 0.001913"
+              },
+              {
+                "u": "(((((Diametro / 2)) + 0.008) + 0.014)*(-0.38268)) - 0.004619",
+                "v": "(((((Diametro / 2)) + 0.008) + 0.014)*(0.92388)) - 0.001913"
+              },
+              {
+                "u": "(((((Diametro / 2)) + 0.008) - 0.002)*(-0.38268)) - 0.005543",
+                "v": "(((((Diametro / 2)) + 0.008) - 0.002)*(0.92388)) - 0.002296"
+              }
+            ],
+            "offset": "((-Fundo)) + 0.02",
+            "depth": "Fundo - 0.11"
+          }
+        },
+        "material": "PVC",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Nervura 4",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((((Diametro / 2)) + 0.008) - 0.002)*(-0.92388)) + 0.002296",
+                "v": "(((((Diametro / 2)) + 0.008) - 0.002)*(0.38268)) + 0.005543"
+              },
+              {
+                "u": "(((((Diametro / 2)) + 0.008) + 0.014)*(-0.92388)) + 0.001913",
+                "v": "(((((Diametro / 2)) + 0.008) + 0.014)*(0.38268)) + 0.004619"
+              },
+              {
+                "u": "(((((Diametro / 2)) + 0.008) + 0.014)*(-0.92388)) - 0.001913",
+                "v": "(((((Diametro / 2)) + 0.008) + 0.014)*(0.38268)) - 0.004619"
+              },
+              {
+                "u": "(((((Diametro / 2)) + 0.008) - 0.002)*(-0.92388)) - 0.002296",
+                "v": "(((((Diametro / 2)) + 0.008) - 0.002)*(0.38268)) - 0.005543"
+              }
+            ],
+            "offset": "((-Fundo)) + 0.02",
+            "depth": "Fundo - 0.11"
+          }
+        },
+        "material": "PVC",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Nervura 5",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((((Diametro / 2)) + 0.008) - 0.002)*(-0.92388)) - 0.002296",
+                "v": "(((((Diametro / 2)) + 0.008) - 0.002)*(-0.38268)) + 0.005543"
+              },
+              {
+                "u": "(((((Diametro / 2)) + 0.008) + 0.014)*(-0.92388)) - 0.001913",
+                "v": "(((((Diametro / 2)) + 0.008) + 0.014)*(-0.38268)) + 0.004619"
+              },
+              {
+                "u": "(((((Diametro / 2)) + 0.008) + 0.014)*(-0.92388)) + 0.001913",
+                "v": "(((((Diametro / 2)) + 0.008) + 0.014)*(-0.38268)) - 0.004619"
+              },
+              {
+                "u": "(((((Diametro / 2)) + 0.008) - 0.002)*(-0.92388)) + 0.002296",
+                "v": "(((((Diametro / 2)) + 0.008) - 0.002)*(-0.38268)) - 0.005543"
+              }
+            ],
+            "offset": "((-Fundo)) + 0.02",
+            "depth": "Fundo - 0.11"
+          }
+        },
+        "material": "PVC",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Nervura 6",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((((Diametro / 2)) + 0.008) - 0.002)*(-0.38268)) - 0.005543",
+                "v": "(((((Diametro / 2)) + 0.008) - 0.002)*(-0.92388)) + 0.002296"
+              },
+              {
+                "u": "(((((Diametro / 2)) + 0.008) + 0.014)*(-0.38268)) - 0.004619",
+                "v": "(((((Diametro / 2)) + 0.008) + 0.014)*(-0.92388)) + 0.001913"
+              },
+              {
+                "u": "(((((Diametro / 2)) + 0.008) + 0.014)*(-0.38268)) + 0.004619",
+                "v": "(((((Diametro / 2)) + 0.008) + 0.014)*(-0.92388)) - 0.001913"
+              },
+              {
+                "u": "(((((Diametro / 2)) + 0.008) - 0.002)*(-0.38268)) + 0.005543",
+                "v": "(((((Diametro / 2)) + 0.008) - 0.002)*(-0.92388)) - 0.002296"
+              }
+            ],
+            "offset": "((-Fundo)) + 0.02",
+            "depth": "Fundo - 0.11"
+          }
+        },
+        "material": "PVC",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Nervura 7",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((((Diametro / 2)) + 0.008) - 0.002)*(0.38268)) - 0.005543",
+                "v": "(((((Diametro / 2)) + 0.008) - 0.002)*(-0.92388)) - 0.002296"
+              },
+              {
+                "u": "(((((Diametro / 2)) + 0.008) + 0.014)*(0.38268)) - 0.004619",
+                "v": "(((((Diametro / 2)) + 0.008) + 0.014)*(-0.92388)) - 0.001913"
+              },
+              {
+                "u": "(((((Diametro / 2)) + 0.008) + 0.014)*(0.38268)) + 0.004619",
+                "v": "(((((Diametro / 2)) + 0.008) + 0.014)*(-0.92388)) + 0.001913"
+              },
+              {
+                "u": "(((((Diametro / 2)) + 0.008) - 0.002)*(0.38268)) + 0.005543",
+                "v": "(((((Diametro / 2)) + 0.008) - 0.002)*(-0.92388)) + 0.002296"
+              }
+            ],
+            "offset": "((-Fundo)) + 0.02",
+            "depth": "Fundo - 0.11"
+          }
+        },
+        "material": "PVC",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Nervura 8",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((((Diametro / 2)) + 0.008) - 0.002)*(0.92388)) - 0.002296",
+                "v": "(((((Diametro / 2)) + 0.008) - 0.002)*(-0.38268)) - 0.005543"
+              },
+              {
+                "u": "(((((Diametro / 2)) + 0.008) + 0.014)*(0.92388)) - 0.001913",
+                "v": "(((((Diametro / 2)) + 0.008) + 0.014)*(-0.38268)) - 0.004619"
+              },
+              {
+                "u": "(((((Diametro / 2)) + 0.008) + 0.014)*(0.92388)) + 0.001913",
+                "v": "(((((Diametro / 2)) + 0.008) + 0.014)*(-0.38268)) + 0.004619"
+              },
+              {
+                "u": "(((((Diametro / 2)) + 0.008) - 0.002)*(0.92388)) + 0.002296",
+                "v": "(((((Diametro / 2)) + 0.008) - 0.002)*(-0.38268)) + 0.005543"
+              }
+            ],
+            "offset": "((-Fundo)) + 0.02",
+            "depth": "Fundo - 0.11"
+          }
+        },
+        "material": "PVC",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Anel de reforço 1",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(((Diametro / 2)) + 0.008) - 0.002",
+                "v": "(((-Fundo)) + 0.12) - 0.008"
+              },
+              {
+                "u": "(((Diametro / 2)) + 0.008) + 0.01",
+                "v": "(((-Fundo)) + 0.12) - 0.008"
+              },
+              {
+                "u": "(((Diametro / 2)) + 0.008) + 0.01",
+                "v": "(((-Fundo)) + 0.12) + 0.008"
+              },
+              {
+                "u": "(((Diametro / 2)) + 0.008) - 0.002",
+                "v": "(((-Fundo)) + 0.12) + 0.008"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "PVC",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Anel de reforço 2",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(((Diametro / 2)) + 0.008) - 0.002",
+                "v": "(((-Fundo)) / 2) - 0.008"
+              },
+              {
+                "u": "(((Diametro / 2)) + 0.008) + 0.01",
+                "v": "(((-Fundo)) / 2) - 0.008"
+              },
+              {
+                "u": "(((Diametro / 2)) + 0.008) + 0.01",
+                "v": "(((-Fundo)) / 2) + 0.008"
+              },
+              {
+                "u": "(((Diametro / 2)) + 0.008) - 0.002",
+                "v": "(((-Fundo)) / 2) + 0.008"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "PVC",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Anel de reforço 3",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(((Diametro / 2)) + 0.008) - 0.002",
+                "v": "-0.128"
+              },
+              {
+                "u": "(((Diametro / 2)) + 0.008) + 0.01",
+                "v": "-0.128"
+              },
+              {
+                "u": "(((Diametro / 2)) + 0.008) + 0.01",
+                "v": "-0.112"
+              },
+              {
+                "u": "(((Diametro / 2)) + 0.008) - 0.002",
+                "v": "-0.112"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "PVC",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Entrada - tubo",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.0375",
+                "v": "-0.15",
+                "radius": "0.0375"
+              },
+              {
+                "u": "0 + 0.0375",
+                "v": "-0.15",
+                "radius": "0.0375"
+              }
+            ],
+            "offset": "-((Diametro / 2)) + 0.008 - 0.12",
+            "depth": "0.12 + 0.008 + 0.03"
+          }
+        },
+        "material": "PVC",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Entrada - bolsa",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.044",
+                "v": "-0.15",
+                "radius": "0.044"
+              },
+              {
+                "u": "0 + 0.044",
+                "v": "-0.15",
+                "radius": "0.044"
+              }
+            ],
+            "offset": "-((Diametro / 2)) + 0.008 - 0.12",
+            "depth": "0.06"
+          }
+        },
+        "material": "PVC",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Entrada - anel de vedação",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.045",
+                "v": "-0.15",
+                "radius": "0.045"
+              },
+              {
+                "u": "0 + 0.045",
+                "v": "-0.15",
+                "radius": "0.045"
+              }
+            ],
+            "offset": "-((Diametro / 2)) + 0.008 - 0.002",
+            "depth": "0.006"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cesto - fundo",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((Diametro / 2))*(-0.30000)",
+                "v": "-0.42"
+              },
+              {
+                "u": "(((Diametro / 2))*(0.55000)) + ((((Diametro / 2))*(-0.30000)))",
+                "v": "-0.42"
+              },
+              {
+                "u": "(((Diametro / 2))*(0.55000)) + ((((Diametro / 2))*(-0.30000)))",
+                "v": "-0.414"
+              },
+              {
+                "u": "((Diametro / 2))*(-0.30000)",
+                "v": "-0.414"
+              }
+            ],
+            "offset": "0",
+            "axis": "((Diametro / 2))*(-0.30000)",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cesto - tela",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(((Diametro / 2))*(-0.30000)) + ((((Diametro / 2))*(0.55000)) - 0.003)",
+                "v": "-0.414"
+              },
+              {
+                "u": "(((Diametro / 2))*(-0.30000)) + (((Diametro / 2))*(0.55000))",
+                "v": "-0.414"
+              },
+              {
+                "u": "(((Diametro / 2))*(-0.30000)) + (((Diametro / 2))*(0.55000))",
+                "v": "-0.212"
+              },
+              {
+                "u": "(((Diametro / 2))*(-0.30000)) + ((((Diametro / 2))*(0.55000)) - 0.003)",
+                "v": "-0.212"
+              }
+            ],
+            "offset": "0",
+            "axis": "((Diametro / 2))*(-0.30000)",
+            "angle": "360"
+          }
+        },
+        "material": "Tela perfurada",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cesto - aro superior",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(((Diametro / 2))*(-0.30000)) + ((((Diametro / 2))*(0.55000)) - 0.004)",
+                "v": "-0.212"
+              },
+              {
+                "u": "(((Diametro / 2))*(-0.30000)) + ((((Diametro / 2))*(0.55000)) + 0.004)",
+                "v": "-0.212"
+              },
+              {
+                "u": "(((Diametro / 2))*(-0.30000)) + ((((Diametro / 2))*(0.55000)) + 0.004)",
+                "v": "-0.2"
+              },
+              {
+                "u": "(((Diametro / 2))*(-0.30000)) + ((((Diametro / 2))*(0.55000)) - 0.004)",
+                "v": "-0.2"
+              }
+            ],
+            "offset": "0",
+            "axis": "((Diametro / 2))*(-0.30000)",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cesto - aro intermediário",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(((Diametro / 2))*(-0.30000)) + ((((Diametro / 2))*(0.55000)) - 0.004)",
+                "v": "-0.316"
+              },
+              {
+                "u": "(((Diametro / 2))*(-0.30000)) + ((((Diametro / 2))*(0.55000)) + 0.004)",
+                "v": "-0.316"
+              },
+              {
+                "u": "(((Diametro / 2))*(-0.30000)) + ((((Diametro / 2))*(0.55000)) + 0.004)",
+                "v": "-0.304"
+              },
+              {
+                "u": "(((Diametro / 2))*(-0.30000)) + ((((Diametro / 2))*(0.55000)) - 0.004)",
+                "v": "-0.304"
+              }
+            ],
+            "offset": "0",
+            "axis": "((Diametro / 2))*(-0.30000)",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cesto - montante 1",
+        "shape": {
+          "Cylinder": {
+            "x": "(((Diametro / 2))*(-0.30000)) + ((((Diametro / 2))*(0.55000))*(0.70711))",
+            "y": "(((Diametro / 2))*(0.55000))*(0.70711)",
+            "z": "-0.42",
+            "radius": "0.005",
+            "height": "0.22"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cesto - montante 2",
+        "shape": {
+          "Cylinder": {
+            "x": "(((Diametro / 2))*(-0.30000)) + ((((Diametro / 2))*(0.55000))*(-0.70711))",
+            "y": "(((Diametro / 2))*(0.55000))*(0.70711)",
+            "z": "-0.42",
+            "radius": "0.005",
+            "height": "0.22"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cesto - montante 3",
+        "shape": {
+          "Cylinder": {
+            "x": "(((Diametro / 2))*(-0.30000)) + ((((Diametro / 2))*(0.55000))*(-0.70711))",
+            "y": "(((Diametro / 2))*(0.55000))*(-0.70711)",
+            "z": "-0.42",
+            "radius": "0.005",
+            "height": "0.22"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cesto - montante 4",
+        "shape": {
+          "Cylinder": {
+            "x": "(((Diametro / 2))*(-0.30000)) + ((((Diametro / 2))*(0.55000))*(0.70711))",
+            "y": "(((Diametro / 2))*(0.55000))*(-0.70711)",
+            "z": "-0.42",
+            "radius": "0.005",
+            "height": "0.22"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cesto - alça",
+        "shape": {
+          "Sweep": {
+            "plane": "Front",
+            "path": [
+              {
+                "u": "(((Diametro / 2))*(-0.30000)) + (-(((Diametro / 2))*(0.55000)) + 0.004)",
+                "v": "-0.206"
+              },
+              {
+                "u": "(((Diametro / 2))*(-0.30000)) + (-(((Diametro / 2))*(0.55000)) + 0.004)",
+                "v": "-0.12",
+                "bezier": {
+                  "u1": "(((Diametro / 2))*(-0.30000)) + (-(((Diametro / 2))*(0.55000)) + 0.004)",
+                  "v1": "-0.08",
+                  "u2": "(((Diametro / 2))*(-0.30000)) + (-(((Diametro / 2))*(0.55000)) + 0.004)",
+                  "v2": "-0.08"
+                }
+              },
+              {
+                "u": "((((Diametro / 2))*(-0.30000)) + (-(((Diametro / 2))*(0.55000)) + 0.004)) + 0.04",
+                "v": "-0.08"
+              },
+              {
+                "u": "((((Diametro / 2))*(-0.30000)) + ((((Diametro / 2))*(0.55000)) - 0.004)) - 0.04",
+                "v": "-0.08",
+                "bezier": {
+                  "u1": "(((Diametro / 2))*(-0.30000)) + ((((Diametro / 2))*(0.55000)) - 0.004)",
+                  "v1": "-0.08",
+                  "u2": "(((Diametro / 2))*(-0.30000)) + ((((Diametro / 2))*(0.55000)) - 0.004)",
+                  "v2": "-0.08"
+                }
+              },
+              {
+                "u": "(((Diametro / 2))*(-0.30000)) + ((((Diametro / 2))*(0.55000)) - 0.004)",
+                "v": "-0.12"
+              },
+              {
+                "u": "(((Diametro / 2))*(-0.30000)) + ((((Diametro / 2))*(0.55000)) - 0.004)",
+                "v": "-0.206"
+              }
+            ],
+            "offset": "0",
+            "profile": [
+              {
+                "u": "0.004",
+                "v": "0"
+              },
+              {
+                "u": "0.002828",
+                "v": "0.002828"
+              },
+              {
+                "u": "0",
+                "v": "0.004"
+              },
+              {
+                "u": "-0.002828",
+                "v": "0.002828"
+              },
+              {
+                "u": "-0.004",
+                "v": "0"
+              },
+              {
+                "u": "-0.002828",
+                "v": "-0.002828"
+              },
+              {
+                "u": "0",
+                "v": "-0.004"
+              },
+              {
+                "u": "0.002828",
+                "v": "-0.002828"
+              }
+            ]
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cesto - pega",
+        "shape": {
+          "Cylinder": {
+            "x": "((Diametro / 2))*(-0.30000)",
+            "y": "0",
+            "z": "-0.092",
+            "radius": "0.012",
+            "height": "0.022"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tê sifonado - tubo",
+        "shape": {
+          "Cylinder": {
+            "x": "((Diametro / 2)) - 0.065",
+            "y": "0",
+            "z": "((-Fundo)) + 0.12",
+            "radius": "0.0525",
+            "height": "Fundo - 0.2"
+          }
+        },
+        "material": "PVC",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tê sifonado - bolsa",
+        "shape": {
+          "Cylinder": {
+            "x": "((Diametro / 2)) - 0.065",
+            "y": "0",
+            "z": "-0.27",
+            "radius": "0.06",
+            "height": "0.14"
+          }
+        },
+        "material": "PVC",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tê sifonado - ramal",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.05",
+                "v": "-0.2",
+                "radius": "0.05"
+              },
+              {
+                "u": "0 + 0.05",
+                "v": "-0.2",
+                "radius": "0.05"
+              }
+            ],
+            "offset": "((Diametro / 2)) - 0.065",
+            "depth": "0.065 + 0.008"
+          }
+        },
+        "material": "PVC",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída - tubo",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.05",
+                "v": "-0.2",
+                "radius": "0.05"
+              },
+              {
+                "u": "0 + 0.05",
+                "v": "-0.2",
+                "radius": "0.05"
+              }
+            ],
+            "offset": "(Diametro / 2)",
+            "depth": "0.008 + 0.13"
+          }
+        },
+        "material": "PVC",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída - bolsa",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.058",
+                "v": "-0.2",
+                "radius": "0.058"
+              },
+              {
+                "u": "0 + 0.058",
+                "v": "-0.2",
+                "radius": "0.058"
+              }
+            ],
+            "offset": "((Diametro / 2)) + 0.008 + 0.07",
+            "depth": "0.06"
+          }
+        },
+        "material": "PVC",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída - anel de vedação",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.06",
+                "v": "-0.2",
+                "radius": "0.06"
+              },
+              {
+                "u": "0 + 0.06",
+                "v": "-0.2",
+                "radius": "0.06"
+              }
+            ],
+            "offset": "((Diametro / 2)) + 0.008",
+            "depth": "0.006"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
       },
       {
         "name": "Tampa",
-        "material": "PVC",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "AberturaTampa"
+              },
+              {
+                "u": "((Diametro / 2)) + 0.05",
+                "v": "AberturaTampa"
+              },
+              {
+                "u": "((Diametro / 2)) + 0.05",
+                "v": "AberturaTampa + 0.022"
+              },
+              {
+                "u": "(((Diametro / 2)) + 0.05) - 0.01",
+                "v": "AberturaTampa + 0.03"
+              },
+              {
+                "u": "0",
+                "v": "AberturaTampa + 0.03"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa - encaixe",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((Diametro / 2)) - 0.004",
+                "v": "AberturaTampa - 0.025"
+              },
+              {
+                "u": "(Diametro / 2)",
+                "v": "AberturaTampa - 0.025"
+              },
+              {
+                "u": "(Diametro / 2)",
+                "v": "AberturaTampa"
+              },
+              {
+                "u": "((Diametro / 2)) - 0.004",
+                "v": "AberturaTampa"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza",
         "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa - vedação",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((Diametro / 2)) + 0.004",
+                "v": "AberturaTampa - 0.003"
+              },
+              {
+                "u": "(((Diametro / 2)) + 0.05) - 0.012",
+                "v": "AberturaTampa - 0.003"
+              },
+              {
+                "u": "(((Diametro / 2)) + 0.05) - 0.012",
+                "v": "AberturaTampa"
+              },
+              {
+                "u": "((Diametro / 2)) + 0.004",
+                "v": "AberturaTampa"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa - friso 1",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((Diametro / 2))*(0.35000)",
+                "v": "AberturaTampa + 0.03"
+              },
+              {
+                "u": "(((Diametro / 2))*(0.35000)) + 0.008",
+                "v": "AberturaTampa + 0.03"
+              },
+              {
+                "u": "(((Diametro / 2))*(0.35000)) + 0.008",
+                "v": "AberturaTampa + 0.034"
+              },
+              {
+                "u": "((Diametro / 2))*(0.35000)",
+                "v": "AberturaTampa + 0.034"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa - friso 2",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((Diametro / 2))*(0.70000)",
+                "v": "AberturaTampa + 0.03"
+              },
+              {
+                "u": "(((Diametro / 2))*(0.70000)) + 0.008",
+                "v": "AberturaTampa + 0.03"
+              },
+              {
+                "u": "(((Diametro / 2))*(0.70000)) + 0.008",
+                "v": "AberturaTampa + 0.034"
+              },
+              {
+                "u": "((Diametro / 2))*(0.70000)",
+                "v": "AberturaTampa + 0.034"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa - nervura 1",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((((Diametro / 2))*(0.36000))*(0.92388)) + 0.001148",
+                "v": "((((Diametro / 2))*(0.36000))*(0.38268)) - 0.002772"
+              },
+              {
+                "u": "((((Diametro / 2))*(0.70000))*(0.92388)) + 0.001148",
+                "v": "((((Diametro / 2))*(0.70000))*(0.38268)) - 0.002772"
+              },
+              {
+                "u": "((((Diametro / 2))*(0.70000))*(0.92388)) - 0.001148",
+                "v": "((((Diametro / 2))*(0.70000))*(0.38268)) + 0.002772"
+              },
+              {
+                "u": "((((Diametro / 2))*(0.36000))*(0.92388)) - 0.001148",
+                "v": "((((Diametro / 2))*(0.36000))*(0.38268)) + 0.002772"
+              }
+            ],
+            "offset": "AberturaTampa + 0.03",
+            "depth": "0.004"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa - nervura 2",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((((Diametro / 2))*(0.36000))*(0.38268)) + 0.002772",
+                "v": "((((Diametro / 2))*(0.36000))*(0.92388)) - 0.001148"
+              },
+              {
+                "u": "((((Diametro / 2))*(0.70000))*(0.38268)) + 0.002772",
+                "v": "((((Diametro / 2))*(0.70000))*(0.92388)) - 0.001148"
+              },
+              {
+                "u": "((((Diametro / 2))*(0.70000))*(0.38268)) - 0.002772",
+                "v": "((((Diametro / 2))*(0.70000))*(0.92388)) + 0.001148"
+              },
+              {
+                "u": "((((Diametro / 2))*(0.36000))*(0.38268)) - 0.002772",
+                "v": "((((Diametro / 2))*(0.36000))*(0.92388)) + 0.001148"
+              }
+            ],
+            "offset": "AberturaTampa + 0.03",
+            "depth": "0.004"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa - nervura 3",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((((Diametro / 2))*(0.36000))*(-0.38268)) + 0.002772",
+                "v": "((((Diametro / 2))*(0.36000))*(0.92388)) + 0.001148"
+              },
+              {
+                "u": "((((Diametro / 2))*(0.70000))*(-0.38268)) + 0.002772",
+                "v": "((((Diametro / 2))*(0.70000))*(0.92388)) + 0.001148"
+              },
+              {
+                "u": "((((Diametro / 2))*(0.70000))*(-0.38268)) - 0.002772",
+                "v": "((((Diametro / 2))*(0.70000))*(0.92388)) - 0.001148"
+              },
+              {
+                "u": "((((Diametro / 2))*(0.36000))*(-0.38268)) - 0.002772",
+                "v": "((((Diametro / 2))*(0.36000))*(0.92388)) - 0.001148"
+              }
+            ],
+            "offset": "AberturaTampa + 0.03",
+            "depth": "0.004"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa - nervura 4",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((((Diametro / 2))*(0.36000))*(-0.92388)) + 0.001148",
+                "v": "((((Diametro / 2))*(0.36000))*(0.38268)) + 0.002772"
+              },
+              {
+                "u": "((((Diametro / 2))*(0.70000))*(-0.92388)) + 0.001148",
+                "v": "((((Diametro / 2))*(0.70000))*(0.38268)) + 0.002772"
+              },
+              {
+                "u": "((((Diametro / 2))*(0.70000))*(-0.92388)) - 0.001148",
+                "v": "((((Diametro / 2))*(0.70000))*(0.38268)) - 0.002772"
+              },
+              {
+                "u": "((((Diametro / 2))*(0.36000))*(-0.92388)) - 0.001148",
+                "v": "((((Diametro / 2))*(0.36000))*(0.38268)) - 0.002772"
+              }
+            ],
+            "offset": "AberturaTampa + 0.03",
+            "depth": "0.004"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa - nervura 5",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((((Diametro / 2))*(0.36000))*(-0.92388)) - 0.001148",
+                "v": "((((Diametro / 2))*(0.36000))*(-0.38268)) + 0.002772"
+              },
+              {
+                "u": "((((Diametro / 2))*(0.70000))*(-0.92388)) - 0.001148",
+                "v": "((((Diametro / 2))*(0.70000))*(-0.38268)) + 0.002772"
+              },
+              {
+                "u": "((((Diametro / 2))*(0.70000))*(-0.92388)) + 0.001148",
+                "v": "((((Diametro / 2))*(0.70000))*(-0.38268)) - 0.002772"
+              },
+              {
+                "u": "((((Diametro / 2))*(0.36000))*(-0.92388)) + 0.001148",
+                "v": "((((Diametro / 2))*(0.36000))*(-0.38268)) - 0.002772"
+              }
+            ],
+            "offset": "AberturaTampa + 0.03",
+            "depth": "0.004"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa - nervura 6",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((((Diametro / 2))*(0.36000))*(-0.38268)) - 0.002772",
+                "v": "((((Diametro / 2))*(0.36000))*(-0.92388)) + 0.001148"
+              },
+              {
+                "u": "((((Diametro / 2))*(0.70000))*(-0.38268)) - 0.002772",
+                "v": "((((Diametro / 2))*(0.70000))*(-0.92388)) + 0.001148"
+              },
+              {
+                "u": "((((Diametro / 2))*(0.70000))*(-0.38268)) + 0.002772",
+                "v": "((((Diametro / 2))*(0.70000))*(-0.92388)) - 0.001148"
+              },
+              {
+                "u": "((((Diametro / 2))*(0.36000))*(-0.38268)) + 0.002772",
+                "v": "((((Diametro / 2))*(0.36000))*(-0.92388)) - 0.001148"
+              }
+            ],
+            "offset": "AberturaTampa + 0.03",
+            "depth": "0.004"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa - nervura 7",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((((Diametro / 2))*(0.36000))*(0.38268)) - 0.002772",
+                "v": "((((Diametro / 2))*(0.36000))*(-0.92388)) - 0.001148"
+              },
+              {
+                "u": "((((Diametro / 2))*(0.70000))*(0.38268)) - 0.002772",
+                "v": "((((Diametro / 2))*(0.70000))*(-0.92388)) - 0.001148"
+              },
+              {
+                "u": "((((Diametro / 2))*(0.70000))*(0.38268)) + 0.002772",
+                "v": "((((Diametro / 2))*(0.70000))*(-0.92388)) + 0.001148"
+              },
+              {
+                "u": "((((Diametro / 2))*(0.36000))*(0.38268)) + 0.002772",
+                "v": "((((Diametro / 2))*(0.36000))*(-0.92388)) + 0.001148"
+              }
+            ],
+            "offset": "AberturaTampa + 0.03",
+            "depth": "0.004"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa - nervura 8",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((((Diametro / 2))*(0.36000))*(0.92388)) - 0.001148",
+                "v": "((((Diametro / 2))*(0.36000))*(-0.38268)) - 0.002772"
+              },
+              {
+                "u": "((((Diametro / 2))*(0.70000))*(0.92388)) - 0.001148",
+                "v": "((((Diametro / 2))*(0.70000))*(-0.38268)) - 0.002772"
+              },
+              {
+                "u": "((((Diametro / 2))*(0.70000))*(0.92388)) + 0.001148",
+                "v": "((((Diametro / 2))*(0.70000))*(-0.38268)) + 0.002772"
+              },
+              {
+                "u": "((((Diametro / 2))*(0.36000))*(0.92388)) + 0.001148",
+                "v": "((((Diametro / 2))*(0.36000))*(-0.38268)) + 0.002772"
+              }
+            ],
+            "offset": "AberturaTampa + 0.03",
+            "depth": "0.004"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa - alça frontal",
+        "shape": {
+          "Sweep": {
+            "plane": "Front",
+            "path": [
+              {
+                "u": "-0.04",
+                "v": "AberturaTampa + 0.028",
+                "bezier": {
+                  "u1": "-0.04",
+                  "v1": "AberturaTampa + 0.05",
+                  "u2": "-0.04",
+                  "v2": "AberturaTampa + 0.05"
+                }
+              },
+              {
+                "u": "-0.02",
+                "v": "AberturaTampa + 0.05"
+              },
+              {
+                "u": "0.02",
+                "v": "AberturaTampa + 0.05",
+                "bezier": {
+                  "u1": "0.04",
+                  "v1": "AberturaTampa + 0.05",
+                  "u2": "0.04",
+                  "v2": "AberturaTampa + 0.05"
+                }
+              },
+              {
+                "u": "0.04",
+                "v": "AberturaTampa + 0.028"
+              }
+            ],
+            "offset": "((Diametro / 2))*(-0.82000)",
+            "profile": [
+              {
+                "u": "0.005",
+                "v": "0"
+              },
+              {
+                "u": "0.003536",
+                "v": "0.003536"
+              },
+              {
+                "u": "0",
+                "v": "0.005"
+              },
+              {
+                "u": "-0.003536",
+                "v": "0.003536"
+              },
+              {
+                "u": "-0.005",
+                "v": "0"
+              },
+              {
+                "u": "-0.003536",
+                "v": "-0.003536"
+              },
+              {
+                "u": "0",
+                "v": "-0.005"
+              },
+              {
+                "u": "0.003536",
+                "v": "-0.003536"
+              }
+            ]
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa - alça traseira",
+        "shape": {
+          "Sweep": {
+            "plane": "Front",
+            "path": [
+              {
+                "u": "-0.04",
+                "v": "AberturaTampa + 0.028",
+                "bezier": {
+                  "u1": "-0.04",
+                  "v1": "AberturaTampa + 0.05",
+                  "u2": "-0.04",
+                  "v2": "AberturaTampa + 0.05"
+                }
+              },
+              {
+                "u": "-0.02",
+                "v": "AberturaTampa + 0.05"
+              },
+              {
+                "u": "0.02",
+                "v": "AberturaTampa + 0.05",
+                "bezier": {
+                  "u1": "0.04",
+                  "v1": "AberturaTampa + 0.05",
+                  "u2": "0.04",
+                  "v2": "AberturaTampa + 0.05"
+                }
+              },
+              {
+                "u": "0.04",
+                "v": "AberturaTampa + 0.028"
+              }
+            ],
+            "offset": "((Diametro / 2))*(0.82000)",
+            "profile": [
+              {
+                "u": "0.005",
+                "v": "0"
+              },
+              {
+                "u": "0.003536",
+                "v": "0.003536"
+              },
+              {
+                "u": "0",
+                "v": "0.005"
+              },
+              {
+                "u": "-0.003536",
+                "v": "0.003536"
+              },
+              {
+                "u": "-0.005",
+                "v": "0"
+              },
+              {
+                "u": "-0.003536",
+                "v": "-0.003536"
+              },
+              {
+                "u": "0",
+                "v": "-0.005"
+              },
+              {
+                "u": "0.003536",
+                "v": "-0.003536"
+              }
+            ]
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa - etiqueta",
         "shape": {
           "Cylinder": {
             "x": "0",
             "y": "0",
-            "z": "0",
-            "radius": "Diametro / 2 + 0.05",
-            "height": "0.03"
+            "z": "AberturaTampa + 0.03",
+            "radius": "((Diametro / 2))*(0.30000)",
+            "height": "0.001"
           }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
         }
       }
     ],
@@ -65,7 +1761,7 @@
       {
         "name": "Entrada",
         "system": "Sanitary",
-        "x": "-Diametro / 2",
+        "x": "-((Diametro / 2)) + 0.008 - 0.12",
         "y": "0",
         "z": "-0.15",
         "direction": "Left",
@@ -74,7 +1770,7 @@
       {
         "name": "Saída",
         "system": "Sanitary",
-        "x": "Diametro / 2",
+        "x": "((Diametro / 2)) + 0.008 + 0.13",
         "y": "0",
         "z": "-0.2",
         "direction": "Right",
@@ -99,6 +1795,63 @@
       "info": {
         "description": "Caixa de gordura dupla (CGD), até 12 cozinhas"
       }
+    }
+  ],
+  "materials": [
+    {
+      "name": "Plástico cinza",
+      "color": [
+        120,
+        122,
+        126
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Borracha",
+      "color": [
+        30,
+        30,
+        30
+      ],
+      "class": "Plastic",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Tela perfurada",
+      "color": [
+        24,
+        24,
+        26
+      ],
+      "class": "Metal",
+      "finish": "Matte",
+      "transparency": 0.4
+    },
+    {
+      "name": "Aço galvanizado",
+      "color": [
+        160,
+        165,
+        170
+      ],
+      "class": "Metal",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico cinza claro",
+      "color": [
+        196,
+        198,
+        200
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
     }
   ]
 }

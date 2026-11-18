@@ -20,56 +20,2117 @@
         "value": 0.73,
         "kind": "Length",
         "instance": false
+      },
+      {
+        "name": "AberturaTampa",
+        "value": 0.0,
+        "kind": "Length",
+        "instance": true
       }
     ],
     "items": [
       {
-        "name": "Reservatório",
-        "material": "Polietileno",
-        "in_plan": true,
+        "name": "Reservatório simplificado",
         "shape": {
           "Revolution": {
             "plane": "Front",
-            "offset": "0",
-            "axis": "0",
-            "angle": "360",
             "points": [
               {
                 "u": "0",
-                "v": "0",
-                "radius": ""
+                "v": "0"
               },
               {
                 "u": "RaioBase",
-                "v": "0",
-                "radius": ""
+                "v": "0"
               },
               {
                 "u": "RaioTopo",
-                "v": "Altura - 0.08",
-                "radius": ""
+                "v": "(Altura - 0.08)"
               },
               {
                 "u": "0",
-                "v": "Altura - 0.08",
-                "radius": ""
+                "v": "(Altura - 0.08)"
               }
-            ]
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
           }
+        },
+        "material": "Polietileno",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
         }
       },
       {
-        "name": "Tampa",
-        "material": "Polietileno",
-        "in_plan": false,
+        "name": "Tampa simplificada",
         "shape": {
           "Cylinder": {
             "x": "0",
             "y": "0",
-            "z": "Altura - 0.08",
+            "z": "((Altura - 0.08)) + AberturaTampa",
             "radius": "RaioTopo + 0.03",
             "height": "0.08"
           }
+        },
+        "material": "Polietileno",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Reservatório",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "0"
+              },
+              {
+                "u": "RaioBase - 0.03",
+                "v": "0"
+              },
+              {
+                "u": "RaioBase - 0.009",
+                "v": "0.006"
+              },
+              {
+                "u": "RaioBase",
+                "v": "0.03"
+              },
+              {
+                "u": "(RaioBase + (RaioTopo - RaioBase) * 0.25)",
+                "v": "(Altura - 0.08) * 0.25"
+              },
+              {
+                "u": "((RaioBase + (RaioTopo - RaioBase) * 0.265)) + 0.012",
+                "v": "(Altura - 0.08) * 0.265"
+              },
+              {
+                "u": "((RaioBase + (RaioTopo - RaioBase) * 0.295)) + 0.012",
+                "v": "(Altura - 0.08) * 0.295"
+              },
+              {
+                "u": "(RaioBase + (RaioTopo - RaioBase) * 0.31)",
+                "v": "(Altura - 0.08) * 0.31"
+              },
+              {
+                "u": "(RaioBase + (RaioTopo - RaioBase) * 0.49)",
+                "v": "(Altura - 0.08) * 0.49"
+              },
+              {
+                "u": "((RaioBase + (RaioTopo - RaioBase) * 0.505)) + 0.012",
+                "v": "(Altura - 0.08) * 0.505"
+              },
+              {
+                "u": "((RaioBase + (RaioTopo - RaioBase) * 0.535)) + 0.012",
+                "v": "(Altura - 0.08) * 0.535"
+              },
+              {
+                "u": "(RaioBase + (RaioTopo - RaioBase) * 0.55)",
+                "v": "(Altura - 0.08) * 0.55"
+              },
+              {
+                "u": "(RaioBase + (RaioTopo - RaioBase) * 0.71)",
+                "v": "(Altura - 0.08) * 0.71"
+              },
+              {
+                "u": "((RaioBase + (RaioTopo - RaioBase) * 0.725)) + 0.012",
+                "v": "(Altura - 0.08) * 0.725"
+              },
+              {
+                "u": "((RaioBase + (RaioTopo - RaioBase) * 0.755)) + 0.012",
+                "v": "(Altura - 0.08) * 0.755"
+              },
+              {
+                "u": "(RaioBase + (RaioTopo - RaioBase) * 0.77)",
+                "v": "(Altura - 0.08) * 0.77"
+              },
+              {
+                "u": "RaioTopo",
+                "v": "((Altura - 0.08)) - 0.03"
+              },
+              {
+                "u": "RaioTopo + 0.045",
+                "v": "((Altura - 0.08)) - 0.022"
+              },
+              {
+                "u": "RaioTopo + 0.045",
+                "v": "(Altura - 0.08)"
+              },
+              {
+                "u": "RaioTopo - 0.006",
+                "v": "(Altura - 0.08)"
+              },
+              {
+                "u": "((RaioBase + (RaioTopo - RaioBase) * 0.74)) - 0.006",
+                "v": "(Altura - 0.08) * 0.74"
+              },
+              {
+                "u": "((RaioBase + (RaioTopo - RaioBase) * 0.52)) - 0.006",
+                "v": "(Altura - 0.08) * 0.52"
+              },
+              {
+                "u": "((RaioBase + (RaioTopo - RaioBase) * 0.28)) - 0.006",
+                "v": "(Altura - 0.08) * 0.28"
+              },
+              {
+                "u": "RaioBase - 0.006",
+                "v": "0.032"
+              },
+              {
+                "u": "RaioBase - 0.012",
+                "v": "0.012"
+              },
+              {
+                "u": "RaioBase - 0.036",
+                "v": "0.006"
+              },
+              {
+                "u": "0",
+                "v": "0.006"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Polietileno",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Aba - reforço",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "RaioTopo - 0.002",
+                "v": "((Altura - 0.08)) - 0.03"
+              },
+              {
+                "u": "RaioTopo + 0.045",
+                "v": "((Altura - 0.08)) - 0.03"
+              },
+              {
+                "u": "RaioTopo + 0.045",
+                "v": "((Altura - 0.08)) - 0.022"
+              },
+              {
+                "u": "RaioTopo - 0.002",
+                "v": "((Altura - 0.08)) - 0.01"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Polietileno",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Base - anel de apoio",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "RaioBase - 0.09",
+                "v": "0"
+              },
+              {
+                "u": "RaioBase - 0.06",
+                "v": "0"
+              },
+              {
+                "u": "RaioBase - 0.06",
+                "v": "0.004"
+              },
+              {
+                "u": "RaioBase - 0.09",
+                "v": "0.004"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Polietileno",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Etiqueta",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((RaioBase + (RaioTopo - RaioBase) * 0.4)) + 0.0005",
+                "v": "((Altura - 0.08) * 0.4) - 0.04"
+              },
+              {
+                "u": "((RaioBase + (RaioTopo - RaioBase) * 0.4)) + 0.0015",
+                "v": "((Altura - 0.08) * 0.4) - 0.04"
+              },
+              {
+                "u": "((RaioBase + (RaioTopo - RaioBase) * 0.48)) + 0.0015",
+                "v": "(Altura - 0.08) * 0.48"
+              },
+              {
+                "u": "((RaioBase + (RaioTopo - RaioBase) * 0.48)) + 0.0005",
+                "v": "(Altura - 0.08) * 0.48"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "24"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "Altura + AberturaTampa"
+              },
+              {
+                "u": "(RaioTopo * 0.5)",
+                "v": "(Altura - 0.012) + AberturaTampa"
+              },
+              {
+                "u": "(RaioTopo * 0.85)",
+                "v": "(Altura - 0.034) + AberturaTampa"
+              },
+              {
+                "u": "RaioTopo + 0.012",
+                "v": "(((Altura - 0.08)) + 0.026) + AberturaTampa"
+              },
+              {
+                "u": "RaioTopo + 0.052",
+                "v": "(((Altura - 0.08)) + 0.014) + AberturaTampa"
+              },
+              {
+                "u": "RaioTopo + 0.052",
+                "v": "(((Altura - 0.08)) - 0.026) + AberturaTampa"
+              },
+              {
+                "u": "RaioTopo + 0.046",
+                "v": "(((Altura - 0.08)) - 0.026) + AberturaTampa"
+              },
+              {
+                "u": "RaioTopo + 0.046",
+                "v": "(((Altura - 0.08)) + 0.006) + AberturaTampa"
+              },
+              {
+                "u": "RaioTopo + 0.006",
+                "v": "(((Altura - 0.08)) + 0.018) + AberturaTampa"
+              },
+              {
+                "u": "(RaioTopo * 0.85)",
+                "v": "(Altura - 0.042) + AberturaTampa"
+              },
+              {
+                "u": "(RaioTopo * 0.5)",
+                "v": "(Altura - 0.02) + AberturaTampa"
+              },
+              {
+                "u": "0",
+                "v": "(Altura - 0.008) + AberturaTampa"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Polietileno",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa - anel de vedação",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "RaioTopo - 0.004",
+                "v": "(((Altura - 0.08)) + 0.0005) + AberturaTampa"
+              },
+              {
+                "u": "RaioTopo + 0.046",
+                "v": "(((Altura - 0.08)) + 0.0005) + AberturaTampa"
+              },
+              {
+                "u": "RaioTopo + 0.046",
+                "v": "(((Altura - 0.08)) + 0.006) + AberturaTampa"
+              },
+              {
+                "u": "RaioTopo - 0.004",
+                "v": "(((Altura - 0.08)) + 0.012) + AberturaTampa"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa - frisos",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(RaioTopo * 0.5)",
+                "v": "(Altura - 0.012) + AberturaTampa"
+              },
+              {
+                "u": "((RaioTopo * 0.5)) + 0.02",
+                "v": "(Altura - 0.0135) + AberturaTampa"
+              },
+              {
+                "u": "((RaioTopo * 0.5)) + 0.02",
+                "v": "(Altura - 0.008) + AberturaTampa"
+              },
+              {
+                "u": "(RaioTopo * 0.5)",
+                "v": "(Altura - 0.006) + AberturaTampa"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Polietileno",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Respiro",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "(Altura - 0.002) + AberturaTampa"
+              },
+              {
+                "u": "0.05",
+                "v": "(Altura - 0.002) + AberturaTampa"
+              },
+              {
+                "u": "0.05",
+                "v": "(Altura + 0.012) + AberturaTampa"
+              },
+              {
+                "u": "0.035",
+                "v": "(Altura + 0.03) + AberturaTampa"
+              },
+              {
+                "u": "0",
+                "v": "(Altura + 0.034) + AberturaTampa"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Polietileno",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Respiro - fenda 1",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.027981",
+                "v": "0.011536"
+              },
+              {
+                "u": "0.044435",
+                "v": "0.021036"
+              },
+              {
+                "u": "0.040435",
+                "v": "0.027964"
+              },
+              {
+                "u": "0.023981",
+                "v": "0.018464"
+              }
+            ],
+            "offset": "(Altura + 0.004) + AberturaTampa",
+            "depth": "0.006"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Respiro - fenda 2",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.004",
+                "v": "0.03"
+              },
+              {
+                "u": "0.004",
+                "v": "0.049"
+              },
+              {
+                "u": "-0.004",
+                "v": "0.049"
+              },
+              {
+                "u": "-0.004",
+                "v": "0.03"
+              }
+            ],
+            "offset": "(Altura + 0.004) + AberturaTampa",
+            "depth": "0.006"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Respiro - fenda 3",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-0.023981",
+                "v": "0.018464"
+              },
+              {
+                "u": "-0.040435",
+                "v": "0.027964"
+              },
+              {
+                "u": "-0.044435",
+                "v": "0.021036"
+              },
+              {
+                "u": "-0.027981",
+                "v": "0.011536"
+              }
+            ],
+            "offset": "(Altura + 0.004) + AberturaTampa",
+            "depth": "0.006"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Respiro - fenda 4",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-0.027981",
+                "v": "-0.011536"
+              },
+              {
+                "u": "-0.044435",
+                "v": "-0.021036"
+              },
+              {
+                "u": "-0.040435",
+                "v": "-0.027964"
+              },
+              {
+                "u": "-0.023981",
+                "v": "-0.018464"
+              }
+            ],
+            "offset": "(Altura + 0.004) + AberturaTampa",
+            "depth": "0.006"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Respiro - fenda 5",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-0.004",
+                "v": "-0.03"
+              },
+              {
+                "u": "-0.004",
+                "v": "-0.049"
+              },
+              {
+                "u": "0.004",
+                "v": "-0.049"
+              },
+              {
+                "u": "0.004",
+                "v": "-0.03"
+              }
+            ],
+            "offset": "(Altura + 0.004) + AberturaTampa",
+            "depth": "0.006"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Respiro - fenda 6",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.023981",
+                "v": "-0.018464"
+              },
+              {
+                "u": "0.040435",
+                "v": "-0.027964"
+              },
+              {
+                "u": "0.044435",
+                "v": "-0.021036"
+              },
+              {
+                "u": "0.027981",
+                "v": "-0.011536"
+              }
+            ],
+            "offset": "(Altura + 0.004) + AberturaTampa",
+            "depth": "0.006"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trava da tampa 1",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((RaioTopo + 0.05)*(0.92388)) + 0.011481",
+                "v": "((RaioTopo + 0.05)*(0.38268)) - 0.027716"
+              },
+              {
+                "u": "((RaioTopo + 0.066)*(0.92388)) + 0.00995",
+                "v": "((RaioTopo + 0.066)*(0.38268)) - 0.024021"
+              },
+              {
+                "u": "((RaioTopo + 0.066)*(0.92388)) - 0.00995",
+                "v": "((RaioTopo + 0.066)*(0.38268)) + 0.024021"
+              },
+              {
+                "u": "((RaioTopo + 0.05)*(0.92388)) - 0.011481",
+                "v": "((RaioTopo + 0.05)*(0.38268)) + 0.027716"
+              }
+            ],
+            "offset": "(((Altura - 0.08)) - 0.032) + AberturaTampa",
+            "depth": "0.04"
+          }
+        },
+        "material": "Polietileno",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trava da tampa 1 - pega",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((RaioTopo + 0.066)*(0.92388)) + 0.006888",
+                "v": "((RaioTopo + 0.066)*(0.38268)) - 0.01663"
+              },
+              {
+                "u": "(((RaioTopo + 0.066) + 0.006)*(0.92388)) + 0.006123",
+                "v": "(((RaioTopo + 0.066) + 0.006)*(0.38268)) - 0.014782"
+              },
+              {
+                "u": "(((RaioTopo + 0.066) + 0.006)*(0.92388)) - 0.006123",
+                "v": "(((RaioTopo + 0.066) + 0.006)*(0.38268)) + 0.014782"
+              },
+              {
+                "u": "((RaioTopo + 0.066)*(0.92388)) - 0.006888",
+                "v": "((RaioTopo + 0.066)*(0.38268)) + 0.01663"
+              }
+            ],
+            "offset": "(((Altura - 0.08)) - 0.012) + AberturaTampa",
+            "depth": "0.016"
+          }
+        },
+        "material": "Polietileno",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trava da tampa 2",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((RaioTopo + 0.05)*(0.38268)) + 0.027716",
+                "v": "((RaioTopo + 0.05)*(0.92388)) - 0.011481"
+              },
+              {
+                "u": "((RaioTopo + 0.066)*(0.38268)) + 0.024021",
+                "v": "((RaioTopo + 0.066)*(0.92388)) - 0.00995"
+              },
+              {
+                "u": "((RaioTopo + 0.066)*(0.38268)) - 0.024021",
+                "v": "((RaioTopo + 0.066)*(0.92388)) + 0.00995"
+              },
+              {
+                "u": "((RaioTopo + 0.05)*(0.38268)) - 0.027716",
+                "v": "((RaioTopo + 0.05)*(0.92388)) + 0.011481"
+              }
+            ],
+            "offset": "(((Altura - 0.08)) - 0.032) + AberturaTampa",
+            "depth": "0.04"
+          }
+        },
+        "material": "Polietileno",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trava da tampa 2 - pega",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((RaioTopo + 0.066)*(0.38268)) + 0.01663",
+                "v": "((RaioTopo + 0.066)*(0.92388)) - 0.006888"
+              },
+              {
+                "u": "(((RaioTopo + 0.066) + 0.006)*(0.38268)) + 0.014782",
+                "v": "(((RaioTopo + 0.066) + 0.006)*(0.92388)) - 0.006123"
+              },
+              {
+                "u": "(((RaioTopo + 0.066) + 0.006)*(0.38268)) - 0.014782",
+                "v": "(((RaioTopo + 0.066) + 0.006)*(0.92388)) + 0.006123"
+              },
+              {
+                "u": "((RaioTopo + 0.066)*(0.38268)) - 0.01663",
+                "v": "((RaioTopo + 0.066)*(0.92388)) + 0.006888"
+              }
+            ],
+            "offset": "(((Altura - 0.08)) - 0.012) + AberturaTampa",
+            "depth": "0.016"
+          }
+        },
+        "material": "Polietileno",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trava da tampa 3",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((RaioTopo + 0.05)*(-0.38268)) + 0.027716",
+                "v": "((RaioTopo + 0.05)*(0.92388)) + 0.011481"
+              },
+              {
+                "u": "((RaioTopo + 0.066)*(-0.38268)) + 0.024021",
+                "v": "((RaioTopo + 0.066)*(0.92388)) + 0.00995"
+              },
+              {
+                "u": "((RaioTopo + 0.066)*(-0.38268)) - 0.024021",
+                "v": "((RaioTopo + 0.066)*(0.92388)) - 0.00995"
+              },
+              {
+                "u": "((RaioTopo + 0.05)*(-0.38268)) - 0.027716",
+                "v": "((RaioTopo + 0.05)*(0.92388)) - 0.011481"
+              }
+            ],
+            "offset": "(((Altura - 0.08)) - 0.032) + AberturaTampa",
+            "depth": "0.04"
+          }
+        },
+        "material": "Polietileno",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trava da tampa 3 - pega",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((RaioTopo + 0.066)*(-0.38268)) + 0.01663",
+                "v": "((RaioTopo + 0.066)*(0.92388)) + 0.006888"
+              },
+              {
+                "u": "(((RaioTopo + 0.066) + 0.006)*(-0.38268)) + 0.014782",
+                "v": "(((RaioTopo + 0.066) + 0.006)*(0.92388)) + 0.006123"
+              },
+              {
+                "u": "(((RaioTopo + 0.066) + 0.006)*(-0.38268)) - 0.014782",
+                "v": "(((RaioTopo + 0.066) + 0.006)*(0.92388)) - 0.006123"
+              },
+              {
+                "u": "((RaioTopo + 0.066)*(-0.38268)) - 0.01663",
+                "v": "((RaioTopo + 0.066)*(0.92388)) - 0.006888"
+              }
+            ],
+            "offset": "(((Altura - 0.08)) - 0.012) + AberturaTampa",
+            "depth": "0.016"
+          }
+        },
+        "material": "Polietileno",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trava da tampa 4",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((RaioTopo + 0.05)*(-0.92388)) + 0.011481",
+                "v": "((RaioTopo + 0.05)*(0.38268)) + 0.027716"
+              },
+              {
+                "u": "((RaioTopo + 0.066)*(-0.92388)) + 0.00995",
+                "v": "((RaioTopo + 0.066)*(0.38268)) + 0.024021"
+              },
+              {
+                "u": "((RaioTopo + 0.066)*(-0.92388)) - 0.00995",
+                "v": "((RaioTopo + 0.066)*(0.38268)) - 0.024021"
+              },
+              {
+                "u": "((RaioTopo + 0.05)*(-0.92388)) - 0.011481",
+                "v": "((RaioTopo + 0.05)*(0.38268)) - 0.027716"
+              }
+            ],
+            "offset": "(((Altura - 0.08)) - 0.032) + AberturaTampa",
+            "depth": "0.04"
+          }
+        },
+        "material": "Polietileno",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trava da tampa 4 - pega",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((RaioTopo + 0.066)*(-0.92388)) + 0.006888",
+                "v": "((RaioTopo + 0.066)*(0.38268)) + 0.01663"
+              },
+              {
+                "u": "(((RaioTopo + 0.066) + 0.006)*(-0.92388)) + 0.006123",
+                "v": "(((RaioTopo + 0.066) + 0.006)*(0.38268)) + 0.014782"
+              },
+              {
+                "u": "(((RaioTopo + 0.066) + 0.006)*(-0.92388)) - 0.006123",
+                "v": "(((RaioTopo + 0.066) + 0.006)*(0.38268)) - 0.014782"
+              },
+              {
+                "u": "((RaioTopo + 0.066)*(-0.92388)) - 0.006888",
+                "v": "((RaioTopo + 0.066)*(0.38268)) - 0.01663"
+              }
+            ],
+            "offset": "(((Altura - 0.08)) - 0.012) + AberturaTampa",
+            "depth": "0.016"
+          }
+        },
+        "material": "Polietileno",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trava da tampa 5",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((RaioTopo + 0.05)*(-0.92388)) - 0.011481",
+                "v": "((RaioTopo + 0.05)*(-0.38268)) + 0.027716"
+              },
+              {
+                "u": "((RaioTopo + 0.066)*(-0.92388)) - 0.00995",
+                "v": "((RaioTopo + 0.066)*(-0.38268)) + 0.024021"
+              },
+              {
+                "u": "((RaioTopo + 0.066)*(-0.92388)) + 0.00995",
+                "v": "((RaioTopo + 0.066)*(-0.38268)) - 0.024021"
+              },
+              {
+                "u": "((RaioTopo + 0.05)*(-0.92388)) + 0.011481",
+                "v": "((RaioTopo + 0.05)*(-0.38268)) - 0.027716"
+              }
+            ],
+            "offset": "(((Altura - 0.08)) - 0.032) + AberturaTampa",
+            "depth": "0.04"
+          }
+        },
+        "material": "Polietileno",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trava da tampa 5 - pega",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((RaioTopo + 0.066)*(-0.92388)) - 0.006888",
+                "v": "((RaioTopo + 0.066)*(-0.38268)) + 0.01663"
+              },
+              {
+                "u": "(((RaioTopo + 0.066) + 0.006)*(-0.92388)) - 0.006123",
+                "v": "(((RaioTopo + 0.066) + 0.006)*(-0.38268)) + 0.014782"
+              },
+              {
+                "u": "(((RaioTopo + 0.066) + 0.006)*(-0.92388)) + 0.006123",
+                "v": "(((RaioTopo + 0.066) + 0.006)*(-0.38268)) - 0.014782"
+              },
+              {
+                "u": "((RaioTopo + 0.066)*(-0.92388)) + 0.006888",
+                "v": "((RaioTopo + 0.066)*(-0.38268)) - 0.01663"
+              }
+            ],
+            "offset": "(((Altura - 0.08)) - 0.012) + AberturaTampa",
+            "depth": "0.016"
+          }
+        },
+        "material": "Polietileno",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trava da tampa 6",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((RaioTopo + 0.05)*(-0.38268)) - 0.027716",
+                "v": "((RaioTopo + 0.05)*(-0.92388)) + 0.011481"
+              },
+              {
+                "u": "((RaioTopo + 0.066)*(-0.38268)) - 0.024021",
+                "v": "((RaioTopo + 0.066)*(-0.92388)) + 0.00995"
+              },
+              {
+                "u": "((RaioTopo + 0.066)*(-0.38268)) + 0.024021",
+                "v": "((RaioTopo + 0.066)*(-0.92388)) - 0.00995"
+              },
+              {
+                "u": "((RaioTopo + 0.05)*(-0.38268)) + 0.027716",
+                "v": "((RaioTopo + 0.05)*(-0.92388)) - 0.011481"
+              }
+            ],
+            "offset": "(((Altura - 0.08)) - 0.032) + AberturaTampa",
+            "depth": "0.04"
+          }
+        },
+        "material": "Polietileno",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trava da tampa 6 - pega",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((RaioTopo + 0.066)*(-0.38268)) - 0.01663",
+                "v": "((RaioTopo + 0.066)*(-0.92388)) + 0.006888"
+              },
+              {
+                "u": "(((RaioTopo + 0.066) + 0.006)*(-0.38268)) - 0.014782",
+                "v": "(((RaioTopo + 0.066) + 0.006)*(-0.92388)) + 0.006123"
+              },
+              {
+                "u": "(((RaioTopo + 0.066) + 0.006)*(-0.38268)) + 0.014782",
+                "v": "(((RaioTopo + 0.066) + 0.006)*(-0.92388)) - 0.006123"
+              },
+              {
+                "u": "((RaioTopo + 0.066)*(-0.38268)) + 0.01663",
+                "v": "((RaioTopo + 0.066)*(-0.92388)) - 0.006888"
+              }
+            ],
+            "offset": "(((Altura - 0.08)) - 0.012) + AberturaTampa",
+            "depth": "0.016"
+          }
+        },
+        "material": "Polietileno",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trava da tampa 7",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((RaioTopo + 0.05)*(0.38268)) - 0.027716",
+                "v": "((RaioTopo + 0.05)*(-0.92388)) - 0.011481"
+              },
+              {
+                "u": "((RaioTopo + 0.066)*(0.38268)) - 0.024021",
+                "v": "((RaioTopo + 0.066)*(-0.92388)) - 0.00995"
+              },
+              {
+                "u": "((RaioTopo + 0.066)*(0.38268)) + 0.024021",
+                "v": "((RaioTopo + 0.066)*(-0.92388)) + 0.00995"
+              },
+              {
+                "u": "((RaioTopo + 0.05)*(0.38268)) + 0.027716",
+                "v": "((RaioTopo + 0.05)*(-0.92388)) + 0.011481"
+              }
+            ],
+            "offset": "(((Altura - 0.08)) - 0.032) + AberturaTampa",
+            "depth": "0.04"
+          }
+        },
+        "material": "Polietileno",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trava da tampa 7 - pega",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((RaioTopo + 0.066)*(0.38268)) - 0.01663",
+                "v": "((RaioTopo + 0.066)*(-0.92388)) - 0.006888"
+              },
+              {
+                "u": "(((RaioTopo + 0.066) + 0.006)*(0.38268)) - 0.014782",
+                "v": "(((RaioTopo + 0.066) + 0.006)*(-0.92388)) - 0.006123"
+              },
+              {
+                "u": "(((RaioTopo + 0.066) + 0.006)*(0.38268)) + 0.014782",
+                "v": "(((RaioTopo + 0.066) + 0.006)*(-0.92388)) + 0.006123"
+              },
+              {
+                "u": "((RaioTopo + 0.066)*(0.38268)) + 0.01663",
+                "v": "((RaioTopo + 0.066)*(-0.92388)) + 0.006888"
+              }
+            ],
+            "offset": "(((Altura - 0.08)) - 0.012) + AberturaTampa",
+            "depth": "0.016"
+          }
+        },
+        "material": "Polietileno",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trava da tampa 8",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((RaioTopo + 0.05)*(0.92388)) - 0.011481",
+                "v": "((RaioTopo + 0.05)*(-0.38268)) - 0.027716"
+              },
+              {
+                "u": "((RaioTopo + 0.066)*(0.92388)) - 0.00995",
+                "v": "((RaioTopo + 0.066)*(-0.38268)) - 0.024021"
+              },
+              {
+                "u": "((RaioTopo + 0.066)*(0.92388)) + 0.00995",
+                "v": "((RaioTopo + 0.066)*(-0.38268)) + 0.024021"
+              },
+              {
+                "u": "((RaioTopo + 0.05)*(0.92388)) + 0.011481",
+                "v": "((RaioTopo + 0.05)*(-0.38268)) + 0.027716"
+              }
+            ],
+            "offset": "(((Altura - 0.08)) - 0.032) + AberturaTampa",
+            "depth": "0.04"
+          }
+        },
+        "material": "Polietileno",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trava da tampa 8 - pega",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((RaioTopo + 0.066)*(0.92388)) - 0.006888",
+                "v": "((RaioTopo + 0.066)*(-0.38268)) - 0.01663"
+              },
+              {
+                "u": "(((RaioTopo + 0.066) + 0.006)*(0.92388)) - 0.006123",
+                "v": "(((RaioTopo + 0.066) + 0.006)*(-0.38268)) - 0.014782"
+              },
+              {
+                "u": "(((RaioTopo + 0.066) + 0.006)*(0.92388)) + 0.006123",
+                "v": "(((RaioTopo + 0.066) + 0.006)*(-0.38268)) + 0.014782"
+              },
+              {
+                "u": "((RaioTopo + 0.066)*(0.92388)) + 0.006888",
+                "v": "((RaioTopo + 0.066)*(-0.38268)) + 0.01663"
+              }
+            ],
+            "offset": "(((Altura - 0.08)) - 0.012) + AberturaTampa",
+            "depth": "0.016"
+          }
+        },
+        "material": "Polietileno",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Entrada - flange externa",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.036",
+                "v": "Altura - 0.15",
+                "radius": "0.036"
+              },
+              {
+                "u": "0 + 0.036",
+                "v": "Altura - 0.15",
+                "radius": "0.036"
+              }
+            ],
+            "offset": "((RaioBase + (RaioTopo - RaioBase) * (Altura - 0.15) / (Altura - 0.08))) - 0.002",
+            "depth": "0.008"
+          }
+        },
+        "material": "PVC",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Entrada - flange interna",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.036",
+                "v": "Altura - 0.15",
+                "radius": "0.036"
+              },
+              {
+                "u": "0 + 0.036",
+                "v": "Altura - 0.15",
+                "radius": "0.036"
+              }
+            ],
+            "offset": "((RaioBase + (RaioTopo - RaioBase) * (Altura - 0.15) / (Altura - 0.08))) - 0.018",
+            "depth": "0.008"
+          }
+        },
+        "material": "PVC",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Entrada - corpo",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.0185",
+                "v": "Altura - 0.15",
+                "radius": "0.0185"
+              },
+              {
+                "u": "0 + 0.0185",
+                "v": "Altura - 0.15",
+                "radius": "0.0185"
+              }
+            ],
+            "offset": "((RaioBase + (RaioTopo - RaioBase) * (Altura - 0.15) / (Altura - 0.08))) - 0.03",
+            "depth": "0.05"
+          }
+        },
+        "material": "PVC",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Entrada - tubo",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.0125",
+                "v": "Altura - 0.15",
+                "radius": "0.0125"
+              },
+              {
+                "u": "0 + 0.0125",
+                "v": "Altura - 0.15",
+                "radius": "0.0125"
+              }
+            ],
+            "offset": "((RaioBase + (RaioTopo - RaioBase) * (Altura - 0.15) / (Altura - 0.08))) + 0.006",
+            "depth": "0.07"
+          }
+        },
+        "material": "PVC",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Torneira de boia - corpo",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.018",
+                "v": "Altura - 0.15",
+                "radius": "0.018"
+              },
+              {
+                "u": "0 + 0.018",
+                "v": "Altura - 0.15",
+                "radius": "0.018"
+              }
+            ],
+            "offset": "((RaioBase + (RaioTopo - RaioBase) * (Altura - 0.15) / (Altura - 0.08))) - 0.09",
+            "depth": "0.065"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Torneira de boia - bico",
+        "shape": {
+          "Cylinder": {
+            "x": "((RaioBase + (RaioTopo - RaioBase) * (Altura - 0.15) / (Altura - 0.08))) - 0.07",
+            "y": "0",
+            "z": "(Altura - 0.15) - 0.05",
+            "radius": "0.008",
+            "height": "0.035"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Torneira de boia - haste",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.004",
+                "v": "Altura - 0.15",
+                "radius": "0.004"
+              },
+              {
+                "u": "0 + 0.004",
+                "v": "Altura - 0.15",
+                "radius": "0.004"
+              }
+            ],
+            "offset": "((RaioBase + (RaioTopo - RaioBase) * (Altura - 0.15) / (Altura - 0.08))) - 0.33",
+            "depth": "0.245"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Torneira de boia - boia",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((RaioBase + (RaioTopo - RaioBase) * (Altura - 0.15) / (Altura - 0.08))) - 0.39",
+                "v": "(Altura - 0.15) - 0.065",
+                "radius": "0.065"
+              },
+              {
+                "u": "((RaioBase + (RaioTopo - RaioBase) * (Altura - 0.15) / (Altura - 0.08))) - 0.39",
+                "v": "(Altura - 0.15) + 0.065"
+              }
+            ],
+            "offset": "0",
+            "axis": "((RaioBase + (RaioTopo - RaioBase) * (Altura - 0.15) / (Altura - 0.08))) - 0.39",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Torneira de boia - pino",
+        "shape": {
+          "Cylinder": {
+            "x": "((RaioBase + (RaioTopo - RaioBase) * (Altura - 0.15) / (Altura - 0.08))) - 0.085",
+            "y": "0",
+            "z": "(Altura - 0.15) + 0.012",
+            "radius": "0.004",
+            "height": "0.012"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída - flange externa",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.036",
+                "v": "0.07",
+                "radius": "0.036"
+              },
+              {
+                "u": "0 + 0.036",
+                "v": "0.07",
+                "radius": "0.036"
+              }
+            ],
+            "offset": "((RaioBase + (RaioTopo - RaioBase) * 0.07 / (Altura - 0.08))) - 0.002",
+            "depth": "0.008"
+          }
+        },
+        "material": "PVC",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída - flange interna",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.036",
+                "v": "0.07",
+                "radius": "0.036"
+              },
+              {
+                "u": "0 + 0.036",
+                "v": "0.07",
+                "radius": "0.036"
+              }
+            ],
+            "offset": "((RaioBase + (RaioTopo - RaioBase) * 0.07 / (Altura - 0.08))) - 0.018",
+            "depth": "0.008"
+          }
+        },
+        "material": "PVC",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída - corpo",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.022",
+                "v": "0.07",
+                "radius": "0.022"
+              },
+              {
+                "u": "0 + 0.022",
+                "v": "0.07",
+                "radius": "0.022"
+              }
+            ],
+            "offset": "((RaioBase + (RaioTopo - RaioBase) * 0.07 / (Altura - 0.08))) - 0.03",
+            "depth": "0.05"
+          }
+        },
+        "material": "PVC",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída - tubo",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.016",
+                "v": "0.07",
+                "radius": "0.016"
+              },
+              {
+                "u": "0 + 0.016",
+                "v": "0.07",
+                "radius": "0.016"
+              }
+            ],
+            "offset": "((RaioBase + (RaioTopo - RaioBase) * 0.07 / (Altura - 0.08))) + 0.006",
+            "depth": "0.16"
+          }
+        },
+        "material": "PVC",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Registro da saída",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.026",
+                "v": "0.07",
+                "radius": "0.026"
+              },
+              {
+                "u": "0 + 0.026",
+                "v": "0.07",
+                "radius": "0.026"
+              }
+            ],
+            "offset": "((((RaioBase + (RaioTopo - RaioBase) * 0.07 / (Altura - 0.08))) + 0.006) + 0.16) - 0.12",
+            "depth": "0.06"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Registro da saída - castelo",
+        "shape": {
+          "Cylinder": {
+            "x": "((((RaioBase + (RaioTopo - RaioBase) * 0.07 / (Altura - 0.08))) + 0.006) + 0.16) - 0.09",
+            "y": "0",
+            "z": "0.07",
+            "radius": "0.012",
+            "height": "0.055"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Registro da saída - volante",
+        "shape": {
+          "Cylinder": {
+            "x": "((((RaioBase + (RaioTopo - RaioBase) * 0.07 / (Altura - 0.08))) + 0.006) + 0.16) - 0.09",
+            "y": "0",
+            "z": "0.125",
+            "radius": "0.03",
+            "height": "0.01"
+          }
+        },
+        "material": "Plástico vermelho",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Limpeza - flange externa",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.036",
+                "v": "0.07",
+                "radius": "0.036"
+              },
+              {
+                "u": "0 + 0.036",
+                "v": "0.07",
+                "radius": "0.036"
+              }
+            ],
+            "offset": "-(RaioBase + (RaioTopo - RaioBase) * 0.07 / (Altura - 0.08)) - 0.006",
+            "depth": "0.008"
+          }
+        },
+        "material": "PVC",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Limpeza - flange interna",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.036",
+                "v": "0.07",
+                "radius": "0.036"
+              },
+              {
+                "u": "0 + 0.036",
+                "v": "0.07",
+                "radius": "0.036"
+              }
+            ],
+            "offset": "-(RaioBase + (RaioTopo - RaioBase) * 0.07 / (Altura - 0.08)) + 0.01",
+            "depth": "0.008"
+          }
+        },
+        "material": "PVC",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Limpeza - corpo",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.022",
+                "v": "0.07",
+                "radius": "0.022"
+              },
+              {
+                "u": "0 + 0.022",
+                "v": "0.07",
+                "radius": "0.022"
+              }
+            ],
+            "offset": "-(RaioBase + (RaioTopo - RaioBase) * 0.07 / (Altura - 0.08)) - 0.02",
+            "depth": "0.05"
+          }
+        },
+        "material": "PVC",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Limpeza - tubo",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.016",
+                "v": "0.07",
+                "radius": "0.016"
+              },
+              {
+                "u": "0 + 0.016",
+                "v": "0.07",
+                "radius": "0.016"
+              }
+            ],
+            "offset": "-(RaioBase + (RaioTopo - RaioBase) * 0.07 / (Altura - 0.08)) - 0.006 - 0.1",
+            "depth": "0.1"
+          }
+        },
+        "material": "PVC",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Limpeza - registro",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.026",
+                "v": "0.07",
+                "radius": "0.026"
+              },
+              {
+                "u": "0 + 0.026",
+                "v": "0.07",
+                "radius": "0.026"
+              }
+            ],
+            "offset": "(-(RaioBase + (RaioTopo - RaioBase) * 0.07 / (Altura - 0.08)) - 0.006 - 0.1) + 0.03",
+            "depth": "0.05"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Limpeza - volante",
+        "shape": {
+          "Cylinder": {
+            "x": "(-(RaioBase + (RaioTopo - RaioBase) * 0.07 / (Altura - 0.08)) - 0.006 - 0.1) + 0.055",
+            "y": "0",
+            "z": "0.096",
+            "radius": "0.028",
+            "height": "0.01"
+          }
+        },
+        "material": "Plástico vermelho",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Limpeza - tampão",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.02",
+                "v": "0.07",
+                "radius": "0.02"
+              },
+              {
+                "u": "0 + 0.02",
+                "v": "0.07",
+                "radius": "0.02"
+              }
+            ],
+            "offset": "(-(RaioBase + (RaioTopo - RaioBase) * 0.07 / (Altura - 0.08)) - 0.006 - 0.1) - 0.012",
+            "depth": "0.014"
+          }
+        },
+        "material": "PVC",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Extravasor - flange externa",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.036",
+                "v": "Altura - 0.17",
+                "radius": "0.036"
+              },
+              {
+                "u": "0 + 0.036",
+                "v": "Altura - 0.17",
+                "radius": "0.036"
+              }
+            ],
+            "offset": "-(RaioBase + (RaioTopo - RaioBase) * (Altura - 0.17) / (Altura - 0.08)) - 0.006",
+            "depth": "0.008"
+          }
+        },
+        "material": "PVC",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Extravasor - flange interna",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.036",
+                "v": "Altura - 0.17",
+                "radius": "0.036"
+              },
+              {
+                "u": "0 + 0.036",
+                "v": "Altura - 0.17",
+                "radius": "0.036"
+              }
+            ],
+            "offset": "-(RaioBase + (RaioTopo - RaioBase) * (Altura - 0.17) / (Altura - 0.08)) + 0.01",
+            "depth": "0.008"
+          }
+        },
+        "material": "PVC",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Extravasor - corpo",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.022",
+                "v": "Altura - 0.17",
+                "radius": "0.022"
+              },
+              {
+                "u": "0 + 0.022",
+                "v": "Altura - 0.17",
+                "radius": "0.022"
+              }
+            ],
+            "offset": "-(RaioBase + (RaioTopo - RaioBase) * (Altura - 0.17) / (Altura - 0.08)) - 0.02",
+            "depth": "0.05"
+          }
+        },
+        "material": "PVC",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Extravasor - tubo",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.016",
+                "v": "Altura - 0.17",
+                "radius": "0.016"
+              },
+              {
+                "u": "0 + 0.016",
+                "v": "Altura - 0.17",
+                "radius": "0.016"
+              }
+            ],
+            "offset": "-(RaioBase + (RaioTopo - RaioBase) * (Altura - 0.17) / (Altura - 0.08)) - 0.006 - 0.05",
+            "depth": "0.05"
+          }
+        },
+        "material": "PVC",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Extravasor - curva e descida",
+        "shape": {
+          "Sweep": {
+            "plane": "Front",
+            "path": [
+              {
+                "u": "(-(RaioBase + (RaioTopo - RaioBase) * (Altura - 0.17) / (Altura - 0.08)) - 0.006 - 0.05) + 0.004",
+                "v": "Altura - 0.17"
+              },
+              {
+                "u": "(-(RaioBase + (RaioTopo - RaioBase) * (Altura - 0.17) / (Altura - 0.08)) - 0.006 - 0.05) - 0.02",
+                "v": "Altura - 0.17"
+              },
+              {
+                "u": "(-(RaioBase + (RaioTopo - RaioBase) * (Altura - 0.17) / (Altura - 0.08)) - 0.006 - 0.05) - 0.04",
+                "v": "Altura - 0.17",
+                "bezier": {
+                  "u1": "(-(RaioBase + (RaioTopo - RaioBase) * (Altura - 0.17) / (Altura - 0.08)) - 0.006 - 0.05) - 0.06",
+                  "v1": "Altura - 0.17",
+                  "u2": "(-(RaioBase + (RaioTopo - RaioBase) * (Altura - 0.17) / (Altura - 0.08)) - 0.006 - 0.05) - 0.06",
+                  "v2": "(Altura - 0.17) - 0.02"
+                }
+              },
+              {
+                "u": "(-(RaioBase + (RaioTopo - RaioBase) * (Altura - 0.17) / (Altura - 0.08)) - 0.006 - 0.05) - 0.06",
+                "v": "(Altura - 0.17) - 0.04"
+              },
+              {
+                "u": "(-(RaioBase + (RaioTopo - RaioBase) * (Altura - 0.17) / (Altura - 0.08)) - 0.006 - 0.05) - 0.06",
+                "v": "0.05"
+              }
+            ],
+            "offset": "0",
+            "profile": [
+              {
+                "u": "0.016",
+                "v": "0"
+              },
+              {
+                "u": "0.013856",
+                "v": "0.008"
+              },
+              {
+                "u": "0.008",
+                "v": "0.013856"
+              },
+              {
+                "u": "0",
+                "v": "0.016"
+              },
+              {
+                "u": "-0.008",
+                "v": "0.013856"
+              },
+              {
+                "u": "-0.013856",
+                "v": "0.008"
+              },
+              {
+                "u": "-0.016",
+                "v": "0"
+              },
+              {
+                "u": "-0.013856",
+                "v": "-0.008"
+              },
+              {
+                "u": "-0.008",
+                "v": "-0.013856"
+              },
+              {
+                "u": "0",
+                "v": "-0.016"
+              },
+              {
+                "u": "0.008",
+                "v": "-0.013856"
+              },
+              {
+                "u": "0.013856",
+                "v": "-0.008"
+              }
+            ]
+          }
+        },
+        "material": "PVC",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Extravasor - tela",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(-(RaioBase + (RaioTopo - RaioBase) * (Altura - 0.17) / (Altura - 0.08)) - 0.006 - 0.05) - 0.06",
+                "v": "0.04"
+              },
+              {
+                "u": "(-(RaioBase + (RaioTopo - RaioBase) * (Altura - 0.17) / (Altura - 0.08)) - 0.006 - 0.05) - 0.04",
+                "v": "0.04"
+              },
+              {
+                "u": "(-(RaioBase + (RaioTopo - RaioBase) * (Altura - 0.17) / (Altura - 0.08)) - 0.006 - 0.05) - 0.04",
+                "v": "0.055"
+              },
+              {
+                "u": "(-(RaioBase + (RaioTopo - RaioBase) * (Altura - 0.17) / (Altura - 0.08)) - 0.006 - 0.05) - 0.06",
+                "v": "0.055"
+              }
+            ],
+            "offset": "0",
+            "axis": "(-(RaioBase + (RaioTopo - RaioBase) * (Altura - 0.17) / (Altura - 0.08)) - 0.006 - 0.05) - 0.06",
+            "angle": "360"
+          }
+        },
+        "material": "Tela perfurada",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
         }
       }
     ],
@@ -77,7 +2138,7 @@
       {
         "name": "Entrada",
         "system": "ColdWater",
-        "x": "RaioTopo",
+        "x": "(((RaioBase + (RaioTopo - RaioBase) * (Altura - 0.15) / (Altura - 0.08))) + 0.006) + 0.07",
         "y": "0",
         "z": "Altura - 0.15",
         "direction": "Right",
@@ -86,9 +2147,9 @@
       {
         "name": "Saída",
         "system": "ColdWater",
-        "x": "RaioBase",
+        "x": "(((RaioBase + (RaioTopo - RaioBase) * 0.07 / (Altura - 0.08))) + 0.006) + 0.16",
         "y": "0",
-        "z": "0.05",
+        "z": "0.07",
         "direction": "Right",
         "diameter": "0.032"
       }
@@ -103,7 +2164,7 @@
         "Altura": 0.62
       },
       "info": {
-        "description": "Reservatório de polietileno"
+        "description": "Reservatório de polietileno com tampa, torneira de boia e adaptadores de flange"
       }
     },
     {
@@ -114,7 +2175,7 @@
         "Altura": 0.73
       },
       "info": {
-        "description": "Reservatório de polietileno"
+        "description": "Reservatório de polietileno com tampa, torneira de boia e adaptadores de flange"
       }
     },
     {
@@ -125,7 +2186,7 @@
         "Altura": 0.86
       },
       "info": {
-        "description": "Reservatório de polietileno"
+        "description": "Reservatório de polietileno com tampa, torneira de boia e adaptadores de flange"
       }
     },
     {
@@ -136,7 +2197,7 @@
         "Altura": 1.12
       },
       "info": {
-        "description": "Reservatório de polietileno"
+        "description": "Reservatório de polietileno com tampa, torneira de boia e adaptadores de flange"
       }
     }
   ],
@@ -147,7 +2208,87 @@
         40,
         90,
         160
-      ]
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico cinza claro",
+      "color": [
+        196,
+        198,
+        200
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Borracha",
+      "color": [
+        30,
+        30,
+        30
+      ],
+      "class": "Plastic",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico preto",
+      "color": [
+        34,
+        34,
+        37
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Branco",
+      "color": [
+        244,
+        244,
+        240
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Latão",
+      "color": [
+        192,
+        160,
+        84
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico vermelho",
+      "color": [
+        196,
+        56,
+        48
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Tela perfurada",
+      "color": [
+        24,
+        24,
+        26
+      ],
+      "class": "Metal",
+      "finish": "Matte",
+      "transparency": 0.4
     }
   ]
 }

@@ -20,53 +20,1748 @@
         "value": 0.6,
         "kind": "Length",
         "instance": true
+      },
+      {
+        "name": "AberturaTampa",
+        "value": 0.0,
+        "kind": "Length",
+        "instance": true
       }
     ],
     "items": [
       {
-        "name": "Caixa",
-        "material": "Concreto",
-        "in_plan": true,
+        "name": "Caixa simplificada",
         "shape": {
           "Box": {
-            "x": "-Largura / 2 - 0.1",
-            "y": "-Profundidade / 2 - 0.1",
-            "z": "-Fundo - 0.1",
+            "x": "(-Largura / 2) - 0.1",
+            "y": "(-Profundidade / 2) - 0.1",
+            "z": "((-Fundo)) - 0.1",
             "width": "Largura + 0.2",
             "depth": "Profundidade + 0.2",
             "height": "Fundo + 0.1"
           }
+        },
+        "material": "Concreto",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
         }
       },
       {
-        "name": "Interior vazio",
-        "material": "Concreto",
-        "in_plan": false,
+        "name": "Tampa simplificada",
         "shape": {
           "Box": {
-            "x": "-Largura / 2",
-            "y": "-Profundidade / 2",
-            "z": "-Fundo",
-            "width": "Largura",
-            "depth": "Profundidade",
-            "height": "Fundo + 0.01"
-          }
-        },
-        "void": true
-      },
-      {
-        "name": "Tampa",
-        "material": "Concreto",
-        "in_plan": false,
-        "shape": {
-          "Box": {
-            "x": "-Largura / 2 - 0.1",
-            "y": "-Profundidade / 2 - 0.1",
-            "z": "0",
+            "x": "(-Largura / 2) - 0.1",
+            "y": "(-Profundidade / 2) - 0.1",
+            "z": "AberturaTampa",
             "width": "Largura + 0.2",
             "depth": "Profundidade + 0.2",
             "height": "0.05"
           }
+        },
+        "material": "Concreto",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Símbolo - abertura",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-Largura / 2",
+                "v": "-Profundidade / 2"
+              },
+              {
+                "u": "Largura / 2",
+                "v": "-Profundidade / 2"
+              },
+              {
+                "u": "Largura / 2",
+                "v": "Profundidade / 2"
+              },
+              {
+                "u": "-Largura / 2",
+                "v": "Profundidade / 2"
+              }
+            ],
+            "offset": "0.05",
+            "depth": "0.001"
+          }
+        },
+        "material": "Concreto",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        },
+        "plan_only": true
+      },
+      {
+        "name": "Laje de fundo",
+        "shape": {
+          "Box": {
+            "x": "(-Largura / 2) - 0.13",
+            "y": "(-Profundidade / 2) - 0.13",
+            "z": "((-Fundo)) - 0.1",
+            "width": "Largura + 0.26",
+            "depth": "Profundidade + 0.26",
+            "height": "0.1"
+          }
+        },
+        "material": "Concreto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parede esquerda",
+        "shape": {
+          "Box": {
+            "x": "(-Largura / 2) - 0.1",
+            "y": "(-Profundidade / 2) - 0.1",
+            "z": "(-Fundo)",
+            "width": "0.085",
+            "depth": "Profundidade + 0.2",
+            "height": "Fundo - 0.06"
+          }
+        },
+        "material": "Alvenaria",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parede direita",
+        "shape": {
+          "Box": {
+            "x": "(Largura / 2) + 0.015",
+            "y": "(-Profundidade / 2) - 0.1",
+            "z": "(-Fundo)",
+            "width": "0.085",
+            "depth": "Profundidade + 0.2",
+            "height": "Fundo - 0.06"
+          }
+        },
+        "material": "Alvenaria",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parede frontal",
+        "shape": {
+          "Box": {
+            "x": "(-Largura / 2) - 0.015",
+            "y": "(-Profundidade / 2) - 0.1",
+            "z": "(-Fundo)",
+            "width": "Largura + 0.03",
+            "depth": "0.085",
+            "height": "Fundo - 0.06"
+          }
+        },
+        "material": "Alvenaria",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parede traseira",
+        "shape": {
+          "Box": {
+            "x": "(-Largura / 2) - 0.015",
+            "y": "(Profundidade / 2) + 0.015",
+            "z": "(-Fundo)",
+            "width": "Largura + 0.03",
+            "depth": "0.085",
+            "height": "Fundo - 0.06"
+          }
+        },
+        "material": "Alvenaria",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Reboco esquerda",
+        "shape": {
+          "Box": {
+            "x": "(-Largura / 2) - 0.015",
+            "y": "(-Profundidade / 2) - 0.015",
+            "z": "(-Fundo)",
+            "width": "0.015",
+            "depth": "Profundidade + 0.03",
+            "height": "Fundo - 0.002"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Reboco direita",
+        "shape": {
+          "Box": {
+            "x": "Largura / 2",
+            "y": "(-Profundidade / 2) - 0.015",
+            "z": "(-Fundo)",
+            "width": "0.015",
+            "depth": "Profundidade + 0.03",
+            "height": "Fundo - 0.002"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Reboco frontal",
+        "shape": {
+          "Box": {
+            "x": "-Largura / 2",
+            "y": "(-Profundidade / 2) - 0.015",
+            "z": "(-Fundo)",
+            "width": "Largura",
+            "depth": "0.015",
+            "height": "Fundo - 0.002"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Reboco traseira",
+        "shape": {
+          "Box": {
+            "x": "-Largura / 2",
+            "y": "Profundidade / 2",
+            "z": "(-Fundo)",
+            "width": "Largura",
+            "depth": "0.015",
+            "height": "Fundo - 0.002"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cinta esquerda",
+        "shape": {
+          "Box": {
+            "x": "(-Largura / 2) - 0.1",
+            "y": "(-Profundidade / 2) - 0.1",
+            "z": "-0.06",
+            "width": "0.1",
+            "depth": "Profundidade + 0.2",
+            "height": "0.06"
+          }
+        },
+        "material": "Concreto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cinta direita",
+        "shape": {
+          "Box": {
+            "x": "Largura / 2",
+            "y": "(-Profundidade / 2) - 0.1",
+            "z": "-0.06",
+            "width": "0.1",
+            "depth": "Profundidade + 0.2",
+            "height": "0.06"
+          }
+        },
+        "material": "Concreto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cinta frontal",
+        "shape": {
+          "Box": {
+            "x": "-Largura / 2",
+            "y": "(-Profundidade / 2) - 0.1",
+            "z": "-0.06",
+            "width": "Largura",
+            "depth": "0.1",
+            "height": "0.06"
+          }
+        },
+        "material": "Concreto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cinta traseira",
+        "shape": {
+          "Box": {
+            "x": "-Largura / 2",
+            "y": "Profundidade / 2",
+            "z": "-0.06",
+            "width": "Largura",
+            "depth": "0.1",
+            "height": "0.06"
+          }
+        },
+        "material": "Concreto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Junta frontal 1",
+        "shape": {
+          "Box": {
+            "x": "(-Largura / 2) - 0.1",
+            "y": "(-Profundidade / 2) - 0.102",
+            "z": "((-Fundo)) + (Fundo - 0.06) * 0.111111",
+            "width": "Largura + 0.2",
+            "depth": "0.003",
+            "height": "0.01"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Junta traseira 1",
+        "shape": {
+          "Box": {
+            "x": "(-Largura / 2) - 0.1",
+            "y": "(Profundidade / 2) + 0.099",
+            "z": "((-Fundo)) + (Fundo - 0.06) * 0.111111",
+            "width": "Largura + 0.2",
+            "depth": "0.003",
+            "height": "0.01"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Junta esquerda 1",
+        "shape": {
+          "Box": {
+            "x": "(-Largura / 2) - 0.102",
+            "y": "(-Profundidade / 2) - 0.1",
+            "z": "((-Fundo)) + (Fundo - 0.06) * 0.111111",
+            "width": "0.003",
+            "depth": "Profundidade + 0.2",
+            "height": "0.01"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Junta direita 1",
+        "shape": {
+          "Box": {
+            "x": "(Largura / 2) + 0.099",
+            "y": "(-Profundidade / 2) - 0.1",
+            "z": "((-Fundo)) + (Fundo - 0.06) * 0.111111",
+            "width": "0.003",
+            "depth": "Profundidade + 0.2",
+            "height": "0.01"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Junta frontal 2",
+        "shape": {
+          "Box": {
+            "x": "(-Largura / 2) - 0.1",
+            "y": "(-Profundidade / 2) - 0.102",
+            "z": "((-Fundo)) + (Fundo - 0.06) * 0.222222",
+            "width": "Largura + 0.2",
+            "depth": "0.003",
+            "height": "0.01"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Junta traseira 2",
+        "shape": {
+          "Box": {
+            "x": "(-Largura / 2) - 0.1",
+            "y": "(Profundidade / 2) + 0.099",
+            "z": "((-Fundo)) + (Fundo - 0.06) * 0.222222",
+            "width": "Largura + 0.2",
+            "depth": "0.003",
+            "height": "0.01"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Junta esquerda 2",
+        "shape": {
+          "Box": {
+            "x": "(-Largura / 2) - 0.102",
+            "y": "(-Profundidade / 2) - 0.1",
+            "z": "((-Fundo)) + (Fundo - 0.06) * 0.222222",
+            "width": "0.003",
+            "depth": "Profundidade + 0.2",
+            "height": "0.01"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Junta direita 2",
+        "shape": {
+          "Box": {
+            "x": "(Largura / 2) + 0.099",
+            "y": "(-Profundidade / 2) - 0.1",
+            "z": "((-Fundo)) + (Fundo - 0.06) * 0.222222",
+            "width": "0.003",
+            "depth": "Profundidade + 0.2",
+            "height": "0.01"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Junta frontal 3",
+        "shape": {
+          "Box": {
+            "x": "(-Largura / 2) - 0.1",
+            "y": "(-Profundidade / 2) - 0.102",
+            "z": "((-Fundo)) + (Fundo - 0.06) * 0.333333",
+            "width": "Largura + 0.2",
+            "depth": "0.003",
+            "height": "0.01"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Junta traseira 3",
+        "shape": {
+          "Box": {
+            "x": "(-Largura / 2) - 0.1",
+            "y": "(Profundidade / 2) + 0.099",
+            "z": "((-Fundo)) + (Fundo - 0.06) * 0.333333",
+            "width": "Largura + 0.2",
+            "depth": "0.003",
+            "height": "0.01"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Junta esquerda 3",
+        "shape": {
+          "Box": {
+            "x": "(-Largura / 2) - 0.102",
+            "y": "(-Profundidade / 2) - 0.1",
+            "z": "((-Fundo)) + (Fundo - 0.06) * 0.333333",
+            "width": "0.003",
+            "depth": "Profundidade + 0.2",
+            "height": "0.01"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Junta direita 3",
+        "shape": {
+          "Box": {
+            "x": "(Largura / 2) + 0.099",
+            "y": "(-Profundidade / 2) - 0.1",
+            "z": "((-Fundo)) + (Fundo - 0.06) * 0.333333",
+            "width": "0.003",
+            "depth": "Profundidade + 0.2",
+            "height": "0.01"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Junta frontal 4",
+        "shape": {
+          "Box": {
+            "x": "(-Largura / 2) - 0.1",
+            "y": "(-Profundidade / 2) - 0.102",
+            "z": "((-Fundo)) + (Fundo - 0.06) * 0.444444",
+            "width": "Largura + 0.2",
+            "depth": "0.003",
+            "height": "0.01"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Junta traseira 4",
+        "shape": {
+          "Box": {
+            "x": "(-Largura / 2) - 0.1",
+            "y": "(Profundidade / 2) + 0.099",
+            "z": "((-Fundo)) + (Fundo - 0.06) * 0.444444",
+            "width": "Largura + 0.2",
+            "depth": "0.003",
+            "height": "0.01"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Junta esquerda 4",
+        "shape": {
+          "Box": {
+            "x": "(-Largura / 2) - 0.102",
+            "y": "(-Profundidade / 2) - 0.1",
+            "z": "((-Fundo)) + (Fundo - 0.06) * 0.444444",
+            "width": "0.003",
+            "depth": "Profundidade + 0.2",
+            "height": "0.01"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Junta direita 4",
+        "shape": {
+          "Box": {
+            "x": "(Largura / 2) + 0.099",
+            "y": "(-Profundidade / 2) - 0.1",
+            "z": "((-Fundo)) + (Fundo - 0.06) * 0.444444",
+            "width": "0.003",
+            "depth": "Profundidade + 0.2",
+            "height": "0.01"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Junta frontal 5",
+        "shape": {
+          "Box": {
+            "x": "(-Largura / 2) - 0.1",
+            "y": "(-Profundidade / 2) - 0.102",
+            "z": "((-Fundo)) + (Fundo - 0.06) * 0.555556",
+            "width": "Largura + 0.2",
+            "depth": "0.003",
+            "height": "0.01"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Junta traseira 5",
+        "shape": {
+          "Box": {
+            "x": "(-Largura / 2) - 0.1",
+            "y": "(Profundidade / 2) + 0.099",
+            "z": "((-Fundo)) + (Fundo - 0.06) * 0.555556",
+            "width": "Largura + 0.2",
+            "depth": "0.003",
+            "height": "0.01"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Junta esquerda 5",
+        "shape": {
+          "Box": {
+            "x": "(-Largura / 2) - 0.102",
+            "y": "(-Profundidade / 2) - 0.1",
+            "z": "((-Fundo)) + (Fundo - 0.06) * 0.555556",
+            "width": "0.003",
+            "depth": "Profundidade + 0.2",
+            "height": "0.01"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Junta direita 5",
+        "shape": {
+          "Box": {
+            "x": "(Largura / 2) + 0.099",
+            "y": "(-Profundidade / 2) - 0.1",
+            "z": "((-Fundo)) + (Fundo - 0.06) * 0.555556",
+            "width": "0.003",
+            "depth": "Profundidade + 0.2",
+            "height": "0.01"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Junta frontal 6",
+        "shape": {
+          "Box": {
+            "x": "(-Largura / 2) - 0.1",
+            "y": "(-Profundidade / 2) - 0.102",
+            "z": "((-Fundo)) + (Fundo - 0.06) * 0.666667",
+            "width": "Largura + 0.2",
+            "depth": "0.003",
+            "height": "0.01"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Junta traseira 6",
+        "shape": {
+          "Box": {
+            "x": "(-Largura / 2) - 0.1",
+            "y": "(Profundidade / 2) + 0.099",
+            "z": "((-Fundo)) + (Fundo - 0.06) * 0.666667",
+            "width": "Largura + 0.2",
+            "depth": "0.003",
+            "height": "0.01"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Junta esquerda 6",
+        "shape": {
+          "Box": {
+            "x": "(-Largura / 2) - 0.102",
+            "y": "(-Profundidade / 2) - 0.1",
+            "z": "((-Fundo)) + (Fundo - 0.06) * 0.666667",
+            "width": "0.003",
+            "depth": "Profundidade + 0.2",
+            "height": "0.01"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Junta direita 6",
+        "shape": {
+          "Box": {
+            "x": "(Largura / 2) + 0.099",
+            "y": "(-Profundidade / 2) - 0.1",
+            "z": "((-Fundo)) + (Fundo - 0.06) * 0.666667",
+            "width": "0.003",
+            "depth": "Profundidade + 0.2",
+            "height": "0.01"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Junta frontal 7",
+        "shape": {
+          "Box": {
+            "x": "(-Largura / 2) - 0.1",
+            "y": "(-Profundidade / 2) - 0.102",
+            "z": "((-Fundo)) + (Fundo - 0.06) * 0.777778",
+            "width": "Largura + 0.2",
+            "depth": "0.003",
+            "height": "0.01"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Junta traseira 7",
+        "shape": {
+          "Box": {
+            "x": "(-Largura / 2) - 0.1",
+            "y": "(Profundidade / 2) + 0.099",
+            "z": "((-Fundo)) + (Fundo - 0.06) * 0.777778",
+            "width": "Largura + 0.2",
+            "depth": "0.003",
+            "height": "0.01"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Junta esquerda 7",
+        "shape": {
+          "Box": {
+            "x": "(-Largura / 2) - 0.102",
+            "y": "(-Profundidade / 2) - 0.1",
+            "z": "((-Fundo)) + (Fundo - 0.06) * 0.777778",
+            "width": "0.003",
+            "depth": "Profundidade + 0.2",
+            "height": "0.01"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Junta direita 7",
+        "shape": {
+          "Box": {
+            "x": "(Largura / 2) + 0.099",
+            "y": "(-Profundidade / 2) - 0.1",
+            "z": "((-Fundo)) + (Fundo - 0.06) * 0.777778",
+            "width": "0.003",
+            "depth": "Profundidade + 0.2",
+            "height": "0.01"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Junta frontal 8",
+        "shape": {
+          "Box": {
+            "x": "(-Largura / 2) - 0.1",
+            "y": "(-Profundidade / 2) - 0.102",
+            "z": "((-Fundo)) + (Fundo - 0.06) * 0.888889",
+            "width": "Largura + 0.2",
+            "depth": "0.003",
+            "height": "0.01"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Junta traseira 8",
+        "shape": {
+          "Box": {
+            "x": "(-Largura / 2) - 0.1",
+            "y": "(Profundidade / 2) + 0.099",
+            "z": "((-Fundo)) + (Fundo - 0.06) * 0.888889",
+            "width": "Largura + 0.2",
+            "depth": "0.003",
+            "height": "0.01"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Junta esquerda 8",
+        "shape": {
+          "Box": {
+            "x": "(-Largura / 2) - 0.102",
+            "y": "(-Profundidade / 2) - 0.1",
+            "z": "((-Fundo)) + (Fundo - 0.06) * 0.888889",
+            "width": "0.003",
+            "depth": "Profundidade + 0.2",
+            "height": "0.01"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Junta direita 8",
+        "shape": {
+          "Box": {
+            "x": "(Largura / 2) + 0.099",
+            "y": "(-Profundidade / 2) - 0.1",
+            "z": "((-Fundo)) + (Fundo - 0.06) * 0.888889",
+            "width": "0.003",
+            "depth": "Profundidade + 0.2",
+            "height": "0.01"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Fundo com canaleta",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Profundidade / 2",
+                "v": "(-Fundo)"
+              },
+              {
+                "u": "Profundidade / 2",
+                "v": "(-Fundo)"
+              },
+              {
+                "u": "Profundidade / 2",
+                "v": "((-Fundo)) + 0.17"
+              },
+              {
+                "u": "0.065",
+                "v": "(((-Fundo)) + 0.1) + 0.012"
+              },
+              {
+                "u": "0.055",
+                "v": "((-Fundo)) + 0.1"
+              },
+              {
+                "u": "0.052308",
+                "v": "(((-Fundo)) + 0.1) - 0.016996"
+              },
+              {
+                "u": "0.044496",
+                "v": "(((-Fundo)) + 0.1) - 0.032328"
+              },
+              {
+                "u": "0.032328",
+                "v": "(((-Fundo)) + 0.1) - 0.044496"
+              },
+              {
+                "u": "0.016996",
+                "v": "(((-Fundo)) + 0.1) - 0.052308"
+              },
+              {
+                "u": "0",
+                "v": "(((-Fundo)) + 0.1) - 0.055"
+              },
+              {
+                "u": "-0.016996",
+                "v": "(((-Fundo)) + 0.1) - 0.052308"
+              },
+              {
+                "u": "-0.032328",
+                "v": "(((-Fundo)) + 0.1) - 0.044496"
+              },
+              {
+                "u": "-0.044496",
+                "v": "(((-Fundo)) + 0.1) - 0.032328"
+              },
+              {
+                "u": "-0.052308",
+                "v": "(((-Fundo)) + 0.1) - 0.016996"
+              },
+              {
+                "u": "-0.055",
+                "v": "((-Fundo)) + 0.1"
+              },
+              {
+                "u": "-0.065",
+                "v": "(((-Fundo)) + 0.1) + 0.012"
+              },
+              {
+                "u": "-Profundidade / 2",
+                "v": "((-Fundo)) + 0.17"
+              }
+            ],
+            "offset": "-Largura / 2",
+            "depth": "Largura"
+          }
+        },
+        "material": "Concreto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Entrada - tubo",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.05",
+                "v": "((-Fundo)) + 0.15",
+                "radius": "0.05"
+              },
+              {
+                "u": "0 + 0.05",
+                "v": "((-Fundo)) + 0.15",
+                "radius": "0.05"
+              }
+            ],
+            "offset": "-Largura / 2 - 0.1 - 0.15",
+            "depth": "0.1 + 0.15"
+          }
+        },
+        "material": "PVC",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Entrada - luva",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.058",
+                "v": "((-Fundo)) + 0.15",
+                "radius": "0.058"
+              },
+              {
+                "u": "0 + 0.058",
+                "v": "((-Fundo)) + 0.15",
+                "radius": "0.058"
+              }
+            ],
+            "offset": "-Largura / 2 - 0.1 - 0.15",
+            "depth": "0.07"
+          }
+        },
+        "material": "PVC",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Entrada - argamassa",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.07",
+                "v": "((-Fundo)) + 0.15",
+                "radius": "0.07"
+              },
+              {
+                "u": "0 + 0.07",
+                "v": "((-Fundo)) + 0.15",
+                "radius": "0.07"
+              }
+            ],
+            "offset": "-Largura / 2 - 0.1 - 0.012",
+            "depth": "0.012"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída - tubo",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.05",
+                "v": "((-Fundo)) + 0.1",
+                "radius": "0.05"
+              },
+              {
+                "u": "0 + 0.05",
+                "v": "((-Fundo)) + 0.1",
+                "radius": "0.05"
+              }
+            ],
+            "offset": "Largura / 2",
+            "depth": "0.1 + 0.15"
+          }
+        },
+        "material": "PVC",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída - luva",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.058",
+                "v": "((-Fundo)) + 0.1",
+                "radius": "0.058"
+              },
+              {
+                "u": "0 + 0.058",
+                "v": "((-Fundo)) + 0.1",
+                "radius": "0.058"
+              }
+            ],
+            "offset": "Largura / 2 + 0.1 + 0.15 - 0.07",
+            "depth": "0.07"
+          }
+        },
+        "material": "PVC",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída - argamassa",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.07",
+                "v": "((-Fundo)) + 0.1",
+                "radius": "0.07"
+              },
+              {
+                "u": "0 + 0.07",
+                "v": "((-Fundo)) + 0.1",
+                "radius": "0.07"
+              }
+            ],
+            "offset": "(Largura / 2) + 0.1",
+            "depth": "0.012"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Espera lateral - tubo",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0",
+                "v": "(Profundidade / 2) - 0.015"
+              },
+              {
+                "u": "0 + 0.05",
+                "v": "(Profundidade / 2) - 0.015"
+              },
+              {
+                "u": "0 + 0.05",
+                "v": "((Profundidade / 2) - 0.015) + (0.1 + 0.12)"
+              },
+              {
+                "u": "0",
+                "v": "((Profundidade / 2) - 0.015) + (0.1 + 0.12)"
+              }
+            ],
+            "offset": "((-Fundo)) + 0.25",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "PVC",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Espera lateral - tampão",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0",
+                "v": "Profundidade / 2 + 0.1 + 0.1"
+              },
+              {
+                "u": "0 + 0.058",
+                "v": "Profundidade / 2 + 0.1 + 0.1"
+              },
+              {
+                "u": "0 + 0.058",
+                "v": "(Profundidade / 2 + 0.1 + 0.1) + 0.035"
+              },
+              {
+                "u": "0",
+                "v": "(Profundidade / 2 + 0.1 + 0.1) + 0.035"
+              }
+            ],
+            "offset": "((-Fundo)) + 0.25",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "PVC",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Espera lateral - argamassa",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0",
+                "v": "(Profundidade / 2) + 0.1"
+              },
+              {
+                "u": "0 + 0.07",
+                "v": "(Profundidade / 2) + 0.1"
+              },
+              {
+                "u": "0 + 0.07",
+                "v": "((Profundidade / 2) + 0.1) + 0.012"
+              },
+              {
+                "u": "0",
+                "v": "((Profundidade / 2) + 0.1) + 0.012"
+              }
+            ],
+            "offset": "((-Fundo)) + 0.25",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Entrada - boca",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.045",
+                "v": "((-Fundo)) + 0.15",
+                "radius": "0.045"
+              },
+              {
+                "u": "0 + 0.045",
+                "v": "((-Fundo)) + 0.15",
+                "radius": "0.045"
+              }
+            ],
+            "offset": "(-Largura / 2) - 0.001",
+            "depth": "0.002"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída - boca",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.045",
+                "v": "((-Fundo)) + 0.1",
+                "radius": "0.045"
+              },
+              {
+                "u": "0 + 0.045",
+                "v": "((-Fundo)) + 0.1",
+                "radius": "0.045"
+              }
+            ],
+            "offset": "(Largura / 2) - 0.001",
+            "depth": "0.002"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Espera lateral - boca",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0",
+                "v": "(Profundidade / 2) - 0.016"
+              },
+              {
+                "u": "0 + 0.045",
+                "v": "(Profundidade / 2) - 0.016"
+              },
+              {
+                "u": "0 + 0.045",
+                "v": "((Profundidade / 2) - 0.016) + 0.002"
+              },
+              {
+                "u": "0",
+                "v": "((Profundidade / 2) - 0.016) + 0.002"
+              }
+            ],
+            "offset": "((-Fundo)) + 0.25",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa",
+        "shape": {
+          "Box": {
+            "x": "(-Largura / 2) - 0.1",
+            "y": "(-Profundidade / 2) - 0.1",
+            "z": "AberturaTampa + 0.004",
+            "width": "Largura + 0.2",
+            "depth": "Profundidade + 0.2",
+            "height": "0.046"
+          }
+        },
+        "material": "Concreto",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa - assentamento",
+        "shape": {
+          "Box": {
+            "x": "(-Largura / 2) - 0.09",
+            "y": "(-Profundidade / 2) - 0.09",
+            "z": "AberturaTampa",
+            "width": "Largura + 0.2 - 0.02",
+            "depth": "Profundidade + 0.2 - 0.02",
+            "height": "0.004"
+          }
+        },
+        "material": "Reboco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa - cantoneira frontal",
+        "shape": {
+          "Box": {
+            "x": "(-Largura / 2) - 0.1",
+            "y": "(-Profundidade / 2) - 0.1",
+            "z": "AberturaTampa + 0.004",
+            "width": "Largura + 0.2",
+            "depth": "0.008",
+            "height": "0.046"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa - cantoneira traseira",
+        "shape": {
+          "Box": {
+            "x": "(-Largura / 2) - 0.1",
+            "y": "(Profundidade / 2) + 0.092",
+            "z": "AberturaTampa + 0.004",
+            "width": "Largura + 0.2",
+            "depth": "0.008",
+            "height": "0.046"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa - cantoneira esquerda",
+        "shape": {
+          "Box": {
+            "x": "(-Largura / 2) - 0.1",
+            "y": "(-Profundidade / 2) - 0.1",
+            "z": "AberturaTampa + 0.004",
+            "width": "0.008",
+            "depth": "Profundidade + 0.2",
+            "height": "0.046"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa - cantoneira direita",
+        "shape": {
+          "Box": {
+            "x": "(Largura / 2) + 0.092",
+            "y": "(-Profundidade / 2) - 0.1",
+            "z": "AberturaTampa + 0.004",
+            "width": "0.008",
+            "depth": "Profundidade + 0.2",
+            "height": "0.046"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa - rebaixo da alça esquerda",
+        "shape": {
+          "Box": {
+            "x": "(Largura*(-0.30000)) - 0.06",
+            "y": "-0.035",
+            "z": "AberturaTampa + 0.0495",
+            "width": "0.12",
+            "depth": "0.07",
+            "height": "0.001"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa - alça esquerda",
+        "shape": {
+          "Sweep": {
+            "plane": "Plan",
+            "path": [
+              {
+                "u": "(Largura*(-0.30000)) - 0.05",
+                "v": "0.03"
+              },
+              {
+                "u": "(Largura*(-0.30000)) - 0.05",
+                "v": "-0.02"
+              },
+              {
+                "u": "(Largura*(-0.30000)) + 0.05",
+                "v": "-0.02"
+              },
+              {
+                "u": "(Largura*(-0.30000)) + 0.05",
+                "v": "0.03"
+              }
+            ],
+            "offset": "AberturaTampa + 0.054",
+            "profile": [
+              {
+                "u": "0.005",
+                "v": "0"
+              },
+              {
+                "u": "0.003536",
+                "v": "0.003536"
+              },
+              {
+                "u": "0",
+                "v": "0.005"
+              },
+              {
+                "u": "-0.003536",
+                "v": "0.003536"
+              },
+              {
+                "u": "-0.005",
+                "v": "0"
+              },
+              {
+                "u": "-0.003536",
+                "v": "-0.003536"
+              },
+              {
+                "u": "0",
+                "v": "-0.005"
+              },
+              {
+                "u": "0.003536",
+                "v": "-0.003536"
+              }
+            ]
+          }
+        },
+        "material": "Aço",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa - rebaixo da alça direita",
+        "shape": {
+          "Box": {
+            "x": "(Largura*(0.30000)) - 0.06",
+            "y": "-0.035",
+            "z": "AberturaTampa + 0.0495",
+            "width": "0.12",
+            "depth": "0.07",
+            "height": "0.001"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa - alça direita",
+        "shape": {
+          "Sweep": {
+            "plane": "Plan",
+            "path": [
+              {
+                "u": "(Largura*(0.30000)) - 0.05",
+                "v": "0.03"
+              },
+              {
+                "u": "(Largura*(0.30000)) - 0.05",
+                "v": "-0.02"
+              },
+              {
+                "u": "(Largura*(0.30000)) + 0.05",
+                "v": "-0.02"
+              },
+              {
+                "u": "(Largura*(0.30000)) + 0.05",
+                "v": "0.03"
+              }
+            ],
+            "offset": "AberturaTampa + 0.054",
+            "profile": [
+              {
+                "u": "0.005",
+                "v": "0"
+              },
+              {
+                "u": "0.003536",
+                "v": "0.003536"
+              },
+              {
+                "u": "0",
+                "v": "0.005"
+              },
+              {
+                "u": "-0.003536",
+                "v": "0.003536"
+              },
+              {
+                "u": "-0.005",
+                "v": "0"
+              },
+              {
+                "u": "-0.003536",
+                "v": "-0.003536"
+              },
+              {
+                "u": "0",
+                "v": "-0.005"
+              },
+              {
+                "u": "0.003536",
+                "v": "-0.003536"
+              }
+            ]
+          }
+        },
+        "material": "Aço",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
         }
       }
     ],
@@ -74,18 +1769,18 @@
       {
         "name": "Entrada",
         "system": "Sanitary",
-        "x": "-Largura / 2",
+        "x": "-Largura / 2 - 0.1 - 0.15",
         "y": "0",
-        "z": "-Fundo + 0.15",
+        "z": "((-Fundo)) + 0.15",
         "direction": "Left",
         "diameter": "0.1"
       },
       {
         "name": "Saída",
         "system": "Sanitary",
-        "x": "Largura / 2",
+        "x": "Largura / 2 + 0.1 + 0.15",
         "y": "0",
-        "z": "-Fundo + 0.1",
+        "z": "((-Fundo)) + 0.1",
         "direction": "Right",
         "diameter": "0.1"
       }
@@ -108,6 +1803,41 @@
       "info": {
         "description": "Caixa de inspeção de esgoto em alvenaria/concreto"
       }
+    }
+  ],
+  "materials": [
+    {
+      "name": "Plástico preto",
+      "color": [
+        34,
+        34,
+        37
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Aço galvanizado",
+      "color": [
+        160,
+        165,
+        170
+      ],
+      "class": "Metal",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Aço pintado preto",
+      "color": [
+        30,
+        30,
+        32
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
     }
   ]
 }
