@@ -10,7 +10,8 @@
         "Largura",
         "Profundidade",
         "Altura",
-        "Elevacao"
+        "Elevacao",
+        "AnguloPortas"
       ],
       "types": [
         {
@@ -19,7 +20,8 @@
             "Largura": 0.6,
             "Profundidade": 0.35,
             "Altura": 0.7,
-            "Elevacao": 1.5
+            "Elevacao": 1.5,
+            "AnguloPortas": 0.0
           },
           "description": "Armário suspenso de cozinha"
         },
@@ -29,7 +31,8 @@
             "Largura": 0.8,
             "Profundidade": 0.35,
             "Altura": 0.7,
-            "Elevacao": 1.5
+            "Elevacao": 1.5,
+            "AnguloPortas": 0.0
           },
           "description": "Armário suspenso de cozinha"
         },
@@ -39,7 +42,8 @@
             "Largura": 1.2,
             "Profundidade": 0.35,
             "Altura": 0.7,
-            "Elevacao": 1.5
+            "Elevacao": 1.5,
+            "AnguloPortas": 0.0
           },
           "description": "Armário suspenso de cozinha"
         }
@@ -53,7 +57,9 @@
       "parameters": [
         "Largura",
         "Profundidade",
-        "Altura"
+        "Altura",
+        "AnguloPortas",
+        "AberturaGavetas"
       ],
       "types": [
         {
@@ -61,7 +67,9 @@
           "values": {
             "Largura": 0.4,
             "Profundidade": 0.6,
-            "Altura": 0.9
+            "Altura": 0.9,
+            "AnguloPortas": 0.0,
+            "AberturaGavetas": 0.0
           },
           "description": "Balcão inferior com tampo de granito"
         },
@@ -70,7 +78,9 @@
           "values": {
             "Largura": 0.6,
             "Profundidade": 0.6,
-            "Altura": 0.9
+            "Altura": 0.9,
+            "AnguloPortas": 0.0,
+            "AberturaGavetas": 0.0
           },
           "description": "Balcão inferior com tampo de granito"
         },
@@ -79,7 +89,9 @@
           "values": {
             "Largura": 0.8,
             "Profundidade": 0.6,
-            "Altura": 0.9
+            "Altura": 0.9,
+            "AnguloPortas": 0.0,
+            "AberturaGavetas": 0.0
           },
           "description": "Balcão inferior com tampo de granito"
         },
@@ -88,9 +100,123 @@
           "values": {
             "Largura": 1.2,
             "Profundidade": 0.6,
-            "Altura": 0.9
+            "Altura": 0.9,
+            "AnguloPortas": 0.0,
+            "AberturaGavetas": 0.0
           },
           "description": "Balcão inferior com tampo de granito"
+        }
+      ]
+    },
+    {
+      "file": "components/casework/comoda.ccomp",
+      "component": "Cômoda",
+      "kind": "Casework",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Profundidade",
+        "Altura",
+        "Gavetas",
+        "AberturaGaveta1",
+        "AberturaGaveta2",
+        "AberturaGaveta3",
+        "AberturaGaveta4",
+        "AberturaGaveta5"
+      ],
+      "types": [
+        {
+          "name": "Cômoda 4 gavetas 80 cm",
+          "values": {
+            "Largura": 0.8,
+            "Profundidade": 0.45,
+            "Altura": 0.85,
+            "Gavetas": 4.0,
+            "AberturaGaveta1": 0.0,
+            "AberturaGaveta2": 0.0,
+            "AberturaGaveta3": 0.0,
+            "AberturaGaveta4": 0.0,
+            "AberturaGaveta5": 0.0
+          },
+          "description": "Cômoda com 4 gavetas e tampo de madeira"
+        },
+        {
+          "name": "Cômoda 5 gavetas 90 cm",
+          "values": {
+            "Largura": 0.9,
+            "Profundidade": 0.45,
+            "Altura": 1.05,
+            "Gavetas": 5.0,
+            "AberturaGaveta1": 0.0,
+            "AberturaGaveta2": 0.0,
+            "AberturaGaveta3": 0.0,
+            "AberturaGaveta4": 0.0,
+            "AberturaGaveta5": 0.0
+          },
+          "description": "Cômoda alta com 5 gavetas e tampo de madeira"
+        },
+        {
+          "name": "Cômoda 3 gavetas 120 cm",
+          "values": {
+            "Largura": 1.2,
+            "Profundidade": 0.5,
+            "Altura": 0.75,
+            "Gavetas": 3.0,
+            "AberturaGaveta1": 0.0,
+            "AberturaGaveta2": 0.0,
+            "AberturaGaveta3": 0.0,
+            "AberturaGaveta4": 0.0,
+            "AberturaGaveta5": 0.0
+          },
+          "description": "Cômoda baixa e larga com 3 gavetas e tampo de madeira"
+        }
+      ]
+    },
+    {
+      "file": "components/casework/espelheira.ccomp",
+      "component": "Espelheira",
+      "kind": "Casework",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Profundidade",
+        "Altura",
+        "Elevacao",
+        "AnguloPortas"
+      ],
+      "types": [
+        {
+          "name": "Espelheira 60 cm",
+          "values": {
+            "Largura": 0.6,
+            "Profundidade": 0.13,
+            "Altura": 0.6,
+            "Elevacao": 1.2,
+            "AnguloPortas": 0.0
+          },
+          "description": "Armário de banheiro de sobrepor com duas portas de espelho, prateleiras de vidro e luz de LED"
+        },
+        {
+          "name": "Espelheira 80 cm",
+          "values": {
+            "Largura": 0.8,
+            "Profundidade": 0.13,
+            "Altura": 0.65,
+            "Elevacao": 1.2,
+            "AnguloPortas": 0.0
+          },
+          "description": "Armário de banheiro de sobrepor com duas portas de espelho, prateleiras de vidro e luz de LED"
+        },
+        {
+          "name": "Espelheira 100 cm",
+          "values": {
+            "Largura": 1.0,
+            "Profundidade": 0.13,
+            "Altura": 0.7,
+            "Elevacao": 1.2,
+            "AnguloPortas": 0.0
+          },
+          "description": "Armário de banheiro de sobrepor com duas portas de espelho, prateleiras de vidro e luz de LED"
         }
       ]
     },
@@ -133,7 +259,11 @@
       "parameters": [
         "Largura",
         "Profundidade",
-        "Altura"
+        "Altura",
+        "Portas",
+        "AnguloPortas",
+        "AnguloMaleiro",
+        "AberturaGavetas"
       ],
       "types": [
         {
@@ -141,36 +271,52 @@
           "values": {
             "Largura": 1.0,
             "Profundidade": 0.6,
-            "Altura": 2.3
+            "Altura": 2.3,
+            "Portas": 2.0,
+            "AnguloPortas": 0.0,
+            "AnguloMaleiro": 0.0,
+            "AberturaGavetas": 0.0
           },
-          "description": ""
+          "description": "Guarda-roupa de portas de abrir com maleiro, cabideiros, prateleiras e gaveteiro interno"
         },
         {
           "name": "Guarda-roupa 3 portas 150 cm",
           "values": {
             "Largura": 1.5,
             "Profundidade": 0.6,
-            "Altura": 2.3
+            "Altura": 2.3,
+            "Portas": 3.0,
+            "AnguloPortas": 0.0,
+            "AnguloMaleiro": 0.0,
+            "AberturaGavetas": 0.0
           },
-          "description": ""
+          "description": "Guarda-roupa de portas de abrir com maleiro, cabideiros, prateleiras e gaveteiro interno"
         },
         {
           "name": "Guarda-roupa 4 portas 200 cm",
           "values": {
             "Largura": 2.0,
             "Profundidade": 0.6,
-            "Altura": 2.3
+            "Altura": 2.3,
+            "Portas": 4.0,
+            "AnguloPortas": 0.0,
+            "AnguloMaleiro": 0.0,
+            "AberturaGavetas": 0.0
           },
-          "description": ""
+          "description": "Guarda-roupa de portas de abrir com maleiro, cabideiros, prateleiras e gaveteiro interno"
         },
         {
           "name": "Guarda-roupa 6 portas 270 cm",
           "values": {
             "Largura": 2.7,
             "Profundidade": 0.6,
-            "Altura": 2.3
+            "Altura": 2.3,
+            "Portas": 6.0,
+            "AnguloPortas": 0.0,
+            "AnguloMaleiro": 0.0,
+            "AberturaGavetas": 0.0
           },
-          "description": ""
+          "description": "Guarda-roupa de portas de abrir com maleiro, cabideiros, prateleiras e gaveteiro interno"
         }
       ]
     },
@@ -181,14 +327,18 @@
       "mep": null,
       "parameters": [
         "Largura",
-        "Altura"
+        "Altura",
+        "AnguloAbertura",
+        "AnguloAberturaSecundaria"
       ],
       "types": [
         {
           "name": "Porta de abrir dupla 120 x 210",
           "values": {
             "Largura": 1.2,
-            "Altura": 2.1
+            "Altura": 2.1,
+            "AnguloAbertura": 0.0,
+            "AnguloAberturaSecundaria": 0.0
           },
           "description": "Porta de giro de duas folhas, batente de madeira"
         },
@@ -196,7 +346,9 @@
           "name": "Porta de abrir dupla 140 x 210",
           "values": {
             "Largura": 1.4,
-            "Altura": 2.1
+            "Altura": 2.1,
+            "AnguloAbertura": 0.0,
+            "AnguloAberturaSecundaria": 0.0
           },
           "description": "Porta de giro de duas folhas, batente de madeira"
         },
@@ -204,7 +356,9 @@
           "name": "Porta de abrir dupla 160 x 210",
           "values": {
             "Largura": 1.6,
-            "Altura": 2.1
+            "Altura": 2.1,
+            "AnguloAbertura": 0.0,
+            "AnguloAberturaSecundaria": 0.0
           },
           "description": "Porta de giro de duas folhas, batente de madeira"
         }
@@ -266,24 +420,45 @@
       "mep": null,
       "parameters": [
         "Largura",
-        "Altura"
+        "Altura",
+        "AnguloAbertura"
       ],
       "types": [
         {
           "name": "Porta camarão 70 x 210",
           "values": {
             "Largura": 0.7,
-            "Altura": 2.1
+            "Altura": 2.1,
+            "AnguloAbertura": 0.0
           },
-          "description": "Porta sanfonada de quatro painéis, recolhidos aos dois lados"
+          "description": "Porta camarão de duas folhas articuladas (venezianada em cima, almofadada embaixo), recolhida para a esquerda em trilho superior"
         },
         {
           "name": "Porta camarão 80 x 210",
           "values": {
             "Largura": 0.8,
-            "Altura": 2.1
+            "Altura": 2.1,
+            "AnguloAbertura": 0.0
           },
-          "description": "Porta sanfonada de quatro painéis, recolhidos aos dois lados"
+          "description": "Porta camarão de duas folhas articuladas (venezianada em cima, almofadada embaixo), recolhida para a esquerda em trilho superior"
+        },
+        {
+          "name": "Porta camarão 60 x 210",
+          "values": {
+            "Largura": 0.6,
+            "Altura": 2.1,
+            "AnguloAbertura": 0.0
+          },
+          "description": "Porta camarão de duas folhas articuladas (venezianada em cima, almofadada embaixo), recolhida para a esquerda em trilho superior"
+        },
+        {
+          "name": "Porta camarão 90 x 210",
+          "values": {
+            "Largura": 0.9,
+            "Altura": 2.1,
+            "AnguloAbertura": 0.0
+          },
+          "description": "Porta camarão de duas folhas articuladas (venezianada em cima, almofadada embaixo), recolhida para a esquerda em trilho superior"
         }
       ]
     },
@@ -294,14 +469,16 @@
       "mep": null,
       "parameters": [
         "Largura",
-        "Altura"
+        "Altura",
+        "Abertura"
       ],
       "types": [
         {
           "name": "Porta de correr dupla 140 x 210",
           "values": {
             "Largura": 1.4,
-            "Altura": 2.1
+            "Altura": 2.1,
+            "Abertura": 0.0
           },
           "description": "Porta de correr aparente de duas folhas, trilho superior"
         },
@@ -309,7 +486,8 @@
           "name": "Porta de correr dupla 160 x 210",
           "values": {
             "Largura": 1.6,
-            "Altura": 2.1
+            "Altura": 2.1,
+            "Abertura": 0.0
           },
           "description": "Porta de correr aparente de duas folhas, trilho superior"
         },
@@ -317,7 +495,8 @@
           "name": "Porta de correr dupla 200 x 210",
           "values": {
             "Largura": 2.0,
-            "Altura": 2.1
+            "Altura": 2.1,
+            "Abertura": 0.0
           },
           "description": "Porta de correr aparente de duas folhas, trilho superior"
         }
@@ -330,14 +509,16 @@
       "mep": null,
       "parameters": [
         "Largura",
-        "Altura"
+        "Altura",
+        "Abertura"
       ],
       "types": [
         {
           "name": "Porta de correr 70 x 210",
           "values": {
             "Largura": 0.7,
-            "Altura": 2.1
+            "Altura": 2.1,
+            "Abertura": 0.0
           },
           "description": "Porta de correr aparente de uma folha"
         },
@@ -345,7 +526,8 @@
           "name": "Porta de correr 80 x 210",
           "values": {
             "Largura": 0.8,
-            "Altura": 2.1
+            "Altura": 2.1,
+            "Abertura": 0.0
           },
           "description": "Porta de correr aparente de uma folha"
         },
@@ -353,7 +535,8 @@
           "name": "Porta de correr 90 x 210",
           "values": {
             "Largura": 0.9,
-            "Altura": 2.1
+            "Altura": 2.1,
+            "Abertura": 0.0
           },
           "description": "Porta de correr aparente de uma folha"
         }
@@ -366,14 +549,18 @@
       "mep": null,
       "parameters": [
         "Largura",
-        "Altura"
+        "Altura",
+        "Abertura",
+        "AberturaExterna"
       ],
       "types": [
         {
           "name": "Porta-janela de correr 150 x 210",
           "values": {
             "Largura": 1.5,
-            "Altura": 2.1
+            "Altura": 2.1,
+            "Abertura": 0.0,
+            "AberturaExterna": 0.0
           },
           "description": "Porta de correr em alumínio e vidro, duas folhas, para varanda ou jardim"
         },
@@ -381,7 +568,9 @@
           "name": "Porta-janela de correr 200 x 210",
           "values": {
             "Largura": 2.0,
-            "Altura": 2.1
+            "Altura": 2.1,
+            "Abertura": 0.0,
+            "AberturaExterna": 0.0
           },
           "description": "Porta de correr em alumínio e vidro, duas folhas, para varanda ou jardim"
         },
@@ -389,7 +578,9 @@
           "name": "Porta-janela de correr 250 x 210",
           "values": {
             "Largura": 2.5,
-            "Altura": 2.1
+            "Altura": 2.1,
+            "Abertura": 0.0,
+            "AberturaExterna": 0.0
           },
           "description": "Porta de correr em alumínio e vidro, duas folhas, para varanda ou jardim"
         }
@@ -402,32 +593,36 @@
       "mep": null,
       "parameters": [
         "Largura",
-        "Altura"
+        "Altura",
+        "AnguloAbertura"
       ],
       "types": [
         {
           "name": "Porta pivotante 100 x 240",
           "values": {
             "Largura": 1.0,
-            "Altura": 2.4
+            "Altura": 2.4,
+            "AnguloAbertura": 0.0
           },
-          "description": "Porta de entrada pivotante, folha de madeira e puxadores de barra"
+          "description": "Porta de entrada pivotante, folha maciça frisada, pivôs de piso e de topo, puxador tubular de inox"
         },
         {
           "name": "Porta pivotante 120 x 240",
           "values": {
             "Largura": 1.2,
-            "Altura": 2.4
+            "Altura": 2.4,
+            "AnguloAbertura": 0.0
           },
-          "description": "Porta de entrada pivotante, folha de madeira e puxadores de barra"
+          "description": "Porta de entrada pivotante, folha maciça frisada, pivôs de piso e de topo, puxador tubular de inox"
         },
         {
           "name": "Porta pivotante 150 x 240",
           "values": {
             "Largura": 1.5,
-            "Altura": 2.4
+            "Altura": 2.4,
+            "AnguloAbertura": 0.0
           },
-          "description": "Porta de entrada pivotante, folha de madeira e puxadores de barra"
+          "description": "Porta de entrada pivotante, folha maciça frisada, pivôs de piso e de topo, puxador tubular de inox"
         }
       ]
     },
@@ -438,32 +633,36 @@
       "mep": null,
       "parameters": [
         "Largura",
-        "Altura"
+        "Altura",
+        "AnguloAbertura"
       ],
       "types": [
         {
           "name": "Porta de vidro temperado 80 x 210",
           "values": {
             "Largura": 0.8,
-            "Altura": 2.1
+            "Altura": 2.1,
+            "AnguloAbertura": 0.0
           },
-          "description": "Porta de giro em vidro temperado 10 mm, sem batente, com puxadores de barra"
+          "description": "Porta de giro em vidro temperado 10 mm, sem batente, ferragens de canto 1101/1103, fechadura 1520 e puxador tubular"
         },
         {
           "name": "Porta de vidro temperado 90 x 210",
           "values": {
             "Largura": 0.9,
-            "Altura": 2.1
+            "Altura": 2.1,
+            "AnguloAbertura": 0.0
           },
-          "description": "Porta de giro em vidro temperado 10 mm, sem batente, com puxadores de barra"
+          "description": "Porta de giro em vidro temperado 10 mm, sem batente, ferragens de canto 1101/1103, fechadura 1520 e puxador tubular"
         },
         {
           "name": "Porta de vidro temperado 100 x 210",
           "values": {
             "Largura": 1.0,
-            "Altura": 2.1
+            "Altura": 2.1,
+            "AnguloAbertura": 0.0
           },
-          "description": "Porta de giro em vidro temperado 10 mm, sem batente, com puxadores de barra"
+          "description": "Porta de giro em vidro temperado 10 mm, sem batente, ferragens de canto 1101/1103, fechadura 1520 e puxador tubular"
         }
       ]
     },
@@ -474,24 +673,27 @@
       "mep": null,
       "parameters": [
         "Largura",
-        "Altura"
+        "Altura",
+        "AnguloAbertura"
       ],
       "types": [
         {
           "name": "Portão basculante 250 x 220",
           "values": {
             "Largura": 2.5,
-            "Altura": 2.2
+            "Altura": 2.2,
+            "AnguloAbertura": 0.0
           },
-          "description": "Portão basculante de garagem em chapa de aço"
+          "description": "Portão basculante de garagem com contrapesos: colunas em U, folha de metalon com lambril, braços, trilhos e roldanas"
         },
         {
           "name": "Portão basculante 300 x 220",
           "values": {
             "Largura": 3.0,
-            "Altura": 2.2
+            "Altura": 2.2,
+            "AnguloAbertura": 0.0
           },
-          "description": "Portão basculante de garagem em chapa de aço"
+          "description": "Portão basculante de garagem com contrapesos: colunas em U, folha de metalon com lambril, braços, trilhos e roldanas"
         }
       ]
     },
@@ -502,19 +704,23 @@
       "mep": {
         "Device": {
           "device": "Switch",
-          "power": 0
+          "power": 0.0
         }
       },
       "parameters": [
         "Largura",
-        "Altura"
+        "Altura",
+        "Teclas",
+        "Paralelo"
       ],
       "types": [
         {
           "name": "Interruptor simples 1 tecla",
           "values": {
             "Largura": 0.06,
-            "Altura": 0.1
+            "Altura": 0.1,
+            "Teclas": 1.0,
+            "Paralelo": 0.0
           },
           "description": "Interruptor simples 10 A"
         },
@@ -522,7 +728,9 @@
           "name": "Interruptor simples 2 teclas",
           "values": {
             "Largura": 0.06,
-            "Altura": 0.1
+            "Altura": 0.1,
+            "Teclas": 2.0,
+            "Paralelo": 0.0
           },
           "description": "Interruptor simples 10 A, 2 seções"
         },
@@ -530,7 +738,9 @@
           "name": "Interruptor paralelo 1 tecla",
           "values": {
             "Largura": 0.06,
-            "Altura": 0.1
+            "Altura": 0.1,
+            "Teclas": 1.0,
+            "Paralelo": 1.0
           },
           "description": "Interruptor paralelo (three-way) 10 A"
         },
@@ -538,7 +748,9 @@
           "name": "Interruptor 3 teclas 4x4",
           "values": {
             "Largura": 0.1,
-            "Altura": 0.1
+            "Altura": 0.1,
+            "Teclas": 3.0,
+            "Paralelo": 0.0
           },
           "description": "Interruptor simples 10 A, 3 seções"
         }
@@ -551,14 +763,18 @@
       "mep": null,
       "parameters": [
         "Largura",
-        "Altura"
+        "Altura",
+        "RJ45",
+        "TV"
       ],
       "types": [
         {
           "name": "Ponto de dados RJ45",
           "values": {
             "Largura": 0.06,
-            "Altura": 0.1
+            "Altura": 0.1,
+            "RJ45": 1.0,
+            "TV": 0.0
           },
           "description": "Tomada de rede Cat6 em caixa 4x2"
         },
@@ -566,7 +782,9 @@
           "name": "Ponto de TV",
           "values": {
             "Largura": 0.06,
-            "Altura": 0.1
+            "Altura": 0.1,
+            "RJ45": 0.0,
+            "TV": 1.0
           },
           "description": "Tomada coaxial para antena/TV a cabo"
         },
@@ -574,7 +792,9 @@
           "name": "Ponto dados + TV 4x4",
           "values": {
             "Largura": 0.1,
-            "Altura": 0.1
+            "Altura": 0.1,
+            "RJ45": 1.0,
+            "TV": 1.0
           },
           "description": "Tomada RJ45 e coaxial em caixa 4x4"
         }
@@ -587,13 +807,16 @@
       "mep": {
         "Device": {
           "device": "Panel",
-          "power": 0
+          "power": 0.0
         }
       },
       "parameters": [
         "Largura",
         "Altura",
-        "Profundidade"
+        "Profundidade",
+        "Fileiras",
+        "Circuitos",
+        "AnguloPorta"
       ],
       "types": [
         {
@@ -601,7 +824,10 @@
           "values": {
             "Largura": 0.3,
             "Altura": 0.35,
-            "Profundidade": 0.1
+            "Profundidade": 0.1,
+            "Fileiras": 1.0,
+            "Circuitos": 6.0,
+            "AnguloPorta": 0.0
           },
           "description": "Quadro de distribuição de embutir, 12 módulos DIN"
         },
@@ -610,7 +836,10 @@
           "values": {
             "Largura": 0.4,
             "Altura": 0.5,
-            "Profundidade": 0.1
+            "Profundidade": 0.1,
+            "Fileiras": 2.0,
+            "Circuitos": 14.0,
+            "AnguloPorta": 0.0
           },
           "description": "Quadro de distribuição de embutir, 24 módulos DIN"
         },
@@ -619,7 +848,10 @@
           "values": {
             "Largura": 0.45,
             "Altura": 0.65,
-            "Profundidade": 0.1
+            "Profundidade": 0.1,
+            "Fileiras": 3.0,
+            "Circuitos": 24.0,
+            "AnguloPorta": 0.0
           },
           "description": "Quadro de distribuição de embutir, 36 módulos DIN"
         }
@@ -632,7 +864,7 @@
       "mep": {
         "Device": {
           "device": "DedicatedOutlet",
-          "power": 1500
+          "power": 1500.0
         }
       },
       "parameters": [
@@ -657,7 +889,7 @@
       "mep": {
         "Device": {
           "device": "DedicatedOutlet",
-          "power": 3500
+          "power": 3500.0
         }
       },
       "parameters": [
@@ -682,7 +914,7 @@
       "mep": {
         "Device": {
           "device": "DedicatedOutlet",
-          "power": 5500
+          "power": 5500.0
         }
       },
       "parameters": [
@@ -707,7 +939,7 @@
       "mep": {
         "Device": {
           "device": "DedicatedOutlet",
-          "power": 7500
+          "power": 7500.0
         }
       },
       "parameters": [
@@ -732,19 +964,21 @@
       "mep": {
         "Device": {
           "device": "Outlet",
-          "power": 100
+          "power": 100.0
         }
       },
       "parameters": [
         "Largura",
-        "Altura"
+        "Altura",
+        "Modulos"
       ],
       "types": [
         {
           "name": "TUG 100 VA 4x2",
           "values": {
             "Largura": 0.06,
-            "Altura": 0.1
+            "Altura": 0.1,
+            "Modulos": 1.0
           },
           "description": "Tomada 2P+T 10 A em caixa 4x2 (NBR 14136)"
         },
@@ -752,7 +986,8 @@
           "name": "TUG 100 VA 4x4 dupla",
           "values": {
             "Largura": 0.1,
-            "Altura": 0.1
+            "Altura": 0.1,
+            "Modulos": 2.0
           },
           "description": "Duas tomadas 2P+T 10 A em caixa 4x4"
         }
@@ -765,19 +1000,21 @@
       "mep": {
         "Device": {
           "device": "Outlet",
-          "power": 600
+          "power": 600.0
         }
       },
       "parameters": [
         "Largura",
-        "Altura"
+        "Altura",
+        "Modulos"
       ],
       "types": [
         {
           "name": "TUG 600 VA 4x2",
           "values": {
             "Largura": 0.06,
-            "Altura": 0.1
+            "Altura": 0.1,
+            "Modulos": 1.0
           },
           "description": "Tomada 2P+T 20 A para cozinha e área de serviço (NBR 5410: 3 primeiras a 600 VA)"
         },
@@ -785,7 +1022,8 @@
           "name": "TUG 600 VA 4x4 dupla",
           "values": {
             "Largura": 0.1,
-            "Altura": 0.1
+            "Altura": 0.1,
+            "Modulos": 2.0
           },
           "description": "Duas tomadas 2P+T 20 A em caixa 4x4"
         }
@@ -807,7 +1045,7 @@
           "values": {
             "Diametro": 0.27,
             "Altura": 0.32,
-            "AberturaGaveta": 0
+            "AberturaGaveta": 0.0
           },
           "description": "Fritadeira elétrica sem óleo de 4 litros, com painel digital e gaveta com cesto antiaderente"
         },
@@ -816,7 +1054,7 @@
           "values": {
             "Diametro": 0.33,
             "Altura": 0.37,
-            "AberturaGaveta": 0
+            "AberturaGaveta": 0.0
           },
           "description": "Fritadeira elétrica sem óleo de 7 litros, com painel digital e gaveta com cesto antiaderente"
         }
@@ -871,7 +1109,7 @@
             "Largura": 0.8,
             "Profundidade": 0.2,
             "Altura": 0.29,
-            "AnguloAleta": 0
+            "AnguloAleta": 0.0
           },
           "description": "Unidade interna hi-wall de 9.000 a 12.000 BTU/h, 80 x 20 x 29 cm"
         },
@@ -881,9 +1119,83 @@
             "Largura": 1.05,
             "Profundidade": 0.23,
             "Altura": 0.33,
-            "AnguloAleta": 0
+            "AnguloAleta": 0.0
           },
           "description": "Unidade interna hi-wall de 18.000 a 24.000 BTU/h, 105 x 23 x 33 cm"
+        }
+      ]
+    },
+    {
+      "file": "components/furniture/beliche.ccomp",
+      "component": "Beliche",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Comprimento",
+        "Altura",
+        "AlturaColchao"
+      ],
+      "types": [
+        {
+          "name": "Beliche solteiro 88x188",
+          "values": {
+            "Largura": 0.88,
+            "Comprimento": 1.88,
+            "Altura": 1.65,
+            "AlturaColchao": 0.14
+          },
+          "description": "Beliche para dois colchões de solteiro 88 x 188 cm"
+        },
+        {
+          "name": "Beliche solteiro 78x188",
+          "values": {
+            "Largura": 0.78,
+            "Comprimento": 1.88,
+            "Altura": 1.65,
+            "AlturaColchao": 0.14
+          },
+          "description": "Beliche estreito para dois colchões de solteiro 78 x 188 cm"
+        }
+      ]
+    },
+    {
+      "file": "components/furniture/box-vidro.ccomp",
+      "component": "Box de vidro",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Altura",
+        "Abertura"
+      ],
+      "types": [
+        {
+          "name": "Box frontal 100 cm",
+          "values": {
+            "Largura": 1.0,
+            "Altura": 1.9,
+            "Abertura": 0.0
+          },
+          "description": "Box frontal de correr, vidro temperado incolor 8 mm, roldanas aparentes e perfis de alumínio, entre paredes"
+        },
+        {
+          "name": "Box frontal 120 cm",
+          "values": {
+            "Largura": 1.2,
+            "Altura": 1.9,
+            "Abertura": 0.0
+          },
+          "description": "Box frontal de correr, vidro temperado incolor 8 mm, roldanas aparentes e perfis de alumínio, entre paredes"
+        },
+        {
+          "name": "Box frontal 150 cm",
+          "values": {
+            "Largura": 1.5,
+            "Altura": 1.9,
+            "Abertura": 0.0
+          },
+          "description": "Box frontal de correr, vidro temperado incolor 8 mm, roldanas aparentes e perfis de alumínio, entre paredes"
         }
       ]
     },
@@ -944,8 +1256,8 @@
             "Altura": 0.27,
             "AlturaBase": 0.045,
             "ProfundidadeReservatorio": 0.075,
-            "AnguloTampa": 0,
-            "AvancoJarra": 0
+            "AnguloTampa": 0.0,
+            "AvancoJarra": 0.0
           },
           "description": "Cafeteira elétrica de filtro com jarra de vidro para 15 xícaras (0,6 L) e placa aquecedora"
         },
@@ -957,8 +1269,8 @@
             "Altura": 0.32,
             "AlturaBase": 0.045,
             "ProfundidadeReservatorio": 0.085,
-            "AnguloTampa": 0,
-            "AvancoJarra": 0
+            "AnguloTampa": 0.0,
+            "AvancoJarra": 0.0
           },
           "description": "Cafeteira elétrica de filtro com jarra de vidro para 30 xícaras (1,2 L) e placa aquecedora"
         }
@@ -1069,6 +1381,43 @@
       ]
     },
     {
+      "file": "components/furniture/cooktop-4-bocas.ccomp",
+      "component": "Cooktop a gás",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Profundidade",
+        "EspessuraVidro",
+        "AlturaCorpo",
+        "Bocas5"
+      ],
+      "types": [
+        {
+          "name": "Cooktop 4 bocas 60 cm",
+          "values": {
+            "Largura": 0.6,
+            "Profundidade": 0.51,
+            "EspessuraVidro": 0.008,
+            "AlturaCorpo": 0.05,
+            "Bocas5": 0.0
+          },
+          "description": "Cooktop a gás de vidro temperado preto, 4 bocas (1 rápida, 2 semirrápidas, 1 auxiliar), 60 x 51 cm, recorte de 56 x 48 cm; trempes de ferro fundido, acendimento automático"
+        },
+        {
+          "name": "Cooktop 5 bocas 75 cm",
+          "values": {
+            "Largura": 0.75,
+            "Profundidade": 0.51,
+            "EspessuraVidro": 0.008,
+            "AlturaCorpo": 0.05,
+            "Bocas5": 1.0
+          },
+          "description": "Cooktop a gás de vidro temperado preto, 5 bocas com tripla chama central, 75 x 51 cm, recorte de 71 x 48 cm; trempes de ferro fundido, acendimento automático"
+        }
+      ]
+    },
+    {
       "file": "components/furniture/criado-mudo.ccomp",
       "component": "Criado-mudo",
       "kind": "Furniture",
@@ -1089,8 +1438,8 @@
             "Profundidade": 0.4,
             "Altura": 0.55,
             "AlturaPes": 0.1,
-            "AberturaGaveta1": 0,
-            "AberturaGaveta2": 0
+            "AberturaGaveta1": 0.0,
+            "AberturaGaveta2": 0.0
           },
           "description": "Mesa de cabeceira com gaveta"
         },
@@ -1101,10 +1450,47 @@
             "Profundidade": 0.4,
             "Altura": 0.55,
             "AlturaPes": 0.1,
-            "AberturaGaveta1": 0,
-            "AberturaGaveta2": 0
+            "AberturaGaveta1": 0.0,
+            "AberturaGaveta2": 0.0
           },
           "description": "Mesa de cabeceira com gaveta"
+        }
+      ]
+    },
+    {
+      "file": "components/furniture/depurador-ar.ccomp",
+      "component": "Depurador de ar",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Profundidade",
+        "Altura",
+        "DiametroSaida",
+        "AlturaColar"
+      ],
+      "types": [
+        {
+          "name": "Depurador de ar 60 cm",
+          "values": {
+            "Largura": 0.6,
+            "Profundidade": 0.475,
+            "Altura": 0.12,
+            "DiametroSaida": 0.12,
+            "AlturaColar": 0.035
+          },
+          "description": "Depurador de ar slim sob armário, 60 x 47,5 x 12 cm, 3 velocidades, filtros metálicos laváveis, iluminação LED, saída Ø 12 cm (exaustão ou recirculação)"
+        },
+        {
+          "name": "Depurador de ar 80 cm",
+          "values": {
+            "Largura": 0.8,
+            "Profundidade": 0.475,
+            "Altura": 0.12,
+            "DiametroSaida": 0.12,
+            "AlturaColar": 0.035
+          },
+          "description": "Depurador de ar slim sob armário, 80 x 47,5 x 12 cm, 3 velocidades, filtros metálicos laváveis, iluminação LED, saída Ø 12 cm (exaustão ou recirculação)"
         }
       ]
     },
@@ -1130,9 +1516,9 @@
             "Profundidade": 0.5,
             "Altura": 0.75,
             "Gaveteiro": 0.4,
-            "AberturaGaveta1": 0,
-            "AberturaGaveta2": 0,
-            "AberturaGaveta3": 0
+            "AberturaGaveta1": 0.0,
+            "AberturaGaveta2": 0.0,
+            "AberturaGaveta3": 0.0
           },
           "description": "Escrivaninha com gaveteiro"
         },
@@ -1143,9 +1529,9 @@
             "Profundidade": 0.6,
             "Altura": 0.75,
             "Gaveteiro": 0.4,
-            "AberturaGaveta1": 0,
-            "AberturaGaveta2": 0,
-            "AberturaGaveta3": 0
+            "AberturaGaveta1": 0.0,
+            "AberturaGaveta2": 0.0,
+            "AberturaGaveta3": 0.0
           },
           "description": "Escrivaninha com gaveteiro"
         },
@@ -1156,9 +1542,9 @@
             "Profundidade": 0.7,
             "Altura": 0.75,
             "Gaveteiro": 0.4,
-            "AberturaGaveta1": 0,
-            "AberturaGaveta2": 0,
-            "AberturaGaveta3": 0
+            "AberturaGaveta1": 0.0,
+            "AberturaGaveta2": 0.0,
+            "AberturaGaveta3": 0.0
           },
           "description": "Escrivaninha com gaveteiro"
         }
@@ -1253,7 +1639,7 @@
             "AlturaPainel": 0.11,
             "EspessuraPorta": 0.04,
             "FolgaLateralGabinete": 0.0175,
-            "AnguloPorta": 0,
+            "AnguloPorta": 0.0,
             "ExtensaoGrade": 0.0
           },
           "description": "Forno elétrico de embutir multifunção, frente 59,5 x 59,5 cm, 57 cm de profundidade, 70 L, para nicho de 56 cm"
@@ -1267,7 +1653,7 @@
             "AlturaPainel": 0.11,
             "EspessuraPorta": 0.04,
             "FolgaLateralGabinete": 0.0175,
-            "AnguloPorta": 0,
+            "AnguloPorta": 0.0,
             "ExtensaoGrade": 0.0
           },
           "description": "Forno elétrico de embutir multifunção, frente 89,5 x 59,5 cm, 57 cm de profundidade, 115 L, para nicho de 86 cm"
@@ -1351,7 +1737,7 @@
             "AlturaPainel": 0.1,
             "EspessuraPorta": 0.05,
             "EspessuraTampo": 0.03,
-            "AnguloPorta": 0,
+            "AnguloPorta": 0.0,
             "ExtensaoCestoInferior": 0.0,
             "ExtensaoCestoSuperior": 0.0
           },
@@ -1367,7 +1753,7 @@
             "AlturaPainel": 0.1,
             "EspessuraPorta": 0.05,
             "EspessuraTampo": 0.03,
-            "AnguloPorta": 0,
+            "AnguloPorta": 0.0,
             "ExtensaoCestoInferior": 0.0,
             "ExtensaoCestoSuperior": 0.0
           },
@@ -1395,7 +1781,7 @@
             "Altura": 0.4,
             "AlturaBase": 0.165,
             "DiametroCopo": 0.16,
-            "ElevacaoCopo": 0
+            "ElevacaoCopo": 0.0
           },
           "description": "Liquidificador de bancada com copo de 2 litros, seletor de velocidades e função pulsar"
         },
@@ -1406,9 +1792,53 @@
             "Altura": 0.43,
             "AlturaBase": 0.175,
             "DiametroCopo": 0.18,
-            "ElevacaoCopo": 0
+            "ElevacaoCopo": 0.0
           },
           "description": "Liquidificador de bancada com copo de 3 litros, seletor de velocidades e função pulsar"
+        }
+      ]
+    },
+    {
+      "file": "components/furniture/mesa-centro.ccomp",
+      "component": "Mesa de centro",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Profundidade",
+        "Altura",
+        "TampoVidro"
+      ],
+      "types": [
+        {
+          "name": "Mesa de centro 100x60 vidro",
+          "values": {
+            "Largura": 1.0,
+            "Profundidade": 0.6,
+            "Altura": 0.4,
+            "TampoVidro": 1.0
+          },
+          "description": "Mesa de centro com tampo de vidro temperado e prateleira de ripas"
+        },
+        {
+          "name": "Mesa de centro 80x80 madeira",
+          "values": {
+            "Largura": 0.8,
+            "Profundidade": 0.8,
+            "Altura": 0.4,
+            "TampoVidro": 0.0
+          },
+          "description": "Mesa de centro quadrada com tampo de madeira"
+        },
+        {
+          "name": "Mesa de centro 120x70 vidro",
+          "values": {
+            "Largura": 1.2,
+            "Profundidade": 0.7,
+            "Altura": 0.4,
+            "TampoVidro": 1.0
+          },
+          "description": "Mesa de centro com tampo de vidro temperado e prateleira de ripas"
         }
       ]
     },
@@ -1541,6 +1971,92 @@
       ]
     },
     {
+      "file": "components/furniture/poltrona.ccomp",
+      "component": "Poltrona de madeira",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Profundidade",
+        "Altura",
+        "AlturaAssento"
+      ],
+      "types": [
+        {
+          "name": "Poltrona de madeira 72 cm",
+          "values": {
+            "Largura": 0.72,
+            "Profundidade": 0.78,
+            "Altura": 0.8,
+            "AlturaAssento": 0.42
+          },
+          "description": "Poltrona com estrutura de madeira aparente e almofadas soltas"
+        },
+        {
+          "name": "Poltrona de madeira 82 cm",
+          "values": {
+            "Largura": 0.82,
+            "Profundidade": 0.84,
+            "Altura": 0.84,
+            "AlturaAssento": 0.42
+          },
+          "description": "Poltrona larga com estrutura de madeira aparente"
+        }
+      ]
+    },
+    {
+      "file": "components/furniture/secadora-roupas.ccomp",
+      "component": "Secadora de roupas",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Profundidade",
+        "Altura",
+        "AlturaPainel",
+        "AlturaRodape",
+        "AlturaPes",
+        "DiametroPorta",
+        "DiametroTambor",
+        "ProfundidadeTambor",
+        "AnguloPorta"
+      ],
+      "types": [
+        {
+          "name": "Secadora 10 kg 60 x 65 x 85 cm",
+          "values": {
+            "Largura": 0.6,
+            "Profundidade": 0.65,
+            "Altura": 0.85,
+            "AlturaPainel": 0.11,
+            "AlturaRodape": 0.13,
+            "AlturaPes": 0.015,
+            "DiametroPorta": 0.46,
+            "DiametroTambor": 0.54,
+            "ProfundidadeTambor": 0.45,
+            "AnguloPorta": 0.0
+          },
+          "description": "Secadora de roupas de piso por condensação, 10 kg; prever TUE de 2000 VA e ventilação do ambiente"
+        },
+        {
+          "name": "Secadora 8 kg compacta 60 x 56 x 85 cm",
+          "values": {
+            "Largura": 0.6,
+            "Profundidade": 0.56,
+            "Altura": 0.85,
+            "AlturaPainel": 0.11,
+            "AlturaRodape": 0.13,
+            "AlturaPes": 0.015,
+            "DiametroPorta": 0.46,
+            "DiametroTambor": 0.52,
+            "ProfundidadeTambor": 0.36,
+            "AnguloPorta": 0.0
+          },
+          "description": "Secadora de roupas de piso compacta, 8 kg; prever TUE de 1600 VA e ventilação do ambiente"
+        }
+      ]
+    },
+    {
       "file": "components/furniture/sofa.ccomp",
       "component": "Sofá estofado",
       "kind": "Furniture",
@@ -1600,6 +2116,50 @@
       ]
     },
     {
+      "file": "components/furniture/toalheiro.ccomp",
+      "component": "Toalheiro",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Profundidade",
+        "Argola",
+        "Elevacao"
+      ],
+      "types": [
+        {
+          "name": "Toalheiro barra 60 cm",
+          "values": {
+            "Largura": 0.6,
+            "Profundidade": 0.075,
+            "Argola": 0.0,
+            "Elevacao": 1.1
+          },
+          "description": "Toalheiro de barra de parede, latão cromado, fixação oculta"
+        },
+        {
+          "name": "Toalheiro argola",
+          "values": {
+            "Largura": 0.2,
+            "Profundidade": 0.075,
+            "Argola": 1.0,
+            "Elevacao": 1.1
+          },
+          "description": "Toalheiro de argola de parede para toalha de rosto, latão cromado"
+        },
+        {
+          "name": "Toalheiro barra 40 cm",
+          "values": {
+            "Largura": 0.4,
+            "Profundidade": 0.075,
+            "Argola": 0.0,
+            "Elevacao": 1.1
+          },
+          "description": "Toalheiro de barra de parede, latão cromado, fixação oculta"
+        }
+      ]
+    },
+    {
       "file": "components/furniture/tv-rack.ccomp",
       "component": "TV com rack",
       "kind": "Furniture",
@@ -1623,7 +2183,7 @@
             "AlturaPes": 0.12,
             "LarguraTV": 1.232,
             "AlturaTV": 0.712,
-            "AnguloPorta": 0
+            "AnguloPorta": 0.0
           },
           "description": "Rack de 180 cm com porta, nicho e gavetas, e TV de tela plana de 55\""
         },
@@ -1636,7 +2196,7 @@
             "AlturaPes": 0.12,
             "LarguraTV": 0.966,
             "AlturaTV": 0.562,
-            "AnguloPorta": 0
+            "AnguloPorta": 0.0
           },
           "description": "Rack de 136 cm com porta, nicho e gavetas, e TV de tela plana de 43\""
         }
@@ -1649,7 +2209,7 @@
       "mep": {
         "Device": {
           "device": "WallLight",
-          "power": 20
+          "power": 20.0
         }
       },
       "parameters": [
@@ -1685,7 +2245,7 @@
       "mep": {
         "Device": {
           "device": "CeilingLight",
-          "power": 40
+          "power": 40.0
         }
       },
       "parameters": [
@@ -1721,7 +2281,7 @@
       "mep": {
         "Device": {
           "device": "CeilingLight",
-          "power": 60
+          "power": 60.0
         }
       },
       "parameters": [
@@ -1754,7 +2314,7 @@
       "mep": {
         "Device": {
           "device": "CeilingLight",
-          "power": 100
+          "power": 100.0
         }
       },
       "parameters": [
@@ -1787,7 +2347,7 @@
       "mep": {
         "Device": {
           "device": "CeilingLight",
-          "power": 18
+          "power": 18.0
         }
       },
       "parameters": [
@@ -1807,6 +2367,45 @@
             "Diametro": 0.17
           },
           "description": "Downlight de embutir em forro de gesso, até 18 VA"
+        }
+      ]
+    },
+    {
+      "file": "components/lighting/ventilador-teto.ccomp",
+      "component": "Ventilador de teto com luminária",
+      "kind": "Lighting",
+      "mep": {
+        "Device": {
+          "device": "CeilingLight",
+          "power": 150.0
+        }
+      },
+      "parameters": [
+        "Diametro",
+        "Pas",
+        "Haste",
+        "AnguloPas"
+      ],
+      "types": [
+        {
+          "name": "Ventilador de teto 4 pás 130 cm",
+          "values": {
+            "Diametro": 1.3,
+            "Pas": 4.0,
+            "Haste": 0.1,
+            "AnguloPas": 0.0
+          },
+          "description": "Ventilador de teto com 4 pás e luminária de vidro jateado; motor e lâmpadas, 150 VA"
+        },
+        {
+          "name": "Ventilador de teto 3 pás 105 cm",
+          "values": {
+            "Diametro": 1.05,
+            "Pas": 3.0,
+            "Haste": 0.1,
+            "AnguloPas": 0.0
+          },
+          "description": "Ventilador de teto com 3 pás e luminária de vidro jateado; motor e lâmpadas, 150 VA"
         }
       ]
     },
@@ -2091,14 +2690,54 @@
       ]
     },
     {
+      "file": "components/plumbing/aquecedor-gas.ccomp",
+      "component": "Aquecedor a gás de passagem",
+      "kind": "Plumbing",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Profundidade",
+        "Altura",
+        "AlturaConexoes",
+        "DiametroChamine",
+        "AlturaColar"
+      ],
+      "types": [
+        {
+          "name": "Aquecedor a gás 15 L/min",
+          "values": {
+            "Largura": 0.35,
+            "Profundidade": 0.16,
+            "Altura": 0.55,
+            "AlturaConexoes": 0.08,
+            "DiametroChamine": 0.06,
+            "AlturaColar": 0.05
+          },
+          "description": "Aquecedor de passagem a gás (GN ou GLP) com exaustão forçada, 15 L/min, 35 x 16 x 55 cm, chaminé Ø 60 mm; água fria, gás e água quente de 1/2\" por baixo; TUG 127 V"
+        },
+        {
+          "name": "Aquecedor a gás 27 L/min",
+          "values": {
+            "Largura": 0.37,
+            "Profundidade": 0.21,
+            "Altura": 0.6,
+            "AlturaConexoes": 0.08,
+            "DiametroChamine": 0.08,
+            "AlturaColar": 0.05
+          },
+          "description": "Aquecedor de passagem a gás (GN ou GLP) com exaustão forçada, 27 L/min, 37 x 21 x 60 cm, chaminé Ø 80 mm; água fria, gás e água quente de 3/4\" por baixo; TUG 127 V"
+        }
+      ]
+    },
+    {
       "file": "components/plumbing/bacia-caixa-acoplada.ccomp",
       "component": "Bacia sanitária com caixa acoplada",
       "kind": "Plumbing",
       "mep": {
         "Fixture": {
-          "drain_units": 6,
-          "supply_weight": 0.3,
-          "hot_water": false
+          "drain_units": 6.0,
+          "hot_water": false,
+          "supply_weight": 0.3
         }
       },
       "parameters": [
@@ -2117,8 +2756,8 @@
             "Profundidade": 0.65,
             "Altura": 0.78,
             "AlturaBacia": 0.39,
-            "AnguloTampa": 0,
-            "AnguloAssento": 0
+            "AnguloTampa": 0.0,
+            "AnguloAssento": 0.0
           },
           "description": "Bacia convencional com caixa acoplada 6 L"
         },
@@ -2129,8 +2768,8 @@
             "Profundidade": 0.7,
             "Altura": 0.82,
             "AlturaBacia": 0.44,
-            "AnguloTampa": 0,
-            "AnguloAssento": 0
+            "AnguloTampa": 0.0,
+            "AnguloAssento": 0.0
           },
           "description": "Bacia para pessoa com deficiência (assento a 0,46 m)"
         }
@@ -2142,23 +2781,43 @@
       "kind": "Plumbing",
       "mep": {
         "Fixture": {
-          "drain_units": 6,
-          "supply_weight": 32,
-          "hot_water": false
+          "drain_units": 6.0,
+          "hot_water": false,
+          "supply_weight": 32.0
         }
       },
       "parameters": [
         "Largura",
-        "Profundidade"
+        "Profundidade",
+        "AlturaBacia",
+        "AlturaValvula",
+        "AnguloTampa",
+        "AnguloAssento"
       ],
       "types": [
         {
           "name": "Bacia c/ válvula de descarga",
           "values": {
             "Largura": 0.38,
-            "Profundidade": 0.55
+            "Profundidade": 0.55,
+            "AlturaBacia": 0.39,
+            "AlturaValvula": 1.1,
+            "AnguloTampa": 0.0,
+            "AnguloAssento": 0.0
           },
           "description": "Bacia convencional com válvula de descarga"
+        },
+        {
+          "name": "Bacia c/ válvula de descarga PNE",
+          "values": {
+            "Largura": 0.4,
+            "Profundidade": 0.6,
+            "AlturaBacia": 0.44,
+            "AlturaValvula": 1.1,
+            "AnguloTampa": 0.0,
+            "AnguloAssento": 0.0
+          },
+          "description": "Bacia para pessoa com deficiência (assento a 0,46 m), com válvula de descarga"
         }
       ]
     },
@@ -2168,9 +2827,9 @@
       "kind": "Plumbing",
       "mep": {
         "Fixture": {
-          "drain_units": 2,
-          "supply_weight": 1.0,
-          "hot_water": true
+          "drain_units": 2.0,
+          "hot_water": true,
+          "supply_weight": 1.0
         }
       },
       "parameters": [
@@ -2186,7 +2845,7 @@
             "Profundidade": 0.7,
             "Altura": 0.55
           },
-          "description": "Banheira de embutir"
+          "description": "Banheira de embutir em acrílico, com saia frontal, válvula com ladrão e misturador de parede"
         },
         {
           "name": "Banheira 170x75",
@@ -2195,7 +2854,25 @@
             "Profundidade": 0.75,
             "Altura": 0.55
           },
-          "description": "Banheira de embutir"
+          "description": "Banheira de embutir em acrílico, com saia frontal, válvula com ladrão e misturador de parede"
+        },
+        {
+          "name": "Banheira 160x70",
+          "values": {
+            "Largura": 1.6,
+            "Profundidade": 0.7,
+            "Altura": 0.55
+          },
+          "description": "Banheira de embutir em acrílico, com saia frontal, válvula com ladrão e misturador de parede"
+        },
+        {
+          "name": "Banheira 180x80",
+          "values": {
+            "Largura": 1.8,
+            "Profundidade": 0.8,
+            "Altura": 0.55
+          },
+          "description": "Banheira de embutir em acrílico, com saia frontal, válvula com ladrão e misturador de parede"
         }
       ]
     },
@@ -2205,15 +2882,16 @@
       "kind": "Plumbing",
       "mep": {
         "Fixture": {
-          "drain_units": 1,
-          "supply_weight": 0.1,
-          "hot_water": true
+          "drain_units": 1.0,
+          "hot_water": true,
+          "supply_weight": 0.1
         }
       },
       "parameters": [
         "Largura",
         "Profundidade",
-        "Altura"
+        "Altura",
+        "AnguloAlavanca"
       ],
       "types": [
         {
@@ -2221,9 +2899,20 @@
           "values": {
             "Largura": 0.36,
             "Profundidade": 0.53,
-            "Altura": 0.4
+            "Altura": 0.4,
+            "AnguloAlavanca": 0.0
           },
           "description": "Bidê de louça"
+        },
+        {
+          "name": "Bidê compacto",
+          "values": {
+            "Largura": 0.34,
+            "Profundidade": 0.49,
+            "Altura": 0.39,
+            "AnguloAlavanca": 0.0
+          },
+          "description": "Bidê de louça de dimensões reduzidas"
         }
       ]
     },
@@ -2235,7 +2924,8 @@
       "parameters": [
         "RaioBase",
         "RaioTopo",
-        "Altura"
+        "Altura",
+        "AberturaTampa"
       ],
       "types": [
         {
@@ -2243,36 +2933,40 @@
           "values": {
             "RaioBase": 0.42,
             "RaioTopo": 0.52,
-            "Altura": 0.62
+            "Altura": 0.62,
+            "AberturaTampa": 0.0
           },
-          "description": "Reservatório de polietileno"
+          "description": "Reservatório de polietileno com tampa, torneira de boia e adaptadores de flange"
         },
         {
           "name": "Caixa d'água 500 L",
           "values": {
             "RaioBase": 0.48,
             "RaioTopo": 0.61,
-            "Altura": 0.73
+            "Altura": 0.73,
+            "AberturaTampa": 0.0
           },
-          "description": "Reservatório de polietileno"
+          "description": "Reservatório de polietileno com tampa, torneira de boia e adaptadores de flange"
         },
         {
           "name": "Caixa d'água 1000 L",
           "values": {
             "RaioBase": 0.6,
             "RaioTopo": 0.76,
-            "Altura": 0.86
+            "Altura": 0.86,
+            "AberturaTampa": 0.0
           },
-          "description": "Reservatório de polietileno"
+          "description": "Reservatório de polietileno com tampa, torneira de boia e adaptadores de flange"
         },
         {
           "name": "Caixa d'água 2000 L",
           "values": {
             "RaioBase": 0.78,
             "RaioTopo": 0.96,
-            "Altura": 1.12
+            "Altura": 1.12,
+            "AberturaTampa": 0.0
           },
-          "description": "Reservatório de polietileno"
+          "description": "Reservatório de polietileno com tampa, torneira de boia e adaptadores de flange"
         }
       ]
     },
@@ -2283,14 +2977,16 @@
       "mep": null,
       "parameters": [
         "Diametro",
-        "Fundo"
+        "Fundo",
+        "AberturaTampa"
       ],
       "types": [
         {
           "name": "Caixa de gordura simples Ø40",
           "values": {
             "Diametro": 0.4,
-            "Fundo": 0.5
+            "Fundo": 0.5,
+            "AberturaTampa": 0.0
           },
           "description": "Caixa de gordura simples (CGS), 1 cozinha"
         },
@@ -2298,7 +2994,8 @@
           "name": "Caixa de gordura dupla Ø60",
           "values": {
             "Diametro": 0.6,
-            "Fundo": 0.6
+            "Fundo": 0.6,
+            "AberturaTampa": 0.0
           },
           "description": "Caixa de gordura dupla (CGD), até 12 cozinhas"
         }
@@ -2312,7 +3009,8 @@
       "parameters": [
         "Largura",
         "Profundidade",
-        "Fundo"
+        "Fundo",
+        "AberturaTampa"
       ],
       "types": [
         {
@@ -2320,7 +3018,8 @@
           "values": {
             "Largura": 0.6,
             "Profundidade": 0.6,
-            "Fundo": 0.6
+            "Fundo": 0.6,
+            "AberturaTampa": 0.0
           },
           "description": "Caixa de inspeção de esgoto em alvenaria/concreto"
         },
@@ -2329,7 +3028,8 @@
           "values": {
             "Largura": 0.8,
             "Profundidade": 0.8,
-            "Fundo": 0.6
+            "Fundo": 0.6,
+            "AberturaTampa": 0.0
           },
           "description": "Caixa de inspeção de esgoto em alvenaria/concreto"
         }
@@ -2341,9 +3041,9 @@
       "kind": "Plumbing",
       "mep": {
         "Fixture": {
-          "drain_units": 2,
-          "supply_weight": 0.1,
-          "hot_water": false
+          "drain_units": 2.0,
+          "hot_water": false,
+          "supply_weight": 0.1
         }
       },
       "parameters": [
@@ -2362,14 +3062,97 @@
       ]
     },
     {
+      "file": "components/plumbing/ducha-higienica.ccomp",
+      "component": "Ducha higiênica",
+      "kind": "Plumbing",
+      "mep": {
+        "Fixture": {
+          "drain_units": 0.0,
+          "hot_water": false,
+          "supply_weight": 0.4
+        }
+      },
+      "parameters": [
+        "Mangueira",
+        "Elevacao",
+        "AnguloRegistro",
+        "AnguloGatilho"
+      ],
+      "types": [
+        {
+          "name": "Ducha higiênica 1,2 m",
+          "values": {
+            "Mangueira": 1.2,
+            "Elevacao": 0.6,
+            "AnguloRegistro": 0.0,
+            "AnguloGatilho": 0.0
+          },
+          "description": "Ducha higiênica cromada com registro de 1/4 de volta, flexível de aço inox e suporte de parede (flexível de 1,20 m)"
+        },
+        {
+          "name": "Ducha higiênica 1,5 m",
+          "values": {
+            "Mangueira": 1.5,
+            "Elevacao": 0.6,
+            "AnguloRegistro": 0.0,
+            "AnguloGatilho": 0.0
+          },
+          "description": "Ducha higiênica cromada com registro de 1/4 de volta, flexível de aço inox e suporte de parede (flexível de 1,50 m)"
+        }
+      ]
+    },
+    {
+      "file": "components/plumbing/gabinete-banheiro.ccomp",
+      "component": "Gabinete de banheiro com cuba",
+      "kind": "Plumbing",
+      "mep": {
+        "Fixture": {
+          "drain_units": 1.0,
+          "hot_water": true,
+          "supply_weight": 0.3
+        }
+      },
+      "parameters": [
+        "Largura",
+        "Profundidade",
+        "Altura",
+        "AnguloPortas",
+        "AnguloAlavanca"
+      ],
+      "types": [
+        {
+          "name": "Gabinete com cuba 60 cm",
+          "values": {
+            "Largura": 0.6,
+            "Profundidade": 0.46,
+            "Altura": 0.85,
+            "AnguloPortas": 0.0,
+            "AnguloAlavanca": 0.0
+          },
+          "description": "Gabinete de banheiro de duas portas sobre pés, com tampo de louça e cuba integrada"
+        },
+        {
+          "name": "Gabinete com cuba 80 cm",
+          "values": {
+            "Largura": 0.8,
+            "Profundidade": 0.46,
+            "Altura": 0.85,
+            "AnguloPortas": 0.0,
+            "AnguloAlavanca": 0.0
+          },
+          "description": "Gabinete de banheiro de duas portas sobre pés, com tampo de louça e cuba integrada"
+        }
+      ]
+    },
+    {
       "file": "components/plumbing/lavadora-frontal.ccomp",
       "component": "Lava e seca frontal",
       "kind": "Plumbing",
       "mep": {
         "Fixture": {
-          "drain_units": 3,
-          "supply_weight": 1.0,
-          "hot_water": false
+          "drain_units": 3.0,
+          "hot_water": false,
+          "supply_weight": 1.0
         }
       },
       "parameters": [
@@ -2397,7 +3180,7 @@
             "DiametroPorta": 0.48,
             "DiametroTambor": 0.47,
             "ProfundidadeTambor": 0.33,
-            "AnguloPorta": 0
+            "AnguloPorta": 0.0
           },
           "description": "Lava e seca frontal de 11 kg; ponto de água fria e esgoto; prever TUE de 1800 VA"
         },
@@ -2413,7 +3196,7 @@
             "DiametroPorta": 0.52,
             "DiametroTambor": 0.5,
             "ProfundidadeTambor": 0.4,
-            "AnguloPorta": 0
+            "AnguloPorta": 0.0
           },
           "description": "Lava e seca frontal de 13 kg; ponto de água fria e esgoto; prever TUE de 2000 VA"
         }
@@ -2425,15 +3208,16 @@
       "kind": "Plumbing",
       "mep": {
         "Fixture": {
-          "drain_units": 1,
-          "supply_weight": 0.3,
-          "hot_water": true
+          "drain_units": 1.0,
+          "hot_water": true,
+          "supply_weight": 0.3
         }
       },
       "parameters": [
         "Largura",
         "Profundidade",
-        "Altura"
+        "Altura",
+        "AnguloAlavanca"
       ],
       "types": [
         {
@@ -2441,7 +3225,8 @@
           "values": {
             "Largura": 0.8,
             "Profundidade": 0.5,
-            "Altura": 0.85
+            "Altura": 0.85,
+            "AnguloAlavanca": 0.0
           },
           "description": "Cuba de embutir em bancada de granito"
         },
@@ -2450,7 +3235,8 @@
           "values": {
             "Largura": 1.0,
             "Profundidade": 0.5,
-            "Altura": 0.85
+            "Altura": 0.85,
+            "AnguloAlavanca": 0.0
           },
           "description": "Cuba de embutir em bancada de granito"
         },
@@ -2459,7 +3245,8 @@
           "values": {
             "Largura": 1.2,
             "Profundidade": 0.55,
-            "Altura": 0.85
+            "Altura": 0.85,
+            "AnguloAlavanca": 0.0
           },
           "description": "Cuba de embutir em bancada de granito"
         }
@@ -2471,15 +3258,17 @@
       "kind": "Plumbing",
       "mep": {
         "Fixture": {
-          "drain_units": 1,
-          "supply_weight": 0.3,
-          "hot_water": true
+          "drain_units": 1.0,
+          "hot_water": true,
+          "supply_weight": 0.3
         }
       },
       "parameters": [
         "Largura",
         "Profundidade",
-        "Altura"
+        "Altura",
+        "Semicoluna",
+        "AnguloAlavanca"
       ],
       "types": [
         {
@@ -2487,7 +3276,9 @@
           "values": {
             "Largura": 0.45,
             "Profundidade": 0.35,
-            "Altura": 0.82
+            "Altura": 0.82,
+            "Semicoluna": 0.0,
+            "AnguloAlavanca": 0.0
           },
           "description": "Lavatório de louça fixado na parede"
         },
@@ -2496,9 +3287,22 @@
           "values": {
             "Largura": 0.55,
             "Profundidade": 0.42,
-            "Altura": 0.82
+            "Altura": 0.82,
+            "Semicoluna": 0.0,
+            "AnguloAlavanca": 0.0
           },
           "description": "Lavatório de louça fixado na parede"
+        },
+        {
+          "name": "Lavatório suspenso c/ semicoluna 45 cm",
+          "values": {
+            "Largura": 0.45,
+            "Profundidade": 0.35,
+            "Altura": 0.82,
+            "Semicoluna": 1.0,
+            "AnguloAlavanca": 0.0
+          },
+          "description": "Lavatório de louça fixado na parede, com semicoluna que esconde o sifão"
         }
       ]
     },
@@ -2508,15 +3312,16 @@
       "kind": "Plumbing",
       "mep": {
         "Fixture": {
-          "drain_units": 3,
-          "supply_weight": 1.0,
-          "hot_water": false
+          "drain_units": 3.0,
+          "hot_water": false,
+          "supply_weight": 1.0
         }
       },
       "parameters": [
         "Largura",
         "Profundidade",
-        "Altura"
+        "Altura",
+        "AnguloTampa"
       ],
       "types": [
         {
@@ -2524,7 +3329,8 @@
           "values": {
             "Largura": 0.6,
             "Profundidade": 0.65,
-            "Altura": 0.95
+            "Altura": 0.95,
+            "AnguloTampa": 0.0
           },
           "description": "Ponto de água fria e esgoto; prever TUE de 1000 VA"
         },
@@ -2533,7 +3339,8 @@
           "values": {
             "Largura": 0.68,
             "Profundidade": 0.72,
-            "Altura": 1.05
+            "Altura": 1.05,
+            "AnguloTampa": 0.0
           },
           "description": "Ponto de água fria e esgoto; prever TUE de 1500 VA"
         }
@@ -2545,9 +3352,9 @@
       "kind": "Plumbing",
       "mep": {
         "Fixture": {
-          "drain_units": 2,
-          "supply_weight": 0.3,
-          "hot_water": false
+          "drain_units": 2.0,
+          "hot_water": false,
+          "supply_weight": 0.3
         }
       },
       "parameters": [
@@ -2566,6 +3373,16 @@
             "Elevacao": 0.6
           },
           "description": "Mictório de louça com registro de pressão"
+        },
+        {
+          "name": "Mictório sifonado compacto",
+          "values": {
+            "Largura": 0.3,
+            "Profundidade": 0.27,
+            "Altura": 0.5,
+            "Elevacao": 0.6
+          },
+          "description": "Mictório de louça sifonado de dimensões reduzidas"
         }
       ]
     },
@@ -2575,9 +3392,9 @@
       "kind": "Plumbing",
       "mep": {
         "Fixture": {
-          "drain_units": 3,
-          "supply_weight": 0.7,
-          "hot_water": true
+          "drain_units": 3.0,
+          "hot_water": true,
+          "supply_weight": 0.7
         }
       },
       "parameters": [
@@ -2593,7 +3410,7 @@
             "Largura": 1.2,
             "Profundidade": 0.55,
             "Altura": 0.9,
-            "AberturaPortas": 0
+            "AberturaPortas": 0.0
           },
           "description": "Bancada de granito com cuba inox e gabinete"
         },
@@ -2603,7 +3420,7 @@
             "Largura": 1.5,
             "Profundidade": 0.55,
             "Altura": 0.9,
-            "AberturaPortas": 0
+            "AberturaPortas": 0.0
           },
           "description": "Bancada de granito com cuba inox e gabinete"
         },
@@ -2613,9 +3430,58 @@
             "Largura": 2.0,
             "Profundidade": 0.55,
             "Altura": 0.9,
-            "AberturaPortas": 0
+            "AberturaPortas": 0.0
           },
           "description": "Bancada de granito com cuba inox e gabinete"
+        }
+      ]
+    },
+    {
+      "file": "components/plumbing/purificador-agua.ccomp",
+      "component": "Purificador de água",
+      "kind": "Plumbing",
+      "mep": {
+        "Fixture": {
+          "drain_units": 0.0,
+          "hot_water": false,
+          "supply_weight": 0.1
+        }
+      },
+      "parameters": [
+        "Largura",
+        "Profundidade",
+        "Altura",
+        "LarguraNicho",
+        "ProfundidadeNicho",
+        "AlturaNicho",
+        "AnguloPortaFiltro"
+      ],
+      "types": [
+        {
+          "name": "Purificador refrigerado 27 x 31 x 40 cm",
+          "values": {
+            "Largura": 0.27,
+            "Profundidade": 0.31,
+            "Altura": 0.4,
+            "LarguraNicho": 0.15,
+            "ProfundidadeNicho": 0.085,
+            "AlturaNicho": 0.2,
+            "AnguloPortaFiltro": 0.0
+          },
+          "description": "Purificador de água refrigerado por compressor, de bancada ou de parede, água natural, fria e gelada; refil na lateral; prever ponto de água fria e TUG"
+        },
+        {
+          "name": "Purificador compacto 22 x 27 x 35 cm",
+          "values": {
+            "Largura": 0.22,
+            "Profundidade": 0.27,
+            "Altura": 0.35,
+            "LarguraNicho": 0.13,
+            "ProfundidadeNicho": 0.075,
+            "AlturaNicho": 0.17,
+            "AnguloPortaFiltro": 0.0
+          },
+          "description": "Purificador de água compacto refrigerado por placa eletrônica, de bancada ou de parede, água natural e gelada; refil na lateral"
         }
       ]
     },
@@ -2625,9 +3491,9 @@
       "kind": "Plumbing",
       "mep": {
         "Fixture": {
-          "drain_units": 3,
-          "supply_weight": 0.7,
-          "hot_water": false
+          "drain_units": 3.0,
+          "hot_water": false,
+          "supply_weight": 0.7
         }
       },
       "parameters": [
@@ -2657,14 +3523,65 @@
       ]
     },
     {
+      "file": "components/plumbing/tanquinho.ccomp",
+      "component": "Tanquinho",
+      "kind": "Plumbing",
+      "mep": {
+        "Fixture": {
+          "drain_units": 3.0,
+          "hot_water": false,
+          "supply_weight": 1.0
+        }
+      },
+      "parameters": [
+        "Largura",
+        "Profundidade",
+        "Altura",
+        "AlturaPainel",
+        "DiametroCesto",
+        "AlturaCesto",
+        "AnguloTampa"
+      ],
+      "types": [
+        {
+          "name": "Tanquinho 10 kg",
+          "values": {
+            "Largura": 0.52,
+            "Profundidade": 0.55,
+            "Altura": 0.9,
+            "AlturaPainel": 0.1,
+            "DiametroCesto": 0.4,
+            "AlturaCesto": 0.46,
+            "AnguloTampa": 0.0
+          },
+          "description": "Lavadora semiautomática (tanquinho) de 10 kg, 52 x 55 x 90 cm, batedor central e timer; ponto de água fria e esgoto; TUG"
+        },
+        {
+          "name": "Tanquinho 15 kg",
+          "values": {
+            "Largura": 0.56,
+            "Profundidade": 0.6,
+            "Altura": 0.97,
+            "AlturaPainel": 0.1,
+            "DiametroCesto": 0.46,
+            "AlturaCesto": 0.52,
+            "AnguloTampa": 0.0
+          },
+          "description": "Lavadora semiautomática (tanquinho) de 15 kg, 56 x 60 x 97 cm, batedor central e timer; ponto de água fria e esgoto; TUG"
+        }
+      ]
+    },
+    {
       "file": "components/windows/janela-abrir.ccomp",
-      "component": "Janela de abrir",
+      "component": "Janela de abrir de madeira",
       "kind": "Window",
       "mep": null,
       "parameters": [
         "Largura",
         "Altura",
-        "Peitoril"
+        "Peitoril",
+        "AnguloFolhaEsquerda",
+        "AnguloFolhaDireita"
       ],
       "types": [
         {
@@ -2672,7 +3589,9 @@
           "values": {
             "Largura": 1.0,
             "Altura": 1.0,
-            "Peitoril": 1.1
+            "Peitoril": 1.1,
+            "AnguloFolhaEsquerda": 0.0,
+            "AnguloFolhaDireita": 0.0
           },
           "description": "Janela de abrir de duas folhas, madeira e vidro"
         },
@@ -2681,7 +3600,9 @@
           "values": {
             "Largura": 1.2,
             "Altura": 1.2,
-            "Peitoril": 1.0
+            "Peitoril": 1.0,
+            "AnguloFolhaEsquerda": 0.0,
+            "AnguloFolhaDireita": 0.0
           },
           "description": "Janela de abrir de duas folhas, madeira e vidro"
         },
@@ -2690,7 +3611,9 @@
           "values": {
             "Largura": 1.5,
             "Altura": 1.2,
-            "Peitoril": 1.0
+            "Peitoril": 1.0,
+            "AnguloFolhaEsquerda": 0.0,
+            "AnguloFolhaDireita": 0.0
           },
           "description": "Janela de abrir de duas folhas, madeira e vidro"
         }
@@ -2704,7 +3627,8 @@
       "parameters": [
         "Largura",
         "Altura",
-        "Peitoril"
+        "Peitoril",
+        "AnguloAbertura"
       ],
       "types": [
         {
@@ -2712,7 +3636,8 @@
           "values": {
             "Largura": 0.6,
             "Altura": 0.4,
-            "Peitoril": 1.7
+            "Peitoril": 1.7,
+            "AnguloAbertura": 0.0
           },
           "description": "Janela basculante de alumínio e vidro, três básculas, para banheiro ou área de serviço"
         },
@@ -2721,7 +3646,8 @@
           "values": {
             "Largura": 0.6,
             "Altura": 0.6,
-            "Peitoril": 1.5
+            "Peitoril": 1.5,
+            "AnguloAbertura": 0.0
           },
           "description": "Janela basculante de alumínio e vidro, três básculas, para banheiro ou área de serviço"
         },
@@ -2730,7 +3656,8 @@
           "values": {
             "Largura": 1.0,
             "Altura": 0.4,
-            "Peitoril": 1.7
+            "Peitoril": 1.7,
+            "AnguloAbertura": 0.0
           },
           "description": "Janela basculante de alumínio e vidro, três básculas, para banheiro ou área de serviço"
         }
@@ -2738,13 +3665,14 @@
     },
     {
       "file": "components/windows/janela-correr.ccomp",
-      "component": "Janela de correr",
+      "component": "Janela de correr de alumínio",
       "kind": "Window",
       "mep": null,
       "parameters": [
         "Largura",
         "Altura",
-        "Peitoril"
+        "Peitoril",
+        "Abertura"
       ],
       "types": [
         {
@@ -2752,7 +3680,8 @@
           "values": {
             "Largura": 1.0,
             "Altura": 1.0,
-            "Peitoril": 1.1
+            "Peitoril": 1.1,
+            "Abertura": 0.0
           },
           "description": "Janela de correr de duas folhas, alumínio"
         },
@@ -2761,7 +3690,8 @@
           "values": {
             "Largura": 1.2,
             "Altura": 1.2,
-            "Peitoril": 1.0
+            "Peitoril": 1.0,
+            "Abertura": 0.0
           },
           "description": "Janela de correr de duas folhas, alumínio"
         },
@@ -2770,7 +3700,8 @@
           "values": {
             "Largura": 1.5,
             "Altura": 1.2,
-            "Peitoril": 1.0
+            "Peitoril": 1.0,
+            "Abertura": 0.0
           },
           "description": "Janela de correr de duas folhas, alumínio"
         },
@@ -2779,7 +3710,8 @@
           "values": {
             "Largura": 2.0,
             "Altura": 1.2,
-            "Peitoril": 1.0
+            "Peitoril": 1.0,
+            "Abertura": 0.0
           },
           "description": "Janela de correr de duas folhas, alumínio"
         }
@@ -2877,7 +3809,9 @@
       "parameters": [
         "Largura",
         "Altura",
-        "Peitoril"
+        "Peitoril",
+        "AberturaVeneziana",
+        "AberturaVidro"
       ],
       "types": [
         {
@@ -2885,7 +3819,9 @@
           "values": {
             "Largura": 1.2,
             "Altura": 1.2,
-            "Peitoril": 1.0
+            "Peitoril": 1.0,
+            "AberturaVeneziana": 0.0,
+            "AberturaVidro": 0.0
           },
           "description": "Janela de correr de quatro folhas, duas venezianas e duas de vidro, para dormitório"
         },
@@ -2894,7 +3830,9 @@
           "values": {
             "Largura": 1.5,
             "Altura": 1.2,
-            "Peitoril": 1.0
+            "Peitoril": 1.0,
+            "AberturaVeneziana": 0.0,
+            "AberturaVidro": 0.0
           },
           "description": "Janela de correr de quatro folhas, duas venezianas e duas de vidro, para dormitório"
         },
@@ -2903,7 +3841,9 @@
           "values": {
             "Largura": 2.0,
             "Altura": 1.2,
-            "Peitoril": 1.0
+            "Peitoril": 1.0,
+            "AberturaVeneziana": 0.0,
+            "AberturaVidro": 0.0
           },
           "description": "Janela de correr de quatro folhas, duas venezianas e duas de vidro, para dormitório"
         }

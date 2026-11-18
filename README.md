@@ -31,11 +31,11 @@ Each file holds one component with several types (sizes). Types share the geomet
 
 | Folder | Contents |
 |---|---|
-| [`furniture`](components/furniture) | Tables, chairs, beds, sofas, desks, nightstands |
-| [`casework`](components/casework) | Wardrobes, kitchen base and wall cabinets, shelving |
-| [`plumbing`](components/plumbing) | Toilets, basins, sinks, showers, laundry tubs, washing machines, bathtubs, urinals, bidets, water tanks, inspection and grease boxes |
+| [`furniture`](components/furniture) | Tables (dining and coffee), chairs, armchairs, beds, bunk beds, sofas, desks, nightstands, TV racks, split air conditioners, kitchen and laundry appliances (refrigerator, range, cooktop, oven, microwave, dishwasher, range hoods, small appliances, dryer), shower enclosures, towel rails |
+| [`casework`](components/casework) | Wardrobes, chests of drawers, kitchen base and wall cabinets, shelving, mirror cabinets |
+| [`plumbing`](components/plumbing) | Toilets, basins, sinks, showers, laundry tubs, washing machines, bathtubs, urinals, bidets, vanity units, bidet sprayers, gas water heaters, water purifiers, water tanks, inspection and grease boxes |
 | [`electrical`](components/electrical) | General and dedicated outlets, shower points, switches, distribution boards, data/TV points |
-| [`lighting`](components/lighting) | Ceiling, pendant, recessed, linear and wall lights |
+| [`lighting`](components/lighting) | Ceiling, pendant, recessed, linear and wall lights, ceiling fans with light |
 | [`planting`](components/planting) | Trees, conifers, palms, shrubs and potted plants for landscaping |
 | [`doors`](components/doors) | Single and double swing, pivot, folding, glass and sliding doors, glazed sliding doors, garage doors |
 | [`windows`](components/windows) | Sliding (also with shutters), casement, awning, hopper and fixed windows |
@@ -57,7 +57,7 @@ The planting sources are generated: [`tools/vegetation.py`](tools/vegetation.py)
 
 ## Compatibility
 
-`.ccomp` format version 1, built with ConstructCraft 0.12.0. Files load in ConstructCraft 0.6.0 and later (doors and windows need 0.6.0; in 0.5.0 the other components load without their connectors).
+`.ccomp` format version 1, built with ConstructCraft 0.12.0. The detailed components (pieces shown by detail level, Blend and Sweep shapes), which are all but the planting ones, need ConstructCraft 0.12.0; the planting components load in ConstructCraft 0.6.0 and later.
 
 ## License
 

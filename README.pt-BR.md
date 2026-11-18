@@ -31,11 +31,11 @@ Cada arquivo traz um componente com vários tipos (tamanhos). Os tipos compartil
 
 | Pasta | Conteúdo |
 |---|---|
-| [`furniture`](components/furniture) | Mesas, cadeiras, camas, sofás, escrivaninhas, criados-mudos |
-| [`casework`](components/casework) | Guarda-roupas, balcões e aéreos de cozinha, estantes |
-| [`plumbing`](components/plumbing) | Bacias, lavatórios, pias, chuveiros, tanques, máquinas de lavar, banheiras, mictórios, bidês, caixas d'água, caixas de inspeção e de gordura |
+| [`furniture`](components/furniture) | Mesas (de jantar e de centro), cadeiras, poltronas, camas, beliches, sofás, escrivaninhas, criados-mudos, racks de TV, ar-condicionado split, eletrodomésticos de cozinha e lavanderia (geladeira, fogão, cooktop, forno, micro-ondas, lava-louças, coifa e depurador, eletroportáteis, secadora), box de vidro, toalheiros |
+| [`casework`](components/casework) | Guarda-roupas, cômodas, balcões e aéreos de cozinha, estantes, espelheiras |
+| [`plumbing`](components/plumbing) | Bacias, lavatórios, pias, chuveiros, tanques, máquinas de lavar, banheiras, mictórios, bidês, gabinetes com cuba, duchas higiênicas, aquecedores a gás, purificadores de água, caixas d'água, caixas de inspeção e de gordura |
 | [`electrical`](components/electrical) | TUGs, TUEs, pontos de chuveiro, interruptores, quadros de distribuição, pontos de dados e TV |
-| [`lighting`](components/lighting) | Plafons, pendentes, spots, luminárias lineares e arandelas |
+| [`lighting`](components/lighting) | Plafons, pendentes, spots, luminárias lineares, arandelas e ventiladores de teto com luminária |
 | [`planting`](components/planting) | Árvores, coníferas, palmeiras, arbustos e vasos com planta para paisagismo |
 | [`doors`](components/doors) | Portas de abrir de uma e duas folhas, pivotante, camarão, de vidro temperado, de correr simples e dupla, porta-janela de correr e portão basculante |
 | [`windows`](components/windows) | Janelas de correr (também com veneziana), de abrir, maxim-ar, basculante e fixa |
@@ -57,7 +57,7 @@ As fontes de paisagismo são geradas: [`tools/vegetation.py`](tools/vegetation.p
 
 ## Compatibilidade
 
-Formato `.ccomp` versão 1, gerado com o ConstructCraft 0.12.0. Os arquivos abrem no ConstructCraft 0.6.0 ou mais recente (portas e janelas exigem a 0.6.0; na 0.5.0 os demais componentes abrem sem os conectores).
+Formato `.ccomp` versão 1, gerado com o ConstructCraft 0.12.0. Os componentes detalhados (peças por nível de detalhe, formas Blend e Sweep), que são todos menos os de paisagismo, exigem o ConstructCraft 0.12.0; os de paisagismo abrem no ConstructCraft 0.6.0 ou mais recente.
 
 ## Licença
 
