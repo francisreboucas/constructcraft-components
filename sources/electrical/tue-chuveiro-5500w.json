@@ -18,18 +18,1077 @@
     ],
     "items": [
       {
-        "name": "Corpo",
-        "material": "PVC",
-        "in_plan": true,
+        "name": "Volume simplificado",
         "shape": {
           "Box": {
-            "x": "-Largura / 2",
+            "x": "-(Largura/2)",
             "y": "-0.03",
             "z": "0",
             "width": "Largura",
             "depth": "0.03",
             "height": "Altura"
           }
+        },
+        "material": "Branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Caixa de embutir - fundo",
+        "shape": {
+          "Box": {
+            "x": "-(Largura/2) + 0.005",
+            "y": "0.044",
+            "z": "0.005",
+            "width": "Largura - 0.01",
+            "depth": "0.002",
+            "height": "Altura - 0.01"
+          }
+        },
+        "material": "PVC amarelo",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Caixa de embutir - lateral esquerda",
+        "shape": {
+          "Box": {
+            "x": "-(Largura/2) + 0.005",
+            "y": "0",
+            "z": "0.005",
+            "width": "0.002",
+            "depth": "0.044",
+            "height": "Altura - 0.01"
+          }
+        },
+        "material": "PVC amarelo",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Caixa de embutir - lateral direita",
+        "shape": {
+          "Box": {
+            "x": "(Largura/2) - 0.007",
+            "y": "0",
+            "z": "0.005",
+            "width": "0.002",
+            "depth": "0.044",
+            "height": "Altura - 0.01"
+          }
+        },
+        "material": "PVC amarelo",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Caixa de embutir - base",
+        "shape": {
+          "Box": {
+            "x": "-(Largura/2) + 0.007",
+            "y": "0",
+            "z": "0.005",
+            "width": "Largura - 0.014",
+            "depth": "0.044",
+            "height": "0.002"
+          }
+        },
+        "material": "PVC amarelo",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Caixa de embutir - topo",
+        "shape": {
+          "Box": {
+            "x": "-(Largura/2) + 0.007",
+            "y": "0",
+            "z": "Altura - 0.007",
+            "width": "Largura - 0.014",
+            "depth": "0.044",
+            "height": "0.002"
+          }
+        },
+        "material": "PVC amarelo",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Caixa de embutir - entrada de eletroduto superior",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0.028",
+            "z": "Altura - 0.005",
+            "radius": "0.0105",
+            "height": "0.0006"
+          }
+        },
+        "material": "PVC amarelo",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Caixa de embutir - entrada de eletroduto inferior",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0.028",
+            "z": "0.005 - 0.0006",
+            "radius": "0.0105",
+            "height": "0.0006"
+          }
+        },
+        "material": "PVC amarelo",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Caixa de embutir - entrada de eletroduto do fundo",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0",
+                "v": "0.046"
+              },
+              {
+                "u": "0 + 0.0105",
+                "v": "0.046"
+              },
+              {
+                "u": "0 + 0.0105",
+                "v": "0.046 + 0.0006"
+              },
+              {
+                "u": "0",
+                "v": "0.046 + 0.0006"
+              }
+            ],
+            "offset": "Altura/2",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "PVC amarelo",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(-(Largura/2) + 0.003) + 0.004",
+                "v": "0.003"
+              },
+              {
+                "u": "((Largura/2) - 0.003) - 0.004",
+                "v": "0.003",
+                "radius": "0.004"
+              },
+              {
+                "u": "(Largura/2) - 0.003",
+                "v": "0.003 + 0.004"
+              },
+              {
+                "u": "(Largura/2) - 0.003",
+                "v": "(Altura - 0.003) - 0.004",
+                "radius": "0.004"
+              },
+              {
+                "u": "((Largura/2) - 0.003) - 0.004",
+                "v": "Altura - 0.003"
+              },
+              {
+                "u": "(-(Largura/2) + 0.003) + 0.004",
+                "v": "Altura - 0.003",
+                "radius": "0.004"
+              },
+              {
+                "u": "-(Largura/2) + 0.003",
+                "v": "(Altura - 0.003) - 0.004"
+              },
+              {
+                "u": "-(Largura/2) + 0.003",
+                "v": "0.003 + 0.004",
+                "radius": "0.004"
+              }
+            ],
+            "offset": "-0.0015",
+            "depth": "0.0015"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Placa",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(-(Largura/2)) + 0.006",
+                "v": "0"
+              },
+              {
+                "u": "((Largura/2)) - 0.006",
+                "v": "0",
+                "radius": "0.006"
+              },
+              {
+                "u": "(Largura/2)",
+                "v": "0 + 0.006"
+              },
+              {
+                "u": "(Largura/2)",
+                "v": "Altura - 0.006",
+                "radius": "0.006"
+              },
+              {
+                "u": "((Largura/2)) - 0.006",
+                "v": "Altura"
+              },
+              {
+                "u": "(-(Largura/2)) + 0.006",
+                "v": "Altura",
+                "radius": "0.006"
+              },
+              {
+                "u": "-(Largura/2)",
+                "v": "Altura - 0.006"
+              },
+              {
+                "u": "-(Largura/2)",
+                "v": "0 + 0.006",
+                "radius": "0.006"
+              }
+            ],
+            "offset": "-0.0065",
+            "depth": "0.005"
+          }
+        },
+        "material": "Branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Placa - ressalto frontal",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(-(Largura/2) + 0.0012) + 0.005",
+                "v": "0.0012"
+              },
+              {
+                "u": "((Largura/2) - 0.0012) - 0.005",
+                "v": "0.0012",
+                "radius": "0.005"
+              },
+              {
+                "u": "(Largura/2) - 0.0012",
+                "v": "0.0012 + 0.005"
+              },
+              {
+                "u": "(Largura/2) - 0.0012",
+                "v": "(Altura - 0.0012) - 0.005",
+                "radius": "0.005"
+              },
+              {
+                "u": "((Largura/2) - 0.0012) - 0.005",
+                "v": "Altura - 0.0012"
+              },
+              {
+                "u": "(-(Largura/2) + 0.0012) + 0.005",
+                "v": "Altura - 0.0012",
+                "radius": "0.005"
+              },
+              {
+                "u": "-(Largura/2) + 0.0012",
+                "v": "(Altura - 0.0012) - 0.005"
+              },
+              {
+                "u": "-(Largura/2) + 0.0012",
+                "v": "0.0012 + 0.005",
+                "radius": "0.005"
+              }
+            ],
+            "offset": "-0.008",
+            "depth": "0.0015"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa do parafuso inferior",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(-0.005) + 0.0015",
+                "v": "0.0075 - 0.0022"
+              },
+              {
+                "u": "0.005 - 0.0015",
+                "v": "0.0075 - 0.0022",
+                "radius": "0.0015"
+              },
+              {
+                "u": "0.005",
+                "v": "(0.0075 - 0.0022) + 0.0015"
+              },
+              {
+                "u": "0.005",
+                "v": "(0.0075 + 0.0022) - 0.0015",
+                "radius": "0.0015"
+              },
+              {
+                "u": "0.005 - 0.0015",
+                "v": "0.0075 + 0.0022"
+              },
+              {
+                "u": "(-0.005) + 0.0015",
+                "v": "0.0075 + 0.0022",
+                "radius": "0.0015"
+              },
+              {
+                "u": "-0.005",
+                "v": "(0.0075 + 0.0022) - 0.0015"
+              },
+              {
+                "u": "-0.005",
+                "v": "(0.0075 - 0.0022) + 0.0015",
+                "radius": "0.0015"
+              }
+            ],
+            "offset": "-0.0084",
+            "depth": "0.0004"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa do parafuso superior",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(-0.005) + 0.0015",
+                "v": "Altura - 0.0075 - 0.0022"
+              },
+              {
+                "u": "0.005 - 0.0015",
+                "v": "Altura - 0.0075 - 0.0022",
+                "radius": "0.0015"
+              },
+              {
+                "u": "0.005",
+                "v": "(Altura - 0.0075 - 0.0022) + 0.0015"
+              },
+              {
+                "u": "0.005",
+                "v": "(Altura - 0.0075 + 0.0022) - 0.0015",
+                "radius": "0.0015"
+              },
+              {
+                "u": "0.005 - 0.0015",
+                "v": "Altura - 0.0075 + 0.0022"
+              },
+              {
+                "u": "(-0.005) + 0.0015",
+                "v": "Altura - 0.0075 + 0.0022",
+                "radius": "0.0015"
+              },
+              {
+                "u": "-0.005",
+                "v": "(Altura - 0.0075 + 0.0022) - 0.0015"
+              },
+              {
+                "u": "-0.005",
+                "v": "(Altura - 0.0075 - 0.0022) + 0.0015",
+                "radius": "0.0015"
+              }
+            ],
+            "offset": "-0.0084",
+            "depth": "0.0004"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída de cabo - bucha",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.0108",
+                "v": "-0.0108"
+              },
+              {
+                "u": "0.0138",
+                "v": "-0.0108"
+              },
+              {
+                "u": "0.0138",
+                "v": "-0.008"
+              },
+              {
+                "u": "0.0108",
+                "v": "-0.008"
+              }
+            ],
+            "offset": "(Altura/2 + 0.012)",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída de cabo - interior",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0",
+                "v": "-0.0083"
+              },
+              {
+                "u": "0 + 0.0108",
+                "v": "-0.0083"
+              },
+              {
+                "u": "0 + 0.0108",
+                "v": "(-0.0083) + 0.0003"
+              },
+              {
+                "u": "0",
+                "v": "(-0.0083) + 0.0003"
+              }
+            ],
+            "offset": "(Altura/2 + 0.012)",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Condutor fase 1 - saída",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-0.0075",
+                "v": "-0.0226"
+              },
+              {
+                "u": "(-0.0075) + 0.0021",
+                "v": "-0.0226"
+              },
+              {
+                "u": "(-0.0075) + 0.0021",
+                "v": "(-0.0226) + 0.0146"
+              },
+              {
+                "u": "-0.0075",
+                "v": "(-0.0226) + 0.0146"
+              }
+            ],
+            "offset": "(Altura/2 + 0.012)",
+            "axis": "-0.0075",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Condutor fase 1 - descida",
+        "shape": {
+          "Cylinder": {
+            "x": "-0.0075",
+            "y": "-0.0205",
+            "z": "((Altura/2 + 0.012) - 0.022) - 0.004",
+            "radius": "0.0021",
+            "height": "0.026 + 0.0021"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Conector cerâmico - entrada fase 1",
+        "shape": {
+          "Cylinder": {
+            "x": "-0.0075",
+            "y": "-0.0205",
+            "z": "((Altura/2 + 0.012) - 0.022) - 0.024 - 0.0004",
+            "radius": "0.0026",
+            "height": "0.0004"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Conector cerâmico - parafuso fase 1 1",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-0.0075",
+                "v": "-0.0282"
+              },
+              {
+                "u": "(-0.0075) + 0.0021",
+                "v": "-0.0282"
+              },
+              {
+                "u": "(-0.0075) + 0.0021",
+                "v": "(-0.0282) + 0.0008"
+              },
+              {
+                "u": "-0.0075",
+                "v": "(-0.0282) + 0.0008"
+              }
+            ],
+            "offset": "((Altura/2 + 0.012) - 0.022) - 0.006",
+            "axis": "-0.0075",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Conector cerâmico - parafuso fase 1 2",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-0.0075",
+                "v": "-0.0282"
+              },
+              {
+                "u": "(-0.0075) + 0.0021",
+                "v": "-0.0282"
+              },
+              {
+                "u": "(-0.0075) + 0.0021",
+                "v": "(-0.0282) + 0.0008"
+              },
+              {
+                "u": "-0.0075",
+                "v": "(-0.0282) + 0.0008"
+              }
+            ],
+            "offset": "((Altura/2 + 0.012) - 0.022) - 0.018000000000000002",
+            "axis": "-0.0075",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Condutor fase 2 - saída",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0",
+                "v": "-0.0226"
+              },
+              {
+                "u": "0 + 0.0021",
+                "v": "-0.0226"
+              },
+              {
+                "u": "0 + 0.0021",
+                "v": "(-0.0226) + 0.0146"
+              },
+              {
+                "u": "0",
+                "v": "(-0.0226) + 0.0146"
+              }
+            ],
+            "offset": "(Altura/2 + 0.012)",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico vermelho",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Condutor fase 2 - descida",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "-0.0205",
+            "z": "((Altura/2 + 0.012) - 0.022) - 0.004",
+            "radius": "0.0021",
+            "height": "0.026 + 0.0021"
+          }
+        },
+        "material": "Plástico vermelho",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Conector cerâmico - entrada fase 2",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "-0.0205",
+            "z": "((Altura/2 + 0.012) - 0.022) - 0.024 - 0.0004",
+            "radius": "0.0026",
+            "height": "0.0004"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Conector cerâmico - parafuso fase 2 1",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0",
+                "v": "-0.0282"
+              },
+              {
+                "u": "0 + 0.0021",
+                "v": "-0.0282"
+              },
+              {
+                "u": "0 + 0.0021",
+                "v": "(-0.0282) + 0.0008"
+              },
+              {
+                "u": "0",
+                "v": "(-0.0282) + 0.0008"
+              }
+            ],
+            "offset": "((Altura/2 + 0.012) - 0.022) - 0.006",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Conector cerâmico - parafuso fase 2 2",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0",
+                "v": "-0.0282"
+              },
+              {
+                "u": "0 + 0.0021",
+                "v": "-0.0282"
+              },
+              {
+                "u": "0 + 0.0021",
+                "v": "(-0.0282) + 0.0008"
+              },
+              {
+                "u": "0",
+                "v": "(-0.0282) + 0.0008"
+              }
+            ],
+            "offset": "((Altura/2 + 0.012) - 0.022) - 0.018000000000000002",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Condutor terra - saída",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.0075",
+                "v": "-0.0226"
+              },
+              {
+                "u": "0.0075 + 0.0021",
+                "v": "-0.0226"
+              },
+              {
+                "u": "0.0075 + 0.0021",
+                "v": "(-0.0226) + 0.0146"
+              },
+              {
+                "u": "0.0075",
+                "v": "(-0.0226) + 0.0146"
+              }
+            ],
+            "offset": "(Altura/2 + 0.012)",
+            "axis": "0.0075",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico verde",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Condutor terra - descida",
+        "shape": {
+          "Cylinder": {
+            "x": "0.0075",
+            "y": "-0.0205",
+            "z": "((Altura/2 + 0.012) - 0.022) - 0.004",
+            "radius": "0.0021",
+            "height": "0.026 + 0.0021"
+          }
+        },
+        "material": "Plástico verde",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Conector cerâmico - entrada terra",
+        "shape": {
+          "Cylinder": {
+            "x": "0.0075",
+            "y": "-0.0205",
+            "z": "((Altura/2 + 0.012) - 0.022) - 0.024 - 0.0004",
+            "radius": "0.0026",
+            "height": "0.0004"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Conector cerâmico - parafuso terra 1",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.0075",
+                "v": "-0.0282"
+              },
+              {
+                "u": "0.0075 + 0.0021",
+                "v": "-0.0282"
+              },
+              {
+                "u": "0.0075 + 0.0021",
+                "v": "(-0.0282) + 0.0008"
+              },
+              {
+                "u": "0.0075",
+                "v": "(-0.0282) + 0.0008"
+              }
+            ],
+            "offset": "((Altura/2 + 0.012) - 0.022) - 0.006",
+            "axis": "0.0075",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Conector cerâmico - parafuso terra 2",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.0075",
+                "v": "-0.0282"
+              },
+              {
+                "u": "0.0075 + 0.0021",
+                "v": "-0.0282"
+              },
+              {
+                "u": "0.0075 + 0.0021",
+                "v": "(-0.0282) + 0.0008"
+              },
+              {
+                "u": "0.0075",
+                "v": "(-0.0282) + 0.0008"
+              }
+            ],
+            "offset": "((Altura/2 + 0.012) - 0.022) - 0.018000000000000002",
+            "axis": "0.0075",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Conector cerâmico",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(-0.0125) + 0.002",
+                "v": "((Altura/2 + 0.012) - 0.022) - 0.024"
+              },
+              {
+                "u": "0.0125 - 0.002",
+                "v": "((Altura/2 + 0.012) - 0.022) - 0.024",
+                "radius": "0.002"
+              },
+              {
+                "u": "0.0125",
+                "v": "(((Altura/2 + 0.012) - 0.022) - 0.024) + 0.002"
+              },
+              {
+                "u": "0.0125",
+                "v": "(((Altura/2 + 0.012) - 0.022)) - 0.002",
+                "radius": "0.002"
+              },
+              {
+                "u": "0.0125 - 0.002",
+                "v": "((Altura/2 + 0.012) - 0.022)"
+              },
+              {
+                "u": "(-0.0125) + 0.002",
+                "v": "((Altura/2 + 0.012) - 0.022)",
+                "radius": "0.002"
+              },
+              {
+                "u": "-0.0125",
+                "v": "(((Altura/2 + 0.012) - 0.022)) - 0.002"
+              },
+              {
+                "u": "-0.0125",
+                "v": "(((Altura/2 + 0.012) - 0.022) - 0.024) + 0.002",
+                "radius": "0.002"
+              }
+            ],
+            "offset": "-0.0276",
+            "depth": "0.0142"
+          }
+        },
+        "material": "Louça",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Conector cerâmico - sulco 1",
+        "shape": {
+          "Box": {
+            "x": "-0.00415",
+            "y": "-0.0278",
+            "z": "((Altura/2 + 0.012) - 0.022) - 0.024 + 0.001",
+            "width": "0.0008",
+            "depth": "0.0002",
+            "height": "0.024 - 0.002"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Conector cerâmico - sulco 2",
+        "shape": {
+          "Box": {
+            "x": "0.00335",
+            "y": "-0.0278",
+            "z": "((Altura/2 + 0.012) - 0.022) - 0.024 + 0.001",
+            "width": "0.0008",
+            "depth": "0.0002",
+            "height": "0.024 - 0.002"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
         }
       }
     ],
@@ -57,6 +1116,96 @@
       "info": {
         "description": "Ponto para chuveiro elétrico 220 V; circuito exclusivo"
       }
+    }
+  ],
+  "materials": [
+    {
+      "name": "Branco",
+      "color": [
+        244,
+        244,
+        240
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "PVC amarelo",
+      "color": [
+        226,
+        186,
+        52
+      ],
+      "class": "Plastic",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico cinza claro",
+      "color": [
+        196,
+        198,
+        200
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico preto",
+      "color": [
+        34,
+        34,
+        37
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Latão",
+      "color": [
+        192,
+        160,
+        84
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico vermelho",
+      "color": [
+        196,
+        56,
+        48
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico verde",
+      "color": [
+        60,
+        160,
+        90
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico cinza",
+      "color": [
+        120,
+        122,
+        126
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
     }
   ]
 }

@@ -1,6 +1,6 @@
 (
   format_version: 1,
-  generator: "ConstructCAD 0.9.0",
+  generator: "ConstructCraft 0.12.0",
   component: "Ponto de telecomunicações",
   def: (
     kind: Electrical,
@@ -17,20 +17,1322 @@
         kind: Length,
         instance: false,
       ),
+      (
+        name: "RJ45",
+        value: 1.0,
+        kind: Number,
+        instance: false,
+      ),
+      (
+        name: "TV",
+        value: 0.0,
+        kind: Number,
+        instance: false,
+      ),
     ],
     items: [
       (
-        name: "Corpo",
+        name: "Volume simplificado",
         shape: Box(
-          x: "-Largura / 2",
+          x: "-(Largura/2)",
           y: "-0.03",
           z: "0",
           width: "Largura",
           depth: "0.03",
           height: "Altura",
         ),
-        material: "PVC",
+        material: "Branco",
         in_plan: true,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
+      ),
+      (
+        name: "Caixa de embutir - fundo",
+        shape: Box(
+          x: "-(Largura/2) + 0.005",
+          y: "0.044",
+          z: "0.005",
+          width: "Largura - 0.01",
+          depth: "0.002",
+          height: "Altura - 0.01",
+        ),
+        material: "PVC amarelo",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Caixa de embutir - lateral esquerda",
+        shape: Box(
+          x: "-(Largura/2) + 0.005",
+          y: "0",
+          z: "0.005",
+          width: "0.002",
+          depth: "0.044",
+          height: "Altura - 0.01",
+        ),
+        material: "PVC amarelo",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Caixa de embutir - lateral direita",
+        shape: Box(
+          x: "(Largura/2) - 0.007",
+          y: "0",
+          z: "0.005",
+          width: "0.002",
+          depth: "0.044",
+          height: "Altura - 0.01",
+        ),
+        material: "PVC amarelo",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Caixa de embutir - base",
+        shape: Box(
+          x: "-(Largura/2) + 0.007",
+          y: "0",
+          z: "0.005",
+          width: "Largura - 0.014",
+          depth: "0.044",
+          height: "0.002",
+        ),
+        material: "PVC amarelo",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Caixa de embutir - topo",
+        shape: Box(
+          x: "-(Largura/2) + 0.007",
+          y: "0",
+          z: "Altura - 0.007",
+          width: "Largura - 0.014",
+          depth: "0.044",
+          height: "0.002",
+        ),
+        material: "PVC amarelo",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Caixa de embutir - entrada de eletroduto superior",
+        shape: Cylinder(
+          x: "0",
+          y: "0.028",
+          z: "Altura - 0.005",
+          radius: "0.0105",
+          height: "0.0006",
+        ),
+        material: "PVC amarelo",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Caixa de embutir - entrada de eletroduto inferior",
+        shape: Cylinder(
+          x: "0",
+          y: "0.028",
+          z: "0.005 - 0.0006",
+          radius: "0.0105",
+          height: "0.0006",
+        ),
+        material: "PVC amarelo",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Caixa de embutir - entrada de eletroduto do fundo",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "0",
+              v: "0.046",
+            ),
+            (
+              u: "0 + 0.0105",
+              v: "0.046",
+            ),
+            (
+              u: "0 + 0.0105",
+              v: "0.046 + 0.0006",
+            ),
+            (
+              u: "0",
+              v: "0.046 + 0.0006",
+            ),
+          ],
+          offset: "Altura/2",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "PVC amarelo",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Suporte",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "(-(Largura/2) + 0.003) + 0.004",
+              v: "0.003",
+            ),
+            (
+              u: "((Largura/2) - 0.003) - 0.004",
+              v: "0.003",
+              radius: "0.004",
+            ),
+            (
+              u: "(Largura/2) - 0.003",
+              v: "0.003 + 0.004",
+            ),
+            (
+              u: "(Largura/2) - 0.003",
+              v: "(Altura - 0.003) - 0.004",
+              radius: "0.004",
+            ),
+            (
+              u: "((Largura/2) - 0.003) - 0.004",
+              v: "Altura - 0.003",
+            ),
+            (
+              u: "(-(Largura/2) + 0.003) + 0.004",
+              v: "Altura - 0.003",
+              radius: "0.004",
+            ),
+            (
+              u: "-(Largura/2) + 0.003",
+              v: "(Altura - 0.003) - 0.004",
+            ),
+            (
+              u: "-(Largura/2) + 0.003",
+              v: "0.003 + 0.004",
+              radius: "0.004",
+            ),
+          ],
+          offset: "-0.0015",
+          depth: "0.0015",
+        ),
+        material: "Plástico cinza claro",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Placa",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "(-(Largura/2)) + 0.006",
+              v: "0",
+            ),
+            (
+              u: "((Largura/2)) - 0.006",
+              v: "0",
+              radius: "0.006",
+            ),
+            (
+              u: "(Largura/2)",
+              v: "0 + 0.006",
+            ),
+            (
+              u: "(Largura/2)",
+              v: "Altura - 0.006",
+              radius: "0.006",
+            ),
+            (
+              u: "((Largura/2)) - 0.006",
+              v: "Altura",
+            ),
+            (
+              u: "(-(Largura/2)) + 0.006",
+              v: "Altura",
+              radius: "0.006",
+            ),
+            (
+              u: "-(Largura/2)",
+              v: "Altura - 0.006",
+            ),
+            (
+              u: "-(Largura/2)",
+              v: "0 + 0.006",
+              radius: "0.006",
+            ),
+          ],
+          offset: "-0.0065",
+          depth: "0.005",
+        ),
+        material: "Branco",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Placa - ressalto frontal",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "(-(Largura/2) + 0.0012) + 0.005",
+              v: "0.0012",
+            ),
+            (
+              u: "((Largura/2) - 0.0012) - 0.005",
+              v: "0.0012",
+              radius: "0.005",
+            ),
+            (
+              u: "(Largura/2) - 0.0012",
+              v: "0.0012 + 0.005",
+            ),
+            (
+              u: "(Largura/2) - 0.0012",
+              v: "(Altura - 0.0012) - 0.005",
+              radius: "0.005",
+            ),
+            (
+              u: "((Largura/2) - 0.0012) - 0.005",
+              v: "Altura - 0.0012",
+            ),
+            (
+              u: "(-(Largura/2) + 0.0012) + 0.005",
+              v: "Altura - 0.0012",
+              radius: "0.005",
+            ),
+            (
+              u: "-(Largura/2) + 0.0012",
+              v: "(Altura - 0.0012) - 0.005",
+            ),
+            (
+              u: "-(Largura/2) + 0.0012",
+              v: "0.0012 + 0.005",
+              radius: "0.005",
+            ),
+          ],
+          offset: "-0.008",
+          depth: "0.0015",
+        ),
+        material: "Branco",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Tampa do parafuso inferior",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "(-0.005) + 0.0015",
+              v: "0.0075 - 0.0022",
+            ),
+            (
+              u: "0.005 - 0.0015",
+              v: "0.0075 - 0.0022",
+              radius: "0.0015",
+            ),
+            (
+              u: "0.005",
+              v: "(0.0075 - 0.0022) + 0.0015",
+            ),
+            (
+              u: "0.005",
+              v: "(0.0075 + 0.0022) - 0.0015",
+              radius: "0.0015",
+            ),
+            (
+              u: "0.005 - 0.0015",
+              v: "0.0075 + 0.0022",
+            ),
+            (
+              u: "(-0.005) + 0.0015",
+              v: "0.0075 + 0.0022",
+              radius: "0.0015",
+            ),
+            (
+              u: "-0.005",
+              v: "(0.0075 + 0.0022) - 0.0015",
+            ),
+            (
+              u: "-0.005",
+              v: "(0.0075 - 0.0022) + 0.0015",
+              radius: "0.0015",
+            ),
+          ],
+          offset: "-0.0084",
+          depth: "0.0004",
+        ),
+        material: "Branco",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Tampa do parafuso superior",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "(-0.005) + 0.0015",
+              v: "Altura - 0.0075 - 0.0022",
+            ),
+            (
+              u: "0.005 - 0.0015",
+              v: "Altura - 0.0075 - 0.0022",
+              radius: "0.0015",
+            ),
+            (
+              u: "0.005",
+              v: "(Altura - 0.0075 - 0.0022) + 0.0015",
+            ),
+            (
+              u: "0.005",
+              v: "(Altura - 0.0075 + 0.0022) - 0.0015",
+              radius: "0.0015",
+            ),
+            (
+              u: "0.005 - 0.0015",
+              v: "Altura - 0.0075 + 0.0022",
+            ),
+            (
+              u: "(-0.005) + 0.0015",
+              v: "Altura - 0.0075 + 0.0022",
+              radius: "0.0015",
+            ),
+            (
+              u: "-0.005",
+              v: "(Altura - 0.0075 + 0.0022) - 0.0015",
+            ),
+            (
+              u: "-0.005",
+              v: "(Altura - 0.0075 - 0.0022) + 0.0015",
+              radius: "0.0015",
+            ),
+          ],
+          offset: "-0.0084",
+          depth: "0.0004",
+        ),
+        material: "Branco",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "RJ45",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "((-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (-0.0215)*(min(1, max(0.01, RJ45)))) + ((0.002)*(min(1, max(0.01, RJ45))))",
+              v: "(Altura/2) + (-0.0113)*(min(1, max(0.01, RJ45)))",
+            ),
+            (
+              u: "((-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (0.0215)*(min(1, max(0.01, RJ45)))) - ((0.002)*(min(1, max(0.01, RJ45))))",
+              v: "(Altura/2) + (-0.0113)*(min(1, max(0.01, RJ45)))",
+              radius: "(0.002)*(min(1, max(0.01, RJ45)))",
+            ),
+            (
+              u: "(-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (0.0215)*(min(1, max(0.01, RJ45)))",
+              v: "((Altura/2) + (-0.0113)*(min(1, max(0.01, RJ45)))) + ((0.002)*(min(1, max(0.01, RJ45))))",
+            ),
+            (
+              u: "(-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (0.0215)*(min(1, max(0.01, RJ45)))",
+              v: "((Altura/2) + (0.0113)*(min(1, max(0.01, RJ45)))) - ((0.002)*(min(1, max(0.01, RJ45))))",
+              radius: "(0.002)*(min(1, max(0.01, RJ45)))",
+            ),
+            (
+              u: "((-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (0.0215)*(min(1, max(0.01, RJ45)))) - ((0.002)*(min(1, max(0.01, RJ45))))",
+              v: "(Altura/2) + (0.0113)*(min(1, max(0.01, RJ45)))",
+            ),
+            (
+              u: "((-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (-0.0215)*(min(1, max(0.01, RJ45)))) + ((0.002)*(min(1, max(0.01, RJ45))))",
+              v: "(Altura/2) + (0.0113)*(min(1, max(0.01, RJ45)))",
+              radius: "(0.002)*(min(1, max(0.01, RJ45)))",
+            ),
+            (
+              u: "(-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (-0.0215)*(min(1, max(0.01, RJ45)))",
+              v: "((Altura/2) + (0.0113)*(min(1, max(0.01, RJ45)))) - ((0.002)*(min(1, max(0.01, RJ45))))",
+            ),
+            (
+              u: "(-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (-0.0215)*(min(1, max(0.01, RJ45)))",
+              v: "((Altura/2) + (-0.0113)*(min(1, max(0.01, RJ45)))) + ((0.002)*(min(1, max(0.01, RJ45))))",
+              radius: "(0.002)*(min(1, max(0.01, RJ45)))",
+            ),
+          ],
+          offset: "-0.004 + (-0.0055)*(min(1, max(0.01, RJ45)))",
+          depth: "(0.0015)*(min(1, max(0.01, RJ45)))",
+        ),
+        material: "Branco",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "RJ45 - conector",
+        shape: Box(
+          x: "(-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (-0.0085)*(min(1, max(0.01, RJ45)))",
+          y: "-0.004 + (0.004)*(min(1, max(0.01, RJ45)))",
+          z: "(Altura/2) + (-0.0095)*(min(1, max(0.01, RJ45)))",
+          width: "(0.017)*(min(1, max(0.01, RJ45)))",
+          depth: "(0.006)*(min(1, max(0.01, RJ45)))",
+          height: "(0.016)*(min(1, max(0.01, RJ45)))",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "RJ45 - corpo",
+        shape: Box(
+          x: "(-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (-0.0195)*(min(1, max(0.01, RJ45)))",
+          y: "-0.004 + (0.0115)*(min(1, max(0.01, RJ45)))",
+          z: "(Altura/2) + (-0.0105)*(min(1, max(0.01, RJ45)))",
+          width: "(0.039)*(min(1, max(0.01, RJ45)))",
+          depth: "(0.0225)*(min(1, max(0.01, RJ45)))",
+          height: "(0.021)*(min(1, max(0.01, RJ45)))",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "RJ45 - cavidade",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "(-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (-0.006)*(min(1, max(0.01, RJ45)))",
+              v: "(Altura/2) + (-0.005)*(min(1, max(0.01, RJ45)))",
+            ),
+            (
+              u: "(-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (-0.003)*(min(1, max(0.01, RJ45)))",
+              v: "(Altura/2) + (-0.005)*(min(1, max(0.01, RJ45)))",
+            ),
+            (
+              u: "(-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (-0.003)*(min(1, max(0.01, RJ45)))",
+              v: "(Altura/2) + (-0.007)*(min(1, max(0.01, RJ45)))",
+            ),
+            (
+              u: "(-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (0.003)*(min(1, max(0.01, RJ45)))",
+              v: "(Altura/2) + (-0.007)*(min(1, max(0.01, RJ45)))",
+            ),
+            (
+              u: "(-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (0.003)*(min(1, max(0.01, RJ45)))",
+              v: "(Altura/2) + (-0.005)*(min(1, max(0.01, RJ45)))",
+            ),
+            (
+              u: "(-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (0.006)*(min(1, max(0.01, RJ45)))",
+              v: "(Altura/2) + (-0.005)*(min(1, max(0.01, RJ45)))",
+            ),
+            (
+              u: "(-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (0.006)*(min(1, max(0.01, RJ45)))",
+              v: "(Altura/2) + (0.003)*(min(1, max(0.01, RJ45)))",
+            ),
+            (
+              u: "(-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (-0.006)*(min(1, max(0.01, RJ45)))",
+              v: "(Altura/2) + (0.003)*(min(1, max(0.01, RJ45)))",
+            ),
+          ],
+          offset: "-0.004 + (-0.0056)*(min(1, max(0.01, RJ45)))",
+          depth: "(0.0156)*(min(1, max(0.01, RJ45)))",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        void: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "RJ45 - fundo da cavidade",
+        shape: Box(
+          x: "(-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (-0.0065)*(min(1, max(0.01, RJ45)))",
+          y: "-0.004 + (0.01)*(min(1, max(0.01, RJ45)))",
+          z: "(Altura/2) + (-0.0075)*(min(1, max(0.01, RJ45)))",
+          width: "(0.013)*(min(1, max(0.01, RJ45)))",
+          depth: "(0.0015)*(min(1, max(0.01, RJ45)))",
+          height: "(0.0088)*(min(1, max(0.01, RJ45)))",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "RJ45 - contato 1",
+        shape: Box(
+          x: "(-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (-0.00473)*(min(1, max(0.01, RJ45)))",
+          y: "-0.004 + (0.01)*(min(1, max(0.01, RJ45)))",
+          z: "(Altura/2) + (0.0013)*(min(1, max(0.01, RJ45)))",
+          width: "(0.00056)*(min(1, max(0.01, RJ45)))",
+          depth: "(0.0015)*(min(1, max(0.01, RJ45)))",
+          height: "(0.0017)*(min(1, max(0.01, RJ45)))",
+        ),
+        material: "Latão",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "RJ45 - contato 2",
+        shape: Box(
+          x: "(-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (-0.00346)*(min(1, max(0.01, RJ45)))",
+          y: "-0.004 + (0.01)*(min(1, max(0.01, RJ45)))",
+          z: "(Altura/2) + (0.0013)*(min(1, max(0.01, RJ45)))",
+          width: "(0.00056)*(min(1, max(0.01, RJ45)))",
+          depth: "(0.0015)*(min(1, max(0.01, RJ45)))",
+          height: "(0.0017)*(min(1, max(0.01, RJ45)))",
+        ),
+        material: "Latão",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "RJ45 - contato 3",
+        shape: Box(
+          x: "(-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (-0.00219)*(min(1, max(0.01, RJ45)))",
+          y: "-0.004 + (0.01)*(min(1, max(0.01, RJ45)))",
+          z: "(Altura/2) + (0.0013)*(min(1, max(0.01, RJ45)))",
+          width: "(0.00056)*(min(1, max(0.01, RJ45)))",
+          depth: "(0.0015)*(min(1, max(0.01, RJ45)))",
+          height: "(0.0017)*(min(1, max(0.01, RJ45)))",
+        ),
+        material: "Latão",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "RJ45 - contato 4",
+        shape: Box(
+          x: "(-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (-0.00092)*(min(1, max(0.01, RJ45)))",
+          y: "-0.004 + (0.01)*(min(1, max(0.01, RJ45)))",
+          z: "(Altura/2) + (0.0013)*(min(1, max(0.01, RJ45)))",
+          width: "(0.00056)*(min(1, max(0.01, RJ45)))",
+          depth: "(0.0015)*(min(1, max(0.01, RJ45)))",
+          height: "(0.0017)*(min(1, max(0.01, RJ45)))",
+        ),
+        material: "Latão",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "RJ45 - contato 5",
+        shape: Box(
+          x: "(-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (0.00035)*(min(1, max(0.01, RJ45)))",
+          y: "-0.004 + (0.01)*(min(1, max(0.01, RJ45)))",
+          z: "(Altura/2) + (0.0013)*(min(1, max(0.01, RJ45)))",
+          width: "(0.00056)*(min(1, max(0.01, RJ45)))",
+          depth: "(0.0015)*(min(1, max(0.01, RJ45)))",
+          height: "(0.0017)*(min(1, max(0.01, RJ45)))",
+        ),
+        material: "Latão",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "RJ45 - contato 6",
+        shape: Box(
+          x: "(-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (0.00162)*(min(1, max(0.01, RJ45)))",
+          y: "-0.004 + (0.01)*(min(1, max(0.01, RJ45)))",
+          z: "(Altura/2) + (0.0013)*(min(1, max(0.01, RJ45)))",
+          width: "(0.00056)*(min(1, max(0.01, RJ45)))",
+          depth: "(0.0015)*(min(1, max(0.01, RJ45)))",
+          height: "(0.0017)*(min(1, max(0.01, RJ45)))",
+        ),
+        material: "Latão",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "RJ45 - contato 7",
+        shape: Box(
+          x: "(-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (0.00289)*(min(1, max(0.01, RJ45)))",
+          y: "-0.004 + (0.01)*(min(1, max(0.01, RJ45)))",
+          z: "(Altura/2) + (0.0013)*(min(1, max(0.01, RJ45)))",
+          width: "(0.00056)*(min(1, max(0.01, RJ45)))",
+          depth: "(0.0015)*(min(1, max(0.01, RJ45)))",
+          height: "(0.0017)*(min(1, max(0.01, RJ45)))",
+        ),
+        material: "Latão",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "RJ45 - contato 8",
+        shape: Box(
+          x: "(-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (0.00416)*(min(1, max(0.01, RJ45)))",
+          y: "-0.004 + (0.01)*(min(1, max(0.01, RJ45)))",
+          z: "(Altura/2) + (0.0013)*(min(1, max(0.01, RJ45)))",
+          width: "(0.00056)*(min(1, max(0.01, RJ45)))",
+          depth: "(0.0015)*(min(1, max(0.01, RJ45)))",
+          height: "(0.0017)*(min(1, max(0.01, RJ45)))",
+        ),
+        material: "Latão",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "RJ45 - tampa deslizante",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "((-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (-0.0068)*(min(1, max(0.01, RJ45)))) + ((0.0008)*(min(1, max(0.01, RJ45))))",
+              v: "(Altura/2) + (0.0039)*(min(1, max(0.01, RJ45)))",
+            ),
+            (
+              u: "((-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (0.0068)*(min(1, max(0.01, RJ45)))) - ((0.0008)*(min(1, max(0.01, RJ45))))",
+              v: "(Altura/2) + (0.0039)*(min(1, max(0.01, RJ45)))",
+              radius: "(0.0008)*(min(1, max(0.01, RJ45)))",
+            ),
+            (
+              u: "(-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (0.0068)*(min(1, max(0.01, RJ45)))",
+              v: "((Altura/2) + (0.0039)*(min(1, max(0.01, RJ45)))) + ((0.0008)*(min(1, max(0.01, RJ45))))",
+            ),
+            (
+              u: "(-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (0.0068)*(min(1, max(0.01, RJ45)))",
+              v: "((Altura/2) + (0.0097)*(min(1, max(0.01, RJ45)))) - ((0.0008)*(min(1, max(0.01, RJ45))))",
+              radius: "(0.0008)*(min(1, max(0.01, RJ45)))",
+            ),
+            (
+              u: "((-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (0.0068)*(min(1, max(0.01, RJ45)))) - ((0.0008)*(min(1, max(0.01, RJ45))))",
+              v: "(Altura/2) + (0.0097)*(min(1, max(0.01, RJ45)))",
+            ),
+            (
+              u: "((-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (-0.0068)*(min(1, max(0.01, RJ45)))) + ((0.0008)*(min(1, max(0.01, RJ45))))",
+              v: "(Altura/2) + (0.0097)*(min(1, max(0.01, RJ45)))",
+              radius: "(0.0008)*(min(1, max(0.01, RJ45)))",
+            ),
+            (
+              u: "(-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (-0.0068)*(min(1, max(0.01, RJ45)))",
+              v: "((Altura/2) + (0.0097)*(min(1, max(0.01, RJ45)))) - ((0.0008)*(min(1, max(0.01, RJ45))))",
+            ),
+            (
+              u: "(-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (-0.0068)*(min(1, max(0.01, RJ45)))",
+              v: "((Altura/2) + (0.0039)*(min(1, max(0.01, RJ45)))) + ((0.0008)*(min(1, max(0.01, RJ45))))",
+              radius: "(0.0008)*(min(1, max(0.01, RJ45)))",
+            ),
+          ],
+          offset: "-0.004 + (-0.0062)*(min(1, max(0.01, RJ45)))",
+          depth: "(0.0007)*(min(1, max(0.01, RJ45)))",
+        ),
+        material: "Plástico cinza claro",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "RJ45 - pega da tampa",
+        shape: Box(
+          x: "(-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (-0.004)*(min(1, max(0.01, RJ45)))",
+          y: "-0.004 + (-0.0067)*(min(1, max(0.01, RJ45)))",
+          z: "(Altura/2) + (0.0074)*(min(1, max(0.01, RJ45)))",
+          width: "(0.008)*(min(1, max(0.01, RJ45)))",
+          depth: "(0.0005)*(min(1, max(0.01, RJ45)))",
+          height: "(0.0008)*(min(1, max(0.01, RJ45)))",
+        ),
+        material: "Plástico cinza claro",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "RJ45 - etiqueta",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "((-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (-0.0173)*(min(1, max(0.01, RJ45)))) + ((0.0005)*(min(1, max(0.01, RJ45))))",
+              v: "(Altura/2) + (-0.002)*(min(1, max(0.01, RJ45)))",
+            ),
+            (
+              u: "((-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (-0.0117)*(min(1, max(0.01, RJ45)))) - ((0.0005)*(min(1, max(0.01, RJ45))))",
+              v: "(Altura/2) + (-0.002)*(min(1, max(0.01, RJ45)))",
+              radius: "(0.0005)*(min(1, max(0.01, RJ45)))",
+            ),
+            (
+              u: "(-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (-0.0117)*(min(1, max(0.01, RJ45)))",
+              v: "((Altura/2) + (-0.002)*(min(1, max(0.01, RJ45)))) + ((0.0005)*(min(1, max(0.01, RJ45))))",
+            ),
+            (
+              u: "(-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (-0.0117)*(min(1, max(0.01, RJ45)))",
+              v: "((Altura/2) + (0.002)*(min(1, max(0.01, RJ45)))) - ((0.0005)*(min(1, max(0.01, RJ45))))",
+              radius: "(0.0005)*(min(1, max(0.01, RJ45)))",
+            ),
+            (
+              u: "((-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (-0.0117)*(min(1, max(0.01, RJ45)))) - ((0.0005)*(min(1, max(0.01, RJ45))))",
+              v: "(Altura/2) + (0.002)*(min(1, max(0.01, RJ45)))",
+            ),
+            (
+              u: "((-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (-0.0173)*(min(1, max(0.01, RJ45)))) + ((0.0005)*(min(1, max(0.01, RJ45))))",
+              v: "(Altura/2) + (0.002)*(min(1, max(0.01, RJ45)))",
+              radius: "(0.0005)*(min(1, max(0.01, RJ45)))",
+            ),
+            (
+              u: "(-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (-0.0173)*(min(1, max(0.01, RJ45)))",
+              v: "((Altura/2) + (0.002)*(min(1, max(0.01, RJ45)))) - ((0.0005)*(min(1, max(0.01, RJ45))))",
+            ),
+            (
+              u: "(-0.0225*(1 - min(1, max(0, RJ45))*(1 - min(1, max(0, TV))))) + (-0.0173)*(min(1, max(0.01, RJ45)))",
+              v: "((Altura/2) + (-0.002)*(min(1, max(0.01, RJ45)))) + ((0.0005)*(min(1, max(0.01, RJ45))))",
+              radius: "(0.0005)*(min(1, max(0.01, RJ45)))",
+            ),
+          ],
+          offset: "-0.004 + (-0.0057)*(min(1, max(0.01, RJ45)))",
+          depth: "(0.0002)*(min(1, max(0.01, RJ45)))",
+        ),
+        material: "Plástico azul",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "TV",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "((0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (-0.0215)*(min(1, max(0.01, TV)))) + ((0.002)*(min(1, max(0.01, TV))))",
+              v: "(Altura/2) + (-0.0113)*(min(1, max(0.01, TV)))",
+            ),
+            (
+              u: "((0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0.0215)*(min(1, max(0.01, TV)))) - ((0.002)*(min(1, max(0.01, TV))))",
+              v: "(Altura/2) + (-0.0113)*(min(1, max(0.01, TV)))",
+              radius: "(0.002)*(min(1, max(0.01, TV)))",
+            ),
+            (
+              u: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0.0215)*(min(1, max(0.01, TV)))",
+              v: "((Altura/2) + (-0.0113)*(min(1, max(0.01, TV)))) + ((0.002)*(min(1, max(0.01, TV))))",
+            ),
+            (
+              u: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0.0215)*(min(1, max(0.01, TV)))",
+              v: "((Altura/2) + (0.0113)*(min(1, max(0.01, TV)))) - ((0.002)*(min(1, max(0.01, TV))))",
+              radius: "(0.002)*(min(1, max(0.01, TV)))",
+            ),
+            (
+              u: "((0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0.0215)*(min(1, max(0.01, TV)))) - ((0.002)*(min(1, max(0.01, TV))))",
+              v: "(Altura/2) + (0.0113)*(min(1, max(0.01, TV)))",
+            ),
+            (
+              u: "((0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (-0.0215)*(min(1, max(0.01, TV)))) + ((0.002)*(min(1, max(0.01, TV))))",
+              v: "(Altura/2) + (0.0113)*(min(1, max(0.01, TV)))",
+              radius: "(0.002)*(min(1, max(0.01, TV)))",
+            ),
+            (
+              u: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (-0.0215)*(min(1, max(0.01, TV)))",
+              v: "((Altura/2) + (0.0113)*(min(1, max(0.01, TV)))) - ((0.002)*(min(1, max(0.01, TV))))",
+            ),
+            (
+              u: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (-0.0215)*(min(1, max(0.01, TV)))",
+              v: "((Altura/2) + (-0.0113)*(min(1, max(0.01, TV)))) + ((0.002)*(min(1, max(0.01, TV))))",
+              radius: "(0.002)*(min(1, max(0.01, TV)))",
+            ),
+          ],
+          offset: "-0.004 + (-0.0055)*(min(1, max(0.01, TV)))",
+          depth: "(0.0015)*(min(1, max(0.01, TV)))",
+        ),
+        material: "Branco",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "TV - corpo",
+        shape: Box(
+          x: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (-0.0195)*(min(1, max(0.01, TV)))",
+          y: "-0.004 + (0.004)*(min(1, max(0.01, TV)))",
+          z: "(Altura/2) + (-0.0105)*(min(1, max(0.01, TV)))",
+          width: "(0.039)*(min(1, max(0.01, TV)))",
+          depth: "(0.026)*(min(1, max(0.01, TV)))",
+          height: "(0.021)*(min(1, max(0.01, TV)))",
+        ),
+        material: "Plástico cinza claro",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "TV - arruela",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))",
+              v: "-0.004 + (-0.0061)*(min(1, max(0.01, TV)))",
+            ),
+            (
+              u: "((0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))) + ((0.0078)*(min(1, max(0.01, TV))))",
+              v: "-0.004 + (-0.0061)*(min(1, max(0.01, TV)))",
+            ),
+            (
+              u: "((0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))) + ((0.0078)*(min(1, max(0.01, TV))))",
+              v: "(-0.004 + (-0.0061)*(min(1, max(0.01, TV)))) + ((0.0006)*(min(1, max(0.01, TV))))",
+            ),
+            (
+              u: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))",
+              v: "(-0.004 + (-0.0061)*(min(1, max(0.01, TV)))) + ((0.0006)*(min(1, max(0.01, TV))))",
+            ),
+          ],
+          offset: "(Altura/2) + (0)*(min(1, max(0.01, TV)))",
+          axis: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))",
+          angle: "360",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "TV - porca sextavada",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0.0068)*(min(1, max(0.01, TV)))",
+              v: "(Altura/2) + (0)*(min(1, max(0.01, TV)))",
+            ),
+            (
+              u: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0.0034)*(min(1, max(0.01, TV)))",
+              v: "(Altura/2) + (0.005889)*(min(1, max(0.01, TV)))",
+            ),
+            (
+              u: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (-0.0034)*(min(1, max(0.01, TV)))",
+              v: "(Altura/2) + (0.005889)*(min(1, max(0.01, TV)))",
+            ),
+            (
+              u: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (-0.0068)*(min(1, max(0.01, TV)))",
+              v: "(Altura/2) + (0)*(min(1, max(0.01, TV)))",
+            ),
+            (
+              u: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (-0.0034)*(min(1, max(0.01, TV)))",
+              v: "(Altura/2) + (-0.005889)*(min(1, max(0.01, TV)))",
+            ),
+            (
+              u: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0.0034)*(min(1, max(0.01, TV)))",
+              v: "(Altura/2) + (-0.005889)*(min(1, max(0.01, TV)))",
+            ),
+          ],
+          offset: "-0.004 + (-0.0082)*(min(1, max(0.01, TV)))",
+          depth: "(0.0021)*(min(1, max(0.01, TV)))",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "TV - conector F",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))",
+              v: "-0.004 + (-0.0155)*(min(1, max(0.01, TV)))",
+            ),
+            (
+              u: "((0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))) + ((0.0045)*(min(1, max(0.01, TV))))",
+              v: "-0.004 + (-0.0155)*(min(1, max(0.01, TV)))",
+            ),
+            (
+              u: "((0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))) + ((0.0045)*(min(1, max(0.01, TV))))",
+              v: "(-0.004 + (-0.0155)*(min(1, max(0.01, TV)))) + ((0.0073)*(min(1, max(0.01, TV))))",
+            ),
+            (
+              u: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))",
+              v: "(-0.004 + (-0.0155)*(min(1, max(0.01, TV)))) + ((0.0073)*(min(1, max(0.01, TV))))",
+            ),
+          ],
+          offset: "(Altura/2) + (0)*(min(1, max(0.01, TV)))",
+          axis: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))",
+          angle: "360",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "TV - filete da rosca 1",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))",
+              v: "-0.004 + (-0.0148)*(min(1, max(0.01, TV)))",
+            ),
+            (
+              u: "((0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))) + ((0.0049)*(min(1, max(0.01, TV))))",
+              v: "-0.004 + (-0.0148)*(min(1, max(0.01, TV)))",
+            ),
+            (
+              u: "((0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))) + ((0.0049)*(min(1, max(0.01, TV))))",
+              v: "(-0.004 + (-0.0148)*(min(1, max(0.01, TV)))) + ((0.0008)*(min(1, max(0.01, TV))))",
+            ),
+            (
+              u: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))",
+              v: "(-0.004 + (-0.0148)*(min(1, max(0.01, TV)))) + ((0.0008)*(min(1, max(0.01, TV))))",
+            ),
+          ],
+          offset: "(Altura/2) + (0)*(min(1, max(0.01, TV)))",
+          axis: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))",
+          angle: "360",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "TV - filete da rosca 2",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))",
+              v: "-0.004 + (-0.0132)*(min(1, max(0.01, TV)))",
+            ),
+            (
+              u: "((0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))) + ((0.0049)*(min(1, max(0.01, TV))))",
+              v: "-0.004 + (-0.0132)*(min(1, max(0.01, TV)))",
+            ),
+            (
+              u: "((0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))) + ((0.0049)*(min(1, max(0.01, TV))))",
+              v: "(-0.004 + (-0.0132)*(min(1, max(0.01, TV)))) + ((0.0008)*(min(1, max(0.01, TV))))",
+            ),
+            (
+              u: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))",
+              v: "(-0.004 + (-0.0132)*(min(1, max(0.01, TV)))) + ((0.0008)*(min(1, max(0.01, TV))))",
+            ),
+          ],
+          offset: "(Altura/2) + (0)*(min(1, max(0.01, TV)))",
+          axis: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))",
+          angle: "360",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "TV - filete da rosca 3",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))",
+              v: "-0.004 + (-0.0116)*(min(1, max(0.01, TV)))",
+            ),
+            (
+              u: "((0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))) + ((0.0049)*(min(1, max(0.01, TV))))",
+              v: "-0.004 + (-0.0116)*(min(1, max(0.01, TV)))",
+            ),
+            (
+              u: "((0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))) + ((0.0049)*(min(1, max(0.01, TV))))",
+              v: "(-0.004 + (-0.0116)*(min(1, max(0.01, TV)))) + ((0.0008)*(min(1, max(0.01, TV))))",
+            ),
+            (
+              u: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))",
+              v: "(-0.004 + (-0.0116)*(min(1, max(0.01, TV)))) + ((0.0008)*(min(1, max(0.01, TV))))",
+            ),
+          ],
+          offset: "(Altura/2) + (0)*(min(1, max(0.01, TV)))",
+          axis: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))",
+          angle: "360",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "TV - filete da rosca 4",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))",
+              v: "-0.004 + (-0.01)*(min(1, max(0.01, TV)))",
+            ),
+            (
+              u: "((0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))) + ((0.0049)*(min(1, max(0.01, TV))))",
+              v: "-0.004 + (-0.01)*(min(1, max(0.01, TV)))",
+            ),
+            (
+              u: "((0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))) + ((0.0049)*(min(1, max(0.01, TV))))",
+              v: "(-0.004 + (-0.01)*(min(1, max(0.01, TV)))) + ((0.0008)*(min(1, max(0.01, TV))))",
+            ),
+            (
+              u: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))",
+              v: "(-0.004 + (-0.01)*(min(1, max(0.01, TV)))) + ((0.0008)*(min(1, max(0.01, TV))))",
+            ),
+          ],
+          offset: "(Altura/2) + (0)*(min(1, max(0.01, TV)))",
+          axis: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))",
+          angle: "360",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "TV - dielétrico",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))",
+              v: "-0.004 + (-0.0157)*(min(1, max(0.01, TV)))",
+            ),
+            (
+              u: "((0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))) + ((0.0034)*(min(1, max(0.01, TV))))",
+              v: "-0.004 + (-0.0157)*(min(1, max(0.01, TV)))",
+            ),
+            (
+              u: "((0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))) + ((0.0034)*(min(1, max(0.01, TV))))",
+              v: "(-0.004 + (-0.0157)*(min(1, max(0.01, TV)))) + ((0.0002)*(min(1, max(0.01, TV))))",
+            ),
+            (
+              u: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))",
+              v: "(-0.004 + (-0.0157)*(min(1, max(0.01, TV)))) + ((0.0002)*(min(1, max(0.01, TV))))",
+            ),
+          ],
+          offset: "(Altura/2) + (0)*(min(1, max(0.01, TV)))",
+          axis: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))",
+          angle: "360",
+        ),
+        material: "Branco",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "TV - furo do condutor central",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))",
+              v: "-0.004 + (-0.0159)*(min(1, max(0.01, TV)))",
+            ),
+            (
+              u: "((0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))) + ((0.0009)*(min(1, max(0.01, TV))))",
+              v: "-0.004 + (-0.0159)*(min(1, max(0.01, TV)))",
+            ),
+            (
+              u: "((0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))) + ((0.0009)*(min(1, max(0.01, TV))))",
+              v: "(-0.004 + (-0.0159)*(min(1, max(0.01, TV)))) + ((0.0002)*(min(1, max(0.01, TV))))",
+            ),
+            (
+              u: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))",
+              v: "(-0.004 + (-0.0159)*(min(1, max(0.01, TV)))) + ((0.0002)*(min(1, max(0.01, TV))))",
+            ),
+          ],
+          offset: "(Altura/2) + (0)*(min(1, max(0.01, TV)))",
+          axis: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (0)*(min(1, max(0.01, TV)))",
+          angle: "360",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "TV - etiqueta",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "((0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (-0.0173)*(min(1, max(0.01, TV)))) + ((0.0005)*(min(1, max(0.01, TV))))",
+              v: "(Altura/2) + (-0.002)*(min(1, max(0.01, TV)))",
+            ),
+            (
+              u: "((0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (-0.0117)*(min(1, max(0.01, TV)))) - ((0.0005)*(min(1, max(0.01, TV))))",
+              v: "(Altura/2) + (-0.002)*(min(1, max(0.01, TV)))",
+              radius: "(0.0005)*(min(1, max(0.01, TV)))",
+            ),
+            (
+              u: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (-0.0117)*(min(1, max(0.01, TV)))",
+              v: "((Altura/2) + (-0.002)*(min(1, max(0.01, TV)))) + ((0.0005)*(min(1, max(0.01, TV))))",
+            ),
+            (
+              u: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (-0.0117)*(min(1, max(0.01, TV)))",
+              v: "((Altura/2) + (0.002)*(min(1, max(0.01, TV)))) - ((0.0005)*(min(1, max(0.01, TV))))",
+              radius: "(0.0005)*(min(1, max(0.01, TV)))",
+            ),
+            (
+              u: "((0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (-0.0117)*(min(1, max(0.01, TV)))) - ((0.0005)*(min(1, max(0.01, TV))))",
+              v: "(Altura/2) + (0.002)*(min(1, max(0.01, TV)))",
+            ),
+            (
+              u: "((0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (-0.0173)*(min(1, max(0.01, TV)))) + ((0.0005)*(min(1, max(0.01, TV))))",
+              v: "(Altura/2) + (0.002)*(min(1, max(0.01, TV)))",
+              radius: "(0.0005)*(min(1, max(0.01, TV)))",
+            ),
+            (
+              u: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (-0.0173)*(min(1, max(0.01, TV)))",
+              v: "((Altura/2) + (0.002)*(min(1, max(0.01, TV)))) - ((0.0005)*(min(1, max(0.01, TV))))",
+            ),
+            (
+              u: "(0.0225*(1 - min(1, max(0, TV))*(1 - min(1, max(0, RJ45))))) + (-0.0173)*(min(1, max(0.01, TV)))",
+              v: "((Altura/2) + (-0.002)*(min(1, max(0.01, TV)))) + ((0.0005)*(min(1, max(0.01, TV))))",
+              radius: "(0.0005)*(min(1, max(0.01, TV)))",
+            ),
+          ],
+          offset: "-0.004 + (-0.0057)*(min(1, max(0.01, TV)))",
+          depth: "(0.0002)*(min(1, max(0.01, TV)))",
+        ),
+        material: "Plástico cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
       ),
     ],
   ),
@@ -40,6 +1342,8 @@
       values: {
         "Altura": 0.1,
         "Largura": 0.06,
+        "RJ45": 1.0,
+        "TV": 0.0,
       },
       info: (
         type_mark: "",
@@ -59,6 +1363,8 @@
       values: {
         "Altura": 0.1,
         "Largura": 0.06,
+        "RJ45": 0.0,
+        "TV": 1.0,
       },
       info: (
         type_mark: "",
@@ -78,6 +1384,8 @@
       values: {
         "Altura": 0.1,
         "Largura": 0.1,
+        "RJ45": 1.0,
+        "TV": 1.0,
       },
       info: (
         type_mark: "",
@@ -95,8 +1403,8 @@
   ],
   materials: [
     (
-      name: "PVC",
-      color: (236, 236, 230),
+      name: "Branco",
+      color: (244, 244, 240),
       identity: (
         description: "",
         class: Plastic,
@@ -126,8 +1434,344 @@
         ),
       ),
       appearance: (
-        color: (236, 236, 230),
+        color: (244, 244, 240),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "PVC amarelo",
+      color: (226, 186, 52),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (226, 186, 52),
         finish: Matte,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Plástico cinza claro",
+      color: (196, 198, 200),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (196, 198, 200),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Plástico preto",
+      color: (34, 34, 37),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (34, 34, 37),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Latão",
+      color: (192, 160, 84),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (192, 160, 84),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Plástico azul",
+      color: (126, 176, 222),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (126, 176, 222),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Cromado",
+      color: (226, 229, 233),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (226, 229, 233),
+        finish: Polished,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Plástico cinza",
+      color: (120, 122, 126),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (120, 122, 126),
+        finish: Satin,
         description: "",
       ),
       physical: (

@@ -20,5 +20,5 @@ def build():
     c.type("Ponto de dados RJ45", "Tomada de rede Cat6 em caixa 4x2")
     c.type("Ponto de TV", "Tomada coaxial para antena/TV a cabo", RJ45=0, TV=1)
     c.type("Ponto dados + TV 4x4", "Tomada RJ45 e coaxial em caixa 4x4", Largura=0.1, TV=1)
-    el.enquadrar(c, 0.30)
+    el.enquadrar(c, 0)  # sem "mep", o make.py coloca o ponto no piso (z = 0), não a 0.30 m
     return c

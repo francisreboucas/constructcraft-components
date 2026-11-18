@@ -24,7 +24,7 @@ def build():
         m = el.Mod(0, f"{A}/2 + (({nh} + 1)/2 - {k})*{el.PASSO_LINHA}", el.presente(f"{nh} - {k - 1}"))
         el.tecla_horizontal(c, f"Tecla {k}", m, s_ind=s_ind)
         # em pé: lado a lado da esquerda para a direita
-        m = el.Mod(f"({k} - ({nv} + 1)/2)*{el.PASSO_LINHA}", f"{A}/2", el.presente(f"{nv} - {k - 1}"))
+        m = el.Mod(f"({k} - ({nv} + 1)/2)*{el.PASSO_LINHA}*{h}", f"{A}/2", el.presente(f"{nv} - {k - 1}"))
         el.tecla_vertical(c, f"Tecla em pé {k}", m, s_ind=s_ind)
     # mecanismo atrás da parede, do tamanho do conjunto de teclas
     c.box("Corpo do mecanismo", f"-0.0195 - {h}*({N} - 1)*{el.PASSO_LINHA / 2}", 0, f"{A}/2 - 0.0105 - (1 - {h})*({N} - 1)*{el.PASSO_LINHA / 2} - {h}*0.009",

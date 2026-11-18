@@ -1,6 +1,6 @@
 (
   format_version: 1,
-  generator: "ConstructCAD 0.9.0",
+  generator: "ConstructCraft 0.12.0",
   component: "Tomada de uso específico 3500 VA",
   def: (
     kind: Electrical,
@@ -20,17 +20,773 @@
     ],
     items: [
       (
-        name: "Corpo",
+        name: "Volume simplificado",
         shape: Box(
-          x: "-Largura / 2",
+          x: "-(Largura/2)",
           y: "-0.03",
           z: "0",
           width: "Largura",
           depth: "0.03",
           height: "Altura",
         ),
-        material: "PVC",
+        material: "Branco",
         in_plan: true,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
+      ),
+      (
+        name: "Caixa de embutir - fundo",
+        shape: Box(
+          x: "-(Largura/2) + 0.005",
+          y: "0.044",
+          z: "0.005",
+          width: "Largura - 0.01",
+          depth: "0.002",
+          height: "Altura - 0.01",
+        ),
+        material: "PVC amarelo",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Caixa de embutir - lateral esquerda",
+        shape: Box(
+          x: "-(Largura/2) + 0.005",
+          y: "0",
+          z: "0.005",
+          width: "0.002",
+          depth: "0.044",
+          height: "Altura - 0.01",
+        ),
+        material: "PVC amarelo",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Caixa de embutir - lateral direita",
+        shape: Box(
+          x: "(Largura/2) - 0.007",
+          y: "0",
+          z: "0.005",
+          width: "0.002",
+          depth: "0.044",
+          height: "Altura - 0.01",
+        ),
+        material: "PVC amarelo",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Caixa de embutir - base",
+        shape: Box(
+          x: "-(Largura/2) + 0.007",
+          y: "0",
+          z: "0.005",
+          width: "Largura - 0.014",
+          depth: "0.044",
+          height: "0.002",
+        ),
+        material: "PVC amarelo",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Caixa de embutir - topo",
+        shape: Box(
+          x: "-(Largura/2) + 0.007",
+          y: "0",
+          z: "Altura - 0.007",
+          width: "Largura - 0.014",
+          depth: "0.044",
+          height: "0.002",
+        ),
+        material: "PVC amarelo",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Caixa de embutir - entrada de eletroduto superior",
+        shape: Cylinder(
+          x: "0",
+          y: "0.028",
+          z: "Altura - 0.005",
+          radius: "0.0105",
+          height: "0.0006",
+        ),
+        material: "PVC amarelo",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Caixa de embutir - entrada de eletroduto inferior",
+        shape: Cylinder(
+          x: "0",
+          y: "0.028",
+          z: "0.005 - 0.0006",
+          radius: "0.0105",
+          height: "0.0006",
+        ),
+        material: "PVC amarelo",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Caixa de embutir - entrada de eletroduto do fundo",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "0",
+              v: "0.046",
+            ),
+            (
+              u: "0 + 0.0105",
+              v: "0.046",
+            ),
+            (
+              u: "0 + 0.0105",
+              v: "0.046 + 0.0006",
+            ),
+            (
+              u: "0",
+              v: "0.046 + 0.0006",
+            ),
+          ],
+          offset: "Altura/2",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "PVC amarelo",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Suporte",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "(-(Largura/2) + 0.003) + 0.004",
+              v: "0.003",
+            ),
+            (
+              u: "((Largura/2) - 0.003) - 0.004",
+              v: "0.003",
+              radius: "0.004",
+            ),
+            (
+              u: "(Largura/2) - 0.003",
+              v: "0.003 + 0.004",
+            ),
+            (
+              u: "(Largura/2) - 0.003",
+              v: "(Altura - 0.003) - 0.004",
+              radius: "0.004",
+            ),
+            (
+              u: "((Largura/2) - 0.003) - 0.004",
+              v: "Altura - 0.003",
+            ),
+            (
+              u: "(-(Largura/2) + 0.003) + 0.004",
+              v: "Altura - 0.003",
+              radius: "0.004",
+            ),
+            (
+              u: "-(Largura/2) + 0.003",
+              v: "(Altura - 0.003) - 0.004",
+            ),
+            (
+              u: "-(Largura/2) + 0.003",
+              v: "0.003 + 0.004",
+              radius: "0.004",
+            ),
+          ],
+          offset: "-0.0015",
+          depth: "0.0015",
+        ),
+        material: "Plástico cinza claro",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Placa",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "(-(Largura/2)) + 0.006",
+              v: "0",
+            ),
+            (
+              u: "((Largura/2)) - 0.006",
+              v: "0",
+              radius: "0.006",
+            ),
+            (
+              u: "(Largura/2)",
+              v: "0 + 0.006",
+            ),
+            (
+              u: "(Largura/2)",
+              v: "Altura - 0.006",
+              radius: "0.006",
+            ),
+            (
+              u: "((Largura/2)) - 0.006",
+              v: "Altura",
+            ),
+            (
+              u: "(-(Largura/2)) + 0.006",
+              v: "Altura",
+              radius: "0.006",
+            ),
+            (
+              u: "-(Largura/2)",
+              v: "Altura - 0.006",
+            ),
+            (
+              u: "-(Largura/2)",
+              v: "0 + 0.006",
+              radius: "0.006",
+            ),
+          ],
+          offset: "-0.0065",
+          depth: "0.005",
+        ),
+        material: "Branco",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Placa - ressalto frontal",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "(-(Largura/2) + 0.0012) + 0.005",
+              v: "0.0012",
+            ),
+            (
+              u: "((Largura/2) - 0.0012) - 0.005",
+              v: "0.0012",
+              radius: "0.005",
+            ),
+            (
+              u: "(Largura/2) - 0.0012",
+              v: "0.0012 + 0.005",
+            ),
+            (
+              u: "(Largura/2) - 0.0012",
+              v: "(Altura - 0.0012) - 0.005",
+              radius: "0.005",
+            ),
+            (
+              u: "((Largura/2) - 0.0012) - 0.005",
+              v: "Altura - 0.0012",
+            ),
+            (
+              u: "(-(Largura/2) + 0.0012) + 0.005",
+              v: "Altura - 0.0012",
+              radius: "0.005",
+            ),
+            (
+              u: "-(Largura/2) + 0.0012",
+              v: "(Altura - 0.0012) - 0.005",
+            ),
+            (
+              u: "-(Largura/2) + 0.0012",
+              v: "0.0012 + 0.005",
+              radius: "0.005",
+            ),
+          ],
+          offset: "-0.008",
+          depth: "0.0015",
+        ),
+        material: "Branco",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Tampa do parafuso inferior",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "(-0.005) + 0.0015",
+              v: "0.0075 - 0.0022",
+            ),
+            (
+              u: "0.005 - 0.0015",
+              v: "0.0075 - 0.0022",
+              radius: "0.0015",
+            ),
+            (
+              u: "0.005",
+              v: "(0.0075 - 0.0022) + 0.0015",
+            ),
+            (
+              u: "0.005",
+              v: "(0.0075 + 0.0022) - 0.0015",
+              radius: "0.0015",
+            ),
+            (
+              u: "0.005 - 0.0015",
+              v: "0.0075 + 0.0022",
+            ),
+            (
+              u: "(-0.005) + 0.0015",
+              v: "0.0075 + 0.0022",
+              radius: "0.0015",
+            ),
+            (
+              u: "-0.005",
+              v: "(0.0075 + 0.0022) - 0.0015",
+            ),
+            (
+              u: "-0.005",
+              v: "(0.0075 - 0.0022) + 0.0015",
+              radius: "0.0015",
+            ),
+          ],
+          offset: "-0.0084",
+          depth: "0.0004",
+        ),
+        material: "Branco",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Tampa do parafuso superior",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "(-0.005) + 0.0015",
+              v: "Altura - 0.0075 - 0.0022",
+            ),
+            (
+              u: "0.005 - 0.0015",
+              v: "Altura - 0.0075 - 0.0022",
+              radius: "0.0015",
+            ),
+            (
+              u: "0.005",
+              v: "(Altura - 0.0075 - 0.0022) + 0.0015",
+            ),
+            (
+              u: "0.005",
+              v: "(Altura - 0.0075 + 0.0022) - 0.0015",
+              radius: "0.0015",
+            ),
+            (
+              u: "0.005 - 0.0015",
+              v: "Altura - 0.0075 + 0.0022",
+            ),
+            (
+              u: "(-0.005) + 0.0015",
+              v: "Altura - 0.0075 + 0.0022",
+              radius: "0.0015",
+            ),
+            (
+              u: "-0.005",
+              v: "(Altura - 0.0075 + 0.0022) - 0.0015",
+            ),
+            (
+              u: "-0.005",
+              v: "(Altura - 0.0075 - 0.0022) + 0.0015",
+              radius: "0.0015",
+            ),
+          ],
+          offset: "-0.0084",
+          depth: "0.0004",
+        ),
+        material: "Branco",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Tomada",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "(0 + -0.0215) + 0.002",
+              v: "(Altura/2) + -0.0113",
+            ),
+            (
+              u: "(0 + 0.0215) - 0.002",
+              v: "(Altura/2) + -0.0113",
+              radius: "0.002",
+            ),
+            (
+              u: "0 + 0.0215",
+              v: "((Altura/2) + -0.0113) + 0.002",
+            ),
+            (
+              u: "0 + 0.0215",
+              v: "((Altura/2) + 0.0113) - 0.002",
+              radius: "0.002",
+            ),
+            (
+              u: "(0 + 0.0215) - 0.002",
+              v: "(Altura/2) + 0.0113",
+            ),
+            (
+              u: "(0 + -0.0215) + 0.002",
+              v: "(Altura/2) + 0.0113",
+              radius: "0.002",
+            ),
+            (
+              u: "0 + -0.0215",
+              v: "((Altura/2) + 0.0113) - 0.002",
+            ),
+            (
+              u: "0 + -0.0215",
+              v: "((Altura/2) + -0.0113) + 0.002",
+              radius: "0.002",
+            ),
+          ],
+          offset: "-0.0095",
+          depth: "0.0015",
+        ),
+        material: "Plástico vermelho",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Tomada - corpo",
+        shape: Box(
+          x: "0 + -0.0195",
+          y: "0",
+          z: "(Altura/2) + -0.0105",
+          width: "0.039",
+          depth: "0.026",
+          height: "0.021",
+        ),
+        material: "Plástico cinza claro",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Tomada - poço",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "0 + -0.0186",
+              v: "(Altura/2) + -0.0022",
+            ),
+            (
+              u: "0 + -0.0118",
+              v: "(Altura/2) + -0.0088",
+            ),
+            (
+              u: "0 + 0.0118",
+              v: "(Altura/2) + -0.0088",
+            ),
+            (
+              u: "0 + 0.0186",
+              v: "(Altura/2) + -0.0022",
+            ),
+            (
+              u: "0 + 0.0186",
+              v: "(Altura/2) + 0.0022",
+            ),
+            (
+              u: "0 + 0.0118",
+              v: "(Altura/2) + 0.0088",
+            ),
+            (
+              u: "0 + -0.0118",
+              v: "(Altura/2) + 0.0088",
+            ),
+            (
+              u: "0 + -0.0186",
+              v: "(Altura/2) + 0.0022",
+            ),
+          ],
+          offset: "-0.0096",
+          depth: "0.0071",
+        ),
+        material: "Plástico vermelho",
+        in_plan: false,
+        void: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Tomada - furo fase",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "0 + -0.0095",
+              v: "-0.0026",
+            ),
+            (
+              u: "(0 + -0.0095) + 0.00268",
+              v: "-0.0026",
+            ),
+            (
+              u: "(0 + -0.0095) + 0.00268",
+              v: "(-0.0026) + 0.0076",
+            ),
+            (
+              u: "0 + -0.0095",
+              v: "(-0.0026) + 0.0076",
+            ),
+          ],
+          offset: "(Altura/2) + 0",
+          axis: "0 + -0.0095",
+          angle: "360",
+        ),
+        material: "Plástico vermelho",
+        in_plan: false,
+        void: true,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Tomada - contato fase",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "0 + -0.0095",
+              v: "0.005",
+            ),
+            (
+              u: "(0 + -0.0095) + 0.00348",
+              v: "0.005",
+            ),
+            (
+              u: "(0 + -0.0095) + 0.00348",
+              v: "0.005 + 0.009",
+            ),
+            (
+              u: "0 + -0.0095",
+              v: "0.005 + 0.009",
+            ),
+          ],
+          offset: "(Altura/2) + 0",
+          axis: "0 + -0.0095",
+          angle: "360",
+        ),
+        material: "Latão",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Tomada - furo neutro",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "0 + 0.0095",
+              v: "-0.0026",
+            ),
+            (
+              u: "(0 + 0.0095) + 0.00268",
+              v: "-0.0026",
+            ),
+            (
+              u: "(0 + 0.0095) + 0.00268",
+              v: "(-0.0026) + 0.0076",
+            ),
+            (
+              u: "0 + 0.0095",
+              v: "(-0.0026) + 0.0076",
+            ),
+          ],
+          offset: "(Altura/2) + 0",
+          axis: "0 + 0.0095",
+          angle: "360",
+        ),
+        material: "Plástico vermelho",
+        in_plan: false,
+        void: true,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Tomada - contato neutro",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "0 + 0.0095",
+              v: "0.005",
+            ),
+            (
+              u: "(0 + 0.0095) + 0.00348",
+              v: "0.005",
+            ),
+            (
+              u: "(0 + 0.0095) + 0.00348",
+              v: "0.005 + 0.009",
+            ),
+            (
+              u: "0 + 0.0095",
+              v: "0.005 + 0.009",
+            ),
+          ],
+          offset: "(Altura/2) + 0",
+          axis: "0 + 0.0095",
+          angle: "360",
+        ),
+        material: "Latão",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Tomada - furo terra",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "0 + 0",
+              v: "-0.0026",
+            ),
+            (
+              u: "(0 + 0) + 0.00268",
+              v: "-0.0026",
+            ),
+            (
+              u: "(0 + 0) + 0.00268",
+              v: "(-0.0026) + 0.0076",
+            ),
+            (
+              u: "0 + 0",
+              v: "(-0.0026) + 0.0076",
+            ),
+          ],
+          offset: "(Altura/2) + -0.003",
+          axis: "0 + 0",
+          angle: "360",
+        ),
+        material: "Plástico vermelho",
+        in_plan: false,
+        void: true,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Tomada - contato terra",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "0 + 0",
+              v: "0.005",
+            ),
+            (
+              u: "(0 + 0) + 0.00348",
+              v: "0.005",
+            ),
+            (
+              u: "(0 + 0) + 0.00348",
+              v: "0.005 + 0.009",
+            ),
+            (
+              u: "0 + 0",
+              v: "0.005 + 0.009",
+            ),
+          ],
+          offset: "(Altura/2) + -0.003",
+          axis: "0 + 0",
+          angle: "360",
+        ),
+        material: "Latão",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
       ),
     ],
     mep: Some(Device(
@@ -71,8 +827,8 @@
   ],
   materials: [
     (
-      name: "PVC",
-      color: (236, 236, 230),
+      name: "Branco",
+      color: (244, 244, 240),
       identity: (
         description: "",
         class: Plastic,
@@ -102,8 +858,200 @@
         ),
       ),
       appearance: (
-        color: (236, 236, 230),
+        color: (244, 244, 240),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "PVC amarelo",
+      color: (226, 186, 52),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (226, 186, 52),
         finish: Matte,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Plástico cinza claro",
+      color: (196, 198, 200),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (196, 198, 200),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Plástico vermelho",
+      color: (196, 56, 48),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (196, 56, 48),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Latão",
+      color: (192, 160, 84),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (192, 160, 84),
+        finish: Satin,
         description: "",
       ),
       physical: (

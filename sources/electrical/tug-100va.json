@@ -14,22 +14,1174 @@
         "value": 0.1,
         "kind": "Length",
         "instance": false
+      },
+      {
+        "name": "Modulos",
+        "value": 1,
+        "kind": "Number",
+        "instance": false
       }
     ],
     "items": [
       {
-        "name": "Corpo",
-        "material": "PVC",
-        "in_plan": true,
+        "name": "Volume simplificado",
         "shape": {
           "Box": {
-            "x": "-Largura / 2",
+            "x": "-(Largura/2)",
             "y": "-0.03",
             "z": "0",
             "width": "Largura",
             "depth": "0.03",
             "height": "Altura"
           }
+        },
+        "material": "Branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Caixa de embutir - fundo",
+        "shape": {
+          "Box": {
+            "x": "-(Largura/2) + 0.005",
+            "y": "0.044",
+            "z": "0.005",
+            "width": "Largura - 0.01",
+            "depth": "0.002",
+            "height": "Altura - 0.01"
+          }
+        },
+        "material": "PVC amarelo",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Caixa de embutir - lateral esquerda",
+        "shape": {
+          "Box": {
+            "x": "-(Largura/2) + 0.005",
+            "y": "0",
+            "z": "0.005",
+            "width": "0.002",
+            "depth": "0.044",
+            "height": "Altura - 0.01"
+          }
+        },
+        "material": "PVC amarelo",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Caixa de embutir - lateral direita",
+        "shape": {
+          "Box": {
+            "x": "(Largura/2) - 0.007",
+            "y": "0",
+            "z": "0.005",
+            "width": "0.002",
+            "depth": "0.044",
+            "height": "Altura - 0.01"
+          }
+        },
+        "material": "PVC amarelo",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Caixa de embutir - base",
+        "shape": {
+          "Box": {
+            "x": "-(Largura/2) + 0.007",
+            "y": "0",
+            "z": "0.005",
+            "width": "Largura - 0.014",
+            "depth": "0.044",
+            "height": "0.002"
+          }
+        },
+        "material": "PVC amarelo",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Caixa de embutir - topo",
+        "shape": {
+          "Box": {
+            "x": "-(Largura/2) + 0.007",
+            "y": "0",
+            "z": "Altura - 0.007",
+            "width": "Largura - 0.014",
+            "depth": "0.044",
+            "height": "0.002"
+          }
+        },
+        "material": "PVC amarelo",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Caixa de embutir - entrada de eletroduto superior",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0.028",
+            "z": "Altura - 0.005",
+            "radius": "0.0105",
+            "height": "0.0006"
+          }
+        },
+        "material": "PVC amarelo",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Caixa de embutir - entrada de eletroduto inferior",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0.028",
+            "z": "0.005 - 0.0006",
+            "radius": "0.0105",
+            "height": "0.0006"
+          }
+        },
+        "material": "PVC amarelo",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Caixa de embutir - entrada de eletroduto do fundo",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0",
+                "v": "0.046"
+              },
+              {
+                "u": "0 + 0.0105",
+                "v": "0.046"
+              },
+              {
+                "u": "0 + 0.0105",
+                "v": "0.046 + 0.0006"
+              },
+              {
+                "u": "0",
+                "v": "0.046 + 0.0006"
+              }
+            ],
+            "offset": "Altura/2",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "PVC amarelo",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(-(Largura/2) + 0.003) + 0.004",
+                "v": "0.003"
+              },
+              {
+                "u": "((Largura/2) - 0.003) - 0.004",
+                "v": "0.003",
+                "radius": "0.004"
+              },
+              {
+                "u": "(Largura/2) - 0.003",
+                "v": "0.003 + 0.004"
+              },
+              {
+                "u": "(Largura/2) - 0.003",
+                "v": "(Altura - 0.003) - 0.004",
+                "radius": "0.004"
+              },
+              {
+                "u": "((Largura/2) - 0.003) - 0.004",
+                "v": "Altura - 0.003"
+              },
+              {
+                "u": "(-(Largura/2) + 0.003) + 0.004",
+                "v": "Altura - 0.003",
+                "radius": "0.004"
+              },
+              {
+                "u": "-(Largura/2) + 0.003",
+                "v": "(Altura - 0.003) - 0.004"
+              },
+              {
+                "u": "-(Largura/2) + 0.003",
+                "v": "0.003 + 0.004",
+                "radius": "0.004"
+              }
+            ],
+            "offset": "-0.0015",
+            "depth": "0.0015"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Placa",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(-(Largura/2)) + 0.006",
+                "v": "0"
+              },
+              {
+                "u": "((Largura/2)) - 0.006",
+                "v": "0",
+                "radius": "0.006"
+              },
+              {
+                "u": "(Largura/2)",
+                "v": "0 + 0.006"
+              },
+              {
+                "u": "(Largura/2)",
+                "v": "Altura - 0.006",
+                "radius": "0.006"
+              },
+              {
+                "u": "((Largura/2)) - 0.006",
+                "v": "Altura"
+              },
+              {
+                "u": "(-(Largura/2)) + 0.006",
+                "v": "Altura",
+                "radius": "0.006"
+              },
+              {
+                "u": "-(Largura/2)",
+                "v": "Altura - 0.006"
+              },
+              {
+                "u": "-(Largura/2)",
+                "v": "0 + 0.006",
+                "radius": "0.006"
+              }
+            ],
+            "offset": "-0.0065",
+            "depth": "0.005"
+          }
+        },
+        "material": "Branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Placa - ressalto frontal",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(-(Largura/2) + 0.0012) + 0.005",
+                "v": "0.0012"
+              },
+              {
+                "u": "((Largura/2) - 0.0012) - 0.005",
+                "v": "0.0012",
+                "radius": "0.005"
+              },
+              {
+                "u": "(Largura/2) - 0.0012",
+                "v": "0.0012 + 0.005"
+              },
+              {
+                "u": "(Largura/2) - 0.0012",
+                "v": "(Altura - 0.0012) - 0.005",
+                "radius": "0.005"
+              },
+              {
+                "u": "((Largura/2) - 0.0012) - 0.005",
+                "v": "Altura - 0.0012"
+              },
+              {
+                "u": "(-(Largura/2) + 0.0012) + 0.005",
+                "v": "Altura - 0.0012",
+                "radius": "0.005"
+              },
+              {
+                "u": "-(Largura/2) + 0.0012",
+                "v": "(Altura - 0.0012) - 0.005"
+              },
+              {
+                "u": "-(Largura/2) + 0.0012",
+                "v": "0.0012 + 0.005",
+                "radius": "0.005"
+              }
+            ],
+            "offset": "-0.008",
+            "depth": "0.0015"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa do parafuso inferior",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(-0.005) + 0.0015",
+                "v": "0.0075 - 0.0022"
+              },
+              {
+                "u": "0.005 - 0.0015",
+                "v": "0.0075 - 0.0022",
+                "radius": "0.0015"
+              },
+              {
+                "u": "0.005",
+                "v": "(0.0075 - 0.0022) + 0.0015"
+              },
+              {
+                "u": "0.005",
+                "v": "(0.0075 + 0.0022) - 0.0015",
+                "radius": "0.0015"
+              },
+              {
+                "u": "0.005 - 0.0015",
+                "v": "0.0075 + 0.0022"
+              },
+              {
+                "u": "(-0.005) + 0.0015",
+                "v": "0.0075 + 0.0022",
+                "radius": "0.0015"
+              },
+              {
+                "u": "-0.005",
+                "v": "(0.0075 + 0.0022) - 0.0015"
+              },
+              {
+                "u": "-0.005",
+                "v": "(0.0075 - 0.0022) + 0.0015",
+                "radius": "0.0015"
+              }
+            ],
+            "offset": "-0.0084",
+            "depth": "0.0004"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa do parafuso superior",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(-0.005) + 0.0015",
+                "v": "Altura - 0.0075 - 0.0022"
+              },
+              {
+                "u": "0.005 - 0.0015",
+                "v": "Altura - 0.0075 - 0.0022",
+                "radius": "0.0015"
+              },
+              {
+                "u": "0.005",
+                "v": "(Altura - 0.0075 - 0.0022) + 0.0015"
+              },
+              {
+                "u": "0.005",
+                "v": "(Altura - 0.0075 + 0.0022) - 0.0015",
+                "radius": "0.0015"
+              },
+              {
+                "u": "0.005 - 0.0015",
+                "v": "Altura - 0.0075 + 0.0022"
+              },
+              {
+                "u": "(-0.005) + 0.0015",
+                "v": "Altura - 0.0075 + 0.0022",
+                "radius": "0.0015"
+              },
+              {
+                "u": "-0.005",
+                "v": "(Altura - 0.0075 + 0.0022) - 0.0015"
+              },
+              {
+                "u": "-0.005",
+                "v": "(Altura - 0.0075 - 0.0022) + 0.0015",
+                "radius": "0.0015"
+              }
+            ],
+            "offset": "-0.0084",
+            "depth": "0.0004"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tomada 1",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-0.0225*min(1, max(0, Modulos - 1))) + -0.0215) + 0.002",
+                "v": "(Altura/2) + -0.0113"
+              },
+              {
+                "u": "((-0.0225*min(1, max(0, Modulos - 1))) + 0.0215) - 0.002",
+                "v": "(Altura/2) + -0.0113",
+                "radius": "0.002"
+              },
+              {
+                "u": "(-0.0225*min(1, max(0, Modulos - 1))) + 0.0215",
+                "v": "((Altura/2) + -0.0113) + 0.002"
+              },
+              {
+                "u": "(-0.0225*min(1, max(0, Modulos - 1))) + 0.0215",
+                "v": "((Altura/2) + 0.0113) - 0.002",
+                "radius": "0.002"
+              },
+              {
+                "u": "((-0.0225*min(1, max(0, Modulos - 1))) + 0.0215) - 0.002",
+                "v": "(Altura/2) + 0.0113"
+              },
+              {
+                "u": "((-0.0225*min(1, max(0, Modulos - 1))) + -0.0215) + 0.002",
+                "v": "(Altura/2) + 0.0113",
+                "radius": "0.002"
+              },
+              {
+                "u": "(-0.0225*min(1, max(0, Modulos - 1))) + -0.0215",
+                "v": "((Altura/2) + 0.0113) - 0.002"
+              },
+              {
+                "u": "(-0.0225*min(1, max(0, Modulos - 1))) + -0.0215",
+                "v": "((Altura/2) + -0.0113) + 0.002",
+                "radius": "0.002"
+              }
+            ],
+            "offset": "-0.0095",
+            "depth": "0.0015"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tomada 1 - corpo",
+        "shape": {
+          "Box": {
+            "x": "(-0.0225*min(1, max(0, Modulos - 1))) + -0.0195",
+            "y": "0",
+            "z": "(Altura/2) + -0.0105",
+            "width": "0.039",
+            "depth": "0.026",
+            "height": "0.021"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tomada 1 - poço",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(-0.0225*min(1, max(0, Modulos - 1))) + -0.0186",
+                "v": "(Altura/2) + -0.0022"
+              },
+              {
+                "u": "(-0.0225*min(1, max(0, Modulos - 1))) + -0.0118",
+                "v": "(Altura/2) + -0.0088"
+              },
+              {
+                "u": "(-0.0225*min(1, max(0, Modulos - 1))) + 0.0118",
+                "v": "(Altura/2) + -0.0088"
+              },
+              {
+                "u": "(-0.0225*min(1, max(0, Modulos - 1))) + 0.0186",
+                "v": "(Altura/2) + -0.0022"
+              },
+              {
+                "u": "(-0.0225*min(1, max(0, Modulos - 1))) + 0.0186",
+                "v": "(Altura/2) + 0.0022"
+              },
+              {
+                "u": "(-0.0225*min(1, max(0, Modulos - 1))) + 0.0118",
+                "v": "(Altura/2) + 0.0088"
+              },
+              {
+                "u": "(-0.0225*min(1, max(0, Modulos - 1))) + -0.0118",
+                "v": "(Altura/2) + 0.0088"
+              },
+              {
+                "u": "(-0.0225*min(1, max(0, Modulos - 1))) + -0.0186",
+                "v": "(Altura/2) + 0.0022"
+              }
+            ],
+            "offset": "-0.0096",
+            "depth": "0.0071"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        },
+        "void": true
+      },
+      {
+        "name": "Tomada 1 - furo fase",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-0.0225*min(1, max(0, Modulos - 1))) + -0.0095",
+                "v": "-0.0026"
+              },
+              {
+                "u": "((-0.0225*min(1, max(0, Modulos - 1))) + -0.0095) + 0.00225",
+                "v": "-0.0026"
+              },
+              {
+                "u": "((-0.0225*min(1, max(0, Modulos - 1))) + -0.0095) + 0.00225",
+                "v": "(-0.0026) + 0.0076"
+              },
+              {
+                "u": "(-0.0225*min(1, max(0, Modulos - 1))) + -0.0095",
+                "v": "(-0.0026) + 0.0076"
+              }
+            ],
+            "offset": "(Altura/2) + 0",
+            "axis": "(-0.0225*min(1, max(0, Modulos - 1))) + -0.0095",
+            "angle": "360"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        },
+        "void": true
+      },
+      {
+        "name": "Tomada 1 - contato fase",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-0.0225*min(1, max(0, Modulos - 1))) + -0.0095",
+                "v": "0.005"
+              },
+              {
+                "u": "((-0.0225*min(1, max(0, Modulos - 1))) + -0.0095) + 0.00305",
+                "v": "0.005"
+              },
+              {
+                "u": "((-0.0225*min(1, max(0, Modulos - 1))) + -0.0095) + 0.00305",
+                "v": "0.005 + 0.009"
+              },
+              {
+                "u": "(-0.0225*min(1, max(0, Modulos - 1))) + -0.0095",
+                "v": "0.005 + 0.009"
+              }
+            ],
+            "offset": "(Altura/2) + 0",
+            "axis": "(-0.0225*min(1, max(0, Modulos - 1))) + -0.0095",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tomada 1 - furo neutro",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-0.0225*min(1, max(0, Modulos - 1))) + 0.0095",
+                "v": "-0.0026"
+              },
+              {
+                "u": "((-0.0225*min(1, max(0, Modulos - 1))) + 0.0095) + 0.00225",
+                "v": "-0.0026"
+              },
+              {
+                "u": "((-0.0225*min(1, max(0, Modulos - 1))) + 0.0095) + 0.00225",
+                "v": "(-0.0026) + 0.0076"
+              },
+              {
+                "u": "(-0.0225*min(1, max(0, Modulos - 1))) + 0.0095",
+                "v": "(-0.0026) + 0.0076"
+              }
+            ],
+            "offset": "(Altura/2) + 0",
+            "axis": "(-0.0225*min(1, max(0, Modulos - 1))) + 0.0095",
+            "angle": "360"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        },
+        "void": true
+      },
+      {
+        "name": "Tomada 1 - contato neutro",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-0.0225*min(1, max(0, Modulos - 1))) + 0.0095",
+                "v": "0.005"
+              },
+              {
+                "u": "((-0.0225*min(1, max(0, Modulos - 1))) + 0.0095) + 0.00305",
+                "v": "0.005"
+              },
+              {
+                "u": "((-0.0225*min(1, max(0, Modulos - 1))) + 0.0095) + 0.00305",
+                "v": "0.005 + 0.009"
+              },
+              {
+                "u": "(-0.0225*min(1, max(0, Modulos - 1))) + 0.0095",
+                "v": "0.005 + 0.009"
+              }
+            ],
+            "offset": "(Altura/2) + 0",
+            "axis": "(-0.0225*min(1, max(0, Modulos - 1))) + 0.0095",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tomada 1 - furo terra",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-0.0225*min(1, max(0, Modulos - 1))) + 0",
+                "v": "-0.0026"
+              },
+              {
+                "u": "((-0.0225*min(1, max(0, Modulos - 1))) + 0) + 0.00225",
+                "v": "-0.0026"
+              },
+              {
+                "u": "((-0.0225*min(1, max(0, Modulos - 1))) + 0) + 0.00225",
+                "v": "(-0.0026) + 0.0076"
+              },
+              {
+                "u": "(-0.0225*min(1, max(0, Modulos - 1))) + 0",
+                "v": "(-0.0026) + 0.0076"
+              }
+            ],
+            "offset": "(Altura/2) + -0.003",
+            "axis": "(-0.0225*min(1, max(0, Modulos - 1))) + 0",
+            "angle": "360"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        },
+        "void": true
+      },
+      {
+        "name": "Tomada 1 - contato terra",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-0.0225*min(1, max(0, Modulos - 1))) + 0",
+                "v": "0.005"
+              },
+              {
+                "u": "((-0.0225*min(1, max(0, Modulos - 1))) + 0) + 0.00305",
+                "v": "0.005"
+              },
+              {
+                "u": "((-0.0225*min(1, max(0, Modulos - 1))) + 0) + 0.00305",
+                "v": "0.005 + 0.009"
+              },
+              {
+                "u": "(-0.0225*min(1, max(0, Modulos - 1))) + 0",
+                "v": "0.005 + 0.009"
+              }
+            ],
+            "offset": "(Altura/2) + -0.003",
+            "axis": "(-0.0225*min(1, max(0, Modulos - 1))) + 0",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tomada 2",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(0.0225 + (-0.0215)*(min(1, max(0.01, Modulos - 1)))) + ((0.002)*(min(1, max(0.01, Modulos - 1))))",
+                "v": "(Altura/2) + (-0.0113)*(min(1, max(0.01, Modulos - 1)))"
+              },
+              {
+                "u": "(0.0225 + (0.0215)*(min(1, max(0.01, Modulos - 1)))) - ((0.002)*(min(1, max(0.01, Modulos - 1))))",
+                "v": "(Altura/2) + (-0.0113)*(min(1, max(0.01, Modulos - 1)))",
+                "radius": "(0.002)*(min(1, max(0.01, Modulos - 1)))"
+              },
+              {
+                "u": "0.0225 + (0.0215)*(min(1, max(0.01, Modulos - 1)))",
+                "v": "((Altura/2) + (-0.0113)*(min(1, max(0.01, Modulos - 1)))) + ((0.002)*(min(1, max(0.01, Modulos - 1))))"
+              },
+              {
+                "u": "0.0225 + (0.0215)*(min(1, max(0.01, Modulos - 1)))",
+                "v": "((Altura/2) + (0.0113)*(min(1, max(0.01, Modulos - 1)))) - ((0.002)*(min(1, max(0.01, Modulos - 1))))",
+                "radius": "(0.002)*(min(1, max(0.01, Modulos - 1)))"
+              },
+              {
+                "u": "(0.0225 + (0.0215)*(min(1, max(0.01, Modulos - 1)))) - ((0.002)*(min(1, max(0.01, Modulos - 1))))",
+                "v": "(Altura/2) + (0.0113)*(min(1, max(0.01, Modulos - 1)))"
+              },
+              {
+                "u": "(0.0225 + (-0.0215)*(min(1, max(0.01, Modulos - 1)))) + ((0.002)*(min(1, max(0.01, Modulos - 1))))",
+                "v": "(Altura/2) + (0.0113)*(min(1, max(0.01, Modulos - 1)))",
+                "radius": "(0.002)*(min(1, max(0.01, Modulos - 1)))"
+              },
+              {
+                "u": "0.0225 + (-0.0215)*(min(1, max(0.01, Modulos - 1)))",
+                "v": "((Altura/2) + (0.0113)*(min(1, max(0.01, Modulos - 1)))) - ((0.002)*(min(1, max(0.01, Modulos - 1))))"
+              },
+              {
+                "u": "0.0225 + (-0.0215)*(min(1, max(0.01, Modulos - 1)))",
+                "v": "((Altura/2) + (-0.0113)*(min(1, max(0.01, Modulos - 1)))) + ((0.002)*(min(1, max(0.01, Modulos - 1))))",
+                "radius": "(0.002)*(min(1, max(0.01, Modulos - 1)))"
+              }
+            ],
+            "offset": "-0.004 + (-0.0055)*(min(1, max(0.01, Modulos - 1)))",
+            "depth": "(0.0015)*(min(1, max(0.01, Modulos - 1)))"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tomada 2 - corpo",
+        "shape": {
+          "Box": {
+            "x": "0.0225 + (-0.0195)*(min(1, max(0.01, Modulos - 1)))",
+            "y": "-0.004 + (0.004)*(min(1, max(0.01, Modulos - 1)))",
+            "z": "(Altura/2) + (-0.0105)*(min(1, max(0.01, Modulos - 1)))",
+            "width": "(0.039)*(min(1, max(0.01, Modulos - 1)))",
+            "depth": "(0.026)*(min(1, max(0.01, Modulos - 1)))",
+            "height": "(0.021)*(min(1, max(0.01, Modulos - 1)))"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tomada 2 - poço",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0.0225 + (-0.0186)*(min(1, max(0.01, Modulos - 1)))",
+                "v": "(Altura/2) + (-0.0022)*(min(1, max(0.01, Modulos - 1)))"
+              },
+              {
+                "u": "0.0225 + (-0.0118)*(min(1, max(0.01, Modulos - 1)))",
+                "v": "(Altura/2) + (-0.0088)*(min(1, max(0.01, Modulos - 1)))"
+              },
+              {
+                "u": "0.0225 + (0.0118)*(min(1, max(0.01, Modulos - 1)))",
+                "v": "(Altura/2) + (-0.0088)*(min(1, max(0.01, Modulos - 1)))"
+              },
+              {
+                "u": "0.0225 + (0.0186)*(min(1, max(0.01, Modulos - 1)))",
+                "v": "(Altura/2) + (-0.0022)*(min(1, max(0.01, Modulos - 1)))"
+              },
+              {
+                "u": "0.0225 + (0.0186)*(min(1, max(0.01, Modulos - 1)))",
+                "v": "(Altura/2) + (0.0022)*(min(1, max(0.01, Modulos - 1)))"
+              },
+              {
+                "u": "0.0225 + (0.0118)*(min(1, max(0.01, Modulos - 1)))",
+                "v": "(Altura/2) + (0.0088)*(min(1, max(0.01, Modulos - 1)))"
+              },
+              {
+                "u": "0.0225 + (-0.0118)*(min(1, max(0.01, Modulos - 1)))",
+                "v": "(Altura/2) + (0.0088)*(min(1, max(0.01, Modulos - 1)))"
+              },
+              {
+                "u": "0.0225 + (-0.0186)*(min(1, max(0.01, Modulos - 1)))",
+                "v": "(Altura/2) + (0.0022)*(min(1, max(0.01, Modulos - 1)))"
+              }
+            ],
+            "offset": "-0.004 + (-0.0056)*(min(1, max(0.01, Modulos - 1)))",
+            "depth": "(0.0071)*(min(1, max(0.01, Modulos - 1)))"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        },
+        "void": true
+      },
+      {
+        "name": "Tomada 2 - furo fase",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.0225 + (-0.0095)*(min(1, max(0.01, Modulos - 1)))",
+                "v": "-0.004 + (0.0014)*(min(1, max(0.01, Modulos - 1)))"
+              },
+              {
+                "u": "(0.0225 + (-0.0095)*(min(1, max(0.01, Modulos - 1)))) + ((0.00225)*(min(1, max(0.01, Modulos - 1))))",
+                "v": "-0.004 + (0.0014)*(min(1, max(0.01, Modulos - 1)))"
+              },
+              {
+                "u": "(0.0225 + (-0.0095)*(min(1, max(0.01, Modulos - 1)))) + ((0.00225)*(min(1, max(0.01, Modulos - 1))))",
+                "v": "(-0.004 + (0.0014)*(min(1, max(0.01, Modulos - 1)))) + ((0.0076)*(min(1, max(0.01, Modulos - 1))))"
+              },
+              {
+                "u": "0.0225 + (-0.0095)*(min(1, max(0.01, Modulos - 1)))",
+                "v": "(-0.004 + (0.0014)*(min(1, max(0.01, Modulos - 1)))) + ((0.0076)*(min(1, max(0.01, Modulos - 1))))"
+              }
+            ],
+            "offset": "(Altura/2) + (0)*(min(1, max(0.01, Modulos - 1)))",
+            "axis": "0.0225 + (-0.0095)*(min(1, max(0.01, Modulos - 1)))",
+            "angle": "360"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        },
+        "void": true
+      },
+      {
+        "name": "Tomada 2 - contato fase",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.0225 + (-0.0095)*(min(1, max(0.01, Modulos - 1)))",
+                "v": "-0.004 + (0.009)*(min(1, max(0.01, Modulos - 1)))"
+              },
+              {
+                "u": "(0.0225 + (-0.0095)*(min(1, max(0.01, Modulos - 1)))) + ((0.00305)*(min(1, max(0.01, Modulos - 1))))",
+                "v": "-0.004 + (0.009)*(min(1, max(0.01, Modulos - 1)))"
+              },
+              {
+                "u": "(0.0225 + (-0.0095)*(min(1, max(0.01, Modulos - 1)))) + ((0.00305)*(min(1, max(0.01, Modulos - 1))))",
+                "v": "(-0.004 + (0.009)*(min(1, max(0.01, Modulos - 1)))) + ((0.009)*(min(1, max(0.01, Modulos - 1))))"
+              },
+              {
+                "u": "0.0225 + (-0.0095)*(min(1, max(0.01, Modulos - 1)))",
+                "v": "(-0.004 + (0.009)*(min(1, max(0.01, Modulos - 1)))) + ((0.009)*(min(1, max(0.01, Modulos - 1))))"
+              }
+            ],
+            "offset": "(Altura/2) + (0)*(min(1, max(0.01, Modulos - 1)))",
+            "axis": "0.0225 + (-0.0095)*(min(1, max(0.01, Modulos - 1)))",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tomada 2 - furo neutro",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.0225 + (0.0095)*(min(1, max(0.01, Modulos - 1)))",
+                "v": "-0.004 + (0.0014)*(min(1, max(0.01, Modulos - 1)))"
+              },
+              {
+                "u": "(0.0225 + (0.0095)*(min(1, max(0.01, Modulos - 1)))) + ((0.00225)*(min(1, max(0.01, Modulos - 1))))",
+                "v": "-0.004 + (0.0014)*(min(1, max(0.01, Modulos - 1)))"
+              },
+              {
+                "u": "(0.0225 + (0.0095)*(min(1, max(0.01, Modulos - 1)))) + ((0.00225)*(min(1, max(0.01, Modulos - 1))))",
+                "v": "(-0.004 + (0.0014)*(min(1, max(0.01, Modulos - 1)))) + ((0.0076)*(min(1, max(0.01, Modulos - 1))))"
+              },
+              {
+                "u": "0.0225 + (0.0095)*(min(1, max(0.01, Modulos - 1)))",
+                "v": "(-0.004 + (0.0014)*(min(1, max(0.01, Modulos - 1)))) + ((0.0076)*(min(1, max(0.01, Modulos - 1))))"
+              }
+            ],
+            "offset": "(Altura/2) + (0)*(min(1, max(0.01, Modulos - 1)))",
+            "axis": "0.0225 + (0.0095)*(min(1, max(0.01, Modulos - 1)))",
+            "angle": "360"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        },
+        "void": true
+      },
+      {
+        "name": "Tomada 2 - contato neutro",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.0225 + (0.0095)*(min(1, max(0.01, Modulos - 1)))",
+                "v": "-0.004 + (0.009)*(min(1, max(0.01, Modulos - 1)))"
+              },
+              {
+                "u": "(0.0225 + (0.0095)*(min(1, max(0.01, Modulos - 1)))) + ((0.00305)*(min(1, max(0.01, Modulos - 1))))",
+                "v": "-0.004 + (0.009)*(min(1, max(0.01, Modulos - 1)))"
+              },
+              {
+                "u": "(0.0225 + (0.0095)*(min(1, max(0.01, Modulos - 1)))) + ((0.00305)*(min(1, max(0.01, Modulos - 1))))",
+                "v": "(-0.004 + (0.009)*(min(1, max(0.01, Modulos - 1)))) + ((0.009)*(min(1, max(0.01, Modulos - 1))))"
+              },
+              {
+                "u": "0.0225 + (0.0095)*(min(1, max(0.01, Modulos - 1)))",
+                "v": "(-0.004 + (0.009)*(min(1, max(0.01, Modulos - 1)))) + ((0.009)*(min(1, max(0.01, Modulos - 1))))"
+              }
+            ],
+            "offset": "(Altura/2) + (0)*(min(1, max(0.01, Modulos - 1)))",
+            "axis": "0.0225 + (0.0095)*(min(1, max(0.01, Modulos - 1)))",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tomada 2 - furo terra",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.0225 + (0)*(min(1, max(0.01, Modulos - 1)))",
+                "v": "-0.004 + (0.0014)*(min(1, max(0.01, Modulos - 1)))"
+              },
+              {
+                "u": "(0.0225 + (0)*(min(1, max(0.01, Modulos - 1)))) + ((0.00225)*(min(1, max(0.01, Modulos - 1))))",
+                "v": "-0.004 + (0.0014)*(min(1, max(0.01, Modulos - 1)))"
+              },
+              {
+                "u": "(0.0225 + (0)*(min(1, max(0.01, Modulos - 1)))) + ((0.00225)*(min(1, max(0.01, Modulos - 1))))",
+                "v": "(-0.004 + (0.0014)*(min(1, max(0.01, Modulos - 1)))) + ((0.0076)*(min(1, max(0.01, Modulos - 1))))"
+              },
+              {
+                "u": "0.0225 + (0)*(min(1, max(0.01, Modulos - 1)))",
+                "v": "(-0.004 + (0.0014)*(min(1, max(0.01, Modulos - 1)))) + ((0.0076)*(min(1, max(0.01, Modulos - 1))))"
+              }
+            ],
+            "offset": "(Altura/2) + (-0.003)*(min(1, max(0.01, Modulos - 1)))",
+            "axis": "0.0225 + (0)*(min(1, max(0.01, Modulos - 1)))",
+            "angle": "360"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        },
+        "void": true
+      },
+      {
+        "name": "Tomada 2 - contato terra",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.0225 + (0)*(min(1, max(0.01, Modulos - 1)))",
+                "v": "-0.004 + (0.009)*(min(1, max(0.01, Modulos - 1)))"
+              },
+              {
+                "u": "(0.0225 + (0)*(min(1, max(0.01, Modulos - 1)))) + ((0.00305)*(min(1, max(0.01, Modulos - 1))))",
+                "v": "-0.004 + (0.009)*(min(1, max(0.01, Modulos - 1)))"
+              },
+              {
+                "u": "(0.0225 + (0)*(min(1, max(0.01, Modulos - 1)))) + ((0.00305)*(min(1, max(0.01, Modulos - 1))))",
+                "v": "(-0.004 + (0.009)*(min(1, max(0.01, Modulos - 1)))) + ((0.009)*(min(1, max(0.01, Modulos - 1))))"
+              },
+              {
+                "u": "0.0225 + (0)*(min(1, max(0.01, Modulos - 1)))",
+                "v": "(-0.004 + (0.009)*(min(1, max(0.01, Modulos - 1)))) + ((0.009)*(min(1, max(0.01, Modulos - 1))))"
+              }
+            ],
+            "offset": "(Altura/2) + (-0.003)*(min(1, max(0.01, Modulos - 1)))",
+            "axis": "0.0225 + (0)*(min(1, max(0.01, Modulos - 1)))",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
         }
       }
     ],
@@ -61,11 +1213,58 @@
     {
       "name": "TUG 100 VA 4x4 dupla",
       "values": {
-        "Largura": 0.1
+        "Largura": 0.1,
+        "Modulos": 2
       },
       "info": {
         "description": "Duas tomadas 2P+T 10 A em caixa 4x4"
       }
+    }
+  ],
+  "materials": [
+    {
+      "name": "Branco",
+      "color": [
+        244,
+        244,
+        240
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "PVC amarelo",
+      "color": [
+        226,
+        186,
+        52
+      ],
+      "class": "Plastic",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico cinza claro",
+      "color": [
+        196,
+        198,
+        200
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Latão",
+      "color": [
+        192,
+        160,
+        84
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
     }
   ]
 }
