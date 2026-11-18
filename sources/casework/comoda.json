@@ -1,0 +1,2949 @@
+{
+  "component": "Cômoda",
+  "def": {
+    "kind": "Casework",
+    "params": [
+      {
+        "name": "Largura",
+        "value": 0.8,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Profundidade",
+        "value": 0.45,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Altura",
+        "value": 0.85,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Gavetas",
+        "value": 4,
+        "kind": "Number",
+        "instance": false
+      },
+      {
+        "name": "AberturaGaveta1",
+        "value": 0,
+        "kind": "Length",
+        "instance": true
+      },
+      {
+        "name": "AberturaGaveta2",
+        "value": 0,
+        "kind": "Length",
+        "instance": true
+      },
+      {
+        "name": "AberturaGaveta3",
+        "value": 0,
+        "kind": "Length",
+        "instance": true
+      },
+      {
+        "name": "AberturaGaveta4",
+        "value": 0,
+        "kind": "Length",
+        "instance": true
+      },
+      {
+        "name": "AberturaGaveta5",
+        "value": 0,
+        "kind": "Length",
+        "instance": true
+      }
+    ],
+    "items": [
+      {
+        "name": "Rodapé simplificado",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2)",
+            "y": "(-Profundidade/2) + 0.03",
+            "z": "0",
+            "width": "Largura",
+            "depth": "Profundidade - 0.03",
+            "height": "0.08"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Corpo simplificado",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2)",
+            "y": "(-Profundidade/2)",
+            "z": "0.08",
+            "width": "Largura",
+            "depth": "Profundidade",
+            "height": "(Altura - 0.025) - 0.08"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Tampo simplificado",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) - 0.01",
+            "y": "(-Profundidade/2) - 0.012",
+            "z": "(Altura - 0.025)",
+            "width": "Largura + 0.02",
+            "depth": "Profundidade + 0.012",
+            "height": "0.025"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Lateral esquerda",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2)",
+            "y": "(-Profundidade/2)",
+            "z": "0.004",
+            "width": "0.018",
+            "depth": "Profundidade",
+            "height": "(Altura - 0.025) - 0.004"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lateral direita",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2) - 0.018)",
+            "y": "(-Profundidade/2)",
+            "z": "0.004",
+            "width": "0.018",
+            "depth": "Profundidade",
+            "height": "(Altura - 0.025) - 0.004"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Base",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018)",
+            "y": "(-Profundidade/2)",
+            "z": "0.08",
+            "width": "(Largura - 0.036)",
+            "depth": "Profundidade - 0.009",
+            "height": "0.018"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Painel superior",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018)",
+            "y": "(-Profundidade/2)",
+            "z": "((Altura - 0.025) - 0.018)",
+            "width": "(Largura - 0.036)",
+            "depth": "Profundidade - 0.009",
+            "height": "0.018"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Fundo",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018)",
+            "y": "(Profundidade/2) - 0.009",
+            "z": "(0.08 + 0.018)",
+            "width": "(Largura - 0.036)",
+            "depth": "0.006",
+            "height": "((Altura - 0.025) - 0.018) - (0.08 + 0.018)"
+          }
+        },
+        "material": "Laminado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Rodapé frontal",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018)",
+            "y": "(-Profundidade/2) + 0.03",
+            "z": "0.004",
+            "width": "(Largura - 0.036)",
+            "depth": "0.018",
+            "height": "0.08 - 0.004"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Rodapé traseiro",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018)",
+            "y": "(Profundidade/2) - 0.06",
+            "z": "0.004",
+            "width": "(Largura - 0.036)",
+            "depth": "0.018",
+            "height": "0.08 - 0.004"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Sapata frontal esquerda",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.001",
+            "y": "(-Profundidade/2) + 0.002",
+            "z": "0",
+            "width": "0.016",
+            "depth": "0.038",
+            "height": "0.004"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Sapata frontal direita",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2) - 0.018) + 0.001",
+            "y": "(-Profundidade/2) + 0.002",
+            "z": "0",
+            "width": "0.016",
+            "depth": "0.038",
+            "height": "0.004"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Sapata traseira esquerda",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.001",
+            "y": "(Profundidade/2) - 0.04 + 0.002",
+            "z": "0",
+            "width": "0.016",
+            "depth": "0.038",
+            "height": "0.004"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Sapata traseira direita",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2) - 0.018) + 0.001",
+            "y": "(Profundidade/2) - 0.04 + 0.002",
+            "z": "0",
+            "width": "0.016",
+            "depth": "0.038",
+            "height": "0.004"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampo",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(-Profundidade/2) - 0.012 + 0.008",
+                "v": "(Altura - 0.025)"
+              },
+              {
+                "u": "(Profundidade/2)",
+                "v": "(Altura - 0.025)"
+              },
+              {
+                "u": "(Profundidade/2)",
+                "v": "Altura"
+              },
+              {
+                "u": "(-Profundidade/2) - 0.012 + 0.008",
+                "v": "Altura",
+                "radius": "0.008"
+              },
+              {
+                "u": "(-Profundidade/2) - 0.012",
+                "v": "Altura - 0.008"
+              },
+              {
+                "u": "(-Profundidade/2) - 0.012",
+                "v": "(Altura - 0.025) + 0.008",
+                "radius": "0.008"
+              }
+            ],
+            "offset": "(-Largura/2) - 0.01",
+            "depth": "Largura + 0.02"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Rebaixo sob o tampo",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.004",
+            "y": "(-Profundidade/2) + 0.004",
+            "z": "(Altura - 0.025) - 0.0005",
+            "width": "Largura - 0.008",
+            "depth": "Profundidade - 0.008",
+            "height": "0.0005"
+          }
+        },
+        "material": "Madeira escura",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cantoneira antitombamento",
+        "shape": {
+          "Box": {
+            "x": "-0.025",
+            "y": "(Profundidade/2) - 0.003",
+            "z": "((Altura - 0.025) - 0.018) - 0.04",
+            "width": "0.05",
+            "depth": "0.003",
+            "height": "0.04"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cantoneira antitombamento - aba",
+        "shape": {
+          "Box": {
+            "x": "-0.025",
+            "y": "(Profundidade/2) - 0.035",
+            "z": "((Altura - 0.025) - 0.018) - 0.003",
+            "width": "0.05",
+            "depth": "0.032",
+            "height": "0.003"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - frente",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018) + 0.0025",
+            "y": "((-Profundidade/2) - AberturaGaveta1)",
+            "z": "((((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + 0.0025",
+            "width": "((Largura/2) - 0.018) - ((-Largura/2) + 0.018) - 0.005",
+            "depth": "0.018",
+            "height": "(((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) - 0.005"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - lateral esquerda",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 0.018) + 0.0125)",
+            "y": "((-Profundidade/2) - AberturaGaveta1) + 0.018",
+            "z": "(((((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + 0.018)",
+            "width": "0.012",
+            "depth": "Profundidade - 0.04 - 0.018",
+            "height": "((((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) - 0.05)"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - lateral direita",
+        "shape": {
+          "Box": {
+            "x": "(((Largura/2) - 0.018) - 0.0125) - 0.012",
+            "y": "((-Profundidade/2) - AberturaGaveta1) + 0.018",
+            "z": "(((((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + 0.018)",
+            "width": "0.012",
+            "depth": "Profundidade - 0.04 - 0.018",
+            "height": "((((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) - 0.05)"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - traseira",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 0.018) + 0.0125) + 0.012",
+            "y": "((-Profundidade/2) - AberturaGaveta1) + Profundidade - 0.04 - 0.012",
+            "z": "(((((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + 0.018)",
+            "width": "(((Largura/2) - 0.018) - 0.0125) - (((-Largura/2) + 0.018) + 0.0125) - 0.024",
+            "depth": "0.012",
+            "height": "((((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) - 0.05) - 0.01"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - fundo",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 0.018) + 0.0125) + 0.012",
+            "y": "((-Profundidade/2) - AberturaGaveta1) + 0.018",
+            "z": "(((((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + 0.018) + 0.008",
+            "width": "(((Largura/2) - 0.018) - 0.0125) - (((-Largura/2) + 0.018) + 0.0125) - 0.024",
+            "depth": "Profundidade - 0.04 - 0.018 - 0.012",
+            "height": "0.005"
+          }
+        },
+        "material": "Laminado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - contrafrente",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 0.018) + 0.0125) + 0.012",
+            "y": "((-Profundidade/2) - AberturaGaveta1) + 0.018",
+            "z": "(((((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + 0.018)",
+            "width": "(((Largura/2) - 0.018) - 0.0125) - (((-Largura/2) + 0.018) + 0.0125) - 0.024",
+            "depth": "0.012",
+            "height": "((((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) - 0.05) - 0.01"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - corrediça fixa esquerda",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018) + 0.0",
+            "y": "(-Profundidade/2) + 0.03",
+            "z": "((((((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2 - 0.018)",
+            "width": "0.0045",
+            "depth": "Profundidade - 0.04 - 0.05",
+            "height": "0.036"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - corrediça intermediária esquerda",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018) + 0.0042",
+            "y": "((-Profundidade/2) - AberturaGaveta1/2) + 0.03",
+            "z": "((((((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2 - 0.018) + 0.004",
+            "width": "0.004",
+            "depth": "Profundidade - 0.04 - 0.05",
+            "height": "0.028"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - corrediça móvel esquerda",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018) + 0.008",
+            "y": "((-Profundidade/2) - AberturaGaveta1) + 0.03",
+            "z": "((((((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2 - 0.018) + 0.008",
+            "width": "0.0045",
+            "depth": "Profundidade - 0.04 - 0.05",
+            "height": "0.02"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - corrediça fixa direita",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2) - 0.018) - 0.0125 + 0.008",
+            "y": "(-Profundidade/2) + 0.03",
+            "z": "((((((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2 - 0.018)",
+            "width": "0.0045",
+            "depth": "Profundidade - 0.04 - 0.05",
+            "height": "0.036"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - corrediça intermediária direita",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2) - 0.018) - 0.0125 + 0.0042",
+            "y": "((-Profundidade/2) - AberturaGaveta1/2) + 0.03",
+            "z": "((((((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2 - 0.018) + 0.004",
+            "width": "0.004",
+            "depth": "Profundidade - 0.04 - 0.05",
+            "height": "0.028"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - corrediça móvel direita",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2) - 0.018) - 0.0125 + 0.0",
+            "y": "((-Profundidade/2) - AberturaGaveta1) + 0.03",
+            "z": "((((((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2 - 0.018) + 0.008",
+            "width": "0.0045",
+            "depth": "Profundidade - 0.04 - 0.05",
+            "height": "0.02"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - puxador",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((-Profundidade/2) - AberturaGaveta1) - 0.028) - 0.0055",
+                "v": "((((((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2)",
+                "radius": "0.0055"
+              },
+              {
+                "u": "(((-Profundidade/2) - AberturaGaveta1) - 0.028) + 0.0055",
+                "v": "((((((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2)",
+                "radius": "0.0055"
+              }
+            ],
+            "offset": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - min(0.32, 0.3*Largura)/2",
+            "depth": "min(0.32, 0.3*Largura)"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - pino do puxador esquerdo",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016)",
+                "v": "((-Profundidade/2) - AberturaGaveta1) - 0.026"
+              },
+              {
+                "u": "(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016)) + 0.0035",
+                "v": "((-Profundidade/2) - AberturaGaveta1) - 0.026"
+              },
+              {
+                "u": "(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016)) + 0.0035",
+                "v": "(((-Profundidade/2) - AberturaGaveta1) - 0.026) + 0.026"
+              },
+              {
+                "u": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016)",
+                "v": "(((-Profundidade/2) - AberturaGaveta1) - 0.026) + 0.026"
+              }
+            ],
+            "offset": "((((((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2)",
+            "axis": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016)",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - roseta do puxador esquerdo",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016)",
+                "v": "((-Profundidade/2) - AberturaGaveta1) - 0.003"
+              },
+              {
+                "u": "(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016)) + 0.008",
+                "v": "((-Profundidade/2) - AberturaGaveta1) - 0.003"
+              },
+              {
+                "u": "(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016)) + 0.008",
+                "v": "(((-Profundidade/2) - AberturaGaveta1) - 0.003) + 0.003"
+              },
+              {
+                "u": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016)",
+                "v": "(((-Profundidade/2) - AberturaGaveta1) - 0.003) + 0.003"
+              }
+            ],
+            "offset": "((((((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2)",
+            "axis": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016)",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - pino do puxador direito",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016)",
+                "v": "((-Profundidade/2) - AberturaGaveta1) - 0.026"
+              },
+              {
+                "u": "(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016)) + 0.0035",
+                "v": "((-Profundidade/2) - AberturaGaveta1) - 0.026"
+              },
+              {
+                "u": "(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016)) + 0.0035",
+                "v": "(((-Profundidade/2) - AberturaGaveta1) - 0.026) + 0.026"
+              },
+              {
+                "u": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016)",
+                "v": "(((-Profundidade/2) - AberturaGaveta1) - 0.026) + 0.026"
+              }
+            ],
+            "offset": "((((((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2)",
+            "axis": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016)",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - roseta do puxador direito",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016)",
+                "v": "((-Profundidade/2) - AberturaGaveta1) - 0.003"
+              },
+              {
+                "u": "(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016)) + 0.008",
+                "v": "((-Profundidade/2) - AberturaGaveta1) - 0.003"
+              },
+              {
+                "u": "(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016)) + 0.008",
+                "v": "(((-Profundidade/2) - AberturaGaveta1) - 0.003) + 0.003"
+              },
+              {
+                "u": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016)",
+                "v": "(((-Profundidade/2) - AberturaGaveta1) - 0.003) + 0.003"
+              }
+            ],
+            "offset": "((((((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2)",
+            "axis": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016)",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Roupa dobrada 1.1",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 0.018) + 0.0125) + 0.022 + 0*(((((((Largura/2) - 0.018) - 0.0125) - (((-Largura/2) + 0.018) + 0.0125) - 0.024) - 0.04)/3) + 0.01) + 0.0",
+            "y": "((-Profundidade/2) - AberturaGaveta1) + 0.018 + 0.025 + 0.0",
+            "z": "(((((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + 0.018) + 0.013 + 0.0",
+            "width": "((((((Largura/2) - 0.018) - 0.0125) - (((-Largura/2) + 0.018) + 0.0125) - 0.024) - 0.04)/3) - 0.008",
+            "depth": "0.2",
+            "height": "0.033"
+          }
+        },
+        "material": "Tecido azul petróleo",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Roupa dobrada 1.2",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 0.018) + 0.0125) + 0.022 + 0*(((((((Largura/2) - 0.018) - 0.0125) - (((-Largura/2) + 0.018) + 0.0125) - 0.024) - 0.04)/3) + 0.01) + 0.004",
+            "y": "((-Profundidade/2) - AberturaGaveta1) + 0.018 + 0.025 + 0.006",
+            "z": "(((((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + 0.018) + 0.013 + 0.034",
+            "width": "((((((Largura/2) - 0.018) - 0.0125) - (((-Largura/2) + 0.018) + 0.0125) - 0.024) - 0.04)/3) - 0.008",
+            "depth": "0.2",
+            "height": "0.033"
+          }
+        },
+        "material": "Roupa de cama branca",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Roupa dobrada 2.1",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 0.018) + 0.0125) + 0.022 + 1*(((((((Largura/2) - 0.018) - 0.0125) - (((-Largura/2) + 0.018) + 0.0125) - 0.024) - 0.04)/3) + 0.01) + 0.0",
+            "y": "((-Profundidade/2) - AberturaGaveta1) + 0.018 + 0.025 + 0.0",
+            "z": "(((((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + 0.018) + 0.013 + 0.0",
+            "width": "((((((Largura/2) - 0.018) - 0.0125) - (((-Largura/2) + 0.018) + 0.0125) - 0.024) - 0.04)/3) - 0.008",
+            "depth": "0.2",
+            "height": "0.033"
+          }
+        },
+        "material": "Roupa de cama branca",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Roupa dobrada 2.2",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 0.018) + 0.0125) + 0.022 + 1*(((((((Largura/2) - 0.018) - 0.0125) - (((-Largura/2) + 0.018) + 0.0125) - 0.024) - 0.04)/3) + 0.01) + 0.004",
+            "y": "((-Profundidade/2) - AberturaGaveta1) + 0.018 + 0.025 + 0.006",
+            "z": "(((((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + 0.018) + 0.013 + 0.034",
+            "width": "((((((Largura/2) - 0.018) - 0.0125) - (((-Largura/2) + 0.018) + 0.0125) - 0.024) - 0.04)/3) - 0.008",
+            "depth": "0.2",
+            "height": "0.033"
+          }
+        },
+        "material": "Tecido mostarda",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Roupa dobrada 3.1",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 0.018) + 0.0125) + 0.022 + 2*(((((((Largura/2) - 0.018) - 0.0125) - (((-Largura/2) + 0.018) + 0.0125) - 0.024) - 0.04)/3) + 0.01) + 0.0",
+            "y": "((-Profundidade/2) - AberturaGaveta1) + 0.018 + 0.025 + 0.0",
+            "z": "(((((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + 0.018) + 0.013 + 0.0",
+            "width": "((((((Largura/2) - 0.018) - 0.0125) - (((-Largura/2) + 0.018) + 0.0125) - 0.024) - 0.04)/3) - 0.008",
+            "depth": "0.2",
+            "height": "0.033"
+          }
+        },
+        "material": "Tecido mostarda",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Roupa dobrada 3.2",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 0.018) + 0.0125) + 0.022 + 2*(((((((Largura/2) - 0.018) - 0.0125) - (((-Largura/2) + 0.018) + 0.0125) - 0.024) - 0.04)/3) + 0.01) + 0.004",
+            "y": "((-Profundidade/2) - AberturaGaveta1) + 0.018 + 0.025 + 0.006",
+            "z": "(((((Altura - 0.025) - 0.018) - 0*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + 0.018) + 0.013 + 0.034",
+            "width": "((((((Largura/2) - 0.018) - 0.0125) - (((-Largura/2) + 0.018) + 0.0125) - 0.024) - 0.04)/3) - 0.008",
+            "depth": "0.2",
+            "height": "0.033"
+          }
+        },
+        "material": "Tecido azul petróleo",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travessa entre gavetas 1",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018)",
+            "y": "(-Profundidade/2)",
+            "z": "(((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018))",
+            "width": "(Largura - 0.036)",
+            "depth": "0.06",
+            "height": "0.018"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travessa traseira entre gavetas 1",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018)",
+            "y": "(Profundidade/2) - 0.069",
+            "z": "(((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018))",
+            "width": "(Largura - 0.036)",
+            "depth": "0.06",
+            "height": "0.018"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - frente",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018) + 0.0025",
+            "y": "((-Profundidade/2) - AberturaGaveta2)",
+            "z": "((((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + 0.0025",
+            "width": "((Largura/2) - 0.018) - ((-Largura/2) + 0.018) - 0.005",
+            "depth": "0.018",
+            "height": "(((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) - 0.005"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - lateral esquerda",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 0.018) + 0.0125)",
+            "y": "((-Profundidade/2) - AberturaGaveta2) + 0.018",
+            "z": "(((((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + 0.018)",
+            "width": "0.012",
+            "depth": "Profundidade - 0.04 - 0.018",
+            "height": "((((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) - 0.05)"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - lateral direita",
+        "shape": {
+          "Box": {
+            "x": "(((Largura/2) - 0.018) - 0.0125) - 0.012",
+            "y": "((-Profundidade/2) - AberturaGaveta2) + 0.018",
+            "z": "(((((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + 0.018)",
+            "width": "0.012",
+            "depth": "Profundidade - 0.04 - 0.018",
+            "height": "((((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) - 0.05)"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - traseira",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 0.018) + 0.0125) + 0.012",
+            "y": "((-Profundidade/2) - AberturaGaveta2) + Profundidade - 0.04 - 0.012",
+            "z": "(((((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + 0.018)",
+            "width": "(((Largura/2) - 0.018) - 0.0125) - (((-Largura/2) + 0.018) + 0.0125) - 0.024",
+            "depth": "0.012",
+            "height": "((((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) - 0.05) - 0.01"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - fundo",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 0.018) + 0.0125) + 0.012",
+            "y": "((-Profundidade/2) - AberturaGaveta2) + 0.018",
+            "z": "(((((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + 0.018) + 0.008",
+            "width": "(((Largura/2) - 0.018) - 0.0125) - (((-Largura/2) + 0.018) + 0.0125) - 0.024",
+            "depth": "Profundidade - 0.04 - 0.018 - 0.012",
+            "height": "0.005"
+          }
+        },
+        "material": "Laminado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - contrafrente",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 0.018) + 0.0125) + 0.012",
+            "y": "((-Profundidade/2) - AberturaGaveta2) + 0.018",
+            "z": "(((((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + 0.018)",
+            "width": "(((Largura/2) - 0.018) - 0.0125) - (((-Largura/2) + 0.018) + 0.0125) - 0.024",
+            "depth": "0.012",
+            "height": "((((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) - 0.05) - 0.01"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - corrediça fixa esquerda",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018) + 0.0",
+            "y": "(-Profundidade/2) + 0.03",
+            "z": "((((((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2 - 0.018)",
+            "width": "0.0045",
+            "depth": "Profundidade - 0.04 - 0.05",
+            "height": "0.036"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - corrediça intermediária esquerda",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018) + 0.0042",
+            "y": "((-Profundidade/2) - AberturaGaveta2/2) + 0.03",
+            "z": "((((((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2 - 0.018) + 0.004",
+            "width": "0.004",
+            "depth": "Profundidade - 0.04 - 0.05",
+            "height": "0.028"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - corrediça móvel esquerda",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018) + 0.008",
+            "y": "((-Profundidade/2) - AberturaGaveta2) + 0.03",
+            "z": "((((((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2 - 0.018) + 0.008",
+            "width": "0.0045",
+            "depth": "Profundidade - 0.04 - 0.05",
+            "height": "0.02"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - corrediça fixa direita",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2) - 0.018) - 0.0125 + 0.008",
+            "y": "(-Profundidade/2) + 0.03",
+            "z": "((((((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2 - 0.018)",
+            "width": "0.0045",
+            "depth": "Profundidade - 0.04 - 0.05",
+            "height": "0.036"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - corrediça intermediária direita",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2) - 0.018) - 0.0125 + 0.0042",
+            "y": "((-Profundidade/2) - AberturaGaveta2/2) + 0.03",
+            "z": "((((((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2 - 0.018) + 0.004",
+            "width": "0.004",
+            "depth": "Profundidade - 0.04 - 0.05",
+            "height": "0.028"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - corrediça móvel direita",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2) - 0.018) - 0.0125 + 0.0",
+            "y": "((-Profundidade/2) - AberturaGaveta2) + 0.03",
+            "z": "((((((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2 - 0.018) + 0.008",
+            "width": "0.0045",
+            "depth": "Profundidade - 0.04 - 0.05",
+            "height": "0.02"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - puxador",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((-Profundidade/2) - AberturaGaveta2) - 0.028) - 0.0055",
+                "v": "((((((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2)",
+                "radius": "0.0055"
+              },
+              {
+                "u": "(((-Profundidade/2) - AberturaGaveta2) - 0.028) + 0.0055",
+                "v": "((((((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2)",
+                "radius": "0.0055"
+              }
+            ],
+            "offset": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - min(0.32, 0.3*Largura)/2",
+            "depth": "min(0.32, 0.3*Largura)"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - pino do puxador esquerdo",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016)",
+                "v": "((-Profundidade/2) - AberturaGaveta2) - 0.026"
+              },
+              {
+                "u": "(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016)) + 0.0035",
+                "v": "((-Profundidade/2) - AberturaGaveta2) - 0.026"
+              },
+              {
+                "u": "(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016)) + 0.0035",
+                "v": "(((-Profundidade/2) - AberturaGaveta2) - 0.026) + 0.026"
+              },
+              {
+                "u": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016)",
+                "v": "(((-Profundidade/2) - AberturaGaveta2) - 0.026) + 0.026"
+              }
+            ],
+            "offset": "((((((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2)",
+            "axis": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016)",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - roseta do puxador esquerdo",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016)",
+                "v": "((-Profundidade/2) - AberturaGaveta2) - 0.003"
+              },
+              {
+                "u": "(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016)) + 0.008",
+                "v": "((-Profundidade/2) - AberturaGaveta2) - 0.003"
+              },
+              {
+                "u": "(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016)) + 0.008",
+                "v": "(((-Profundidade/2) - AberturaGaveta2) - 0.003) + 0.003"
+              },
+              {
+                "u": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016)",
+                "v": "(((-Profundidade/2) - AberturaGaveta2) - 0.003) + 0.003"
+              }
+            ],
+            "offset": "((((((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2)",
+            "axis": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016)",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - pino do puxador direito",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016)",
+                "v": "((-Profundidade/2) - AberturaGaveta2) - 0.026"
+              },
+              {
+                "u": "(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016)) + 0.0035",
+                "v": "((-Profundidade/2) - AberturaGaveta2) - 0.026"
+              },
+              {
+                "u": "(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016)) + 0.0035",
+                "v": "(((-Profundidade/2) - AberturaGaveta2) - 0.026) + 0.026"
+              },
+              {
+                "u": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016)",
+                "v": "(((-Profundidade/2) - AberturaGaveta2) - 0.026) + 0.026"
+              }
+            ],
+            "offset": "((((((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2)",
+            "axis": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016)",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - roseta do puxador direito",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016)",
+                "v": "((-Profundidade/2) - AberturaGaveta2) - 0.003"
+              },
+              {
+                "u": "(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016)) + 0.008",
+                "v": "((-Profundidade/2) - AberturaGaveta2) - 0.003"
+              },
+              {
+                "u": "(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016)) + 0.008",
+                "v": "(((-Profundidade/2) - AberturaGaveta2) - 0.003) + 0.003"
+              },
+              {
+                "u": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016)",
+                "v": "(((-Profundidade/2) - AberturaGaveta2) - 0.003) + 0.003"
+              }
+            ],
+            "offset": "((((((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 1*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2)",
+            "axis": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016)",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travessa entre gavetas 2",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018)",
+            "y": "(-Profundidade/2)",
+            "z": "(((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018))",
+            "width": "(Largura - 0.036)",
+            "depth": "0.06",
+            "height": "0.018"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travessa traseira entre gavetas 2",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018)",
+            "y": "(Profundidade/2) - 0.069",
+            "z": "(((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018))",
+            "width": "(Largura - 0.036)",
+            "depth": "0.06",
+            "height": "0.018"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 3 - frente",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018) + 0.0025",
+            "y": "((-Profundidade/2) - AberturaGaveta3)",
+            "z": "((((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + 0.0025",
+            "width": "((Largura/2) - 0.018) - ((-Largura/2) + 0.018) - 0.005",
+            "depth": "0.018",
+            "height": "(((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) - 0.005"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 3 - lateral esquerda",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 0.018) + 0.0125)",
+            "y": "((-Profundidade/2) - AberturaGaveta3) + 0.018",
+            "z": "(((((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + 0.018)",
+            "width": "0.012",
+            "depth": "Profundidade - 0.04 - 0.018",
+            "height": "((((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) - 0.05)"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 3 - lateral direita",
+        "shape": {
+          "Box": {
+            "x": "(((Largura/2) - 0.018) - 0.0125) - 0.012",
+            "y": "((-Profundidade/2) - AberturaGaveta3) + 0.018",
+            "z": "(((((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + 0.018)",
+            "width": "0.012",
+            "depth": "Profundidade - 0.04 - 0.018",
+            "height": "((((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) - 0.05)"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 3 - traseira",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 0.018) + 0.0125) + 0.012",
+            "y": "((-Profundidade/2) - AberturaGaveta3) + Profundidade - 0.04 - 0.012",
+            "z": "(((((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + 0.018)",
+            "width": "(((Largura/2) - 0.018) - 0.0125) - (((-Largura/2) + 0.018) + 0.0125) - 0.024",
+            "depth": "0.012",
+            "height": "((((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) - 0.05) - 0.01"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 3 - fundo",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 0.018) + 0.0125) + 0.012",
+            "y": "((-Profundidade/2) - AberturaGaveta3) + 0.018",
+            "z": "(((((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + 0.018) + 0.008",
+            "width": "(((Largura/2) - 0.018) - 0.0125) - (((-Largura/2) + 0.018) + 0.0125) - 0.024",
+            "depth": "Profundidade - 0.04 - 0.018 - 0.012",
+            "height": "0.005"
+          }
+        },
+        "material": "Laminado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 3 - contrafrente",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 0.018) + 0.0125) + 0.012",
+            "y": "((-Profundidade/2) - AberturaGaveta3) + 0.018",
+            "z": "(((((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + 0.018)",
+            "width": "(((Largura/2) - 0.018) - 0.0125) - (((-Largura/2) + 0.018) + 0.0125) - 0.024",
+            "depth": "0.012",
+            "height": "((((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) - 0.05) - 0.01"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 3 - corrediça fixa esquerda",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018) + 0.0",
+            "y": "(-Profundidade/2) + 0.03",
+            "z": "((((((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2 - 0.018)",
+            "width": "0.0045",
+            "depth": "Profundidade - 0.04 - 0.05",
+            "height": "0.036"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 3 - corrediça intermediária esquerda",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018) + 0.0042",
+            "y": "((-Profundidade/2) - AberturaGaveta3/2) + 0.03",
+            "z": "((((((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2 - 0.018) + 0.004",
+            "width": "0.004",
+            "depth": "Profundidade - 0.04 - 0.05",
+            "height": "0.028"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 3 - corrediça móvel esquerda",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018) + 0.008",
+            "y": "((-Profundidade/2) - AberturaGaveta3) + 0.03",
+            "z": "((((((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2 - 0.018) + 0.008",
+            "width": "0.0045",
+            "depth": "Profundidade - 0.04 - 0.05",
+            "height": "0.02"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 3 - corrediça fixa direita",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2) - 0.018) - 0.0125 + 0.008",
+            "y": "(-Profundidade/2) + 0.03",
+            "z": "((((((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2 - 0.018)",
+            "width": "0.0045",
+            "depth": "Profundidade - 0.04 - 0.05",
+            "height": "0.036"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 3 - corrediça intermediária direita",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2) - 0.018) - 0.0125 + 0.0042",
+            "y": "((-Profundidade/2) - AberturaGaveta3/2) + 0.03",
+            "z": "((((((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2 - 0.018) + 0.004",
+            "width": "0.004",
+            "depth": "Profundidade - 0.04 - 0.05",
+            "height": "0.028"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 3 - corrediça móvel direita",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2) - 0.018) - 0.0125 + 0.0",
+            "y": "((-Profundidade/2) - AberturaGaveta3) + 0.03",
+            "z": "((((((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2 - 0.018) + 0.008",
+            "width": "0.0045",
+            "depth": "Profundidade - 0.04 - 0.05",
+            "height": "0.02"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 3 - puxador",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((-Profundidade/2) - AberturaGaveta3) - 0.028) - 0.0055",
+                "v": "((((((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2)",
+                "radius": "0.0055"
+              },
+              {
+                "u": "(((-Profundidade/2) - AberturaGaveta3) - 0.028) + 0.0055",
+                "v": "((((((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2)",
+                "radius": "0.0055"
+              }
+            ],
+            "offset": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - min(0.32, 0.3*Largura)/2",
+            "depth": "min(0.32, 0.3*Largura)"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 3 - pino do puxador esquerdo",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016)",
+                "v": "((-Profundidade/2) - AberturaGaveta3) - 0.026"
+              },
+              {
+                "u": "(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016)) + 0.0035",
+                "v": "((-Profundidade/2) - AberturaGaveta3) - 0.026"
+              },
+              {
+                "u": "(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016)) + 0.0035",
+                "v": "(((-Profundidade/2) - AberturaGaveta3) - 0.026) + 0.026"
+              },
+              {
+                "u": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016)",
+                "v": "(((-Profundidade/2) - AberturaGaveta3) - 0.026) + 0.026"
+              }
+            ],
+            "offset": "((((((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2)",
+            "axis": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016)",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 3 - roseta do puxador esquerdo",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016)",
+                "v": "((-Profundidade/2) - AberturaGaveta3) - 0.003"
+              },
+              {
+                "u": "(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016)) + 0.008",
+                "v": "((-Profundidade/2) - AberturaGaveta3) - 0.003"
+              },
+              {
+                "u": "(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016)) + 0.008",
+                "v": "(((-Profundidade/2) - AberturaGaveta3) - 0.003) + 0.003"
+              },
+              {
+                "u": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016)",
+                "v": "(((-Profundidade/2) - AberturaGaveta3) - 0.003) + 0.003"
+              }
+            ],
+            "offset": "((((((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2)",
+            "axis": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016)",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 3 - pino do puxador direito",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016)",
+                "v": "((-Profundidade/2) - AberturaGaveta3) - 0.026"
+              },
+              {
+                "u": "(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016)) + 0.0035",
+                "v": "((-Profundidade/2) - AberturaGaveta3) - 0.026"
+              },
+              {
+                "u": "(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016)) + 0.0035",
+                "v": "(((-Profundidade/2) - AberturaGaveta3) - 0.026) + 0.026"
+              },
+              {
+                "u": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016)",
+                "v": "(((-Profundidade/2) - AberturaGaveta3) - 0.026) + 0.026"
+              }
+            ],
+            "offset": "((((((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2)",
+            "axis": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016)",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 3 - roseta do puxador direito",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016)",
+                "v": "((-Profundidade/2) - AberturaGaveta3) - 0.003"
+              },
+              {
+                "u": "(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016)) + 0.008",
+                "v": "((-Profundidade/2) - AberturaGaveta3) - 0.003"
+              },
+              {
+                "u": "(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016)) + 0.008",
+                "v": "(((-Profundidade/2) - AberturaGaveta3) - 0.003) + 0.003"
+              },
+              {
+                "u": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016)",
+                "v": "(((-Profundidade/2) - AberturaGaveta3) - 0.003) + 0.003"
+              }
+            ],
+            "offset": "((((((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 2*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2)",
+            "axis": "((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016)",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travessa entre gavetas 3",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 3)))*(((-Largura/2) + 0.018) - ((-Largura/2) + 0.018/2))",
+            "y": "0 + (min(1, max(0.005, Gavetas - 3)))*((-Profundidade/2) - 0)",
+            "z": "(Altura/2) + (min(1, max(0.005, Gavetas - 3)))*((((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - (Altura/2))",
+            "width": "(min(1, max(0.005, Gavetas - 3)))*((Largura - 0.036))",
+            "depth": "(min(1, max(0.005, Gavetas - 3)))*0.06",
+            "height": "(min(1, max(0.005, Gavetas - 3)))*0.018"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travessa traseira entre gavetas 3",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 3)))*(((-Largura/2) + 0.018) - ((-Largura/2) + 0.018/2))",
+            "y": "0 + (min(1, max(0.005, Gavetas - 3)))*((Profundidade/2) - 0.069 - 0)",
+            "z": "(Altura/2) + (min(1, max(0.005, Gavetas - 3)))*((((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - (Altura/2))",
+            "width": "(min(1, max(0.005, Gavetas - 3)))*((Largura - 0.036))",
+            "depth": "(min(1, max(0.005, Gavetas - 3)))*0.06",
+            "height": "(min(1, max(0.005, Gavetas - 3)))*0.018"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 4 - frente",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 3)))*(((-Largura/2) + 0.018) + 0.0025 - ((-Largura/2) + 0.018/2))",
+            "y": "0 + (min(1, max(0.005, Gavetas - 3)))*(((-Profundidade/2) - AberturaGaveta4) - 0)",
+            "z": "(Altura/2) + (min(1, max(0.005, Gavetas - 3)))*(((((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + 0.0025 - (Altura/2))",
+            "width": "(min(1, max(0.005, Gavetas - 3)))*(((Largura/2) - 0.018) - ((-Largura/2) + 0.018) - 0.005)",
+            "depth": "(min(1, max(0.005, Gavetas - 3)))*0.018",
+            "height": "(min(1, max(0.005, Gavetas - 3)))*((((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) - 0.005)"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 4 - lateral esquerda",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 3)))*((((-Largura/2) + 0.018) + 0.0125) - ((-Largura/2) + 0.018/2))",
+            "y": "0 + (min(1, max(0.005, Gavetas - 3)))*(((-Profundidade/2) - AberturaGaveta4) + 0.018 - 0)",
+            "z": "(Altura/2) + (min(1, max(0.005, Gavetas - 3)))*((((((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + 0.018) - (Altura/2))",
+            "width": "(min(1, max(0.005, Gavetas - 3)))*0.012",
+            "depth": "(min(1, max(0.005, Gavetas - 3)))*(Profundidade - 0.04 - 0.018)",
+            "height": "(min(1, max(0.005, Gavetas - 3)))*(((((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) - 0.05))"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 4 - lateral direita",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 3)))*((((Largura/2) - 0.018) - 0.0125) - 0.012 - ((-Largura/2) + 0.018/2))",
+            "y": "0 + (min(1, max(0.005, Gavetas - 3)))*(((-Profundidade/2) - AberturaGaveta4) + 0.018 - 0)",
+            "z": "(Altura/2) + (min(1, max(0.005, Gavetas - 3)))*((((((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + 0.018) - (Altura/2))",
+            "width": "(min(1, max(0.005, Gavetas - 3)))*0.012",
+            "depth": "(min(1, max(0.005, Gavetas - 3)))*(Profundidade - 0.04 - 0.018)",
+            "height": "(min(1, max(0.005, Gavetas - 3)))*(((((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) - 0.05))"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 4 - traseira",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 3)))*((((-Largura/2) + 0.018) + 0.0125) + 0.012 - ((-Largura/2) + 0.018/2))",
+            "y": "0 + (min(1, max(0.005, Gavetas - 3)))*(((-Profundidade/2) - AberturaGaveta4) + Profundidade - 0.04 - 0.012 - 0)",
+            "z": "(Altura/2) + (min(1, max(0.005, Gavetas - 3)))*((((((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + 0.018) - (Altura/2))",
+            "width": "(min(1, max(0.005, Gavetas - 3)))*((((Largura/2) - 0.018) - 0.0125) - (((-Largura/2) + 0.018) + 0.0125) - 0.024)",
+            "depth": "(min(1, max(0.005, Gavetas - 3)))*0.012",
+            "height": "(min(1, max(0.005, Gavetas - 3)))*(((((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) - 0.05) - 0.01)"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 4 - fundo",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 3)))*((((-Largura/2) + 0.018) + 0.0125) + 0.012 - ((-Largura/2) + 0.018/2))",
+            "y": "0 + (min(1, max(0.005, Gavetas - 3)))*(((-Profundidade/2) - AberturaGaveta4) + 0.018 - 0)",
+            "z": "(Altura/2) + (min(1, max(0.005, Gavetas - 3)))*((((((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + 0.018) + 0.008 - (Altura/2))",
+            "width": "(min(1, max(0.005, Gavetas - 3)))*((((Largura/2) - 0.018) - 0.0125) - (((-Largura/2) + 0.018) + 0.0125) - 0.024)",
+            "depth": "(min(1, max(0.005, Gavetas - 3)))*(Profundidade - 0.04 - 0.018 - 0.012)",
+            "height": "(min(1, max(0.005, Gavetas - 3)))*0.005"
+          }
+        },
+        "material": "Laminado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 4 - contrafrente",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 3)))*((((-Largura/2) + 0.018) + 0.0125) + 0.012 - ((-Largura/2) + 0.018/2))",
+            "y": "0 + (min(1, max(0.005, Gavetas - 3)))*(((-Profundidade/2) - AberturaGaveta4) + 0.018 - 0)",
+            "z": "(Altura/2) + (min(1, max(0.005, Gavetas - 3)))*((((((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + 0.018) - (Altura/2))",
+            "width": "(min(1, max(0.005, Gavetas - 3)))*((((Largura/2) - 0.018) - 0.0125) - (((-Largura/2) + 0.018) + 0.0125) - 0.024)",
+            "depth": "(min(1, max(0.005, Gavetas - 3)))*0.012",
+            "height": "(min(1, max(0.005, Gavetas - 3)))*(((((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) - 0.05) - 0.01)"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 4 - corrediça fixa esquerda",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 3)))*(((-Largura/2) + 0.018) + 0.0 - ((-Largura/2) + 0.018/2))",
+            "y": "0 + (min(1, max(0.005, Gavetas - 3)))*((-Profundidade/2) + 0.03 - 0)",
+            "z": "(Altura/2) + (min(1, max(0.005, Gavetas - 3)))*(((((((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2 - 0.018) - (Altura/2))",
+            "width": "(min(1, max(0.005, Gavetas - 3)))*0.0045",
+            "depth": "(min(1, max(0.005, Gavetas - 3)))*(Profundidade - 0.04 - 0.05)",
+            "height": "(min(1, max(0.005, Gavetas - 3)))*0.036"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 4 - corrediça intermediária esquerda",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 3)))*(((-Largura/2) + 0.018) + 0.0042 - ((-Largura/2) + 0.018/2))",
+            "y": "0 + (min(1, max(0.005, Gavetas - 3)))*(((-Profundidade/2) - AberturaGaveta4/2) + 0.03 - 0)",
+            "z": "(Altura/2) + (min(1, max(0.005, Gavetas - 3)))*(((((((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2 - 0.018) + 0.004 - (Altura/2))",
+            "width": "(min(1, max(0.005, Gavetas - 3)))*0.004",
+            "depth": "(min(1, max(0.005, Gavetas - 3)))*(Profundidade - 0.04 - 0.05)",
+            "height": "(min(1, max(0.005, Gavetas - 3)))*0.028"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 4 - corrediça móvel esquerda",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 3)))*(((-Largura/2) + 0.018) + 0.008 - ((-Largura/2) + 0.018/2))",
+            "y": "0 + (min(1, max(0.005, Gavetas - 3)))*(((-Profundidade/2) - AberturaGaveta4) + 0.03 - 0)",
+            "z": "(Altura/2) + (min(1, max(0.005, Gavetas - 3)))*(((((((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2 - 0.018) + 0.008 - (Altura/2))",
+            "width": "(min(1, max(0.005, Gavetas - 3)))*0.0045",
+            "depth": "(min(1, max(0.005, Gavetas - 3)))*(Profundidade - 0.04 - 0.05)",
+            "height": "(min(1, max(0.005, Gavetas - 3)))*0.02"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 4 - corrediça fixa direita",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 3)))*(((Largura/2) - 0.018) - 0.0125 + 0.008 - ((-Largura/2) + 0.018/2))",
+            "y": "0 + (min(1, max(0.005, Gavetas - 3)))*((-Profundidade/2) + 0.03 - 0)",
+            "z": "(Altura/2) + (min(1, max(0.005, Gavetas - 3)))*(((((((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2 - 0.018) - (Altura/2))",
+            "width": "(min(1, max(0.005, Gavetas - 3)))*0.0045",
+            "depth": "(min(1, max(0.005, Gavetas - 3)))*(Profundidade - 0.04 - 0.05)",
+            "height": "(min(1, max(0.005, Gavetas - 3)))*0.036"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 4 - corrediça intermediária direita",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 3)))*(((Largura/2) - 0.018) - 0.0125 + 0.0042 - ((-Largura/2) + 0.018/2))",
+            "y": "0 + (min(1, max(0.005, Gavetas - 3)))*(((-Profundidade/2) - AberturaGaveta4/2) + 0.03 - 0)",
+            "z": "(Altura/2) + (min(1, max(0.005, Gavetas - 3)))*(((((((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2 - 0.018) + 0.004 - (Altura/2))",
+            "width": "(min(1, max(0.005, Gavetas - 3)))*0.004",
+            "depth": "(min(1, max(0.005, Gavetas - 3)))*(Profundidade - 0.04 - 0.05)",
+            "height": "(min(1, max(0.005, Gavetas - 3)))*0.028"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 4 - corrediça móvel direita",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 3)))*(((Largura/2) - 0.018) - 0.0125 + 0.0 - ((-Largura/2) + 0.018/2))",
+            "y": "0 + (min(1, max(0.005, Gavetas - 3)))*(((-Profundidade/2) - AberturaGaveta4) + 0.03 - 0)",
+            "z": "(Altura/2) + (min(1, max(0.005, Gavetas - 3)))*(((((((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2 - 0.018) + 0.008 - (Altura/2))",
+            "width": "(min(1, max(0.005, Gavetas - 3)))*0.0045",
+            "depth": "(min(1, max(0.005, Gavetas - 3)))*(Profundidade - 0.04 - 0.05)",
+            "height": "(min(1, max(0.005, Gavetas - 3)))*0.02"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 4 - puxador",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(0 + (min(1, max(0.005, Gavetas - 3)))*(((-Profundidade/2) - AberturaGaveta4) - 0.028 - 0)) - ((min(1, max(0.005, Gavetas - 3)))*0.0055)",
+                "v": "(Altura/2) + (min(1, max(0.005, Gavetas - 3)))*(((((((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2) - (Altura/2))",
+                "radius": "(min(1, max(0.005, Gavetas - 3)))*0.0055"
+              },
+              {
+                "u": "(0 + (min(1, max(0.005, Gavetas - 3)))*(((-Profundidade/2) - AberturaGaveta4) - 0.028 - 0)) + ((min(1, max(0.005, Gavetas - 3)))*0.0055)",
+                "v": "(Altura/2) + (min(1, max(0.005, Gavetas - 3)))*(((((((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2) - (Altura/2))",
+                "radius": "(min(1, max(0.005, Gavetas - 3)))*0.0055"
+              }
+            ],
+            "offset": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 3)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - min(0.32, 0.3*Largura)/2 - ((-Largura/2) + 0.018/2))",
+            "depth": "(min(1, max(0.005, Gavetas - 3)))*(min(0.32, 0.3*Largura))"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 4 - pino do puxador esquerdo",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 3)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))",
+                "v": "0 + (min(1, max(0.005, Gavetas - 3)))*(((-Profundidade/2) - AberturaGaveta4) - 0.026 - 0)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 3)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))) + ((min(1, max(0.005, Gavetas - 3)))*0.0035)",
+                "v": "0 + (min(1, max(0.005, Gavetas - 3)))*(((-Profundidade/2) - AberturaGaveta4) - 0.026 - 0)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 3)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))) + ((min(1, max(0.005, Gavetas - 3)))*0.0035)",
+                "v": "(0 + (min(1, max(0.005, Gavetas - 3)))*(((-Profundidade/2) - AberturaGaveta4) - 0.026 - 0)) + ((min(1, max(0.005, Gavetas - 3)))*0.026)"
+              },
+              {
+                "u": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 3)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))",
+                "v": "(0 + (min(1, max(0.005, Gavetas - 3)))*(((-Profundidade/2) - AberturaGaveta4) - 0.026 - 0)) + ((min(1, max(0.005, Gavetas - 3)))*0.026)"
+              }
+            ],
+            "offset": "(Altura/2) + (min(1, max(0.005, Gavetas - 3)))*(((((((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2) - (Altura/2))",
+            "axis": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 3)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 4 - roseta do puxador esquerdo",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 3)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))",
+                "v": "0 + (min(1, max(0.005, Gavetas - 3)))*(((-Profundidade/2) - AberturaGaveta4) - 0.003 - 0)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 3)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))) + ((min(1, max(0.005, Gavetas - 3)))*0.008)",
+                "v": "0 + (min(1, max(0.005, Gavetas - 3)))*(((-Profundidade/2) - AberturaGaveta4) - 0.003 - 0)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 3)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))) + ((min(1, max(0.005, Gavetas - 3)))*0.008)",
+                "v": "(0 + (min(1, max(0.005, Gavetas - 3)))*(((-Profundidade/2) - AberturaGaveta4) - 0.003 - 0)) + ((min(1, max(0.005, Gavetas - 3)))*0.003)"
+              },
+              {
+                "u": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 3)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))",
+                "v": "(0 + (min(1, max(0.005, Gavetas - 3)))*(((-Profundidade/2) - AberturaGaveta4) - 0.003 - 0)) + ((min(1, max(0.005, Gavetas - 3)))*0.003)"
+              }
+            ],
+            "offset": "(Altura/2) + (min(1, max(0.005, Gavetas - 3)))*(((((((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2) - (Altura/2))",
+            "axis": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 3)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 4 - pino do puxador direito",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 3)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))",
+                "v": "0 + (min(1, max(0.005, Gavetas - 3)))*(((-Profundidade/2) - AberturaGaveta4) - 0.026 - 0)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 3)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))) + ((min(1, max(0.005, Gavetas - 3)))*0.0035)",
+                "v": "0 + (min(1, max(0.005, Gavetas - 3)))*(((-Profundidade/2) - AberturaGaveta4) - 0.026 - 0)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 3)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))) + ((min(1, max(0.005, Gavetas - 3)))*0.0035)",
+                "v": "(0 + (min(1, max(0.005, Gavetas - 3)))*(((-Profundidade/2) - AberturaGaveta4) - 0.026 - 0)) + ((min(1, max(0.005, Gavetas - 3)))*0.026)"
+              },
+              {
+                "u": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 3)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))",
+                "v": "(0 + (min(1, max(0.005, Gavetas - 3)))*(((-Profundidade/2) - AberturaGaveta4) - 0.026 - 0)) + ((min(1, max(0.005, Gavetas - 3)))*0.026)"
+              }
+            ],
+            "offset": "(Altura/2) + (min(1, max(0.005, Gavetas - 3)))*(((((((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2) - (Altura/2))",
+            "axis": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 3)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 4 - roseta do puxador direito",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 3)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))",
+                "v": "0 + (min(1, max(0.005, Gavetas - 3)))*(((-Profundidade/2) - AberturaGaveta4) - 0.003 - 0)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 3)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))) + ((min(1, max(0.005, Gavetas - 3)))*0.008)",
+                "v": "0 + (min(1, max(0.005, Gavetas - 3)))*(((-Profundidade/2) - AberturaGaveta4) - 0.003 - 0)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 3)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))) + ((min(1, max(0.005, Gavetas - 3)))*0.008)",
+                "v": "(0 + (min(1, max(0.005, Gavetas - 3)))*(((-Profundidade/2) - AberturaGaveta4) - 0.003 - 0)) + ((min(1, max(0.005, Gavetas - 3)))*0.003)"
+              },
+              {
+                "u": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 3)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))",
+                "v": "(0 + (min(1, max(0.005, Gavetas - 3)))*(((-Profundidade/2) - AberturaGaveta4) - 0.003 - 0)) + ((min(1, max(0.005, Gavetas - 3)))*0.003)"
+              }
+            ],
+            "offset": "(Altura/2) + (min(1, max(0.005, Gavetas - 3)))*(((((((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 3*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2) - (Altura/2))",
+            "axis": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 3)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travessa entre gavetas 4",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 4)))*(((-Largura/2) + 0.018) - ((-Largura/2) + 0.018/2))",
+            "y": "0 + (min(1, max(0.005, Gavetas - 4)))*((-Profundidade/2) - 0)",
+            "z": "(Altura/2) + (min(1, max(0.005, Gavetas - 4)))*((((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - (Altura/2))",
+            "width": "(min(1, max(0.005, Gavetas - 4)))*((Largura - 0.036))",
+            "depth": "(min(1, max(0.005, Gavetas - 4)))*0.06",
+            "height": "(min(1, max(0.005, Gavetas - 4)))*0.018"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travessa traseira entre gavetas 4",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 4)))*(((-Largura/2) + 0.018) - ((-Largura/2) + 0.018/2))",
+            "y": "0 + (min(1, max(0.005, Gavetas - 4)))*((Profundidade/2) - 0.069 - 0)",
+            "z": "(Altura/2) + (min(1, max(0.005, Gavetas - 4)))*((((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - (Altura/2))",
+            "width": "(min(1, max(0.005, Gavetas - 4)))*((Largura - 0.036))",
+            "depth": "(min(1, max(0.005, Gavetas - 4)))*0.06",
+            "height": "(min(1, max(0.005, Gavetas - 4)))*0.018"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 5 - frente",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 4)))*(((-Largura/2) + 0.018) + 0.0025 - ((-Largura/2) + 0.018/2))",
+            "y": "0 + (min(1, max(0.005, Gavetas - 4)))*(((-Profundidade/2) - AberturaGaveta5) - 0)",
+            "z": "(Altura/2) + (min(1, max(0.005, Gavetas - 4)))*(((((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + 0.0025 - (Altura/2))",
+            "width": "(min(1, max(0.005, Gavetas - 4)))*(((Largura/2) - 0.018) - ((-Largura/2) + 0.018) - 0.005)",
+            "depth": "(min(1, max(0.005, Gavetas - 4)))*0.018",
+            "height": "(min(1, max(0.005, Gavetas - 4)))*((((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) - 0.005)"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 5 - lateral esquerda",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 4)))*((((-Largura/2) + 0.018) + 0.0125) - ((-Largura/2) + 0.018/2))",
+            "y": "0 + (min(1, max(0.005, Gavetas - 4)))*(((-Profundidade/2) - AberturaGaveta5) + 0.018 - 0)",
+            "z": "(Altura/2) + (min(1, max(0.005, Gavetas - 4)))*((((((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + 0.018) - (Altura/2))",
+            "width": "(min(1, max(0.005, Gavetas - 4)))*0.012",
+            "depth": "(min(1, max(0.005, Gavetas - 4)))*(Profundidade - 0.04 - 0.018)",
+            "height": "(min(1, max(0.005, Gavetas - 4)))*(((((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) - 0.05))"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 5 - lateral direita",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 4)))*((((Largura/2) - 0.018) - 0.0125) - 0.012 - ((-Largura/2) + 0.018/2))",
+            "y": "0 + (min(1, max(0.005, Gavetas - 4)))*(((-Profundidade/2) - AberturaGaveta5) + 0.018 - 0)",
+            "z": "(Altura/2) + (min(1, max(0.005, Gavetas - 4)))*((((((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + 0.018) - (Altura/2))",
+            "width": "(min(1, max(0.005, Gavetas - 4)))*0.012",
+            "depth": "(min(1, max(0.005, Gavetas - 4)))*(Profundidade - 0.04 - 0.018)",
+            "height": "(min(1, max(0.005, Gavetas - 4)))*(((((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) - 0.05))"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 5 - traseira",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 4)))*((((-Largura/2) + 0.018) + 0.0125) + 0.012 - ((-Largura/2) + 0.018/2))",
+            "y": "0 + (min(1, max(0.005, Gavetas - 4)))*(((-Profundidade/2) - AberturaGaveta5) + Profundidade - 0.04 - 0.012 - 0)",
+            "z": "(Altura/2) + (min(1, max(0.005, Gavetas - 4)))*((((((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + 0.018) - (Altura/2))",
+            "width": "(min(1, max(0.005, Gavetas - 4)))*((((Largura/2) - 0.018) - 0.0125) - (((-Largura/2) + 0.018) + 0.0125) - 0.024)",
+            "depth": "(min(1, max(0.005, Gavetas - 4)))*0.012",
+            "height": "(min(1, max(0.005, Gavetas - 4)))*(((((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) - 0.05) - 0.01)"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 5 - fundo",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 4)))*((((-Largura/2) + 0.018) + 0.0125) + 0.012 - ((-Largura/2) + 0.018/2))",
+            "y": "0 + (min(1, max(0.005, Gavetas - 4)))*(((-Profundidade/2) - AberturaGaveta5) + 0.018 - 0)",
+            "z": "(Altura/2) + (min(1, max(0.005, Gavetas - 4)))*((((((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + 0.018) + 0.008 - (Altura/2))",
+            "width": "(min(1, max(0.005, Gavetas - 4)))*((((Largura/2) - 0.018) - 0.0125) - (((-Largura/2) + 0.018) + 0.0125) - 0.024)",
+            "depth": "(min(1, max(0.005, Gavetas - 4)))*(Profundidade - 0.04 - 0.018 - 0.012)",
+            "height": "(min(1, max(0.005, Gavetas - 4)))*0.005"
+          }
+        },
+        "material": "Laminado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 5 - contrafrente",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 4)))*((((-Largura/2) + 0.018) + 0.0125) + 0.012 - ((-Largura/2) + 0.018/2))",
+            "y": "0 + (min(1, max(0.005, Gavetas - 4)))*(((-Profundidade/2) - AberturaGaveta5) + 0.018 - 0)",
+            "z": "(Altura/2) + (min(1, max(0.005, Gavetas - 4)))*((((((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + 0.018) - (Altura/2))",
+            "width": "(min(1, max(0.005, Gavetas - 4)))*((((Largura/2) - 0.018) - 0.0125) - (((-Largura/2) + 0.018) + 0.0125) - 0.024)",
+            "depth": "(min(1, max(0.005, Gavetas - 4)))*0.012",
+            "height": "(min(1, max(0.005, Gavetas - 4)))*(((((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) - 0.05) - 0.01)"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 5 - corrediça fixa esquerda",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 4)))*(((-Largura/2) + 0.018) + 0.0 - ((-Largura/2) + 0.018/2))",
+            "y": "0 + (min(1, max(0.005, Gavetas - 4)))*((-Profundidade/2) + 0.03 - 0)",
+            "z": "(Altura/2) + (min(1, max(0.005, Gavetas - 4)))*(((((((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2 - 0.018) - (Altura/2))",
+            "width": "(min(1, max(0.005, Gavetas - 4)))*0.0045",
+            "depth": "(min(1, max(0.005, Gavetas - 4)))*(Profundidade - 0.04 - 0.05)",
+            "height": "(min(1, max(0.005, Gavetas - 4)))*0.036"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 5 - corrediça intermediária esquerda",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 4)))*(((-Largura/2) + 0.018) + 0.0042 - ((-Largura/2) + 0.018/2))",
+            "y": "0 + (min(1, max(0.005, Gavetas - 4)))*(((-Profundidade/2) - AberturaGaveta5/2) + 0.03 - 0)",
+            "z": "(Altura/2) + (min(1, max(0.005, Gavetas - 4)))*(((((((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2 - 0.018) + 0.004 - (Altura/2))",
+            "width": "(min(1, max(0.005, Gavetas - 4)))*0.004",
+            "depth": "(min(1, max(0.005, Gavetas - 4)))*(Profundidade - 0.04 - 0.05)",
+            "height": "(min(1, max(0.005, Gavetas - 4)))*0.028"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 5 - corrediça móvel esquerda",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 4)))*(((-Largura/2) + 0.018) + 0.008 - ((-Largura/2) + 0.018/2))",
+            "y": "0 + (min(1, max(0.005, Gavetas - 4)))*(((-Profundidade/2) - AberturaGaveta5) + 0.03 - 0)",
+            "z": "(Altura/2) + (min(1, max(0.005, Gavetas - 4)))*(((((((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2 - 0.018) + 0.008 - (Altura/2))",
+            "width": "(min(1, max(0.005, Gavetas - 4)))*0.0045",
+            "depth": "(min(1, max(0.005, Gavetas - 4)))*(Profundidade - 0.04 - 0.05)",
+            "height": "(min(1, max(0.005, Gavetas - 4)))*0.02"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 5 - corrediça fixa direita",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 4)))*(((Largura/2) - 0.018) - 0.0125 + 0.008 - ((-Largura/2) + 0.018/2))",
+            "y": "0 + (min(1, max(0.005, Gavetas - 4)))*((-Profundidade/2) + 0.03 - 0)",
+            "z": "(Altura/2) + (min(1, max(0.005, Gavetas - 4)))*(((((((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2 - 0.018) - (Altura/2))",
+            "width": "(min(1, max(0.005, Gavetas - 4)))*0.0045",
+            "depth": "(min(1, max(0.005, Gavetas - 4)))*(Profundidade - 0.04 - 0.05)",
+            "height": "(min(1, max(0.005, Gavetas - 4)))*0.036"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 5 - corrediça intermediária direita",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 4)))*(((Largura/2) - 0.018) - 0.0125 + 0.0042 - ((-Largura/2) + 0.018/2))",
+            "y": "0 + (min(1, max(0.005, Gavetas - 4)))*(((-Profundidade/2) - AberturaGaveta5/2) + 0.03 - 0)",
+            "z": "(Altura/2) + (min(1, max(0.005, Gavetas - 4)))*(((((((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2 - 0.018) + 0.004 - (Altura/2))",
+            "width": "(min(1, max(0.005, Gavetas - 4)))*0.004",
+            "depth": "(min(1, max(0.005, Gavetas - 4)))*(Profundidade - 0.04 - 0.05)",
+            "height": "(min(1, max(0.005, Gavetas - 4)))*0.028"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 5 - corrediça móvel direita",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 4)))*(((Largura/2) - 0.018) - 0.0125 + 0.0 - ((-Largura/2) + 0.018/2))",
+            "y": "0 + (min(1, max(0.005, Gavetas - 4)))*(((-Profundidade/2) - AberturaGaveta5) + 0.03 - 0)",
+            "z": "(Altura/2) + (min(1, max(0.005, Gavetas - 4)))*(((((((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2 - 0.018) + 0.008 - (Altura/2))",
+            "width": "(min(1, max(0.005, Gavetas - 4)))*0.0045",
+            "depth": "(min(1, max(0.005, Gavetas - 4)))*(Profundidade - 0.04 - 0.05)",
+            "height": "(min(1, max(0.005, Gavetas - 4)))*0.02"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 5 - puxador",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(0 + (min(1, max(0.005, Gavetas - 4)))*(((-Profundidade/2) - AberturaGaveta5) - 0.028 - 0)) - ((min(1, max(0.005, Gavetas - 4)))*0.0055)",
+                "v": "(Altura/2) + (min(1, max(0.005, Gavetas - 4)))*(((((((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2) - (Altura/2))",
+                "radius": "(min(1, max(0.005, Gavetas - 4)))*0.0055"
+              },
+              {
+                "u": "(0 + (min(1, max(0.005, Gavetas - 4)))*(((-Profundidade/2) - AberturaGaveta5) - 0.028 - 0)) + ((min(1, max(0.005, Gavetas - 4)))*0.0055)",
+                "v": "(Altura/2) + (min(1, max(0.005, Gavetas - 4)))*(((((((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2) - (Altura/2))",
+                "radius": "(min(1, max(0.005, Gavetas - 4)))*0.0055"
+              }
+            ],
+            "offset": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 4)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - min(0.32, 0.3*Largura)/2 - ((-Largura/2) + 0.018/2))",
+            "depth": "(min(1, max(0.005, Gavetas - 4)))*(min(0.32, 0.3*Largura))"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 5 - pino do puxador esquerdo",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 4)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))",
+                "v": "0 + (min(1, max(0.005, Gavetas - 4)))*(((-Profundidade/2) - AberturaGaveta5) - 0.026 - 0)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 4)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))) + ((min(1, max(0.005, Gavetas - 4)))*0.0035)",
+                "v": "0 + (min(1, max(0.005, Gavetas - 4)))*(((-Profundidade/2) - AberturaGaveta5) - 0.026 - 0)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 4)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))) + ((min(1, max(0.005, Gavetas - 4)))*0.0035)",
+                "v": "(0 + (min(1, max(0.005, Gavetas - 4)))*(((-Profundidade/2) - AberturaGaveta5) - 0.026 - 0)) + ((min(1, max(0.005, Gavetas - 4)))*0.026)"
+              },
+              {
+                "u": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 4)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))",
+                "v": "(0 + (min(1, max(0.005, Gavetas - 4)))*(((-Profundidade/2) - AberturaGaveta5) - 0.026 - 0)) + ((min(1, max(0.005, Gavetas - 4)))*0.026)"
+              }
+            ],
+            "offset": "(Altura/2) + (min(1, max(0.005, Gavetas - 4)))*(((((((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2) - (Altura/2))",
+            "axis": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 4)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 5 - roseta do puxador esquerdo",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 4)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))",
+                "v": "0 + (min(1, max(0.005, Gavetas - 4)))*(((-Profundidade/2) - AberturaGaveta5) - 0.003 - 0)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 4)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))) + ((min(1, max(0.005, Gavetas - 4)))*0.008)",
+                "v": "0 + (min(1, max(0.005, Gavetas - 4)))*(((-Profundidade/2) - AberturaGaveta5) - 0.003 - 0)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 4)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))) + ((min(1, max(0.005, Gavetas - 4)))*0.008)",
+                "v": "(0 + (min(1, max(0.005, Gavetas - 4)))*(((-Profundidade/2) - AberturaGaveta5) - 0.003 - 0)) + ((min(1, max(0.005, Gavetas - 4)))*0.003)"
+              },
+              {
+                "u": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 4)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))",
+                "v": "(0 + (min(1, max(0.005, Gavetas - 4)))*(((-Profundidade/2) - AberturaGaveta5) - 0.003 - 0)) + ((min(1, max(0.005, Gavetas - 4)))*0.003)"
+              }
+            ],
+            "offset": "(Altura/2) + (min(1, max(0.005, Gavetas - 4)))*(((((((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2) - (Altura/2))",
+            "axis": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 4)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) - (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 5 - pino do puxador direito",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 4)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))",
+                "v": "0 + (min(1, max(0.005, Gavetas - 4)))*(((-Profundidade/2) - AberturaGaveta5) - 0.026 - 0)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 4)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))) + ((min(1, max(0.005, Gavetas - 4)))*0.0035)",
+                "v": "0 + (min(1, max(0.005, Gavetas - 4)))*(((-Profundidade/2) - AberturaGaveta5) - 0.026 - 0)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 4)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))) + ((min(1, max(0.005, Gavetas - 4)))*0.0035)",
+                "v": "(0 + (min(1, max(0.005, Gavetas - 4)))*(((-Profundidade/2) - AberturaGaveta5) - 0.026 - 0)) + ((min(1, max(0.005, Gavetas - 4)))*0.026)"
+              },
+              {
+                "u": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 4)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))",
+                "v": "(0 + (min(1, max(0.005, Gavetas - 4)))*(((-Profundidade/2) - AberturaGaveta5) - 0.026 - 0)) + ((min(1, max(0.005, Gavetas - 4)))*0.026)"
+              }
+            ],
+            "offset": "(Altura/2) + (min(1, max(0.005, Gavetas - 4)))*(((((((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2) - (Altura/2))",
+            "axis": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 4)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 5 - roseta do puxador direito",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 4)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))",
+                "v": "0 + (min(1, max(0.005, Gavetas - 4)))*(((-Profundidade/2) - AberturaGaveta5) - 0.003 - 0)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 4)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))) + ((min(1, max(0.005, Gavetas - 4)))*0.008)",
+                "v": "0 + (min(1, max(0.005, Gavetas - 4)))*(((-Profundidade/2) - AberturaGaveta5) - 0.003 - 0)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 4)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))) + ((min(1, max(0.005, Gavetas - 4)))*0.008)",
+                "v": "(0 + (min(1, max(0.005, Gavetas - 4)))*(((-Profundidade/2) - AberturaGaveta5) - 0.003 - 0)) + ((min(1, max(0.005, Gavetas - 4)))*0.003)"
+              },
+              {
+                "u": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 4)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))",
+                "v": "(0 + (min(1, max(0.005, Gavetas - 4)))*(((-Profundidade/2) - AberturaGaveta5) - 0.003 - 0)) + ((min(1, max(0.005, Gavetas - 4)))*0.003)"
+              }
+            ],
+            "offset": "(Altura/2) + (min(1, max(0.005, Gavetas - 4)))*(((((((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)) - ((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas)) + (((Altura - 0.025) - 0.018) - 4*(((((Altura - 0.025) - 0.018) - (0.08 + 0.018) - (Gavetas - 1)*0.018)/Gavetas) + 0.018)))/2) - (Altura/2))",
+            "axis": "((-Largura/2) + 0.018/2) + (min(1, max(0.005, Gavetas - 4)))*(((((-Largura/2) + 0.018) + ((Largura/2) - 0.018))/2) + (min(0.32, 0.3*Largura)/2 - 0.016) - ((-Largura/2) + 0.018/2))",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      }
+    ]
+  },
+  "types": [
+    {
+      "name": "Cômoda 4 gavetas 80 cm",
+      "values": {},
+      "info": {
+        "description": "Cômoda com 4 gavetas e tampo de madeira"
+      }
+    },
+    {
+      "name": "Cômoda 5 gavetas 90 cm",
+      "values": {
+        "Largura": 0.9,
+        "Altura": 1.05,
+        "Gavetas": 5
+      },
+      "info": {
+        "description": "Cômoda alta com 5 gavetas e tampo de madeira"
+      }
+    },
+    {
+      "name": "Cômoda 3 gavetas 120 cm",
+      "values": {
+        "Largura": 1.2,
+        "Profundidade": 0.5,
+        "Altura": 0.75,
+        "Gavetas": 3
+      },
+      "info": {
+        "description": "Cômoda baixa e larga com 3 gavetas e tampo de madeira"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "name": "MDF branco",
+      "color": [
+        240,
+        240,
+        235
+      ],
+      "class": "Wood",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Madeira clara",
+      "color": [
+        196,
+        160,
+        112
+      ],
+      "class": "Wood",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Laminado branco",
+      "color": [
+        238,
+        238,
+        234
+      ],
+      "class": "Wood",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico preto",
+      "color": [
+        34,
+        34,
+        37
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Madeira escura",
+      "color": [
+        92,
+        62,
+        40
+      ],
+      "class": "Wood",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Aço galvanizado",
+      "color": [
+        160,
+        165,
+        170
+      ],
+      "class": "Metal",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Cromado",
+      "color": [
+        226,
+        229,
+        233
+      ],
+      "class": "Metal",
+      "finish": "Polished",
+      "transparency": 0
+    },
+    {
+      "name": "Latão",
+      "color": [
+        192,
+        160,
+        84
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Tecido azul petróleo",
+      "color": [
+        48,
+        92,
+        110
+      ],
+      "class": "Generic",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Roupa de cama branca",
+      "color": [
+        243,
+        241,
+        235
+      ],
+      "class": "Generic",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Tecido mostarda",
+      "color": [
+        201,
+        152,
+        58
+      ],
+      "class": "Generic",
+      "finish": "Matte",
+      "transparency": 0
+    }
+  ]
+}

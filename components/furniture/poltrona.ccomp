@@ -1,0 +1,2284 @@
+(
+  format_version: 1,
+  generator: "ConstructCraft 0.12.0",
+  component: "Poltrona de madeira",
+  def: (
+    kind: Furniture,
+    params: [
+      (
+        name: "Largura",
+        value: 0.72,
+        kind: Length,
+        instance: false,
+      ),
+      (
+        name: "Profundidade",
+        value: 0.78,
+        kind: Length,
+        instance: false,
+      ),
+      (
+        name: "Altura",
+        value: 0.8,
+        kind: Length,
+        instance: false,
+      ),
+      (
+        name: "AlturaAssento",
+        value: 0.42,
+        kind: Length,
+        instance: false,
+      ),
+    ],
+    items: [
+      (
+        name: "Assento simplificado",
+        shape: Box(
+          x: "(-Largura/2) + 0.04",
+          y: "(-Profundidade/2) + 0.035",
+          z: "(AlturaAssento - 0.17)",
+          width: "Largura - 0.08",
+          depth: "((Profundidade/2) - 0.13) + 0.02 - ((-Profundidade/2) + 0.035)",
+          height: "AlturaAssento - (AlturaAssento - 0.17)",
+        ),
+        material: "Tecido mostarda",
+        in_plan: true,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
+      ),
+      (
+        name: "Encosto simplificado",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.15*((AlturaAssento) - (AlturaAssento - 0.11))) - 0.1",
+              v: "AlturaAssento",
+            ),
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.15*((AlturaAssento) - (AlturaAssento - 0.11))) + 0.03",
+              v: "AlturaAssento",
+            ),
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.15*((Altura) - (AlturaAssento - 0.11))) + 0.03",
+              v: "Altura",
+            ),
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.15*((Altura) - (AlturaAssento - 0.11))) - 0.1",
+              v: "Altura",
+            ),
+          ],
+          offset: "(-Largura/2)",
+          depth: "Largura",
+        ),
+        material: "Tecido mostarda",
+        in_plan: true,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
+      ),
+      (
+        name: "Lateral esquerda simplificada",
+        shape: Box(
+          x: "(-Largura/2)",
+          y: "(-Profundidade/2) + 0.03",
+          z: "0",
+          width: "0.04",
+          depth: "(Profundidade/2) - 0.01 - ((-Profundidade/2) + 0.03)",
+          height: "(AlturaAssento + 0.19)",
+        ),
+        material: "Madeira",
+        in_plan: true,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
+      ),
+      (
+        name: "Lateral direita simplificada",
+        shape: Box(
+          x: "(Largura/2) - 0.04",
+          y: "(-Profundidade/2) + 0.03",
+          z: "0",
+          width: "0.04",
+          depth: "(Profundidade/2) - 0.01 - ((-Profundidade/2) + 0.03)",
+          height: "(AlturaAssento + 0.19)",
+        ),
+        material: "Madeira",
+        in_plan: true,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
+      ),
+      (
+        name: "Perna dianteira - lado esquerdo",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "(-Profundidade/2) + 0.075",
+              v: "0.004",
+            ),
+            (
+              u: "(-Profundidade/2) + 0.105",
+              v: "0.004",
+            ),
+            (
+              u: "(-Profundidade/2) + 0.095",
+              v: "(AlturaAssento + 0.19) - 0.024",
+            ),
+            (
+              u: "(-Profundidade/2) + 0.05",
+              v: "(AlturaAssento + 0.19) - 0.024",
+            ),
+          ],
+          offset: "(-Largura/2)",
+          depth: "0.04",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Montante traseiro - lado esquerdo",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "(Profundidade/2) - 0.05",
+              v: "0.004",
+            ),
+            (
+              u: "(Profundidade/2) - 0.012",
+              v: "0.004",
+            ),
+            (
+              u: "((Profundidade/2) - 0.13) + 0.034",
+              v: "(AlturaAssento - 0.11)",
+            ),
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.15*((Altura) - (AlturaAssento - 0.11))) + 0.034",
+              v: "Altura - 0.016",
+              radius: "0.02",
+            ),
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.15*((Altura) - (AlturaAssento - 0.11))) + 0.016",
+              v: "Altura",
+            ),
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.15*((Altura) - (AlturaAssento - 0.11)))",
+              v: "Altura",
+            ),
+            (
+              u: "((Profundidade/2) - 0.13)",
+              v: "(AlturaAssento - 0.11)",
+            ),
+          ],
+          offset: "(-Largura/2)",
+          depth: "0.04",
+        ),
+        material: "Madeira",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Braço esquerdo",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "((-Largura/2) - 0.006) + 0.03",
+              v: "(-Profundidade/2) + 0.03",
+            ),
+            (
+              u: "((-Largura/2) + 0.04 + 0.024) - 0.03",
+              v: "(-Profundidade/2) + 0.03",
+              radius: "0.03",
+            ),
+            (
+              u: "(-Largura/2) + 0.04 + 0.024",
+              v: "((-Profundidade/2) + 0.03) + 0.03",
+            ),
+            (
+              u: "(-Largura/2) + 0.04 + 0.024",
+              v: "((((Profundidade/2) - 0.13) + 0.15*(((AlturaAssento + 0.19)) - (AlturaAssento - 0.11))) + 0.022) - 0.03",
+              radius: "0.03",
+            ),
+            (
+              u: "((-Largura/2) + 0.04 + 0.024) - 0.03",
+              v: "(((Profundidade/2) - 0.13) + 0.15*(((AlturaAssento + 0.19)) - (AlturaAssento - 0.11))) + 0.022",
+            ),
+            (
+              u: "((-Largura/2) - 0.006) + 0.03",
+              v: "(((Profundidade/2) - 0.13) + 0.15*(((AlturaAssento + 0.19)) - (AlturaAssento - 0.11))) + 0.022",
+              radius: "0.03",
+            ),
+            (
+              u: "(-Largura/2) - 0.006",
+              v: "((((Profundidade/2) - 0.13) + 0.15*(((AlturaAssento + 0.19)) - (AlturaAssento - 0.11))) + 0.022) - 0.03",
+            ),
+            (
+              u: "(-Largura/2) - 0.006",
+              v: "((-Profundidade/2) + 0.03) + 0.03",
+              radius: "0.03",
+            ),
+          ],
+          offset: "(AlturaAssento + 0.19) - 0.024",
+          depth: "0.024",
+        ),
+        material: "Madeira",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Travessa do assento - lado esquerdo",
+        shape: Box(
+          x: "(-Largura/2) + 0.007",
+          y: "(-Profundidade/2) + 0.09",
+          z: "(AlturaAssento - 0.17)",
+          width: "0.026",
+          depth: "((Profundidade/2) - 0.13) + 0.005 - ((-Profundidade/2) + 0.09)",
+          height: "(AlturaAssento - 0.11) - (AlturaAssento - 0.17)",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Travessa inferior - lado esquerdo",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2) + 0.02",
+              v: "(-Profundidade/2) + 0.09",
+            ),
+            (
+              u: "((-Largura/2) + 0.02) + 0.011",
+              v: "(-Profundidade/2) + 0.09",
+            ),
+            (
+              u: "((-Largura/2) + 0.02) + 0.011",
+              v: "((-Profundidade/2) + 0.09) + (((Profundidade/2) - 0.05 - 0.08*((0.13) - 0.004)/((AlturaAssento - 0.11) - 0.004)) + 0.015 - ((-Profundidade/2) + 0.09))",
+            ),
+            (
+              u: "(-Largura/2) + 0.02",
+              v: "((-Profundidade/2) + 0.09) + (((Profundidade/2) - 0.05 - 0.08*((0.13) - 0.004)/((AlturaAssento - 0.11) - 0.004)) + 0.015 - ((-Profundidade/2) + 0.09))",
+            ),
+          ],
+          offset: "0.13",
+          axis: "(-Largura/2) + 0.02",
+          angle: "360",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Ponteira da perna dianteira - lado esquerdo",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "(-Profundidade/2) + 0.0738",
+              v: "0.004",
+            ),
+            (
+              u: "(-Profundidade/2) + 0.1062",
+              v: "0.004",
+            ),
+            (
+              u: "(-Profundidade/2) + 0.1057",
+              v: "0.004 + 0.03",
+            ),
+            (
+              u: "(-Profundidade/2) + 0.0725",
+              v: "0.004 + 0.03",
+            ),
+          ],
+          offset: "(-Largura/2) - 0.001",
+          depth: "0.042",
+        ),
+        material: "Latão",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Ponteira da perna traseira - lado esquerdo",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "(Profundidade/2) - 0.051",
+              v: "0.004",
+            ),
+            (
+              u: "(Profundidade/2) - 0.011",
+              v: "0.004",
+            ),
+            (
+              u: "(Profundidade/2) - 0.0193",
+              v: "0.004 + 0.03",
+            ),
+            (
+              u: "(Profundidade/2) - 0.0589",
+              v: "0.004 + 0.03",
+            ),
+          ],
+          offset: "(-Largura/2) - 0.001",
+          depth: "0.042",
+        ),
+        material: "Latão",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Feltro da perna dianteira - lado esquerdo",
+        shape: Cylinder(
+          x: "(-Largura/2) + 0.02",
+          y: "(-Profundidade/2) + 0.09",
+          z: "0",
+          radius: "0.012",
+          height: "0.004",
+        ),
+        material: "Feltro",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Feltro da perna traseira - lado esquerdo",
+        shape: Cylinder(
+          x: "(-Largura/2) + 0.02",
+          y: "(Profundidade/2) - 0.031",
+          z: "0",
+          radius: "0.012",
+          height: "0.004",
+        ),
+        material: "Feltro",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Cavilha do braço dianteira - lado esquerdo",
+        shape: Cylinder(
+          x: "(-Largura/2) + 0.02",
+          y: "(-Profundidade/2) + 0.075",
+          z: "(AlturaAssento + 0.19)",
+          radius: "0.007",
+          height: "0.0008",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Cavilha do braço traseira - lado esquerdo",
+        shape: Cylinder(
+          x: "(-Largura/2) + 0.02",
+          y: "(((Profundidade/2) - 0.13) + 0.15*(((AlturaAssento + 0.19)) - (AlturaAssento - 0.11))) + 0.017",
+          z: "(AlturaAssento + 0.19)",
+          radius: "0.007",
+          height: "0.0008",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Cavilha da travessa dianteira - lado esquerdo",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "((-Profundidade/2) + 0.08) - 0.007",
+              v: "((AlturaAssento - 0.17) + (AlturaAssento - 0.11))/2",
+              radius: "0.007",
+            ),
+            (
+              u: "((-Profundidade/2) + 0.08) + 0.007",
+              v: "((AlturaAssento - 0.17) + (AlturaAssento - 0.11))/2",
+              radius: "0.007",
+            ),
+          ],
+          offset: "(-Largura/2) - 0.0008",
+          depth: "0.0008",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Cavilha da travessa traseira - lado esquerdo",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.017) - 0.007",
+              v: "((AlturaAssento - 0.17) + (AlturaAssento - 0.11))/2",
+              radius: "0.007",
+            ),
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.017) + 0.007",
+              v: "((AlturaAssento - 0.17) + (AlturaAssento - 0.11))/2",
+              radius: "0.007",
+            ),
+          ],
+          offset: "(-Largura/2) - 0.0008",
+          depth: "0.0008",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Cavilha do encosto - lado esquerdo",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "((((Profundidade/2) - 0.13) + 0.15*((Altura - 0.0475) - (AlturaAssento - 0.11))) + 0.015) - 0.007",
+              v: "Altura - 0.0475",
+              radius: "0.007",
+            ),
+            (
+              u: "((((Profundidade/2) - 0.13) + 0.15*((Altura - 0.0475) - (AlturaAssento - 0.11))) + 0.015) + 0.007",
+              v: "Altura - 0.0475",
+              radius: "0.007",
+            ),
+          ],
+          offset: "(-Largura/2) - 0.0008",
+          depth: "0.0008",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Perna dianteira - lado direito",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "(-Profundidade/2) + 0.075",
+              v: "0.004",
+            ),
+            (
+              u: "(-Profundidade/2) + 0.105",
+              v: "0.004",
+            ),
+            (
+              u: "(-Profundidade/2) + 0.095",
+              v: "(AlturaAssento + 0.19) - 0.024",
+            ),
+            (
+              u: "(-Profundidade/2) + 0.05",
+              v: "(AlturaAssento + 0.19) - 0.024",
+            ),
+          ],
+          offset: "(Largura/2) - 0.04",
+          depth: "0.04",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Montante traseiro - lado direito",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "(Profundidade/2) - 0.05",
+              v: "0.004",
+            ),
+            (
+              u: "(Profundidade/2) - 0.012",
+              v: "0.004",
+            ),
+            (
+              u: "((Profundidade/2) - 0.13) + 0.034",
+              v: "(AlturaAssento - 0.11)",
+            ),
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.15*((Altura) - (AlturaAssento - 0.11))) + 0.034",
+              v: "Altura - 0.016",
+              radius: "0.02",
+            ),
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.15*((Altura) - (AlturaAssento - 0.11))) + 0.016",
+              v: "Altura",
+            ),
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.15*((Altura) - (AlturaAssento - 0.11)))",
+              v: "Altura",
+            ),
+            (
+              u: "((Profundidade/2) - 0.13)",
+              v: "(AlturaAssento - 0.11)",
+            ),
+          ],
+          offset: "(Largura/2) - 0.04",
+          depth: "0.04",
+        ),
+        material: "Madeira",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Braço direito",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "((Largura/2) - 0.04 - 0.024) + 0.03",
+              v: "(-Profundidade/2) + 0.03",
+            ),
+            (
+              u: "((Largura/2) - 0.04 + 0.04 + 0.006) - 0.03",
+              v: "(-Profundidade/2) + 0.03",
+              radius: "0.03",
+            ),
+            (
+              u: "(Largura/2) - 0.04 + 0.04 + 0.006",
+              v: "((-Profundidade/2) + 0.03) + 0.03",
+            ),
+            (
+              u: "(Largura/2) - 0.04 + 0.04 + 0.006",
+              v: "((((Profundidade/2) - 0.13) + 0.15*(((AlturaAssento + 0.19)) - (AlturaAssento - 0.11))) + 0.022) - 0.03",
+              radius: "0.03",
+            ),
+            (
+              u: "((Largura/2) - 0.04 + 0.04 + 0.006) - 0.03",
+              v: "(((Profundidade/2) - 0.13) + 0.15*(((AlturaAssento + 0.19)) - (AlturaAssento - 0.11))) + 0.022",
+            ),
+            (
+              u: "((Largura/2) - 0.04 - 0.024) + 0.03",
+              v: "(((Profundidade/2) - 0.13) + 0.15*(((AlturaAssento + 0.19)) - (AlturaAssento - 0.11))) + 0.022",
+              radius: "0.03",
+            ),
+            (
+              u: "(Largura/2) - 0.04 - 0.024",
+              v: "((((Profundidade/2) - 0.13) + 0.15*(((AlturaAssento + 0.19)) - (AlturaAssento - 0.11))) + 0.022) - 0.03",
+            ),
+            (
+              u: "(Largura/2) - 0.04 - 0.024",
+              v: "((-Profundidade/2) + 0.03) + 0.03",
+              radius: "0.03",
+            ),
+          ],
+          offset: "(AlturaAssento + 0.19) - 0.024",
+          depth: "0.024",
+        ),
+        material: "Madeira",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Travessa do assento - lado direito",
+        shape: Box(
+          x: "(Largura/2) - 0.04 + 0.007",
+          y: "(-Profundidade/2) + 0.09",
+          z: "(AlturaAssento - 0.17)",
+          width: "0.026",
+          depth: "((Profundidade/2) - 0.13) + 0.005 - ((-Profundidade/2) + 0.09)",
+          height: "(AlturaAssento - 0.11) - (AlturaAssento - 0.17)",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Travessa inferior - lado direito",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "(Largura/2) - 0.04 + 0.02",
+              v: "(-Profundidade/2) + 0.09",
+            ),
+            (
+              u: "((Largura/2) - 0.04 + 0.02) + 0.011",
+              v: "(-Profundidade/2) + 0.09",
+            ),
+            (
+              u: "((Largura/2) - 0.04 + 0.02) + 0.011",
+              v: "((-Profundidade/2) + 0.09) + (((Profundidade/2) - 0.05 - 0.08*((0.13) - 0.004)/((AlturaAssento - 0.11) - 0.004)) + 0.015 - ((-Profundidade/2) + 0.09))",
+            ),
+            (
+              u: "(Largura/2) - 0.04 + 0.02",
+              v: "((-Profundidade/2) + 0.09) + (((Profundidade/2) - 0.05 - 0.08*((0.13) - 0.004)/((AlturaAssento - 0.11) - 0.004)) + 0.015 - ((-Profundidade/2) + 0.09))",
+            ),
+          ],
+          offset: "0.13",
+          axis: "(Largura/2) - 0.04 + 0.02",
+          angle: "360",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Ponteira da perna dianteira - lado direito",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "(-Profundidade/2) + 0.0738",
+              v: "0.004",
+            ),
+            (
+              u: "(-Profundidade/2) + 0.1062",
+              v: "0.004",
+            ),
+            (
+              u: "(-Profundidade/2) + 0.1057",
+              v: "0.004 + 0.03",
+            ),
+            (
+              u: "(-Profundidade/2) + 0.0725",
+              v: "0.004 + 0.03",
+            ),
+          ],
+          offset: "(Largura/2) - 0.04 - 0.001",
+          depth: "0.042",
+        ),
+        material: "Latão",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Ponteira da perna traseira - lado direito",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "(Profundidade/2) - 0.051",
+              v: "0.004",
+            ),
+            (
+              u: "(Profundidade/2) - 0.011",
+              v: "0.004",
+            ),
+            (
+              u: "(Profundidade/2) - 0.0193",
+              v: "0.004 + 0.03",
+            ),
+            (
+              u: "(Profundidade/2) - 0.0589",
+              v: "0.004 + 0.03",
+            ),
+          ],
+          offset: "(Largura/2) - 0.04 - 0.001",
+          depth: "0.042",
+        ),
+        material: "Latão",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Feltro da perna dianteira - lado direito",
+        shape: Cylinder(
+          x: "(Largura/2) - 0.04 + 0.02",
+          y: "(-Profundidade/2) + 0.09",
+          z: "0",
+          radius: "0.012",
+          height: "0.004",
+        ),
+        material: "Feltro",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Feltro da perna traseira - lado direito",
+        shape: Cylinder(
+          x: "(Largura/2) - 0.04 + 0.02",
+          y: "(Profundidade/2) - 0.031",
+          z: "0",
+          radius: "0.012",
+          height: "0.004",
+        ),
+        material: "Feltro",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Cavilha do braço dianteira - lado direito",
+        shape: Cylinder(
+          x: "(Largura/2) - 0.04 + 0.02",
+          y: "(-Profundidade/2) + 0.075",
+          z: "(AlturaAssento + 0.19)",
+          radius: "0.007",
+          height: "0.0008",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Cavilha do braço traseira - lado direito",
+        shape: Cylinder(
+          x: "(Largura/2) - 0.04 + 0.02",
+          y: "(((Profundidade/2) - 0.13) + 0.15*(((AlturaAssento + 0.19)) - (AlturaAssento - 0.11))) + 0.017",
+          z: "(AlturaAssento + 0.19)",
+          radius: "0.007",
+          height: "0.0008",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Cavilha da travessa dianteira - lado direito",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "((-Profundidade/2) + 0.08) - 0.007",
+              v: "((AlturaAssento - 0.17) + (AlturaAssento - 0.11))/2",
+              radius: "0.007",
+            ),
+            (
+              u: "((-Profundidade/2) + 0.08) + 0.007",
+              v: "((AlturaAssento - 0.17) + (AlturaAssento - 0.11))/2",
+              radius: "0.007",
+            ),
+          ],
+          offset: "(Largura/2) - 0.04 + 0.04",
+          depth: "0.0008",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Cavilha da travessa traseira - lado direito",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.017) - 0.007",
+              v: "((AlturaAssento - 0.17) + (AlturaAssento - 0.11))/2",
+              radius: "0.007",
+            ),
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.017) + 0.007",
+              v: "((AlturaAssento - 0.17) + (AlturaAssento - 0.11))/2",
+              radius: "0.007",
+            ),
+          ],
+          offset: "(Largura/2) - 0.04 + 0.04",
+          depth: "0.0008",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Cavilha do encosto - lado direito",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "((((Profundidade/2) - 0.13) + 0.15*((Altura - 0.0475) - (AlturaAssento - 0.11))) + 0.015) - 0.007",
+              v: "Altura - 0.0475",
+              radius: "0.007",
+            ),
+            (
+              u: "((((Profundidade/2) - 0.13) + 0.15*((Altura - 0.0475) - (AlturaAssento - 0.11))) + 0.015) + 0.007",
+              v: "Altura - 0.0475",
+              radius: "0.007",
+            ),
+          ],
+          offset: "(Largura/2) - 0.04 + 0.04",
+          depth: "0.0008",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Travessa dianteira do assento",
+        shape: Box(
+          x: "((-Largura/2) + 0.04)",
+          y: "(-Profundidade/2) + 0.062",
+          z: "(AlturaAssento - 0.17)",
+          width: "(Largura - 0.08)",
+          depth: "0.024",
+          height: "(AlturaAssento - 0.11) - (AlturaAssento - 0.17)",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Travessa traseira do assento",
+        shape: Box(
+          x: "((-Largura/2) + 0.04)",
+          y: "((Profundidade/2) - 0.13) + 0.004",
+          z: "(AlturaAssento - 0.17)",
+          width: "(Largura - 0.08)",
+          depth: "0.024",
+          height: "(AlturaAssento - 0.11) - (AlturaAssento - 0.17)",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Percinta do assento 1",
+        shape: Box(
+          x: "((-Largura/2) + 0.04) + (Largura - 0.08)*0.100 - 0.025",
+          y: "(-Profundidade/2) + 0.062",
+          z: "(AlturaAssento - 0.11)",
+          width: "0.05",
+          depth: "((Profundidade/2) - 0.13) + 0.028 - ((-Profundidade/2) + 0.062)",
+          height: "0.003",
+        ),
+        material: "Borracha cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Percinta do assento 2",
+        shape: Box(
+          x: "((-Largura/2) + 0.04) + (Largura - 0.08)*0.300 - 0.025",
+          y: "(-Profundidade/2) + 0.062",
+          z: "(AlturaAssento - 0.11)",
+          width: "0.05",
+          depth: "((Profundidade/2) - 0.13) + 0.028 - ((-Profundidade/2) + 0.062)",
+          height: "0.003",
+        ),
+        material: "Borracha cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Percinta do assento 3",
+        shape: Box(
+          x: "((-Largura/2) + 0.04) + (Largura - 0.08)*0.500 - 0.025",
+          y: "(-Profundidade/2) + 0.062",
+          z: "(AlturaAssento - 0.11)",
+          width: "0.05",
+          depth: "((Profundidade/2) - 0.13) + 0.028 - ((-Profundidade/2) + 0.062)",
+          height: "0.003",
+        ),
+        material: "Borracha cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Percinta do assento 4",
+        shape: Box(
+          x: "((-Largura/2) + 0.04) + (Largura - 0.08)*0.700 - 0.025",
+          y: "(-Profundidade/2) + 0.062",
+          z: "(AlturaAssento - 0.11)",
+          width: "0.05",
+          depth: "((Profundidade/2) - 0.13) + 0.028 - ((-Profundidade/2) + 0.062)",
+          height: "0.003",
+        ),
+        material: "Borracha cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Percinta do assento 5",
+        shape: Box(
+          x: "((-Largura/2) + 0.04) + (Largura - 0.08)*0.900 - 0.025",
+          y: "(-Profundidade/2) + 0.062",
+          z: "(AlturaAssento - 0.11)",
+          width: "0.05",
+          depth: "((Profundidade/2) - 0.13) + 0.028 - ((-Profundidade/2) + 0.062)",
+          height: "0.003",
+        ),
+        material: "Borracha cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Percinta transversal do assento 1",
+        shape: Box(
+          x: "((-Largura/2) + 0.04)",
+          y: "(-Profundidade/2) + 0.2 - 0.025",
+          z: "(AlturaAssento - 0.11) + 0.003",
+          width: "(Largura - 0.08)",
+          depth: "0.05",
+          height: "0.003",
+        ),
+        material: "Borracha cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Percinta transversal do assento 2",
+        shape: Box(
+          x: "((-Largura/2) + 0.04)",
+          y: "((Profundidade/2) - 0.13) - 0.1 - 0.025",
+          z: "(AlturaAssento - 0.11) + 0.003",
+          width: "(Largura - 0.08)",
+          depth: "0.05",
+          height: "0.003",
+        ),
+        material: "Borracha cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Travessa inferior do encosto",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.15*((AlturaAssento + 0.04) - (AlturaAssento - 0.11))) + 0.004",
+              v: "AlturaAssento + 0.04",
+            ),
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.15*((AlturaAssento + 0.04) - (AlturaAssento - 0.11))) + 0.026",
+              v: "AlturaAssento + 0.04",
+            ),
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.15*((AlturaAssento + 0.09) - (AlturaAssento - 0.11))) + 0.026",
+              v: "AlturaAssento + 0.09",
+            ),
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.15*((AlturaAssento + 0.09) - (AlturaAssento - 0.11))) + 0.004",
+              v: "AlturaAssento + 0.09",
+            ),
+          ],
+          offset: "((-Largura/2) + 0.04)",
+          depth: "(Largura - 0.08)",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Travessa superior do encosto",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.15*((Altura - 0.075) - (AlturaAssento - 0.11))) + 0.004",
+              v: "Altura - 0.075",
+            ),
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.15*((Altura - 0.075) - (AlturaAssento - 0.11))) + 0.026",
+              v: "Altura - 0.075",
+            ),
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.15*((Altura - 0.02) - (AlturaAssento - 0.11))) + 0.026",
+              v: "Altura - 0.02",
+            ),
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.15*((Altura - 0.02) - (AlturaAssento - 0.11))) + 0.004",
+              v: "Altura - 0.02",
+            ),
+          ],
+          offset: "((-Largura/2) + 0.04)",
+          depth: "(Largura - 0.08)",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Percinta do encosto 1",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.15*((AlturaAssento + 0.04) - (AlturaAssento - 0.11))) + 0.0005",
+              v: "AlturaAssento + 0.04",
+            ),
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.15*((AlturaAssento + 0.04) - (AlturaAssento - 0.11))) + 0.004",
+              v: "AlturaAssento + 0.04",
+            ),
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.15*((Altura - 0.02) - (AlturaAssento - 0.11))) + 0.004",
+              v: "Altura - 0.02",
+            ),
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.15*((Altura - 0.02) - (AlturaAssento - 0.11))) + 0.0005",
+              v: "Altura - 0.02",
+            ),
+          ],
+          offset: "-0.3*(Largura - 0.08) - 0.025",
+          depth: "0.05",
+        ),
+        material: "Borracha cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Percinta do encosto 2",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.15*((AlturaAssento + 0.04) - (AlturaAssento - 0.11))) + 0.0005",
+              v: "AlturaAssento + 0.04",
+            ),
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.15*((AlturaAssento + 0.04) - (AlturaAssento - 0.11))) + 0.004",
+              v: "AlturaAssento + 0.04",
+            ),
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.15*((Altura - 0.02) - (AlturaAssento - 0.11))) + 0.004",
+              v: "Altura - 0.02",
+            ),
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.15*((Altura - 0.02) - (AlturaAssento - 0.11))) + 0.0005",
+              v: "Altura - 0.02",
+            ),
+          ],
+          offset: "0*(Largura - 0.08) - 0.025",
+          depth: "0.05",
+        ),
+        material: "Borracha cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Percinta do encosto 3",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.15*((AlturaAssento + 0.04) - (AlturaAssento - 0.11))) + 0.0005",
+              v: "AlturaAssento + 0.04",
+            ),
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.15*((AlturaAssento + 0.04) - (AlturaAssento - 0.11))) + 0.004",
+              v: "AlturaAssento + 0.04",
+            ),
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.15*((Altura - 0.02) - (AlturaAssento - 0.11))) + 0.004",
+              v: "Altura - 0.02",
+            ),
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.15*((Altura - 0.02) - (AlturaAssento - 0.11))) + 0.0005",
+              v: "Altura - 0.02",
+            ),
+          ],
+          offset: "0.3*(Largura - 0.08) - 0.025",
+          depth: "0.05",
+        ),
+        material: "Borracha cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Almofada do assento",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "(-Profundidade/2) + 0.035 + 0.04",
+              v: "(AlturaAssento - 0.11) + 0.006 - (0)",
+            ),
+            (
+              u: "((Profundidade/2) - 0.13) + 0.02 - 0.04",
+              v: "(AlturaAssento - 0.11) + 0.006 - (0)",
+              radius: "0.04 + 0",
+            ),
+            (
+              u: "((Profundidade/2) - 0.13) + 0.02 + 0",
+              v: "(AlturaAssento - 0.11) + 0.006 + 0.04",
+            ),
+            (
+              u: "((Profundidade/2) - 0.13) + 0.02 + 0",
+              v: "AlturaAssento - 0.012 - 0.04",
+              radius: "0.04 + 0",
+            ),
+            (
+              u: "((Profundidade/2) - 0.13) + 0.02 - 0.04",
+              v: "AlturaAssento - 0.012 + 0",
+              radius: "(((((Profundidade/2) - 0.13) + 0.02) - ((-Profundidade/2) + 0.035) - 0.08)/2*((((Profundidade/2) - 0.13) + 0.02) - ((-Profundidade/2) + 0.035) - 0.08)/2 + 0.000144)/0.024 + 0",
+            ),
+            (
+              u: "(-Profundidade/2) + 0.035 + 0.04",
+              v: "AlturaAssento - 0.012 + 0",
+              radius: "0.04 + 0",
+            ),
+            (
+              u: "(-Profundidade/2) + 0.035 - (0)",
+              v: "AlturaAssento - 0.012 - 0.04",
+            ),
+            (
+              u: "(-Profundidade/2) + 0.035 - (0)",
+              v: "(AlturaAssento - 0.11) + 0.006 + 0.04",
+              radius: "0.04 + 0",
+            ),
+          ],
+          offset: "((-Largura/2) + 0.04) + 0.003",
+          depth: "(Largura - 0.08) - 0.006",
+        ),
+        material: "Tecido mostarda",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Almofada do assento - vivo esquerdo",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "(-Profundidade/2) + 0.035 + 0.04",
+              v: "(AlturaAssento - 0.11) + 0.006 - (0.004)",
+            ),
+            (
+              u: "((Profundidade/2) - 0.13) + 0.02 - 0.04",
+              v: "(AlturaAssento - 0.11) + 0.006 - (0.004)",
+              radius: "0.04 + 0.004",
+            ),
+            (
+              u: "((Profundidade/2) - 0.13) + 0.02 + 0.004",
+              v: "(AlturaAssento - 0.11) + 0.006 + 0.04",
+            ),
+            (
+              u: "((Profundidade/2) - 0.13) + 0.02 + 0.004",
+              v: "AlturaAssento - 0.012 - 0.04",
+              radius: "0.04 + 0.004",
+            ),
+            (
+              u: "((Profundidade/2) - 0.13) + 0.02 - 0.04",
+              v: "AlturaAssento - 0.012 + 0.004",
+              radius: "(((((Profundidade/2) - 0.13) + 0.02) - ((-Profundidade/2) + 0.035) - 0.08)/2*((((Profundidade/2) - 0.13) + 0.02) - ((-Profundidade/2) + 0.035) - 0.08)/2 + 0.000144)/0.024 + 0.004",
+            ),
+            (
+              u: "(-Profundidade/2) + 0.035 + 0.04",
+              v: "AlturaAssento - 0.012 + 0.004",
+              radius: "0.04 + 0.004",
+            ),
+            (
+              u: "(-Profundidade/2) + 0.035 - (0.004)",
+              v: "AlturaAssento - 0.012 - 0.04",
+            ),
+            (
+              u: "(-Profundidade/2) + 0.035 - (0.004)",
+              v: "(AlturaAssento - 0.11) + 0.006 + 0.04",
+              radius: "0.04 + 0.004",
+            ),
+          ],
+          offset: "((-Largura/2) + 0.04) + 0.003 + 0.012",
+          depth: "0.005",
+        ),
+        material: "Tecido cinza escuro",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Almofada do assento - vivo direito",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "(-Profundidade/2) + 0.035 + 0.04",
+              v: "(AlturaAssento - 0.11) + 0.006 - (0.004)",
+            ),
+            (
+              u: "((Profundidade/2) - 0.13) + 0.02 - 0.04",
+              v: "(AlturaAssento - 0.11) + 0.006 - (0.004)",
+              radius: "0.04 + 0.004",
+            ),
+            (
+              u: "((Profundidade/2) - 0.13) + 0.02 + 0.004",
+              v: "(AlturaAssento - 0.11) + 0.006 + 0.04",
+            ),
+            (
+              u: "((Profundidade/2) - 0.13) + 0.02 + 0.004",
+              v: "AlturaAssento - 0.012 - 0.04",
+              radius: "0.04 + 0.004",
+            ),
+            (
+              u: "((Profundidade/2) - 0.13) + 0.02 - 0.04",
+              v: "AlturaAssento - 0.012 + 0.004",
+              radius: "(((((Profundidade/2) - 0.13) + 0.02) - ((-Profundidade/2) + 0.035) - 0.08)/2*((((Profundidade/2) - 0.13) + 0.02) - ((-Profundidade/2) + 0.035) - 0.08)/2 + 0.000144)/0.024 + 0.004",
+            ),
+            (
+              u: "(-Profundidade/2) + 0.035 + 0.04",
+              v: "AlturaAssento - 0.012 + 0.004",
+              radius: "0.04 + 0.004",
+            ),
+            (
+              u: "(-Profundidade/2) + 0.035 - (0.004)",
+              v: "AlturaAssento - 0.012 - 0.04",
+            ),
+            (
+              u: "(-Profundidade/2) + 0.035 - (0.004)",
+              v: "(AlturaAssento - 0.11) + 0.006 + 0.04",
+              radius: "0.04 + 0.004",
+            ),
+          ],
+          offset: "((-Largura/2) + 0.04) + 0.003 + (Largura - 0.08) - 0.006 - 0.017",
+          depth: "0.005",
+        ),
+        material: "Tecido cinza escuro",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Almofada do encosto",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - 0*cos(8.5308) + (0 + 0.035)*sin(8.5308)",
+              v: "(AlturaAssento - 0.01) + 0*sin(8.5308) + (0 + 0.035)*cos(8.5308)",
+            ),
+            (
+              u: "((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - 0*cos(8.5308) + (((Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308) + 0) - 0.035)*sin(8.5308)",
+              v: "(AlturaAssento - 0.01) + 0*sin(8.5308) + (((Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308) + 0) - 0.035)*cos(8.5308)",
+              radius: "0.035",
+            ),
+            (
+              u: "((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - (0 + 0.035)*cos(8.5308) + ((Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308) + 0)*sin(8.5308)",
+              v: "(AlturaAssento - 0.01) + (0 + 0.035)*sin(8.5308) + ((Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308) + 0)*cos(8.5308)",
+            ),
+            (
+              u: "((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - (0.1 - 0.035)*cos(8.5308) + ((Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308) + 0)*sin(8.5308)",
+              v: "(AlturaAssento - 0.01) + (0.1 - 0.035)*sin(8.5308) + ((Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308) + 0)*cos(8.5308)",
+              radius: "0.035",
+            ),
+            (
+              u: "((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - 0.1*cos(8.5308) + (((Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308) + 0) - 0.035)*sin(8.5308)",
+              v: "(AlturaAssento - 0.01) + 0.1*sin(8.5308) + (((Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308) + 0) - 0.035)*cos(8.5308)",
+            ),
+            (
+              u: "((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - 0.1*cos(8.5308) + (0 + 0.035)*sin(8.5308)",
+              v: "(AlturaAssento - 0.01) + 0.1*sin(8.5308) + (0 + 0.035)*cos(8.5308)",
+              radius: "0.035",
+            ),
+            (
+              u: "((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - (0.1 - 0.035)*cos(8.5308) + 0*sin(8.5308)",
+              v: "(AlturaAssento - 0.01) + (0.1 - 0.035)*sin(8.5308) + 0*cos(8.5308)",
+            ),
+            (
+              u: "((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - (0 + 0.035)*cos(8.5308) + 0*sin(8.5308)",
+              v: "(AlturaAssento - 0.01) + (0 + 0.035)*sin(8.5308) + 0*cos(8.5308)",
+              radius: "0.035",
+            ),
+          ],
+          offset: "((-Largura/2) + 0.04) + 0.003",
+          depth: "(Largura - 0.08) - 0.006",
+        ),
+        material: "Tecido mostarda",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Almofada do encosto - vivo esquerdo",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - (-0.004)*cos(8.5308) + ((-0.004) + 0.039)*sin(8.5308)",
+              v: "(AlturaAssento - 0.01) + (-0.004)*sin(8.5308) + ((-0.004) + 0.039)*cos(8.5308)",
+            ),
+            (
+              u: "((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - (-0.004)*cos(8.5308) + (((Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308) + 0.004) - 0.039)*sin(8.5308)",
+              v: "(AlturaAssento - 0.01) + (-0.004)*sin(8.5308) + (((Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308) + 0.004) - 0.039)*cos(8.5308)",
+              radius: "0.039",
+            ),
+            (
+              u: "((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - ((-0.004) + 0.039)*cos(8.5308) + ((Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308) + 0.004)*sin(8.5308)",
+              v: "(AlturaAssento - 0.01) + ((-0.004) + 0.039)*sin(8.5308) + ((Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308) + 0.004)*cos(8.5308)",
+            ),
+            (
+              u: "((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - (0.104 - 0.039)*cos(8.5308) + ((Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308) + 0.004)*sin(8.5308)",
+              v: "(AlturaAssento - 0.01) + (0.104 - 0.039)*sin(8.5308) + ((Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308) + 0.004)*cos(8.5308)",
+              radius: "0.039",
+            ),
+            (
+              u: "((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - 0.104*cos(8.5308) + (((Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308) + 0.004) - 0.039)*sin(8.5308)",
+              v: "(AlturaAssento - 0.01) + 0.104*sin(8.5308) + (((Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308) + 0.004) - 0.039)*cos(8.5308)",
+            ),
+            (
+              u: "((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - 0.104*cos(8.5308) + ((-0.004) + 0.039)*sin(8.5308)",
+              v: "(AlturaAssento - 0.01) + 0.104*sin(8.5308) + ((-0.004) + 0.039)*cos(8.5308)",
+              radius: "0.039",
+            ),
+            (
+              u: "((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - (0.104 - 0.039)*cos(8.5308) + (-0.004)*sin(8.5308)",
+              v: "(AlturaAssento - 0.01) + (0.104 - 0.039)*sin(8.5308) + (-0.004)*cos(8.5308)",
+            ),
+            (
+              u: "((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - ((-0.004) + 0.039)*cos(8.5308) + (-0.004)*sin(8.5308)",
+              v: "(AlturaAssento - 0.01) + ((-0.004) + 0.039)*sin(8.5308) + (-0.004)*cos(8.5308)",
+              radius: "0.039",
+            ),
+          ],
+          offset: "((-Largura/2) + 0.04) + 0.003 + 0.012",
+          depth: "0.005",
+        ),
+        material: "Tecido cinza escuro",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Almofada do encosto - vivo direito",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - (-0.004)*cos(8.5308) + ((-0.004) + 0.039)*sin(8.5308)",
+              v: "(AlturaAssento - 0.01) + (-0.004)*sin(8.5308) + ((-0.004) + 0.039)*cos(8.5308)",
+            ),
+            (
+              u: "((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - (-0.004)*cos(8.5308) + (((Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308) + 0.004) - 0.039)*sin(8.5308)",
+              v: "(AlturaAssento - 0.01) + (-0.004)*sin(8.5308) + (((Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308) + 0.004) - 0.039)*cos(8.5308)",
+              radius: "0.039",
+            ),
+            (
+              u: "((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - ((-0.004) + 0.039)*cos(8.5308) + ((Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308) + 0.004)*sin(8.5308)",
+              v: "(AlturaAssento - 0.01) + ((-0.004) + 0.039)*sin(8.5308) + ((Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308) + 0.004)*cos(8.5308)",
+            ),
+            (
+              u: "((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - (0.104 - 0.039)*cos(8.5308) + ((Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308) + 0.004)*sin(8.5308)",
+              v: "(AlturaAssento - 0.01) + (0.104 - 0.039)*sin(8.5308) + ((Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308) + 0.004)*cos(8.5308)",
+              radius: "0.039",
+            ),
+            (
+              u: "((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - 0.104*cos(8.5308) + (((Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308) + 0.004) - 0.039)*sin(8.5308)",
+              v: "(AlturaAssento - 0.01) + 0.104*sin(8.5308) + (((Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308) + 0.004) - 0.039)*cos(8.5308)",
+            ),
+            (
+              u: "((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - 0.104*cos(8.5308) + ((-0.004) + 0.039)*sin(8.5308)",
+              v: "(AlturaAssento - 0.01) + 0.104*sin(8.5308) + ((-0.004) + 0.039)*cos(8.5308)",
+              radius: "0.039",
+            ),
+            (
+              u: "((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - (0.104 - 0.039)*cos(8.5308) + (-0.004)*sin(8.5308)",
+              v: "(AlturaAssento - 0.01) + (0.104 - 0.039)*sin(8.5308) + (-0.004)*cos(8.5308)",
+            ),
+            (
+              u: "((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - ((-0.004) + 0.039)*cos(8.5308) + (-0.004)*sin(8.5308)",
+              v: "(AlturaAssento - 0.01) + ((-0.004) + 0.039)*sin(8.5308) + (-0.004)*cos(8.5308)",
+              radius: "0.039",
+            ),
+          ],
+          offset: "((-Largura/2) + 0.04) + 0.003 + (Largura - 0.08) - 0.006 - 0.017",
+          depth: "0.005",
+        ),
+        material: "Tecido cinza escuro",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Botão do capitonê 1",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "-0.28*(Largura - 0.08)",
+              v: "((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - 0.103*cos(8.5308) + (0.36*(Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308))*sin(8.5308)",
+            ),
+            (
+              u: "(-0.28*(Largura - 0.08)) + 0.011",
+              v: "((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - 0.103*cos(8.5308) + (0.36*(Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308))*sin(8.5308)",
+            ),
+            (
+              u: "(-0.28*(Largura - 0.08)) + 0.011",
+              v: "(((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - 0.103*cos(8.5308) + (0.36*(Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308))*sin(8.5308)) + 0.012",
+            ),
+            (
+              u: "-0.28*(Largura - 0.08)",
+              v: "(((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - 0.103*cos(8.5308) + (0.36*(Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308))*sin(8.5308)) + 0.012",
+            ),
+          ],
+          offset: "(AlturaAssento - 0.01) + 0.103*sin(8.5308) + (0.36*(Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308))*cos(8.5308)",
+          axis: "-0.28*(Largura - 0.08)",
+          angle: "360",
+        ),
+        material: "Tecido cinza escuro",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Botão do capitonê 2",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "0*(Largura - 0.08)",
+              v: "((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - 0.103*cos(8.5308) + (0.36*(Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308))*sin(8.5308)",
+            ),
+            (
+              u: "(0*(Largura - 0.08)) + 0.011",
+              v: "((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - 0.103*cos(8.5308) + (0.36*(Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308))*sin(8.5308)",
+            ),
+            (
+              u: "(0*(Largura - 0.08)) + 0.011",
+              v: "(((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - 0.103*cos(8.5308) + (0.36*(Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308))*sin(8.5308)) + 0.012",
+            ),
+            (
+              u: "0*(Largura - 0.08)",
+              v: "(((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - 0.103*cos(8.5308) + (0.36*(Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308))*sin(8.5308)) + 0.012",
+            ),
+          ],
+          offset: "(AlturaAssento - 0.01) + 0.103*sin(8.5308) + (0.36*(Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308))*cos(8.5308)",
+          axis: "0*(Largura - 0.08)",
+          angle: "360",
+        ),
+        material: "Tecido cinza escuro",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Botão do capitonê 3",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "0.28*(Largura - 0.08)",
+              v: "((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - 0.103*cos(8.5308) + (0.36*(Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308))*sin(8.5308)",
+            ),
+            (
+              u: "(0.28*(Largura - 0.08)) + 0.011",
+              v: "((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - 0.103*cos(8.5308) + (0.36*(Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308))*sin(8.5308)",
+            ),
+            (
+              u: "(0.28*(Largura - 0.08)) + 0.011",
+              v: "(((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - 0.103*cos(8.5308) + (0.36*(Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308))*sin(8.5308)) + 0.012",
+            ),
+            (
+              u: "0.28*(Largura - 0.08)",
+              v: "(((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - 0.103*cos(8.5308) + (0.36*(Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308))*sin(8.5308)) + 0.012",
+            ),
+          ],
+          offset: "(AlturaAssento - 0.01) + 0.103*sin(8.5308) + (0.36*(Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308))*cos(8.5308)",
+          axis: "0.28*(Largura - 0.08)",
+          angle: "360",
+        ),
+        material: "Tecido cinza escuro",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Botão do capitonê 4",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "-0.28*(Largura - 0.08)",
+              v: "((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - 0.103*cos(8.5308) + (0.7*(Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308))*sin(8.5308)",
+            ),
+            (
+              u: "(-0.28*(Largura - 0.08)) + 0.011",
+              v: "((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - 0.103*cos(8.5308) + (0.7*(Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308))*sin(8.5308)",
+            ),
+            (
+              u: "(-0.28*(Largura - 0.08)) + 0.011",
+              v: "(((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - 0.103*cos(8.5308) + (0.7*(Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308))*sin(8.5308)) + 0.012",
+            ),
+            (
+              u: "-0.28*(Largura - 0.08)",
+              v: "(((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - 0.103*cos(8.5308) + (0.7*(Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308))*sin(8.5308)) + 0.012",
+            ),
+          ],
+          offset: "(AlturaAssento - 0.01) + 0.103*sin(8.5308) + (0.7*(Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308))*cos(8.5308)",
+          axis: "-0.28*(Largura - 0.08)",
+          angle: "360",
+        ),
+        material: "Tecido cinza escuro",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Botão do capitonê 5",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "0*(Largura - 0.08)",
+              v: "((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - 0.103*cos(8.5308) + (0.7*(Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308))*sin(8.5308)",
+            ),
+            (
+              u: "(0*(Largura - 0.08)) + 0.011",
+              v: "((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - 0.103*cos(8.5308) + (0.7*(Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308))*sin(8.5308)",
+            ),
+            (
+              u: "(0*(Largura - 0.08)) + 0.011",
+              v: "(((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - 0.103*cos(8.5308) + (0.7*(Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308))*sin(8.5308)) + 0.012",
+            ),
+            (
+              u: "0*(Largura - 0.08)",
+              v: "(((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - 0.103*cos(8.5308) + (0.7*(Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308))*sin(8.5308)) + 0.012",
+            ),
+          ],
+          offset: "(AlturaAssento - 0.01) + 0.103*sin(8.5308) + (0.7*(Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308))*cos(8.5308)",
+          axis: "0*(Largura - 0.08)",
+          angle: "360",
+        ),
+        material: "Tecido cinza escuro",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Botão do capitonê 6",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "0.28*(Largura - 0.08)",
+              v: "((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - 0.103*cos(8.5308) + (0.7*(Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308))*sin(8.5308)",
+            ),
+            (
+              u: "(0.28*(Largura - 0.08)) + 0.011",
+              v: "((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - 0.103*cos(8.5308) + (0.7*(Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308))*sin(8.5308)",
+            ),
+            (
+              u: "(0.28*(Largura - 0.08)) + 0.011",
+              v: "(((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - 0.103*cos(8.5308) + (0.7*(Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308))*sin(8.5308)) + 0.012",
+            ),
+            (
+              u: "0.28*(Largura - 0.08)",
+              v: "(((((Profundidade/2) - 0.13) + 0.15*((AlturaAssento - 0.01) - (AlturaAssento - 0.11)))) - 0.103*cos(8.5308) + (0.7*(Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308))*sin(8.5308)) + 0.012",
+            ),
+          ],
+          offset: "(AlturaAssento - 0.01) + 0.103*sin(8.5308) + (0.7*(Altura - 0.02 - (AlturaAssento - 0.01))/cos(8.5308))*cos(8.5308)",
+          axis: "0.28*(Largura - 0.08)",
+          angle: "360",
+        ),
+        material: "Tecido cinza escuro",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Almofada decorativa",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.15*((AlturaAssento) - (AlturaAssento - 0.11))) - 0.1 - 0.13",
+              v: "AlturaAssento - 0.006 - 0",
+              radius: "0.36",
+            ),
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.15*((AlturaAssento + 0.34) - (AlturaAssento - 0.11))) - 0.1 - 0.03",
+              v: "AlturaAssento + 0.34 + 0",
+              radius: "0.36",
+            ),
+          ],
+          offset: "-0.2",
+          depth: "0.4",
+        ),
+        material: "Tecido azul petróleo",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Almofada decorativa - vivo esquerdo",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.15*((AlturaAssento) - (AlturaAssento - 0.11))) - 0.1 - 0.13",
+              v: "AlturaAssento - 0.006 - 0.004",
+              radius: "0.358",
+            ),
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.15*((AlturaAssento + 0.34) - (AlturaAssento - 0.11))) - 0.1 - 0.03",
+              v: "AlturaAssento + 0.34 + 0.004",
+              radius: "0.358",
+            ),
+          ],
+          offset: "-0.196",
+          depth: "0.004",
+        ),
+        material: "Tecido cinza escuro",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Almofada decorativa - vivo direito",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.15*((AlturaAssento) - (AlturaAssento - 0.11))) - 0.1 - 0.13",
+              v: "AlturaAssento - 0.006 - 0.004",
+              radius: "0.358",
+            ),
+            (
+              u: "(((Profundidade/2) - 0.13) + 0.15*((AlturaAssento + 0.34) - (AlturaAssento - 0.11))) - 0.1 - 0.03",
+              v: "AlturaAssento + 0.34 + 0.004",
+              radius: "0.358",
+            ),
+          ],
+          offset: "0.192",
+          depth: "0.004",
+        ),
+        material: "Tecido cinza escuro",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+    ],
+  ),
+  types: [
+    (
+      name: "Poltrona de madeira 72 cm",
+      values: {
+        "Altura": 0.8,
+        "AlturaAssento": 0.42,
+        "Largura": 0.72,
+        "Profundidade": 0.78,
+      },
+      info: (
+        type_mark: "",
+        description: "Poltrona com estrutura de madeira aparente e almofadas soltas",
+        manufacturer: "",
+        model: "",
+        url: "",
+        keynote: "",
+        classification: "",
+        fire_rating: "",
+        comments: "",
+        cost: None,
+      ),
+    ),
+    (
+      name: "Poltrona de madeira 82 cm",
+      values: {
+        "Altura": 0.84,
+        "AlturaAssento": 0.42,
+        "Largura": 0.82,
+        "Profundidade": 0.84,
+      },
+      info: (
+        type_mark: "",
+        description: "Poltrona larga com estrutura de madeira aparente",
+        manufacturer: "",
+        model: "",
+        url: "",
+        keynote: "",
+        classification: "",
+        fire_rating: "",
+        comments: "",
+        cost: None,
+      ),
+    ),
+  ],
+  materials: [
+    (
+      name: "Madeira",
+      color: (150, 104, 62),
+      identity: (
+        description: "",
+        class: Wood,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: DiagonalBack,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (150, 104, 62),
+        finish: Matte,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: Some(600.0),
+        thermal_conductivity: Some(0.15),
+        specific_heat: Some(1340.0),
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Tecido mostarda",
+      color: (201, 152, 58),
+      identity: (
+        description: "",
+        class: Generic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (201, 152, 58),
+        finish: Matte,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Latão",
+      color: (192, 160, 84),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (192, 160, 84),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Feltro",
+      color: (70, 66, 60),
+      identity: (
+        description: "",
+        class: Generic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (70, 66, 60),
+        finish: Matte,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Madeira escura",
+      color: (92, 62, 40),
+      identity: (
+        description: "",
+        class: Wood,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (92, 62, 40),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Borracha cinza",
+      color: (150, 152, 154),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (150, 152, 154),
+        finish: Matte,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Tecido cinza escuro",
+      color: (92, 95, 100),
+      identity: (
+        description: "",
+        class: Generic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (92, 95, 100),
+        finish: Matte,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Tecido azul petróleo",
+      color: (48, 92, 110),
+      identity: (
+        description: "",
+        class: Generic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (48, 92, 110),
+        finish: Matte,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+  ],
+)

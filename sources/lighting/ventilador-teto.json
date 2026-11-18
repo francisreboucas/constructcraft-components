@@ -1,0 +1,2233 @@
+{
+  "component": "Ventilador de teto com luminária",
+  "def": {
+    "kind": "Lighting",
+    "params": [
+      {
+        "name": "Diametro",
+        "value": 1.3,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Pas",
+        "value": 4,
+        "kind": "Number",
+        "instance": false
+      },
+      {
+        "name": "Haste",
+        "value": 0.1,
+        "kind": "Length",
+        "instance": true
+      },
+      {
+        "name": "AnguloPas",
+        "value": 0,
+        "kind": "Angle",
+        "instance": true
+      }
+    ],
+    "items": [
+      {
+        "name": "Corpo simplificado",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0",
+            "z": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) - 0.11",
+            "radius": "0.105",
+            "height": "-((((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) - 0.11)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Varredura das pás",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0",
+            "z": "((((-0.075 - Haste) - 0.01) - 0.095)) - 0.014",
+            "radius": "(Diametro/2)",
+            "height": "0.014"
+          }
+        },
+        "material": "Madeira escura",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Canopla",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "-0.075"
+              },
+              {
+                "u": "0 + 0.028",
+                "v": "-0.075"
+              },
+              {
+                "u": "0 + 0.036",
+                "v": "-0.068"
+              },
+              {
+                "u": "0 + 0.05",
+                "v": "-0.058"
+              },
+              {
+                "u": "0 + 0.06",
+                "v": "-0.045"
+              },
+              {
+                "u": "0 + 0.065",
+                "v": "-0.025"
+              },
+              {
+                "u": "0 + 0.066",
+                "v": "-0.008"
+              },
+              {
+                "u": "0 + 0.066",
+                "v": "0"
+              },
+              {
+                "u": "0",
+                "v": "0"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Anel da canopla",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "-0.012"
+              },
+              {
+                "u": "0 + 0.0675",
+                "v": "-0.012"
+              },
+              {
+                "u": "0 + 0.0675",
+                "v": "-0.006"
+              },
+              {
+                "u": "0",
+                "v": "-0.006"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso da canopla esquerdo",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.004",
+                "v": "-0.02",
+                "radius": "0.004"
+              },
+              {
+                "u": "0 + 0.004",
+                "v": "-0.02",
+                "radius": "0.004"
+              }
+            ],
+            "offset": "-0.0685",
+            "depth": "0.0025"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso da canopla direito",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.004",
+                "v": "-0.02",
+                "radius": "0.004"
+              },
+              {
+                "u": "0 + 0.004",
+                "v": "-0.02",
+                "radius": "0.004"
+              }
+            ],
+            "offset": "0.066",
+            "depth": "0.0025"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Rótula da haste",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "-0.096"
+              },
+              {
+                "u": "0 + 0.012",
+                "v": "-0.096"
+              },
+              {
+                "u": "0 + 0.02",
+                "v": "-0.088"
+              },
+              {
+                "u": "0 + 0.022",
+                "v": "-0.08"
+              },
+              {
+                "u": "0 + 0.02",
+                "v": "-0.072"
+              },
+              {
+                "u": "0",
+                "v": "-0.072"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Haste",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0",
+            "z": "(-0.075 - Haste)",
+            "radius": "0.011",
+            "height": "-0.07 - (-0.075 - Haste)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Acoplamento da haste",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "((-0.075 - Haste)) - 0.01"
+              },
+              {
+                "u": "0 + 0.022",
+                "v": "((-0.075 - Haste)) - 0.01"
+              },
+              {
+                "u": "0 + 0.026",
+                "v": "(-0.075 - Haste)"
+              },
+              {
+                "u": "0 + 0.026",
+                "v": "((-0.075 - Haste)) + 0.03"
+              },
+              {
+                "u": "0 + 0.016",
+                "v": "((-0.075 - Haste)) + 0.045"
+              },
+              {
+                "u": "0",
+                "v": "((-0.075 - Haste)) + 0.045"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pino do acoplamento",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.0035",
+                "v": "((-0.075 - Haste)) + 0.018",
+                "radius": "0.0035"
+              },
+              {
+                "u": "0 + 0.0035",
+                "v": "((-0.075 - Haste)) + 0.018",
+                "radius": "0.0035"
+              }
+            ],
+            "offset": "-0.03",
+            "depth": "0.06"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Carcaça do motor",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "(((-0.075 - Haste) - 0.01)) - 0.07"
+              },
+              {
+                "u": "0 + 0.105",
+                "v": "(((-0.075 - Haste) - 0.01)) - 0.07"
+              },
+              {
+                "u": "0 + 0.105",
+                "v": "(((-0.075 - Haste) - 0.01)) - 0.045"
+              },
+              {
+                "u": "0 + 0.1",
+                "v": "(((-0.075 - Haste) - 0.01)) - 0.035"
+              },
+              {
+                "u": "0 + 0.088",
+                "v": "(((-0.075 - Haste) - 0.01)) - 0.025"
+              },
+              {
+                "u": "0 + 0.068",
+                "v": "(((-0.075 - Haste) - 0.01)) - 0.015"
+              },
+              {
+                "u": "0 + 0.045",
+                "v": "(((-0.075 - Haste) - 0.01)) - 0.006"
+              },
+              {
+                "u": "0 + 0.03",
+                "v": "((-0.075 - Haste) - 0.01)"
+              },
+              {
+                "u": "0",
+                "v": "((-0.075 - Haste) - 0.01)"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Friso superior do motor",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "(((-0.075 - Haste) - 0.01)) - 0.048"
+              },
+              {
+                "u": "0 + 0.1062",
+                "v": "(((-0.075 - Haste) - 0.01)) - 0.048"
+              },
+              {
+                "u": "0 + 0.1062",
+                "v": "(((-0.075 - Haste) - 0.01)) - 0.045"
+              },
+              {
+                "u": "0",
+                "v": "(((-0.075 - Haste) - 0.01)) - 0.045"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Friso inferior do motor",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "(((-0.075 - Haste) - 0.01)) - 0.071"
+              },
+              {
+                "u": "0 + 0.1062",
+                "v": "(((-0.075 - Haste) - 0.01)) - 0.071"
+              },
+              {
+                "u": "0 + 0.1062",
+                "v": "(((-0.075 - Haste) - 0.01)) - 0.068"
+              },
+              {
+                "u": "0",
+                "v": "(((-0.075 - Haste) - 0.01)) - 0.068"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Respiro do motor 1",
+        "shape": {
+          "Extrusion": {
+            "points": [
+              [
+                "0.1045*cos(15) - (-0.006)*sin(15)",
+                "0.1045*sin(15) + (-0.006)*cos(15)"
+              ],
+              [
+                "0.1058*cos(15) - (-0.006)*sin(15)",
+                "0.1058*sin(15) + (-0.006)*cos(15)"
+              ],
+              [
+                "0.1058*cos(15) - 0.006*sin(15)",
+                "0.1058*sin(15) + 0.006*cos(15)"
+              ],
+              [
+                "0.1045*cos(15) - 0.006*sin(15)",
+                "0.1045*sin(15) + 0.006*cos(15)"
+              ]
+            ],
+            "z": "(((-0.075 - Haste) - 0.01)) - 0.062",
+            "height": "0.012"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Respiro do motor 2",
+        "shape": {
+          "Extrusion": {
+            "points": [
+              [
+                "0.1045*cos(45) - (-0.006)*sin(45)",
+                "0.1045*sin(45) + (-0.006)*cos(45)"
+              ],
+              [
+                "0.1058*cos(45) - (-0.006)*sin(45)",
+                "0.1058*sin(45) + (-0.006)*cos(45)"
+              ],
+              [
+                "0.1058*cos(45) - 0.006*sin(45)",
+                "0.1058*sin(45) + 0.006*cos(45)"
+              ],
+              [
+                "0.1045*cos(45) - 0.006*sin(45)",
+                "0.1045*sin(45) + 0.006*cos(45)"
+              ]
+            ],
+            "z": "(((-0.075 - Haste) - 0.01)) - 0.062",
+            "height": "0.012"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Respiro do motor 3",
+        "shape": {
+          "Extrusion": {
+            "points": [
+              [
+                "0.1045*cos(75) - (-0.006)*sin(75)",
+                "0.1045*sin(75) + (-0.006)*cos(75)"
+              ],
+              [
+                "0.1058*cos(75) - (-0.006)*sin(75)",
+                "0.1058*sin(75) + (-0.006)*cos(75)"
+              ],
+              [
+                "0.1058*cos(75) - 0.006*sin(75)",
+                "0.1058*sin(75) + 0.006*cos(75)"
+              ],
+              [
+                "0.1045*cos(75) - 0.006*sin(75)",
+                "0.1045*sin(75) + 0.006*cos(75)"
+              ]
+            ],
+            "z": "(((-0.075 - Haste) - 0.01)) - 0.062",
+            "height": "0.012"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Respiro do motor 4",
+        "shape": {
+          "Extrusion": {
+            "points": [
+              [
+                "0.1045*cos(105) - (-0.006)*sin(105)",
+                "0.1045*sin(105) + (-0.006)*cos(105)"
+              ],
+              [
+                "0.1058*cos(105) - (-0.006)*sin(105)",
+                "0.1058*sin(105) + (-0.006)*cos(105)"
+              ],
+              [
+                "0.1058*cos(105) - 0.006*sin(105)",
+                "0.1058*sin(105) + 0.006*cos(105)"
+              ],
+              [
+                "0.1045*cos(105) - 0.006*sin(105)",
+                "0.1045*sin(105) + 0.006*cos(105)"
+              ]
+            ],
+            "z": "(((-0.075 - Haste) - 0.01)) - 0.062",
+            "height": "0.012"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Respiro do motor 5",
+        "shape": {
+          "Extrusion": {
+            "points": [
+              [
+                "0.1045*cos(135) - (-0.006)*sin(135)",
+                "0.1045*sin(135) + (-0.006)*cos(135)"
+              ],
+              [
+                "0.1058*cos(135) - (-0.006)*sin(135)",
+                "0.1058*sin(135) + (-0.006)*cos(135)"
+              ],
+              [
+                "0.1058*cos(135) - 0.006*sin(135)",
+                "0.1058*sin(135) + 0.006*cos(135)"
+              ],
+              [
+                "0.1045*cos(135) - 0.006*sin(135)",
+                "0.1045*sin(135) + 0.006*cos(135)"
+              ]
+            ],
+            "z": "(((-0.075 - Haste) - 0.01)) - 0.062",
+            "height": "0.012"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Respiro do motor 6",
+        "shape": {
+          "Extrusion": {
+            "points": [
+              [
+                "0.1045*cos(165) - (-0.006)*sin(165)",
+                "0.1045*sin(165) + (-0.006)*cos(165)"
+              ],
+              [
+                "0.1058*cos(165) - (-0.006)*sin(165)",
+                "0.1058*sin(165) + (-0.006)*cos(165)"
+              ],
+              [
+                "0.1058*cos(165) - 0.006*sin(165)",
+                "0.1058*sin(165) + 0.006*cos(165)"
+              ],
+              [
+                "0.1045*cos(165) - 0.006*sin(165)",
+                "0.1045*sin(165) + 0.006*cos(165)"
+              ]
+            ],
+            "z": "(((-0.075 - Haste) - 0.01)) - 0.062",
+            "height": "0.012"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Respiro do motor 7",
+        "shape": {
+          "Extrusion": {
+            "points": [
+              [
+                "0.1045*cos(195) - (-0.006)*sin(195)",
+                "0.1045*sin(195) + (-0.006)*cos(195)"
+              ],
+              [
+                "0.1058*cos(195) - (-0.006)*sin(195)",
+                "0.1058*sin(195) + (-0.006)*cos(195)"
+              ],
+              [
+                "0.1058*cos(195) - 0.006*sin(195)",
+                "0.1058*sin(195) + 0.006*cos(195)"
+              ],
+              [
+                "0.1045*cos(195) - 0.006*sin(195)",
+                "0.1045*sin(195) + 0.006*cos(195)"
+              ]
+            ],
+            "z": "(((-0.075 - Haste) - 0.01)) - 0.062",
+            "height": "0.012"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Respiro do motor 8",
+        "shape": {
+          "Extrusion": {
+            "points": [
+              [
+                "0.1045*cos(225) - (-0.006)*sin(225)",
+                "0.1045*sin(225) + (-0.006)*cos(225)"
+              ],
+              [
+                "0.1058*cos(225) - (-0.006)*sin(225)",
+                "0.1058*sin(225) + (-0.006)*cos(225)"
+              ],
+              [
+                "0.1058*cos(225) - 0.006*sin(225)",
+                "0.1058*sin(225) + 0.006*cos(225)"
+              ],
+              [
+                "0.1045*cos(225) - 0.006*sin(225)",
+                "0.1045*sin(225) + 0.006*cos(225)"
+              ]
+            ],
+            "z": "(((-0.075 - Haste) - 0.01)) - 0.062",
+            "height": "0.012"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Respiro do motor 9",
+        "shape": {
+          "Extrusion": {
+            "points": [
+              [
+                "0.1045*cos(255) - (-0.006)*sin(255)",
+                "0.1045*sin(255) + (-0.006)*cos(255)"
+              ],
+              [
+                "0.1058*cos(255) - (-0.006)*sin(255)",
+                "0.1058*sin(255) + (-0.006)*cos(255)"
+              ],
+              [
+                "0.1058*cos(255) - 0.006*sin(255)",
+                "0.1058*sin(255) + 0.006*cos(255)"
+              ],
+              [
+                "0.1045*cos(255) - 0.006*sin(255)",
+                "0.1045*sin(255) + 0.006*cos(255)"
+              ]
+            ],
+            "z": "(((-0.075 - Haste) - 0.01)) - 0.062",
+            "height": "0.012"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Respiro do motor 10",
+        "shape": {
+          "Extrusion": {
+            "points": [
+              [
+                "0.1045*cos(285) - (-0.006)*sin(285)",
+                "0.1045*sin(285) + (-0.006)*cos(285)"
+              ],
+              [
+                "0.1058*cos(285) - (-0.006)*sin(285)",
+                "0.1058*sin(285) + (-0.006)*cos(285)"
+              ],
+              [
+                "0.1058*cos(285) - 0.006*sin(285)",
+                "0.1058*sin(285) + 0.006*cos(285)"
+              ],
+              [
+                "0.1045*cos(285) - 0.006*sin(285)",
+                "0.1045*sin(285) + 0.006*cos(285)"
+              ]
+            ],
+            "z": "(((-0.075 - Haste) - 0.01)) - 0.062",
+            "height": "0.012"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Respiro do motor 11",
+        "shape": {
+          "Extrusion": {
+            "points": [
+              [
+                "0.1045*cos(315) - (-0.006)*sin(315)",
+                "0.1045*sin(315) + (-0.006)*cos(315)"
+              ],
+              [
+                "0.1058*cos(315) - (-0.006)*sin(315)",
+                "0.1058*sin(315) + (-0.006)*cos(315)"
+              ],
+              [
+                "0.1058*cos(315) - 0.006*sin(315)",
+                "0.1058*sin(315) + 0.006*cos(315)"
+              ],
+              [
+                "0.1045*cos(315) - 0.006*sin(315)",
+                "0.1045*sin(315) + 0.006*cos(315)"
+              ]
+            ],
+            "z": "(((-0.075 - Haste) - 0.01)) - 0.062",
+            "height": "0.012"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Respiro do motor 12",
+        "shape": {
+          "Extrusion": {
+            "points": [
+              [
+                "0.1045*cos(345) - (-0.006)*sin(345)",
+                "0.1045*sin(345) + (-0.006)*cos(345)"
+              ],
+              [
+                "0.1058*cos(345) - (-0.006)*sin(345)",
+                "0.1058*sin(345) + (-0.006)*cos(345)"
+              ],
+              [
+                "0.1058*cos(345) - 0.006*sin(345)",
+                "0.1058*sin(345) + 0.006*cos(345)"
+              ],
+              [
+                "0.1045*cos(345) - 0.006*sin(345)",
+                "0.1045*sin(345) + 0.006*cos(345)"
+              ]
+            ],
+            "z": "(((-0.075 - Haste) - 0.01)) - 0.062",
+            "height": "0.012"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Rotor",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "(((-0.075 - Haste) - 0.01) - 0.095)"
+              },
+              {
+                "u": "0 + 0.104",
+                "v": "(((-0.075 - Haste) - 0.01) - 0.095)"
+              },
+              {
+                "u": "0 + 0.106",
+                "v": "((((-0.075 - Haste) - 0.01) - 0.095)) + 0.004"
+              },
+              {
+                "u": "0 + 0.106",
+                "v": "((((-0.075 - Haste) - 0.01) - 0.095)) + 0.025"
+              },
+              {
+                "u": "0",
+                "v": "((((-0.075 - Haste) - 0.01) - 0.095)) + 0.025"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Caixa de comando",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)"
+              },
+              {
+                "u": "0 + 0.06",
+                "v": "((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)"
+              },
+              {
+                "u": "0 + 0.085",
+                "v": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) + 0.005"
+              },
+              {
+                "u": "0 + 0.1",
+                "v": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) + 0.02"
+              },
+              {
+                "u": "0 + 0.098",
+                "v": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) + 0.04"
+              },
+              {
+                "u": "0 + 0.08",
+                "v": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) + 0.07"
+              },
+              {
+                "u": "0",
+                "v": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) + 0.07"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Friso da caixa de comando",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) + 0.019"
+              },
+              {
+                "u": "0 + 0.1005",
+                "v": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) + 0.019"
+              },
+              {
+                "u": "0 + 0.1005",
+                "v": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) + 0.023"
+              },
+              {
+                "u": "0",
+                "v": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) + 0.023"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte da luminária",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) - 0.018"
+              },
+              {
+                "u": "0 + 0.05",
+                "v": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) - 0.018"
+              },
+              {
+                "u": "0 + 0.055",
+                "v": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) - 0.004"
+              },
+              {
+                "u": "0 + 0.058",
+                "v": "((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)"
+              },
+              {
+                "u": "0",
+                "v": "((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso do suporte esquerdo",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.003",
+                "v": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) - 0.01",
+                "radius": "0.003"
+              },
+              {
+                "u": "0 + 0.003",
+                "v": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) - 0.01",
+                "radius": "0.003"
+              }
+            ],
+            "offset": "-0.062",
+            "depth": "0.006"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso do suporte direito",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.003",
+                "v": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) - 0.01",
+                "radius": "0.003"
+              },
+              {
+                "u": "0 + 0.003",
+                "v": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) - 0.01",
+                "radius": "0.003"
+              }
+            ],
+            "offset": "0.056",
+            "depth": "0.006"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso do suporte frontal",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0",
+                "v": "-0.062"
+              },
+              {
+                "u": "0 + 0.003",
+                "v": "-0.062"
+              },
+              {
+                "u": "0 + 0.003",
+                "v": "(-0.062) + 0.006"
+              },
+              {
+                "u": "0",
+                "v": "(-0.062) + 0.006"
+              }
+            ],
+            "offset": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) - 0.01",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Difusor de vidro",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) - 0.112"
+              },
+              {
+                "u": "0 + 0.012",
+                "v": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) - 0.112"
+              },
+              {
+                "u": "0 + 0.035",
+                "v": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) - 0.108"
+              },
+              {
+                "u": "0 + 0.06",
+                "v": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) - 0.098"
+              },
+              {
+                "u": "0 + 0.08",
+                "v": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) - 0.082"
+              },
+              {
+                "u": "0 + 0.088",
+                "v": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) - 0.064"
+              },
+              {
+                "u": "0 + 0.085",
+                "v": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) - 0.048"
+              },
+              {
+                "u": "0 + 0.068",
+                "v": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) - 0.03"
+              },
+              {
+                "u": "0 + 0.05",
+                "v": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) - 0.017"
+              },
+              {
+                "u": "0",
+                "v": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) - 0.017"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Vidro jateado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Arremate do difusor",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) - 0.128"
+              },
+              {
+                "u": "0 + 0.004",
+                "v": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) - 0.128"
+              },
+              {
+                "u": "0 + 0.008",
+                "v": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) - 0.124"
+              },
+              {
+                "u": "0 + 0.012",
+                "v": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) - 0.116"
+              },
+              {
+                "u": "0 + 0.012",
+                "v": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) - 0.112"
+              },
+              {
+                "u": "0",
+                "v": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) - 0.112"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída da corrente da luz",
+        "shape": {
+          "Cylinder": {
+            "x": "-0.0725",
+            "y": "-0.0725",
+            "z": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) + 0.012",
+            "radius": "0.004",
+            "height": "0.01"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Corrente da luz",
+        "shape": {
+          "Cylinder": {
+            "x": "-0.0725",
+            "y": "-0.0725",
+            "z": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07) - 0.24)",
+            "radius": "0.0012",
+            "height": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) + 0.012 - (((((-0.075 - Haste) - 0.01) - 0.095) - 0.07) - 0.24)"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Puxador da corrente da luz",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "-0.0725",
+                "v": "((((((-0.075 - Haste) - 0.01) - 0.095) - 0.07) - 0.24)) - 0.036"
+              },
+              {
+                "u": "(-0.0725) + 0.002",
+                "v": "((((((-0.075 - Haste) - 0.01) - 0.095) - 0.07) - 0.24)) - 0.036"
+              },
+              {
+                "u": "(-0.0725) + 0.006",
+                "v": "((((((-0.075 - Haste) - 0.01) - 0.095) - 0.07) - 0.24)) - 0.03"
+              },
+              {
+                "u": "(-0.0725) + 0.0075",
+                "v": "((((((-0.075 - Haste) - 0.01) - 0.095) - 0.07) - 0.24)) - 0.016"
+              },
+              {
+                "u": "(-0.0725) + 0.0035",
+                "v": "((((((-0.075 - Haste) - 0.01) - 0.095) - 0.07) - 0.24)) - 0.004"
+              },
+              {
+                "u": "(-0.0725) + 0.002",
+                "v": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07) - 0.24)"
+              },
+              {
+                "u": "-0.0725",
+                "v": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07) - 0.24)"
+              }
+            ],
+            "offset": "-0.0725",
+            "axis": "-0.0725",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída da corrente do ventilador",
+        "shape": {
+          "Cylinder": {
+            "x": "0.0725",
+            "y": "-0.0725",
+            "z": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) + 0.012",
+            "radius": "0.004",
+            "height": "0.01"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Corrente do ventilador",
+        "shape": {
+          "Cylinder": {
+            "x": "0.0725",
+            "y": "-0.0725",
+            "z": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07) - 0.24)",
+            "radius": "0.0012",
+            "height": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07)) + 0.012 - (((((-0.075 - Haste) - 0.01) - 0.095) - 0.07) - 0.24)"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Puxador da corrente do ventilador",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0.0725",
+                "v": "((((((-0.075 - Haste) - 0.01) - 0.095) - 0.07) - 0.24)) - 0.036"
+              },
+              {
+                "u": "0.0725 + 0.002",
+                "v": "((((((-0.075 - Haste) - 0.01) - 0.095) - 0.07) - 0.24)) - 0.036"
+              },
+              {
+                "u": "0.0725 + 0.006",
+                "v": "((((((-0.075 - Haste) - 0.01) - 0.095) - 0.07) - 0.24)) - 0.03"
+              },
+              {
+                "u": "0.0725 + 0.0075",
+                "v": "((((((-0.075 - Haste) - 0.01) - 0.095) - 0.07) - 0.24)) - 0.016"
+              },
+              {
+                "u": "0.0725 + 0.0035",
+                "v": "((((((-0.075 - Haste) - 0.01) - 0.095) - 0.07) - 0.24)) - 0.004"
+              },
+              {
+                "u": "0.0725 + 0.002",
+                "v": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07) - 0.24)"
+              },
+              {
+                "u": "0.0725",
+                "v": "(((((-0.075 - Haste) - 0.01) - 0.095) - 0.07) - 0.24)"
+              }
+            ],
+            "offset": "-0.0725",
+            "axis": "0.0725",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte da pá 1",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.088*cos(((AnguloPas + 0*360/Pas))) - (-0.016)*sin(((AnguloPas + 0*360/Pas)))",
+                "v": "0.088*sin(((AnguloPas + 0*360/Pas))) + (-0.016)*cos(((AnguloPas + 0*360/Pas)))"
+              },
+              {
+                "u": "0.16*cos(((AnguloPas + 0*360/Pas))) - (-0.02)*sin(((AnguloPas + 0*360/Pas)))",
+                "v": "0.16*sin(((AnguloPas + 0*360/Pas))) + (-0.02)*cos(((AnguloPas + 0*360/Pas)))"
+              },
+              {
+                "u": "0.27*cos(((AnguloPas + 0*360/Pas))) - (-0.03)*sin(((AnguloPas + 0*360/Pas)))",
+                "v": "0.27*sin(((AnguloPas + 0*360/Pas))) + (-0.03)*cos(((AnguloPas + 0*360/Pas)))"
+              },
+              {
+                "u": "0.28*cos(((AnguloPas + 0*360/Pas))) - 0*sin(((AnguloPas + 0*360/Pas)))",
+                "v": "0.28*sin(((AnguloPas + 0*360/Pas))) + 0*cos(((AnguloPas + 0*360/Pas)))"
+              },
+              {
+                "u": "0.27*cos(((AnguloPas + 0*360/Pas))) - 0.03*sin(((AnguloPas + 0*360/Pas)))",
+                "v": "0.27*sin(((AnguloPas + 0*360/Pas))) + 0.03*cos(((AnguloPas + 0*360/Pas)))"
+              },
+              {
+                "u": "0.16*cos(((AnguloPas + 0*360/Pas))) - 0.02*sin(((AnguloPas + 0*360/Pas)))",
+                "v": "0.16*sin(((AnguloPas + 0*360/Pas))) + 0.02*cos(((AnguloPas + 0*360/Pas)))"
+              },
+              {
+                "u": "0.088*cos(((AnguloPas + 0*360/Pas))) - 0.016*sin(((AnguloPas + 0*360/Pas)))",
+                "v": "0.088*sin(((AnguloPas + 0*360/Pas))) + 0.016*cos(((AnguloPas + 0*360/Pas)))"
+              }
+            ],
+            "offset": "((((-0.075 - Haste) - 0.01) - 0.095)) - 0.006",
+            "depth": "0.006"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pá 1",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.17*cos(((AnguloPas + 0*360/Pas))) - (-0.055)*sin(((AnguloPas + 0*360/Pas)))",
+                "v": "0.17*sin(((AnguloPas + 0*360/Pas))) + (-0.055)*cos(((AnguloPas + 0*360/Pas)))"
+              },
+              {
+                "u": "((Diametro/2) - 0.07)*cos(((AnguloPas + 0*360/Pas))) - (-0.07)*sin(((AnguloPas + 0*360/Pas)))",
+                "v": "((Diametro/2) - 0.07)*sin(((AnguloPas + 0*360/Pas))) + (-0.07)*cos(((AnguloPas + 0*360/Pas)))",
+                "radius": "0.07"
+              },
+              {
+                "u": "((Diametro/2) - 0.07)*cos(((AnguloPas + 0*360/Pas))) - 0.07*sin(((AnguloPas + 0*360/Pas)))",
+                "v": "((Diametro/2) - 0.07)*sin(((AnguloPas + 0*360/Pas))) + 0.07*cos(((AnguloPas + 0*360/Pas)))"
+              },
+              {
+                "u": "0.17*cos(((AnguloPas + 0*360/Pas))) - 0.055*sin(((AnguloPas + 0*360/Pas)))",
+                "v": "0.17*sin(((AnguloPas + 0*360/Pas))) + 0.055*cos(((AnguloPas + 0*360/Pas)))"
+              }
+            ],
+            "offset": "((((-0.075 - Haste) - 0.01) - 0.095)) - 0.014",
+            "depth": "0.008"
+          }
+        },
+        "material": "Madeira escura",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso da pá 1.1",
+        "shape": {
+          "Cylinder": {
+            "x": "0.19*cos(((AnguloPas + 0*360/Pas))) - 0*sin(((AnguloPas + 0*360/Pas)))",
+            "y": "0.19*sin(((AnguloPas + 0*360/Pas))) + 0*cos(((AnguloPas + 0*360/Pas)))",
+            "z": "(((-0.075 - Haste) - 0.01) - 0.095)",
+            "radius": "0.0045",
+            "height": "0.003"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso da pá 1.2",
+        "shape": {
+          "Cylinder": {
+            "x": "0.235*cos(((AnguloPas + 0*360/Pas))) - (-0.016)*sin(((AnguloPas + 0*360/Pas)))",
+            "y": "0.235*sin(((AnguloPas + 0*360/Pas))) + (-0.016)*cos(((AnguloPas + 0*360/Pas)))",
+            "z": "(((-0.075 - Haste) - 0.01) - 0.095)",
+            "radius": "0.0045",
+            "height": "0.003"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso da pá 1.3",
+        "shape": {
+          "Cylinder": {
+            "x": "0.235*cos(((AnguloPas + 0*360/Pas))) - 0.016*sin(((AnguloPas + 0*360/Pas)))",
+            "y": "0.235*sin(((AnguloPas + 0*360/Pas))) + 0.016*cos(((AnguloPas + 0*360/Pas)))",
+            "z": "(((-0.075 - Haste) - 0.01) - 0.095)",
+            "radius": "0.0045",
+            "height": "0.003"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso do suporte da pá 1.1",
+        "shape": {
+          "Cylinder": {
+            "x": "0.097*cos(((AnguloPas + 0*360/Pas))) - (-0.009)*sin(((AnguloPas + 0*360/Pas)))",
+            "y": "0.097*sin(((AnguloPas + 0*360/Pas))) + (-0.009)*cos(((AnguloPas + 0*360/Pas)))",
+            "z": "((((-0.075 - Haste) - 0.01) - 0.095)) - 0.009",
+            "radius": "0.004",
+            "height": "0.003"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso do suporte da pá 1.2",
+        "shape": {
+          "Cylinder": {
+            "x": "0.097*cos(((AnguloPas + 0*360/Pas))) - 0.009*sin(((AnguloPas + 0*360/Pas)))",
+            "y": "0.097*sin(((AnguloPas + 0*360/Pas))) + 0.009*cos(((AnguloPas + 0*360/Pas)))",
+            "z": "((((-0.075 - Haste) - 0.01) - 0.095)) - 0.009",
+            "radius": "0.004",
+            "height": "0.003"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte da pá 2",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.088*cos(((AnguloPas + 1*360/Pas))) - (-0.016)*sin(((AnguloPas + 1*360/Pas)))",
+                "v": "0.088*sin(((AnguloPas + 1*360/Pas))) + (-0.016)*cos(((AnguloPas + 1*360/Pas)))"
+              },
+              {
+                "u": "0.16*cos(((AnguloPas + 1*360/Pas))) - (-0.02)*sin(((AnguloPas + 1*360/Pas)))",
+                "v": "0.16*sin(((AnguloPas + 1*360/Pas))) + (-0.02)*cos(((AnguloPas + 1*360/Pas)))"
+              },
+              {
+                "u": "0.27*cos(((AnguloPas + 1*360/Pas))) - (-0.03)*sin(((AnguloPas + 1*360/Pas)))",
+                "v": "0.27*sin(((AnguloPas + 1*360/Pas))) + (-0.03)*cos(((AnguloPas + 1*360/Pas)))"
+              },
+              {
+                "u": "0.28*cos(((AnguloPas + 1*360/Pas))) - 0*sin(((AnguloPas + 1*360/Pas)))",
+                "v": "0.28*sin(((AnguloPas + 1*360/Pas))) + 0*cos(((AnguloPas + 1*360/Pas)))"
+              },
+              {
+                "u": "0.27*cos(((AnguloPas + 1*360/Pas))) - 0.03*sin(((AnguloPas + 1*360/Pas)))",
+                "v": "0.27*sin(((AnguloPas + 1*360/Pas))) + 0.03*cos(((AnguloPas + 1*360/Pas)))"
+              },
+              {
+                "u": "0.16*cos(((AnguloPas + 1*360/Pas))) - 0.02*sin(((AnguloPas + 1*360/Pas)))",
+                "v": "0.16*sin(((AnguloPas + 1*360/Pas))) + 0.02*cos(((AnguloPas + 1*360/Pas)))"
+              },
+              {
+                "u": "0.088*cos(((AnguloPas + 1*360/Pas))) - 0.016*sin(((AnguloPas + 1*360/Pas)))",
+                "v": "0.088*sin(((AnguloPas + 1*360/Pas))) + 0.016*cos(((AnguloPas + 1*360/Pas)))"
+              }
+            ],
+            "offset": "((((-0.075 - Haste) - 0.01) - 0.095)) - 0.006",
+            "depth": "0.006"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pá 2",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.17*cos(((AnguloPas + 1*360/Pas))) - (-0.055)*sin(((AnguloPas + 1*360/Pas)))",
+                "v": "0.17*sin(((AnguloPas + 1*360/Pas))) + (-0.055)*cos(((AnguloPas + 1*360/Pas)))"
+              },
+              {
+                "u": "((Diametro/2) - 0.07)*cos(((AnguloPas + 1*360/Pas))) - (-0.07)*sin(((AnguloPas + 1*360/Pas)))",
+                "v": "((Diametro/2) - 0.07)*sin(((AnguloPas + 1*360/Pas))) + (-0.07)*cos(((AnguloPas + 1*360/Pas)))",
+                "radius": "0.07"
+              },
+              {
+                "u": "((Diametro/2) - 0.07)*cos(((AnguloPas + 1*360/Pas))) - 0.07*sin(((AnguloPas + 1*360/Pas)))",
+                "v": "((Diametro/2) - 0.07)*sin(((AnguloPas + 1*360/Pas))) + 0.07*cos(((AnguloPas + 1*360/Pas)))"
+              },
+              {
+                "u": "0.17*cos(((AnguloPas + 1*360/Pas))) - 0.055*sin(((AnguloPas + 1*360/Pas)))",
+                "v": "0.17*sin(((AnguloPas + 1*360/Pas))) + 0.055*cos(((AnguloPas + 1*360/Pas)))"
+              }
+            ],
+            "offset": "((((-0.075 - Haste) - 0.01) - 0.095)) - 0.014",
+            "depth": "0.008"
+          }
+        },
+        "material": "Madeira escura",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso da pá 2.1",
+        "shape": {
+          "Cylinder": {
+            "x": "0.19*cos(((AnguloPas + 1*360/Pas))) - 0*sin(((AnguloPas + 1*360/Pas)))",
+            "y": "0.19*sin(((AnguloPas + 1*360/Pas))) + 0*cos(((AnguloPas + 1*360/Pas)))",
+            "z": "(((-0.075 - Haste) - 0.01) - 0.095)",
+            "radius": "0.0045",
+            "height": "0.003"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso da pá 2.2",
+        "shape": {
+          "Cylinder": {
+            "x": "0.235*cos(((AnguloPas + 1*360/Pas))) - (-0.016)*sin(((AnguloPas + 1*360/Pas)))",
+            "y": "0.235*sin(((AnguloPas + 1*360/Pas))) + (-0.016)*cos(((AnguloPas + 1*360/Pas)))",
+            "z": "(((-0.075 - Haste) - 0.01) - 0.095)",
+            "radius": "0.0045",
+            "height": "0.003"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso da pá 2.3",
+        "shape": {
+          "Cylinder": {
+            "x": "0.235*cos(((AnguloPas + 1*360/Pas))) - 0.016*sin(((AnguloPas + 1*360/Pas)))",
+            "y": "0.235*sin(((AnguloPas + 1*360/Pas))) + 0.016*cos(((AnguloPas + 1*360/Pas)))",
+            "z": "(((-0.075 - Haste) - 0.01) - 0.095)",
+            "radius": "0.0045",
+            "height": "0.003"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso do suporte da pá 2.1",
+        "shape": {
+          "Cylinder": {
+            "x": "0.097*cos(((AnguloPas + 1*360/Pas))) - (-0.009)*sin(((AnguloPas + 1*360/Pas)))",
+            "y": "0.097*sin(((AnguloPas + 1*360/Pas))) + (-0.009)*cos(((AnguloPas + 1*360/Pas)))",
+            "z": "((((-0.075 - Haste) - 0.01) - 0.095)) - 0.009",
+            "radius": "0.004",
+            "height": "0.003"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso do suporte da pá 2.2",
+        "shape": {
+          "Cylinder": {
+            "x": "0.097*cos(((AnguloPas + 1*360/Pas))) - 0.009*sin(((AnguloPas + 1*360/Pas)))",
+            "y": "0.097*sin(((AnguloPas + 1*360/Pas))) + 0.009*cos(((AnguloPas + 1*360/Pas)))",
+            "z": "((((-0.075 - Haste) - 0.01) - 0.095)) - 0.009",
+            "radius": "0.004",
+            "height": "0.003"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte da pá 3",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.088*cos(((AnguloPas + 2*360/Pas))) - (-0.016)*sin(((AnguloPas + 2*360/Pas)))",
+                "v": "0.088*sin(((AnguloPas + 2*360/Pas))) + (-0.016)*cos(((AnguloPas + 2*360/Pas)))"
+              },
+              {
+                "u": "0.16*cos(((AnguloPas + 2*360/Pas))) - (-0.02)*sin(((AnguloPas + 2*360/Pas)))",
+                "v": "0.16*sin(((AnguloPas + 2*360/Pas))) + (-0.02)*cos(((AnguloPas + 2*360/Pas)))"
+              },
+              {
+                "u": "0.27*cos(((AnguloPas + 2*360/Pas))) - (-0.03)*sin(((AnguloPas + 2*360/Pas)))",
+                "v": "0.27*sin(((AnguloPas + 2*360/Pas))) + (-0.03)*cos(((AnguloPas + 2*360/Pas)))"
+              },
+              {
+                "u": "0.28*cos(((AnguloPas + 2*360/Pas))) - 0*sin(((AnguloPas + 2*360/Pas)))",
+                "v": "0.28*sin(((AnguloPas + 2*360/Pas))) + 0*cos(((AnguloPas + 2*360/Pas)))"
+              },
+              {
+                "u": "0.27*cos(((AnguloPas + 2*360/Pas))) - 0.03*sin(((AnguloPas + 2*360/Pas)))",
+                "v": "0.27*sin(((AnguloPas + 2*360/Pas))) + 0.03*cos(((AnguloPas + 2*360/Pas)))"
+              },
+              {
+                "u": "0.16*cos(((AnguloPas + 2*360/Pas))) - 0.02*sin(((AnguloPas + 2*360/Pas)))",
+                "v": "0.16*sin(((AnguloPas + 2*360/Pas))) + 0.02*cos(((AnguloPas + 2*360/Pas)))"
+              },
+              {
+                "u": "0.088*cos(((AnguloPas + 2*360/Pas))) - 0.016*sin(((AnguloPas + 2*360/Pas)))",
+                "v": "0.088*sin(((AnguloPas + 2*360/Pas))) + 0.016*cos(((AnguloPas + 2*360/Pas)))"
+              }
+            ],
+            "offset": "((((-0.075 - Haste) - 0.01) - 0.095)) - 0.006",
+            "depth": "0.006"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pá 3",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.17*cos(((AnguloPas + 2*360/Pas))) - (-0.055)*sin(((AnguloPas + 2*360/Pas)))",
+                "v": "0.17*sin(((AnguloPas + 2*360/Pas))) + (-0.055)*cos(((AnguloPas + 2*360/Pas)))"
+              },
+              {
+                "u": "((Diametro/2) - 0.07)*cos(((AnguloPas + 2*360/Pas))) - (-0.07)*sin(((AnguloPas + 2*360/Pas)))",
+                "v": "((Diametro/2) - 0.07)*sin(((AnguloPas + 2*360/Pas))) + (-0.07)*cos(((AnguloPas + 2*360/Pas)))",
+                "radius": "0.07"
+              },
+              {
+                "u": "((Diametro/2) - 0.07)*cos(((AnguloPas + 2*360/Pas))) - 0.07*sin(((AnguloPas + 2*360/Pas)))",
+                "v": "((Diametro/2) - 0.07)*sin(((AnguloPas + 2*360/Pas))) + 0.07*cos(((AnguloPas + 2*360/Pas)))"
+              },
+              {
+                "u": "0.17*cos(((AnguloPas + 2*360/Pas))) - 0.055*sin(((AnguloPas + 2*360/Pas)))",
+                "v": "0.17*sin(((AnguloPas + 2*360/Pas))) + 0.055*cos(((AnguloPas + 2*360/Pas)))"
+              }
+            ],
+            "offset": "((((-0.075 - Haste) - 0.01) - 0.095)) - 0.014",
+            "depth": "0.008"
+          }
+        },
+        "material": "Madeira escura",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso da pá 3.1",
+        "shape": {
+          "Cylinder": {
+            "x": "0.19*cos(((AnguloPas + 2*360/Pas))) - 0*sin(((AnguloPas + 2*360/Pas)))",
+            "y": "0.19*sin(((AnguloPas + 2*360/Pas))) + 0*cos(((AnguloPas + 2*360/Pas)))",
+            "z": "(((-0.075 - Haste) - 0.01) - 0.095)",
+            "radius": "0.0045",
+            "height": "0.003"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso da pá 3.2",
+        "shape": {
+          "Cylinder": {
+            "x": "0.235*cos(((AnguloPas + 2*360/Pas))) - (-0.016)*sin(((AnguloPas + 2*360/Pas)))",
+            "y": "0.235*sin(((AnguloPas + 2*360/Pas))) + (-0.016)*cos(((AnguloPas + 2*360/Pas)))",
+            "z": "(((-0.075 - Haste) - 0.01) - 0.095)",
+            "radius": "0.0045",
+            "height": "0.003"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso da pá 3.3",
+        "shape": {
+          "Cylinder": {
+            "x": "0.235*cos(((AnguloPas + 2*360/Pas))) - 0.016*sin(((AnguloPas + 2*360/Pas)))",
+            "y": "0.235*sin(((AnguloPas + 2*360/Pas))) + 0.016*cos(((AnguloPas + 2*360/Pas)))",
+            "z": "(((-0.075 - Haste) - 0.01) - 0.095)",
+            "radius": "0.0045",
+            "height": "0.003"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso do suporte da pá 3.1",
+        "shape": {
+          "Cylinder": {
+            "x": "0.097*cos(((AnguloPas + 2*360/Pas))) - (-0.009)*sin(((AnguloPas + 2*360/Pas)))",
+            "y": "0.097*sin(((AnguloPas + 2*360/Pas))) + (-0.009)*cos(((AnguloPas + 2*360/Pas)))",
+            "z": "((((-0.075 - Haste) - 0.01) - 0.095)) - 0.009",
+            "radius": "0.004",
+            "height": "0.003"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso do suporte da pá 3.2",
+        "shape": {
+          "Cylinder": {
+            "x": "0.097*cos(((AnguloPas + 2*360/Pas))) - 0.009*sin(((AnguloPas + 2*360/Pas)))",
+            "y": "0.097*sin(((AnguloPas + 2*360/Pas))) + 0.009*cos(((AnguloPas + 2*360/Pas)))",
+            "z": "((((-0.075 - Haste) - 0.01) - 0.095)) - 0.009",
+            "radius": "0.004",
+            "height": "0.003"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte da pá 4",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0 + (min(1, max(0.005, Pas - 3)))*(0.088*cos(((AnguloPas + 3*360/Pas))) - (-0.016)*sin(((AnguloPas + 3*360/Pas))) - 0)",
+                "v": "0 + (min(1, max(0.005, Pas - 3)))*(0.088*sin(((AnguloPas + 3*360/Pas))) + (-0.016)*cos(((AnguloPas + 3*360/Pas))) - 0)"
+              },
+              {
+                "u": "0 + (min(1, max(0.005, Pas - 3)))*(0.16*cos(((AnguloPas + 3*360/Pas))) - (-0.02)*sin(((AnguloPas + 3*360/Pas))) - 0)",
+                "v": "0 + (min(1, max(0.005, Pas - 3)))*(0.16*sin(((AnguloPas + 3*360/Pas))) + (-0.02)*cos(((AnguloPas + 3*360/Pas))) - 0)"
+              },
+              {
+                "u": "0 + (min(1, max(0.005, Pas - 3)))*(0.27*cos(((AnguloPas + 3*360/Pas))) - (-0.03)*sin(((AnguloPas + 3*360/Pas))) - 0)",
+                "v": "0 + (min(1, max(0.005, Pas - 3)))*(0.27*sin(((AnguloPas + 3*360/Pas))) + (-0.03)*cos(((AnguloPas + 3*360/Pas))) - 0)"
+              },
+              {
+                "u": "0 + (min(1, max(0.005, Pas - 3)))*(0.28*cos(((AnguloPas + 3*360/Pas))) - 0*sin(((AnguloPas + 3*360/Pas))) - 0)",
+                "v": "0 + (min(1, max(0.005, Pas - 3)))*(0.28*sin(((AnguloPas + 3*360/Pas))) + 0*cos(((AnguloPas + 3*360/Pas))) - 0)"
+              },
+              {
+                "u": "0 + (min(1, max(0.005, Pas - 3)))*(0.27*cos(((AnguloPas + 3*360/Pas))) - 0.03*sin(((AnguloPas + 3*360/Pas))) - 0)",
+                "v": "0 + (min(1, max(0.005, Pas - 3)))*(0.27*sin(((AnguloPas + 3*360/Pas))) + 0.03*cos(((AnguloPas + 3*360/Pas))) - 0)"
+              },
+              {
+                "u": "0 + (min(1, max(0.005, Pas - 3)))*(0.16*cos(((AnguloPas + 3*360/Pas))) - 0.02*sin(((AnguloPas + 3*360/Pas))) - 0)",
+                "v": "0 + (min(1, max(0.005, Pas - 3)))*(0.16*sin(((AnguloPas + 3*360/Pas))) + 0.02*cos(((AnguloPas + 3*360/Pas))) - 0)"
+              },
+              {
+                "u": "0 + (min(1, max(0.005, Pas - 3)))*(0.088*cos(((AnguloPas + 3*360/Pas))) - 0.016*sin(((AnguloPas + 3*360/Pas))) - 0)",
+                "v": "0 + (min(1, max(0.005, Pas - 3)))*(0.088*sin(((AnguloPas + 3*360/Pas))) + 0.016*cos(((AnguloPas + 3*360/Pas))) - 0)"
+              }
+            ],
+            "offset": "((((-0.075 - Haste) - 0.01)) - 0.04) + (min(1, max(0.005, Pas - 3)))*(((((-0.075 - Haste) - 0.01) - 0.095)) - 0.006 - ((((-0.075 - Haste) - 0.01)) - 0.04))",
+            "depth": "(min(1, max(0.005, Pas - 3)))*0.006"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pá 4",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0 + (min(1, max(0.005, Pas - 3)))*(0.17*cos(((AnguloPas + 3*360/Pas))) - (-0.055)*sin(((AnguloPas + 3*360/Pas))) - 0)",
+                "v": "0 + (min(1, max(0.005, Pas - 3)))*(0.17*sin(((AnguloPas + 3*360/Pas))) + (-0.055)*cos(((AnguloPas + 3*360/Pas))) - 0)"
+              },
+              {
+                "u": "0 + (min(1, max(0.005, Pas - 3)))*(((Diametro/2) - 0.07)*cos(((AnguloPas + 3*360/Pas))) - (-0.07)*sin(((AnguloPas + 3*360/Pas))) - 0)",
+                "v": "0 + (min(1, max(0.005, Pas - 3)))*(((Diametro/2) - 0.07)*sin(((AnguloPas + 3*360/Pas))) + (-0.07)*cos(((AnguloPas + 3*360/Pas))) - 0)",
+                "radius": "(min(1, max(0.005, Pas - 3)))*0.07"
+              },
+              {
+                "u": "0 + (min(1, max(0.005, Pas - 3)))*(((Diametro/2) - 0.07)*cos(((AnguloPas + 3*360/Pas))) - 0.07*sin(((AnguloPas + 3*360/Pas))) - 0)",
+                "v": "0 + (min(1, max(0.005, Pas - 3)))*(((Diametro/2) - 0.07)*sin(((AnguloPas + 3*360/Pas))) + 0.07*cos(((AnguloPas + 3*360/Pas))) - 0)"
+              },
+              {
+                "u": "0 + (min(1, max(0.005, Pas - 3)))*(0.17*cos(((AnguloPas + 3*360/Pas))) - 0.055*sin(((AnguloPas + 3*360/Pas))) - 0)",
+                "v": "0 + (min(1, max(0.005, Pas - 3)))*(0.17*sin(((AnguloPas + 3*360/Pas))) + 0.055*cos(((AnguloPas + 3*360/Pas))) - 0)"
+              }
+            ],
+            "offset": "((((-0.075 - Haste) - 0.01)) - 0.04) + (min(1, max(0.005, Pas - 3)))*(((((-0.075 - Haste) - 0.01) - 0.095)) - 0.014 - ((((-0.075 - Haste) - 0.01)) - 0.04))",
+            "depth": "(min(1, max(0.005, Pas - 3)))*0.008"
+          }
+        },
+        "material": "Madeira escura",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso da pá 4.1",
+        "shape": {
+          "Cylinder": {
+            "x": "0 + (min(1, max(0.005, Pas - 3)))*(0.19*cos(((AnguloPas + 3*360/Pas))) - 0*sin(((AnguloPas + 3*360/Pas))) - 0)",
+            "y": "0 + (min(1, max(0.005, Pas - 3)))*(0.19*sin(((AnguloPas + 3*360/Pas))) + 0*cos(((AnguloPas + 3*360/Pas))) - 0)",
+            "z": "((((-0.075 - Haste) - 0.01)) - 0.04) + (min(1, max(0.005, Pas - 3)))*((((-0.075 - Haste) - 0.01) - 0.095) - ((((-0.075 - Haste) - 0.01)) - 0.04))",
+            "radius": "(min(1, max(0.005, Pas - 3)))*0.0045",
+            "height": "(min(1, max(0.005, Pas - 3)))*0.003"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso da pá 4.2",
+        "shape": {
+          "Cylinder": {
+            "x": "0 + (min(1, max(0.005, Pas - 3)))*(0.235*cos(((AnguloPas + 3*360/Pas))) - (-0.016)*sin(((AnguloPas + 3*360/Pas))) - 0)",
+            "y": "0 + (min(1, max(0.005, Pas - 3)))*(0.235*sin(((AnguloPas + 3*360/Pas))) + (-0.016)*cos(((AnguloPas + 3*360/Pas))) - 0)",
+            "z": "((((-0.075 - Haste) - 0.01)) - 0.04) + (min(1, max(0.005, Pas - 3)))*((((-0.075 - Haste) - 0.01) - 0.095) - ((((-0.075 - Haste) - 0.01)) - 0.04))",
+            "radius": "(min(1, max(0.005, Pas - 3)))*0.0045",
+            "height": "(min(1, max(0.005, Pas - 3)))*0.003"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso da pá 4.3",
+        "shape": {
+          "Cylinder": {
+            "x": "0 + (min(1, max(0.005, Pas - 3)))*(0.235*cos(((AnguloPas + 3*360/Pas))) - 0.016*sin(((AnguloPas + 3*360/Pas))) - 0)",
+            "y": "0 + (min(1, max(0.005, Pas - 3)))*(0.235*sin(((AnguloPas + 3*360/Pas))) + 0.016*cos(((AnguloPas + 3*360/Pas))) - 0)",
+            "z": "((((-0.075 - Haste) - 0.01)) - 0.04) + (min(1, max(0.005, Pas - 3)))*((((-0.075 - Haste) - 0.01) - 0.095) - ((((-0.075 - Haste) - 0.01)) - 0.04))",
+            "radius": "(min(1, max(0.005, Pas - 3)))*0.0045",
+            "height": "(min(1, max(0.005, Pas - 3)))*0.003"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso do suporte da pá 4.1",
+        "shape": {
+          "Cylinder": {
+            "x": "0 + (min(1, max(0.005, Pas - 3)))*(0.097*cos(((AnguloPas + 3*360/Pas))) - (-0.009)*sin(((AnguloPas + 3*360/Pas))) - 0)",
+            "y": "0 + (min(1, max(0.005, Pas - 3)))*(0.097*sin(((AnguloPas + 3*360/Pas))) + (-0.009)*cos(((AnguloPas + 3*360/Pas))) - 0)",
+            "z": "((((-0.075 - Haste) - 0.01)) - 0.04) + (min(1, max(0.005, Pas - 3)))*(((((-0.075 - Haste) - 0.01) - 0.095)) - 0.009 - ((((-0.075 - Haste) - 0.01)) - 0.04))",
+            "radius": "(min(1, max(0.005, Pas - 3)))*0.004",
+            "height": "(min(1, max(0.005, Pas - 3)))*0.003"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso do suporte da pá 4.2",
+        "shape": {
+          "Cylinder": {
+            "x": "0 + (min(1, max(0.005, Pas - 3)))*(0.097*cos(((AnguloPas + 3*360/Pas))) - 0.009*sin(((AnguloPas + 3*360/Pas))) - 0)",
+            "y": "0 + (min(1, max(0.005, Pas - 3)))*(0.097*sin(((AnguloPas + 3*360/Pas))) + 0.009*cos(((AnguloPas + 3*360/Pas))) - 0)",
+            "z": "((((-0.075 - Haste) - 0.01)) - 0.04) + (min(1, max(0.005, Pas - 3)))*(((((-0.075 - Haste) - 0.01) - 0.095)) - 0.009 - ((((-0.075 - Haste) - 0.01)) - 0.04))",
+            "radius": "(min(1, max(0.005, Pas - 3)))*0.004",
+            "height": "(min(1, max(0.005, Pas - 3)))*0.003"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      }
+    ],
+    "mep": {
+      "Device": {
+        "device": "CeilingLight",
+        "power": 150
+      }
+    }
+  },
+  "types": [
+    {
+      "name": "Ventilador de teto 4 pás 130 cm",
+      "values": {},
+      "info": {
+        "description": "Ventilador de teto com 4 pás e luminária de vidro jateado; motor e lâmpadas, 150 VA"
+      }
+    },
+    {
+      "name": "Ventilador de teto 3 pás 105 cm",
+      "values": {
+        "Diametro": 1.05,
+        "Pas": 3
+      },
+      "info": {
+        "description": "Ventilador de teto com 3 pás e luminária de vidro jateado; motor e lâmpadas, 150 VA"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "name": "Aço pintado branco",
+      "color": [
+        240,
+        240,
+        236
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Madeira escura",
+      "color": [
+        92,
+        62,
+        40
+      ],
+      "class": "Wood",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Cromado",
+      "color": [
+        226,
+        229,
+        233
+      ],
+      "class": "Metal",
+      "finish": "Polished",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico preto",
+      "color": [
+        34,
+        34,
+        37
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Vidro jateado",
+      "color": [
+        236,
+        238,
+        236
+      ],
+      "class": "Glass",
+      "finish": "Satin",
+      "transparency": 0.25
+    },
+    {
+      "name": "Latão",
+      "color": [
+        192,
+        160,
+        84
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    }
+  ]
+}

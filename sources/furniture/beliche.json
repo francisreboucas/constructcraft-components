@@ -1,0 +1,4126 @@
+{
+  "component": "Beliche",
+  "def": {
+    "kind": "Furniture",
+    "params": [
+      {
+        "name": "Largura",
+        "value": 0.88,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Comprimento",
+        "value": 1.88,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Altura",
+        "value": 1.65,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "AlturaColchao",
+        "value": 0.14,
+        "kind": "Length",
+        "instance": false
+      }
+    ],
+    "items": [
+      {
+        "name": "Coluna simplificada 1",
+        "shape": {
+          "Box": {
+            "x": "-1*((Comprimento/2 + 0.005) + 0.0325) - 0.0325",
+            "y": "-1*((Largura/2 + 0.005) + 0.0325) - 0.0325",
+            "z": "0",
+            "width": "0.065",
+            "depth": "0.065",
+            "height": "Altura"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Coluna simplificada 2",
+        "shape": {
+          "Box": {
+            "x": "1*((Comprimento/2 + 0.005) + 0.0325) - 0.0325",
+            "y": "-1*((Largura/2 + 0.005) + 0.0325) - 0.0325",
+            "z": "0",
+            "width": "0.065",
+            "depth": "0.065",
+            "height": "Altura"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Coluna simplificada 3",
+        "shape": {
+          "Box": {
+            "x": "-1*((Comprimento/2 + 0.005) + 0.0325) - 0.0325",
+            "y": "1*((Largura/2 + 0.005) + 0.0325) - 0.0325",
+            "z": "0",
+            "width": "0.065",
+            "depth": "0.065",
+            "height": "Altura"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Coluna simplificada 4",
+        "shape": {
+          "Box": {
+            "x": "1*((Comprimento/2 + 0.005) + 0.0325) - 0.0325",
+            "y": "1*((Largura/2 + 0.005) + 0.0325) - 0.0325",
+            "z": "0",
+            "width": "0.065",
+            "depth": "0.065",
+            "height": "Altura"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Leito inferior simplificado",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005)",
+            "y": "-((Largura/2 + 0.005) + 0.025)",
+            "z": "0.28 - 0.08",
+            "width": "2*(Comprimento/2 + 0.005)",
+            "depth": "2*((Largura/2 + 0.005) + 0.025)",
+            "height": "0.08 + AlturaColchao"
+          }
+        },
+        "material": "Colchão",
+        "in_plan": false,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Leito superior simplificado",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005)",
+            "y": "-((Largura/2 + 0.005) + 0.025)",
+            "z": "(Altura - 0.45) - 0.08",
+            "width": "2*(Comprimento/2 + 0.005)",
+            "depth": "2*((Largura/2 + 0.005) + 0.025)",
+            "height": "0.08 + AlturaColchao"
+          }
+        },
+        "material": "Colchão",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Grade superior simplificada",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005)",
+            "y": "(Largura/2 + 0.005)",
+            "z": "(Altura - 0.45) + AlturaColchao",
+            "width": "2*(Comprimento/2 + 0.005)",
+            "depth": "0.025",
+            "height": "(Altura - 0.035) - (Altura - 0.45) - AlturaColchao"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Escada simplificada",
+        "shape": {
+          "Box": {
+            "x": "(((Comprimento/2 + 0.005) - 0.33) - 0.195)",
+            "y": "(-((Largura/2 + 0.005) + 0.025) - 0.045)",
+            "z": "0",
+            "width": "(((Comprimento/2 + 0.005) - 0.33) + 0.165) + 0.03 - (((Comprimento/2 + 0.005) - 0.33) - 0.195)",
+            "depth": "0.045",
+            "height": "(Altura - 0.035)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Coluna frontal da cabeceira",
+        "shape": {
+          "Box": {
+            "x": "-((Comprimento/2 + 0.005) + 0.065)",
+            "y": "-((Largura/2 + 0.005) + 0.065)",
+            "z": "0.004",
+            "width": "0.065",
+            "depth": "0.065",
+            "height": "Altura - 0.024"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Capitel da coluna frontal da cabeceira",
+        "shape": {
+          "Blend": {
+            "plane": "Plan",
+            "bottom": [
+              {
+                "u": "-((Comprimento/2 + 0.005) + 0.065)",
+                "v": "-((Largura/2 + 0.005) + 0.065)"
+              },
+              {
+                "u": "-((Comprimento/2 + 0.005) + 0.065) + 0.065",
+                "v": "-((Largura/2 + 0.005) + 0.065)"
+              },
+              {
+                "u": "-((Comprimento/2 + 0.005) + 0.065) + 0.065",
+                "v": "-((Largura/2 + 0.005) + 0.065) + 0.065"
+              },
+              {
+                "u": "-((Comprimento/2 + 0.005) + 0.065)",
+                "v": "-((Largura/2 + 0.005) + 0.065) + 0.065"
+              }
+            ],
+            "top": [
+              {
+                "u": "-((Comprimento/2 + 0.005) + 0.065) + 0.016",
+                "v": "-((Largura/2 + 0.005) + 0.065) + 0.016"
+              },
+              {
+                "u": "-((Comprimento/2 + 0.005) + 0.065) + 0.049",
+                "v": "-((Largura/2 + 0.005) + 0.065) + 0.016"
+              },
+              {
+                "u": "-((Comprimento/2 + 0.005) + 0.065) + 0.049",
+                "v": "-((Largura/2 + 0.005) + 0.065) + 0.049"
+              },
+              {
+                "u": "-((Comprimento/2 + 0.005) + 0.065) + 0.016",
+                "v": "-((Largura/2 + 0.005) + 0.065) + 0.049"
+              }
+            ],
+            "offset": "Altura - 0.02",
+            "depth": "0.02"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Feltro da coluna frontal da cabeceira",
+        "shape": {
+          "Box": {
+            "x": "-((Comprimento/2 + 0.005) + 0.065) + 0.008",
+            "y": "-((Largura/2 + 0.005) + 0.065) + 0.008",
+            "z": "0",
+            "width": "0.049",
+            "depth": "0.049",
+            "height": "0.004"
+          }
+        },
+        "material": "Feltro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Coluna frontal dos pés",
+        "shape": {
+          "Box": {
+            "x": "(Comprimento/2 + 0.005)",
+            "y": "-((Largura/2 + 0.005) + 0.065)",
+            "z": "0.004",
+            "width": "0.065",
+            "depth": "0.065",
+            "height": "Altura - 0.024"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Capitel da coluna frontal dos pés",
+        "shape": {
+          "Blend": {
+            "plane": "Plan",
+            "bottom": [
+              {
+                "u": "(Comprimento/2 + 0.005)",
+                "v": "-((Largura/2 + 0.005) + 0.065)"
+              },
+              {
+                "u": "(Comprimento/2 + 0.005) + 0.065",
+                "v": "-((Largura/2 + 0.005) + 0.065)"
+              },
+              {
+                "u": "(Comprimento/2 + 0.005) + 0.065",
+                "v": "-((Largura/2 + 0.005) + 0.065) + 0.065"
+              },
+              {
+                "u": "(Comprimento/2 + 0.005)",
+                "v": "-((Largura/2 + 0.005) + 0.065) + 0.065"
+              }
+            ],
+            "top": [
+              {
+                "u": "(Comprimento/2 + 0.005) + 0.016",
+                "v": "-((Largura/2 + 0.005) + 0.065) + 0.016"
+              },
+              {
+                "u": "(Comprimento/2 + 0.005) + 0.049",
+                "v": "-((Largura/2 + 0.005) + 0.065) + 0.016"
+              },
+              {
+                "u": "(Comprimento/2 + 0.005) + 0.049",
+                "v": "-((Largura/2 + 0.005) + 0.065) + 0.049"
+              },
+              {
+                "u": "(Comprimento/2 + 0.005) + 0.016",
+                "v": "-((Largura/2 + 0.005) + 0.065) + 0.049"
+              }
+            ],
+            "offset": "Altura - 0.02",
+            "depth": "0.02"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Feltro da coluna frontal dos pés",
+        "shape": {
+          "Box": {
+            "x": "(Comprimento/2 + 0.005) + 0.008",
+            "y": "-((Largura/2 + 0.005) + 0.065) + 0.008",
+            "z": "0",
+            "width": "0.049",
+            "depth": "0.049",
+            "height": "0.004"
+          }
+        },
+        "material": "Feltro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Coluna traseira da cabeceira",
+        "shape": {
+          "Box": {
+            "x": "-((Comprimento/2 + 0.005) + 0.065)",
+            "y": "(Largura/2 + 0.005)",
+            "z": "0.004",
+            "width": "0.065",
+            "depth": "0.065",
+            "height": "Altura - 0.024"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Capitel da coluna traseira da cabeceira",
+        "shape": {
+          "Blend": {
+            "plane": "Plan",
+            "bottom": [
+              {
+                "u": "-((Comprimento/2 + 0.005) + 0.065)",
+                "v": "(Largura/2 + 0.005)"
+              },
+              {
+                "u": "-((Comprimento/2 + 0.005) + 0.065) + 0.065",
+                "v": "(Largura/2 + 0.005)"
+              },
+              {
+                "u": "-((Comprimento/2 + 0.005) + 0.065) + 0.065",
+                "v": "(Largura/2 + 0.005) + 0.065"
+              },
+              {
+                "u": "-((Comprimento/2 + 0.005) + 0.065)",
+                "v": "(Largura/2 + 0.005) + 0.065"
+              }
+            ],
+            "top": [
+              {
+                "u": "-((Comprimento/2 + 0.005) + 0.065) + 0.016",
+                "v": "(Largura/2 + 0.005) + 0.016"
+              },
+              {
+                "u": "-((Comprimento/2 + 0.005) + 0.065) + 0.049",
+                "v": "(Largura/2 + 0.005) + 0.016"
+              },
+              {
+                "u": "-((Comprimento/2 + 0.005) + 0.065) + 0.049",
+                "v": "(Largura/2 + 0.005) + 0.049"
+              },
+              {
+                "u": "-((Comprimento/2 + 0.005) + 0.065) + 0.016",
+                "v": "(Largura/2 + 0.005) + 0.049"
+              }
+            ],
+            "offset": "Altura - 0.02",
+            "depth": "0.02"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Feltro da coluna traseira da cabeceira",
+        "shape": {
+          "Box": {
+            "x": "-((Comprimento/2 + 0.005) + 0.065) + 0.008",
+            "y": "(Largura/2 + 0.005) + 0.008",
+            "z": "0",
+            "width": "0.049",
+            "depth": "0.049",
+            "height": "0.004"
+          }
+        },
+        "material": "Feltro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Coluna traseira dos pés",
+        "shape": {
+          "Box": {
+            "x": "(Comprimento/2 + 0.005)",
+            "y": "(Largura/2 + 0.005)",
+            "z": "0.004",
+            "width": "0.065",
+            "depth": "0.065",
+            "height": "Altura - 0.024"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Capitel da coluna traseira dos pés",
+        "shape": {
+          "Blend": {
+            "plane": "Plan",
+            "bottom": [
+              {
+                "u": "(Comprimento/2 + 0.005)",
+                "v": "(Largura/2 + 0.005)"
+              },
+              {
+                "u": "(Comprimento/2 + 0.005) + 0.065",
+                "v": "(Largura/2 + 0.005)"
+              },
+              {
+                "u": "(Comprimento/2 + 0.005) + 0.065",
+                "v": "(Largura/2 + 0.005) + 0.065"
+              },
+              {
+                "u": "(Comprimento/2 + 0.005)",
+                "v": "(Largura/2 + 0.005) + 0.065"
+              }
+            ],
+            "top": [
+              {
+                "u": "(Comprimento/2 + 0.005) + 0.016",
+                "v": "(Largura/2 + 0.005) + 0.016"
+              },
+              {
+                "u": "(Comprimento/2 + 0.005) + 0.049",
+                "v": "(Largura/2 + 0.005) + 0.016"
+              },
+              {
+                "u": "(Comprimento/2 + 0.005) + 0.049",
+                "v": "(Largura/2 + 0.005) + 0.049"
+              },
+              {
+                "u": "(Comprimento/2 + 0.005) + 0.016",
+                "v": "(Largura/2 + 0.005) + 0.049"
+              }
+            ],
+            "offset": "Altura - 0.02",
+            "depth": "0.02"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Feltro da coluna traseira dos pés",
+        "shape": {
+          "Box": {
+            "x": "(Comprimento/2 + 0.005) + 0.008",
+            "y": "(Largura/2 + 0.005) + 0.008",
+            "z": "0",
+            "width": "0.049",
+            "depth": "0.049",
+            "height": "0.004"
+          }
+        },
+        "material": "Feltro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Longarina frontal inferior",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005)",
+            "y": "-((Largura/2 + 0.005) + 0.025)",
+            "z": "(0.28 - 0.08)",
+            "width": "2*(Comprimento/2 + 0.005)",
+            "depth": "0.025",
+            "height": "0.14"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Longarina traseira inferior",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005)",
+            "y": "(Largura/2 + 0.005)",
+            "z": "(0.28 - 0.08)",
+            "width": "2*(Comprimento/2 + 0.005)",
+            "depth": "0.025",
+            "height": "0.14"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travessa da cabeceira inferior",
+        "shape": {
+          "Box": {
+            "x": "-((Comprimento/2 + 0.005) + 0.025)",
+            "y": "-(Largura/2 + 0.005)",
+            "z": "(0.28 - 0.08)",
+            "width": "0.025",
+            "depth": "2*(Largura/2 + 0.005)",
+            "height": "0.14"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travessa dos pés inferior",
+        "shape": {
+          "Box": {
+            "x": "(Comprimento/2 + 0.005)",
+            "y": "-(Largura/2 + 0.005)",
+            "z": "(0.28 - 0.08)",
+            "width": "0.025",
+            "depth": "2*(Largura/2 + 0.005)",
+            "height": "0.14"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Sarrafo de apoio frontal inferior",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005)",
+            "y": "-(Largura/2 + 0.005)",
+            "z": "0.28 - 0.043",
+            "width": "2*(Comprimento/2 + 0.005)",
+            "depth": "0.022",
+            "height": "0.025"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Sarrafo de apoio traseiro inferior",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005)",
+            "y": "(Largura/2 + 0.005) - 0.022",
+            "z": "0.28 - 0.043",
+            "width": "2*(Comprimento/2 + 0.005)",
+            "depth": "0.022",
+            "height": "0.025"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ripa do estrado inferior 1",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005) + 2*(Comprimento/2 + 0.005)*0.03846 - 0.035",
+            "y": "-(Largura/2 + 0.005) + 0.002",
+            "z": "0.28 - 0.018",
+            "width": "0.07",
+            "depth": "2*(Largura/2 + 0.005) - 0.004",
+            "height": "0.018"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ripa do estrado inferior 2",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005) + 2*(Comprimento/2 + 0.005)*0.11538 - 0.035",
+            "y": "-(Largura/2 + 0.005) + 0.002",
+            "z": "0.28 - 0.018",
+            "width": "0.07",
+            "depth": "2*(Largura/2 + 0.005) - 0.004",
+            "height": "0.018"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ripa do estrado inferior 3",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005) + 2*(Comprimento/2 + 0.005)*0.19231 - 0.035",
+            "y": "-(Largura/2 + 0.005) + 0.002",
+            "z": "0.28 - 0.018",
+            "width": "0.07",
+            "depth": "2*(Largura/2 + 0.005) - 0.004",
+            "height": "0.018"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ripa do estrado inferior 4",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005) + 2*(Comprimento/2 + 0.005)*0.26923 - 0.035",
+            "y": "-(Largura/2 + 0.005) + 0.002",
+            "z": "0.28 - 0.018",
+            "width": "0.07",
+            "depth": "2*(Largura/2 + 0.005) - 0.004",
+            "height": "0.018"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ripa do estrado inferior 5",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005) + 2*(Comprimento/2 + 0.005)*0.34615 - 0.035",
+            "y": "-(Largura/2 + 0.005) + 0.002",
+            "z": "0.28 - 0.018",
+            "width": "0.07",
+            "depth": "2*(Largura/2 + 0.005) - 0.004",
+            "height": "0.018"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ripa do estrado inferior 6",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005) + 2*(Comprimento/2 + 0.005)*0.42308 - 0.035",
+            "y": "-(Largura/2 + 0.005) + 0.002",
+            "z": "0.28 - 0.018",
+            "width": "0.07",
+            "depth": "2*(Largura/2 + 0.005) - 0.004",
+            "height": "0.018"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ripa do estrado inferior 7",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005) + 2*(Comprimento/2 + 0.005)*0.50000 - 0.035",
+            "y": "-(Largura/2 + 0.005) + 0.002",
+            "z": "0.28 - 0.018",
+            "width": "0.07",
+            "depth": "2*(Largura/2 + 0.005) - 0.004",
+            "height": "0.018"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ripa do estrado inferior 8",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005) + 2*(Comprimento/2 + 0.005)*0.57692 - 0.035",
+            "y": "-(Largura/2 + 0.005) + 0.002",
+            "z": "0.28 - 0.018",
+            "width": "0.07",
+            "depth": "2*(Largura/2 + 0.005) - 0.004",
+            "height": "0.018"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ripa do estrado inferior 9",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005) + 2*(Comprimento/2 + 0.005)*0.65385 - 0.035",
+            "y": "-(Largura/2 + 0.005) + 0.002",
+            "z": "0.28 - 0.018",
+            "width": "0.07",
+            "depth": "2*(Largura/2 + 0.005) - 0.004",
+            "height": "0.018"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ripa do estrado inferior 10",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005) + 2*(Comprimento/2 + 0.005)*0.73077 - 0.035",
+            "y": "-(Largura/2 + 0.005) + 0.002",
+            "z": "0.28 - 0.018",
+            "width": "0.07",
+            "depth": "2*(Largura/2 + 0.005) - 0.004",
+            "height": "0.018"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ripa do estrado inferior 11",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005) + 2*(Comprimento/2 + 0.005)*0.80769 - 0.035",
+            "y": "-(Largura/2 + 0.005) + 0.002",
+            "z": "0.28 - 0.018",
+            "width": "0.07",
+            "depth": "2*(Largura/2 + 0.005) - 0.004",
+            "height": "0.018"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ripa do estrado inferior 12",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005) + 2*(Comprimento/2 + 0.005)*0.88462 - 0.035",
+            "y": "-(Largura/2 + 0.005) + 0.002",
+            "z": "0.28 - 0.018",
+            "width": "0.07",
+            "depth": "2*(Largura/2 + 0.005) - 0.004",
+            "height": "0.018"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ripa do estrado inferior 13",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005) + 2*(Comprimento/2 + 0.005)*0.96154 - 0.035",
+            "y": "-(Largura/2 + 0.005) + 0.002",
+            "z": "0.28 - 0.018",
+            "width": "0.07",
+            "depth": "2*(Largura/2 + 0.005) - 0.004",
+            "height": "0.018"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso inferior - longarina frontal - lado dos cabeceira",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(-1*((Largura/2 + 0.005) + 0.0125)) - 0.009",
+                "v": "0.28 - 0.02",
+                "radius": "0.009"
+              },
+              {
+                "u": "(-1*((Largura/2 + 0.005) + 0.0125)) + 0.009",
+                "v": "0.28 - 0.02",
+                "radius": "0.009"
+              }
+            ],
+            "offset": "-((Comprimento/2 + 0.005) + 0.065) - 0.003",
+            "depth": "0.003"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso inferior - travessa dos cabeceira - lado frontal",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-1*((Comprimento/2 + 0.005) + 0.0125)",
+                "v": "-((Largura/2 + 0.005) + 0.065) - 0.003"
+              },
+              {
+                "u": "(-1*((Comprimento/2 + 0.005) + 0.0125)) + 0.009",
+                "v": "-((Largura/2 + 0.005) + 0.065) - 0.003"
+              },
+              {
+                "u": "(-1*((Comprimento/2 + 0.005) + 0.0125)) + 0.009",
+                "v": "(-((Largura/2 + 0.005) + 0.065) - 0.003) + 0.003"
+              },
+              {
+                "u": "-1*((Comprimento/2 + 0.005) + 0.0125)",
+                "v": "(-((Largura/2 + 0.005) + 0.065) - 0.003) + 0.003"
+              }
+            ],
+            "offset": "0.28 - 0.02",
+            "axis": "-1*((Comprimento/2 + 0.005) + 0.0125)",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso inferior - longarina traseira - lado dos cabeceira",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(1*((Largura/2 + 0.005) + 0.0125)) - 0.009",
+                "v": "0.28 - 0.02",
+                "radius": "0.009"
+              },
+              {
+                "u": "(1*((Largura/2 + 0.005) + 0.0125)) + 0.009",
+                "v": "0.28 - 0.02",
+                "radius": "0.009"
+              }
+            ],
+            "offset": "-((Comprimento/2 + 0.005) + 0.065) - 0.003",
+            "depth": "0.003"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso inferior - travessa dos cabeceira - lado traseira",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-1*((Comprimento/2 + 0.005) + 0.0125)",
+                "v": "1*((Largura/2 + 0.005) + 0.065)"
+              },
+              {
+                "u": "(-1*((Comprimento/2 + 0.005) + 0.0125)) + 0.009",
+                "v": "1*((Largura/2 + 0.005) + 0.065)"
+              },
+              {
+                "u": "(-1*((Comprimento/2 + 0.005) + 0.0125)) + 0.009",
+                "v": "(1*((Largura/2 + 0.005) + 0.065)) + 0.003"
+              },
+              {
+                "u": "-1*((Comprimento/2 + 0.005) + 0.0125)",
+                "v": "(1*((Largura/2 + 0.005) + 0.065)) + 0.003"
+              }
+            ],
+            "offset": "0.28 - 0.02",
+            "axis": "-1*((Comprimento/2 + 0.005) + 0.0125)",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso inferior - longarina frontal - lado dos pés",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(-1*((Largura/2 + 0.005) + 0.0125)) - 0.009",
+                "v": "0.28 - 0.02",
+                "radius": "0.009"
+              },
+              {
+                "u": "(-1*((Largura/2 + 0.005) + 0.0125)) + 0.009",
+                "v": "0.28 - 0.02",
+                "radius": "0.009"
+              }
+            ],
+            "offset": "1*((Comprimento/2 + 0.005) + 0.065)",
+            "depth": "0.003"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso inferior - travessa dos pés - lado frontal",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "1*((Comprimento/2 + 0.005) + 0.0125)",
+                "v": "-((Largura/2 + 0.005) + 0.065) - 0.003"
+              },
+              {
+                "u": "(1*((Comprimento/2 + 0.005) + 0.0125)) + 0.009",
+                "v": "-((Largura/2 + 0.005) + 0.065) - 0.003"
+              },
+              {
+                "u": "(1*((Comprimento/2 + 0.005) + 0.0125)) + 0.009",
+                "v": "(-((Largura/2 + 0.005) + 0.065) - 0.003) + 0.003"
+              },
+              {
+                "u": "1*((Comprimento/2 + 0.005) + 0.0125)",
+                "v": "(-((Largura/2 + 0.005) + 0.065) - 0.003) + 0.003"
+              }
+            ],
+            "offset": "0.28 - 0.02",
+            "axis": "1*((Comprimento/2 + 0.005) + 0.0125)",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso inferior - longarina traseira - lado dos pés",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(1*((Largura/2 + 0.005) + 0.0125)) - 0.009",
+                "v": "0.28 - 0.02",
+                "radius": "0.009"
+              },
+              {
+                "u": "(1*((Largura/2 + 0.005) + 0.0125)) + 0.009",
+                "v": "0.28 - 0.02",
+                "radius": "0.009"
+              }
+            ],
+            "offset": "1*((Comprimento/2 + 0.005) + 0.065)",
+            "depth": "0.003"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso inferior - travessa dos pés - lado traseira",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "1*((Comprimento/2 + 0.005) + 0.0125)",
+                "v": "1*((Largura/2 + 0.005) + 0.065)"
+              },
+              {
+                "u": "(1*((Comprimento/2 + 0.005) + 0.0125)) + 0.009",
+                "v": "1*((Largura/2 + 0.005) + 0.065)"
+              },
+              {
+                "u": "(1*((Comprimento/2 + 0.005) + 0.0125)) + 0.009",
+                "v": "(1*((Largura/2 + 0.005) + 0.065)) + 0.003"
+              },
+              {
+                "u": "1*((Comprimento/2 + 0.005) + 0.0125)",
+                "v": "(1*((Largura/2 + 0.005) + 0.065)) + 0.003"
+              }
+            ],
+            "offset": "0.28 - 0.02",
+            "axis": "1*((Comprimento/2 + 0.005) + 0.0125)",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Colchão inferior",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-(Comprimento/2)) + 0.06",
+                "v": "-(Largura/2)"
+              },
+              {
+                "u": "((Comprimento/2)) - 0.06",
+                "v": "-(Largura/2)",
+                "radius": "0.06"
+              },
+              {
+                "u": "(Comprimento/2)",
+                "v": "(-(Largura/2)) + 0.06"
+              },
+              {
+                "u": "(Comprimento/2)",
+                "v": "((Largura/2)) - 0.06",
+                "radius": "0.06"
+              },
+              {
+                "u": "((Comprimento/2)) - 0.06",
+                "v": "(Largura/2)"
+              },
+              {
+                "u": "(-(Comprimento/2)) + 0.06",
+                "v": "(Largura/2)",
+                "radius": "0.06"
+              },
+              {
+                "u": "-(Comprimento/2)",
+                "v": "((Largura/2)) - 0.06"
+              },
+              {
+                "u": "-(Comprimento/2)",
+                "v": "(-(Largura/2)) + 0.06",
+                "radius": "0.06"
+              }
+            ],
+            "offset": "0.28",
+            "depth": "AlturaColchao"
+          }
+        },
+        "material": "Colchão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Vivo inferior do colchão inferior",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-(Comprimento/2) - 0.003) + 0.063",
+                "v": "-(Largura/2) - 0.003"
+              },
+              {
+                "u": "((Comprimento/2) + 0.003) - 0.063",
+                "v": "-(Largura/2) - 0.003",
+                "radius": "0.063"
+              },
+              {
+                "u": "(Comprimento/2) + 0.003",
+                "v": "(-(Largura/2) - 0.003) + 0.063"
+              },
+              {
+                "u": "(Comprimento/2) + 0.003",
+                "v": "((Largura/2) + 0.003) - 0.063",
+                "radius": "0.063"
+              },
+              {
+                "u": "((Comprimento/2) + 0.003) - 0.063",
+                "v": "(Largura/2) + 0.003"
+              },
+              {
+                "u": "(-(Comprimento/2) - 0.003) + 0.063",
+                "v": "(Largura/2) + 0.003",
+                "radius": "0.063"
+              },
+              {
+                "u": "-(Comprimento/2) - 0.003",
+                "v": "((Largura/2) + 0.003) - 0.063"
+              },
+              {
+                "u": "-(Comprimento/2) - 0.003",
+                "v": "(-(Largura/2) - 0.003) + 0.063",
+                "radius": "0.063"
+              }
+            ],
+            "offset": "0.28 + 0.01",
+            "depth": "0.007"
+          }
+        },
+        "material": "Tecido cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Vivo superior do colchão inferior",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-(Comprimento/2) - 0.003) + 0.063",
+                "v": "-(Largura/2) - 0.003"
+              },
+              {
+                "u": "((Comprimento/2) + 0.003) - 0.063",
+                "v": "-(Largura/2) - 0.003",
+                "radius": "0.063"
+              },
+              {
+                "u": "(Comprimento/2) + 0.003",
+                "v": "(-(Largura/2) - 0.003) + 0.063"
+              },
+              {
+                "u": "(Comprimento/2) + 0.003",
+                "v": "((Largura/2) + 0.003) - 0.063",
+                "radius": "0.063"
+              },
+              {
+                "u": "((Comprimento/2) + 0.003) - 0.063",
+                "v": "(Largura/2) + 0.003"
+              },
+              {
+                "u": "(-(Comprimento/2) - 0.003) + 0.063",
+                "v": "(Largura/2) + 0.003",
+                "radius": "0.063"
+              },
+              {
+                "u": "-(Comprimento/2) - 0.003",
+                "v": "((Largura/2) + 0.003) - 0.063"
+              },
+              {
+                "u": "-(Comprimento/2) - 0.003",
+                "v": "(-(Largura/2) - 0.003) + 0.063",
+                "radius": "0.063"
+              }
+            ],
+            "offset": "0.28 + AlturaColchao - 0.017",
+            "depth": "0.007"
+          }
+        },
+        "material": "Tecido cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lençol de elástico inferior",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-(Comprimento/2) - 0.002) + 0.062",
+                "v": "-(Largura/2) - 0.002"
+              },
+              {
+                "u": "((Comprimento/2) + 0.002) - 0.062",
+                "v": "-(Largura/2) - 0.002",
+                "radius": "0.062"
+              },
+              {
+                "u": "(Comprimento/2) + 0.002",
+                "v": "(-(Largura/2) - 0.002) + 0.062"
+              },
+              {
+                "u": "(Comprimento/2) + 0.002",
+                "v": "((Largura/2) + 0.002) - 0.062",
+                "radius": "0.062"
+              },
+              {
+                "u": "((Comprimento/2) + 0.002) - 0.062",
+                "v": "(Largura/2) + 0.002"
+              },
+              {
+                "u": "(-(Comprimento/2) - 0.002) + 0.062",
+                "v": "(Largura/2) + 0.002",
+                "radius": "0.062"
+              },
+              {
+                "u": "-(Comprimento/2) - 0.002",
+                "v": "((Largura/2) + 0.002) - 0.062"
+              },
+              {
+                "u": "-(Comprimento/2) - 0.002",
+                "v": "(-(Largura/2) - 0.002) + 0.062",
+                "radius": "0.062"
+              }
+            ],
+            "offset": "0.28 + 0.45*AlturaColchao",
+            "depth": "0.55*AlturaColchao + 0.003"
+          }
+        },
+        "material": "Roupa de cama branca",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Edredom inferior",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-(Largura/2 + 0.014)",
+                "v": "0.28 + 0.065"
+              },
+              {
+                "u": "-(Largura/2 - 0.0075)",
+                "v": "0.28 + 0.065"
+              },
+              {
+                "u": "-(Largura/2 - 0.0075)",
+                "v": "(0.28 + AlturaColchao + 0.003)"
+              },
+              {
+                "u": "Largura/2 - 0.0075",
+                "v": "(0.28 + AlturaColchao + 0.003)"
+              },
+              {
+                "u": "Largura/2 - 0.0075",
+                "v": "0.28 + 0.065"
+              },
+              {
+                "u": "Largura/2 + 0.014",
+                "v": "0.28 + 0.065"
+              },
+              {
+                "u": "Largura/2 + 0.014",
+                "v": "(0.28 + AlturaColchao + 0.003) + 0.035 - 0.03",
+                "radius": "0.03"
+              },
+              {
+                "u": "Largura/2 + 0.014 - 0.03",
+                "v": "(0.28 + AlturaColchao + 0.003) + 0.035"
+              },
+              {
+                "u": "-(Largura/2 + 0.014) + 0.03",
+                "v": "(0.28 + AlturaColchao + 0.003) + 0.035",
+                "radius": "0.03"
+              },
+              {
+                "u": "-(Largura/2 + 0.014)",
+                "v": "(0.28 + AlturaColchao + 0.003) + 0.035 - 0.03"
+              }
+            ],
+            "offset": "(-(Comprimento/2) + 0.62)",
+            "depth": "(Comprimento/2) - (-(Comprimento/2) + 0.62) + 0.0075"
+          }
+        },
+        "material": "Tecido azul petróleo",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Edredom inferior - queda dos pés",
+        "shape": {
+          "Box": {
+            "x": "(Comprimento/2)",
+            "y": "-(Largura/2 - 0.0075)",
+            "z": "0.28 + 0.065",
+            "width": "0.0075",
+            "depth": "2*(Largura/2 - 0.0075)",
+            "height": "(0.28 + AlturaColchao + 0.003) - (0.28 + 0.065)"
+          }
+        },
+        "material": "Tecido azul petróleo",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobra do lençol inferior",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-(Largura/2 + 0.014 + 0.003)",
+                "v": "0.28 + 0.3*AlturaColchao"
+              },
+              {
+                "u": "-(Largura/2 - 0.0075)",
+                "v": "0.28 + 0.3*AlturaColchao"
+              },
+              {
+                "u": "-(Largura/2 - 0.0075)",
+                "v": "(0.28 + AlturaColchao + 0.003)"
+              },
+              {
+                "u": "Largura/2 - 0.0075",
+                "v": "(0.28 + AlturaColchao + 0.003)"
+              },
+              {
+                "u": "Largura/2 - 0.0075",
+                "v": "0.28 + 0.3*AlturaColchao"
+              },
+              {
+                "u": "Largura/2 + 0.014 + 0.003",
+                "v": "0.28 + 0.3*AlturaColchao"
+              },
+              {
+                "u": "Largura/2 + 0.014 + 0.003",
+                "v": "(0.28 + AlturaColchao + 0.003) + 0.041 - 0.03",
+                "radius": "0.03"
+              },
+              {
+                "u": "Largura/2 + 0.014 + 0.003 - 0.03",
+                "v": "(0.28 + AlturaColchao + 0.003) + 0.041"
+              },
+              {
+                "u": "-(Largura/2 + 0.014 + 0.003) + 0.03",
+                "v": "(0.28 + AlturaColchao + 0.003) + 0.041",
+                "radius": "0.03"
+              },
+              {
+                "u": "-(Largura/2 + 0.014 + 0.003)",
+                "v": "(0.28 + AlturaColchao + 0.003) + 0.041 - 0.03"
+              }
+            ],
+            "offset": "(-(Comprimento/2) + 0.62) - 0.02",
+            "depth": "0.2"
+          }
+        },
+        "material": "Roupa de cama branca",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Manta dos pés inferior",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-(Largura/2 + 0.014 + 0.005)",
+                "v": "0.28 + 0.5*AlturaColchao"
+              },
+              {
+                "u": "-(Largura/2 - 0.0075)",
+                "v": "0.28 + 0.5*AlturaColchao"
+              },
+              {
+                "u": "-(Largura/2 - 0.0075)",
+                "v": "(0.28 + AlturaColchao + 0.003)"
+              },
+              {
+                "u": "Largura/2 - 0.0075",
+                "v": "(0.28 + AlturaColchao + 0.003)"
+              },
+              {
+                "u": "Largura/2 - 0.0075",
+                "v": "0.28 + 0.5*AlturaColchao"
+              },
+              {
+                "u": "Largura/2 + 0.014 + 0.005",
+                "v": "0.28 + 0.5*AlturaColchao"
+              },
+              {
+                "u": "Largura/2 + 0.014 + 0.005",
+                "v": "(0.28 + AlturaColchao + 0.003) + 0.045 - 0.03",
+                "radius": "0.03"
+              },
+              {
+                "u": "Largura/2 + 0.014 + 0.005 - 0.03",
+                "v": "(0.28 + AlturaColchao + 0.003) + 0.045"
+              },
+              {
+                "u": "-(Largura/2 + 0.014 + 0.005) + 0.03",
+                "v": "(0.28 + AlturaColchao + 0.003) + 0.045",
+                "radius": "0.03"
+              },
+              {
+                "u": "-(Largura/2 + 0.014 + 0.005)",
+                "v": "(0.28 + AlturaColchao + 0.003) + 0.045 - 0.03"
+              }
+            ],
+            "offset": "(Comprimento/2) - 0.5",
+            "depth": "0.36"
+          }
+        },
+        "material": "Tecido cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travesseiro inferior",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-(Comprimento/2) + 0.06 + 0.2) - 0.2) + 0.07",
+                "v": "-min(0.6, Largura - 0.16)/2"
+              },
+              {
+                "u": "((-(Comprimento/2) + 0.06 + 0.2) + 0.2) - 0.07",
+                "v": "-min(0.6, Largura - 0.16)/2",
+                "radius": "0.07"
+              },
+              {
+                "u": "(-(Comprimento/2) + 0.06 + 0.2) + 0.2",
+                "v": "(-min(0.6, Largura - 0.16)/2) + 0.07"
+              },
+              {
+                "u": "(-(Comprimento/2) + 0.06 + 0.2) + 0.2",
+                "v": "(min(0.6, Largura - 0.16)/2) - 0.07",
+                "radius": "0.07"
+              },
+              {
+                "u": "((-(Comprimento/2) + 0.06 + 0.2) + 0.2) - 0.07",
+                "v": "min(0.6, Largura - 0.16)/2"
+              },
+              {
+                "u": "((-(Comprimento/2) + 0.06 + 0.2) - 0.2) + 0.07",
+                "v": "min(0.6, Largura - 0.16)/2",
+                "radius": "0.07"
+              },
+              {
+                "u": "(-(Comprimento/2) + 0.06 + 0.2) - 0.2",
+                "v": "(min(0.6, Largura - 0.16)/2) - 0.07"
+              },
+              {
+                "u": "(-(Comprimento/2) + 0.06 + 0.2) - 0.2",
+                "v": "(-min(0.6, Largura - 0.16)/2) + 0.07",
+                "radius": "0.07"
+              }
+            ],
+            "offset": "(0.28 + AlturaColchao + 0.003)",
+            "depth": "0.05"
+          }
+        },
+        "material": "Roupa de cama branca",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travesseiro inferior - vivo",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-(Comprimento/2) + 0.06 + 0.2) - 0.20400000000000001) + 0.074",
+                "v": "-min(0.6, Largura - 0.16)/2 - 0.004"
+              },
+              {
+                "u": "((-(Comprimento/2) + 0.06 + 0.2) + 0.20400000000000001) - 0.074",
+                "v": "-min(0.6, Largura - 0.16)/2 - 0.004",
+                "radius": "0.074"
+              },
+              {
+                "u": "(-(Comprimento/2) + 0.06 + 0.2) + 0.20400000000000001",
+                "v": "(-min(0.6, Largura - 0.16)/2 - 0.004) + 0.074"
+              },
+              {
+                "u": "(-(Comprimento/2) + 0.06 + 0.2) + 0.20400000000000001",
+                "v": "(min(0.6, Largura - 0.16)/2 + 0.004) - 0.074",
+                "radius": "0.074"
+              },
+              {
+                "u": "((-(Comprimento/2) + 0.06 + 0.2) + 0.20400000000000001) - 0.074",
+                "v": "min(0.6, Largura - 0.16)/2 + 0.004"
+              },
+              {
+                "u": "((-(Comprimento/2) + 0.06 + 0.2) - 0.20400000000000001) + 0.074",
+                "v": "min(0.6, Largura - 0.16)/2 + 0.004",
+                "radius": "0.074"
+              },
+              {
+                "u": "(-(Comprimento/2) + 0.06 + 0.2) - 0.20400000000000001",
+                "v": "(min(0.6, Largura - 0.16)/2 + 0.004) - 0.074"
+              },
+              {
+                "u": "(-(Comprimento/2) + 0.06 + 0.2) - 0.20400000000000001",
+                "v": "(-min(0.6, Largura - 0.16)/2 - 0.004) + 0.074",
+                "radius": "0.074"
+              }
+            ],
+            "offset": "(0.28 + AlturaColchao + 0.003) + 0.023",
+            "depth": "0.005"
+          }
+        },
+        "material": "Roupa de cama branca",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travesseiro inferior - volume transversal",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - (min(0.6, Largura - 0.16)/2 - 0.012)",
+                "v": "(0.28 + AlturaColchao + 0.003) + 0.045"
+              },
+              {
+                "u": "0 + (min(0.6, Largura - 0.16)/2 - 0.012)",
+                "v": "(0.28 + AlturaColchao + 0.003) + 0.045",
+                "radius": "((min(0.6, Largura - 0.16)/2 - 0.012)*(min(0.6, Largura - 0.16)/2 - 0.012) + 0.005625)/0.15"
+              }
+            ],
+            "offset": "(-(Comprimento/2) + 0.06 + 0.2) - 0.15000000000000002",
+            "depth": "0.3"
+          }
+        },
+        "material": "Roupa de cama branca",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travesseiro inferior - volume longitudinal",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(-(Comprimento/2) + 0.06 + 0.2) - (0.188)",
+                "v": "(0.28 + AlturaColchao + 0.003) + 0.045"
+              },
+              {
+                "u": "(-(Comprimento/2) + 0.06 + 0.2) + (0.188)",
+                "v": "(0.28 + AlturaColchao + 0.003) + 0.045",
+                "radius": "((0.188)*(0.188) + 0.005625)/0.15"
+              }
+            ],
+            "offset": "-(min(0.6, Largura - 0.16) - 0.1)/2",
+            "depth": "min(0.6, Largura - 0.16) - 0.1"
+          }
+        },
+        "material": "Roupa de cama branca",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Longarina frontal superior",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005)",
+            "y": "-((Largura/2 + 0.005) + 0.025)",
+            "z": "((Altura - 0.45) - 0.08)",
+            "width": "2*(Comprimento/2 + 0.005)",
+            "depth": "0.025",
+            "height": "0.14"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Longarina traseira superior",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005)",
+            "y": "(Largura/2 + 0.005)",
+            "z": "((Altura - 0.45) - 0.08)",
+            "width": "2*(Comprimento/2 + 0.005)",
+            "depth": "0.025",
+            "height": "0.14"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travessa da cabeceira superior",
+        "shape": {
+          "Box": {
+            "x": "-((Comprimento/2 + 0.005) + 0.025)",
+            "y": "-(Largura/2 + 0.005)",
+            "z": "((Altura - 0.45) - 0.08)",
+            "width": "0.025",
+            "depth": "2*(Largura/2 + 0.005)",
+            "height": "0.14"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travessa dos pés superior",
+        "shape": {
+          "Box": {
+            "x": "(Comprimento/2 + 0.005)",
+            "y": "-(Largura/2 + 0.005)",
+            "z": "((Altura - 0.45) - 0.08)",
+            "width": "0.025",
+            "depth": "2*(Largura/2 + 0.005)",
+            "height": "0.14"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Sarrafo de apoio frontal superior",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005)",
+            "y": "-(Largura/2 + 0.005)",
+            "z": "(Altura - 0.45) - 0.043",
+            "width": "2*(Comprimento/2 + 0.005)",
+            "depth": "0.022",
+            "height": "0.025"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Sarrafo de apoio traseiro superior",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005)",
+            "y": "(Largura/2 + 0.005) - 0.022",
+            "z": "(Altura - 0.45) - 0.043",
+            "width": "2*(Comprimento/2 + 0.005)",
+            "depth": "0.022",
+            "height": "0.025"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ripa do estrado superior 1",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005) + 2*(Comprimento/2 + 0.005)*0.03846 - 0.035",
+            "y": "-(Largura/2 + 0.005) + 0.002",
+            "z": "(Altura - 0.45) - 0.018",
+            "width": "0.07",
+            "depth": "2*(Largura/2 + 0.005) - 0.004",
+            "height": "0.018"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ripa do estrado superior 2",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005) + 2*(Comprimento/2 + 0.005)*0.11538 - 0.035",
+            "y": "-(Largura/2 + 0.005) + 0.002",
+            "z": "(Altura - 0.45) - 0.018",
+            "width": "0.07",
+            "depth": "2*(Largura/2 + 0.005) - 0.004",
+            "height": "0.018"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ripa do estrado superior 3",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005) + 2*(Comprimento/2 + 0.005)*0.19231 - 0.035",
+            "y": "-(Largura/2 + 0.005) + 0.002",
+            "z": "(Altura - 0.45) - 0.018",
+            "width": "0.07",
+            "depth": "2*(Largura/2 + 0.005) - 0.004",
+            "height": "0.018"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ripa do estrado superior 4",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005) + 2*(Comprimento/2 + 0.005)*0.26923 - 0.035",
+            "y": "-(Largura/2 + 0.005) + 0.002",
+            "z": "(Altura - 0.45) - 0.018",
+            "width": "0.07",
+            "depth": "2*(Largura/2 + 0.005) - 0.004",
+            "height": "0.018"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ripa do estrado superior 5",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005) + 2*(Comprimento/2 + 0.005)*0.34615 - 0.035",
+            "y": "-(Largura/2 + 0.005) + 0.002",
+            "z": "(Altura - 0.45) - 0.018",
+            "width": "0.07",
+            "depth": "2*(Largura/2 + 0.005) - 0.004",
+            "height": "0.018"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ripa do estrado superior 6",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005) + 2*(Comprimento/2 + 0.005)*0.42308 - 0.035",
+            "y": "-(Largura/2 + 0.005) + 0.002",
+            "z": "(Altura - 0.45) - 0.018",
+            "width": "0.07",
+            "depth": "2*(Largura/2 + 0.005) - 0.004",
+            "height": "0.018"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ripa do estrado superior 7",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005) + 2*(Comprimento/2 + 0.005)*0.50000 - 0.035",
+            "y": "-(Largura/2 + 0.005) + 0.002",
+            "z": "(Altura - 0.45) - 0.018",
+            "width": "0.07",
+            "depth": "2*(Largura/2 + 0.005) - 0.004",
+            "height": "0.018"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ripa do estrado superior 8",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005) + 2*(Comprimento/2 + 0.005)*0.57692 - 0.035",
+            "y": "-(Largura/2 + 0.005) + 0.002",
+            "z": "(Altura - 0.45) - 0.018",
+            "width": "0.07",
+            "depth": "2*(Largura/2 + 0.005) - 0.004",
+            "height": "0.018"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ripa do estrado superior 9",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005) + 2*(Comprimento/2 + 0.005)*0.65385 - 0.035",
+            "y": "-(Largura/2 + 0.005) + 0.002",
+            "z": "(Altura - 0.45) - 0.018",
+            "width": "0.07",
+            "depth": "2*(Largura/2 + 0.005) - 0.004",
+            "height": "0.018"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ripa do estrado superior 10",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005) + 2*(Comprimento/2 + 0.005)*0.73077 - 0.035",
+            "y": "-(Largura/2 + 0.005) + 0.002",
+            "z": "(Altura - 0.45) - 0.018",
+            "width": "0.07",
+            "depth": "2*(Largura/2 + 0.005) - 0.004",
+            "height": "0.018"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ripa do estrado superior 11",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005) + 2*(Comprimento/2 + 0.005)*0.80769 - 0.035",
+            "y": "-(Largura/2 + 0.005) + 0.002",
+            "z": "(Altura - 0.45) - 0.018",
+            "width": "0.07",
+            "depth": "2*(Largura/2 + 0.005) - 0.004",
+            "height": "0.018"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ripa do estrado superior 12",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005) + 2*(Comprimento/2 + 0.005)*0.88462 - 0.035",
+            "y": "-(Largura/2 + 0.005) + 0.002",
+            "z": "(Altura - 0.45) - 0.018",
+            "width": "0.07",
+            "depth": "2*(Largura/2 + 0.005) - 0.004",
+            "height": "0.018"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ripa do estrado superior 13",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005) + 2*(Comprimento/2 + 0.005)*0.96154 - 0.035",
+            "y": "-(Largura/2 + 0.005) + 0.002",
+            "z": "(Altura - 0.45) - 0.018",
+            "width": "0.07",
+            "depth": "2*(Largura/2 + 0.005) - 0.004",
+            "height": "0.018"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso superior - longarina frontal - lado dos cabeceira",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(-1*((Largura/2 + 0.005) + 0.0125)) - 0.009",
+                "v": "(Altura - 0.45) - 0.02",
+                "radius": "0.009"
+              },
+              {
+                "u": "(-1*((Largura/2 + 0.005) + 0.0125)) + 0.009",
+                "v": "(Altura - 0.45) - 0.02",
+                "radius": "0.009"
+              }
+            ],
+            "offset": "-((Comprimento/2 + 0.005) + 0.065) - 0.003",
+            "depth": "0.003"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso superior - travessa dos cabeceira - lado frontal",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-1*((Comprimento/2 + 0.005) + 0.0125)",
+                "v": "-((Largura/2 + 0.005) + 0.065) - 0.003"
+              },
+              {
+                "u": "(-1*((Comprimento/2 + 0.005) + 0.0125)) + 0.009",
+                "v": "-((Largura/2 + 0.005) + 0.065) - 0.003"
+              },
+              {
+                "u": "(-1*((Comprimento/2 + 0.005) + 0.0125)) + 0.009",
+                "v": "(-((Largura/2 + 0.005) + 0.065) - 0.003) + 0.003"
+              },
+              {
+                "u": "-1*((Comprimento/2 + 0.005) + 0.0125)",
+                "v": "(-((Largura/2 + 0.005) + 0.065) - 0.003) + 0.003"
+              }
+            ],
+            "offset": "(Altura - 0.45) - 0.02",
+            "axis": "-1*((Comprimento/2 + 0.005) + 0.0125)",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso superior - longarina traseira - lado dos cabeceira",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(1*((Largura/2 + 0.005) + 0.0125)) - 0.009",
+                "v": "(Altura - 0.45) - 0.02",
+                "radius": "0.009"
+              },
+              {
+                "u": "(1*((Largura/2 + 0.005) + 0.0125)) + 0.009",
+                "v": "(Altura - 0.45) - 0.02",
+                "radius": "0.009"
+              }
+            ],
+            "offset": "-((Comprimento/2 + 0.005) + 0.065) - 0.003",
+            "depth": "0.003"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso superior - travessa dos cabeceira - lado traseira",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-1*((Comprimento/2 + 0.005) + 0.0125)",
+                "v": "1*((Largura/2 + 0.005) + 0.065)"
+              },
+              {
+                "u": "(-1*((Comprimento/2 + 0.005) + 0.0125)) + 0.009",
+                "v": "1*((Largura/2 + 0.005) + 0.065)"
+              },
+              {
+                "u": "(-1*((Comprimento/2 + 0.005) + 0.0125)) + 0.009",
+                "v": "(1*((Largura/2 + 0.005) + 0.065)) + 0.003"
+              },
+              {
+                "u": "-1*((Comprimento/2 + 0.005) + 0.0125)",
+                "v": "(1*((Largura/2 + 0.005) + 0.065)) + 0.003"
+              }
+            ],
+            "offset": "(Altura - 0.45) - 0.02",
+            "axis": "-1*((Comprimento/2 + 0.005) + 0.0125)",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso superior - longarina frontal - lado dos pés",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(-1*((Largura/2 + 0.005) + 0.0125)) - 0.009",
+                "v": "(Altura - 0.45) - 0.02",
+                "radius": "0.009"
+              },
+              {
+                "u": "(-1*((Largura/2 + 0.005) + 0.0125)) + 0.009",
+                "v": "(Altura - 0.45) - 0.02",
+                "radius": "0.009"
+              }
+            ],
+            "offset": "1*((Comprimento/2 + 0.005) + 0.065)",
+            "depth": "0.003"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso superior - travessa dos pés - lado frontal",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "1*((Comprimento/2 + 0.005) + 0.0125)",
+                "v": "-((Largura/2 + 0.005) + 0.065) - 0.003"
+              },
+              {
+                "u": "(1*((Comprimento/2 + 0.005) + 0.0125)) + 0.009",
+                "v": "-((Largura/2 + 0.005) + 0.065) - 0.003"
+              },
+              {
+                "u": "(1*((Comprimento/2 + 0.005) + 0.0125)) + 0.009",
+                "v": "(-((Largura/2 + 0.005) + 0.065) - 0.003) + 0.003"
+              },
+              {
+                "u": "1*((Comprimento/2 + 0.005) + 0.0125)",
+                "v": "(-((Largura/2 + 0.005) + 0.065) - 0.003) + 0.003"
+              }
+            ],
+            "offset": "(Altura - 0.45) - 0.02",
+            "axis": "1*((Comprimento/2 + 0.005) + 0.0125)",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso superior - longarina traseira - lado dos pés",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(1*((Largura/2 + 0.005) + 0.0125)) - 0.009",
+                "v": "(Altura - 0.45) - 0.02",
+                "radius": "0.009"
+              },
+              {
+                "u": "(1*((Largura/2 + 0.005) + 0.0125)) + 0.009",
+                "v": "(Altura - 0.45) - 0.02",
+                "radius": "0.009"
+              }
+            ],
+            "offset": "1*((Comprimento/2 + 0.005) + 0.065)",
+            "depth": "0.003"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso superior - travessa dos pés - lado traseira",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "1*((Comprimento/2 + 0.005) + 0.0125)",
+                "v": "1*((Largura/2 + 0.005) + 0.065)"
+              },
+              {
+                "u": "(1*((Comprimento/2 + 0.005) + 0.0125)) + 0.009",
+                "v": "1*((Largura/2 + 0.005) + 0.065)"
+              },
+              {
+                "u": "(1*((Comprimento/2 + 0.005) + 0.0125)) + 0.009",
+                "v": "(1*((Largura/2 + 0.005) + 0.065)) + 0.003"
+              },
+              {
+                "u": "1*((Comprimento/2 + 0.005) + 0.0125)",
+                "v": "(1*((Largura/2 + 0.005) + 0.065)) + 0.003"
+              }
+            ],
+            "offset": "(Altura - 0.45) - 0.02",
+            "axis": "1*((Comprimento/2 + 0.005) + 0.0125)",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Colchão superior",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-(Comprimento/2)) + 0.06",
+                "v": "-(Largura/2)"
+              },
+              {
+                "u": "((Comprimento/2)) - 0.06",
+                "v": "-(Largura/2)",
+                "radius": "0.06"
+              },
+              {
+                "u": "(Comprimento/2)",
+                "v": "(-(Largura/2)) + 0.06"
+              },
+              {
+                "u": "(Comprimento/2)",
+                "v": "((Largura/2)) - 0.06",
+                "radius": "0.06"
+              },
+              {
+                "u": "((Comprimento/2)) - 0.06",
+                "v": "(Largura/2)"
+              },
+              {
+                "u": "(-(Comprimento/2)) + 0.06",
+                "v": "(Largura/2)",
+                "radius": "0.06"
+              },
+              {
+                "u": "-(Comprimento/2)",
+                "v": "((Largura/2)) - 0.06"
+              },
+              {
+                "u": "-(Comprimento/2)",
+                "v": "(-(Largura/2)) + 0.06",
+                "radius": "0.06"
+              }
+            ],
+            "offset": "(Altura - 0.45)",
+            "depth": "AlturaColchao"
+          }
+        },
+        "material": "Colchão",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Vivo inferior do colchão superior",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-(Comprimento/2) - 0.003) + 0.063",
+                "v": "-(Largura/2) - 0.003"
+              },
+              {
+                "u": "((Comprimento/2) + 0.003) - 0.063",
+                "v": "-(Largura/2) - 0.003",
+                "radius": "0.063"
+              },
+              {
+                "u": "(Comprimento/2) + 0.003",
+                "v": "(-(Largura/2) - 0.003) + 0.063"
+              },
+              {
+                "u": "(Comprimento/2) + 0.003",
+                "v": "((Largura/2) + 0.003) - 0.063",
+                "radius": "0.063"
+              },
+              {
+                "u": "((Comprimento/2) + 0.003) - 0.063",
+                "v": "(Largura/2) + 0.003"
+              },
+              {
+                "u": "(-(Comprimento/2) - 0.003) + 0.063",
+                "v": "(Largura/2) + 0.003",
+                "radius": "0.063"
+              },
+              {
+                "u": "-(Comprimento/2) - 0.003",
+                "v": "((Largura/2) + 0.003) - 0.063"
+              },
+              {
+                "u": "-(Comprimento/2) - 0.003",
+                "v": "(-(Largura/2) - 0.003) + 0.063",
+                "radius": "0.063"
+              }
+            ],
+            "offset": "(Altura - 0.45) + 0.01",
+            "depth": "0.007"
+          }
+        },
+        "material": "Tecido cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Vivo superior do colchão superior",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-(Comprimento/2) - 0.003) + 0.063",
+                "v": "-(Largura/2) - 0.003"
+              },
+              {
+                "u": "((Comprimento/2) + 0.003) - 0.063",
+                "v": "-(Largura/2) - 0.003",
+                "radius": "0.063"
+              },
+              {
+                "u": "(Comprimento/2) + 0.003",
+                "v": "(-(Largura/2) - 0.003) + 0.063"
+              },
+              {
+                "u": "(Comprimento/2) + 0.003",
+                "v": "((Largura/2) + 0.003) - 0.063",
+                "radius": "0.063"
+              },
+              {
+                "u": "((Comprimento/2) + 0.003) - 0.063",
+                "v": "(Largura/2) + 0.003"
+              },
+              {
+                "u": "(-(Comprimento/2) - 0.003) + 0.063",
+                "v": "(Largura/2) + 0.003",
+                "radius": "0.063"
+              },
+              {
+                "u": "-(Comprimento/2) - 0.003",
+                "v": "((Largura/2) + 0.003) - 0.063"
+              },
+              {
+                "u": "-(Comprimento/2) - 0.003",
+                "v": "(-(Largura/2) - 0.003) + 0.063",
+                "radius": "0.063"
+              }
+            ],
+            "offset": "(Altura - 0.45) + AlturaColchao - 0.017",
+            "depth": "0.007"
+          }
+        },
+        "material": "Tecido cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lençol de elástico superior",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-(Comprimento/2) - 0.002) + 0.062",
+                "v": "-(Largura/2) - 0.002"
+              },
+              {
+                "u": "((Comprimento/2) + 0.002) - 0.062",
+                "v": "-(Largura/2) - 0.002",
+                "radius": "0.062"
+              },
+              {
+                "u": "(Comprimento/2) + 0.002",
+                "v": "(-(Largura/2) - 0.002) + 0.062"
+              },
+              {
+                "u": "(Comprimento/2) + 0.002",
+                "v": "((Largura/2) + 0.002) - 0.062",
+                "radius": "0.062"
+              },
+              {
+                "u": "((Comprimento/2) + 0.002) - 0.062",
+                "v": "(Largura/2) + 0.002"
+              },
+              {
+                "u": "(-(Comprimento/2) - 0.002) + 0.062",
+                "v": "(Largura/2) + 0.002",
+                "radius": "0.062"
+              },
+              {
+                "u": "-(Comprimento/2) - 0.002",
+                "v": "((Largura/2) + 0.002) - 0.062"
+              },
+              {
+                "u": "-(Comprimento/2) - 0.002",
+                "v": "(-(Largura/2) - 0.002) + 0.062",
+                "radius": "0.062"
+              }
+            ],
+            "offset": "(Altura - 0.45) + 0.45*AlturaColchao",
+            "depth": "0.55*AlturaColchao + 0.003"
+          }
+        },
+        "material": "Roupa de cama branca",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Edredom superior",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-(Largura/2 + 0.014)",
+                "v": "(Altura - 0.45) + 0.065"
+              },
+              {
+                "u": "-(Largura/2 - 0.0075)",
+                "v": "(Altura - 0.45) + 0.065"
+              },
+              {
+                "u": "-(Largura/2 - 0.0075)",
+                "v": "((Altura - 0.45) + AlturaColchao + 0.003)"
+              },
+              {
+                "u": "Largura/2 - 0.0075",
+                "v": "((Altura - 0.45) + AlturaColchao + 0.003)"
+              },
+              {
+                "u": "Largura/2 - 0.0075",
+                "v": "(Altura - 0.45) + 0.065"
+              },
+              {
+                "u": "Largura/2 + 0.014",
+                "v": "(Altura - 0.45) + 0.065"
+              },
+              {
+                "u": "Largura/2 + 0.014",
+                "v": "((Altura - 0.45) + AlturaColchao + 0.003) + 0.035 - 0.03",
+                "radius": "0.03"
+              },
+              {
+                "u": "Largura/2 + 0.014 - 0.03",
+                "v": "((Altura - 0.45) + AlturaColchao + 0.003) + 0.035"
+              },
+              {
+                "u": "-(Largura/2 + 0.014) + 0.03",
+                "v": "((Altura - 0.45) + AlturaColchao + 0.003) + 0.035",
+                "radius": "0.03"
+              },
+              {
+                "u": "-(Largura/2 + 0.014)",
+                "v": "((Altura - 0.45) + AlturaColchao + 0.003) + 0.035 - 0.03"
+              }
+            ],
+            "offset": "(-(Comprimento/2) + 0.62)",
+            "depth": "(Comprimento/2) - (-(Comprimento/2) + 0.62) + 0.0075"
+          }
+        },
+        "material": "Tecido mostarda",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Edredom superior - queda dos pés",
+        "shape": {
+          "Box": {
+            "x": "(Comprimento/2)",
+            "y": "-(Largura/2 - 0.0075)",
+            "z": "(Altura - 0.45) + 0.065",
+            "width": "0.0075",
+            "depth": "2*(Largura/2 - 0.0075)",
+            "height": "((Altura - 0.45) + AlturaColchao + 0.003) - ((Altura - 0.45) + 0.065)"
+          }
+        },
+        "material": "Tecido mostarda",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobra do lençol superior",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-(Largura/2 + 0.014 + 0.003)",
+                "v": "(Altura - 0.45) + 0.3*AlturaColchao"
+              },
+              {
+                "u": "-(Largura/2 - 0.0075)",
+                "v": "(Altura - 0.45) + 0.3*AlturaColchao"
+              },
+              {
+                "u": "-(Largura/2 - 0.0075)",
+                "v": "((Altura - 0.45) + AlturaColchao + 0.003)"
+              },
+              {
+                "u": "Largura/2 - 0.0075",
+                "v": "((Altura - 0.45) + AlturaColchao + 0.003)"
+              },
+              {
+                "u": "Largura/2 - 0.0075",
+                "v": "(Altura - 0.45) + 0.3*AlturaColchao"
+              },
+              {
+                "u": "Largura/2 + 0.014 + 0.003",
+                "v": "(Altura - 0.45) + 0.3*AlturaColchao"
+              },
+              {
+                "u": "Largura/2 + 0.014 + 0.003",
+                "v": "((Altura - 0.45) + AlturaColchao + 0.003) + 0.041 - 0.03",
+                "radius": "0.03"
+              },
+              {
+                "u": "Largura/2 + 0.014 + 0.003 - 0.03",
+                "v": "((Altura - 0.45) + AlturaColchao + 0.003) + 0.041"
+              },
+              {
+                "u": "-(Largura/2 + 0.014 + 0.003) + 0.03",
+                "v": "((Altura - 0.45) + AlturaColchao + 0.003) + 0.041",
+                "radius": "0.03"
+              },
+              {
+                "u": "-(Largura/2 + 0.014 + 0.003)",
+                "v": "((Altura - 0.45) + AlturaColchao + 0.003) + 0.041 - 0.03"
+              }
+            ],
+            "offset": "(-(Comprimento/2) + 0.62) - 0.02",
+            "depth": "0.2"
+          }
+        },
+        "material": "Roupa de cama branca",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Manta dos pés superior",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-(Largura/2 + 0.014 + 0.005)",
+                "v": "(Altura - 0.45) + 0.5*AlturaColchao"
+              },
+              {
+                "u": "-(Largura/2 - 0.0075)",
+                "v": "(Altura - 0.45) + 0.5*AlturaColchao"
+              },
+              {
+                "u": "-(Largura/2 - 0.0075)",
+                "v": "((Altura - 0.45) + AlturaColchao + 0.003)"
+              },
+              {
+                "u": "Largura/2 - 0.0075",
+                "v": "((Altura - 0.45) + AlturaColchao + 0.003)"
+              },
+              {
+                "u": "Largura/2 - 0.0075",
+                "v": "(Altura - 0.45) + 0.5*AlturaColchao"
+              },
+              {
+                "u": "Largura/2 + 0.014 + 0.005",
+                "v": "(Altura - 0.45) + 0.5*AlturaColchao"
+              },
+              {
+                "u": "Largura/2 + 0.014 + 0.005",
+                "v": "((Altura - 0.45) + AlturaColchao + 0.003) + 0.045 - 0.03",
+                "radius": "0.03"
+              },
+              {
+                "u": "Largura/2 + 0.014 + 0.005 - 0.03",
+                "v": "((Altura - 0.45) + AlturaColchao + 0.003) + 0.045"
+              },
+              {
+                "u": "-(Largura/2 + 0.014 + 0.005) + 0.03",
+                "v": "((Altura - 0.45) + AlturaColchao + 0.003) + 0.045",
+                "radius": "0.03"
+              },
+              {
+                "u": "-(Largura/2 + 0.014 + 0.005)",
+                "v": "((Altura - 0.45) + AlturaColchao + 0.003) + 0.045 - 0.03"
+              }
+            ],
+            "offset": "(Comprimento/2) - 0.5",
+            "depth": "0.36"
+          }
+        },
+        "material": "Tecido cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travesseiro superior",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-(Comprimento/2) + 0.06 + 0.2) - 0.2) + 0.07",
+                "v": "-min(0.6, Largura - 0.16)/2"
+              },
+              {
+                "u": "((-(Comprimento/2) + 0.06 + 0.2) + 0.2) - 0.07",
+                "v": "-min(0.6, Largura - 0.16)/2",
+                "radius": "0.07"
+              },
+              {
+                "u": "(-(Comprimento/2) + 0.06 + 0.2) + 0.2",
+                "v": "(-min(0.6, Largura - 0.16)/2) + 0.07"
+              },
+              {
+                "u": "(-(Comprimento/2) + 0.06 + 0.2) + 0.2",
+                "v": "(min(0.6, Largura - 0.16)/2) - 0.07",
+                "radius": "0.07"
+              },
+              {
+                "u": "((-(Comprimento/2) + 0.06 + 0.2) + 0.2) - 0.07",
+                "v": "min(0.6, Largura - 0.16)/2"
+              },
+              {
+                "u": "((-(Comprimento/2) + 0.06 + 0.2) - 0.2) + 0.07",
+                "v": "min(0.6, Largura - 0.16)/2",
+                "radius": "0.07"
+              },
+              {
+                "u": "(-(Comprimento/2) + 0.06 + 0.2) - 0.2",
+                "v": "(min(0.6, Largura - 0.16)/2) - 0.07"
+              },
+              {
+                "u": "(-(Comprimento/2) + 0.06 + 0.2) - 0.2",
+                "v": "(-min(0.6, Largura - 0.16)/2) + 0.07",
+                "radius": "0.07"
+              }
+            ],
+            "offset": "((Altura - 0.45) + AlturaColchao + 0.003)",
+            "depth": "0.05"
+          }
+        },
+        "material": "Roupa de cama branca",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travesseiro superior - vivo",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-(Comprimento/2) + 0.06 + 0.2) - 0.20400000000000001) + 0.074",
+                "v": "-min(0.6, Largura - 0.16)/2 - 0.004"
+              },
+              {
+                "u": "((-(Comprimento/2) + 0.06 + 0.2) + 0.20400000000000001) - 0.074",
+                "v": "-min(0.6, Largura - 0.16)/2 - 0.004",
+                "radius": "0.074"
+              },
+              {
+                "u": "(-(Comprimento/2) + 0.06 + 0.2) + 0.20400000000000001",
+                "v": "(-min(0.6, Largura - 0.16)/2 - 0.004) + 0.074"
+              },
+              {
+                "u": "(-(Comprimento/2) + 0.06 + 0.2) + 0.20400000000000001",
+                "v": "(min(0.6, Largura - 0.16)/2 + 0.004) - 0.074",
+                "radius": "0.074"
+              },
+              {
+                "u": "((-(Comprimento/2) + 0.06 + 0.2) + 0.20400000000000001) - 0.074",
+                "v": "min(0.6, Largura - 0.16)/2 + 0.004"
+              },
+              {
+                "u": "((-(Comprimento/2) + 0.06 + 0.2) - 0.20400000000000001) + 0.074",
+                "v": "min(0.6, Largura - 0.16)/2 + 0.004",
+                "radius": "0.074"
+              },
+              {
+                "u": "(-(Comprimento/2) + 0.06 + 0.2) - 0.20400000000000001",
+                "v": "(min(0.6, Largura - 0.16)/2 + 0.004) - 0.074"
+              },
+              {
+                "u": "(-(Comprimento/2) + 0.06 + 0.2) - 0.20400000000000001",
+                "v": "(-min(0.6, Largura - 0.16)/2 - 0.004) + 0.074",
+                "radius": "0.074"
+              }
+            ],
+            "offset": "((Altura - 0.45) + AlturaColchao + 0.003) + 0.023",
+            "depth": "0.005"
+          }
+        },
+        "material": "Roupa de cama branca",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travesseiro superior - volume transversal",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - (min(0.6, Largura - 0.16)/2 - 0.012)",
+                "v": "((Altura - 0.45) + AlturaColchao + 0.003) + 0.045"
+              },
+              {
+                "u": "0 + (min(0.6, Largura - 0.16)/2 - 0.012)",
+                "v": "((Altura - 0.45) + AlturaColchao + 0.003) + 0.045",
+                "radius": "((min(0.6, Largura - 0.16)/2 - 0.012)*(min(0.6, Largura - 0.16)/2 - 0.012) + 0.005625)/0.15"
+              }
+            ],
+            "offset": "(-(Comprimento/2) + 0.06 + 0.2) - 0.15000000000000002",
+            "depth": "0.3"
+          }
+        },
+        "material": "Roupa de cama branca",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travesseiro superior - volume longitudinal",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(-(Comprimento/2) + 0.06 + 0.2) - (0.188)",
+                "v": "((Altura - 0.45) + AlturaColchao + 0.003) + 0.045"
+              },
+              {
+                "u": "(-(Comprimento/2) + 0.06 + 0.2) + (0.188)",
+                "v": "((Altura - 0.45) + AlturaColchao + 0.003) + 0.045",
+                "radius": "((0.188)*(0.188) + 0.005625)/0.15"
+              }
+            ],
+            "offset": "-(min(0.6, Largura - 0.16) - 0.1)/2",
+            "depth": "min(0.6, Largura - 0.16) - 0.1"
+          }
+        },
+        "material": "Roupa de cama branca",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Painel da cabeceira inferior",
+        "shape": {
+          "Box": {
+            "x": "-((Comprimento/2 + 0.005) + 0.022)",
+            "y": "-(Largura/2 + 0.005)",
+            "z": "0.34",
+            "width": "0.018",
+            "depth": "2*(Largura/2 + 0.005)",
+            "height": "0.3"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Painel da pés inferior",
+        "shape": {
+          "Box": {
+            "x": "(Comprimento/2 + 0.005) + 0.004",
+            "y": "-(Largura/2 + 0.005)",
+            "z": "0.34",
+            "width": "0.018",
+            "depth": "2*(Largura/2 + 0.005)",
+            "height": "0.3"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade traseira - corrimão",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005)",
+            "y": "(Largura/2 + 0.005)",
+            "z": "(Altura - 0.09)",
+            "width": "2*(Comprimento/2 + 0.005)",
+            "depth": "0.025",
+            "height": "(Altura - 0.035) - (Altura - 0.09)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade frontal - corrimão",
+        "shape": {
+          "Box": {
+            "x": "-(Comprimento/2 + 0.005)",
+            "y": "-((Largura/2 + 0.005) + 0.025)",
+            "z": "(Altura - 0.09)",
+            "width": "(((Comprimento/2 + 0.005) - 0.33) - 0.195) + (Comprimento/2 + 0.005)",
+            "depth": "0.025",
+            "height": "(Altura - 0.035) - (Altura - 0.09)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade da cabeceira - corrimão",
+        "shape": {
+          "Box": {
+            "x": "-((Comprimento/2 + 0.005) + 0.025)",
+            "y": "-(Largura/2 + 0.005)",
+            "z": "(Altura - 0.09)",
+            "width": "0.025",
+            "depth": "2*(Largura/2 + 0.005)",
+            "height": "(Altura - 0.035) - (Altura - 0.09)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade dos pés - corrimão",
+        "shape": {
+          "Box": {
+            "x": "(Comprimento/2 + 0.005)",
+            "y": "-(Largura/2 + 0.005)",
+            "z": "(Altura - 0.09)",
+            "width": "0.025",
+            "depth": "2*(Largura/2 + 0.005)",
+            "height": "(Altura - 0.035) - (Altura - 0.09)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade traseira - balaústre 1",
+        "shape": {
+          "Cylinder": {
+            "x": "-(Comprimento/2 + 0.005) + 2*(Comprimento/2 + 0.005)*0.16667",
+            "y": "(Largura/2 + 0.005) + 0.0125",
+            "z": "(Altura - 0.45) + 0.06",
+            "radius": "0.011",
+            "height": "(Altura - 0.09) - ((Altura - 0.45) + 0.06)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade traseira - balaústre 2",
+        "shape": {
+          "Cylinder": {
+            "x": "-(Comprimento/2 + 0.005) + 2*(Comprimento/2 + 0.005)*0.33333",
+            "y": "(Largura/2 + 0.005) + 0.0125",
+            "z": "(Altura - 0.45) + 0.06",
+            "radius": "0.011",
+            "height": "(Altura - 0.09) - ((Altura - 0.45) + 0.06)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade traseira - balaústre 3",
+        "shape": {
+          "Cylinder": {
+            "x": "-(Comprimento/2 + 0.005) + 2*(Comprimento/2 + 0.005)*0.50000",
+            "y": "(Largura/2 + 0.005) + 0.0125",
+            "z": "(Altura - 0.45) + 0.06",
+            "radius": "0.011",
+            "height": "(Altura - 0.09) - ((Altura - 0.45) + 0.06)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade traseira - balaústre 4",
+        "shape": {
+          "Cylinder": {
+            "x": "-(Comprimento/2 + 0.005) + 2*(Comprimento/2 + 0.005)*0.66667",
+            "y": "(Largura/2 + 0.005) + 0.0125",
+            "z": "(Altura - 0.45) + 0.06",
+            "radius": "0.011",
+            "height": "(Altura - 0.09) - ((Altura - 0.45) + 0.06)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade traseira - balaústre 5",
+        "shape": {
+          "Cylinder": {
+            "x": "-(Comprimento/2 + 0.005) + 2*(Comprimento/2 + 0.005)*0.83333",
+            "y": "(Largura/2 + 0.005) + 0.0125",
+            "z": "(Altura - 0.45) + 0.06",
+            "radius": "0.011",
+            "height": "(Altura - 0.09) - ((Altura - 0.45) + 0.06)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade frontal - balaústre 1",
+        "shape": {
+          "Cylinder": {
+            "x": "-(Comprimento/2 + 0.005) + ((((Comprimento/2 + 0.005) - 0.33) - 0.195) + (Comprimento/2 + 0.005))*0.25000",
+            "y": "-((Largura/2 + 0.005) + 0.0125)",
+            "z": "(Altura - 0.45) + 0.06",
+            "radius": "0.011",
+            "height": "(Altura - 0.09) - ((Altura - 0.45) + 0.06)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade frontal - balaústre 2",
+        "shape": {
+          "Cylinder": {
+            "x": "-(Comprimento/2 + 0.005) + ((((Comprimento/2 + 0.005) - 0.33) - 0.195) + (Comprimento/2 + 0.005))*0.50000",
+            "y": "-((Largura/2 + 0.005) + 0.0125)",
+            "z": "(Altura - 0.45) + 0.06",
+            "radius": "0.011",
+            "height": "(Altura - 0.09) - ((Altura - 0.45) + 0.06)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade frontal - balaústre 3",
+        "shape": {
+          "Cylinder": {
+            "x": "-(Comprimento/2 + 0.005) + ((((Comprimento/2 + 0.005) - 0.33) - 0.195) + (Comprimento/2 + 0.005))*0.75000",
+            "y": "-((Largura/2 + 0.005) + 0.0125)",
+            "z": "(Altura - 0.45) + 0.06",
+            "radius": "0.011",
+            "height": "(Altura - 0.09) - ((Altura - 0.45) + 0.06)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade da cabeceira - balaústre 1",
+        "shape": {
+          "Cylinder": {
+            "x": "-1*((Comprimento/2 + 0.005) + 0.0125)",
+            "y": "-(Largura/2 + 0.005) + 2*(Largura/2 + 0.005)*0.25000",
+            "z": "(Altura - 0.45) + 0.06",
+            "radius": "0.011",
+            "height": "(Altura - 0.09) - ((Altura - 0.45) + 0.06)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade da cabeceira - balaústre 2",
+        "shape": {
+          "Cylinder": {
+            "x": "-1*((Comprimento/2 + 0.005) + 0.0125)",
+            "y": "-(Largura/2 + 0.005) + 2*(Largura/2 + 0.005)*0.50000",
+            "z": "(Altura - 0.45) + 0.06",
+            "radius": "0.011",
+            "height": "(Altura - 0.09) - ((Altura - 0.45) + 0.06)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade da cabeceira - balaústre 3",
+        "shape": {
+          "Cylinder": {
+            "x": "-1*((Comprimento/2 + 0.005) + 0.0125)",
+            "y": "-(Largura/2 + 0.005) + 2*(Largura/2 + 0.005)*0.75000",
+            "z": "(Altura - 0.45) + 0.06",
+            "radius": "0.011",
+            "height": "(Altura - 0.09) - ((Altura - 0.45) + 0.06)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade da pés - balaústre 1",
+        "shape": {
+          "Cylinder": {
+            "x": "1*((Comprimento/2 + 0.005) + 0.0125)",
+            "y": "-(Largura/2 + 0.005) + 2*(Largura/2 + 0.005)*0.25000",
+            "z": "(Altura - 0.45) + 0.06",
+            "radius": "0.011",
+            "height": "(Altura - 0.09) - ((Altura - 0.45) + 0.06)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade da pés - balaústre 2",
+        "shape": {
+          "Cylinder": {
+            "x": "1*((Comprimento/2 + 0.005) + 0.0125)",
+            "y": "-(Largura/2 + 0.005) + 2*(Largura/2 + 0.005)*0.50000",
+            "z": "(Altura - 0.45) + 0.06",
+            "radius": "0.011",
+            "height": "(Altura - 0.09) - ((Altura - 0.45) + 0.06)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade da pés - balaústre 3",
+        "shape": {
+          "Cylinder": {
+            "x": "1*((Comprimento/2 + 0.005) + 0.0125)",
+            "y": "-(Largura/2 + 0.005) + 2*(Largura/2 + 0.005)*0.75000",
+            "z": "(Altura - 0.45) + 0.06",
+            "radius": "0.011",
+            "height": "(Altura - 0.09) - ((Altura - 0.45) + 0.06)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso da grade - longarina frontal - lado dos cabeceira",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(-1*((Largura/2 + 0.005) + 0.0125)) - 0.009",
+                "v": "((Altura - 0.09) + (Altura - 0.035))/2",
+                "radius": "0.009"
+              },
+              {
+                "u": "(-1*((Largura/2 + 0.005) + 0.0125)) + 0.009",
+                "v": "((Altura - 0.09) + (Altura - 0.035))/2",
+                "radius": "0.009"
+              }
+            ],
+            "offset": "-((Comprimento/2 + 0.005) + 0.065) - 0.003",
+            "depth": "0.003"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso da grade - travessa dos cabeceira - lado frontal",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-1*((Comprimento/2 + 0.005) + 0.0125)",
+                "v": "-((Largura/2 + 0.005) + 0.065) - 0.003"
+              },
+              {
+                "u": "(-1*((Comprimento/2 + 0.005) + 0.0125)) + 0.009",
+                "v": "-((Largura/2 + 0.005) + 0.065) - 0.003"
+              },
+              {
+                "u": "(-1*((Comprimento/2 + 0.005) + 0.0125)) + 0.009",
+                "v": "(-((Largura/2 + 0.005) + 0.065) - 0.003) + 0.003"
+              },
+              {
+                "u": "-1*((Comprimento/2 + 0.005) + 0.0125)",
+                "v": "(-((Largura/2 + 0.005) + 0.065) - 0.003) + 0.003"
+              }
+            ],
+            "offset": "((Altura - 0.09) + (Altura - 0.035))/2",
+            "axis": "-1*((Comprimento/2 + 0.005) + 0.0125)",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso da grade - longarina traseira - lado dos cabeceira",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(1*((Largura/2 + 0.005) + 0.0125)) - 0.009",
+                "v": "((Altura - 0.09) + (Altura - 0.035))/2",
+                "radius": "0.009"
+              },
+              {
+                "u": "(1*((Largura/2 + 0.005) + 0.0125)) + 0.009",
+                "v": "((Altura - 0.09) + (Altura - 0.035))/2",
+                "radius": "0.009"
+              }
+            ],
+            "offset": "-((Comprimento/2 + 0.005) + 0.065) - 0.003",
+            "depth": "0.003"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso da grade - travessa dos cabeceira - lado traseira",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-1*((Comprimento/2 + 0.005) + 0.0125)",
+                "v": "1*((Largura/2 + 0.005) + 0.065)"
+              },
+              {
+                "u": "(-1*((Comprimento/2 + 0.005) + 0.0125)) + 0.009",
+                "v": "1*((Largura/2 + 0.005) + 0.065)"
+              },
+              {
+                "u": "(-1*((Comprimento/2 + 0.005) + 0.0125)) + 0.009",
+                "v": "(1*((Largura/2 + 0.005) + 0.065)) + 0.003"
+              },
+              {
+                "u": "-1*((Comprimento/2 + 0.005) + 0.0125)",
+                "v": "(1*((Largura/2 + 0.005) + 0.065)) + 0.003"
+              }
+            ],
+            "offset": "((Altura - 0.09) + (Altura - 0.035))/2",
+            "axis": "-1*((Comprimento/2 + 0.005) + 0.0125)",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso da grade - longarina frontal - lado dos pés",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(-1*((Largura/2 + 0.005) + 0.0125)) - 0.009",
+                "v": "((Altura - 0.09) + (Altura - 0.035))/2",
+                "radius": "0.009"
+              },
+              {
+                "u": "(-1*((Largura/2 + 0.005) + 0.0125)) + 0.009",
+                "v": "((Altura - 0.09) + (Altura - 0.035))/2",
+                "radius": "0.009"
+              }
+            ],
+            "offset": "1*((Comprimento/2 + 0.005) + 0.065)",
+            "depth": "0.003"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso da grade - travessa dos pés - lado frontal",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "1*((Comprimento/2 + 0.005) + 0.0125)",
+                "v": "-((Largura/2 + 0.005) + 0.065) - 0.003"
+              },
+              {
+                "u": "(1*((Comprimento/2 + 0.005) + 0.0125)) + 0.009",
+                "v": "-((Largura/2 + 0.005) + 0.065) - 0.003"
+              },
+              {
+                "u": "(1*((Comprimento/2 + 0.005) + 0.0125)) + 0.009",
+                "v": "(-((Largura/2 + 0.005) + 0.065) - 0.003) + 0.003"
+              },
+              {
+                "u": "1*((Comprimento/2 + 0.005) + 0.0125)",
+                "v": "(-((Largura/2 + 0.005) + 0.065) - 0.003) + 0.003"
+              }
+            ],
+            "offset": "((Altura - 0.09) + (Altura - 0.035))/2",
+            "axis": "1*((Comprimento/2 + 0.005) + 0.0125)",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso da grade - longarina traseira - lado dos pés",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(1*((Largura/2 + 0.005) + 0.0125)) - 0.009",
+                "v": "((Altura - 0.09) + (Altura - 0.035))/2",
+                "radius": "0.009"
+              },
+              {
+                "u": "(1*((Largura/2 + 0.005) + 0.0125)) + 0.009",
+                "v": "((Altura - 0.09) + (Altura - 0.035))/2",
+                "radius": "0.009"
+              }
+            ],
+            "offset": "1*((Comprimento/2 + 0.005) + 0.065)",
+            "depth": "0.003"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso da grade - travessa dos pés - lado traseira",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "1*((Comprimento/2 + 0.005) + 0.0125)",
+                "v": "1*((Largura/2 + 0.005) + 0.065)"
+              },
+              {
+                "u": "(1*((Comprimento/2 + 0.005) + 0.0125)) + 0.009",
+                "v": "1*((Largura/2 + 0.005) + 0.065)"
+              },
+              {
+                "u": "(1*((Comprimento/2 + 0.005) + 0.0125)) + 0.009",
+                "v": "(1*((Largura/2 + 0.005) + 0.065)) + 0.003"
+              },
+              {
+                "u": "1*((Comprimento/2 + 0.005) + 0.0125)",
+                "v": "(1*((Largura/2 + 0.005) + 0.065)) + 0.003"
+              }
+            ],
+            "offset": "((Altura - 0.09) + (Altura - 0.035))/2",
+            "axis": "1*((Comprimento/2 + 0.005) + 0.0125)",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Escada - banzo esquerdo",
+        "shape": {
+          "Box": {
+            "x": "(((Comprimento/2 + 0.005) - 0.33) - 0.195)",
+            "y": "(-((Largura/2 + 0.005) + 0.025) - 0.045)",
+            "z": "0.004",
+            "width": "0.03",
+            "depth": "0.045",
+            "height": "(Altura - 0.035) - 0.004"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Escada - feltro do banzo esquerdo",
+        "shape": {
+          "Box": {
+            "x": "(((Comprimento/2 + 0.005) - 0.33) - 0.195) + 0.004",
+            "y": "(-((Largura/2 + 0.005) + 0.025) - 0.045) + 0.004",
+            "z": "0",
+            "width": "0.022",
+            "depth": "0.037",
+            "height": "0.004"
+          }
+        },
+        "material": "Feltro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Escada - gancho esquerdo",
+        "shape": {
+          "Box": {
+            "x": "(((Comprimento/2 + 0.005) - 0.33) - 0.195) - 0.005",
+            "y": "(-((Largura/2 + 0.005) + 0.025)) - 0.002",
+            "z": "(Altura - 0.45) + 0.06",
+            "width": "0.04",
+            "depth": "0.025 + 0.004",
+            "height": "0.004"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Escada - aba do gancho esquerdo",
+        "shape": {
+          "Box": {
+            "x": "(((Comprimento/2 + 0.005) - 0.33) - 0.195) - 0.005",
+            "y": "-(Largura/2 + 0.005) - 0.001",
+            "z": "(Altura - 0.45) + 0.02",
+            "width": "0.04",
+            "depth": "0.003",
+            "height": "0.044"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Escada - parafuso inferior esquerdo",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((Comprimento/2 + 0.005) - 0.33) - 0.195) + 0.015",
+                "v": "(-((Largura/2 + 0.005) + 0.025) - 0.045) - 0.003"
+              },
+              {
+                "u": "((((Comprimento/2 + 0.005) - 0.33) - 0.195) + 0.015) + 0.008",
+                "v": "(-((Largura/2 + 0.005) + 0.025) - 0.045) - 0.003"
+              },
+              {
+                "u": "((((Comprimento/2 + 0.005) - 0.33) - 0.195) + 0.015) + 0.008",
+                "v": "((-((Largura/2 + 0.005) + 0.025) - 0.045) - 0.003) + 0.003"
+              },
+              {
+                "u": "(((Comprimento/2 + 0.005) - 0.33) - 0.195) + 0.015",
+                "v": "((-((Largura/2 + 0.005) + 0.025) - 0.045) - 0.003) + 0.003"
+              }
+            ],
+            "offset": "0.25",
+            "axis": "(((Comprimento/2 + 0.005) - 0.33) - 0.195) + 0.015",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Escada - banzo direito",
+        "shape": {
+          "Box": {
+            "x": "(((Comprimento/2 + 0.005) - 0.33) + 0.165)",
+            "y": "(-((Largura/2 + 0.005) + 0.025) - 0.045)",
+            "z": "0.004",
+            "width": "0.03",
+            "depth": "0.045",
+            "height": "(Altura - 0.035) - 0.004"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Escada - feltro do banzo direito",
+        "shape": {
+          "Box": {
+            "x": "(((Comprimento/2 + 0.005) - 0.33) + 0.165) + 0.004",
+            "y": "(-((Largura/2 + 0.005) + 0.025) - 0.045) + 0.004",
+            "z": "0",
+            "width": "0.022",
+            "depth": "0.037",
+            "height": "0.004"
+          }
+        },
+        "material": "Feltro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Escada - gancho direito",
+        "shape": {
+          "Box": {
+            "x": "(((Comprimento/2 + 0.005) - 0.33) + 0.165) - 0.005",
+            "y": "(-((Largura/2 + 0.005) + 0.025)) - 0.002",
+            "z": "(Altura - 0.45) + 0.06",
+            "width": "0.04",
+            "depth": "0.025 + 0.004",
+            "height": "0.004"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Escada - aba do gancho direito",
+        "shape": {
+          "Box": {
+            "x": "(((Comprimento/2 + 0.005) - 0.33) + 0.165) - 0.005",
+            "y": "-(Largura/2 + 0.005) - 0.001",
+            "z": "(Altura - 0.45) + 0.02",
+            "width": "0.04",
+            "depth": "0.003",
+            "height": "0.044"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Escada - parafuso inferior direito",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((Comprimento/2 + 0.005) - 0.33) + 0.165) + 0.015",
+                "v": "(-((Largura/2 + 0.005) + 0.025) - 0.045) - 0.003"
+              },
+              {
+                "u": "((((Comprimento/2 + 0.005) - 0.33) + 0.165) + 0.015) + 0.008",
+                "v": "(-((Largura/2 + 0.005) + 0.025) - 0.045) - 0.003"
+              },
+              {
+                "u": "((((Comprimento/2 + 0.005) - 0.33) + 0.165) + 0.015) + 0.008",
+                "v": "((-((Largura/2 + 0.005) + 0.025) - 0.045) - 0.003) + 0.003"
+              },
+              {
+                "u": "(((Comprimento/2 + 0.005) - 0.33) + 0.165) + 0.015",
+                "v": "((-((Largura/2 + 0.005) + 0.025) - 0.045) - 0.003) + 0.003"
+              }
+            ],
+            "offset": "0.25",
+            "axis": "(((Comprimento/2 + 0.005) - 0.33) + 0.165) + 0.015",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Escada - degrau 1",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((-((Largura/2 + 0.005) + 0.025) - 0.045) + (-((Largura/2 + 0.005) + 0.025)))/2) - 0.016",
+                "v": "((Altura - 0.45) + 0.06)*0.2",
+                "radius": "0.016"
+              },
+              {
+                "u": "(((-((Largura/2 + 0.005) + 0.025) - 0.045) + (-((Largura/2 + 0.005) + 0.025)))/2) + 0.016",
+                "v": "((Altura - 0.45) + 0.06)*0.2",
+                "radius": "0.016"
+              }
+            ],
+            "offset": "(((Comprimento/2 + 0.005) - 0.33) - 0.195)",
+            "depth": "(((Comprimento/2 + 0.005) - 0.33) + 0.165) + 0.03 - (((Comprimento/2 + 0.005) - 0.33) - 0.195)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Escada - degrau 2",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((-((Largura/2 + 0.005) + 0.025) - 0.045) + (-((Largura/2 + 0.005) + 0.025)))/2) - 0.016",
+                "v": "((Altura - 0.45) + 0.06)*0.4",
+                "radius": "0.016"
+              },
+              {
+                "u": "(((-((Largura/2 + 0.005) + 0.025) - 0.045) + (-((Largura/2 + 0.005) + 0.025)))/2) + 0.016",
+                "v": "((Altura - 0.45) + 0.06)*0.4",
+                "radius": "0.016"
+              }
+            ],
+            "offset": "(((Comprimento/2 + 0.005) - 0.33) - 0.195)",
+            "depth": "(((Comprimento/2 + 0.005) - 0.33) + 0.165) + 0.03 - (((Comprimento/2 + 0.005) - 0.33) - 0.195)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Escada - degrau 3",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((-((Largura/2 + 0.005) + 0.025) - 0.045) + (-((Largura/2 + 0.005) + 0.025)))/2) - 0.016",
+                "v": "((Altura - 0.45) + 0.06)*0.6",
+                "radius": "0.016"
+              },
+              {
+                "u": "(((-((Largura/2 + 0.005) + 0.025) - 0.045) + (-((Largura/2 + 0.005) + 0.025)))/2) + 0.016",
+                "v": "((Altura - 0.45) + 0.06)*0.6",
+                "radius": "0.016"
+              }
+            ],
+            "offset": "(((Comprimento/2 + 0.005) - 0.33) - 0.195)",
+            "depth": "(((Comprimento/2 + 0.005) - 0.33) + 0.165) + 0.03 - (((Comprimento/2 + 0.005) - 0.33) - 0.195)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Escada - degrau 4",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((-((Largura/2 + 0.005) + 0.025) - 0.045) + (-((Largura/2 + 0.005) + 0.025)))/2) - 0.016",
+                "v": "((Altura - 0.45) + 0.06)*0.8",
+                "radius": "0.016"
+              },
+              {
+                "u": "(((-((Largura/2 + 0.005) + 0.025) - 0.045) + (-((Largura/2 + 0.005) + 0.025)))/2) + 0.016",
+                "v": "((Altura - 0.45) + 0.06)*0.8",
+                "radius": "0.016"
+              }
+            ],
+            "offset": "(((Comprimento/2 + 0.005) - 0.33) - 0.195)",
+            "depth": "(((Comprimento/2 + 0.005) - 0.33) + 0.165) + 0.03 - (((Comprimento/2 + 0.005) - 0.33) - 0.195)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      }
+    ]
+  },
+  "types": [
+    {
+      "name": "Beliche solteiro 88x188",
+      "values": {},
+      "info": {
+        "description": "Beliche para dois colchões de solteiro 88 x 188 cm"
+      }
+    },
+    {
+      "name": "Beliche solteiro 78x188",
+      "values": {
+        "Largura": 0.78
+      },
+      "info": {
+        "description": "Beliche estreito para dois colchões de solteiro 78 x 188 cm"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "name": "Colchão",
+      "color": [
+        232,
+        228,
+        218
+      ],
+      "class": "Generic",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Feltro",
+      "color": [
+        70,
+        66,
+        60
+      ],
+      "class": "Generic",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Madeira clara",
+      "color": [
+        196,
+        160,
+        112
+      ],
+      "class": "Wood",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Aço pintado preto",
+      "color": [
+        30,
+        30,
+        32
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Tecido cinza",
+      "color": [
+        150,
+        152,
+        156
+      ],
+      "class": "Generic",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Roupa de cama branca",
+      "color": [
+        243,
+        241,
+        235
+      ],
+      "class": "Generic",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Tecido azul petróleo",
+      "color": [
+        48,
+        92,
+        110
+      ],
+      "class": "Generic",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Tecido mostarda",
+      "color": [
+        201,
+        152,
+        58
+      ],
+      "class": "Generic",
+      "finish": "Matte",
+      "transparency": 0
+    }
+  ]
+}
