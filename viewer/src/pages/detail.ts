@@ -4,7 +4,7 @@
 
 import { edgesForFolder, folderLabel, folderRoute, loadCatalog, type CatalogEntry, type Route } from '../catalog';
 import { libraryUrl, loadComponent, type Component } from '../engine';
-import { deviceLabel, formatDecimal, formatParamValue, systemLabel } from '../format';
+import { deviceLabel, formatDecimal, formatParamValue, normalizeText, systemLabel } from '../format';
 import { Viewport, VIEW_NAMES, type ViewName } from '../scene';
 import type { Shell } from '../shell';
 import { describeError } from './errors';
@@ -52,7 +52,8 @@ function mepSection(mep: Record<string, unknown>): HTMLElement | null {
     } else if (key === 'Device') {
       const power = asNumber(data.power);
       rows.push(['Dispositivo', deviceLabel(String(data.device ?? '—'))]);
-      rows.push(['Potência', power === null ? '—' : `${formatDecimal(power, 1)} VA`]);
+      // Switches and panels carry power 0: no load to show.
+      if (power !== 0) rows.push(['Potência', power === null ? '—' : `${formatDecimal(power, 1)} VA`]);
     } else {
       for (const [name, value] of Object.entries(data)) rows.push([`${key} · ${name}`, String(value)]);
     }
@@ -67,6 +68,7 @@ interface TypesTable {
   element: HTMLElement;
   /** Re-format the value cells once the parameter kinds are known. */
   applyKinds(kinds: Map<string, string>): void;
+  dispose(): void;
 }
 
 function typesSection(entry: CatalogEntry): TypesTable {
@@ -111,14 +113,29 @@ function typesSection(entry: CatalogEntry): TypesTable {
   });
   table.append(head, tbody);
   scroller.append(table);
-  box.append(scroller);
+  // When the table is wider than the panel, `data-more` marks that columns are
+  // hidden past the right edge, so the clipped edge reads as scrollable.
+  const frame = el('div', 'table-frame');
+  frame.append(scroller);
+  const syncMore = () => {
+    const more = scroller.scrollLeft + scroller.clientWidth < scroller.scrollWidth - 1;
+    if (more) frame.dataset.more = '';
+    else delete frame.dataset.more;
+  };
+  scroller.addEventListener('scroll', syncMore, { passive: true });
+  const resizes = new ResizeObserver(syncMore);
+  resizes.observe(scroller);
+  resizes.observe(table);
+  box.append(frame);
   if (entry.parameters.length) box.append(el('p', 'panel-note', 'Medidas em metros.'));
 
   return {
     element: box,
     applyKinds(kinds) {
       for (const { cell, param, value } of cells) cell.textContent = formatParamValue(value, kinds.get(param));
+      syncMore();
     },
+    dispose: () => resizes.disconnect(),
   };
 }
 
@@ -133,7 +150,10 @@ function connectorsSection(component: Component): HTMLElement | null {
     name.scope = 'row';
     const diameter =
       connector.diameter !== null && connector.diameter > 0 ? `Ø ${formatDecimal(connector.diameter * 1000, 1)} mm` : '';
-    row.append(name, el('td', 'col-system', systemLabel(connector.system)), el('td', 'col-num', diameter));
+    const system = systemLabel(connector.system);
+    // A connector named after its system ("Esgoto" / "Esgoto") shows the text once.
+    const systemText = normalizeText(system) === normalizeText(connector.name) ? '' : system;
+    row.append(name, el('td', 'col-system', systemText), el('td', 'col-num', diameter));
     tbody.append(row);
   }
   table.append(tbody);
@@ -218,7 +238,10 @@ function buildPanel(entry: CatalogEntry) {
         notice.replaceChildren(p);
       }
     },
-    dispose: command.dispose,
+    dispose() {
+      types.dispose();
+      command.dispose();
+    },
   };
 }
 
