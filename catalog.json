@@ -217,14 +217,16 @@
       "mep": null,
       "parameters": [
         "Largura",
-        "Altura"
+        "Altura",
+        "AnguloAbertura"
       ],
       "types": [
         {
           "name": "Porta de abrir 60 x 210",
           "values": {
             "Largura": 0.6,
-            "Altura": 2.1
+            "Altura": 2.1,
+            "AnguloAbertura": 0.0
           },
           "description": "Porta de giro de uma folha, batente de madeira"
         },
@@ -232,7 +234,8 @@
           "name": "Porta de abrir 70 x 210",
           "values": {
             "Largura": 0.7,
-            "Altura": 2.1
+            "Altura": 2.1,
+            "AnguloAbertura": 0.0
           },
           "description": "Porta de giro de uma folha, batente de madeira"
         },
@@ -240,7 +243,8 @@
           "name": "Porta de abrir 80 x 210",
           "values": {
             "Largura": 0.8,
-            "Altura": 2.1
+            "Altura": 2.1,
+            "AnguloAbertura": 0.0
           },
           "description": "Porta de giro de uma folha, batente de madeira"
         },
@@ -248,7 +252,8 @@
           "name": "Porta de abrir 90 x 210",
           "values": {
             "Largura": 0.9,
-            "Altura": 2.1
+            "Altura": 2.1,
+            "AnguloAbertura": 0.0
           },
           "description": "Porta de giro de uma folha, batente de madeira"
         }
@@ -497,7 +502,7 @@
       "mep": {
         "Device": {
           "device": "Switch",
-          "power": 0.0
+          "power": 0
         }
       },
       "parameters": [
@@ -582,7 +587,7 @@
       "mep": {
         "Device": {
           "device": "Panel",
-          "power": 0.0
+          "power": 0
         }
       },
       "parameters": [
@@ -627,7 +632,7 @@
       "mep": {
         "Device": {
           "device": "DedicatedOutlet",
-          "power": 1500.0
+          "power": 1500
         }
       },
       "parameters": [
@@ -652,7 +657,7 @@
       "mep": {
         "Device": {
           "device": "DedicatedOutlet",
-          "power": 3500.0
+          "power": 3500
         }
       },
       "parameters": [
@@ -677,7 +682,7 @@
       "mep": {
         "Device": {
           "device": "DedicatedOutlet",
-          "power": 5500.0
+          "power": 5500
         }
       },
       "parameters": [
@@ -702,7 +707,7 @@
       "mep": {
         "Device": {
           "device": "DedicatedOutlet",
-          "power": 7500.0
+          "power": 7500
         }
       },
       "parameters": [
@@ -727,7 +732,7 @@
       "mep": {
         "Device": {
           "device": "Outlet",
-          "power": 100.0
+          "power": 100
         }
       },
       "parameters": [
@@ -760,7 +765,7 @@
       "mep": {
         "Device": {
           "device": "Outlet",
-          "power": 600.0
+          "power": 600
         }
       },
       "parameters": [
@@ -783,6 +788,102 @@
             "Altura": 0.1
           },
           "description": "Duas tomadas 2P+T 20 A em caixa 4x4"
+        }
+      ]
+    },
+    {
+      "file": "components/furniture/air-fryer.ccomp",
+      "component": "Air fryer",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Diametro",
+        "Altura",
+        "AberturaGaveta"
+      ],
+      "types": [
+        {
+          "name": "Air fryer 4 L",
+          "values": {
+            "Diametro": 0.27,
+            "Altura": 0.32,
+            "AberturaGaveta": 0
+          },
+          "description": "Fritadeira elétrica sem óleo de 4 litros, com painel digital e gaveta com cesto antiaderente"
+        },
+        {
+          "name": "Air fryer 7 L",
+          "values": {
+            "Diametro": 0.33,
+            "Altura": 0.37,
+            "AberturaGaveta": 0
+          },
+          "description": "Fritadeira elétrica sem óleo de 7 litros, com painel digital e gaveta com cesto antiaderente"
+        }
+      ]
+    },
+    {
+      "file": "components/furniture/ar-condicionado-split-condensadora.ccomp",
+      "component": "Ar-condicionado split - condensadora",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Profundidade",
+        "Altura"
+      ],
+      "types": [
+        {
+          "name": "Condensadora split 9.000 a 12.000 BTU",
+          "values": {
+            "Largura": 0.7,
+            "Profundidade": 0.26,
+            "Altura": 0.5
+          },
+          "description": "Unidade externa de 9.000 a 12.000 BTU/h, 70 x 26 x 50 cm"
+        },
+        {
+          "name": "Condensadora split 18.000 a 24.000 BTU",
+          "values": {
+            "Largura": 0.85,
+            "Profundidade": 0.32,
+            "Altura": 0.6
+          },
+          "description": "Unidade externa de 18.000 a 24.000 BTU/h, 85 x 32 x 60 cm"
+        }
+      ]
+    },
+    {
+      "file": "components/furniture/ar-condicionado-split-evaporadora.ccomp",
+      "component": "Ar-condicionado split - evaporadora",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Profundidade",
+        "Altura",
+        "AnguloAleta"
+      ],
+      "types": [
+        {
+          "name": "Evaporadora split 9.000 a 12.000 BTU",
+          "values": {
+            "Largura": 0.8,
+            "Profundidade": 0.2,
+            "Altura": 0.29,
+            "AnguloAleta": 0
+          },
+          "description": "Unidade interna hi-wall de 9.000 a 12.000 BTU/h, 80 x 20 x 29 cm"
+        },
+        {
+          "name": "Evaporadora split 18.000 a 24.000 BTU",
+          "values": {
+            "Largura": 1.05,
+            "Profundidade": 0.23,
+            "Altura": 0.33,
+            "AnguloAleta": 0
+          },
+          "description": "Unidade interna hi-wall de 18.000 a 24.000 BTU/h, 105 x 23 x 33 cm"
         }
       ]
     },
@@ -817,6 +918,49 @@
             "Altura": 1.0
           },
           "description": "Cadeira de trabalho"
+        }
+      ]
+    },
+    {
+      "file": "components/furniture/cafeteira.ccomp",
+      "component": "Cafeteira elétrica",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Profundidade",
+        "Altura",
+        "AlturaBase",
+        "ProfundidadeReservatorio",
+        "AnguloTampa",
+        "AvancoJarra"
+      ],
+      "types": [
+        {
+          "name": "Cafeteira 15 xícaras (0,6 L)",
+          "values": {
+            "Largura": 0.16,
+            "Profundidade": 0.235,
+            "Altura": 0.27,
+            "AlturaBase": 0.045,
+            "ProfundidadeReservatorio": 0.075,
+            "AnguloTampa": 0,
+            "AvancoJarra": 0
+          },
+          "description": "Cafeteira elétrica de filtro com jarra de vidro para 15 xícaras (0,6 L) e placa aquecedora"
+        },
+        {
+          "name": "Cafeteira 30 xícaras (1,2 L)",
+          "values": {
+            "Largura": 0.19,
+            "Profundidade": 0.275,
+            "Altura": 0.32,
+            "AlturaBase": 0.045,
+            "ProfundidadeReservatorio": 0.085,
+            "AnguloTampa": 0,
+            "AvancoJarra": 0
+          },
+          "description": "Cafeteira elétrica de filtro com jarra de vidro para 30 xícaras (1,2 L) e placa aquecedora"
         }
       ]
     },
@@ -879,6 +1023,52 @@
       ]
     },
     {
+      "file": "components/furniture/coifa-parede.ccomp",
+      "component": "Coifa de parede",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Profundidade",
+        "Altura",
+        "AlturaAba",
+        "AlturaPiramide",
+        "LarguraChamine",
+        "ProfundidadeChamine",
+        "AlturaChamineInferior"
+      ],
+      "types": [
+        {
+          "name": "Coifa de parede 60 cm",
+          "values": {
+            "Largura": 0.6,
+            "Profundidade": 0.48,
+            "Altura": 0.78,
+            "AlturaAba": 0.05,
+            "AlturaPiramide": 0.12,
+            "LarguraChamine": 0.25,
+            "ProfundidadeChamine": 0.21,
+            "AlturaChamineInferior": 0.34
+          },
+          "description": "Coifa de parede piramidal em inox, 60 x 48 cm, chaminé telescópica, 3 velocidades, filtros metálicos e LED"
+        },
+        {
+          "name": "Coifa de parede 90 cm",
+          "values": {
+            "Largura": 0.9,
+            "Profundidade": 0.5,
+            "Altura": 0.78,
+            "AlturaAba": 0.05,
+            "AlturaPiramide": 0.12,
+            "LarguraChamine": 0.25,
+            "ProfundidadeChamine": 0.21,
+            "AlturaChamineInferior": 0.34
+          },
+          "description": "Coifa de parede piramidal em inox, 90 x 50 cm, chaminé telescópica, 3 velocidades, filtros metálicos e LED"
+        }
+      ]
+    },
+    {
       "file": "components/furniture/criado-mudo.ccomp",
       "component": "Criado-mudo",
       "kind": "Furniture",
@@ -886,7 +1076,10 @@
       "parameters": [
         "Largura",
         "Profundidade",
-        "Altura"
+        "Altura",
+        "AlturaPes",
+        "AberturaGaveta1",
+        "AberturaGaveta2"
       ],
       "types": [
         {
@@ -894,7 +1087,10 @@
           "values": {
             "Largura": 0.45,
             "Profundidade": 0.4,
-            "Altura": 0.55
+            "Altura": 0.55,
+            "AlturaPes": 0.1,
+            "AberturaGaveta1": 0,
+            "AberturaGaveta2": 0
           },
           "description": "Mesa de cabeceira com gaveta"
         },
@@ -903,7 +1099,10 @@
           "values": {
             "Largura": 0.6,
             "Profundidade": 0.4,
-            "Altura": 0.55
+            "Altura": 0.55,
+            "AlturaPes": 0.1,
+            "AberturaGaveta1": 0,
+            "AberturaGaveta2": 0
           },
           "description": "Mesa de cabeceira com gaveta"
         }
@@ -918,7 +1117,10 @@
         "Largura",
         "Profundidade",
         "Altura",
-        "Gaveteiro"
+        "Gaveteiro",
+        "AberturaGaveta1",
+        "AberturaGaveta2",
+        "AberturaGaveta3"
       ],
       "types": [
         {
@@ -927,7 +1129,10 @@
             "Largura": 1.0,
             "Profundidade": 0.5,
             "Altura": 0.75,
-            "Gaveteiro": 0.4
+            "Gaveteiro": 0.4,
+            "AberturaGaveta1": 0,
+            "AberturaGaveta2": 0,
+            "AberturaGaveta3": 0
           },
           "description": "Escrivaninha com gaveteiro"
         },
@@ -937,7 +1142,10 @@
             "Largura": 1.2,
             "Profundidade": 0.6,
             "Altura": 0.75,
-            "Gaveteiro": 0.4
+            "Gaveteiro": 0.4,
+            "AberturaGaveta1": 0,
+            "AberturaGaveta2": 0,
+            "AberturaGaveta3": 0
           },
           "description": "Escrivaninha com gaveteiro"
         },
@@ -947,9 +1155,260 @@
             "Largura": 1.5,
             "Profundidade": 0.7,
             "Altura": 0.75,
-            "Gaveteiro": 0.4
+            "Gaveteiro": 0.4,
+            "AberturaGaveta1": 0,
+            "AberturaGaveta2": 0,
+            "AberturaGaveta3": 0
           },
           "description": "Escrivaninha com gaveteiro"
+        }
+      ]
+    },
+    {
+      "file": "components/furniture/fogao-4-bocas.ccomp",
+      "component": "Fogão 4 bocas",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Profundidade",
+        "Altura",
+        "AlturaPes",
+        "AlturaRodape",
+        "AlturaPainel",
+        "EspessuraMesa",
+        "EspessuraPorta",
+        "LadoTrempe",
+        "AlturaTrempe",
+        "DiametroQueimadorGrande",
+        "DiametroQueimadorPequeno",
+        "AnguloTampa",
+        "AnguloPorta"
+      ],
+      "types": [
+        {
+          "name": "Fogão 4 bocas 50 x 60 cm",
+          "values": {
+            "Largura": 0.5,
+            "Profundidade": 0.6,
+            "Altura": 0.87,
+            "AlturaPes": 0.06,
+            "AlturaRodape": 0.09,
+            "AlturaPainel": 0.085,
+            "EspessuraMesa": 0.035,
+            "EspessuraPorta": 0.04,
+            "LadoTrempe": 0.215,
+            "AlturaTrempe": 0.05,
+            "DiametroQueimadorGrande": 0.095,
+            "DiametroQueimadorPequeno": 0.07,
+            "AnguloTampa": 90.0,
+            "AnguloPorta": 0.0
+          },
+          "description": "Fogão de piso a gás com 4 queimadores, forno, tampa de vidro e acendimento automático"
+        },
+        {
+          "name": "Fogão 4 bocas 56 x 63 cm",
+          "values": {
+            "Largura": 0.56,
+            "Profundidade": 0.63,
+            "Altura": 0.87,
+            "AlturaPes": 0.06,
+            "AlturaRodape": 0.09,
+            "AlturaPainel": 0.085,
+            "EspessuraMesa": 0.035,
+            "EspessuraPorta": 0.04,
+            "LadoTrempe": 0.24,
+            "AlturaTrempe": 0.05,
+            "DiametroQueimadorGrande": 0.105,
+            "DiametroQueimadorPequeno": 0.07,
+            "AnguloTampa": 90.0,
+            "AnguloPorta": 0.0
+          },
+          "description": "Fogão de piso a gás com 4 queimadores, forno, tampa de vidro e acendimento automático"
+        }
+      ]
+    },
+    {
+      "file": "components/furniture/forno-eletrico-embutir.ccomp",
+      "component": "Forno elétrico de embutir",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Profundidade",
+        "Altura",
+        "AlturaPainel",
+        "EspessuraPorta",
+        "FolgaLateralGabinete",
+        "AnguloPorta",
+        "ExtensaoGrade"
+      ],
+      "types": [
+        {
+          "name": "Forno elétrico de embutir 60 cm 70 L",
+          "values": {
+            "Largura": 0.595,
+            "Profundidade": 0.57,
+            "Altura": 0.595,
+            "AlturaPainel": 0.11,
+            "EspessuraPorta": 0.04,
+            "FolgaLateralGabinete": 0.0175,
+            "AnguloPorta": 0,
+            "ExtensaoGrade": 0.0
+          },
+          "description": "Forno elétrico de embutir multifunção, frente 59,5 x 59,5 cm, 57 cm de profundidade, 70 L, para nicho de 56 cm"
+        },
+        {
+          "name": "Forno elétrico de embutir 90 cm 115 L",
+          "values": {
+            "Largura": 0.895,
+            "Profundidade": 0.57,
+            "Altura": 0.595,
+            "AlturaPainel": 0.11,
+            "EspessuraPorta": 0.04,
+            "FolgaLateralGabinete": 0.0175,
+            "AnguloPorta": 0,
+            "ExtensaoGrade": 0.0
+          },
+          "description": "Forno elétrico de embutir multifunção, frente 89,5 x 59,5 cm, 57 cm de profundidade, 115 L, para nicho de 86 cm"
+        }
+      ]
+    },
+    {
+      "file": "components/furniture/geladeira-duplex.ccomp",
+      "component": "Geladeira duplex",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Profundidade",
+        "Altura",
+        "AlturaFreezer",
+        "AlturaPes",
+        "EspessuraPorta",
+        "EspessuraParede",
+        "AnguloPortaFreezer",
+        "AnguloPortaRefrigerador"
+      ],
+      "types": [
+        {
+          "name": "Geladeira duplex 62 x 70 x 175 cm",
+          "values": {
+            "Largura": 0.62,
+            "Profundidade": 0.7,
+            "Altura": 1.75,
+            "AlturaFreezer": 0.48,
+            "AlturaPes": 0.03,
+            "EspessuraPorta": 0.06,
+            "EspessuraParede": 0.045,
+            "AnguloPortaFreezer": 0.0,
+            "AnguloPortaRefrigerador": 0.0
+          },
+          "description": "Geladeira duplex frost free com freezer superior, prateleiras de vidro e gavetas"
+        },
+        {
+          "name": "Geladeira duplex 70 x 73 x 186 cm",
+          "values": {
+            "Largura": 0.7,
+            "Profundidade": 0.73,
+            "Altura": 1.86,
+            "AlturaFreezer": 0.52,
+            "AlturaPes": 0.03,
+            "EspessuraPorta": 0.06,
+            "EspessuraParede": 0.045,
+            "AnguloPortaFreezer": 0.0,
+            "AnguloPortaRefrigerador": 0.0
+          },
+          "description": "Geladeira duplex frost free com freezer superior, prateleiras de vidro e gavetas"
+        }
+      ]
+    },
+    {
+      "file": "components/furniture/lava-loucas.ccomp",
+      "component": "Lava-louças",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Profundidade",
+        "Altura",
+        "AlturaRodape",
+        "AlturaPainel",
+        "EspessuraPorta",
+        "EspessuraTampo",
+        "AnguloPorta",
+        "ExtensaoCestoInferior",
+        "ExtensaoCestoSuperior"
+      ],
+      "types": [
+        {
+          "name": "Lava-louças 60 cm 14 serviços",
+          "values": {
+            "Largura": 0.6,
+            "Profundidade": 0.6,
+            "Altura": 0.85,
+            "AlturaRodape": 0.12,
+            "AlturaPainel": 0.1,
+            "EspessuraPorta": 0.05,
+            "EspessuraTampo": 0.03,
+            "AnguloPorta": 0,
+            "ExtensaoCestoInferior": 0.0,
+            "ExtensaoCestoSuperior": 0.0
+          },
+          "description": "Lava-louças de piso ou de embutir sob bancada, 60 x 60 x 85 cm, 14 serviços, porta basculante em inox"
+        },
+        {
+          "name": "Lava-louças 45 cm 10 serviços",
+          "values": {
+            "Largura": 0.45,
+            "Profundidade": 0.6,
+            "Altura": 0.85,
+            "AlturaRodape": 0.12,
+            "AlturaPainel": 0.1,
+            "EspessuraPorta": 0.05,
+            "EspessuraTampo": 0.03,
+            "AnguloPorta": 0,
+            "ExtensaoCestoInferior": 0.0,
+            "ExtensaoCestoSuperior": 0.0
+          },
+          "description": "Lava-louças compacta de piso ou de embutir sob bancada, 45 x 60 x 85 cm, 10 serviços, porta basculante em inox"
+        }
+      ]
+    },
+    {
+      "file": "components/furniture/liquidificador.ccomp",
+      "component": "Liquidificador",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Diametro",
+        "Altura",
+        "AlturaBase",
+        "DiametroCopo",
+        "ElevacaoCopo"
+      ],
+      "types": [
+        {
+          "name": "Liquidificador 2 L",
+          "values": {
+            "Diametro": 0.2,
+            "Altura": 0.4,
+            "AlturaBase": 0.165,
+            "DiametroCopo": 0.16,
+            "ElevacaoCopo": 0
+          },
+          "description": "Liquidificador de bancada com copo de 2 litros, seletor de velocidades e função pulsar"
+        },
+        {
+          "name": "Liquidificador 3 L",
+          "values": {
+            "Diametro": 0.22,
+            "Altura": 0.43,
+            "AlturaBase": 0.175,
+            "DiametroCopo": 0.18,
+            "ElevacaoCopo": 0
+          },
+          "description": "Liquidificador de bancada com copo de 3 litros, seletor de velocidades e função pulsar"
         }
       ]
     },
@@ -1036,6 +1495,52 @@
       ]
     },
     {
+      "file": "components/furniture/micro-ondas.ccomp",
+      "component": "Micro-ondas",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Profundidade",
+        "Altura",
+        "LarguraPainel",
+        "EspessuraPorta",
+        "AlturaPes",
+        "DiametroPrato",
+        "AnguloPorta"
+      ],
+      "types": [
+        {
+          "name": "Micro-ondas 30 L 49 x 38 x 29 cm",
+          "values": {
+            "Largura": 0.49,
+            "Profundidade": 0.38,
+            "Altura": 0.29,
+            "LarguraPainel": 0.11,
+            "EspessuraPorta": 0.035,
+            "AlturaPes": 0.012,
+            "DiametroPrato": 0.27,
+            "AnguloPorta": 0.0
+          },
+          "description": "Forno de micro-ondas de bancada com prato giratório e painel digital"
+        },
+        {
+          "name": "Micro-ondas 20 L 44 x 34 x 26 cm",
+          "values": {
+            "Largura": 0.44,
+            "Profundidade": 0.34,
+            "Altura": 0.26,
+            "LarguraPainel": 0.1,
+            "EspessuraPorta": 0.035,
+            "AlturaPes": 0.012,
+            "DiametroPrato": 0.245,
+            "AnguloPorta": 0.0
+          },
+          "description": "Forno de micro-ondas de bancada com prato giratório e painel digital"
+        }
+      ]
+    },
+    {
       "file": "components/furniture/sofa.ccomp",
       "component": "Sofá estofado",
       "kind": "Furniture",
@@ -1095,13 +1600,56 @@
       ]
     },
     {
+      "file": "components/furniture/tv-rack.ccomp",
+      "component": "TV com rack",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Profundidade",
+        "Altura",
+        "AlturaPes",
+        "LarguraTV",
+        "AlturaTV",
+        "AnguloPorta"
+      ],
+      "types": [
+        {
+          "name": "TV 55\" com rack 180 cm",
+          "values": {
+            "Largura": 1.8,
+            "Profundidade": 0.4,
+            "Altura": 0.55,
+            "AlturaPes": 0.12,
+            "LarguraTV": 1.232,
+            "AlturaTV": 0.712,
+            "AnguloPorta": 0
+          },
+          "description": "Rack de 180 cm com porta, nicho e gavetas, e TV de tela plana de 55\""
+        },
+        {
+          "name": "TV 43\" com rack 136 cm",
+          "values": {
+            "Largura": 1.36,
+            "Profundidade": 0.4,
+            "Altura": 0.55,
+            "AlturaPes": 0.12,
+            "LarguraTV": 0.966,
+            "AlturaTV": 0.562,
+            "AnguloPorta": 0
+          },
+          "description": "Rack de 136 cm com porta, nicho e gavetas, e TV de tela plana de 43\""
+        }
+      ]
+    },
+    {
       "file": "components/lighting/arandela-led.ccomp",
       "component": "Arandela LED",
       "kind": "Lighting",
       "mep": {
         "Device": {
           "device": "WallLight",
-          "power": 20.0
+          "power": 20
         }
       },
       "parameters": [
@@ -1137,7 +1685,7 @@
       "mep": {
         "Device": {
           "device": "CeilingLight",
-          "power": 40.0
+          "power": 40
         }
       },
       "parameters": [
@@ -1173,7 +1721,7 @@
       "mep": {
         "Device": {
           "device": "CeilingLight",
-          "power": 60.0
+          "power": 60
         }
       },
       "parameters": [
@@ -1206,7 +1754,7 @@
       "mep": {
         "Device": {
           "device": "CeilingLight",
-          "power": 100.0
+          "power": 100
         }
       },
       "parameters": [
@@ -1239,7 +1787,7 @@
       "mep": {
         "Device": {
           "device": "CeilingLight",
-          "power": 18.0
+          "power": 18
         }
       },
       "parameters": [
@@ -1548,15 +2096,18 @@
       "kind": "Plumbing",
       "mep": {
         "Fixture": {
-          "drain_units": 6.0,
-          "hot_water": false,
-          "supply_weight": 0.3
+          "drain_units": 6,
+          "supply_weight": 0.3,
+          "hot_water": false
         }
       },
       "parameters": [
         "Largura",
         "Profundidade",
-        "Altura"
+        "Altura",
+        "AlturaBacia",
+        "AnguloTampa",
+        "AnguloAssento"
       ],
       "types": [
         {
@@ -1564,7 +2115,10 @@
           "values": {
             "Largura": 0.38,
             "Profundidade": 0.65,
-            "Altura": 0.78
+            "Altura": 0.78,
+            "AlturaBacia": 0.39,
+            "AnguloTampa": 0,
+            "AnguloAssento": 0
           },
           "description": "Bacia convencional com caixa acoplada 6 L"
         },
@@ -1573,7 +2127,10 @@
           "values": {
             "Largura": 0.4,
             "Profundidade": 0.7,
-            "Altura": 0.82
+            "Altura": 0.82,
+            "AlturaBacia": 0.44,
+            "AnguloTampa": 0,
+            "AnguloAssento": 0
           },
           "description": "Bacia para pessoa com deficiência (assento a 0,46 m)"
         }
@@ -1585,9 +2142,9 @@
       "kind": "Plumbing",
       "mep": {
         "Fixture": {
-          "drain_units": 6.0,
-          "hot_water": false,
-          "supply_weight": 32.0
+          "drain_units": 6,
+          "supply_weight": 32,
+          "hot_water": false
         }
       },
       "parameters": [
@@ -1611,9 +2168,9 @@
       "kind": "Plumbing",
       "mep": {
         "Fixture": {
-          "drain_units": 2.0,
-          "hot_water": true,
-          "supply_weight": 1.0
+          "drain_units": 2,
+          "supply_weight": 1.0,
+          "hot_water": true
         }
       },
       "parameters": [
@@ -1648,9 +2205,9 @@
       "kind": "Plumbing",
       "mep": {
         "Fixture": {
-          "drain_units": 1.0,
-          "hot_water": true,
-          "supply_weight": 0.1
+          "drain_units": 1,
+          "supply_weight": 0.1,
+          "hot_water": true
         }
       },
       "parameters": [
@@ -1784,9 +2341,9 @@
       "kind": "Plumbing",
       "mep": {
         "Fixture": {
-          "drain_units": 2.0,
-          "hot_water": false,
-          "supply_weight": 0.1
+          "drain_units": 2,
+          "supply_weight": 0.1,
+          "hot_water": false
         }
       },
       "parameters": [
@@ -1805,14 +2362,72 @@
       ]
     },
     {
+      "file": "components/plumbing/lavadora-frontal.ccomp",
+      "component": "Lava e seca frontal",
+      "kind": "Plumbing",
+      "mep": {
+        "Fixture": {
+          "drain_units": 3,
+          "supply_weight": 1.0,
+          "hot_water": false
+        }
+      },
+      "parameters": [
+        "Largura",
+        "Profundidade",
+        "Altura",
+        "AlturaPainel",
+        "AlturaRodape",
+        "AlturaPes",
+        "DiametroPorta",
+        "DiametroTambor",
+        "ProfundidadeTambor",
+        "AnguloPorta"
+      ],
+      "types": [
+        {
+          "name": "Lava e seca 11 kg 60 x 60 x 85 cm",
+          "values": {
+            "Largura": 0.6,
+            "Profundidade": 0.6,
+            "Altura": 0.85,
+            "AlturaPainel": 0.115,
+            "AlturaRodape": 0.1,
+            "AlturaPes": 0.015,
+            "DiametroPorta": 0.48,
+            "DiametroTambor": 0.47,
+            "ProfundidadeTambor": 0.33,
+            "AnguloPorta": 0
+          },
+          "description": "Lava e seca frontal de 11 kg; ponto de água fria e esgoto; prever TUE de 1800 VA"
+        },
+        {
+          "name": "Lava e seca 13 kg 63 x 67 x 89 cm",
+          "values": {
+            "Largura": 0.63,
+            "Profundidade": 0.67,
+            "Altura": 0.89,
+            "AlturaPainel": 0.115,
+            "AlturaRodape": 0.1,
+            "AlturaPes": 0.015,
+            "DiametroPorta": 0.52,
+            "DiametroTambor": 0.5,
+            "ProfundidadeTambor": 0.4,
+            "AnguloPorta": 0
+          },
+          "description": "Lava e seca frontal de 13 kg; ponto de água fria e esgoto; prever TUE de 2000 VA"
+        }
+      ]
+    },
+    {
       "file": "components/plumbing/lavatorio-bancada.ccomp",
       "component": "Lavatório com bancada",
       "kind": "Plumbing",
       "mep": {
         "Fixture": {
-          "drain_units": 1.0,
-          "hot_water": true,
-          "supply_weight": 0.3
+          "drain_units": 1,
+          "supply_weight": 0.3,
+          "hot_water": true
         }
       },
       "parameters": [
@@ -1856,9 +2471,9 @@
       "kind": "Plumbing",
       "mep": {
         "Fixture": {
-          "drain_units": 1.0,
-          "hot_water": true,
-          "supply_weight": 0.3
+          "drain_units": 1,
+          "supply_weight": 0.3,
+          "hot_water": true
         }
       },
       "parameters": [
@@ -1893,9 +2508,9 @@
       "kind": "Plumbing",
       "mep": {
         "Fixture": {
-          "drain_units": 3.0,
-          "hot_water": false,
-          "supply_weight": 1.0
+          "drain_units": 3,
+          "supply_weight": 1.0,
+          "hot_water": false
         }
       },
       "parameters": [
@@ -1930,9 +2545,9 @@
       "kind": "Plumbing",
       "mep": {
         "Fixture": {
-          "drain_units": 2.0,
-          "hot_water": false,
-          "supply_weight": 0.3
+          "drain_units": 2,
+          "supply_weight": 0.3,
+          "hot_water": false
         }
       },
       "parameters": [
@@ -1960,15 +2575,16 @@
       "kind": "Plumbing",
       "mep": {
         "Fixture": {
-          "drain_units": 3.0,
-          "hot_water": true,
-          "supply_weight": 0.7
+          "drain_units": 3,
+          "supply_weight": 0.7,
+          "hot_water": true
         }
       },
       "parameters": [
         "Largura",
         "Profundidade",
-        "Altura"
+        "Altura",
+        "AberturaPortas"
       ],
       "types": [
         {
@@ -1976,7 +2592,8 @@
           "values": {
             "Largura": 1.2,
             "Profundidade": 0.55,
-            "Altura": 0.9
+            "Altura": 0.9,
+            "AberturaPortas": 0
           },
           "description": "Bancada de granito com cuba inox e gabinete"
         },
@@ -1985,7 +2602,8 @@
           "values": {
             "Largura": 1.5,
             "Profundidade": 0.55,
-            "Altura": 0.9
+            "Altura": 0.9,
+            "AberturaPortas": 0
           },
           "description": "Bancada de granito com cuba inox e gabinete"
         },
@@ -1994,7 +2612,8 @@
           "values": {
             "Largura": 2.0,
             "Profundidade": 0.55,
-            "Altura": 0.9
+            "Altura": 0.9,
+            "AberturaPortas": 0
           },
           "description": "Bancada de granito com cuba inox e gabinete"
         }
@@ -2006,9 +2625,9 @@
       "kind": "Plumbing",
       "mep": {
         "Fixture": {
-          "drain_units": 3.0,
-          "hot_water": false,
-          "supply_weight": 0.7
+          "drain_units": 3,
+          "supply_weight": 0.7,
+          "hot_water": false
         }
       },
       "parameters": [
@@ -2208,13 +2827,14 @@
     },
     {
       "file": "components/windows/janela-maxim-ar.ccomp",
-      "component": "Janela maxim-ar",
+      "component": "Janela maxim-ar de alumínio",
       "kind": "Window",
       "mep": null,
       "parameters": [
         "Largura",
         "Altura",
-        "Peitoril"
+        "Peitoril",
+        "AnguloAbertura"
       ],
       "types": [
         {
@@ -2222,7 +2842,8 @@
           "values": {
             "Largura": 0.6,
             "Altura": 0.6,
-            "Peitoril": 1.5
+            "Peitoril": 1.5,
+            "AnguloAbertura": 0.0
           },
           "description": "Janela maxim-ar de uma folha, alumínio, para banheiros"
         },
@@ -2231,7 +2852,8 @@
           "values": {
             "Largura": 0.8,
             "Altura": 0.6,
-            "Peitoril": 1.5
+            "Peitoril": 1.5,
+            "AnguloAbertura": 0.0
           },
           "description": "Janela maxim-ar de uma folha, alumínio, para banheiros"
         },
@@ -2240,7 +2862,8 @@
           "values": {
             "Largura": 1.0,
             "Altura": 0.6,
-            "Peitoril": 1.5
+            "Peitoril": 1.5,
+            "AnguloAbertura": 0.0
           },
           "description": "Janela maxim-ar de uma folha, alumínio, para banheiros"
         }

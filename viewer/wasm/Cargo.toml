@@ -1,0 +1,29 @@
+[package]
+name = "ccomp_viewer"
+description = "Geometry core of the web viewer of ConstructCraft .ccomp component files, built to WebAssembly"
+version = "0.1.0"
+edition = "2024"
+license = "GPL-3.0-or-later"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+# The engine, without Lua (`cc_geom`'s `script` feature). Until the branch is pushed, build.mjs
+# patches these to a local checkout named by CCAD_SRC.
+cc_core = { git = "https://github.com/francisreboucas/constructcraft", branch = "feat/geom-without-lua" }
+cc_geom = { git = "https://github.com/francisreboucas/constructcraft", branch = "feat/geom-without-lua", default-features = false }
+# Pinned: the wasm-bindgen CLI that build.mjs runs must be this exact version.
+wasm-bindgen = "=0.2.130"
+js-sys = "0.3.107"
+serde = { version = "1", features = ["derive"] }
+serde-wasm-bindgen = "0.6.5"
+
+# Small download: optimized for size, one codegen unit, no unwinding.
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = "debuginfo"

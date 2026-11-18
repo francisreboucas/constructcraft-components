@@ -1,0 +1,61 @@
+/*
+ * Design tokens. Light theme only.
+ * The scene (grid, edges, dimension lines) reads its colours from these
+ * properties through src/theme.ts, so change them here, not in TypeScript.
+ */
+:root {
+  /* Colour */
+  --paper: #e9eef2;
+  --paper-raised: #f6f8fa;
+  --ink: #16243a;
+  --ink-soft: #4b5b73;
+  --rule: #c5cfd9;
+  --accent: #e4572e; /* the only accent: dimension lines, the active marker and the primary action */
+  /* Text on the accent. White (3.7:1) and --ink (4.2:1) both miss WCAG AA for
+     body-size text on #e4572e; this darker navy passes (5.1:1). */
+  --on-accent: #0b1220;
+  --rule-faint: color-mix(in srgb, var(--rule) 45%, transparent);
+
+  /* Layout */
+  --rail-width: 232px;
+  --panel-width: 360px;
+  --radius: 2px;
+  --focus-ring: 2px solid var(--accent);
+
+  /* Font families */
+  --font-display: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+  --font-data: 'IBM Plex Mono', ui-monospace, monospace;
+
+  /* Display text is set in uppercase with slight tracking (see .display). */
+  --display-weight: 600;
+  --display-tracking: 0.04em;
+  --display-transform: uppercase;
+
+  /* Type scale (rem, ~1.25 ratio) */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5625rem;
+  --text-2xl: 1.953rem;
+  --text-3xl: 2.441rem;
+
+  --leading-tight: 1.15;
+  --leading-body: 1.5;
+
+  /* Spacing scale (4 px base) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+
+  /* Lines */
+  --rule-width: 1px;
+
+  color-scheme: light;
+}

@@ -12,8 +12,8 @@ body:
   - type: input
     id: version
     attributes:
-      label: Versão do ConstructCAD · ConstructCAD version
-      placeholder: "0.9.0"
+      label: Versão do ConstructCraft · ConstructCraft version
+      placeholder: "0.12.0"
   - type: textarea
     id: what
     attributes:
