@@ -5,7 +5,7 @@ import random
 
 from kit import *
 
-EPS = 0.001  # scale of a collapsed group: its pieces shrink into a point hidden inside a panel
+EPS = 0.005  # scale of a collapsed group: its pieces shrink into a point hidden inside a panel
 
 
 class Grp:
@@ -183,7 +183,7 @@ def build():
     D = c.param("Profundidade", 0.3)
     H = c.param("Altura", 1.8)
     c.material("Papel", (238, 232, 214), "Generic", "Matte")
-    c.material("Folhagem", (58, 112, 60), "Generic", "Matte")
+    c.material("Folhagem", (78, 122, 58), "Generic", "Matte")
     for name, color in COVERS.items():
         c.material(name, color, "Generic", "Matte")
     WOOD, STEEL = "Madeira", "Aço galvanizado"

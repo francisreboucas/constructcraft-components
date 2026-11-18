@@ -26,22 +26,3048 @@
         "value": 1.5,
         "kind": "Length",
         "instance": true
+      },
+      {
+        "name": "AnguloPortas",
+        "value": 0,
+        "kind": "Angle",
+        "instance": true
       }
     ],
     "items": [
       {
         "name": "Corpo",
-        "material": "MDF branco",
-        "in_plan": true,
         "shape": {
           "Box": {
-            "x": "-Largura / 2",
-            "y": "-Profundidade / 2",
+            "x": "(-Largura/2)",
+            "y": "(-Profundidade/2)",
             "z": "Elevacao",
             "width": "Largura",
             "depth": "Profundidade",
             "height": "Altura"
           }
+        },
+        "material": "MDF branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Lateral esquerda",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2)",
+            "y": "((-Profundidade/2) + 0.02)",
+            "z": "Elevacao",
+            "width": "0.018",
+            "depth": "Profundidade - 0.02",
+            "height": "Altura"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lateral direita",
+        "shape": {
+          "Box": {
+            "x": "(Largura/2) - 0.018",
+            "y": "((-Profundidade/2) + 0.02)",
+            "z": "Elevacao",
+            "width": "0.018",
+            "depth": "Profundidade - 0.02",
+            "height": "Altura"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampo superior",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.018",
+            "y": "((-Profundidade/2) + 0.02)",
+            "z": "(Elevacao + Altura) - 0.018",
+            "width": "Largura - 2*0.018",
+            "depth": "Profundidade - 0.035",
+            "height": "0.018"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Base",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.018",
+            "y": "((-Profundidade/2) + 0.02)",
+            "z": "(Elevacao + 0.02)",
+            "width": "Largura - 2*0.018",
+            "depth": "Profundidade - 0.035",
+            "height": "0.018"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Fundo",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.018",
+            "y": "(Profundidade/2) - 0.018",
+            "z": "(Elevacao + 0.02)",
+            "width": "Largura - 2*0.018",
+            "depth": "0.003",
+            "height": "Altura - 0.02"
+          }
+        },
+        "material": "Laminado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Divisória",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2 - ((Largura/2) - 0.018/2))",
+            "y": "0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((-Profundidade/2) + 0.02) + 0.002 - 0)",
+            "z": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Elevacao + 0.02) + 0.018) - (Elevacao + Altura/2))",
+            "width": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.018",
+            "depth": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(Profundidade - 0.04)",
+            "height": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(Altura - 0.02 - 2*0.018)"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Fita de borda da base",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.018",
+            "y": "((-Profundidade/2) + 0.02) - 0.0005",
+            "z": "(Elevacao + 0.02)",
+            "width": "Largura - 2*0.018",
+            "depth": "0.0005",
+            "height": "0.018"
+          }
+        },
+        "material": "Laminado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trilho de fixação",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.03",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "(Elevacao + Altura) - 0.075",
+            "width": "Largura - 0.06",
+            "depth": "0.006",
+            "height": "0.035"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trilho de fixação - aba",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.03",
+            "y": "(Profundidade/2) - 0.012",
+            "z": "(Elevacao + Altura) - 0.046",
+            "width": "Largura - 0.06",
+            "depth": "0.006",
+            "height": "0.006"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte de suspensão esquerdo",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.018",
+            "y": "(Profundidade/2) - 0.04",
+            "z": "(Elevacao + Altura) - 0.018 - 0.06",
+            "width": "0.045",
+            "depth": "0.022",
+            "height": "0.06"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte de suspensão esquerdo - parafuso de regulagem",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-Largura/2) + 0.018 + 0.0225",
+                "v": "(Profundidade/2) - 0.042"
+              },
+              {
+                "u": "((-Largura/2) + 0.018 + 0.0225) + 0.004",
+                "v": "(Profundidade/2) - 0.042"
+              },
+              {
+                "u": "((-Largura/2) + 0.018 + 0.0225) + 0.004",
+                "v": "((Profundidade/2) - 0.042) + 0.002"
+              },
+              {
+                "u": "(-Largura/2) + 0.018 + 0.0225",
+                "v": "((Profundidade/2) - 0.042) + 0.002"
+              }
+            ],
+            "offset": "(Elevacao + Altura) - 0.018 - 0.02",
+            "axis": "(-Largura/2) + 0.018 + 0.0225",
+            "angle": "360"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte de suspensão esquerdo - parafuso de aperto",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-Largura/2) + 0.018 + 0.0225",
+                "v": "(Profundidade/2) - 0.042"
+              },
+              {
+                "u": "((-Largura/2) + 0.018 + 0.0225) + 0.004",
+                "v": "(Profundidade/2) - 0.042"
+              },
+              {
+                "u": "((-Largura/2) + 0.018 + 0.0225) + 0.004",
+                "v": "((Profundidade/2) - 0.042) + 0.002"
+              },
+              {
+                "u": "(-Largura/2) + 0.018 + 0.0225",
+                "v": "((Profundidade/2) - 0.042) + 0.002"
+              }
+            ],
+            "offset": "(Elevacao + Altura) - 0.018 - 0.042",
+            "axis": "(-Largura/2) + 0.018 + 0.0225",
+            "angle": "360"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte de suspensão direito",
+        "shape": {
+          "Box": {
+            "x": "(Largura/2) - 0.018 - 0.045",
+            "y": "(Profundidade/2) - 0.04",
+            "z": "(Elevacao + Altura) - 0.018 - 0.06",
+            "width": "0.045",
+            "depth": "0.022",
+            "height": "0.06"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte de suspensão direito - parafuso de regulagem",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(Largura/2) - 0.018 - 0.045 + 0.0225",
+                "v": "(Profundidade/2) - 0.042"
+              },
+              {
+                "u": "((Largura/2) - 0.018 - 0.045 + 0.0225) + 0.004",
+                "v": "(Profundidade/2) - 0.042"
+              },
+              {
+                "u": "((Largura/2) - 0.018 - 0.045 + 0.0225) + 0.004",
+                "v": "((Profundidade/2) - 0.042) + 0.002"
+              },
+              {
+                "u": "(Largura/2) - 0.018 - 0.045 + 0.0225",
+                "v": "((Profundidade/2) - 0.042) + 0.002"
+              }
+            ],
+            "offset": "(Elevacao + Altura) - 0.018 - 0.02",
+            "axis": "(Largura/2) - 0.018 - 0.045 + 0.0225",
+            "angle": "360"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte de suspensão direito - parafuso de aperto",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(Largura/2) - 0.018 - 0.045 + 0.0225",
+                "v": "(Profundidade/2) - 0.042"
+              },
+              {
+                "u": "((Largura/2) - 0.018 - 0.045 + 0.0225) + 0.004",
+                "v": "(Profundidade/2) - 0.042"
+              },
+              {
+                "u": "((Largura/2) - 0.018 - 0.045 + 0.0225) + 0.004",
+                "v": "((Profundidade/2) - 0.042) + 0.002"
+              },
+              {
+                "u": "(Largura/2) - 0.018 - 0.045 + 0.0225",
+                "v": "((Profundidade/2) - 0.042) + 0.002"
+              }
+            ],
+            "offset": "(Elevacao + Altura) - 0.018 - 0.042",
+            "axis": "(Largura/2) - 0.018 - 0.045 + 0.0225",
+            "angle": "360"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Perfil da fita de LED",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.018 + 0.02",
+            "y": "(((-Profundidade/2) + 0.02) + 0.03)",
+            "z": "(Elevacao + 0.02) - 0.008",
+            "width": "Largura - 2*0.018 - 0.04",
+            "depth": "0.018",
+            "height": "0.008"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Difusor da fita de LED",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.018 + 0.022",
+            "y": "(((-Profundidade/2) + 0.02) + 0.03) + 0.002",
+            "z": "(Elevacao + 0.02) - 0.0095",
+            "width": "Largura - 2*0.018 - 0.044",
+            "depth": "0.014",
+            "height": "0.0015"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Fonte da fita de LED",
+        "shape": {
+          "Box": {
+            "x": "(Largura/2) - 0.018 - 0.14",
+            "y": "(Profundidade/2) - 0.075",
+            "z": "(Elevacao + 0.02) - 0.018",
+            "width": "0.11",
+            "depth": "0.04",
+            "height": "0.018"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cabo da fita de LED",
+        "shape": {
+          "Box": {
+            "x": "(Largura/2) - 0.018 - 0.09",
+            "y": "(((-Profundidade/2) + 0.02) + 0.03) + 0.018",
+            "z": "(Elevacao + 0.02) - 0.005",
+            "width": "0.004",
+            "depth": "Profundidade - 0.143",
+            "height": "0.004"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Prateleira 1",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.018 + 0.001",
+            "y": "(((-Profundidade/2) + 0.02) + 0.02)",
+            "z": "(((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2)",
+            "width": "((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018 + 0.018/2*min(1, max(0, ceil(Largura/0.45 - 0.01) - 2))) - (-Largura/2) - 0.018) - 0.002",
+            "depth": "(Profundidade - 0.02 - 0.02 - 0.0185)",
+            "height": "0.018"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Prateleira 3",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + 0.001 - ((Largura/2) - 0.018/2))",
+            "y": "0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Profundidade/2) + 0.02) + 0.02) - 0)",
+            "z": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) - (Elevacao + Altura/2))",
+            "width": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2) - 0.002)",
+            "depth": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((Profundidade - 0.02 - 0.02 - 0.0185))",
+            "height": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.018"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pino da prateleira 1 - esquerdo 1",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((((-Profundidade/2) + 0.02) + 0.02) + 0.04) - 0.0025",
+                "v": "(((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) - 0.0025",
+                "radius": "0.0025"
+              },
+              {
+                "u": "((((-Profundidade/2) + 0.02) + 0.02) + 0.04) + 0.0025",
+                "v": "(((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) - 0.0025",
+                "radius": "0.0025"
+              }
+            ],
+            "offset": "(-Largura/2) + 0.018",
+            "depth": "0.009"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pino da prateleira 1 - direito 1",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((((-Profundidade/2) + 0.02) + 0.02) + 0.04) - 0.0025",
+                "v": "(((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) - 0.0025",
+                "radius": "0.0025"
+              },
+              {
+                "u": "((((-Profundidade/2) + 0.02) + 0.02) + 0.04) + 0.0025",
+                "v": "(((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) - 0.0025",
+                "radius": "0.0025"
+              }
+            ],
+            "offset": "(((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018 + 0.018/2*min(1, max(0, ceil(Largura/0.45 - 0.01) - 2))) - 0.009",
+            "depth": "0.009"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pino da prateleira 3 - esquerdo 1",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Profundidade/2) + 0.02) + 0.02) + 0.04 - 0)) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.0025)",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) - 0.0025 - (Elevacao + Altura/2))",
+                "radius": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.0025"
+              },
+              {
+                "u": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Profundidade/2) + 0.02) + 0.02) + 0.04 - 0)) + ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.0025)",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) - 0.0025 - (Elevacao + Altura/2))",
+                "radius": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.0025"
+              }
+            ],
+            "offset": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) - ((Largura/2) - 0.018/2))",
+            "depth": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.009"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pino da prateleira 3 - direito 1",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Profundidade/2) + 0.02) + 0.02) + 0.04 - 0)) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.0025)",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) - 0.0025 - (Elevacao + Altura/2))",
+                "radius": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.0025"
+              },
+              {
+                "u": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Profundidade/2) + 0.02) + 0.02) + 0.04 - 0)) + ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.0025)",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) - 0.0025 - (Elevacao + Altura/2))",
+                "radius": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.0025"
+              }
+            ],
+            "offset": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2) - 0.009 - ((Largura/2) - 0.018/2))",
+            "depth": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.009"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pino da prateleira 1 - esquerdo 2",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((((-Profundidade/2) + 0.02) + 0.02) + (Profundidade - 0.02 - 0.02 - 0.0185) - 0.04) - 0.0025",
+                "v": "(((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) - 0.0025",
+                "radius": "0.0025"
+              },
+              {
+                "u": "((((-Profundidade/2) + 0.02) + 0.02) + (Profundidade - 0.02 - 0.02 - 0.0185) - 0.04) + 0.0025",
+                "v": "(((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) - 0.0025",
+                "radius": "0.0025"
+              }
+            ],
+            "offset": "(-Largura/2) + 0.018",
+            "depth": "0.009"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pino da prateleira 1 - direito 2",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((((-Profundidade/2) + 0.02) + 0.02) + (Profundidade - 0.02 - 0.02 - 0.0185) - 0.04) - 0.0025",
+                "v": "(((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) - 0.0025",
+                "radius": "0.0025"
+              },
+              {
+                "u": "((((-Profundidade/2) + 0.02) + 0.02) + (Profundidade - 0.02 - 0.02 - 0.0185) - 0.04) + 0.0025",
+                "v": "(((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) - 0.0025",
+                "radius": "0.0025"
+              }
+            ],
+            "offset": "(((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018 + 0.018/2*min(1, max(0, ceil(Largura/0.45 - 0.01) - 2))) - 0.009",
+            "depth": "0.009"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pino da prateleira 3 - esquerdo 2",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Profundidade/2) + 0.02) + 0.02) + (Profundidade - 0.02 - 0.02 - 0.0185) - 0.04 - 0)) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.0025)",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) - 0.0025 - (Elevacao + Altura/2))",
+                "radius": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.0025"
+              },
+              {
+                "u": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Profundidade/2) + 0.02) + 0.02) + (Profundidade - 0.02 - 0.02 - 0.0185) - 0.04 - 0)) + ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.0025)",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) - 0.0025 - (Elevacao + Altura/2))",
+                "radius": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.0025"
+              }
+            ],
+            "offset": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) - ((Largura/2) - 0.018/2))",
+            "depth": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.009"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pino da prateleira 3 - direito 2",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Profundidade/2) + 0.02) + 0.02) + (Profundidade - 0.02 - 0.02 - 0.0185) - 0.04 - 0)) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.0025)",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) - 0.0025 - (Elevacao + Altura/2))",
+                "radius": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.0025"
+              },
+              {
+                "u": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Profundidade/2) + 0.02) + 0.02) + (Profundidade - 0.02 - 0.02 - 0.0185) - 0.04 - 0)) + ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.0025)",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) - 0.0025 - (Elevacao + Altura/2))",
+                "radius": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.0025"
+              }
+            ],
+            "offset": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2) - 0.009 - ((Largura/2) - 0.018/2))",
+            "depth": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.009"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Prateleira 2",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.018 + 0.001",
+            "y": "(((-Profundidade/2) + 0.02) + 0.02)",
+            "z": "(((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2)",
+            "width": "((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018 + 0.018/2*min(1, max(0, ceil(Largura/0.45 - 0.01) - 2))) - (-Largura/2) - 0.018) - 0.002",
+            "depth": "(Profundidade - 0.02 - 0.02 - 0.0185)",
+            "height": "0.018"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Prateleira 4",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + 0.001 - ((Largura/2) - 0.018/2))",
+            "y": "0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Profundidade/2) + 0.02) + 0.02) - 0)",
+            "z": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) - (Elevacao + Altura/2))",
+            "width": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2) - 0.002)",
+            "depth": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((Profundidade - 0.02 - 0.02 - 0.0185))",
+            "height": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.018"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pino da prateleira 2 - esquerdo 1",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((((-Profundidade/2) + 0.02) + 0.02) + 0.04) - 0.0025",
+                "v": "(((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) - 0.0025",
+                "radius": "0.0025"
+              },
+              {
+                "u": "((((-Profundidade/2) + 0.02) + 0.02) + 0.04) + 0.0025",
+                "v": "(((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) - 0.0025",
+                "radius": "0.0025"
+              }
+            ],
+            "offset": "(-Largura/2) + 0.018",
+            "depth": "0.009"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pino da prateleira 2 - direito 1",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((((-Profundidade/2) + 0.02) + 0.02) + 0.04) - 0.0025",
+                "v": "(((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) - 0.0025",
+                "radius": "0.0025"
+              },
+              {
+                "u": "((((-Profundidade/2) + 0.02) + 0.02) + 0.04) + 0.0025",
+                "v": "(((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) - 0.0025",
+                "radius": "0.0025"
+              }
+            ],
+            "offset": "(((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018 + 0.018/2*min(1, max(0, ceil(Largura/0.45 - 0.01) - 2))) - 0.009",
+            "depth": "0.009"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pino da prateleira 4 - esquerdo 1",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Profundidade/2) + 0.02) + 0.02) + 0.04 - 0)) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.0025)",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) - 0.0025 - (Elevacao + Altura/2))",
+                "radius": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.0025"
+              },
+              {
+                "u": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Profundidade/2) + 0.02) + 0.02) + 0.04 - 0)) + ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.0025)",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) - 0.0025 - (Elevacao + Altura/2))",
+                "radius": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.0025"
+              }
+            ],
+            "offset": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) - ((Largura/2) - 0.018/2))",
+            "depth": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.009"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pino da prateleira 4 - direito 1",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Profundidade/2) + 0.02) + 0.02) + 0.04 - 0)) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.0025)",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) - 0.0025 - (Elevacao + Altura/2))",
+                "radius": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.0025"
+              },
+              {
+                "u": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Profundidade/2) + 0.02) + 0.02) + 0.04 - 0)) + ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.0025)",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) - 0.0025 - (Elevacao + Altura/2))",
+                "radius": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.0025"
+              }
+            ],
+            "offset": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2) - 0.009 - ((Largura/2) - 0.018/2))",
+            "depth": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.009"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pino da prateleira 2 - esquerdo 2",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((((-Profundidade/2) + 0.02) + 0.02) + (Profundidade - 0.02 - 0.02 - 0.0185) - 0.04) - 0.0025",
+                "v": "(((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) - 0.0025",
+                "radius": "0.0025"
+              },
+              {
+                "u": "((((-Profundidade/2) + 0.02) + 0.02) + (Profundidade - 0.02 - 0.02 - 0.0185) - 0.04) + 0.0025",
+                "v": "(((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) - 0.0025",
+                "radius": "0.0025"
+              }
+            ],
+            "offset": "(-Largura/2) + 0.018",
+            "depth": "0.009"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pino da prateleira 2 - direito 2",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((((-Profundidade/2) + 0.02) + 0.02) + (Profundidade - 0.02 - 0.02 - 0.0185) - 0.04) - 0.0025",
+                "v": "(((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) - 0.0025",
+                "radius": "0.0025"
+              },
+              {
+                "u": "((((-Profundidade/2) + 0.02) + 0.02) + (Profundidade - 0.02 - 0.02 - 0.0185) - 0.04) + 0.0025",
+                "v": "(((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) - 0.0025",
+                "radius": "0.0025"
+              }
+            ],
+            "offset": "(((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018 + 0.018/2*min(1, max(0, ceil(Largura/0.45 - 0.01) - 2))) - 0.009",
+            "depth": "0.009"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pino da prateleira 4 - esquerdo 2",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Profundidade/2) + 0.02) + 0.02) + (Profundidade - 0.02 - 0.02 - 0.0185) - 0.04 - 0)) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.0025)",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) - 0.0025 - (Elevacao + Altura/2))",
+                "radius": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.0025"
+              },
+              {
+                "u": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Profundidade/2) + 0.02) + 0.02) + (Profundidade - 0.02 - 0.02 - 0.0185) - 0.04 - 0)) + ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.0025)",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) - 0.0025 - (Elevacao + Altura/2))",
+                "radius": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.0025"
+              }
+            ],
+            "offset": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) - ((Largura/2) - 0.018/2))",
+            "depth": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.009"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pino da prateleira 4 - direito 2",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Profundidade/2) + 0.02) + 0.02) + (Profundidade - 0.02 - 0.02 - 0.0185) - 0.04 - 0)) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.0025)",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) - 0.0025 - (Elevacao + Altura/2))",
+                "radius": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.0025"
+              },
+              {
+                "u": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Profundidade/2) + 0.02) + 0.02) + (Profundidade - 0.02 - 0.02 - 0.0185) - 0.04 - 0)) + ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.0025)",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) - 0.0025 - (Elevacao + Altura/2))",
+                "radius": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.0025"
+              }
+            ],
+            "offset": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2) - 0.009 - ((Largura/2) - 0.018/2))",
+            "depth": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.009"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porta 1",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2) + 0.0015)) + 0*cos(AnguloPortas) - 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - 0*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0015)) + (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003))*cos(AnguloPortas) - 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003))*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0015)) + (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003))*cos(AnguloPortas) - 0.018*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003))*sin(AnguloPortas) - 0.018*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0015)) + 0*cos(AnguloPortas) - 0.018*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - 0*sin(AnguloPortas) - 0.018*cos(AnguloPortas)"
+              }
+            ],
+            "offset": "(Elevacao + 0.0015)",
+            "depth": "(Altura - 0.003)"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça superior da porta 1 - caneca",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2) + 0.0015)) + 0.005*cos(AnguloPortas) - (-0.003)*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - 0.005*sin(AnguloPortas) - (-0.003)*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0015)) + 0.04*cos(AnguloPortas) - (-0.003)*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - 0.04*sin(AnguloPortas) - (-0.003)*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0015)) + 0.04*cos(AnguloPortas) - 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - 0.04*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0015)) + 0.005*cos(AnguloPortas) - 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - 0.005*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              }
+            ],
+            "offset": "(Elevacao + Altura) - 0.1 - 0.025",
+            "depth": "0.05"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça superior da porta 1 - braço",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018)",
+            "y": "((-Profundidade/2) + 0.018) + 0.0035",
+            "z": "(Elevacao + Altura) - 0.1 - 0.01",
+            "width": "0.012",
+            "depth": "0.055",
+            "height": "0.02"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça superior da porta 1 - calço",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018)",
+            "y": "((-Profundidade/2) + 0.018) + 0.022",
+            "z": "(Elevacao + Altura) - 0.1 - 0.0225",
+            "width": "0.004",
+            "depth": "0.05",
+            "height": "0.045"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça inferior da porta 1 - caneca",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2) + 0.0015)) + 0.005*cos(AnguloPortas) - (-0.003)*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - 0.005*sin(AnguloPortas) - (-0.003)*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0015)) + 0.04*cos(AnguloPortas) - (-0.003)*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - 0.04*sin(AnguloPortas) - (-0.003)*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0015)) + 0.04*cos(AnguloPortas) - 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - 0.04*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0015)) + 0.005*cos(AnguloPortas) - 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - 0.005*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              }
+            ],
+            "offset": "Elevacao + 0.12 - 0.025",
+            "depth": "0.05"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça inferior da porta 1 - braço",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018)",
+            "y": "((-Profundidade/2) + 0.018) + 0.0035",
+            "z": "Elevacao + 0.12 - 0.01",
+            "width": "0.012",
+            "depth": "0.055",
+            "height": "0.02"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça inferior da porta 1 - calço",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.018)",
+            "y": "((-Profundidade/2) + 0.018) + 0.022",
+            "z": "Elevacao + 0.12 - 0.0225",
+            "width": "0.004",
+            "depth": "0.05",
+            "height": "0.045"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Puxador da porta 1 - barra",
+        "shape": {
+          "Cylinder": {
+            "x": "(((-Largura/2) + 0.0015)) + (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035)*cos(AnguloPortas) - 0.044*sin(AnguloPortas)",
+            "y": "(((-Profundidade/2) + 0.018)) - (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035)*sin(AnguloPortas) - 0.044*cos(AnguloPortas)",
+            "z": "Elevacao + 0.13 - 0.16/2",
+            "radius": "0.005",
+            "height": "0.16"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Puxador da porta 1 - pino 1",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2) + 0.0015)) + ((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) - 0.004)*cos(AnguloPortas) - 0.018*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - ((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) - 0.004)*sin(AnguloPortas) - 0.018*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0015)) + ((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) + 0.004)*cos(AnguloPortas) - 0.018*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - ((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) + 0.004)*sin(AnguloPortas) - 0.018*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0015)) + ((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) + 0.004)*cos(AnguloPortas) - 0.044*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - ((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) + 0.004)*sin(AnguloPortas) - 0.044*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0015)) + ((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) - 0.004)*cos(AnguloPortas) - 0.044*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - ((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) - 0.004)*sin(AnguloPortas) - 0.044*cos(AnguloPortas)"
+              }
+            ],
+            "offset": "Elevacao + 0.13 - 0.16/2 + 0.02",
+            "depth": "0.008"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Puxador da porta 1 - pino 2",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2) + 0.0015)) + ((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) - 0.004)*cos(AnguloPortas) - 0.018*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - ((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) - 0.004)*sin(AnguloPortas) - 0.018*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0015)) + ((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) + 0.004)*cos(AnguloPortas) - 0.018*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - ((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) + 0.004)*sin(AnguloPortas) - 0.018*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0015)) + ((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) + 0.004)*cos(AnguloPortas) - 0.044*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - ((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) + 0.004)*sin(AnguloPortas) - 0.044*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0015)) + ((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) - 0.004)*cos(AnguloPortas) - 0.044*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - ((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) - 0.004)*sin(AnguloPortas) - 0.044*cos(AnguloPortas)"
+              }
+            ],
+            "offset": "Elevacao + 0.13 + 0.16/2 - 0.028",
+            "depth": "0.008"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Batente inferior da porta 1",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2) + 0.0015)) + (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.03)*cos(AnguloPortas) - (-0.0018)*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.03)*sin(AnguloPortas) - (-0.0018)*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0015)) + (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.022)*cos(AnguloPortas) - (-0.0018)*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.022)*sin(AnguloPortas) - (-0.0018)*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0015)) + (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.022)*cos(AnguloPortas) - 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.022)*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0015)) + (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.03)*cos(AnguloPortas) - 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.03)*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              }
+            ],
+            "offset": "(Elevacao + 0.02) + 0.005",
+            "depth": "0.008"
+          }
+        },
+        "material": "Plástico translúcido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Batente superior da porta 1",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2) + 0.0015)) + (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.03)*cos(AnguloPortas) - (-0.0018)*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.03)*sin(AnguloPortas) - (-0.0018)*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0015)) + (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.022)*cos(AnguloPortas) - (-0.0018)*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.022)*sin(AnguloPortas) - (-0.0018)*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0015)) + (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.022)*cos(AnguloPortas) - 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.022)*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0015)) + (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.03)*cos(AnguloPortas) - 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.03)*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              }
+            ],
+            "offset": "(Elevacao + Altura) - 0.013",
+            "depth": "0.008"
+          }
+        },
+        "material": "Plástico translúcido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porta 2",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.0015)) - 0*cos(AnguloPortas) + 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - 0*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              },
+              {
+                "u": "((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.0015)) - (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003))*cos(AnguloPortas) + 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003))*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              },
+              {
+                "u": "((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.0015)) - (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003))*cos(AnguloPortas) + 0.018*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003))*sin(AnguloPortas) - 0.018*cos(AnguloPortas)"
+              },
+              {
+                "u": "((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.0015)) - 0*cos(AnguloPortas) + 0.018*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - 0*sin(AnguloPortas) - 0.018*cos(AnguloPortas)"
+              }
+            ],
+            "offset": "(Elevacao + 0.0015)",
+            "depth": "(Altura - 0.003)"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça superior da porta 2 - caneca",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.0015)) - 0.005*cos(AnguloPortas) + (-0.003)*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - 0.005*sin(AnguloPortas) - (-0.003)*cos(AnguloPortas)"
+              },
+              {
+                "u": "((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.0015)) - 0.04*cos(AnguloPortas) + (-0.003)*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - 0.04*sin(AnguloPortas) - (-0.003)*cos(AnguloPortas)"
+              },
+              {
+                "u": "((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.0015)) - 0.04*cos(AnguloPortas) + 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - 0.04*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              },
+              {
+                "u": "((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.0015)) - 0.005*cos(AnguloPortas) + 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - 0.005*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              }
+            ],
+            "offset": "(Elevacao + Altura) - 0.1 - 0.025",
+            "depth": "0.05"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça superior da porta 2 - braço",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018 + 0.018/2*min(1, max(0, ceil(Largura/0.45 - 0.01) - 2))) - 0.012",
+            "y": "((-Profundidade/2) + 0.018) + 0.0035",
+            "z": "(Elevacao + Altura) - 0.1 - 0.01",
+            "width": "0.012",
+            "depth": "0.055",
+            "height": "0.02"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça superior da porta 2 - calço",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018 + 0.018/2*min(1, max(0, ceil(Largura/0.45 - 0.01) - 2))) - 0.004",
+            "y": "((-Profundidade/2) + 0.018) + 0.022",
+            "z": "(Elevacao + Altura) - 0.1 - 0.0225",
+            "width": "0.004",
+            "depth": "0.05",
+            "height": "0.045"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça inferior da porta 2 - caneca",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.0015)) - 0.005*cos(AnguloPortas) + (-0.003)*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - 0.005*sin(AnguloPortas) - (-0.003)*cos(AnguloPortas)"
+              },
+              {
+                "u": "((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.0015)) - 0.04*cos(AnguloPortas) + (-0.003)*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - 0.04*sin(AnguloPortas) - (-0.003)*cos(AnguloPortas)"
+              },
+              {
+                "u": "((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.0015)) - 0.04*cos(AnguloPortas) + 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - 0.04*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              },
+              {
+                "u": "((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.0015)) - 0.005*cos(AnguloPortas) + 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - 0.005*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              }
+            ],
+            "offset": "Elevacao + 0.12 - 0.025",
+            "depth": "0.05"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça inferior da porta 2 - braço",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018 + 0.018/2*min(1, max(0, ceil(Largura/0.45 - 0.01) - 2))) - 0.012",
+            "y": "((-Profundidade/2) + 0.018) + 0.0035",
+            "z": "Elevacao + 0.12 - 0.01",
+            "width": "0.012",
+            "depth": "0.055",
+            "height": "0.02"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça inferior da porta 2 - calço",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018 + 0.018/2*min(1, max(0, ceil(Largura/0.45 - 0.01) - 2))) - 0.004",
+            "y": "((-Profundidade/2) + 0.018) + 0.022",
+            "z": "Elevacao + 0.12 - 0.0225",
+            "width": "0.004",
+            "depth": "0.05",
+            "height": "0.045"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Puxador da porta 2 - barra",
+        "shape": {
+          "Cylinder": {
+            "x": "((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.0015)) - (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035)*cos(AnguloPortas) + 0.044*sin(AnguloPortas)",
+            "y": "(((-Profundidade/2) + 0.018)) - (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035)*sin(AnguloPortas) - 0.044*cos(AnguloPortas)",
+            "z": "Elevacao + 0.13 - 0.16/2",
+            "radius": "0.005",
+            "height": "0.16"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Puxador da porta 2 - pino 1",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.0015)) - ((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) - 0.004)*cos(AnguloPortas) + 0.018*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - ((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) - 0.004)*sin(AnguloPortas) - 0.018*cos(AnguloPortas)"
+              },
+              {
+                "u": "((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.0015)) - ((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) + 0.004)*cos(AnguloPortas) + 0.018*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - ((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) + 0.004)*sin(AnguloPortas) - 0.018*cos(AnguloPortas)"
+              },
+              {
+                "u": "((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.0015)) - ((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) + 0.004)*cos(AnguloPortas) + 0.044*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - ((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) + 0.004)*sin(AnguloPortas) - 0.044*cos(AnguloPortas)"
+              },
+              {
+                "u": "((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.0015)) - ((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) - 0.004)*cos(AnguloPortas) + 0.044*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - ((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) - 0.004)*sin(AnguloPortas) - 0.044*cos(AnguloPortas)"
+              }
+            ],
+            "offset": "Elevacao + 0.13 - 0.16/2 + 0.02",
+            "depth": "0.008"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Puxador da porta 2 - pino 2",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.0015)) - ((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) - 0.004)*cos(AnguloPortas) + 0.018*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - ((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) - 0.004)*sin(AnguloPortas) - 0.018*cos(AnguloPortas)"
+              },
+              {
+                "u": "((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.0015)) - ((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) + 0.004)*cos(AnguloPortas) + 0.018*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - ((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) + 0.004)*sin(AnguloPortas) - 0.018*cos(AnguloPortas)"
+              },
+              {
+                "u": "((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.0015)) - ((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) + 0.004)*cos(AnguloPortas) + 0.044*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - ((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) + 0.004)*sin(AnguloPortas) - 0.044*cos(AnguloPortas)"
+              },
+              {
+                "u": "((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.0015)) - ((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) - 0.004)*cos(AnguloPortas) + 0.044*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - ((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) - 0.004)*sin(AnguloPortas) - 0.044*cos(AnguloPortas)"
+              }
+            ],
+            "offset": "Elevacao + 0.13 + 0.16/2 - 0.028",
+            "depth": "0.008"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Batente inferior da porta 2",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.0015)) - (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.03)*cos(AnguloPortas) + (-0.0018)*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.03)*sin(AnguloPortas) - (-0.0018)*cos(AnguloPortas)"
+              },
+              {
+                "u": "((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.0015)) - (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.022)*cos(AnguloPortas) + (-0.0018)*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.022)*sin(AnguloPortas) - (-0.0018)*cos(AnguloPortas)"
+              },
+              {
+                "u": "((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.0015)) - (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.022)*cos(AnguloPortas) + 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.022)*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              },
+              {
+                "u": "((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.0015)) - (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.03)*cos(AnguloPortas) + 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.03)*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              }
+            ],
+            "offset": "(Elevacao + 0.02) + 0.005",
+            "depth": "0.008"
+          }
+        },
+        "material": "Plástico translúcido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Batente superior da porta 2",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.0015)) - (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.03)*cos(AnguloPortas) + (-0.0018)*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.03)*sin(AnguloPortas) - (-0.0018)*cos(AnguloPortas)"
+              },
+              {
+                "u": "((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.0015)) - (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.022)*cos(AnguloPortas) + (-0.0018)*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.022)*sin(AnguloPortas) - (-0.0018)*cos(AnguloPortas)"
+              },
+              {
+                "u": "((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.0015)) - (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.022)*cos(AnguloPortas) + 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.022)*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              },
+              {
+                "u": "((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.0015)) - (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.03)*cos(AnguloPortas) + 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade/2) + 0.018)) - (((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.03)*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              }
+            ],
+            "offset": "(Elevacao + Altura) - 0.013",
+            "depth": "0.008"
+          }
+        },
+        "material": "Plástico translúcido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porta 3",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/2) - 0.0015) - ((Largura/2) - 0.018/2))) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0)*cos(AnguloPortas) + ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0)*sin(AnguloPortas)",
+                "v": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((-Profundidade/2) + 0.018) - 0)) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0)*sin(AnguloPortas) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0)*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/2) - 0.0015) - ((Largura/2) - 0.018/2))) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/ceil(Largura/0.45 - 0.01)) - 0.003)))*cos(AnguloPortas) + ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0)*sin(AnguloPortas)",
+                "v": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((-Profundidade/2) + 0.018) - 0)) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/ceil(Largura/0.45 - 0.01)) - 0.003)))*sin(AnguloPortas) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0)*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/2) - 0.0015) - ((Largura/2) - 0.018/2))) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/ceil(Largura/0.45 - 0.01)) - 0.003)))*cos(AnguloPortas) + ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.018)*sin(AnguloPortas)",
+                "v": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((-Profundidade/2) + 0.018) - 0)) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/ceil(Largura/0.45 - 0.01)) - 0.003)))*sin(AnguloPortas) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.018)*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/2) - 0.0015) - ((Largura/2) - 0.018/2))) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0)*cos(AnguloPortas) + ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.018)*sin(AnguloPortas)",
+                "v": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((-Profundidade/2) + 0.018) - 0)) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0)*sin(AnguloPortas) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.018)*cos(AnguloPortas)"
+              }
+            ],
+            "offset": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((Elevacao + 0.0015) - (Elevacao + Altura/2))",
+            "depth": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((Altura - 0.003))"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça superior da porta 3 - caneca",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/2) - 0.0015) - ((Largura/2) - 0.018/2))) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.005)*cos(AnguloPortas) + ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(-0.003))*sin(AnguloPortas)",
+                "v": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((-Profundidade/2) + 0.018) - 0)) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.005)*sin(AnguloPortas) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(-0.003))*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/2) - 0.0015) - ((Largura/2) - 0.018/2))) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.04)*cos(AnguloPortas) + ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(-0.003))*sin(AnguloPortas)",
+                "v": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((-Profundidade/2) + 0.018) - 0)) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.04)*sin(AnguloPortas) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(-0.003))*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/2) - 0.0015) - ((Largura/2) - 0.018/2))) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.04)*cos(AnguloPortas) + ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0)*sin(AnguloPortas)",
+                "v": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((-Profundidade/2) + 0.018) - 0)) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.04)*sin(AnguloPortas) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0)*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/2) - 0.0015) - ((Largura/2) - 0.018/2))) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.005)*cos(AnguloPortas) + ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0)*sin(AnguloPortas)",
+                "v": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((-Profundidade/2) + 0.018) - 0)) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.005)*sin(AnguloPortas) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0)*cos(AnguloPortas)"
+              }
+            ],
+            "offset": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((Elevacao + Altura) - 0.1 - 0.025 - (Elevacao + Altura/2))",
+            "depth": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.05"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça superior da porta 3 - braço",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/2) - 0.018) - 0.012 - ((Largura/2) - 0.018/2))",
+            "y": "0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((-Profundidade/2) + 0.018) + 0.0035 - 0)",
+            "z": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((Elevacao + Altura) - 0.1 - 0.01 - (Elevacao + Altura/2))",
+            "width": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.012",
+            "depth": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.055",
+            "height": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.02"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça superior da porta 3 - calço",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/2) - 0.018) - 0.004 - ((Largura/2) - 0.018/2))",
+            "y": "0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((-Profundidade/2) + 0.018) + 0.022 - 0)",
+            "z": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((Elevacao + Altura) - 0.1 - 0.0225 - (Elevacao + Altura/2))",
+            "width": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.004",
+            "depth": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.05",
+            "height": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.045"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça inferior da porta 3 - caneca",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/2) - 0.0015) - ((Largura/2) - 0.018/2))) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.005)*cos(AnguloPortas) + ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(-0.003))*sin(AnguloPortas)",
+                "v": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((-Profundidade/2) + 0.018) - 0)) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.005)*sin(AnguloPortas) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(-0.003))*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/2) - 0.0015) - ((Largura/2) - 0.018/2))) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.04)*cos(AnguloPortas) + ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(-0.003))*sin(AnguloPortas)",
+                "v": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((-Profundidade/2) + 0.018) - 0)) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.04)*sin(AnguloPortas) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(-0.003))*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/2) - 0.0015) - ((Largura/2) - 0.018/2))) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.04)*cos(AnguloPortas) + ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0)*sin(AnguloPortas)",
+                "v": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((-Profundidade/2) + 0.018) - 0)) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.04)*sin(AnguloPortas) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0)*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/2) - 0.0015) - ((Largura/2) - 0.018/2))) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.005)*cos(AnguloPortas) + ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0)*sin(AnguloPortas)",
+                "v": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((-Profundidade/2) + 0.018) - 0)) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.005)*sin(AnguloPortas) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0)*cos(AnguloPortas)"
+              }
+            ],
+            "offset": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(Elevacao + 0.12 - 0.025 - (Elevacao + Altura/2))",
+            "depth": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.05"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça inferior da porta 3 - braço",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/2) - 0.018) - 0.012 - ((Largura/2) - 0.018/2))",
+            "y": "0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((-Profundidade/2) + 0.018) + 0.0035 - 0)",
+            "z": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(Elevacao + 0.12 - 0.01 - (Elevacao + Altura/2))",
+            "width": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.012",
+            "depth": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.055",
+            "height": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.02"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça inferior da porta 3 - calço",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/2) - 0.018) - 0.004 - ((Largura/2) - 0.018/2))",
+            "y": "0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((-Profundidade/2) + 0.018) + 0.022 - 0)",
+            "z": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(Elevacao + 0.12 - 0.0225 - (Elevacao + Altura/2))",
+            "width": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.004",
+            "depth": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.05",
+            "height": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.045"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Puxador da porta 3 - barra",
+        "shape": {
+          "Cylinder": {
+            "x": "(((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/2) - 0.0015) - ((Largura/2) - 0.018/2))) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035))*cos(AnguloPortas) + ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.044)*sin(AnguloPortas)",
+            "y": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((-Profundidade/2) + 0.018) - 0)) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035))*sin(AnguloPortas) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.044)*cos(AnguloPortas)",
+            "z": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(Elevacao + 0.13 - 0.16/2 - (Elevacao + Altura/2))",
+            "radius": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.005",
+            "height": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.16"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Puxador da porta 3 - pino 1",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/2) - 0.0015) - ((Largura/2) - 0.018/2))) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) - 0.004))*cos(AnguloPortas) + ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.018)*sin(AnguloPortas)",
+                "v": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((-Profundidade/2) + 0.018) - 0)) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) - 0.004))*sin(AnguloPortas) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.018)*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/2) - 0.0015) - ((Largura/2) - 0.018/2))) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) + 0.004))*cos(AnguloPortas) + ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.018)*sin(AnguloPortas)",
+                "v": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((-Profundidade/2) + 0.018) - 0)) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) + 0.004))*sin(AnguloPortas) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.018)*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/2) - 0.0015) - ((Largura/2) - 0.018/2))) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) + 0.004))*cos(AnguloPortas) + ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.044)*sin(AnguloPortas)",
+                "v": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((-Profundidade/2) + 0.018) - 0)) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) + 0.004))*sin(AnguloPortas) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.044)*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/2) - 0.0015) - ((Largura/2) - 0.018/2))) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) - 0.004))*cos(AnguloPortas) + ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.044)*sin(AnguloPortas)",
+                "v": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((-Profundidade/2) + 0.018) - 0)) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) - 0.004))*sin(AnguloPortas) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.044)*cos(AnguloPortas)"
+              }
+            ],
+            "offset": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(Elevacao + 0.13 - 0.16/2 + 0.02 - (Elevacao + Altura/2))",
+            "depth": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.008"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Puxador da porta 3 - pino 2",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/2) - 0.0015) - ((Largura/2) - 0.018/2))) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) - 0.004))*cos(AnguloPortas) + ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.018)*sin(AnguloPortas)",
+                "v": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((-Profundidade/2) + 0.018) - 0)) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) - 0.004))*sin(AnguloPortas) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.018)*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/2) - 0.0015) - ((Largura/2) - 0.018/2))) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) + 0.004))*cos(AnguloPortas) + ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.018)*sin(AnguloPortas)",
+                "v": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((-Profundidade/2) + 0.018) - 0)) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) + 0.004))*sin(AnguloPortas) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.018)*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/2) - 0.0015) - ((Largura/2) - 0.018/2))) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) + 0.004))*cos(AnguloPortas) + ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.044)*sin(AnguloPortas)",
+                "v": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((-Profundidade/2) + 0.018) - 0)) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) + 0.004))*sin(AnguloPortas) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.044)*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/2) - 0.0015) - ((Largura/2) - 0.018/2))) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) - 0.004))*cos(AnguloPortas) + ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.044)*sin(AnguloPortas)",
+                "v": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((-Profundidade/2) + 0.018) - 0)) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.035) - 0.004))*sin(AnguloPortas) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.044)*cos(AnguloPortas)"
+              }
+            ],
+            "offset": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(Elevacao + 0.13 + 0.16/2 - 0.028 - (Elevacao + Altura/2))",
+            "depth": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.008"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Batente inferior da porta 3",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/2) - 0.0015) - ((Largura/2) - 0.018/2))) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.03))*cos(AnguloPortas) + ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(-0.0018))*sin(AnguloPortas)",
+                "v": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((-Profundidade/2) + 0.018) - 0)) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.03))*sin(AnguloPortas) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(-0.0018))*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/2) - 0.0015) - ((Largura/2) - 0.018/2))) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.022))*cos(AnguloPortas) + ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(-0.0018))*sin(AnguloPortas)",
+                "v": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((-Profundidade/2) + 0.018) - 0)) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.022))*sin(AnguloPortas) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(-0.0018))*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/2) - 0.0015) - ((Largura/2) - 0.018/2))) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.022))*cos(AnguloPortas) + ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0)*sin(AnguloPortas)",
+                "v": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((-Profundidade/2) + 0.018) - 0)) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.022))*sin(AnguloPortas) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0)*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/2) - 0.0015) - ((Largura/2) - 0.018/2))) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.03))*cos(AnguloPortas) + ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0)*sin(AnguloPortas)",
+                "v": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((-Profundidade/2) + 0.018) - 0)) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.03))*sin(AnguloPortas) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0)*cos(AnguloPortas)"
+              }
+            ],
+            "offset": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((Elevacao + 0.02) + 0.005 - (Elevacao + Altura/2))",
+            "depth": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.008"
+          }
+        },
+        "material": "Plástico translúcido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Batente superior da porta 3",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/2) - 0.0015) - ((Largura/2) - 0.018/2))) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.03))*cos(AnguloPortas) + ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(-0.0018))*sin(AnguloPortas)",
+                "v": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((-Profundidade/2) + 0.018) - 0)) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.03))*sin(AnguloPortas) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(-0.0018))*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/2) - 0.0015) - ((Largura/2) - 0.018/2))) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.022))*cos(AnguloPortas) + ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(-0.0018))*sin(AnguloPortas)",
+                "v": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((-Profundidade/2) + 0.018) - 0)) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.022))*sin(AnguloPortas) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(-0.0018))*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/2) - 0.0015) - ((Largura/2) - 0.018/2))) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.022))*cos(AnguloPortas) + ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0)*sin(AnguloPortas)",
+                "v": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((-Profundidade/2) + 0.018) - 0)) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.022))*sin(AnguloPortas) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0)*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/2) - 0.0015) - ((Largura/2) - 0.018/2))) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.03))*cos(AnguloPortas) + ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0)*sin(AnguloPortas)",
+                "v": "(0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((-Profundidade/2) + 0.018) - 0)) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Largura/ceil(Largura/0.45 - 0.01)) - 0.003) - 0.03))*sin(AnguloPortas) - ((min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0)*cos(AnguloPortas)"
+              }
+            ],
+            "offset": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((Elevacao + Altura) - 0.013 - (Elevacao + Altura/2))",
+            "depth": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.008"
+          }
+        },
+        "material": "Plástico translúcido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pilha de pratos rasos",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.018) + 0.14",
+                "v": "((Elevacao + 0.02) + 0.018)"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.14 + 0.06875",
+                "v": "((Elevacao + 0.02) + 0.018) + 0"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.14 + 0.125",
+                "v": "((Elevacao + 0.02) + 0.018) + 0 + 0.00825"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.14 + 0.0775",
+                "v": "((Elevacao + 0.02) + 0.018) + 0 + 0.01045"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.14 + 0.06875",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.011"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.14 + 0.125",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.011 + 0.00825"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.14 + 0.0775",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.011 + 0.01045"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.14 + 0.06875",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.022"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.14 + 0.125",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.022 + 0.00825"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.14 + 0.0775",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.022 + 0.01045"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.14 + 0.06875",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.033"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.14 + 0.125",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.033 + 0.00825"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.14 + 0.0775",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.033 + 0.01045"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.14 + 0.06875",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.044"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.14 + 0.125",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.044 + 0.00825"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.14 + 0.0775",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.044 + 0.01045"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.14 + 0.06875",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.055"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.14 + 0.125",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.055 + 0.00825"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.14 + 0.0775",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.055 + 0.01045"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.14 + 0.06875",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.066"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.14 + 0.125",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.066 + 0.00825"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.14 + 0.0775",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.066 + 0.01045"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.14 + 0.06875",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.077"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.14 + 0.125",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.077 + 0.00825"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.14 + 0.0775",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.077 + 0.01045"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.14",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.088"
+              }
+            ],
+            "offset": "0.02",
+            "axis": "((-Largura/2) + 0.018) + 0.14",
+            "angle": "360"
+          }
+        },
+        "material": "Louça",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pilha de pratos de sobremesa",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.018) + 0.39",
+                "v": "((Elevacao + 0.02) + 0.018)"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.39 + 0.05225",
+                "v": "((Elevacao + 0.02) + 0.018) + 0"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.39 + 0.095",
+                "v": "((Elevacao + 0.02) + 0.018) + 0 + 0.00825"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.39 + 0.0589",
+                "v": "((Elevacao + 0.02) + 0.018) + 0 + 0.01045"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.39 + 0.05225",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.011"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.39 + 0.095",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.011 + 0.00825"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.39 + 0.0589",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.011 + 0.01045"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.39 + 0.05225",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.022"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.39 + 0.095",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.022 + 0.00825"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.39 + 0.0589",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.022 + 0.01045"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.39 + 0.05225",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.033"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.39 + 0.095",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.033 + 0.00825"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.39 + 0.0589",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.033 + 0.01045"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.39 + 0.05225",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.044"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.39 + 0.095",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.044 + 0.00825"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.39 + 0.0589",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.044 + 0.01045"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.39 + 0.05225",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.055"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.39 + 0.095",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.055 + 0.00825"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.39 + 0.0589",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.055 + 0.01045"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.39",
+                "v": "((Elevacao + 0.02) + 0.018) + 0.066"
+              }
+            ],
+            "offset": "0.03",
+            "axis": "((-Largura/2) + 0.018) + 0.39",
+            "angle": "360"
+          }
+        },
+        "material": "Louça",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pilha de tigelas",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.018) + 0.12",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018)"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.12 + 0.036",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018)"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.12 + 0.08",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0.06"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.12 + 0.0744",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0.06"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.12 + 0.08",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0.078"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.12 + 0.0744",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0.078"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.12 + 0.08",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0.096"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.12 + 0.0744",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0.096"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.12 + 0.08",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0.114"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.12 + 0.0744",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0.114"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.12",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0.084"
+              }
+            ],
+            "offset": "0.03",
+            "axis": "((-Largura/2) + 0.018) + 0.12",
+            "angle": "360"
+          }
+        },
+        "material": "Louça",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Copo 1",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.018) + 0.26",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018)"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.26 + 0.026",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018)"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.26 + 0.032",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0.12"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.26",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0.12"
+              }
+            ],
+            "offset": "0.06",
+            "axis": "((-Largura/2) + 0.018) + 0.26",
+            "angle": "360"
+          }
+        },
+        "material": "Vidro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Copo 2",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.018) + 0.335",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018)"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.335 + 0.026",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018)"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.335 + 0.032",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0.12"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.335",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0.12"
+              }
+            ],
+            "offset": "0.06",
+            "axis": "((-Largura/2) + 0.018) + 0.335",
+            "angle": "360"
+          }
+        },
+        "material": "Vidro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Copo 3",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.018) + 0.41",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018)"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.41 + 0.026",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018)"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.41 + 0.032",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0.12"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.41",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0.12"
+              }
+            ],
+            "offset": "0.06",
+            "axis": "((-Largura/2) + 0.018) + 0.41",
+            "angle": "360"
+          }
+        },
+        "material": "Vidro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Copo 4",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.018) + 0.26",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018)"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.26 + 0.026",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018)"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.26 + 0.032",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0.12"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.26",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0.12"
+              }
+            ],
+            "offset": "-0.015",
+            "axis": "((-Largura/2) + 0.018) + 0.26",
+            "angle": "360"
+          }
+        },
+        "material": "Vidro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Copo 5",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.018) + 0.335",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018)"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.335 + 0.026",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018)"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.335 + 0.032",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0.12"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.335",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0.12"
+              }
+            ],
+            "offset": "-0.015",
+            "axis": "((-Largura/2) + 0.018) + 0.335",
+            "angle": "360"
+          }
+        },
+        "material": "Vidro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Copo 6",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.018) + 0.41",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018)"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.41 + 0.026",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018)"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.41 + 0.032",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0.12"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.41",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0.12"
+              }
+            ],
+            "offset": "-0.015",
+            "axis": "((-Largura/2) + 0.018) + 0.41",
+            "angle": "360"
+          }
+        },
+        "material": "Vidro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pote de mantimentos 1",
+        "shape": {
+          "Cylinder": {
+            "x": "((-Largura/2) + 0.018) + 0.09",
+            "y": "0.04",
+            "z": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) + 0.018)",
+            "radius": "0.05",
+            "height": "0.15"
+          }
+        },
+        "material": "Vidro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pote de mantimentos 1 - conteúdo",
+        "shape": {
+          "Cylinder": {
+            "x": "((-Largura/2) + 0.018) + 0.09",
+            "y": "0.04",
+            "z": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) + 0.018) + 0.004",
+            "radius": "0.046",
+            "height": "0.105"
+          }
+        },
+        "material": "Mica",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pote de mantimentos 1 - tampa",
+        "shape": {
+          "Cylinder": {
+            "x": "((-Largura/2) + 0.018) + 0.09",
+            "y": "0.04",
+            "z": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) + 0.018) + 0.15",
+            "radius": "0.052",
+            "height": "0.014"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pote de mantimentos 2",
+        "shape": {
+          "Cylinder": {
+            "x": "((-Largura/2) + 0.018) + 0.205",
+            "y": "0.04",
+            "z": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) + 0.018)",
+            "radius": "0.05",
+            "height": "0.12"
+          }
+        },
+        "material": "Vidro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pote de mantimentos 2 - conteúdo",
+        "shape": {
+          "Cylinder": {
+            "x": "((-Largura/2) + 0.018) + 0.205",
+            "y": "0.04",
+            "z": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) + 0.018) + 0.004",
+            "radius": "0.046",
+            "height": "0.084"
+          }
+        },
+        "material": "Mica",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pote de mantimentos 2 - tampa",
+        "shape": {
+          "Cylinder": {
+            "x": "((-Largura/2) + 0.018) + 0.205",
+            "y": "0.04",
+            "z": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) + 0.018) + 0.12",
+            "radius": "0.052",
+            "height": "0.014"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pote de mantimentos 3",
+        "shape": {
+          "Cylinder": {
+            "x": "((-Largura/2) + 0.018) + 0.31",
+            "y": "0.04",
+            "z": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) + 0.018)",
+            "radius": "0.042",
+            "height": "0.1"
+          }
+        },
+        "material": "Vidro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pote de mantimentos 3 - conteúdo",
+        "shape": {
+          "Cylinder": {
+            "x": "((-Largura/2) + 0.018) + 0.31",
+            "y": "0.04",
+            "z": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) + 0.018) + 0.004",
+            "radius": "0.038",
+            "height": "0.07"
+          }
+        },
+        "material": "Mica",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pote de mantimentos 3 - tampa",
+        "shape": {
+          "Cylinder": {
+            "x": "((-Largura/2) + 0.018) + 0.31",
+            "y": "0.04",
+            "z": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) + 0.018) + 0.1",
+            "radius": "0.044",
+            "height": "0.014"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Caneca 1",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.018) + 0.42",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) + 0.018)"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.42 + 0.036",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) + 0.018)"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.42 + 0.04",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) + 0.018) + 0.095"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.42 + 0.035",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) + 0.018) + 0.095"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.42 + 0.033",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) + 0.018) + 0.008"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.42",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) + 0.018) + 0.008"
+              }
+            ],
+            "offset": "0.03",
+            "axis": "((-Largura/2) + 0.018) + 0.42",
+            "angle": "360"
+          }
+        },
+        "material": "Louça",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Caneca 2",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.018) + 0.5",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) + 0.018)"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.5 + 0.036",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) + 0.018)"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.5 + 0.04",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) + 0.018) + 0.095"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.5 + 0.035",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) + 0.018) + 0.095"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.5 + 0.033",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) + 0.018) + 0.008"
+              },
+              {
+                "u": "((-Largura/2) + 0.018) + 0.5",
+                "v": "((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) + 0.018) + 0.008"
+              }
+            ],
+            "offset": "0.03",
+            "axis": "((-Largura/2) + 0.018) + 0.5",
+            "angle": "360"
+          }
+        },
+        "material": "Louça",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pilha de saladeiras",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2)/2 - ((Largura/2) - 0.018/2))",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Elevacao + 0.02) + 0.018) - (Elevacao + Altura/2))"
+              },
+              {
+                "u": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2)/2 + 0.05175 - ((Largura/2) - 0.018/2))",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Elevacao + 0.02) + 0.018) - (Elevacao + Altura/2))"
+              },
+              {
+                "u": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2)/2 + 0.115 - ((Largura/2) - 0.018/2))",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Elevacao + 0.02) + 0.018) + 0.09 - (Elevacao + Altura/2))"
+              },
+              {
+                "u": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2)/2 + 0.10695 - ((Largura/2) - 0.018/2))",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Elevacao + 0.02) + 0.018) + 0.09 - (Elevacao + Altura/2))"
+              },
+              {
+                "u": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2)/2 + 0.115 - ((Largura/2) - 0.018/2))",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Elevacao + 0.02) + 0.018) + 0.112 - (Elevacao + Altura/2))"
+              },
+              {
+                "u": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2)/2 + 0.10695 - ((Largura/2) - 0.018/2))",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Elevacao + 0.02) + 0.018) + 0.112 - (Elevacao + Altura/2))"
+              },
+              {
+                "u": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2)/2 + 0.115 - ((Largura/2) - 0.018/2))",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Elevacao + 0.02) + 0.018) + 0.134 - (Elevacao + Altura/2))"
+              },
+              {
+                "u": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2)/2 + 0.10695 - ((Largura/2) - 0.018/2))",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Elevacao + 0.02) + 0.018) + 0.134 - (Elevacao + Altura/2))"
+              },
+              {
+                "u": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2)/2 - ((Largura/2) - 0.018/2))",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((Elevacao + 0.02) + 0.018) + 0.089 - (Elevacao + Altura/2))"
+              }
+            ],
+            "offset": "0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(0.03 - 0)",
+            "axis": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2)/2 - ((Largura/2) - 0.018/2))",
+            "angle": "360"
+          }
+        },
+        "material": "Louça",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pilha de pratos fundos",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2)/2 - ((Largura/2) - 0.018/2))",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) - (Elevacao + Altura/2))"
+              },
+              {
+                "u": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2)/2 + 0.0605 - ((Largura/2) - 0.018/2))",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0 - (Elevacao + Altura/2))"
+              },
+              {
+                "u": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2)/2 + 0.11 - ((Largura/2) - 0.018/2))",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0 + 0.0105 - (Elevacao + Altura/2))"
+              },
+              {
+                "u": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2)/2 + 0.0682 - ((Largura/2) - 0.018/2))",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0 + 0.0133 - (Elevacao + Altura/2))"
+              },
+              {
+                "u": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2)/2 + 0.0605 - ((Largura/2) - 0.018/2))",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0.014 - (Elevacao + Altura/2))"
+              },
+              {
+                "u": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2)/2 + 0.11 - ((Largura/2) - 0.018/2))",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0.014 + 0.0105 - (Elevacao + Altura/2))"
+              },
+              {
+                "u": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2)/2 + 0.0682 - ((Largura/2) - 0.018/2))",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0.014 + 0.0133 - (Elevacao + Altura/2))"
+              },
+              {
+                "u": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2)/2 + 0.0605 - ((Largura/2) - 0.018/2))",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0.028 - (Elevacao + Altura/2))"
+              },
+              {
+                "u": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2)/2 + 0.11 - ((Largura/2) - 0.018/2))",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0.028 + 0.0105 - (Elevacao + Altura/2))"
+              },
+              {
+                "u": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2)/2 + 0.0682 - ((Largura/2) - 0.018/2))",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0.028 + 0.0133 - (Elevacao + Altura/2))"
+              },
+              {
+                "u": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2)/2 + 0.0605 - ((Largura/2) - 0.018/2))",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0.042 - (Elevacao + Altura/2))"
+              },
+              {
+                "u": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2)/2 + 0.11 - ((Largura/2) - 0.018/2))",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0.042 + 0.0105 - (Elevacao + Altura/2))"
+              },
+              {
+                "u": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2)/2 + 0.0682 - ((Largura/2) - 0.018/2))",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0.042 + 0.0133 - (Elevacao + Altura/2))"
+              },
+              {
+                "u": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2)/2 + 0.0605 - ((Largura/2) - 0.018/2))",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0.056 - (Elevacao + Altura/2))"
+              },
+              {
+                "u": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2)/2 + 0.11 - ((Largura/2) - 0.018/2))",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0.056 + 0.0105 - (Elevacao + Altura/2))"
+              },
+              {
+                "u": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2)/2 + 0.0682 - ((Largura/2) - 0.018/2))",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0.056 + 0.0133 - (Elevacao + Altura/2))"
+              },
+              {
+                "u": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2)/2 + 0.0605 - ((Largura/2) - 0.018/2))",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0.07 - (Elevacao + Altura/2))"
+              },
+              {
+                "u": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2)/2 + 0.11 - ((Largura/2) - 0.018/2))",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0.07 + 0.0105 - (Elevacao + Altura/2))"
+              },
+              {
+                "u": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2)/2 + 0.0682 - ((Largura/2) - 0.018/2))",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0.07 + 0.0133 - (Elevacao + Altura/2))"
+              },
+              {
+                "u": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2)/2 - ((Largura/2) - 0.018/2))",
+                "v": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.345 - 0.018/2) + 0.018) + 0.084 - (Elevacao + Altura/2))"
+              }
+            ],
+            "offset": "0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(0.03 - 0)",
+            "axis": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2)/2 - ((Largura/2) - 0.018/2))",
+            "angle": "360"
+          }
+        },
+        "material": "Louça",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Garrafa 1",
+        "shape": {
+          "Cylinder": {
+            "x": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2)/2 + -0.085 - ((Largura/2) - 0.018/2))",
+            "y": "0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(0.05 - 0)",
+            "z": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) + 0.018) - (Elevacao + Altura/2))",
+            "radius": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.036",
+            "height": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.125"
+          }
+        },
+        "material": "Vidro fumê",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Garrafa 1 - gargalo",
+        "shape": {
+          "Cylinder": {
+            "x": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2)/2 + -0.085 - ((Largura/2) - 0.018/2))",
+            "y": "0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(0.05 - 0)",
+            "z": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) + 0.018) + 0.125 - (Elevacao + Altura/2))",
+            "radius": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.014",
+            "height": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.045"
+          }
+        },
+        "material": "Vidro fumê",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Garrafa 2",
+        "shape": {
+          "Cylinder": {
+            "x": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2)/2 + 0.03 - ((Largura/2) - 0.018/2))",
+            "y": "0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(0.05 - 0)",
+            "z": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) + 0.018) - (Elevacao + Altura/2))",
+            "radius": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.036",
+            "height": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.125"
+          }
+        },
+        "material": "Vidro fumê",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Garrafa 2 - gargalo",
+        "shape": {
+          "Cylinder": {
+            "x": "((Largura/2) - 0.018/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*((((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) + 0.018/2) + max(0.02, (Largura/2) - 0.018 - ((-Largura/2) + 2*(Largura/ceil(Largura/0.45 - 0.01))) - 0.018/2)/2 + 0.03 - ((Largura/2) - 0.018/2))",
+            "y": "0 + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(0.05 - 0)",
+            "z": "(Elevacao + Altura/2) + (min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*(((((Elevacao + 0.02) + 0.018) + (Altura - 0.02 - 2*0.018)*0.68 - 0.018/2) + 0.018) + 0.125 - (Elevacao + Altura/2))",
+            "radius": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.014",
+            "height": "(min(1, max(0.001, ceil(Largura/0.45 - 0.01) - 2)))*0.045"
+          }
+        },
+        "material": "Vidro fumê",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
         }
       }
     ]
@@ -82,7 +3108,120 @@
         240,
         240,
         235
-      ]
+      ],
+      "class": "Wood",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Laminado branco",
+      "color": [
+        238,
+        238,
+        234
+      ],
+      "class": "Wood",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Aço galvanizado",
+      "color": [
+        160,
+        165,
+        170
+      ],
+      "class": "Metal",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico cinza claro",
+      "color": [
+        196,
+        198,
+        200
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Alumínio anodizado",
+      "color": [
+        206,
+        208,
+        210
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Fita de LED",
+      "color": [
+        255,
+        244,
+        214
+      ],
+      "class": "Plastic",
+      "finish": "Glossy",
+      "transparency": 0.3
+    },
+    {
+      "name": "Plástico preto",
+      "color": [
+        34,
+        34,
+        37
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Inox escovado",
+      "color": [
+        198,
+        200,
+        203
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico translúcido",
+      "color": [
+        222,
+        236,
+        240
+      ],
+      "class": "Plastic",
+      "finish": "Glossy",
+      "transparency": 0.6
+    },
+    {
+      "name": "Mica",
+      "color": [
+        202,
+        182,
+        140
+      ],
+      "class": "Generic",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Vidro fumê",
+      "color": [
+        38,
+        42,
+        48
+      ],
+      "class": "Glass",
+      "finish": "Polished",
+      "transparency": 0.45
     }
   ]
 }
