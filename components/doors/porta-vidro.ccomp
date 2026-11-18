@@ -1,6 +1,6 @@
 (
   format_version: 1,
-  generator: "ConstructCAD 0.9.0",
+  generator: "ConstructCraft 0.12.0",
   component: "Porta de vidro temperado",
   def: (
     kind: Door,
@@ -17,72 +17,1894 @@
         kind: Length,
         instance: false,
       ),
+      (
+        name: "AnguloAbertura",
+        value: 0.0,
+        kind: Angle,
+        instance: true,
+      ),
     ],
     items: [
       (
+        name: "Folha simplificada",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) - 0.052*cos(AnguloAbertura) + 0.005*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) - 0.052*sin(AnguloAbertura) - 0.005*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((Largura - 0.06))*cos(AnguloAbertura) + 0.005*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((Largura - 0.06))*sin(AnguloAbertura) - 0.005*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((Largura - 0.06))*cos(AnguloAbertura) - 0.005*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((Largura - 0.06))*sin(AnguloAbertura) + 0.005*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) - 0.052*cos(AnguloAbertura) - 0.005*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) - 0.052*sin(AnguloAbertura) + 0.005*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "0.015",
+          depth: "(((Altura - 0.012)) - 0.015)",
+        ),
+        material: "Vidro temperado",
+        in_plan: true,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
+      ),
+      (
         name: "Folha",
-        shape: Box(
-          x: "-Largura / 2 + 0.01",
-          y: "WallThickness / 2 - 0.01",
-          z: "0.01",
-          width: "Largura - 0.02",
-          depth: "0.01",
-          height: "Altura - 0.02",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) - 0.052*cos(AnguloAbertura) + 0.005*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) - 0.052*sin(AnguloAbertura) - 0.005*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((Largura - 0.06))*cos(AnguloAbertura) + 0.005*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((Largura - 0.06))*sin(AnguloAbertura) - 0.005*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((Largura - 0.06))*cos(AnguloAbertura) - 0.005*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((Largura - 0.06))*sin(AnguloAbertura) + 0.005*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) - 0.052*cos(AnguloAbertura) - 0.005*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) - 0.052*sin(AnguloAbertura) + 0.005*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "0.015",
+          depth: "(((Altura - 0.012)) - 0.015)",
         ),
-        material: "Vidro",
-        in_plan: false,
+        material: "Vidro temperado",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
       ),
       (
-        name: "Ferragem",
-        shape: Box(
-          x: "-Largura / 2 + 0.01",
-          y: "WallThickness / 2 - 0.03",
-          z: "0",
-          width: "0.15",
-          depth: "0.05",
-          height: "0.05",
+        name: "Faixa jateada",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + ((0.008))*cos(AnguloAbertura) - 0.005*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((0.008))*sin(AnguloAbertura) + 0.005*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((Largura - 0.06)) - 0.06))*cos(AnguloAbertura) - 0.005*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((Largura - 0.06)) - 0.06))*sin(AnguloAbertura) + 0.005*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((Largura - 0.06)) - 0.06))*cos(AnguloAbertura) - 0.0054*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((Largura - 0.06)) - 0.06))*sin(AnguloAbertura) + 0.0054*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((0.008))*cos(AnguloAbertura) - 0.0054*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((0.008))*sin(AnguloAbertura) + 0.0054*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "1",
+          depth: "0.1",
         ),
-        material: "Metal cromado",
+        material: "Plástico translúcido",
         in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
       ),
       (
-        name: "Ferragem",
-        shape: Box(
-          x: "-Largura / 2 + 0.01",
-          y: "WallThickness / 2 - 0.03",
-          z: "Altura - 0.05",
-          width: "0.15",
-          depth: "0.05",
-          height: "0.05",
+        name: "Dobradiça inferior - corpo",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + ((-0.055) + 0.006)*cos(AnguloAbertura) + 0.013*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((-0.055) + 0.006)*sin(AnguloAbertura) - 0.013*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (0.11 - 0.006)*cos(AnguloAbertura) + 0.013*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (0.11 - 0.006)*sin(AnguloAbertura) - 0.013*cos(AnguloAbertura)",
+              radius: "0.006",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + 0.11*cos(AnguloAbertura) - ((-0.013) + 0.006)*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + 0.11*sin(AnguloAbertura) + ((-0.013) + 0.006)*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + 0.11*cos(AnguloAbertura) - (0.013 - 0.006)*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + 0.11*sin(AnguloAbertura) + (0.013 - 0.006)*cos(AnguloAbertura)",
+              radius: "0.006",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (0.11 - 0.006)*cos(AnguloAbertura) - 0.013*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (0.11 - 0.006)*sin(AnguloAbertura) + 0.013*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((-0.055) + 0.006)*cos(AnguloAbertura) - 0.013*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((-0.055) + 0.006)*sin(AnguloAbertura) + 0.013*cos(AnguloAbertura)",
+              radius: "0.006",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) - 0.055*cos(AnguloAbertura) - (0.013 - 0.006)*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) - 0.055*sin(AnguloAbertura) + (0.013 - 0.006)*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) - 0.055*cos(AnguloAbertura) - ((-0.013) + 0.006)*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) - 0.055*sin(AnguloAbertura) + ((-0.013) + 0.006)*cos(AnguloAbertura)",
+              radius: "0.006",
+            ),
+          ],
+          offset: "0.009",
+          depth: "0.06",
         ),
-        material: "Metal cromado",
+        material: "Inox escovado",
         in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
       ),
       (
-        name: "Puxador",
+        name: "Dobradiça inferior - tampa (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + ((-0.049))*cos(AnguloAbertura) - 0.013*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((-0.049))*sin(AnguloAbertura) + 0.013*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((0.104))*cos(AnguloAbertura) - 0.013*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((0.104))*sin(AnguloAbertura) + 0.013*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((0.104))*cos(AnguloAbertura) - 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((0.104))*sin(AnguloAbertura) + 0.0142*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((-0.049))*cos(AnguloAbertura) - 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((-0.049))*sin(AnguloAbertura) + 0.0142*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(0.015)",
+          depth: "0.048",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça inferior - parafuso 1 (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + (((0.3*(0.11 - (-0.055))) - 0.059))*cos(AnguloAbertura) - 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (((0.3*(0.11 - (-0.055))) - 0.059))*sin(AnguloAbertura) + 0.0142*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (((0.3*(0.11 - (-0.055))) - 0.051))*cos(AnguloAbertura) - 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (((0.3*(0.11 - (-0.055))) - 0.051))*sin(AnguloAbertura) + 0.0142*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (((0.3*(0.11 - (-0.055))) - 0.051))*cos(AnguloAbertura) - 0.0148*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (((0.3*(0.11 - (-0.055))) - 0.051))*sin(AnguloAbertura) + 0.0148*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (((0.3*(0.11 - (-0.055))) - 0.059))*cos(AnguloAbertura) - 0.0148*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (((0.3*(0.11 - (-0.055))) - 0.059))*sin(AnguloAbertura) + 0.0148*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(0.035)",
+          depth: "0.008",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça inferior - parafuso 2 (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + (((0.7*(0.11 - (-0.055))) - 0.059))*cos(AnguloAbertura) - 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (((0.7*(0.11 - (-0.055))) - 0.059))*sin(AnguloAbertura) + 0.0142*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (((0.7*(0.11 - (-0.055))) - 0.051))*cos(AnguloAbertura) - 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (((0.7*(0.11 - (-0.055))) - 0.051))*sin(AnguloAbertura) + 0.0142*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (((0.7*(0.11 - (-0.055))) - 0.051))*cos(AnguloAbertura) - 0.0148*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (((0.7*(0.11 - (-0.055))) - 0.051))*sin(AnguloAbertura) + 0.0148*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (((0.7*(0.11 - (-0.055))) - 0.059))*cos(AnguloAbertura) - 0.0148*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (((0.7*(0.11 - (-0.055))) - 0.059))*sin(AnguloAbertura) + 0.0148*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(0.035)",
+          depth: "0.008",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça inferior - tampa (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + ((-0.049))*cos(AnguloAbertura) + 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((-0.049))*sin(AnguloAbertura) - 0.0142*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((0.104))*cos(AnguloAbertura) + 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((0.104))*sin(AnguloAbertura) - 0.0142*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((0.104))*cos(AnguloAbertura) + 0.013*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((0.104))*sin(AnguloAbertura) - 0.013*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((-0.049))*cos(AnguloAbertura) + 0.013*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((-0.049))*sin(AnguloAbertura) - 0.013*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(0.015)",
+          depth: "0.048",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça inferior - parafuso 1 (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + (((0.3*(0.11 - (-0.055))) - 0.059))*cos(AnguloAbertura) + 0.0148*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (((0.3*(0.11 - (-0.055))) - 0.059))*sin(AnguloAbertura) - 0.0148*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (((0.3*(0.11 - (-0.055))) - 0.051))*cos(AnguloAbertura) + 0.0148*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (((0.3*(0.11 - (-0.055))) - 0.051))*sin(AnguloAbertura) - 0.0148*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (((0.3*(0.11 - (-0.055))) - 0.051))*cos(AnguloAbertura) + 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (((0.3*(0.11 - (-0.055))) - 0.051))*sin(AnguloAbertura) - 0.0142*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (((0.3*(0.11 - (-0.055))) - 0.059))*cos(AnguloAbertura) + 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (((0.3*(0.11 - (-0.055))) - 0.059))*sin(AnguloAbertura) - 0.0142*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(0.035)",
+          depth: "0.008",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça inferior - parafuso 2 (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + (((0.7*(0.11 - (-0.055))) - 0.059))*cos(AnguloAbertura) + 0.0148*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (((0.7*(0.11 - (-0.055))) - 0.059))*sin(AnguloAbertura) - 0.0148*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (((0.7*(0.11 - (-0.055))) - 0.051))*cos(AnguloAbertura) + 0.0148*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (((0.7*(0.11 - (-0.055))) - 0.051))*sin(AnguloAbertura) - 0.0148*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (((0.7*(0.11 - (-0.055))) - 0.051))*cos(AnguloAbertura) + 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (((0.7*(0.11 - (-0.055))) - 0.051))*sin(AnguloAbertura) - 0.0142*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (((0.7*(0.11 - (-0.055))) - 0.059))*cos(AnguloAbertura) + 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (((0.7*(0.11 - (-0.055))) - 0.059))*sin(AnguloAbertura) - 0.0142*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(0.035)",
+          depth: "0.008",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça superior - corpo",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + ((-0.055) + 0.006)*cos(AnguloAbertura) + 0.013*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((-0.055) + 0.006)*sin(AnguloAbertura) - 0.013*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (0.11 - 0.006)*cos(AnguloAbertura) + 0.013*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (0.11 - 0.006)*sin(AnguloAbertura) - 0.013*cos(AnguloAbertura)",
+              radius: "0.006",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + 0.11*cos(AnguloAbertura) - ((-0.013) + 0.006)*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + 0.11*sin(AnguloAbertura) + ((-0.013) + 0.006)*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + 0.11*cos(AnguloAbertura) - (0.013 - 0.006)*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + 0.11*sin(AnguloAbertura) + (0.013 - 0.006)*cos(AnguloAbertura)",
+              radius: "0.006",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (0.11 - 0.006)*cos(AnguloAbertura) - 0.013*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (0.11 - 0.006)*sin(AnguloAbertura) + 0.013*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((-0.055) + 0.006)*cos(AnguloAbertura) - 0.013*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((-0.055) + 0.006)*sin(AnguloAbertura) + 0.013*cos(AnguloAbertura)",
+              radius: "0.006",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) - 0.055*cos(AnguloAbertura) - (0.013 - 0.006)*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) - 0.055*sin(AnguloAbertura) + (0.013 - 0.006)*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) - 0.055*cos(AnguloAbertura) - ((-0.013) + 0.006)*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) - 0.055*sin(AnguloAbertura) + ((-0.013) + 0.006)*cos(AnguloAbertura)",
+              radius: "0.006",
+            ),
+          ],
+          offset: "(((Altura - 0.012)) - 0.054)",
+          depth: "0.06",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça superior - tampa (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + ((-0.049))*cos(AnguloAbertura) - 0.013*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((-0.049))*sin(AnguloAbertura) + 0.013*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((0.104))*cos(AnguloAbertura) - 0.013*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((0.104))*sin(AnguloAbertura) + 0.013*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((0.104))*cos(AnguloAbertura) - 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((0.104))*sin(AnguloAbertura) + 0.0142*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((-0.049))*cos(AnguloAbertura) - 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((-0.049))*sin(AnguloAbertura) + 0.0142*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((((Altura - 0.012)) - 0.054)) + 0.006)",
+          depth: "0.048",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça superior - parafuso 1 (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + (((0.3*(0.11 - (-0.055))) - 0.059))*cos(AnguloAbertura) - 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (((0.3*(0.11 - (-0.055))) - 0.059))*sin(AnguloAbertura) + 0.0142*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (((0.3*(0.11 - (-0.055))) - 0.051))*cos(AnguloAbertura) - 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (((0.3*(0.11 - (-0.055))) - 0.051))*sin(AnguloAbertura) + 0.0142*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (((0.3*(0.11 - (-0.055))) - 0.051))*cos(AnguloAbertura) - 0.0148*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (((0.3*(0.11 - (-0.055))) - 0.051))*sin(AnguloAbertura) + 0.0148*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (((0.3*(0.11 - (-0.055))) - 0.059))*cos(AnguloAbertura) - 0.0148*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (((0.3*(0.11 - (-0.055))) - 0.059))*sin(AnguloAbertura) + 0.0148*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((((Altura - 0.012)) - 0.054)) + 0.026)",
+          depth: "0.008",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça superior - parafuso 2 (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + (((0.7*(0.11 - (-0.055))) - 0.059))*cos(AnguloAbertura) - 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (((0.7*(0.11 - (-0.055))) - 0.059))*sin(AnguloAbertura) + 0.0142*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (((0.7*(0.11 - (-0.055))) - 0.051))*cos(AnguloAbertura) - 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (((0.7*(0.11 - (-0.055))) - 0.051))*sin(AnguloAbertura) + 0.0142*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (((0.7*(0.11 - (-0.055))) - 0.051))*cos(AnguloAbertura) - 0.0148*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (((0.7*(0.11 - (-0.055))) - 0.051))*sin(AnguloAbertura) + 0.0148*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (((0.7*(0.11 - (-0.055))) - 0.059))*cos(AnguloAbertura) - 0.0148*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (((0.7*(0.11 - (-0.055))) - 0.059))*sin(AnguloAbertura) + 0.0148*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((((Altura - 0.012)) - 0.054)) + 0.026)",
+          depth: "0.008",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça superior - tampa (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + ((-0.049))*cos(AnguloAbertura) + 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((-0.049))*sin(AnguloAbertura) - 0.0142*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((0.104))*cos(AnguloAbertura) + 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((0.104))*sin(AnguloAbertura) - 0.0142*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((0.104))*cos(AnguloAbertura) + 0.013*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((0.104))*sin(AnguloAbertura) - 0.013*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((-0.049))*cos(AnguloAbertura) + 0.013*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((-0.049))*sin(AnguloAbertura) - 0.013*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((((Altura - 0.012)) - 0.054)) + 0.006)",
+          depth: "0.048",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça superior - parafuso 1 (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + (((0.3*(0.11 - (-0.055))) - 0.059))*cos(AnguloAbertura) + 0.0148*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (((0.3*(0.11 - (-0.055))) - 0.059))*sin(AnguloAbertura) - 0.0148*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (((0.3*(0.11 - (-0.055))) - 0.051))*cos(AnguloAbertura) + 0.0148*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (((0.3*(0.11 - (-0.055))) - 0.051))*sin(AnguloAbertura) - 0.0148*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (((0.3*(0.11 - (-0.055))) - 0.051))*cos(AnguloAbertura) + 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (((0.3*(0.11 - (-0.055))) - 0.051))*sin(AnguloAbertura) - 0.0142*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (((0.3*(0.11 - (-0.055))) - 0.059))*cos(AnguloAbertura) + 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (((0.3*(0.11 - (-0.055))) - 0.059))*sin(AnguloAbertura) - 0.0142*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((((Altura - 0.012)) - 0.054)) + 0.026)",
+          depth: "0.008",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça superior - parafuso 2 (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + (((0.7*(0.11 - (-0.055))) - 0.059))*cos(AnguloAbertura) + 0.0148*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (((0.7*(0.11 - (-0.055))) - 0.059))*sin(AnguloAbertura) - 0.0148*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (((0.7*(0.11 - (-0.055))) - 0.051))*cos(AnguloAbertura) + 0.0148*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (((0.7*(0.11 - (-0.055))) - 0.051))*sin(AnguloAbertura) - 0.0148*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (((0.7*(0.11 - (-0.055))) - 0.051))*cos(AnguloAbertura) + 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (((0.7*(0.11 - (-0.055))) - 0.051))*sin(AnguloAbertura) - 0.0142*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (((0.7*(0.11 - (-0.055))) - 0.059))*cos(AnguloAbertura) + 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (((0.7*(0.11 - (-0.055))) - 0.059))*sin(AnguloAbertura) - 0.0142*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((((Altura - 0.012)) - 0.054)) + 0.026)",
+          depth: "0.008",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Ferragens simplificadas inferior",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) - 0.055*cos(AnguloAbertura) + 0.013*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) - 0.055*sin(AnguloAbertura) - 0.013*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + 0.11*cos(AnguloAbertura) + 0.013*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + 0.11*sin(AnguloAbertura) - 0.013*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + 0.11*cos(AnguloAbertura) - 0.013*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + 0.11*sin(AnguloAbertura) + 0.013*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) - 0.055*cos(AnguloAbertura) - 0.013*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) - 0.055*sin(AnguloAbertura) + 0.013*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "0.009",
+          depth: "0.06",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
+      ),
+      (
+        name: "Ferragens simplificadas superior",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) - 0.055*cos(AnguloAbertura) + 0.013*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) - 0.055*sin(AnguloAbertura) - 0.013*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + 0.11*cos(AnguloAbertura) + 0.013*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + 0.11*sin(AnguloAbertura) - 0.013*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + 0.11*cos(AnguloAbertura) - 0.013*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + 0.11*sin(AnguloAbertura) + 0.013*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) - 0.055*cos(AnguloAbertura) - 0.013*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) - 0.055*sin(AnguloAbertura) + 0.013*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((Altura - 0.012)) - 0.054)",
+          depth: "0.06",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
+      ),
+      (
+        name: "Pivô de piso - tampa",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + ((-0.03) + 0.006)",
+              v: "((WallThickness/2 - 0.025)) - 0.022",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (0.07 - 0.006)",
+              v: "((WallThickness/2 - 0.025)) - 0.022",
+              radius: "0.006",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + 0.07",
+              v: "((WallThickness/2 - 0.025)) + ((-0.022) + 0.006)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + 0.07",
+              v: "((WallThickness/2 - 0.025)) + (0.022 - 0.006)",
+              radius: "0.006",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (0.07 - 0.006)",
+              v: "((WallThickness/2 - 0.025)) + 0.022",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((-0.03) + 0.006)",
+              v: "((WallThickness/2 - 0.025)) + 0.022",
+              radius: "0.006",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) - 0.03",
+              v: "((WallThickness/2 - 0.025)) + (0.022 - 0.006)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) - 0.03",
+              v: "((WallThickness/2 - 0.025)) + ((-0.022) + 0.006)",
+              radius: "0.006",
+            ),
+          ],
+          offset: "0",
+          depth: "0.003",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Pivô de piso - mancal",
+        shape: Cylinder(
+          x: "(((-Largura/2) + 0.056))",
+          y: "((WallThickness/2 - 0.025))",
+          z: "0.003",
+          radius: "0.009",
+          height: "0.003",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Pivô de piso - eixo",
+        shape: Cylinder(
+          x: "(((-Largura/2) + 0.056))",
+          y: "((WallThickness/2 - 0.025))",
+          z: "0.004",
+          radius: "0.006",
+          height: "0.015",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Pivô de piso - parafuso 1",
+        shape: Cylinder(
+          x: "(((-Largura/2) + 0.056)) - 0.02",
+          y: "((WallThickness/2 - 0.025))",
+          z: "0.003",
+          radius: "0.003",
+          height: "0.0008",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Pivô de piso - parafuso 2",
+        shape: Cylinder(
+          x: "(((-Largura/2) + 0.056)) + 0.06",
+          y: "((WallThickness/2 - 0.025))",
+          z: "0.003",
+          radius: "0.003",
+          height: "0.0008",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Bucha superior - chapa",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + ((-0.03) + 0.005)",
+              v: "((WallThickness/2 - 0.025)) - 0.018",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (0.05 - 0.005)",
+              v: "((WallThickness/2 - 0.025)) - 0.018",
+              radius: "0.005",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + 0.05",
+              v: "((WallThickness/2 - 0.025)) + ((-0.018) + 0.005)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + 0.05",
+              v: "((WallThickness/2 - 0.025)) + (0.018 - 0.005)",
+              radius: "0.005",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (0.05 - 0.005)",
+              v: "((WallThickness/2 - 0.025)) + 0.018",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((-0.03) + 0.005)",
+              v: "((WallThickness/2 - 0.025)) + 0.018",
+              radius: "0.005",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) - 0.03",
+              v: "((WallThickness/2 - 0.025)) + (0.018 - 0.005)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) - 0.03",
+              v: "((WallThickness/2 - 0.025)) + ((-0.018) + 0.005)",
+              radius: "0.005",
+            ),
+          ],
+          offset: "(Altura - 0.004)",
+          depth: "0.004",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Bucha superior - calço",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) - 0.03",
+              v: "((WallThickness/2 - 0.025)) - 0.018",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + 0.05",
+              v: "((WallThickness/2 - 0.025)) - 0.018",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + 0.05",
+              v: "((WallThickness/2 - 0.025)) + 0.018",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) - 0.03",
+              v: "((WallThickness/2 - 0.025)) + 0.018",
+            ),
+          ],
+          offset: "(Altura - 0.0045)",
+          depth: "0.0005",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Bucha superior - pino",
+        shape: Cylinder(
+          x: "(((-Largura/2) + 0.056))",
+          y: "((WallThickness/2 - 0.025))",
+          z: "(((Altura - 0.012)) + 0.005)",
+          radius: "0.006",
+          height: "(Altura + (-(Altura - 0.012)) - 0.0105)",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Bucha superior - parafuso 1",
+        shape: Cylinder(
+          x: "(((-Largura/2) + 0.056)) - 0.02",
+          y: "((WallThickness/2 - 0.025))",
+          z: "(Altura - 0.0048)",
+          radius: "0.003",
+          height: "0.0008",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Bucha superior - parafuso 2",
+        shape: Cylinder(
+          x: "(((-Largura/2) + 0.056)) + 0.04",
+          y: "((WallThickness/2 - 0.025))",
+          z: "(Altura - 0.0048)",
+          radius: "0.003",
+          height: "0.0008",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fechadura - corpo",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + (((((Largura - 0.06)) - 0.16)) + 0.006)*cos(AnguloAbertura) + 0.013*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (((((Largura - 0.06)) - 0.16)) + 0.006)*sin(AnguloAbertura) - 0.013*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (((((Largura - 0.06)) + 0.003)) - 0.006)*cos(AnguloAbertura) + 0.013*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (((((Largura - 0.06)) + 0.003)) - 0.006)*sin(AnguloAbertura) - 0.013*cos(AnguloAbertura)",
+              radius: "0.006",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((Largura - 0.06)) + 0.003))*cos(AnguloAbertura) - ((-0.013) + 0.006)*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((Largura - 0.06)) + 0.003))*sin(AnguloAbertura) + ((-0.013) + 0.006)*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((Largura - 0.06)) + 0.003))*cos(AnguloAbertura) - (0.013 - 0.006)*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((Largura - 0.06)) + 0.003))*sin(AnguloAbertura) + (0.013 - 0.006)*cos(AnguloAbertura)",
+              radius: "0.006",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (((((Largura - 0.06)) + 0.003)) - 0.006)*cos(AnguloAbertura) - 0.013*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (((((Largura - 0.06)) + 0.003)) - 0.006)*sin(AnguloAbertura) + 0.013*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (((((Largura - 0.06)) - 0.16)) + 0.006)*cos(AnguloAbertura) - 0.013*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + (((((Largura - 0.06)) - 0.16)) + 0.006)*sin(AnguloAbertura) + 0.013*cos(AnguloAbertura)",
+              radius: "0.006",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((Largura - 0.06)) - 0.16))*cos(AnguloAbertura) - (0.013 - 0.006)*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((Largura - 0.06)) - 0.16))*sin(AnguloAbertura) + (0.013 - 0.006)*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((Largura - 0.06)) - 0.16))*cos(AnguloAbertura) - ((-0.013) + 0.006)*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((Largura - 0.06)) - 0.16))*sin(AnguloAbertura) + ((-0.013) + 0.006)*cos(AnguloAbertura)",
+              radius: "0.006",
+            ),
+          ],
+          offset: "0.009",
+          depth: "0.06",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fechadura - tampa (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.16)) + 0.006))*cos(AnguloAbertura) - 0.013*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.16)) + 0.006))*sin(AnguloAbertura) + 0.013*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) + 0.003)) - 0.006))*cos(AnguloAbertura) - 0.013*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) + 0.003)) - 0.006))*sin(AnguloAbertura) + 0.013*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) + 0.003)) - 0.006))*cos(AnguloAbertura) - 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) + 0.003)) - 0.006))*sin(AnguloAbertura) + 0.0142*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.16)) + 0.006))*cos(AnguloAbertura) - 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.16)) + 0.006))*sin(AnguloAbertura) + 0.0142*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(0.015)",
+          depth: "0.048",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fechadura - parafuso 1 (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.16)) + (0.3*(((((Largura - 0.06)) + 0.003)) - ((((Largura - 0.06)) - 0.16)))) - 0.004))*cos(AnguloAbertura) - 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.16)) + (0.3*(((((Largura - 0.06)) + 0.003)) - ((((Largura - 0.06)) - 0.16)))) - 0.004))*sin(AnguloAbertura) + 0.0142*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.16)) + (0.3*(((((Largura - 0.06)) + 0.003)) - ((((Largura - 0.06)) - 0.16)))) + 0.004))*cos(AnguloAbertura) - 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.16)) + (0.3*(((((Largura - 0.06)) + 0.003)) - ((((Largura - 0.06)) - 0.16)))) + 0.004))*sin(AnguloAbertura) + 0.0142*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.16)) + (0.3*(((((Largura - 0.06)) + 0.003)) - ((((Largura - 0.06)) - 0.16)))) + 0.004))*cos(AnguloAbertura) - 0.0148*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.16)) + (0.3*(((((Largura - 0.06)) + 0.003)) - ((((Largura - 0.06)) - 0.16)))) + 0.004))*sin(AnguloAbertura) + 0.0148*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.16)) + (0.3*(((((Largura - 0.06)) + 0.003)) - ((((Largura - 0.06)) - 0.16)))) - 0.004))*cos(AnguloAbertura) - 0.0148*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.16)) + (0.3*(((((Largura - 0.06)) + 0.003)) - ((((Largura - 0.06)) - 0.16)))) - 0.004))*sin(AnguloAbertura) + 0.0148*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(0.035)",
+          depth: "0.008",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fechadura - parafuso 2 (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.16)) + (0.7*(((((Largura - 0.06)) + 0.003)) - ((((Largura - 0.06)) - 0.16)))) - 0.004))*cos(AnguloAbertura) - 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.16)) + (0.7*(((((Largura - 0.06)) + 0.003)) - ((((Largura - 0.06)) - 0.16)))) - 0.004))*sin(AnguloAbertura) + 0.0142*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.16)) + (0.7*(((((Largura - 0.06)) + 0.003)) - ((((Largura - 0.06)) - 0.16)))) + 0.004))*cos(AnguloAbertura) - 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.16)) + (0.7*(((((Largura - 0.06)) + 0.003)) - ((((Largura - 0.06)) - 0.16)))) + 0.004))*sin(AnguloAbertura) + 0.0142*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.16)) + (0.7*(((((Largura - 0.06)) + 0.003)) - ((((Largura - 0.06)) - 0.16)))) + 0.004))*cos(AnguloAbertura) - 0.0148*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.16)) + (0.7*(((((Largura - 0.06)) + 0.003)) - ((((Largura - 0.06)) - 0.16)))) + 0.004))*sin(AnguloAbertura) + 0.0148*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.16)) + (0.7*(((((Largura - 0.06)) + 0.003)) - ((((Largura - 0.06)) - 0.16)))) - 0.004))*cos(AnguloAbertura) - 0.0148*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.16)) + (0.7*(((((Largura - 0.06)) + 0.003)) - ((((Largura - 0.06)) - 0.16)))) - 0.004))*sin(AnguloAbertura) + 0.0148*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(0.035)",
+          depth: "0.008",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fechadura - tampa (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.16)) + 0.006))*cos(AnguloAbertura) + 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.16)) + 0.006))*sin(AnguloAbertura) - 0.0142*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) + 0.003)) - 0.006))*cos(AnguloAbertura) + 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) + 0.003)) - 0.006))*sin(AnguloAbertura) - 0.0142*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) + 0.003)) - 0.006))*cos(AnguloAbertura) + 0.013*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) + 0.003)) - 0.006))*sin(AnguloAbertura) - 0.013*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.16)) + 0.006))*cos(AnguloAbertura) + 0.013*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.16)) + 0.006))*sin(AnguloAbertura) - 0.013*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(0.015)",
+          depth: "0.048",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fechadura - parafuso 1 (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.16)) + (0.3*(((((Largura - 0.06)) + 0.003)) - ((((Largura - 0.06)) - 0.16)))) - 0.004))*cos(AnguloAbertura) + 0.0148*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.16)) + (0.3*(((((Largura - 0.06)) + 0.003)) - ((((Largura - 0.06)) - 0.16)))) - 0.004))*sin(AnguloAbertura) - 0.0148*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.16)) + (0.3*(((((Largura - 0.06)) + 0.003)) - ((((Largura - 0.06)) - 0.16)))) + 0.004))*cos(AnguloAbertura) + 0.0148*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.16)) + (0.3*(((((Largura - 0.06)) + 0.003)) - ((((Largura - 0.06)) - 0.16)))) + 0.004))*sin(AnguloAbertura) - 0.0148*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.16)) + (0.3*(((((Largura - 0.06)) + 0.003)) - ((((Largura - 0.06)) - 0.16)))) + 0.004))*cos(AnguloAbertura) + 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.16)) + (0.3*(((((Largura - 0.06)) + 0.003)) - ((((Largura - 0.06)) - 0.16)))) + 0.004))*sin(AnguloAbertura) - 0.0142*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.16)) + (0.3*(((((Largura - 0.06)) + 0.003)) - ((((Largura - 0.06)) - 0.16)))) - 0.004))*cos(AnguloAbertura) + 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.16)) + (0.3*(((((Largura - 0.06)) + 0.003)) - ((((Largura - 0.06)) - 0.16)))) - 0.004))*sin(AnguloAbertura) - 0.0142*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(0.035)",
+          depth: "0.008",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fechadura - parafuso 2 (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.16)) + (0.7*(((((Largura - 0.06)) + 0.003)) - ((((Largura - 0.06)) - 0.16)))) - 0.004))*cos(AnguloAbertura) + 0.0148*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.16)) + (0.7*(((((Largura - 0.06)) + 0.003)) - ((((Largura - 0.06)) - 0.16)))) - 0.004))*sin(AnguloAbertura) - 0.0148*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.16)) + (0.7*(((((Largura - 0.06)) + 0.003)) - ((((Largura - 0.06)) - 0.16)))) + 0.004))*cos(AnguloAbertura) + 0.0148*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.16)) + (0.7*(((((Largura - 0.06)) + 0.003)) - ((((Largura - 0.06)) - 0.16)))) + 0.004))*sin(AnguloAbertura) - 0.0148*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.16)) + (0.7*(((((Largura - 0.06)) + 0.003)) - ((((Largura - 0.06)) - 0.16)))) + 0.004))*cos(AnguloAbertura) + 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.16)) + (0.7*(((((Largura - 0.06)) + 0.003)) - ((((Largura - 0.06)) - 0.16)))) + 0.004))*sin(AnguloAbertura) - 0.0142*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.16)) + (0.7*(((((Largura - 0.06)) + 0.003)) - ((((Largura - 0.06)) - 0.16)))) - 0.004))*cos(AnguloAbertura) + 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.16)) + (0.7*(((((Largura - 0.06)) + 0.003)) - ((((Largura - 0.06)) - 0.16)))) - 0.004))*sin(AnguloAbertura) - 0.0142*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(0.035)",
+          depth: "0.008",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fechadura simplificada",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((Largura - 0.06)) - 0.16))*cos(AnguloAbertura) + 0.013*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((Largura - 0.06)) - 0.16))*sin(AnguloAbertura) - 0.013*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((Largura - 0.06)) + 0.003))*cos(AnguloAbertura) + 0.013*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((Largura - 0.06)) + 0.003))*sin(AnguloAbertura) - 0.013*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((Largura - 0.06)) + 0.003))*cos(AnguloAbertura) - 0.013*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((Largura - 0.06)) + 0.003))*sin(AnguloAbertura) + 0.013*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((Largura - 0.06)) - 0.16))*cos(AnguloAbertura) - 0.013*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((Largura - 0.06)) - 0.16))*sin(AnguloAbertura) + 0.013*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "0.009",
+          depth: "0.06",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
+      ),
+      (
+        name: "Fechadura - cilindro (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.05)) - 0.009))*cos(AnguloAbertura) - 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.05)) - 0.009))*sin(AnguloAbertura) + 0.0142*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.05)) + 0.009))*cos(AnguloAbertura) - 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.05)) + 0.009))*sin(AnguloAbertura) + 0.0142*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.05)) + 0.009))*cos(AnguloAbertura) - 0.0182*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.05)) + 0.009))*sin(AnguloAbertura) + 0.0182*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.05)) - 0.009))*cos(AnguloAbertura) - 0.0182*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.05)) - 0.009))*sin(AnguloAbertura) + 0.0182*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "0.027",
+          depth: "0.03",
+        ),
+        material: "Latão",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fechadura - fenda (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.05)) - 0.001))*cos(AnguloAbertura) - 0.0182*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.05)) - 0.001))*sin(AnguloAbertura) + 0.0182*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.05)) + 0.001))*cos(AnguloAbertura) - 0.0182*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.05)) + 0.001))*sin(AnguloAbertura) + 0.0182*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.05)) + 0.001))*cos(AnguloAbertura) - 0.0187*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.05)) + 0.001))*sin(AnguloAbertura) + 0.0187*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.05)) - 0.001))*cos(AnguloAbertura) - 0.0187*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.05)) - 0.001))*sin(AnguloAbertura) + 0.0187*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "0.031",
+          depth: "0.022",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fechadura - cilindro (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.05)) - 0.009))*cos(AnguloAbertura) + 0.0182*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.05)) - 0.009))*sin(AnguloAbertura) - 0.0182*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.05)) + 0.009))*cos(AnguloAbertura) + 0.0182*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.05)) + 0.009))*sin(AnguloAbertura) - 0.0182*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.05)) + 0.009))*cos(AnguloAbertura) + 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.05)) + 0.009))*sin(AnguloAbertura) - 0.0142*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.05)) - 0.009))*cos(AnguloAbertura) + 0.0142*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.05)) - 0.009))*sin(AnguloAbertura) - 0.0142*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "0.027",
+          depth: "0.03",
+        ),
+        material: "Latão",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fechadura - fenda (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.05)) - 0.001))*cos(AnguloAbertura) + 0.0187*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.05)) - 0.001))*sin(AnguloAbertura) - 0.0187*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.05)) + 0.001))*cos(AnguloAbertura) + 0.0187*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.05)) + 0.001))*sin(AnguloAbertura) - 0.0187*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.05)) + 0.001))*cos(AnguloAbertura) + 0.0182*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.05)) + 0.001))*sin(AnguloAbertura) - 0.0182*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.05)) - 0.001))*cos(AnguloAbertura) + 0.0182*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.05)) - 0.001))*sin(AnguloAbertura) - 0.0182*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "0.031",
+          depth: "0.022",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fechadura - lingueta",
+        shape: Cylinder(
+          x: "(((-Largura/2) + 0.056)) + ((((Largura - 0.06)) - 0.11))*cos(AnguloAbertura)",
+          y: "((WallThickness/2 - 0.025)) + ((((Largura - 0.06)) - 0.11))*sin(AnguloAbertura)",
+          z: "0.006",
+          radius: "0.006",
+          height: "0.003",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Contra-fecho de piso",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + (((((Largura - 0.06)) - 0.13)) + 0.006)",
+              v: "((WallThickness/2 - 0.025)) - 0.016",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (((((Largura - 0.06)) - 0.09)) - 0.006)",
+              v: "((WallThickness/2 - 0.025)) - 0.016",
+              radius: "0.006",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((Largura - 0.06)) - 0.09))",
+              v: "((WallThickness/2 - 0.025)) + ((-0.016) + 0.006)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((Largura - 0.06)) - 0.09))",
+              v: "((WallThickness/2 - 0.025)) + (0.016 - 0.006)",
+              radius: "0.006",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (((((Largura - 0.06)) - 0.09)) - 0.006)",
+              v: "((WallThickness/2 - 0.025)) + 0.016",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + (((((Largura - 0.06)) - 0.13)) + 0.006)",
+              v: "((WallThickness/2 - 0.025)) + 0.016",
+              radius: "0.006",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((Largura - 0.06)) - 0.13))",
+              v: "((WallThickness/2 - 0.025)) + (0.016 - 0.006)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((Largura - 0.06)) - 0.13))",
+              v: "((WallThickness/2 - 0.025)) + ((-0.016) + 0.006)",
+              radius: "0.006",
+            ),
+          ],
+          offset: "0",
+          depth: "0.003",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Contra-fecho de piso - furo",
+        shape: Cylinder(
+          x: "(((-Largura/2) + 0.056)) + ((((Largura - 0.06)) - 0.11))",
+          y: "((WallThickness/2 - 0.025))",
+          z: "0.0025",
+          radius: "0.0075",
+          height: "0.0007",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Batente lateral - aba",
         shape: Box(
-          x: "Largura / 2 - 0.12",
-          y: "WallThickness / 2",
+          x: "(((Largura/2)) - 0.022)",
+          y: "((WallThickness/2 - 0.025) - 0.022)",
+          z: "0.03",
+          width: "0.022",
+          depth: "0.003",
+          height: "(Altura - 0.03)",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Batente lateral - base",
+        shape: Box(
+          x: "(((Largura/2)) - 0.003)",
+          y: "((WallThickness/2 - 0.025) - 0.022)",
+          z: "0.03",
+          width: "0.003",
+          depth: "0.03",
+          height: "(Altura - 0.03)",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Batente lateral - borracha",
+        shape: Box(
+          x: "(((Largura/2)) - 0.02)",
+          y: "((((WallThickness/2 - 0.025) - 0.022)) + 0.003)",
+          z: "0.04",
+          width: "0.012",
+          depth: "0.014",
+          height: "(((Altura - 0.03)) - 0.02)",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador simplificado",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.1)) - 0.0125))*cos(AnguloAbertura) + 0.0725*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.1)) - 0.0125))*sin(AnguloAbertura) - 0.0725*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.1)) + 0.0125))*cos(AnguloAbertura) + 0.0725*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.1)) + 0.0125))*sin(AnguloAbertura) - 0.0725*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.1)) + 0.0125))*cos(AnguloAbertura) - 0.0725*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.1)) + 0.0125))*sin(AnguloAbertura) + 0.0725*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.1)) - 0.0125))*cos(AnguloAbertura) - 0.0725*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.1)) - 0.0125))*sin(AnguloAbertura) + 0.0725*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "0.75",
+          depth: "0.6",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
+      ),
+      (
+        name: "Puxador (frente) - tubo",
+        shape: Cylinder(
+          x: "(((-Largura/2) + 0.056)) + ((((Largura - 0.06)) - 0.1))*cos(AnguloAbertura) - 0.06*sin(AnguloAbertura)",
+          y: "((WallThickness/2 - 0.025)) + ((((Largura - 0.06)) - 0.1))*sin(AnguloAbertura) + 0.06*cos(AnguloAbertura)",
           z: "0.75",
-          width: "0.025",
-          depth: "0.04",
+          radius: "0.0125",
           height: "0.6",
         ),
-        material: "Metal cromado",
+        material: "Inox escovado",
         in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
       ),
       (
-        name: "Puxador",
-        shape: Box(
-          x: "Largura / 2 - 0.12",
-          y: "WallThickness / 2 - 0.05",
+        name: "Puxador (frente) - ponteira inferior",
+        shape: Cylinder(
+          x: "(((-Largura/2) + 0.056)) + ((((Largura - 0.06)) - 0.1))*cos(AnguloAbertura) - 0.06*sin(AnguloAbertura)",
+          y: "((WallThickness/2 - 0.025)) + ((((Largura - 0.06)) - 0.1))*sin(AnguloAbertura) + 0.06*cos(AnguloAbertura)",
+          z: "0.746",
+          radius: "0.013",
+          height: "0.004",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador (frente) - ponteira superior",
+        shape: Cylinder(
+          x: "(((-Largura/2) + 0.056)) + ((((Largura - 0.06)) - 0.1))*cos(AnguloAbertura) - 0.06*sin(AnguloAbertura)",
+          y: "((WallThickness/2 - 0.025)) + ((((Largura - 0.06)) - 0.1))*sin(AnguloAbertura) + 0.06*cos(AnguloAbertura)",
+          z: "1.35",
+          radius: "0.013",
+          height: "0.004",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador (frente) - haste 1",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.1)) - 0.008))*cos(AnguloAbertura) - 0.005*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.1)) - 0.008))*sin(AnguloAbertura) + 0.005*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.1)) + 0.008))*cos(AnguloAbertura) - 0.005*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.1)) + 0.008))*sin(AnguloAbertura) + 0.005*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.1)) + 0.008))*cos(AnguloAbertura) - 0.06*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.1)) + 0.008))*sin(AnguloAbertura) + 0.06*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.1)) - 0.008))*cos(AnguloAbertura) - 0.06*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.1)) - 0.008))*sin(AnguloAbertura) + 0.06*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "0.802",
+          depth: "0.016",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador (frente) - arruela 1",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.1)) - 0.013))*cos(AnguloAbertura) - 0.005*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.1)) - 0.013))*sin(AnguloAbertura) + 0.005*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.1)) + 0.013))*cos(AnguloAbertura) - 0.005*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.1)) + 0.013))*sin(AnguloAbertura) + 0.005*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.1)) + 0.013))*cos(AnguloAbertura) - 0.008*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.1)) + 0.013))*sin(AnguloAbertura) + 0.008*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.1)) - 0.013))*cos(AnguloAbertura) - 0.008*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.1)) - 0.013))*sin(AnguloAbertura) + 0.008*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "0.797",
+          depth: "0.026",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador (frente) - haste 2",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.1)) - 0.008))*cos(AnguloAbertura) - 0.005*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.1)) - 0.008))*sin(AnguloAbertura) + 0.005*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.1)) + 0.008))*cos(AnguloAbertura) - 0.005*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.1)) + 0.008))*sin(AnguloAbertura) + 0.005*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.1)) + 0.008))*cos(AnguloAbertura) - 0.06*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.1)) + 0.008))*sin(AnguloAbertura) + 0.06*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.1)) - 0.008))*cos(AnguloAbertura) - 0.06*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.1)) - 0.008))*sin(AnguloAbertura) + 0.06*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "1.282",
+          depth: "0.016",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador (frente) - arruela 2",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.1)) - 0.013))*cos(AnguloAbertura) - 0.005*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.1)) - 0.013))*sin(AnguloAbertura) + 0.005*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.1)) + 0.013))*cos(AnguloAbertura) - 0.005*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.1)) + 0.013))*sin(AnguloAbertura) + 0.005*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.1)) + 0.013))*cos(AnguloAbertura) - 0.008*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.1)) + 0.013))*sin(AnguloAbertura) + 0.008*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.1)) - 0.013))*cos(AnguloAbertura) - 0.008*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.1)) - 0.013))*sin(AnguloAbertura) + 0.008*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "1.277",
+          depth: "0.026",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador (fundo) - tubo",
+        shape: Cylinder(
+          x: "(((-Largura/2) + 0.056)) + ((((Largura - 0.06)) - 0.1))*cos(AnguloAbertura) + 0.06*sin(AnguloAbertura)",
+          y: "((WallThickness/2 - 0.025)) + ((((Largura - 0.06)) - 0.1))*sin(AnguloAbertura) - 0.06*cos(AnguloAbertura)",
           z: "0.75",
-          width: "0.025",
-          depth: "0.04",
+          radius: "0.0125",
           height: "0.6",
         ),
-        material: "Metal cromado",
+        material: "Inox escovado",
         in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador (fundo) - ponteira inferior",
+        shape: Cylinder(
+          x: "(((-Largura/2) + 0.056)) + ((((Largura - 0.06)) - 0.1))*cos(AnguloAbertura) + 0.06*sin(AnguloAbertura)",
+          y: "((WallThickness/2 - 0.025)) + ((((Largura - 0.06)) - 0.1))*sin(AnguloAbertura) - 0.06*cos(AnguloAbertura)",
+          z: "0.746",
+          radius: "0.013",
+          height: "0.004",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador (fundo) - ponteira superior",
+        shape: Cylinder(
+          x: "(((-Largura/2) + 0.056)) + ((((Largura - 0.06)) - 0.1))*cos(AnguloAbertura) + 0.06*sin(AnguloAbertura)",
+          y: "((WallThickness/2 - 0.025)) + ((((Largura - 0.06)) - 0.1))*sin(AnguloAbertura) - 0.06*cos(AnguloAbertura)",
+          z: "1.35",
+          radius: "0.013",
+          height: "0.004",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador (fundo) - haste 1",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.1)) - 0.008))*cos(AnguloAbertura) + 0.06*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.1)) - 0.008))*sin(AnguloAbertura) - 0.06*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.1)) + 0.008))*cos(AnguloAbertura) + 0.06*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.1)) + 0.008))*sin(AnguloAbertura) - 0.06*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.1)) + 0.008))*cos(AnguloAbertura) + 0.005*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.1)) + 0.008))*sin(AnguloAbertura) - 0.005*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.1)) - 0.008))*cos(AnguloAbertura) + 0.005*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.1)) - 0.008))*sin(AnguloAbertura) - 0.005*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "0.802",
+          depth: "0.016",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador (fundo) - arruela 1",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.1)) - 0.013))*cos(AnguloAbertura) + 0.008*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.1)) - 0.013))*sin(AnguloAbertura) - 0.008*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.1)) + 0.013))*cos(AnguloAbertura) + 0.008*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.1)) + 0.013))*sin(AnguloAbertura) - 0.008*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.1)) + 0.013))*cos(AnguloAbertura) + 0.005*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.1)) + 0.013))*sin(AnguloAbertura) - 0.005*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.1)) - 0.013))*cos(AnguloAbertura) + 0.005*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.1)) - 0.013))*sin(AnguloAbertura) - 0.005*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "0.797",
+          depth: "0.026",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador (fundo) - haste 2",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.1)) - 0.008))*cos(AnguloAbertura) + 0.06*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.1)) - 0.008))*sin(AnguloAbertura) - 0.06*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.1)) + 0.008))*cos(AnguloAbertura) + 0.06*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.1)) + 0.008))*sin(AnguloAbertura) - 0.06*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.1)) + 0.008))*cos(AnguloAbertura) + 0.005*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.1)) + 0.008))*sin(AnguloAbertura) - 0.005*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.1)) - 0.008))*cos(AnguloAbertura) + 0.005*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.1)) - 0.008))*sin(AnguloAbertura) - 0.005*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "1.282",
+          depth: "0.016",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador (fundo) - arruela 2",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.1)) - 0.013))*cos(AnguloAbertura) + 0.008*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.1)) - 0.013))*sin(AnguloAbertura) - 0.008*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.1)) + 0.013))*cos(AnguloAbertura) + 0.008*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.1)) + 0.013))*sin(AnguloAbertura) - 0.008*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.1)) + 0.013))*cos(AnguloAbertura) + 0.005*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.1)) + 0.013))*sin(AnguloAbertura) - 0.005*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.056)) + ((((((Largura - 0.06)) - 0.1)) - 0.013))*cos(AnguloAbertura) + 0.005*sin(AnguloAbertura)",
+              v: "((WallThickness/2 - 0.025)) + ((((((Largura - 0.06)) - 0.1)) - 0.013))*sin(AnguloAbertura) - 0.005*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "1.277",
+          depth: "0.026",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
       ),
     ],
     opening: Some((
@@ -95,11 +1917,12 @@
       name: "Porta de vidro temperado 80 x 210",
       values: {
         "Altura": 2.1,
+        "AnguloAbertura": 0.0,
         "Largura": 0.8,
       },
       info: (
         type_mark: "",
-        description: "Porta de giro em vidro temperado 10 mm, sem batente, com puxadores de barra",
+        description: "Porta de giro em vidro temperado 10 mm, sem batente, ferragens de canto 1101/1103, fechadura 1520 e puxador tubular",
         manufacturer: "",
         model: "",
         url: "",
@@ -114,11 +1937,12 @@
       name: "Porta de vidro temperado 90 x 210",
       values: {
         "Altura": 2.1,
+        "AnguloAbertura": 0.0,
         "Largura": 0.9,
       },
       info: (
         type_mark: "",
-        description: "Porta de giro em vidro temperado 10 mm, sem batente, com puxadores de barra",
+        description: "Porta de giro em vidro temperado 10 mm, sem batente, ferragens de canto 1101/1103, fechadura 1520 e puxador tubular",
         manufacturer: "",
         model: "",
         url: "",
@@ -133,11 +1957,12 @@
       name: "Porta de vidro temperado 100 x 210",
       values: {
         "Altura": 2.1,
+        "AnguloAbertura": 0.0,
         "Largura": 1.0,
       },
       info: (
         type_mark: "",
-        description: "Porta de giro em vidro temperado 10 mm, sem batente, com puxadores de barra",
+        description: "Porta de giro em vidro temperado 10 mm, sem batente, ferragens de canto 1101/1103, fechadura 1520 e puxador tubular",
         manufacturer: "",
         model: "",
         url: "",
@@ -151,11 +1976,59 @@
   ],
   materials: [
     (
-      name: "Vidro",
-      color: (150, 200, 225),
+      name: "Vidro temperado",
+      color: (205, 228, 232),
       identity: (
         description: "",
         class: Glass,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.7,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (205, 228, 232),
+        finish: Polished,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Plástico translúcido",
+      color: (222, 236, 240),
+      identity: (
+        description: "",
+        class: Plastic,
         comments: "",
         keywords: "",
         manufacturer: "",
@@ -182,15 +2055,15 @@
         ),
       ),
       appearance: (
-        color: (150, 200, 225),
-        finish: Matte,
+        color: (222, 236, 240),
+        finish: Glossy,
         description: "",
       ),
       physical: (
         behavior: Isotropic,
-        density: Some(2500.0),
-        thermal_conductivity: Some(1.0),
-        specific_heat: Some(840.0),
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
         thermal_expansion: None,
         youngs_modulus: None,
         poisson: None,
@@ -199,11 +2072,11 @@
       ),
     ),
     (
-      name: "Metal cromado",
-      color: (205, 205, 210),
+      name: "Inox escovado",
+      color: (198, 200, 203),
       identity: (
         description: "",
-        class: Generic,
+        class: Metal,
         comments: "",
         keywords: "",
         manufacturer: "",
@@ -230,8 +2103,248 @@
         ),
       ),
       appearance: (
-        color: (205, 205, 210),
+        color: (198, 200, 203),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Cromado",
+      color: (226, 229, 233),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (226, 229, 233),
+        finish: Polished,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Borracha",
+      color: (30, 30, 30),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (30, 30, 30),
         finish: Matte,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Latão",
+      color: (192, 160, 84),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (192, 160, 84),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Plástico preto",
+      color: (34, 34, 37),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (34, 34, 37),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Alumínio anodizado",
+      color: (206, 208, 210),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (206, 208, 210),
+        finish: Satin,
         description: "",
       ),
       physical: (

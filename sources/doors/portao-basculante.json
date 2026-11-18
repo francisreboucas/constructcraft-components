@@ -14,103 +14,3322 @@
         "value": 2.2,
         "kind": "Length",
         "instance": false
+      },
+      {
+        "name": "AnguloAbertura",
+        "value": 0.0,
+        "kind": "Angle",
+        "instance": true
       }
     ],
     "items": [
       {
-        "name": "Marco",
-        "material": "Aço",
-        "in_plan": true,
+        "name": "Coluna esquerda simplificada",
         "shape": {
           "Box": {
-            "x": "-Largura / 2",
+            "x": "-Largura/2",
             "y": "-0.05",
             "z": "0",
-            "width": "0.08",
+            "width": "0.1",
             "depth": "0.1",
             "height": "Altura"
           }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
         }
       },
       {
-        "name": "Marco",
-        "material": "Aço",
-        "in_plan": true,
+        "name": "Coluna direita simplificada",
         "shape": {
           "Box": {
-            "x": "Largura / 2 - 0.08",
+            "x": "Largura/2 - 0.1",
             "y": "-0.05",
             "z": "0",
-            "width": "0.08",
+            "width": "0.1",
             "depth": "0.1",
             "height": "Altura"
           }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
         }
       },
       {
-        "name": "Marco",
-        "material": "Aço",
-        "in_plan": false,
+        "name": "Travessa superior simplificada",
         "shape": {
           "Box": {
-            "x": "-Largura / 2 + 0.08",
+            "x": "(-Largura/2 + 0.1)",
             "y": "-0.05",
             "z": "Altura - 0.08",
-            "width": "Largura - 2 * 0.08",
+            "width": "Largura - 0.2",
             "depth": "0.1",
             "height": "0.08"
           }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
         }
       },
       {
-        "name": "Folha",
-        "material": "Aço",
-        "in_plan": true,
+        "name": "Coluna esquerda - alma",
         "shape": {
           "Box": {
-            "x": "-Largura / 2 + 0.08",
-            "y": "-0.02",
+            "x": "(-Largura/2)",
+            "y": "-0.05",
             "z": "0",
-            "width": "Largura - 2 * 0.08",
-            "depth": "0.04",
-            "height": "Altura - 0.08"
+            "width": "0.1",
+            "depth": "0.003",
+            "height": "Altura"
           }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Coluna esquerda - aba externa",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2)",
+            "y": "-0.047",
+            "z": "0",
+            "width": "0.003",
+            "depth": "0.097",
+            "height": "Altura"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Coluna esquerda - aba interna",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.097",
+            "y": "-0.047",
+            "z": "0",
+            "width": "0.003",
+            "depth": "0.097",
+            "height": "Altura"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Coluna esquerda - tampa",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2)",
+            "y": "-0.05",
+            "z": "Altura - 0.003",
+            "width": "0.1",
+            "depth": "0.1",
+            "height": "0.003"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Coluna direita - alma",
+        "shape": {
+          "Box": {
+            "x": "(Largura/2 - 0.1)",
+            "y": "-0.05",
+            "z": "0",
+            "width": "0.1",
+            "depth": "0.003",
+            "height": "Altura"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Coluna direita - aba externa",
+        "shape": {
+          "Box": {
+            "x": "(Largura/2 - 0.1) + 0.097",
+            "y": "-0.047",
+            "z": "0",
+            "width": "0.003",
+            "depth": "0.097",
+            "height": "Altura"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Coluna direita - aba interna",
+        "shape": {
+          "Box": {
+            "x": "(Largura/2 - 0.1)",
+            "y": "-0.047",
+            "z": "0",
+            "width": "0.003",
+            "depth": "0.097",
+            "height": "Altura"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Coluna direita - tampa",
+        "shape": {
+          "Box": {
+            "x": "(Largura/2 - 0.1)",
+            "y": "-0.05",
+            "z": "Altura - 0.003",
+            "width": "0.1",
+            "depth": "0.1",
+            "height": "0.003"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travessa superior",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.1)",
+            "y": "-0.05",
+            "z": "Altura - 0.08",
+            "width": "Largura - 0.2",
+            "depth": "0.1",
+            "height": "0.08"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Batedor de piso",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2 + 0.1) + 0.054)",
+            "y": "0.017",
+            "z": "0",
+            "width": "(Largura - 0.308)",
+            "depth": "0.025",
+            "height": "0.004"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Batedor de piso - aba",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2 + 0.1) + 0.054)",
+            "y": "0.017",
+            "z": "0.004",
+            "width": "(Largura - 0.308)",
+            "depth": "0.003",
+            "height": "0.03"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Batedor de piso - borracha",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2 + 0.1) + 0.054)",
+            "y": "0.0155",
+            "z": "0.004",
+            "width": "(Largura - 0.308)",
+            "depth": "0.0015",
+            "height": "0.025"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha simplificada",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (-0.03)*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (-0.03)*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.03))*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.03))*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.03))*sin(AnguloAbertura) - 0.028*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.03))*cos(AnguloAbertura) + 0.028*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (-0.03)*sin(AnguloAbertura) - 0.028*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (-0.03)*cos(AnguloAbertura) + 0.028*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.1) + 0.054)",
+            "depth": "(Largura - 0.308)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Quadro - montante esquerdo",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (-0.03)*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (-0.03)*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.03))*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.03))*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.03))*sin(AnguloAbertura) - 0.015*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.03))*cos(AnguloAbertura) + 0.015*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (-0.03)*sin(AnguloAbertura) - 0.015*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (-0.03)*cos(AnguloAbertura) + 0.015*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.1) + 0.054)",
+            "depth": "0.05"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Quadro - montante direito",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (-0.03)*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (-0.03)*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.03))*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.03))*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.03))*sin(AnguloAbertura) - 0.015*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.03))*cos(AnguloAbertura) + 0.015*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (-0.03)*sin(AnguloAbertura) - 0.015*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (-0.03)*cos(AnguloAbertura) + 0.015*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.1) + 0.054) + (Largura - 0.308) - 0.05",
+            "depth": "0.05"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Quadro - travessa superior",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (-0.03)*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (-0.03)*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - 0.02*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - 0.02*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - 0.02*sin(AnguloAbertura) - 0.015*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - 0.02*cos(AnguloAbertura) + 0.015*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (-0.03)*sin(AnguloAbertura) - 0.015*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (-0.03)*cos(AnguloAbertura) + 0.015*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "(((-Largura/2 + 0.1) + 0.054) + 0.05)",
+            "depth": "((Largura - 0.308) - 0.1)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Quadro - travessa inferior",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.02) - 0.03)) - 0.05))*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.02) - 0.03)) - 0.05))*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.03))*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.03))*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.03))*sin(AnguloAbertura) - 0.015*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.03))*cos(AnguloAbertura) + 0.015*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.02) - 0.03)) - 0.05))*sin(AnguloAbertura) - 0.015*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.02) - 0.03)) - 0.05))*cos(AnguloAbertura) + 0.015*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "(((-Largura/2 + 0.1) + 0.054) + 0.05)",
+            "depth": "((Largura - 0.308) - 0.1)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Quadro - travessa intermediária 1",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((1*((Altura - 0.08 - 0.012) - 0.02)/3) - 0.055))*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((1*((Altura - 0.08 - 0.012) - 0.02)/3) - 0.055))*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((1*((Altura - 0.08 - 0.012) - 0.02)/3) - 0.055)) + 0.05))*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((1*((Altura - 0.08 - 0.012) - 0.02)/3) - 0.055)) + 0.05))*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((1*((Altura - 0.08 - 0.012) - 0.02)/3) - 0.055)) + 0.05))*sin(AnguloAbertura) - 0.015*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((1*((Altura - 0.08 - 0.012) - 0.02)/3) - 0.055)) + 0.05))*cos(AnguloAbertura) + 0.015*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((1*((Altura - 0.08 - 0.012) - 0.02)/3) - 0.055))*sin(AnguloAbertura) - 0.015*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((1*((Altura - 0.08 - 0.012) - 0.02)/3) - 0.055))*cos(AnguloAbertura) + 0.015*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "(((-Largura/2 + 0.1) + 0.054) + 0.05)",
+            "depth": "((Largura - 0.308) - 0.1)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Quadro - travessa intermediária 2",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((2*((Altura - 0.08 - 0.012) - 0.02)/3) - 0.055))*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((2*((Altura - 0.08 - 0.012) - 0.02)/3) - 0.055))*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((2*((Altura - 0.08 - 0.012) - 0.02)/3) - 0.055)) + 0.05))*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((2*((Altura - 0.08 - 0.012) - 0.02)/3) - 0.055)) + 0.05))*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((2*((Altura - 0.08 - 0.012) - 0.02)/3) - 0.055)) + 0.05))*sin(AnguloAbertura) - 0.015*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((2*((Altura - 0.08 - 0.012) - 0.02)/3) - 0.055)) + 0.05))*cos(AnguloAbertura) + 0.015*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((2*((Altura - 0.08 - 0.012) - 0.02)/3) - 0.055))*sin(AnguloAbertura) - 0.015*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((2*((Altura - 0.08 - 0.012) - 0.02)/3) - 0.055))*cos(AnguloAbertura) + 0.015*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "(((-Largura/2 + 0.1) + 0.054) + 0.05)",
+            "depth": "((Largura - 0.308) - 0.1)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Quadro - montante central",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - 0.02*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - 0.02*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.02) - 0.03)) - 0.05))*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.02) - 0.03)) - 0.05))*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.02) - 0.03)) - 0.05))*sin(AnguloAbertura) - 0.015*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.02) - 0.03)) - 0.05))*cos(AnguloAbertura) + 0.015*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - 0.02*sin(AnguloAbertura) - 0.015*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - 0.02*cos(AnguloAbertura) + 0.015*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "-0.02",
+            "depth": "0.04"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lambril - chapa",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (-0.03)*sin(AnguloAbertura) - 0.015*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (-0.03)*cos(AnguloAbertura) + 0.015*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.03))*sin(AnguloAbertura) - 0.015*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.03))*cos(AnguloAbertura) + 0.015*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.03))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.03))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (-0.03)*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (-0.03)*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.1) + 0.054)",
+            "depth": "(Largura - 0.308)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lambril - régua 1",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((0*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((0*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((0*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((0*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((0*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((0*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((0*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((0*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.1) + 0.054)",
+            "depth": "(Largura - 0.308)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lambril - régua 2",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((1*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((1*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((1*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((1*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((1*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((1*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((1*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((1*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.1) + 0.054)",
+            "depth": "(Largura - 0.308)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lambril - régua 3",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((2*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((2*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((2*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((2*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((2*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((2*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((2*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((2*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.1) + 0.054)",
+            "depth": "(Largura - 0.308)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lambril - régua 4",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((3*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((3*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((3*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((3*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((3*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((3*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((3*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((3*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.1) + 0.054)",
+            "depth": "(Largura - 0.308)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lambril - régua 5",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((4*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((4*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((4*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((4*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((4*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((4*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((4*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((4*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.1) + 0.054)",
+            "depth": "(Largura - 0.308)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lambril - régua 6",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((5*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((5*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((5*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((5*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((5*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((5*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((5*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((5*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.1) + 0.054)",
+            "depth": "(Largura - 0.308)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lambril - régua 7",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((6*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((6*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((6*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((6*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((6*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((6*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((6*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((6*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.1) + 0.054)",
+            "depth": "(Largura - 0.308)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lambril - régua 8",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((7*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((7*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((7*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((7*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((7*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((7*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((7*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((7*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.1) + 0.054)",
+            "depth": "(Largura - 0.308)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lambril - régua 9",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((8*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((8*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((8*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((8*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((8*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((8*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((8*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((8*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.1) + 0.054)",
+            "depth": "(Largura - 0.308)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lambril - régua 10",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((9*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((9*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((9*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((9*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((9*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((9*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((9*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((9*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.1) + 0.054)",
+            "depth": "(Largura - 0.308)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lambril - régua 11",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((10*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((10*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((10*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((10*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((10*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((10*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((10*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((10*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.1) + 0.054)",
+            "depth": "(Largura - 0.308)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lambril - régua 12",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((11*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((11*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((11*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((11*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((11*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((11*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((11*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((11*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.1) + 0.054)",
+            "depth": "(Largura - 0.308)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lambril - régua 13",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((12*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((12*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((12*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((12*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((12*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((12*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((12*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((12*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.1) + 0.054)",
+            "depth": "(Largura - 0.308)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lambril - régua 14",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((13*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((13*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((13*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((13*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((13*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((13*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((13*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((13*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.1) + 0.054)",
+            "depth": "(Largura - 0.308)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lambril - régua 15",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((14*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((14*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((14*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((14*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((14*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((14*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((14*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((14*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.1) + 0.054)",
+            "depth": "(Largura - 0.308)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lambril - régua 16",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((15*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((15*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((15*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((15*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((15*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((15*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((15*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((15*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.1) + 0.054)",
+            "depth": "(Largura - 0.308)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lambril - régua 17",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((16*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((16*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((16*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((16*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((16*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((16*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((16*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((16*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.1) + 0.054)",
+            "depth": "(Largura - 0.308)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lambril - régua 18",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((17*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((17*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((17*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((17*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((17*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((17*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((17*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((17*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.1) + 0.054)",
+            "depth": "(Largura - 0.308)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lambril - régua 19",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((18*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((18*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((18*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((18*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((18*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((18*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((18*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((18*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.1) + 0.054)",
+            "depth": "(Largura - 0.308)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lambril - régua 20",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((19*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((19*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((19*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*sin(AnguloAbertura) - 0.0165*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((19*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.002))*cos(AnguloAbertura) + 0.0165*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((19*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((19*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + (((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)))) - 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((19*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((19*((((Altura - 0.08 - 0.012) - 0.02) - 0.01)/20)) - 0.025)) + 0.012))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.1) + 0.054)",
+            "depth": "(Largura - 0.308)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Vedação inferior",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.03))*sin(AnguloAbertura) - (-0.008)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.03))*cos(AnguloAbertura) + (-0.008)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.02) - 0.03)) + 0.014))*sin(AnguloAbertura) - (-0.008)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.02) - 0.03)) + 0.014))*cos(AnguloAbertura) + (-0.008)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.02) - 0.03)) + 0.014))*sin(AnguloAbertura) - 0.02*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.02) - 0.03)) + 0.014))*cos(AnguloAbertura) + 0.02*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.03))*sin(AnguloAbertura) - 0.02*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.03))*cos(AnguloAbertura) + 0.02*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.1) + 0.054)",
+            "depth": "(Largura - 0.308)"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Fechadura - caixa",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.07))*sin(AnguloAbertura) - (-0.045)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.07))*cos(AnguloAbertura) + (-0.045)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.07))*sin(AnguloAbertura) - (-0.045)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.07))*cos(AnguloAbertura) + (-0.045)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.07))*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.07))*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.07))*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.07))*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "-0.06",
+            "depth": "0.12"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Fechadura - espelho",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.05))*sin(AnguloAbertura) - (-0.047)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.05))*cos(AnguloAbertura) + (-0.047)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.05))*sin(AnguloAbertura) - (-0.047)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.05))*cos(AnguloAbertura) + (-0.047)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.05))*sin(AnguloAbertura) - (-0.045)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.05))*cos(AnguloAbertura) + (-0.045)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.05))*sin(AnguloAbertura) - (-0.045)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.05))*cos(AnguloAbertura) + (-0.045)*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "-0.035",
+            "depth": "0.07"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Fechadura - maçaneta",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.012))*sin(AnguloAbertura) - (-0.075)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.012))*cos(AnguloAbertura) + (-0.075)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.012))*sin(AnguloAbertura) - (-0.075)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.012))*cos(AnguloAbertura) + (-0.075)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.012))*sin(AnguloAbertura) - (-0.047)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.012))*cos(AnguloAbertura) + (-0.047)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.012))*sin(AnguloAbertura) - (-0.047)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.012))*cos(AnguloAbertura) + (-0.047)*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "-0.01",
+            "depth": "0.02"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Fechadura - alavanca",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.012))*sin(AnguloAbertura) - (-0.085)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.012))*cos(AnguloAbertura) + (-0.085)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.09))*sin(AnguloAbertura) - (-0.085)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.09))*cos(AnguloAbertura) + (-0.085)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.09))*sin(AnguloAbertura) - (-0.075)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.09))*cos(AnguloAbertura) + (-0.075)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.012))*sin(AnguloAbertura) - (-0.075)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.012))*cos(AnguloAbertura) + (-0.075)*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "-0.01",
+            "depth": "0.02"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Fechadura - cilindro (fora)",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.016))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.016))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.016))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.016))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.016))*sin(AnguloAbertura) - 0.032*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.016))*cos(AnguloAbertura) + 0.032*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.016))*sin(AnguloAbertura) - 0.032*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.016))*cos(AnguloAbertura) + 0.032*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "-0.009",
+            "depth": "0.018"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Fechadura - fenda (fora)",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.008))*sin(AnguloAbertura) - 0.032*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.008))*cos(AnguloAbertura) + 0.032*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.008))*sin(AnguloAbertura) - 0.032*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.008))*cos(AnguloAbertura) + 0.032*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.008))*sin(AnguloAbertura) - 0.0325*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.008))*cos(AnguloAbertura) + 0.0325*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.008))*sin(AnguloAbertura) - 0.0325*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.008))*cos(AnguloAbertura) + 0.0325*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "-0.001",
+            "depth": "0.002"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tranca esquerda",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.03) - 1.0))*sin(AnguloAbertura) - (-0.03)*cos(AnguloAbertura)) - 0.008",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.03) - 1.0))*cos(AnguloAbertura) + (-0.03)*sin(AnguloAbertura)",
+                "radius": "0.008"
+              },
+              {
+                "u": "((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.03) - 1.0))*sin(AnguloAbertura) - (-0.03)*cos(AnguloAbertura)) + 0.008",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.03) - 1.0))*cos(AnguloAbertura) + (-0.03)*sin(AnguloAbertura)",
+                "radius": "0.008"
+              }
+            ],
+            "offset": "(((-Largura/2 + 0.1) + 0.054) - 0.046)",
+            "depth": "(-(((-Largura/2 + 0.1) + 0.054) - 0.046) - 0.06)"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tranca direita",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.03) - 1.0))*sin(AnguloAbertura) - (-0.03)*cos(AnguloAbertura)) - 0.008",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.03) - 1.0))*cos(AnguloAbertura) + (-0.03)*sin(AnguloAbertura)",
+                "radius": "0.008"
+              },
+              {
+                "u": "((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.03) - 1.0))*sin(AnguloAbertura) - (-0.03)*cos(AnguloAbertura)) + 0.008",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.03) - 1.0))*cos(AnguloAbertura) + (-0.03)*sin(AnguloAbertura)",
+                "radius": "0.008"
+              }
+            ],
+            "offset": "0.06",
+            "depth": "(-(((-Largura/2 + 0.1) + 0.054) - 0.046) - 0.06)"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tranca - guia 1",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.014))*sin(AnguloAbertura) - (-0.042)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.014))*cos(AnguloAbertura) + (-0.042)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.014))*sin(AnguloAbertura) - (-0.042)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.014))*cos(AnguloAbertura) + (-0.042)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.014))*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.014))*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.014))*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.014))*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "(((-Largura/2 + 0.1) + 0.054) + 0.07)",
+            "depth": "0.03"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tranca - guia 2",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.014))*sin(AnguloAbertura) - (-0.042)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.014))*cos(AnguloAbertura) + (-0.042)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.014))*sin(AnguloAbertura) - (-0.042)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.014))*cos(AnguloAbertura) + (-0.042)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.014))*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.014))*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.014))*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.014))*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "(((-Largura/2 + 0.1) + 0.054) + (Largura - 0.308)/4)",
+            "depth": "0.03"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tranca - guia 3",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.014))*sin(AnguloAbertura) - (-0.042)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.014))*cos(AnguloAbertura) + (-0.042)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.014))*sin(AnguloAbertura) - (-0.042)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.014))*cos(AnguloAbertura) + (-0.042)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.014))*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.014))*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.014))*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.014))*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "(-((-Largura/2 + 0.1) + 0.054) - 0.1)",
+            "depth": "0.03"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tranca - guia 4",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.014))*sin(AnguloAbertura) - (-0.042)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.014))*cos(AnguloAbertura) + (-0.042)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.014))*sin(AnguloAbertura) - (-0.042)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.014))*cos(AnguloAbertura) + (-0.042)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.014))*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) + 0.014))*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.014))*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.03) - 1.0)) - 0.014))*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "(-((-Largura/2 + 0.1) + 0.054) - (Largura - 0.308)/4 - 0.03)",
+            "depth": "0.03"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Puxador externo - barra",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((Altura - 0.08 - 0.012) - 0.03) - 1.0) + 0.13))*sin(AnguloAbertura) - 0.065*cos(AnguloAbertura)) - 0.011",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((Altura - 0.08 - 0.012) - 0.03) - 1.0) + 0.13))*cos(AnguloAbertura) + 0.065*sin(AnguloAbertura)",
+                "radius": "0.011"
+              },
+              {
+                "u": "((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((Altura - 0.08 - 0.012) - 0.03) - 1.0) + 0.13))*sin(AnguloAbertura) - 0.065*cos(AnguloAbertura)) + 0.011",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((Altura - 0.08 - 0.012) - 0.03) - 1.0) + 0.13))*cos(AnguloAbertura) + 0.065*sin(AnguloAbertura)",
+                "radius": "0.011"
+              }
+            ],
+            "offset": "-0.15",
+            "depth": "0.3"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Puxador externo - haste 1",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((Altura - 0.08 - 0.012) - 0.03) - 1.0) + 0.13)) - 0.008))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((Altura - 0.08 - 0.012) - 0.03) - 1.0) + 0.13)) - 0.008))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((Altura - 0.08 - 0.012) - 0.03) - 1.0) + 0.13)) + 0.008))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((Altura - 0.08 - 0.012) - 0.03) - 1.0) + 0.13)) + 0.008))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((Altura - 0.08 - 0.012) - 0.03) - 1.0) + 0.13)) + 0.008))*sin(AnguloAbertura) - 0.065*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((Altura - 0.08 - 0.012) - 0.03) - 1.0) + 0.13)) + 0.008))*cos(AnguloAbertura) + 0.065*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((Altura - 0.08 - 0.012) - 0.03) - 1.0) + 0.13)) - 0.008))*sin(AnguloAbertura) - 0.065*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((Altura - 0.08 - 0.012) - 0.03) - 1.0) + 0.13)) - 0.008))*cos(AnguloAbertura) + 0.065*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "-0.13",
+            "depth": "0.02"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Puxador externo - haste 2",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((Altura - 0.08 - 0.012) - 0.03) - 1.0) + 0.13)) - 0.008))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((Altura - 0.08 - 0.012) - 0.03) - 1.0) + 0.13)) - 0.008))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((Altura - 0.08 - 0.012) - 0.03) - 1.0) + 0.13)) + 0.008))*sin(AnguloAbertura) - 0.026*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((Altura - 0.08 - 0.012) - 0.03) - 1.0) + 0.13)) + 0.008))*cos(AnguloAbertura) + 0.026*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((Altura - 0.08 - 0.012) - 0.03) - 1.0) + 0.13)) + 0.008))*sin(AnguloAbertura) - 0.065*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((Altura - 0.08 - 0.012) - 0.03) - 1.0) + 0.13)) + 0.008))*cos(AnguloAbertura) + 0.065*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (((((((Altura - 0.08 - 0.012) - 0.03) - 1.0) + 0.13)) - 0.008))*sin(AnguloAbertura) - 0.065*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((((((Altura - 0.08 - 0.012) - 0.03) - 1.0) + 0.13)) - 0.008))*cos(AnguloAbertura) + 0.065*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "0.11",
+            "depth": "0.02"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Alça interna - barra",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.02) - 0.03)) - 0.25))*sin(AnguloAbertura) - (-0.06)*cos(AnguloAbertura)) - 0.01",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.02) - 0.03)) - 0.25))*cos(AnguloAbertura) + (-0.06)*sin(AnguloAbertura)",
+                "radius": "0.01"
+              },
+              {
+                "u": "((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.02) - 0.03)) - 0.25))*sin(AnguloAbertura) - (-0.06)*cos(AnguloAbertura)) + 0.01",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.02) - 0.03)) - 0.25))*cos(AnguloAbertura) + (-0.06)*sin(AnguloAbertura)",
+                "radius": "0.01"
+              }
+            ],
+            "offset": "-0.12",
+            "depth": "0.24"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Alça interna - haste 1",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((((Altura - 0.08 - 0.012) - 0.02) - 0.03)) - 0.25)) - 0.008))*sin(AnguloAbertura) - (-0.06)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((((Altura - 0.08 - 0.012) - 0.02) - 0.03)) - 0.25)) - 0.008))*cos(AnguloAbertura) + (-0.06)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((((Altura - 0.08 - 0.012) - 0.02) - 0.03)) - 0.25)) + 0.008))*sin(AnguloAbertura) - (-0.06)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((((Altura - 0.08 - 0.012) - 0.02) - 0.03)) - 0.25)) + 0.008))*cos(AnguloAbertura) + (-0.06)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((((Altura - 0.08 - 0.012) - 0.02) - 0.03)) - 0.25)) + 0.008))*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((((Altura - 0.08 - 0.012) - 0.02) - 0.03)) - 0.25)) + 0.008))*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((((Altura - 0.08 - 0.012) - 0.02) - 0.03)) - 0.25)) - 0.008))*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((((Altura - 0.08 - 0.012) - 0.02) - 0.03)) - 0.25)) - 0.008))*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "-0.11",
+            "depth": "0.02"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Alça interna - haste 2",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((((Altura - 0.08 - 0.012) - 0.02) - 0.03)) - 0.25)) - 0.008))*sin(AnguloAbertura) - (-0.06)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((((Altura - 0.08 - 0.012) - 0.02) - 0.03)) - 0.25)) - 0.008))*cos(AnguloAbertura) + (-0.06)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((((Altura - 0.08 - 0.012) - 0.02) - 0.03)) - 0.25)) + 0.008))*sin(AnguloAbertura) - (-0.06)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((((Altura - 0.08 - 0.012) - 0.02) - 0.03)) - 0.25)) + 0.008))*cos(AnguloAbertura) + (-0.06)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((((Altura - 0.08 - 0.012) - 0.02) - 0.03)) - 0.25)) + 0.008))*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((((Altura - 0.08 - 0.012) - 0.02) - 0.03)) - 0.25)) + 0.008))*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((((Altura - 0.08 - 0.012) - 0.02) - 0.03)) - 0.25)) - 0.008))*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((((Altura - 0.08 - 0.012) - 0.02) - 0.03)) - 0.25)) - 0.008))*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "0.09",
+            "depth": "0.02"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trilho esquerdo - alma",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2 + 0.1)) + 0.012)",
+            "y": "-0.04",
+            "z": "((((Altura - 0.08 - 0.012) - 0.03)) - 0.033)",
+            "width": "0.003",
+            "depth": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3) + 0.08) + 0.04",
+            "height": "0.066"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trilho esquerdo - aba superior",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2 + 0.1)) + 0.012)",
+            "y": "-0.04",
+            "z": "((((Altura - 0.08 - 0.012) - 0.03)) + 0.03)",
+            "width": "0.03",
+            "depth": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3) + 0.08) + 0.04",
+            "height": "0.003"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trilho esquerdo - aba inferior",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2 + 0.1)) + 0.012)",
+            "y": "-0.04",
+            "z": "((((Altura - 0.08 - 0.012) - 0.03)) - 0.033)",
+            "width": "0.03",
+            "depth": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3) + 0.08) + 0.04",
+            "height": "0.003"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trilho esquerdo simplificado",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2 + 0.1)) + 0.012)",
+            "y": "-0.04",
+            "z": "((((Altura - 0.08 - 0.012) - 0.03)) - 0.033)",
+            "width": "0.03",
+            "depth": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3) + 0.08) + 0.04",
+            "height": "0.066"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Trilho esquerdo - fim de curso",
+        "shape": {
+          "Box": {
+            "x": "(((((-Largura/2 + 0.1)) + 0.012)) + 0.003)",
+            "y": "(((2*(((Altura - 0.08 - 0.012) - 0.02)/3) + 0.08)) - 0.02)",
+            "z": "((((Altura - 0.08 - 0.012) - 0.03)) - 0.03)",
+            "width": "0.027",
+            "depth": "0.02",
+            "height": "0.06"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trilho esquerdo - suspensão",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2 + 0.1)) + 0.012)",
+            "y": "(((2*(((Altura - 0.08 - 0.012) - 0.02)/3) + 0.08)) - 0.06)",
+            "z": "((((Altura - 0.08 - 0.012) - 0.03)) + 0.033)",
+            "width": "0.03",
+            "depth": "0.004",
+            "height": "0.35"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trilho esquerdo - chapa de fixação",
+        "shape": {
+          "Box": {
+            "x": "(((((-Largura/2 + 0.1)) + 0.012)) - 0.02)",
+            "y": "(((2*(((Altura - 0.08 - 0.012) - 0.02)/3) + 0.08)) - 0.09)",
+            "z": "((((Altura - 0.08 - 0.012) - 0.03)) + 0.383)",
+            "width": "0.07",
+            "depth": "0.06",
+            "height": "0.005"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trilho esquerdo - suporte na coluna",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.1)",
+            "y": "-0.04",
+            "z": "((((Altura - 0.08 - 0.012) - 0.03)) + 0.033)",
+            "width": "0.042",
+            "depth": "0.09",
+            "height": "Altura - 0.08 - ((Altura - 0.08 - 0.012) - 0.03) - 0.033"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Braço esquerdo",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(-0.02)*sin(AnguloAbertura) + (-0.018)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (-0.02)*cos(AnguloAbertura) + (-0.018)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "((((((Altura - 0.08 - 0.012) - 0.02)/3)) + 0.02))*sin(AnguloAbertura) + (-0.018)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.02)/3)) + 0.02))*cos(AnguloAbertura) + (-0.018)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "((((((Altura - 0.08 - 0.012) - 0.02)/3)) + 0.02))*sin(AnguloAbertura) + 0.018*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.02)/3)) + 0.02))*cos(AnguloAbertura) + 0.018*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(-0.02)*sin(AnguloAbertura) + 0.018*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (-0.02)*cos(AnguloAbertura) + 0.018*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "(((-Largura/2 + 0.1)) + 0.044)",
+            "depth": "0.006"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Braço esquerdo - pino fixo",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.008",
+                "v": "((Altura - 0.08 - 0.012) - 0.03)",
+                "radius": "0.008"
+              },
+              {
+                "u": "0 + 0.008",
+                "v": "((Altura - 0.08 - 0.012) - 0.03)",
+                "radius": "0.008"
+              }
+            ],
+            "offset": "(((-Largura/2 + 0.1)) + 0.042)",
+            "depth": "0.012"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Braço esquerdo - pino da folha",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((((Altura - 0.08 - 0.012) - 0.02)/3))*sin(AnguloAbertura) + 0*cos(AnguloAbertura)) - 0.008",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02)/3))*cos(AnguloAbertura) + 0*sin(AnguloAbertura)",
+                "radius": "0.008"
+              },
+              {
+                "u": "(((((Altura - 0.08 - 0.012) - 0.02)/3))*sin(AnguloAbertura) + 0*cos(AnguloAbertura)) + 0.008",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02)/3))*cos(AnguloAbertura) + 0*sin(AnguloAbertura)",
+                "radius": "0.008"
+              }
+            ],
+            "offset": "(((-Largura/2 + 0.1)) + 0.044)",
+            "depth": "0.012"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Braço esquerdo - suporte na folha",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.02)/3)) - 0.03))*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.02)/3)) - 0.03))*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.02)/3)) + 0.03))*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.02)/3)) + 0.03))*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.02)/3)) + 0.03))*sin(AnguloAbertura) - 0.015*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.02)/3)) + 0.03))*cos(AnguloAbertura) + 0.015*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.02)/3)) - 0.03))*sin(AnguloAbertura) - 0.015*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.02)/3)) - 0.03))*cos(AnguloAbertura) + 0.015*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "(((((-Largura/2 + 0.1)) + 0.044)) + 0.006)",
+            "depth": "0.004"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Roldana esquerdo - roda",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - 0*sin(AnguloAbertura) - 0*cos(AnguloAbertura)) - 0.024",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - 0*cos(AnguloAbertura) + 0*sin(AnguloAbertura)",
+                "radius": "0.024"
+              },
+              {
+                "u": "((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - 0*sin(AnguloAbertura) - 0*cos(AnguloAbertura)) + 0.024",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - 0*cos(AnguloAbertura) + 0*sin(AnguloAbertura)",
+                "radius": "0.024"
+              }
+            ],
+            "offset": "(((-Largura/2 + 0.1)) + 0.017)",
+            "depth": "0.018"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Roldana esquerdo - cubo",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - 0*sin(AnguloAbertura) - 0*cos(AnguloAbertura)) - 0.009",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - 0*cos(AnguloAbertura) + 0*sin(AnguloAbertura)",
+                "radius": "0.009"
+              },
+              {
+                "u": "((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - 0*sin(AnguloAbertura) - 0*cos(AnguloAbertura)) + 0.009",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - 0*cos(AnguloAbertura) + 0*sin(AnguloAbertura)",
+                "radius": "0.009"
+              }
+            ],
+            "offset": "(((-Largura/2 + 0.1)) + 0.015)",
+            "depth": "0.022"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Roldana esquerdo - eixo",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - 0*sin(AnguloAbertura) - 0*cos(AnguloAbertura)) - 0.007",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - 0*cos(AnguloAbertura) + 0*sin(AnguloAbertura)",
+                "radius": "0.007"
+              },
+              {
+                "u": "((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - 0*sin(AnguloAbertura) - 0*cos(AnguloAbertura)) + 0.007",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - 0*cos(AnguloAbertura) + 0*sin(AnguloAbertura)",
+                "radius": "0.007"
+              }
+            ],
+            "offset": "(((-Largura/2 + 0.1)) + 0.035)",
+            "depth": "0.019"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Roldana esquerdo - suporte",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (-0.03)*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (-0.03)*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - 0.06*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - 0.06*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - 0.06*sin(AnguloAbertura) - 0.015*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - 0.06*cos(AnguloAbertura) + 0.015*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (-0.03)*sin(AnguloAbertura) - 0.015*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (-0.03)*cos(AnguloAbertura) + 0.015*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "(((-Largura/2 + 0.1)) + 0.05)",
+            "depth": "0.004"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Polia esquerdo",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.025",
+                "v": "((Altura - 0.08 - 0.012) - 0.03)",
+                "radius": "0.025"
+              },
+              {
+                "u": "0 + 0.025",
+                "v": "((Altura - 0.08 - 0.012) - 0.03)",
+                "radius": "0.025"
+              }
+            ],
+            "offset": "(((-Largura/2 + 0.1)) - 0.07)",
+            "depth": "0.078"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Polia esquerdo - eixo",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.008",
+                "v": "((Altura - 0.08 - 0.012) - 0.03)",
+                "radius": "0.008"
+              },
+              {
+                "u": "0 + 0.008",
+                "v": "((Altura - 0.08 - 0.012) - 0.03)",
+                "radius": "0.008"
+              }
+            ],
+            "offset": "(((-Largura/2 + 0.1)) - 0.097)",
+            "depth": "0.11"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Contrapeso esquerdo",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.012)",
+            "y": "-0.035",
+            "z": "(((Altura - 0.08 - 0.012) - 0.03) - 0.2 - (sqrt(0.000625 + (((Altura - 0.08 - 0.012) - 0.02) - 0.08)*(((Altura - 0.08 - 0.012) - 0.02) - 0.08)) - sqrt(((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025)*((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025) + (((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03))*(((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03))))) - 0.35",
+            "width": "0.076",
+            "depth": "0.075",
+            "height": "0.35"
+          }
+        },
+        "material": "Concreto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Contrapeso esquerdo - olhal",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2 + 0.012)) + 0.036)",
+            "y": "0.021",
+            "z": "(((Altura - 0.08 - 0.012) - 0.03) - 0.2 - (sqrt(0.000625 + (((Altura - 0.08 - 0.012) - 0.02) - 0.08)*(((Altura - 0.08 - 0.012) - 0.02) - 0.08)) - sqrt(((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025)*((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025) + (((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03))*(((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03)))))",
+            "width": "0.004",
+            "depth": "0.008",
+            "height": "0.012"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cabo do contrapeso esquerdo",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2 + 0.012)) + 0.036)",
+            "y": "0.023",
+            "z": "(((Altura - 0.08 - 0.012) - 0.03) - 0.2 - (sqrt(0.000625 + (((Altura - 0.08 - 0.012) - 0.02) - 0.08)*(((Altura - 0.08 - 0.012) - 0.02) - 0.08)) - sqrt(((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025)*((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025) + (((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03))*(((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03)))))",
+            "width": "0.004",
+            "depth": "0.004",
+            "height": "((Altura - 0.08 - 0.012) - 0.03) - (((Altura - 0.08 - 0.012) - 0.03) - 0.2 - (sqrt(0.000625 + (((Altura - 0.08 - 0.012) - 0.02) - 0.08)*(((Altura - 0.08 - 0.012) - 0.02) - 0.08)) - sqrt(((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025)*((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025) + (((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03))*(((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03)))))"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cabo da folha esquerdo",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-0.025 + (-(((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03))/sqrt(((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025)*((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025) + (((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03))*(((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03)))*0.0025)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) + (((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025)/sqrt(((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025)*((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025) + (((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03))*(((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03)))*0.0025)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + (-(((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03))/sqrt(((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025)*((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025) + (((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03))*(((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03)))*0.0025)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) + (((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025)/sqrt(((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025)*((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025) + (((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03))*(((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03)))*0.0025)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) - (-(((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03))/sqrt(((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025)*((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025) + (((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03))*(((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03)))*0.0025)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - (((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025)/sqrt(((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025)*((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025) + (((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03))*(((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03)))*0.0025)"
+              },
+              {
+                "u": "-0.025 - (-(((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03))/sqrt(((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025)*((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025) + (((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03))*(((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03)))*0.0025)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025)/sqrt(((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025)*((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025) + (((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03))*(((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03)))*0.0025)"
+              }
+            ],
+            "offset": "(((-Largura/2 + 0.1)) + 0.002)",
+            "depth": "0.004"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cabo da folha esquerdo - suporte",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.02) - 0.08)) - 0.02))*sin(AnguloAbertura) - (-0.01)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.02) - 0.08)) - 0.02))*cos(AnguloAbertura) + (-0.01)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.02) - 0.08)) + 0.02))*sin(AnguloAbertura) - (-0.01)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.02) - 0.08)) + 0.02))*cos(AnguloAbertura) + (-0.01)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.02) - 0.08)) + 0.02))*sin(AnguloAbertura) - 0.01*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.02) - 0.08)) + 0.02))*cos(AnguloAbertura) + 0.01*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.02) - 0.08)) - 0.02))*sin(AnguloAbertura) - 0.01*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.02) - 0.08)) - 0.02))*cos(AnguloAbertura) + 0.01*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "(-Largura/2 + 0.1)",
+            "depth": "0.054"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Batedor esquerdo",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.1)",
+            "y": "0.017",
+            "z": "0",
+            "width": "0.064",
+            "depth": "0.015",
+            "height": "(((Altura - 0.08 - 0.012) - 0.03) - (((Altura - 0.08 - 0.012) - 0.02)/3) - 0.06)"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Batedor esquerdo - borracha",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2 + 0.1)) + 0.054)",
+            "y": "0.0155",
+            "z": "0.03",
+            "width": "0.01",
+            "depth": "0.0015",
+            "height": "(((Altura - 0.08 - 0.012) - 0.03) - (((Altura - 0.08 - 0.012) - 0.02)/3) - 0.06) - 0.06"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Receptor da tranca esquerdo",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2 + 0.1)) + 0.004)",
+            "y": "0.032",
+            "z": "((((Altura - 0.08 - 0.012) - 0.03)) - 1.03)",
+            "width": "0.03",
+            "depth": "0.006",
+            "height": "0.06"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trilho direito - alma",
+        "shape": {
+          "Box": {
+            "x": "(-((((-Largura/2 + 0.1)) + 0.012)) - 0.003)",
+            "y": "-0.04",
+            "z": "((((Altura - 0.08 - 0.012) - 0.03)) - 0.033)",
+            "width": "0.003",
+            "depth": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3) + 0.08) + 0.04",
+            "height": "0.066"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trilho direito - aba superior",
+        "shape": {
+          "Box": {
+            "x": "(-((((-Largura/2 + 0.1)) + 0.012)) - 0.03)",
+            "y": "-0.04",
+            "z": "((((Altura - 0.08 - 0.012) - 0.03)) + 0.03)",
+            "width": "0.03",
+            "depth": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3) + 0.08) + 0.04",
+            "height": "0.003"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trilho direito - aba inferior",
+        "shape": {
+          "Box": {
+            "x": "(-((((-Largura/2 + 0.1)) + 0.012)) - 0.03)",
+            "y": "-0.04",
+            "z": "((((Altura - 0.08 - 0.012) - 0.03)) - 0.033)",
+            "width": "0.03",
+            "depth": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3) + 0.08) + 0.04",
+            "height": "0.003"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trilho direito simplificado",
+        "shape": {
+          "Box": {
+            "x": "(-((((-Largura/2 + 0.1)) + 0.012)) - 0.03)",
+            "y": "-0.04",
+            "z": "((((Altura - 0.08 - 0.012) - 0.03)) - 0.033)",
+            "width": "0.03",
+            "depth": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3) + 0.08) + 0.04",
+            "height": "0.066"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Trilho direito - fim de curso",
+        "shape": {
+          "Box": {
+            "x": "(-((((((-Largura/2 + 0.1)) + 0.012)) + 0.003)) - 0.027)",
+            "y": "(((2*(((Altura - 0.08 - 0.012) - 0.02)/3) + 0.08)) - 0.02)",
+            "z": "((((Altura - 0.08 - 0.012) - 0.03)) - 0.03)",
+            "width": "0.027",
+            "depth": "0.02",
+            "height": "0.06"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trilho direito - suspensão",
+        "shape": {
+          "Box": {
+            "x": "(-((((-Largura/2 + 0.1)) + 0.012)) - 0.03)",
+            "y": "(((2*(((Altura - 0.08 - 0.012) - 0.02)/3) + 0.08)) - 0.06)",
+            "z": "((((Altura - 0.08 - 0.012) - 0.03)) + 0.033)",
+            "width": "0.03",
+            "depth": "0.004",
+            "height": "0.35"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trilho direito - chapa de fixação",
+        "shape": {
+          "Box": {
+            "x": "(-((((((-Largura/2 + 0.1)) + 0.012)) - 0.02)) - 0.07)",
+            "y": "(((2*(((Altura - 0.08 - 0.012) - 0.02)/3) + 0.08)) - 0.09)",
+            "z": "((((Altura - 0.08 - 0.012) - 0.03)) + 0.383)",
+            "width": "0.07",
+            "depth": "0.06",
+            "height": "0.005"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trilho direito - suporte na coluna",
+        "shape": {
+          "Box": {
+            "x": "(-((-Largura/2 + 0.1)) - 0.042)",
+            "y": "-0.04",
+            "z": "((((Altura - 0.08 - 0.012) - 0.03)) + 0.033)",
+            "width": "0.042",
+            "depth": "0.09",
+            "height": "Altura - 0.08 - ((Altura - 0.08 - 0.012) - 0.03) - 0.033"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Braço direito",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(-0.02)*sin(AnguloAbertura) + (-0.018)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (-0.02)*cos(AnguloAbertura) + (-0.018)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "((((((Altura - 0.08 - 0.012) - 0.02)/3)) + 0.02))*sin(AnguloAbertura) + (-0.018)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.02)/3)) + 0.02))*cos(AnguloAbertura) + (-0.018)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "((((((Altura - 0.08 - 0.012) - 0.02)/3)) + 0.02))*sin(AnguloAbertura) + 0.018*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.02)/3)) + 0.02))*cos(AnguloAbertura) + 0.018*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(-0.02)*sin(AnguloAbertura) + 0.018*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (-0.02)*cos(AnguloAbertura) + 0.018*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "(-((((-Largura/2 + 0.1)) + 0.044)) - 0.006)",
+            "depth": "0.006"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Braço direito - pino fixo",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.008",
+                "v": "((Altura - 0.08 - 0.012) - 0.03)",
+                "radius": "0.008"
+              },
+              {
+                "u": "0 + 0.008",
+                "v": "((Altura - 0.08 - 0.012) - 0.03)",
+                "radius": "0.008"
+              }
+            ],
+            "offset": "(-((((-Largura/2 + 0.1)) + 0.042)) - 0.012)",
+            "depth": "0.012"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Braço direito - pino da folha",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((((Altura - 0.08 - 0.012) - 0.02)/3))*sin(AnguloAbertura) + 0*cos(AnguloAbertura)) - 0.008",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02)/3))*cos(AnguloAbertura) + 0*sin(AnguloAbertura)",
+                "radius": "0.008"
+              },
+              {
+                "u": "(((((Altura - 0.08 - 0.012) - 0.02)/3))*sin(AnguloAbertura) + 0*cos(AnguloAbertura)) + 0.008",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02)/3))*cos(AnguloAbertura) + 0*sin(AnguloAbertura)",
+                "radius": "0.008"
+              }
+            ],
+            "offset": "(-((((-Largura/2 + 0.1)) + 0.044)) - 0.012)",
+            "depth": "0.012"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Braço direito - suporte na folha",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.02)/3)) - 0.03))*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.02)/3)) - 0.03))*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.02)/3)) + 0.03))*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.02)/3)) + 0.03))*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.02)/3)) + 0.03))*sin(AnguloAbertura) - 0.015*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.02)/3)) + 0.03))*cos(AnguloAbertura) + 0.015*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.02)/3)) - 0.03))*sin(AnguloAbertura) - 0.015*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.02)/3)) - 0.03))*cos(AnguloAbertura) + 0.015*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "(-((((((-Largura/2 + 0.1)) + 0.044)) + 0.006)) - 0.004)",
+            "depth": "0.004"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Roldana direito - roda",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - 0*sin(AnguloAbertura) - 0*cos(AnguloAbertura)) - 0.024",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - 0*cos(AnguloAbertura) + 0*sin(AnguloAbertura)",
+                "radius": "0.024"
+              },
+              {
+                "u": "((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - 0*sin(AnguloAbertura) - 0*cos(AnguloAbertura)) + 0.024",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - 0*cos(AnguloAbertura) + 0*sin(AnguloAbertura)",
+                "radius": "0.024"
+              }
+            ],
+            "offset": "(-((((-Largura/2 + 0.1)) + 0.017)) - 0.018)",
+            "depth": "0.018"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Roldana direito - cubo",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - 0*sin(AnguloAbertura) - 0*cos(AnguloAbertura)) - 0.009",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - 0*cos(AnguloAbertura) + 0*sin(AnguloAbertura)",
+                "radius": "0.009"
+              },
+              {
+                "u": "((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - 0*sin(AnguloAbertura) - 0*cos(AnguloAbertura)) + 0.009",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - 0*cos(AnguloAbertura) + 0*sin(AnguloAbertura)",
+                "radius": "0.009"
+              }
+            ],
+            "offset": "(-((((-Largura/2 + 0.1)) + 0.015)) - 0.022)",
+            "depth": "0.022"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Roldana direito - eixo",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - 0*sin(AnguloAbertura) - 0*cos(AnguloAbertura)) - 0.007",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - 0*cos(AnguloAbertura) + 0*sin(AnguloAbertura)",
+                "radius": "0.007"
+              },
+              {
+                "u": "((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - 0*sin(AnguloAbertura) - 0*cos(AnguloAbertura)) + 0.007",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - 0*cos(AnguloAbertura) + 0*sin(AnguloAbertura)",
+                "radius": "0.007"
+              }
+            ],
+            "offset": "(-((((-Largura/2 + 0.1)) + 0.035)) - 0.019)",
+            "depth": "0.019"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Roldana direito - suporte",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (-0.03)*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (-0.03)*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - 0.06*sin(AnguloAbertura) - (-0.015)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - 0.06*cos(AnguloAbertura) + (-0.015)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - 0.06*sin(AnguloAbertura) - 0.015*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - 0.06*cos(AnguloAbertura) + 0.015*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - (-0.03)*sin(AnguloAbertura) - 0.015*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (-0.03)*cos(AnguloAbertura) + 0.015*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "(-((((-Largura/2 + 0.1)) + 0.05)) - 0.004)",
+            "depth": "0.004"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Polia direito",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.025",
+                "v": "((Altura - 0.08 - 0.012) - 0.03)",
+                "radius": "0.025"
+              },
+              {
+                "u": "0 + 0.025",
+                "v": "((Altura - 0.08 - 0.012) - 0.03)",
+                "radius": "0.025"
+              }
+            ],
+            "offset": "(-((((-Largura/2 + 0.1)) - 0.07)) - 0.078)",
+            "depth": "0.078"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Polia direito - eixo",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "0 - 0.008",
+                "v": "((Altura - 0.08 - 0.012) - 0.03)",
+                "radius": "0.008"
+              },
+              {
+                "u": "0 + 0.008",
+                "v": "((Altura - 0.08 - 0.012) - 0.03)",
+                "radius": "0.008"
+              }
+            ],
+            "offset": "(-((((-Largura/2 + 0.1)) - 0.097)) - 0.11)",
+            "depth": "0.11"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Contrapeso direito",
+        "shape": {
+          "Box": {
+            "x": "(-((-Largura/2 + 0.012)) - 0.076)",
+            "y": "-0.035",
+            "z": "(((Altura - 0.08 - 0.012) - 0.03) - 0.2 - (sqrt(0.000625 + (((Altura - 0.08 - 0.012) - 0.02) - 0.08)*(((Altura - 0.08 - 0.012) - 0.02) - 0.08)) - sqrt(((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025)*((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025) + (((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03))*(((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03))))) - 0.35",
+            "width": "0.076",
+            "depth": "0.075",
+            "height": "0.35"
+          }
+        },
+        "material": "Concreto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Contrapeso direito - olhal",
+        "shape": {
+          "Box": {
+            "x": "(-((((-Largura/2 + 0.012)) + 0.036)) - 0.004)",
+            "y": "0.021",
+            "z": "(((Altura - 0.08 - 0.012) - 0.03) - 0.2 - (sqrt(0.000625 + (((Altura - 0.08 - 0.012) - 0.02) - 0.08)*(((Altura - 0.08 - 0.012) - 0.02) - 0.08)) - sqrt(((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025)*((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025) + (((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03))*(((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03)))))",
+            "width": "0.004",
+            "depth": "0.008",
+            "height": "0.012"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cabo do contrapeso direito",
+        "shape": {
+          "Box": {
+            "x": "(-((((-Largura/2 + 0.012)) + 0.036)) - 0.004)",
+            "y": "0.023",
+            "z": "(((Altura - 0.08 - 0.012) - 0.03) - 0.2 - (sqrt(0.000625 + (((Altura - 0.08 - 0.012) - 0.02) - 0.08)*(((Altura - 0.08 - 0.012) - 0.02) - 0.08)) - sqrt(((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025)*((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025) + (((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03))*(((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03)))))",
+            "width": "0.004",
+            "depth": "0.004",
+            "height": "((Altura - 0.08 - 0.012) - 0.03) - (((Altura - 0.08 - 0.012) - 0.03) - 0.2 - (sqrt(0.000625 + (((Altura - 0.08 - 0.012) - 0.02) - 0.08)*(((Altura - 0.08 - 0.012) - 0.02) - 0.08)) - sqrt(((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025)*((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025) + (((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03))*(((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03)))))"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cabo da folha direito",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-0.025 + (-(((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03))/sqrt(((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025)*((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025) + (((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03))*(((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03)))*0.0025)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) + (((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025)/sqrt(((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025)*((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025) + (((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03))*(((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03)))*0.0025)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + (-(((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03))/sqrt(((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025)*((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025) + (((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03))*(((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03)))*0.0025)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) + (((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025)/sqrt(((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025)*((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025) + (((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03))*(((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03)))*0.0025)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) - (-(((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03))/sqrt(((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025)*((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025) + (((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03))*(((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03)))*0.0025)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - (((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025)/sqrt(((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025)*((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025) + (((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03))*(((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03)))*0.0025)"
+              },
+              {
+                "u": "-0.025 - (-(((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03))/sqrt(((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025)*((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025) + (((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03))*(((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03)))*0.0025)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - (((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025)/sqrt(((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025)*((2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*sin(AnguloAbertura) - 0*cos(AnguloAbertura) + 0.025) + (((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03))*(((Altura - 0.08 - 0.012) - 0.03) - ((((Altura - 0.08 - 0.012) - 0.02) - 0.08))*cos(AnguloAbertura) + 0*sin(AnguloAbertura) - ((Altura - 0.08 - 0.012) - 0.03)))*0.0025)"
+              }
+            ],
+            "offset": "(-((((-Largura/2 + 0.1)) + 0.002)) - 0.004)",
+            "depth": "0.004"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cabo da folha direito - suporte",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.02) - 0.08)) - 0.02))*sin(AnguloAbertura) - (-0.01)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.02) - 0.08)) - 0.02))*cos(AnguloAbertura) + (-0.01)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.02) - 0.08)) + 0.02))*sin(AnguloAbertura) - (-0.01)*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.02) - 0.08)) + 0.02))*cos(AnguloAbertura) + (-0.01)*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.02) - 0.08)) + 0.02))*sin(AnguloAbertura) - 0.01*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.02) - 0.08)) + 0.02))*cos(AnguloAbertura) + 0.01*sin(AnguloAbertura)"
+              },
+              {
+                "u": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3)*sin(AnguloAbertura)) - ((((((Altura - 0.08 - 0.012) - 0.02) - 0.08)) - 0.02))*sin(AnguloAbertura) - 0.01*cos(AnguloAbertura)",
+                "v": "((Altura - 0.08 - 0.012) - 0.03) - ((((((Altura - 0.08 - 0.012) - 0.02) - 0.08)) - 0.02))*cos(AnguloAbertura) + 0.01*sin(AnguloAbertura)"
+              }
+            ],
+            "offset": "(-((-Largura/2 + 0.1)) - 0.054)",
+            "depth": "0.054"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Batedor direito",
+        "shape": {
+          "Box": {
+            "x": "(-((-Largura/2 + 0.1)) - 0.064)",
+            "y": "0.017",
+            "z": "0",
+            "width": "0.064",
+            "depth": "0.015",
+            "height": "(((Altura - 0.08 - 0.012) - 0.03) - (((Altura - 0.08 - 0.012) - 0.02)/3) - 0.06)"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Batedor direito - borracha",
+        "shape": {
+          "Box": {
+            "x": "(-((((-Largura/2 + 0.1)) + 0.054)) - 0.01)",
+            "y": "0.0155",
+            "z": "0.03",
+            "width": "0.01",
+            "depth": "0.0015",
+            "height": "(((Altura - 0.08 - 0.012) - 0.03) - (((Altura - 0.08 - 0.012) - 0.02)/3) - 0.06) - 0.06"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Receptor da tranca direito",
+        "shape": {
+          "Box": {
+            "x": "(-((((-Largura/2 + 0.1)) + 0.004)) - 0.03)",
+            "y": "0.032",
+            "z": "((((Altura - 0.08 - 0.012) - 0.03)) - 1.03)",
+            "width": "0.03",
+            "depth": "0.006",
+            "height": "0.06"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
         }
       },
       {
         "name": "Abertura",
-        "plan_only": true,
-        "in_plan": true,
-        "material": "",
         "shape": {
           "Profile": {
             "plane": "Plan",
-            "offset": "0",
-            "depth": "0.001",
             "points": [
               {
-                "u": "-Largura / 2 + 0.08",
-                "v": "0.05",
-                "radius": ""
+                "u": "((-Largura/2 + 0.1) + 0.054)",
+                "v": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3) - ((Altura - 0.08 - 0.012) - 0.02) + 0.03)"
               },
               {
-                "u": "Largura / 2 - 0.08",
-                "v": "0.05",
-                "radius": ""
+                "u": "-((-Largura/2 + 0.1) + 0.054)",
+                "v": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3) - ((Altura - 0.08 - 0.012) - 0.02) + 0.03)"
               },
               {
-                "u": "Largura / 2 - 0.08",
-                "v": "0.05 + Altura * 0.7",
-                "radius": ""
+                "u": "-((-Largura/2 + 0.1) + 0.054)",
+                "v": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3) + 0.03)"
               },
               {
-                "u": "-Largura / 2 + 0.08",
-                "v": "0.05 + Altura * 0.7",
-                "radius": ""
+                "u": "((-Largura/2 + 0.1) + 0.054)",
+                "v": "(2*(((Altura - 0.08 - 0.012) - 0.02)/3) + 0.03)"
               }
-            ]
+            ],
+            "offset": "0",
+            "depth": "0.001"
           }
-        }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        },
+        "plan_only": true
       }
     ],
     "opening": {
@@ -127,7 +3346,7 @@
         "Altura": 2.2
       },
       "info": {
-        "description": "Portão basculante de garagem em chapa de aço"
+        "description": "Portão basculante de garagem com contrapesos: colunas em U, folha de metalon com lambril, braços, trilhos e roldanas"
       }
     },
     {
@@ -137,9 +3356,98 @@
         "Altura": 2.2
       },
       "info": {
-        "description": "Portão basculante de garagem em chapa de aço"
+        "description": "Portão basculante de garagem com contrapesos: colunas em U, folha de metalon com lambril, braços, trilhos e roldanas"
       }
     }
   ],
-  "materials": []
+  "materials": [
+    {
+      "name": "Aço pintado cinza",
+      "color": [
+        128,
+        130,
+        134
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Borracha",
+      "color": [
+        30,
+        30,
+        30
+      ],
+      "class": "Plastic",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Aço pintado branco",
+      "color": [
+        240,
+        240,
+        236
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Aço pintado preto",
+      "color": [
+        30,
+        30,
+        32
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Cromado",
+      "color": [
+        226,
+        229,
+        233
+      ],
+      "class": "Metal",
+      "finish": "Polished",
+      "transparency": 0
+    },
+    {
+      "name": "Latão",
+      "color": [
+        192,
+        160,
+        84
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico preto",
+      "color": [
+        34,
+        34,
+        37
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Aço galvanizado",
+      "color": [
+        160,
+        165,
+        170
+      ],
+      "class": "Metal",
+      "finish": "Matte",
+      "transparency": 0
+    }
+  ]
 }

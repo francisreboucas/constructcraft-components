@@ -1,6 +1,6 @@
 (
   format_version: 1,
-  generator: "ConstructCAD 0.9.0",
+  generator: "ConstructCraft 0.12.0",
   component: "Porta-janela de correr",
   def: (
     kind: Door,
@@ -17,98 +17,3763 @@
         kind: Length,
         instance: false,
       ),
+      (
+        name: "Abertura",
+        value: 0.0,
+        kind: Number,
+        instance: true,
+      ),
+      (
+        name: "AberturaExterna",
+        value: 0.0,
+        kind: Number,
+        instance: true,
+      ),
     ],
     items: [
       (
-        name: "Marco",
+        name: "Marco simplificado esquerdo",
         shape: Box(
-          x: "-Largura / 2",
-          y: "-0.08 / 2",
-          z: "0",
+          x: "(-Largura/2)",
+          y: "-0.04",
+          z: "0.005",
           width: "0.04",
           depth: "0.08",
-          height: "Altura",
+          height: "Altura - 0.005",
         ),
-        material: "Alumínio",
+        material: "Alumínio anodizado",
         in_plan: true,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
       ),
       (
-        name: "Marco",
+        name: "Marco simplificado direito",
         shape: Box(
-          x: "Largura / 2 - 0.04",
-          y: "-0.08 / 2",
-          z: "0",
+          x: "(Largura/2) - 0.04",
+          y: "-0.04",
+          z: "0.005",
           width: "0.04",
           depth: "0.08",
-          height: "Altura",
+          height: "Altura - 0.005",
         ),
-        material: "Alumínio",
+        material: "Alumínio anodizado",
         in_plan: true,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
       ),
       (
-        name: "Marco",
+        name: "Marco simplificado inferior",
         shape: Box(
-          x: "-Largura / 2 + 0.04",
-          y: "-0.08 / 2",
-          z: "0",
-          width: "Largura - 2 * 0.04",
+          x: "(-Largura/2) + 0.04",
+          y: "-0.04",
+          z: "0.005",
+          width: "Largura - 0.08",
           depth: "0.08",
-          height: "0.04",
+          height: "0.03",
         ),
-        material: "Alumínio",
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
+      ),
+      (
+        name: "Marco simplificado superior",
+        shape: Box(
+          x: "(-Largura/2) + 0.04",
+          y: "-0.04",
+          z: "Altura - 0.035",
+          width: "Largura - 0.08",
+          depth: "0.08",
+          height: "0.035",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
+      ),
+      (
+        name: "Soleira",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "(-WallThickness/2 - 0.025)",
+              v: "-0.015",
+            ),
+            (
+              u: "(WallThickness/2)",
+              v: "-0.015",
+            ),
+            (
+              u: "(WallThickness/2)",
+              v: "0.005",
+            ),
+            (
+              u: "(-WallThickness/2 - 0.02)",
+              v: "0.005",
+              radius: "0.005",
+            ),
+            (
+              u: "(-WallThickness/2 - 0.025)",
+              v: "0",
+            ),
+          ],
+          offset: "(-Largura/2)",
+          depth: "Largura",
+        ),
+        material: "Granito",
         in_plan: false,
       ),
       (
-        name: "Marco",
-        shape: Box(
-          x: "-Largura / 2 + 0.04",
-          y: "-0.08 / 2",
-          z: "Altura - 0.04",
-          width: "Largura - 2 * 0.04",
-          depth: "0.08",
-          height: "0.04",
+        name: "Marco montante esquerdo",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2) + 0",
+              v: "-0.04",
+            ),
+            (
+              u: "(-Largura/2) + 0.03",
+              v: "-0.04",
+            ),
+            (
+              u: "(-Largura/2) + 0.03",
+              v: "-0.038",
+            ),
+            (
+              u: "(-Largura/2) + 0.003",
+              v: "-0.038",
+            ),
+            (
+              u: "(-Largura/2) + 0.003",
+              v: "-0.0095",
+            ),
+            (
+              u: "(-Largura/2) + 0.022",
+              v: "-0.0095",
+            ),
+            (
+              u: "(-Largura/2) + 0.022",
+              v: "-0.0075",
+            ),
+            (
+              u: "(-Largura/2) + 0.003",
+              v: "-0.0075",
+            ),
+            (
+              u: "(-Largura/2) + 0.003",
+              v: "0.0075",
+            ),
+            (
+              u: "(-Largura/2) + 0.022",
+              v: "0.0075",
+            ),
+            (
+              u: "(-Largura/2) + 0.022",
+              v: "0.0095",
+            ),
+            (
+              u: "(-Largura/2) + 0.003",
+              v: "0.0095",
+            ),
+            (
+              u: "(-Largura/2) + 0.003",
+              v: "0.038",
+            ),
+            (
+              u: "(-Largura/2) + 0.03",
+              v: "0.038",
+            ),
+            (
+              u: "(-Largura/2) + 0.03",
+              v: "0.04",
+            ),
+            (
+              u: "(-Largura/2) + 0",
+              v: "0.04",
+            ),
+          ],
+          offset: "0.005",
+          depth: "(Altura - 0.005)",
         ),
-        material: "Alumínio",
+        material: "Alumínio anodizado",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Marco montante direito",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(Largura/2) - 0",
+              v: "0.04",
+            ),
+            (
+              u: "(Largura/2) - 0.03",
+              v: "0.04",
+            ),
+            (
+              u: "(Largura/2) - 0.03",
+              v: "0.038",
+            ),
+            (
+              u: "(Largura/2) - 0.003",
+              v: "0.038",
+            ),
+            (
+              u: "(Largura/2) - 0.003",
+              v: "0.0095",
+            ),
+            (
+              u: "(Largura/2) - 0.022",
+              v: "0.0095",
+            ),
+            (
+              u: "(Largura/2) - 0.022",
+              v: "0.0075",
+            ),
+            (
+              u: "(Largura/2) - 0.003",
+              v: "0.0075",
+            ),
+            (
+              u: "(Largura/2) - 0.003",
+              v: "-0.0075",
+            ),
+            (
+              u: "(Largura/2) - 0.022",
+              v: "-0.0075",
+            ),
+            (
+              u: "(Largura/2) - 0.022",
+              v: "-0.0095",
+            ),
+            (
+              u: "(Largura/2) - 0.003",
+              v: "-0.0095",
+            ),
+            (
+              u: "(Largura/2) - 0.003",
+              v: "-0.038",
+            ),
+            (
+              u: "(Largura/2) - 0.03",
+              v: "-0.038",
+            ),
+            (
+              u: "(Largura/2) - 0.03",
+              v: "-0.04",
+            ),
+            (
+              u: "(Largura/2) - 0",
+              v: "-0.04",
+            ),
+          ],
+          offset: "0.005",
+          depth: "(Altura - 0.005)",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Trilho superior",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-0.04",
+              v: "(Altura - 0.035)",
+            ),
+            (
+              u: "-0.038",
+              v: "(Altura - 0.035)",
+            ),
+            (
+              u: "-0.038",
+              v: "(Altura - 0.004)",
+            ),
+            (
+              u: "-0.0095",
+              v: "(Altura - 0.004)",
+            ),
+            (
+              u: "-0.0095",
+              v: "(Altura - 0.025)",
+            ),
+            (
+              u: "-0.0075",
+              v: "(Altura - 0.025)",
+            ),
+            (
+              u: "-0.0075",
+              v: "(Altura - 0.004)",
+            ),
+            (
+              u: "0.0075",
+              v: "(Altura - 0.004)",
+            ),
+            (
+              u: "0.0075",
+              v: "(Altura - 0.025)",
+            ),
+            (
+              u: "0.0095",
+              v: "(Altura - 0.025)",
+            ),
+            (
+              u: "0.0095",
+              v: "(Altura - 0.004)",
+            ),
+            (
+              u: "0.038",
+              v: "(Altura - 0.004)",
+            ),
+            (
+              u: "0.038",
+              v: "(Altura - 0.035)",
+            ),
+            (
+              u: "0.04",
+              v: "(Altura - 0.035)",
+            ),
+            (
+              u: "0.04",
+              v: "Altura",
+            ),
+            (
+              u: "-0.04",
+              v: "Altura",
+            ),
+          ],
+          offset: "((-Largura/2) + 0.003)",
+          depth: "(Largura - 0.006)",
+        ),
+        material: "Alumínio anodizado",
         in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
       ),
       (
-        name: "Folha",
-        shape: Box(
-          x: "-Largura / 2 + 0.04",
-          y: "-0.025",
-          z: "0.04",
-          width: "Largura / 2 + 0.02 - 0.04",
-          depth: "0.012",
-          height: "Altura - 2 * 0.04",
+        name: "Trilho inferior",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-0.045",
+              v: "0.005",
+            ),
+            (
+              u: "0.04",
+              v: "0.005",
+            ),
+            (
+              u: "0.04",
+              v: "0.035",
+            ),
+            (
+              u: "0.0375",
+              v: "0.035",
+            ),
+            (
+              u: "0.0375",
+              v: "0.013",
+            ),
+            (
+              u: "0.0245",
+              v: "0.013",
+            ),
+            (
+              u: "0.0245",
+              v: "0.0263",
+              radius: "0.002",
+            ),
+            (
+              u: "0.0215",
+              v: "0.0263",
+            ),
+            (
+              u: "0.0215",
+              v: "0.013",
+            ),
+            (
+              u: "0.0015",
+              v: "0.013",
+            ),
+            (
+              u: "0.0015",
+              v: "0.019",
+            ),
+            (
+              u: "-0.0015",
+              v: "0.019",
+            ),
+            (
+              u: "-0.0015",
+              v: "0.009",
+            ),
+            (
+              u: "-0.0215",
+              v: "0.009",
+            ),
+            (
+              u: "-0.0215",
+              v: "0.0223",
+              radius: "0.002",
+            ),
+            (
+              u: "-0.0245",
+              v: "0.0223",
+            ),
+            (
+              u: "-0.0245",
+              v: "0.009",
+            ),
+            (
+              u: "-0.038",
+              v: "0.009",
+            ),
+            (
+              u: "-0.038",
+              v: "0.017",
+            ),
+            (
+              u: "-0.04",
+              v: "0.017",
+            ),
+            (
+              u: "-0.04",
+              v: "0.011",
+            ),
+            (
+              u: "-0.045",
+              v: "0.007",
+            ),
+          ],
+          offset: "((-Largura/2) + 0.003)",
+          depth: "(Largura - 0.006)",
         ),
-        material: "Vidro",
-        in_plan: true,
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
       ),
       (
-        name: "Folha",
+        name: "Tampa de dreno 1",
         shape: Box(
-          x: "-0.02",
-          y: "0.013",
-          z: "0.04",
-          width: "Largura / 2 + 0.02 - 0.04",
-          depth: "0.012",
-          height: "Altura - 2 * 0.04",
+          x: "(-Largura/4) - 0.015",
+          y: "-0.0415",
+          z: "0.0115",
+          width: "0.03",
+          depth: "0.0015",
+          height: "0.005",
         ),
-        material: "Vidro",
-        in_plan: true,
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Tampa de dreno 2",
+        shape: Box(
+          x: "(Largura/4) - 0.015",
+          y: "-0.0415",
+          z: "0.0115",
+          width: "0.03",
+          depth: "0.0015",
+          height: "0.005",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Cordão de silicone externo esquerdo",
+        shape: Box(
+          x: "(((-Largura/2)) + 0)",
+          y: "-0.0415",
+          z: "0.005",
+          width: "0.004",
+          depth: "0.0015",
+          height: "(((Altura - 0.005)) - 0)",
+        ),
+        material: "Borracha cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Cordão de silicone externo direito",
+        shape: Box(
+          x: "(((Largura/2)) - 0.004)",
+          y: "-0.0415",
+          z: "0.005",
+          width: "0.004",
+          depth: "0.0015",
+          height: "(((Altura - 0.005)) - 0)",
+        ),
+        material: "Borracha cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Cordão de silicone externo superior",
+        shape: Box(
+          x: "(((-Largura/2)) + 0.004)",
+          y: "-0.0415",
+          z: "(Altura - 0.004)",
+          width: "(((((Largura/2)) - ((-Largura/2)))) - 0.008)",
+          depth: "0.0015",
+          height: "0.004",
+        ),
+        material: "Borracha cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Cordão de silicone interno esquerdo",
+        shape: Box(
+          x: "(((-Largura/2)) + 0)",
+          y: "0.04",
+          z: "0.005",
+          width: "0.004",
+          depth: "0.0015",
+          height: "(((Altura - 0.005)) - 0)",
+        ),
+        material: "Borracha cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Cordão de silicone interno direito",
+        shape: Box(
+          x: "(((Largura/2)) - 0.004)",
+          y: "0.04",
+          z: "0.005",
+          width: "0.004",
+          depth: "0.0015",
+          height: "(((Altura - 0.005)) - 0)",
+        ),
+        material: "Borracha cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Cordão de silicone interno superior",
+        shape: Box(
+          x: "(((-Largura/2)) + 0.004)",
+          y: "0.04",
+          z: "(Altura - 0.004)",
+          width: "(((((Largura/2)) - ((-Largura/2)))) - 0.008)",
+          depth: "0.0015",
+          height: "0.004",
+        ),
+        material: "Borracha cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Tampa de parafuso 1",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "0 - 0.005",
+              v: "0.3",
+              radius: "0.005",
+            ),
+            (
+              u: "0 + 0.005",
+              v: "0.3",
+              radius: "0.005",
+            ),
+          ],
+          offset: "(-Largura/2) + 0.003",
+          depth: "0.0012",
+        ),
+        material: "Plástico cinza claro",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Tampa de parafuso 2",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "0 - 0.005",
+              v: "Altura - 0.3",
+              radius: "0.005",
+            ),
+            (
+              u: "0 + 0.005",
+              v: "Altura - 0.3",
+              radius: "0.005",
+            ),
+          ],
+          offset: "(-Largura/2) + 0.003",
+          depth: "0.0012",
+        ),
+        material: "Plástico cinza claro",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Tampa de parafuso 3",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "0 - 0.005",
+              v: "0.3",
+              radius: "0.005",
+            ),
+            (
+              u: "0 + 0.005",
+              v: "0.3",
+              radius: "0.005",
+            ),
+          ],
+          offset: "(Largura/2) - 0.0042",
+          depth: "0.0012",
+        ),
+        material: "Plástico cinza claro",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Tampa de parafuso 4",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "0 - 0.005",
+              v: "Altura - 0.3",
+              radius: "0.005",
+            ),
+            (
+              u: "0 + 0.005",
+              v: "Altura - 0.3",
+              radius: "0.005",
+            ),
+          ],
+          offset: "(Largura/2) - 0.0042",
+          depth: "0.0012",
+        ),
+        material: "Plástico cinza claro",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha externa simplificada",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071)))",
+              v: "0 - 0.034",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((Largura/2 + 0.019))",
+              v: "0 - 0.034",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((Largura/2 + 0.019))",
+              v: "0 - 0.012",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071)))",
+              v: "0 - 0.012",
+            ),
+          ],
+          offset: "0.015",
+          depth: "((Altura - 0.012) - 0.015)",
+        ),
+        material: "Vidro temperado",
+        in_plan: false,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
+      ),
+      (
+        name: "Folha externa - montante lateral",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071)))",
+              v: "0 - 0.034",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.045",
+              v: "0 - 0.034",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.045",
+              v: "0 - 0.012",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071)))",
+              v: "0 - 0.012",
+            ),
+          ],
+          offset: "0.015",
+          depth: "((Altura - 0.012) - 0.015)",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha externa - montante de encontro",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045))",
+              v: "0 - 0.034",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((Largura/2 + 0.019))",
+              v: "0 - 0.034",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((Largura/2 + 0.019))",
+              v: "0 - 0.012",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045))",
+              v: "0 - 0.012",
+            ),
+          ],
+          offset: "0.015",
+          depth: "((Altura - 0.012) - 0.015)",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha externa - travessa superior",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.045",
+              v: "0 - 0.034",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045))",
+              v: "0 - 0.034",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045))",
+              v: "0 - 0.012",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.045",
+              v: "0 - 0.012",
+            ),
+          ],
+          offset: "(Altura - 0.012) - 0.045",
+          depth: "0.045",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha externa - travessa inferior",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-0.034",
+              v: "0.015",
+            ),
+            (
+              u: "-0.032",
+              v: "0.015",
+            ),
+            (
+              u: "-0.032",
+              v: "0.049",
+            ),
+            (
+              u: "-0.014",
+              v: "0.049",
+            ),
+            (
+              u: "-0.014",
+              v: "0.015",
+            ),
+            (
+              u: "-0.012",
+              v: "0.015",
+            ),
+            (
+              u: "-0.012",
+              v: "0.1",
+            ),
+            (
+              u: "-0.034",
+              v: "0.1",
+            ),
+          ],
+          offset: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.045",
+          depth: "(((((Largura/2 + 0.019)) - 0.045)) - 0.045)",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha externa - vidro",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((0.037))",
+              v: "0 - 0.026",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.037))",
+              v: "0 - 0.026",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.037))",
+              v: "0 - 0.02",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((0.037))",
+              v: "0 - 0.02",
+            ),
+          ],
+          offset: "0.092",
+          depth: "((Altura - 0.012) - 0.045) - 0.084",
+        ),
+        material: "Vidro temperado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha externa - baguete esquerdo",
+        shape: Box(
+          x: "(((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.045) + 0)",
+          y: "-0.0185",
+          z: "0.1",
+          width: "0.01",
+          depth: "0.005",
+          height: "((((((Altura - 0.012) - 0.045)) - 0.1)) - 0)",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha externa - baguete direito",
+        shape: Box(
+          x: "((((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.045 + (((((Largura/2 + 0.019)) - 0.045)) - 0.045))) - 0.01)",
+          y: "-0.0185",
+          z: "0.1",
+          width: "0.01",
+          depth: "0.005",
+          height: "((((((Altura - 0.012) - 0.045)) - 0.1)) - 0)",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha externa - baguete inferior",
+        shape: Box(
+          x: "(((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.045) + 0.01)",
+          y: "-0.0185",
+          z: "0.1",
+          width: "((((((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.045 + (((((Largura/2 + 0.019)) - 0.045)) - 0.045))) - ((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.045))) - 0.02)",
+          depth: "0.005",
+          height: "0.01",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha externa - baguete superior",
+        shape: Box(
+          x: "(((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.045) + 0.01)",
+          y: "-0.0185",
+          z: "((((Altura - 0.012) - 0.045)) - 0.01)",
+          width: "((((((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.045 + (((((Largura/2 + 0.019)) - 0.045)) - 0.045))) - ((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.045))) - 0.02)",
+          depth: "0.005",
+          height: "0.01",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha externa - aba de encosto esquerdo",
+        shape: Box(
+          x: "(((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.045) + 0)",
+          y: "-0.0325",
+          z: "0.1",
+          width: "0.01",
+          depth: "0.005",
+          height: "((((((Altura - 0.012) - 0.045)) - 0.1)) - 0)",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha externa - aba de encosto direito",
+        shape: Box(
+          x: "((((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.045 + (((((Largura/2 + 0.019)) - 0.045)) - 0.045))) - 0.01)",
+          y: "-0.0325",
+          z: "0.1",
+          width: "0.01",
+          depth: "0.005",
+          height: "((((((Altura - 0.012) - 0.045)) - 0.1)) - 0)",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha externa - aba de encosto inferior",
+        shape: Box(
+          x: "(((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.045) + 0.01)",
+          y: "-0.0325",
+          z: "0.1",
+          width: "((((((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.045 + (((((Largura/2 + 0.019)) - 0.045)) - 0.045))) - ((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.045))) - 0.02)",
+          depth: "0.005",
+          height: "0.01",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha externa - aba de encosto superior",
+        shape: Box(
+          x: "(((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.045) + 0.01)",
+          y: "-0.0325",
+          z: "((((Altura - 0.012) - 0.045)) - 0.01)",
+          width: "((((((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.045 + (((((Largura/2 + 0.019)) - 0.045)) - 0.045))) - ((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.045))) - 0.02)",
+          depth: "0.005",
+          height: "0.01",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha externa - gaxeta interna esquerdo",
+        shape: Box(
+          x: "(((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.045) + 0)",
+          y: "-0.02",
+          z: "0.1",
+          width: "0.007",
+          depth: "0.0015",
+          height: "((((((Altura - 0.012) - 0.045)) - 0.1)) - 0)",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha externa - gaxeta interna direito",
+        shape: Box(
+          x: "((((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.045 + (((((Largura/2 + 0.019)) - 0.045)) - 0.045))) - 0.007)",
+          y: "-0.02",
+          z: "0.1",
+          width: "0.007",
+          depth: "0.0015",
+          height: "((((((Altura - 0.012) - 0.045)) - 0.1)) - 0)",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha externa - gaxeta interna inferior",
+        shape: Box(
+          x: "(((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.045) + 0.007)",
+          y: "-0.02",
+          z: "0.1",
+          width: "((((((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.045 + (((((Largura/2 + 0.019)) - 0.045)) - 0.045))) - ((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.045))) - 0.014)",
+          depth: "0.0015",
+          height: "0.007",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha externa - gaxeta interna superior",
+        shape: Box(
+          x: "(((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.045) + 0.007)",
+          y: "-0.02",
+          z: "((((Altura - 0.012) - 0.045)) - 0.007)",
+          width: "((((((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.045 + (((((Largura/2 + 0.019)) - 0.045)) - 0.045))) - ((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.045))) - 0.014)",
+          depth: "0.0015",
+          height: "0.007",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha externa - gaxeta externa esquerdo",
+        shape: Box(
+          x: "(((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.045) + 0)",
+          y: "-0.0275",
+          z: "0.1",
+          width: "0.007",
+          depth: "0.0015",
+          height: "((((((Altura - 0.012) - 0.045)) - 0.1)) - 0)",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha externa - gaxeta externa direito",
+        shape: Box(
+          x: "((((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.045 + (((((Largura/2 + 0.019)) - 0.045)) - 0.045))) - 0.007)",
+          y: "-0.0275",
+          z: "0.1",
+          width: "0.007",
+          depth: "0.0015",
+          height: "((((((Altura - 0.012) - 0.045)) - 0.1)) - 0)",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha externa - gaxeta externa inferior",
+        shape: Box(
+          x: "(((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.045) + 0.007)",
+          y: "-0.0275",
+          z: "0.1",
+          width: "((((((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.045 + (((((Largura/2 + 0.019)) - 0.045)) - 0.045))) - ((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.045))) - 0.014)",
+          depth: "0.0015",
+          height: "0.007",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha externa - gaxeta externa superior",
+        shape: Box(
+          x: "(((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.045) + 0.007)",
+          y: "-0.0275",
+          z: "((((Altura - 0.012) - 0.045)) - 0.007)",
+          width: "((((((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.045 + (((((Largura/2 + 0.019)) - 0.045)) - 0.045))) - ((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.045))) - 0.014)",
+          depth: "0.0015",
+          height: "0.007",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha externa - roldana 1 - caixa traseira",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((0.05))",
+              v: "0 - 0.0325",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((0.11))",
+              v: "0 - 0.0325",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((0.11))",
+              v: "0 - 0.0285",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((0.05))",
+              v: "0 - 0.0285",
+            ),
+          ],
+          offset: "0.027",
+          depth: "0.022",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha externa - roldana 1 - caixa frontal",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((0.05))",
+              v: "0 - 0.0175",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((0.11))",
+              v: "0 - 0.0175",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((0.11))",
+              v: "0 - 0.0135",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((0.05))",
+              v: "0 - 0.0135",
+            ),
+          ],
+          offset: "0.027",
+          depth: "0.022",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha externa - roldana 1 - roda",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.08",
+              v: "-0.027",
+            ),
+            (
+              u: "((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.08) + 0.012",
+              v: "-0.027",
+            ),
+            (
+              u: "((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.08) + 0.012",
+              v: "(-0.027) + 0.008",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.08",
+              v: "(-0.027) + 0.008",
+            ),
+          ],
+          offset: "0.035",
+          axis: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.08",
+          angle: "360",
+        ),
+        material: "Plástico cinza claro",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha externa - roldana 1 - eixo",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.08",
+              v: "-0.0285",
+            ),
+            (
+              u: "((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.08) + 0.004",
+              v: "-0.0285",
+            ),
+            (
+              u: "((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.08) + 0.004",
+              v: "(-0.0285) + 0.011",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.08",
+              v: "(-0.0285) + 0.011",
+            ),
+          ],
+          offset: "0.035",
+          axis: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.08",
+          angle: "360",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha externa - guia superior 1",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((0.05))",
+              v: "0 - 0.031",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((0.11))",
+              v: "0 - 0.031",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((0.11))",
+              v: "0 - 0.015",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((0.05))",
+              v: "0 - 0.015",
+            ),
+          ],
+          offset: "(Altura - 0.012)",
+          depth: "0.008",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha externa - roldana 2 - caixa traseira",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.08)) - 0.03))",
+              v: "0 - 0.0325",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.08)) + 0.03))",
+              v: "0 - 0.0325",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.08)) + 0.03))",
+              v: "0 - 0.0285",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.08)) - 0.03))",
+              v: "0 - 0.0285",
+            ),
+          ],
+          offset: "0.027",
+          depth: "0.022",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha externa - roldana 2 - caixa frontal",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.08)) - 0.03))",
+              v: "0 - 0.0175",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.08)) + 0.03))",
+              v: "0 - 0.0175",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.08)) + 0.03))",
+              v: "0 - 0.0135",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.08)) - 0.03))",
+              v: "0 - 0.0135",
+            ),
+          ],
+          offset: "0.027",
+          depth: "0.022",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha externa - roldana 2 - roda",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.08))",
+              v: "-0.027",
+            ),
+            (
+              u: "((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.08))) + 0.012",
+              v: "-0.027",
+            ),
+            (
+              u: "((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.08))) + 0.012",
+              v: "(-0.027) + 0.008",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.08))",
+              v: "(-0.027) + 0.008",
+            ),
+          ],
+          offset: "0.035",
+          axis: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.08))",
+          angle: "360",
+        ),
+        material: "Plástico cinza claro",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha externa - roldana 2 - eixo",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.08))",
+              v: "-0.0285",
+            ),
+            (
+              u: "((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.08))) + 0.004",
+              v: "-0.0285",
+            ),
+            (
+              u: "((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.08))) + 0.004",
+              v: "(-0.0285) + 0.011",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.08))",
+              v: "(-0.0285) + 0.011",
+            ),
+          ],
+          offset: "0.035",
+          axis: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.08))",
+          angle: "360",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha externa - guia superior 2",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.08)) - 0.03))",
+              v: "0 - 0.031",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.08)) + 0.03))",
+              v: "0 - 0.031",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.08)) + 0.03))",
+              v: "0 - 0.015",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.08)) - 0.03))",
+              v: "0 - 0.015",
+            ),
+          ],
+          offset: "(Altura - 0.012)",
+          depth: "0.008",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha externa - escova do montante",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) - 0.003",
+              v: "0 - 0.027",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071)))",
+              v: "0 - 0.027",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071)))",
+              v: "0 - 0.019",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) - 0.003",
+              v: "0 - 0.019",
+            ),
+          ],
+          offset: "0.025",
+          depth: "((Altura - 0.012) - 0.015) - 0.02",
+        ),
+        material: "Borracha cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha externa - escova superior externa",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.01",
+              v: "0 - 0.0335",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.01))",
+              v: "0 - 0.0335",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.01))",
+              v: "0 - 0.0315",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.01",
+              v: "0 - 0.0315",
+            ),
+          ],
+          offset: "(Altura - 0.012)",
+          depth: "0.006",
+        ),
+        material: "Borracha cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha externa - escova superior interna",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.01",
+              v: "0 - 0.0145",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.01))",
+              v: "0 - 0.0145",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.01))",
+              v: "0 - 0.0125",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + 0.01",
+              v: "0 - 0.0125",
+            ),
+          ],
+          offset: "(Altura - 0.012)",
+          depth: "0.006",
+        ),
+        material: "Borracha cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha interna simplificada",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))))",
+              v: "0 + 0.034",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((Largura/2 + 0.019)))",
+              v: "0 + 0.034",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((Largura/2 + 0.019)))",
+              v: "0 + 0.012",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))))",
+              v: "0 + 0.012",
+            ),
+          ],
+          offset: "0.019",
+          depth: "((Altura - 0.012) - 0.019)",
+        ),
+        material: "Vidro temperado",
+        in_plan: false,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
+      ),
+      (
+        name: "Folha interna - montante lateral",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))))",
+              v: "0 + 0.034",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + 0.045)",
+              v: "0 + 0.034",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + 0.045)",
+              v: "0 + 0.012",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))))",
+              v: "0 + 0.012",
+            ),
+          ],
+          offset: "0.019",
+          depth: "((Altura - 0.012) - 0.019)",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha interna - montante de encontro",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045)))",
+              v: "0 + 0.034",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((Largura/2 + 0.019)))",
+              v: "0 + 0.034",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((Largura/2 + 0.019)))",
+              v: "0 + 0.012",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045)))",
+              v: "0 + 0.012",
+            ),
+          ],
+          offset: "0.019",
+          depth: "((Altura - 0.012) - 0.019)",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha interna - travessa superior",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + 0.045)",
+              v: "0 + 0.034",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045)))",
+              v: "0 + 0.034",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045)))",
+              v: "0 + 0.012",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + 0.045)",
+              v: "0 + 0.012",
+            ),
+          ],
+          offset: "(Altura - 0.012) - 0.045",
+          depth: "0.045",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha interna - travessa inferior",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "0.012",
+              v: "0.019",
+            ),
+            (
+              u: "0.014",
+              v: "0.019",
+            ),
+            (
+              u: "0.014",
+              v: "0.053",
+            ),
+            (
+              u: "0.032",
+              v: "0.053",
+            ),
+            (
+              u: "0.032",
+              v: "0.019",
+            ),
+            (
+              u: "0.034",
+              v: "0.019",
+            ),
+            (
+              u: "0.034",
+              v: "0.104",
+            ),
+            (
+              u: "0.012",
+              v: "0.104",
+            ),
+          ],
+          offset: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045)))",
+          depth: "(((((Largura/2 + 0.019)) - 0.045)) - 0.045)",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha interna - vidro",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((0.037)))",
+              v: "0 + 0.026",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.037)))",
+              v: "0 + 0.026",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.037)))",
+              v: "0 + 0.02",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((0.037)))",
+              v: "0 + 0.02",
+            ),
+          ],
+          offset: "0.096",
+          depth: "((Altura - 0.012) - 0.045) - 0.088",
+        ),
+        material: "Vidro temperado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha interna - baguete esquerdo",
+        shape: Box(
+          x: "((-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045)))) + 0)",
+          y: "0.0275",
+          z: "0.104",
+          width: "0.01",
+          depth: "0.005",
+          height: "((((((Altura - 0.012) - 0.045)) - 0.104)) - 0)",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha interna - baguete direito",
+        shape: Box(
+          x: "(((-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045))) + (((((Largura/2 + 0.019)) - 0.045)) - 0.045))) - 0.01)",
+          y: "0.0275",
+          z: "0.104",
+          width: "0.01",
+          depth: "0.005",
+          height: "((((((Altura - 0.012) - 0.045)) - 0.104)) - 0)",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha interna - baguete inferior",
+        shape: Box(
+          x: "((-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045)))) + 0.01)",
+          y: "0.0275",
+          z: "0.104",
+          width: "(((((-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045))) + (((((Largura/2 + 0.019)) - 0.045)) - 0.045))) - (-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045)))))) - 0.02)",
+          depth: "0.005",
+          height: "0.01",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha interna - baguete superior",
+        shape: Box(
+          x: "((-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045)))) + 0.01)",
+          y: "0.0275",
+          z: "((((Altura - 0.012) - 0.045)) - 0.01)",
+          width: "(((((-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045))) + (((((Largura/2 + 0.019)) - 0.045)) - 0.045))) - (-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045)))))) - 0.02)",
+          depth: "0.005",
+          height: "0.01",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha interna - aba de encosto esquerdo",
+        shape: Box(
+          x: "((-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045)))) + 0)",
+          y: "0.0135",
+          z: "0.104",
+          width: "0.01",
+          depth: "0.005",
+          height: "((((((Altura - 0.012) - 0.045)) - 0.104)) - 0)",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha interna - aba de encosto direito",
+        shape: Box(
+          x: "(((-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045))) + (((((Largura/2 + 0.019)) - 0.045)) - 0.045))) - 0.01)",
+          y: "0.0135",
+          z: "0.104",
+          width: "0.01",
+          depth: "0.005",
+          height: "((((((Altura - 0.012) - 0.045)) - 0.104)) - 0)",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha interna - aba de encosto inferior",
+        shape: Box(
+          x: "((-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045)))) + 0.01)",
+          y: "0.0135",
+          z: "0.104",
+          width: "(((((-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045))) + (((((Largura/2 + 0.019)) - 0.045)) - 0.045))) - (-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045)))))) - 0.02)",
+          depth: "0.005",
+          height: "0.01",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha interna - aba de encosto superior",
+        shape: Box(
+          x: "((-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045)))) + 0.01)",
+          y: "0.0135",
+          z: "((((Altura - 0.012) - 0.045)) - 0.01)",
+          width: "(((((-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045))) + (((((Largura/2 + 0.019)) - 0.045)) - 0.045))) - (-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045)))))) - 0.02)",
+          depth: "0.005",
+          height: "0.01",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha interna - gaxeta interna esquerdo",
+        shape: Box(
+          x: "((-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045)))) + 0)",
+          y: "0.026",
+          z: "0.104",
+          width: "0.007",
+          depth: "0.0015",
+          height: "((((((Altura - 0.012) - 0.045)) - 0.104)) - 0)",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha interna - gaxeta interna direito",
+        shape: Box(
+          x: "(((-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045))) + (((((Largura/2 + 0.019)) - 0.045)) - 0.045))) - 0.007)",
+          y: "0.026",
+          z: "0.104",
+          width: "0.007",
+          depth: "0.0015",
+          height: "((((((Altura - 0.012) - 0.045)) - 0.104)) - 0)",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha interna - gaxeta interna inferior",
+        shape: Box(
+          x: "((-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045)))) + 0.007)",
+          y: "0.026",
+          z: "0.104",
+          width: "(((((-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045))) + (((((Largura/2 + 0.019)) - 0.045)) - 0.045))) - (-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045)))))) - 0.014)",
+          depth: "0.0015",
+          height: "0.007",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha interna - gaxeta interna superior",
+        shape: Box(
+          x: "((-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045)))) + 0.007)",
+          y: "0.026",
+          z: "((((Altura - 0.012) - 0.045)) - 0.007)",
+          width: "(((((-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045))) + (((((Largura/2 + 0.019)) - 0.045)) - 0.045))) - (-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045)))))) - 0.014)",
+          depth: "0.0015",
+          height: "0.007",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha interna - gaxeta externa esquerdo",
+        shape: Box(
+          x: "((-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045)))) + 0)",
+          y: "0.0185",
+          z: "0.104",
+          width: "0.007",
+          depth: "0.0015",
+          height: "((((((Altura - 0.012) - 0.045)) - 0.104)) - 0)",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha interna - gaxeta externa direito",
+        shape: Box(
+          x: "(((-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045))) + (((((Largura/2 + 0.019)) - 0.045)) - 0.045))) - 0.007)",
+          y: "0.0185",
+          z: "0.104",
+          width: "0.007",
+          depth: "0.0015",
+          height: "((((((Altura - 0.012) - 0.045)) - 0.104)) - 0)",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha interna - gaxeta externa inferior",
+        shape: Box(
+          x: "((-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045)))) + 0.007)",
+          y: "0.0185",
+          z: "0.104",
+          width: "(((((-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045))) + (((((Largura/2 + 0.019)) - 0.045)) - 0.045))) - (-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045)))))) - 0.014)",
+          depth: "0.0015",
+          height: "0.007",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha interna - gaxeta externa superior",
+        shape: Box(
+          x: "((-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045)))) + 0.007)",
+          y: "0.0185",
+          z: "((((Altura - 0.012) - 0.045)) - 0.007)",
+          width: "(((((-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045))) + (((((Largura/2 + 0.019)) - 0.045)) - 0.045))) - (-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.045)))))) - 0.014)",
+          depth: "0.0015",
+          height: "0.007",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha interna - roldana 1 - caixa traseira",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((0.05)))",
+              v: "0 + 0.0175",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((0.11)))",
+              v: "0 + 0.0175",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((0.11)))",
+              v: "0 + 0.0135",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((0.05)))",
+              v: "0 + 0.0135",
+            ),
+          ],
+          offset: "0.031",
+          depth: "0.022",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha interna - roldana 1 - caixa frontal",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((0.05)))",
+              v: "0 + 0.0325",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((0.11)))",
+              v: "0 + 0.0325",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((0.11)))",
+              v: "0 + 0.0285",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((0.05)))",
+              v: "0 + 0.0285",
+            ),
+          ],
+          offset: "0.031",
+          depth: "0.022",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha interna - roldana 1 - roda",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + 0.08)",
+              v: "0.019",
+            ),
+            (
+              u: "(-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + 0.08)) + 0.012",
+              v: "0.019",
+            ),
+            (
+              u: "(-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + 0.08)) + 0.012",
+              v: "0.019 + 0.008",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + 0.08)",
+              v: "0.019 + 0.008",
+            ),
+          ],
+          offset: "0.039",
+          axis: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + 0.08)",
+          angle: "360",
+        ),
+        material: "Plástico cinza claro",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha interna - roldana 1 - eixo",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + 0.08)",
+              v: "0.0175",
+            ),
+            (
+              u: "(-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + 0.08)) + 0.004",
+              v: "0.0175",
+            ),
+            (
+              u: "(-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + 0.08)) + 0.004",
+              v: "0.0175 + 0.011",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + 0.08)",
+              v: "0.0175 + 0.011",
+            ),
+          ],
+          offset: "0.039",
+          axis: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + 0.08)",
+          angle: "360",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha interna - guia superior 1",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((0.05)))",
+              v: "0 + 0.031",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((0.11)))",
+              v: "0 + 0.031",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((0.11)))",
+              v: "0 + 0.015",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((0.05)))",
+              v: "0 + 0.015",
+            ),
+          ],
+          offset: "(Altura - 0.012)",
+          depth: "0.008",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha interna - roldana 2 - caixa traseira",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.08)) - 0.03)))",
+              v: "0 + 0.0175",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.08)) + 0.03)))",
+              v: "0 + 0.0175",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.08)) + 0.03)))",
+              v: "0 + 0.0135",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.08)) - 0.03)))",
+              v: "0 + 0.0135",
+            ),
+          ],
+          offset: "0.031",
+          depth: "0.022",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha interna - roldana 2 - caixa frontal",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.08)) - 0.03)))",
+              v: "0 + 0.0325",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.08)) + 0.03)))",
+              v: "0 + 0.0325",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.08)) + 0.03)))",
+              v: "0 + 0.0285",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.08)) - 0.03)))",
+              v: "0 + 0.0285",
+            ),
+          ],
+          offset: "0.031",
+          depth: "0.022",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha interna - roldana 2 - roda",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.08)))",
+              v: "0.019",
+            ),
+            (
+              u: "(-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.08)))) + 0.012",
+              v: "0.019",
+            ),
+            (
+              u: "(-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.08)))) + 0.012",
+              v: "0.019 + 0.008",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.08)))",
+              v: "0.019 + 0.008",
+            ),
+          ],
+          offset: "0.039",
+          axis: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.08)))",
+          angle: "360",
+        ),
+        material: "Plástico cinza claro",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha interna - roldana 2 - eixo",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.08)))",
+              v: "0.0175",
+            ),
+            (
+              u: "(-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.08)))) + 0.004",
+              v: "0.0175",
+            ),
+            (
+              u: "(-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.08)))) + 0.004",
+              v: "0.0175 + 0.011",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.08)))",
+              v: "0.0175 + 0.011",
+            ),
+          ],
+          offset: "0.039",
+          axis: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.08)))",
+          angle: "360",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha interna - guia superior 2",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.08)) - 0.03)))",
+              v: "0 + 0.031",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.08)) + 0.03)))",
+              v: "0 + 0.031",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.08)) + 0.03)))",
+              v: "0 + 0.015",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.08)) - 0.03)))",
+              v: "0 + 0.015",
+            ),
+          ],
+          offset: "(Altura - 0.012)",
+          depth: "0.008",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha interna - escova do montante",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) - 0.003)",
+              v: "0 + 0.027",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))))",
+              v: "0 + 0.027",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))))",
+              v: "0 + 0.019",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) - 0.003)",
+              v: "0 + 0.019",
+            ),
+          ],
+          offset: "0.029",
+          depth: "((Altura - 0.012) - 0.019) - 0.02",
+        ),
+        material: "Borracha cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha interna - escova superior externa",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + 0.01)",
+              v: "0 + 0.0145",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.01)))",
+              v: "0 + 0.0145",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.01)))",
+              v: "0 + 0.0125",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + 0.01)",
+              v: "0 + 0.0125",
+            ),
+          ],
+          offset: "(Altura - 0.012)",
+          depth: "0.006",
+        ),
+        material: "Borracha cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha interna - escova superior interna",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + 0.01)",
+              v: "0 + 0.0335",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.01)))",
+              v: "0 + 0.0335",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.01)))",
+              v: "0 + 0.0315",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + 0.01)",
+              v: "0 + 0.0315",
+            ),
+          ],
+          offset: "(Altura - 0.012)",
+          depth: "0.006",
+        ),
+        material: "Borracha cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Encontro - aba da folha externa",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.005))",
+              v: "0 - 0.012",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((Largura/2 + 0.019))",
+              v: "0 - 0.012",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((Largura/2 + 0.019))",
+              v: "0 + 0.006",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.005))",
+              v: "0 + 0.006",
+            ),
+          ],
+          offset: "0.1",
+          depth: "((Altura - 0.012) - 0.045) - 0.1",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Encontro - aba da folha interna",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.043)))",
+              v: "0 + 0.012",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.038)))",
+              v: "0 + 0.012",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.038)))",
+              v: "0 - 0.006",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.043)))",
+              v: "0 - 0.006",
+            ),
+          ],
+          offset: "0.104",
+          depth: "((Altura - 0.012) - 0.045) - 0.104",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Encontro - escova",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0065))",
+              v: "0 - 0.006",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.005))",
+              v: "0 - 0.006",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.005))",
+              v: "0 + 0.006",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0065))",
+              v: "0 + 0.006",
+            ),
+          ],
+          offset: "0.1",
+          depth: "((Altura - 0.012) - 0.045) - 0.1",
+        ),
+        material: "Borracha cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Encontro - terminal inferior da folha externa",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.005))",
+              v: "0 - 0.012",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((Largura/2 + 0.019))",
+              v: "0 - 0.012",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((Largura/2 + 0.019))",
+              v: "0 + 0.006",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.005))",
+              v: "0 + 0.006",
+            ),
+          ],
+          offset: "0.096",
+          depth: "0.004",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Encontro - terminal superior da folha externa",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.005))",
+              v: "0 - 0.012",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((Largura/2 + 0.019))",
+              v: "0 - 0.012",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((Largura/2 + 0.019))",
+              v: "0 + 0.006",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.005))",
+              v: "0 + 0.006",
+            ),
+          ],
+          offset: "((Altura - 0.012) - 0.045)",
+          depth: "0.004",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Encontro - terminal inferior da folha interna",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.043)))",
+              v: "0 + 0.012",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.038)))",
+              v: "0 + 0.012",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.038)))",
+              v: "0 - 0.006",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.043)))",
+              v: "0 - 0.006",
+            ),
+          ],
+          offset: "0.1",
+          depth: "0.004",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Encontro - terminal superior da folha interna",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.043)))",
+              v: "0 + 0.012",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.038)))",
+              v: "0 + 0.012",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.038)))",
+              v: "0 - 0.006",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.043)))",
+              v: "0 - 0.006",
+            ),
+          ],
+          offset: "((Altura - 0.012) - 0.045)",
+          depth: "0.004",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fecho - espelho",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "(-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) + 0.013)))) + 0.012",
+              v: "0.94",
+            ),
+            (
+              u: "(-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) + 0.013))) + 0.026) - 0.012",
+              v: "0.94",
+              radius: "0.012",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) + 0.013))) + 0.026",
+              v: "0.94 + 0.012",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) + 0.013))) + 0.026",
+              v: "1.06 - 0.012",
+              radius: "0.012",
+            ),
+            (
+              u: "(-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) + 0.013))) + 0.026) - 0.012",
+              v: "1.06",
+            ),
+            (
+              u: "(-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) + 0.013)))) + 0.012",
+              v: "1.06",
+              radius: "0.012",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) + 0.013)))",
+              v: "1.06 - 0.012",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) + 0.013)))",
+              v: "0.94 + 0.012",
+              radius: "0.012",
+            ),
+          ],
+          offset: "0.034",
+          depth: "0.005",
+        ),
+        material: "Alumínio fundido",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fecho - eixo",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) - 0.005)))",
+              v: "0 + 0.046",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) + 0.005)))",
+              v: "0 + 0.046",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) + 0.005)))",
+              v: "0 + 0.039",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) - 0.005)))",
+              v: "0 + 0.039",
+            ),
+          ],
+          offset: "0.99",
+          depth: "0.02",
+        ),
+        material: "Alumínio fundido",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fecho - alavanca",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) - 0.004)))",
+              v: "0 + 0.05",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) + 0.004)))",
+              v: "0 + 0.05",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) + 0.004)))",
+              v: "0 + 0.043",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) - 0.004)))",
+              v: "0 + 0.043",
+            ),
+          ],
+          offset: "0.995",
+          depth: "0.06",
+        ),
+        material: "Alumínio fundido",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fecho - pega",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0225)))",
+              v: "0.046",
+            ),
+            (
+              u: "(-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0225)))) + 0.007",
+              v: "0.046",
+            ),
+            (
+              u: "(-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0225)))) + 0.007",
+              v: "0.046 + 0.008",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0225)))",
+              v: "0.046 + 0.008",
+            ),
+          ],
+          offset: "1.05",
+          axis: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0225)))",
+          angle: "360",
+        ),
+        material: "Alumínio fundido",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
       ),
       (
         name: "Puxador",
-        shape: Box(
-          x: "0.0",
-          y: "0.025",
-          z: "0.95",
-          width: "0.02",
-          depth: "0.02",
+        shape: Cylinder(
+          x: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0225)))",
+          y: "0.069",
+          z: "1.1",
+          radius: "0.01",
           height: "0.3",
         ),
-        material: "Alumínio",
+        material: "Alumínio anodizado",
         in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador - haste 1",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0225)))",
+              v: "0.034",
+            ),
+            (
+              u: "(-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0225)))) + 0.006",
+              v: "0.034",
+            ),
+            (
+              u: "(-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0225)))) + 0.006",
+              v: "0.034 + 0.03",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0225)))",
+              v: "0.034 + 0.03",
+            ),
+          ],
+          offset: "1.13",
+          axis: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0225)))",
+          angle: "360",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador - base 1",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0225)))",
+              v: "0.034",
+            ),
+            (
+              u: "(-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0225)))) + 0.011",
+              v: "0.034",
+            ),
+            (
+              u: "(-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0225)))) + 0.011",
+              v: "0.034 + 0.003",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0225)))",
+              v: "0.034 + 0.003",
+            ),
+          ],
+          offset: "1.13",
+          axis: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0225)))",
+          angle: "360",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador - haste 2",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0225)))",
+              v: "0.034",
+            ),
+            (
+              u: "(-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0225)))) + 0.006",
+              v: "0.034",
+            ),
+            (
+              u: "(-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0225)))) + 0.006",
+              v: "0.034 + 0.03",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0225)))",
+              v: "0.034 + 0.03",
+            ),
+          ],
+          offset: "1.37",
+          axis: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0225)))",
+          angle: "360",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador - base 2",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0225)))",
+              v: "0.034",
+            ),
+            (
+              u: "(-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0225)))) + 0.011",
+              v: "0.034",
+            ),
+            (
+              u: "(-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0225)))) + 0.011",
+              v: "0.034 + 0.003",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0225)))",
+              v: "0.034 + 0.003",
+            ),
+          ],
+          offset: "1.37",
+          axis: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0225)))",
+          angle: "360",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Trava de piso - corpo",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) - 0.011)))",
+              v: "0 + 0.042",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) + 0.011)))",
+              v: "0 + 0.042",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) + 0.011)))",
+              v: "0 + 0.034",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) - 0.011)))",
+              v: "0 + 0.034",
+            ),
+          ],
+          offset: "0.119",
+          depth: "0.07",
+        ),
+        material: "Alumínio fundido",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Trava de piso - botão",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) - 0.005)))",
+              v: "0 + 0.05",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) + 0.005)))",
+              v: "0 + 0.05",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) + 0.005)))",
+              v: "0 + 0.042",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) - 0.005)))",
+              v: "0 + 0.042",
+            ),
+          ],
+          offset: "0.159",
+          depth: "0.012",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fechadura - espelho (externo)",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0225))",
+              v: "-0.038",
+            ),
+            (
+              u: "((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0225))) + 0.014",
+              v: "-0.038",
+            ),
+            (
+              u: "((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0225))) + 0.014",
+              v: "(-0.038) + 0.004",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0225))",
+              v: "(-0.038) + 0.004",
+            ),
+          ],
+          offset: "0.95",
+          axis: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0225))",
+          angle: "360",
+        ),
+        material: "Alumínio fundido",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fechadura - cilindro (externo)",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0225))",
+              v: "-0.04",
+            ),
+            (
+              u: "((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0225))) + 0.008",
+              v: "-0.04",
+            ),
+            (
+              u: "((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0225))) + 0.008",
+              v: "(-0.04) + 0.002",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0225))",
+              v: "(-0.04) + 0.002",
+            ),
+          ],
+          offset: "0.95",
+          axis: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0225))",
+          angle: "360",
+        ),
+        material: "Latão",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fechadura - fenda da chave (externo)",
+        shape: Box(
+          x: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((Largura/2 + 0.019)) - 0.0225)) - 0.001",
+          y: "-0.0404",
+          z: "0.944",
+          width: "0.002",
+          depth: "0.0004",
+          height: "0.012",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador concha externo - aro",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) - 0.01))) + 0.0095",
+              v: "1.01",
+            ),
+            (
+              u: "((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) - 0.01)) + 0.02) - 0.0095",
+              v: "1.01",
+              radius: "0.0095",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) - 0.01)) + 0.02",
+              v: "1.01 + 0.0095",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) - 0.01)) + 0.02",
+              v: "1.15 - 0.0095",
+              radius: "0.0095",
+            ),
+            (
+              u: "((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) - 0.01)) + 0.02) - 0.0095",
+              v: "1.15",
+            ),
+            (
+              u: "((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) - 0.01))) + 0.0095",
+              v: "1.15",
+              radius: "0.0095",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) - 0.01))",
+              v: "1.15 - 0.0095",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) - 0.01))",
+              v: "1.01 + 0.0095",
+              radius: "0.0095",
+            ),
+          ],
+          offset: "-0.036",
+          depth: "0.002",
+        ),
+        material: "Alumínio fundido",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador concha externo - concha",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) - 0.01)) + 0.004) + 0.0055",
+              v: "1.016",
+            ),
+            (
+              u: "((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) - 0.01)) + 0.016) - 0.0055",
+              v: "1.016",
+              radius: "0.0055",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) - 0.01)) + 0.016",
+              v: "1.016 + 0.0055",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) - 0.01)) + 0.016",
+              v: "1.144 - 0.0055",
+              radius: "0.0055",
+            ),
+            (
+              u: "((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) - 0.01)) + 0.016) - 0.0055",
+              v: "1.144",
+            ),
+            (
+              u: "((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) - 0.01)) + 0.004) + 0.0055",
+              v: "1.144",
+              radius: "0.0055",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) - 0.01)) + 0.004",
+              v: "1.144 - 0.0055",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((((((Largura/2 + 0.019)) - 0.0225)) - 0.01)) + 0.004",
+              v: "1.016 + 0.0055",
+              radius: "0.0055",
+            ),
+          ],
+          offset: "-0.0363",
+          depth: "0.0003",
+        ),
+        material: "Aço pintado preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador concha da folha externa - aro",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((0.022))) + 0.0095",
+              v: "0.93",
+            ),
+            (
+              u: "((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((0.022)) + 0.02) - 0.0095",
+              v: "0.93",
+              radius: "0.0095",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((0.022)) + 0.02",
+              v: "0.93 + 0.0095",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((0.022)) + 0.02",
+              v: "1.07 - 0.0095",
+              radius: "0.0095",
+            ),
+            (
+              u: "((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((0.022)) + 0.02) - 0.0095",
+              v: "1.07",
+            ),
+            (
+              u: "((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((0.022))) + 0.0095",
+              v: "1.07",
+              radius: "0.0095",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((0.022))",
+              v: "1.07 - 0.0095",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((0.022))",
+              v: "0.93 + 0.0095",
+              radius: "0.0095",
+            ),
+          ],
+          offset: "-0.012",
+          depth: "0.002",
+        ),
+        material: "Alumínio fundido",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador concha da folha externa - concha",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((0.022)) + 0.004) + 0.0055",
+              v: "0.936",
+            ),
+            (
+              u: "((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((0.022)) + 0.016) - 0.0055",
+              v: "0.936",
+              radius: "0.0055",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((0.022)) + 0.016",
+              v: "0.936 + 0.0055",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((0.022)) + 0.016",
+              v: "1.064 - 0.0055",
+              radius: "0.0055",
+            ),
+            (
+              u: "((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((0.022)) + 0.016) - 0.0055",
+              v: "1.064",
+            ),
+            (
+              u: "((((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((0.022)) + 0.004) + 0.0055",
+              v: "1.064",
+              radius: "0.0055",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((0.022)) + 0.004",
+              v: "1.064 - 0.0055",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((0.022)) + 0.004",
+              v: "0.936 + 0.0055",
+              radius: "0.0055",
+            ),
+          ],
+          offset: "-0.01",
+          depth: "0.0003",
+        ),
+        material: "Aço pintado preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador concha da folha interna - aro",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "(-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((0.042)))) + 0.0095",
+              v: "0.93",
+            ),
+            (
+              u: "(-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((0.042))) + 0.02) - 0.0095",
+              v: "0.93",
+              radius: "0.0095",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((0.042))) + 0.02",
+              v: "0.93 + 0.0095",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((0.042))) + 0.02",
+              v: "1.07 - 0.0095",
+              radius: "0.0095",
+            ),
+            (
+              u: "(-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((0.042))) + 0.02) - 0.0095",
+              v: "1.07",
+            ),
+            (
+              u: "(-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((0.042)))) + 0.0095",
+              v: "1.07",
+              radius: "0.0095",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((0.042)))",
+              v: "1.07 - 0.0095",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((0.042)))",
+              v: "0.93 + 0.0095",
+              radius: "0.0095",
+            ),
+          ],
+          offset: "0.01",
+          depth: "0.002",
+        ),
+        material: "Alumínio fundido",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador concha da folha interna - concha",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "(-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((0.042))) + 0.004) + 0.0055",
+              v: "0.936",
+            ),
+            (
+              u: "(-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((0.042))) + 0.016) - 0.0055",
+              v: "0.936",
+              radius: "0.0055",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((0.042))) + 0.016",
+              v: "0.936 + 0.0055",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((0.042))) + 0.016",
+              v: "1.064 - 0.0055",
+              radius: "0.0055",
+            ),
+            (
+              u: "(-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((0.042))) + 0.016) - 0.0055",
+              v: "1.064",
+            ),
+            (
+              u: "(-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((0.042))) + 0.004) + 0.0055",
+              v: "1.064",
+              radius: "0.0055",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((0.042))) + 0.004",
+              v: "1.064 - 0.0055",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((0.042))) + 0.004",
+              v: "0.936 + 0.0055",
+              radius: "0.0055",
+            ),
+          ],
+          offset: "0.0097",
+          depth: "0.0003",
+        ),
+        material: "Aço pintado preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Símbolo da folha externa",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071)))",
+              v: "0 - 0.027",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((Largura/2 + 0.019))",
+              v: "0 - 0.027",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071))) + ((Largura/2 + 0.019))",
+              v: "0 - 0.019",
+            ),
+            (
+              u: "(((-Largura/2 + 0.006) + min(max(AberturaExterna, 0), 1)*(Largura/2 - 0.071)))",
+              v: "0 - 0.019",
+            ),
+          ],
+          offset: "0",
+          depth: "0.001",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: true,
+        plan_only: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Símbolo da folha interna",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))))",
+              v: "0 + 0.027",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((Largura/2 + 0.019)))",
+              v: "0 + 0.027",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))) + ((Largura/2 + 0.019)))",
+              v: "0 + 0.019",
+            ),
+            (
+              u: "-((((-Largura/2 + 0.006) + min(max(Abertura, 0), 1)*(Largura/2 - 0.071))))",
+              v: "0 + 0.019",
+            ),
+          ],
+          offset: "0",
+          depth: "0.001",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: true,
+        plan_only: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Sentido de abertura da folha externa",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/4) - 0.12",
+              v: "-0.104",
+            ),
+            (
+              u: "(-Largura/4) + 0.06",
+              v: "-0.104",
+            ),
+            (
+              u: "(-Largura/4) + 0.06",
+              v: "-0.118",
+            ),
+            (
+              u: "(-Largura/4) + 0.12",
+              v: "-0.1",
+            ),
+            (
+              u: "(-Largura/4) + 0.06",
+              v: "-0.082",
+            ),
+            (
+              u: "(-Largura/4) + 0.06",
+              v: "-0.096",
+            ),
+            (
+              u: "(-Largura/4) - 0.12",
+              v: "-0.096",
+            ),
+          ],
+          offset: "0",
+          depth: "0.001",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: true,
+        plan_only: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Sentido de abertura da folha interna",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(Largura/4) - -0.12",
+              v: "0.104",
+            ),
+            (
+              u: "(Largura/4) + -0.06",
+              v: "0.104",
+            ),
+            (
+              u: "(Largura/4) + -0.06",
+              v: "0.118",
+            ),
+            (
+              u: "(Largura/4) + -0.12",
+              v: "0.1",
+            ),
+            (
+              u: "(Largura/4) + -0.06",
+              v: "0.082",
+            ),
+            (
+              u: "(Largura/4) + -0.06",
+              v: "0.096",
+            ),
+            (
+              u: "(Largura/4) - -0.12",
+              v: "0.096",
+            ),
+          ],
+          offset: "0",
+          depth: "0.001",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: true,
+        plan_only: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
       ),
     ],
     opening: Some((
@@ -121,6 +3786,8 @@
     (
       name: "Porta-janela de correr 150 x 210",
       values: {
+        "Abertura": 0.0,
+        "AberturaExterna": 0.0,
         "Altura": 2.1,
         "Largura": 1.5,
       },
@@ -140,6 +3807,8 @@
     (
       name: "Porta-janela de correr 200 x 210",
       values: {
+        "Abertura": 0.0,
+        "AberturaExterna": 0.0,
         "Altura": 2.1,
         "Largura": 2.0,
       },
@@ -159,6 +3828,8 @@
     (
       name: "Porta-janela de correr 250 x 210",
       values: {
+        "Abertura": 0.0,
+        "AberturaExterna": 0.0,
         "Altura": 2.1,
         "Largura": 2.5,
       },
@@ -178,11 +3849,11 @@
   ],
   materials: [
     (
-      name: "Vidro",
-      color: (150, 200, 225),
+      name: "Alumínio anodizado",
+      color: (206, 208, 210),
       identity: (
         description: "",
-        class: Glass,
+        class: Metal,
         comments: "",
         keywords: "",
         manufacturer: "",
@@ -194,7 +3865,7 @@
       ),
       graphics: (
         use_appearance: false,
-        transparency: 0.6,
+        transparency: 0.0,
         surface: (
           foreground: r#None,
           foreground_color: (0, 0, 0),
@@ -209,15 +3880,15 @@
         ),
       ),
       appearance: (
-        color: (150, 200, 225),
-        finish: Matte,
+        color: (206, 208, 210),
+        finish: Satin,
         description: "",
       ),
       physical: (
         behavior: Isotropic,
-        density: Some(2500.0),
-        thermal_conductivity: Some(1.0),
-        specific_heat: Some(840.0),
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
         thermal_expansion: None,
         youngs_modulus: None,
         poisson: None,
@@ -226,8 +3897,8 @@
       ),
     ),
     (
-      name: "Alumínio",
-      color: (200, 200, 205),
+      name: "Granito",
+      color: (70, 70, 75),
       identity: (
         description: "",
         class: Generic,
@@ -257,8 +3928,440 @@
         ),
       ),
       appearance: (
-        color: (200, 200, 205),
+        color: (70, 70, 75),
+        finish: Polished,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Plástico preto",
+      color: (34, 34, 37),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (34, 34, 37),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Borracha cinza",
+      color: (150, 152, 154),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (150, 152, 154),
         finish: Matte,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Plástico cinza claro",
+      color: (196, 198, 200),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (196, 198, 200),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Vidro temperado",
+      color: (205, 228, 232),
+      identity: (
+        description: "",
+        class: Glass,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.7,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (205, 228, 232),
+        finish: Polished,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Borracha",
+      color: (30, 30, 30),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (30, 30, 30),
+        finish: Matte,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Cromado",
+      color: (226, 229, 233),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (226, 229, 233),
+        finish: Polished,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Alumínio fundido",
+      color: (172, 174, 177),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (172, 174, 177),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Latão",
+      color: (192, 160, 84),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (192, 160, 84),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Aço pintado preto",
+      color: (30, 30, 32),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (30, 30, 32),
+        finish: Satin,
         description: "",
       ),
       physical: (

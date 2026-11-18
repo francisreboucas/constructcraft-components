@@ -1,6 +1,6 @@
 (
   format_version: 1,
-  generator: "ConstructCAD 0.9.0",
+  generator: "ConstructCraft 0.12.0",
   component: "Porta pivotante",
   def: (
     kind: Door,
@@ -17,85 +17,2532 @@
         kind: Length,
         instance: false,
       ),
+      (
+        name: "AnguloAbertura",
+        value: 0.0,
+        kind: Angle,
+        instance: true,
+      ),
     ],
     items: [
       (
-        name: "Batente",
+        name: "Batente esquerdo simplificado",
         shape: Box(
-          x: "-Largura / 2",
-          y: "-WallThickness / 2",
+          x: "(-Largura/2)",
+          y: "(-WallThickness/2)",
           z: "0",
           width: "0.05",
           depth: "WallThickness",
           height: "Altura",
         ),
-        material: "Madeira",
-        in_plan: false,
+        material: "Madeira escura",
+        in_plan: true,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
       ),
       (
-        name: "Batente",
+        name: "Batente direito simplificado",
         shape: Box(
-          x: "Largura / 2 - 0.05",
-          y: "-WallThickness / 2",
+          x: "(Largura/2) - 0.05",
+          y: "(-WallThickness/2)",
           z: "0",
           width: "0.05",
           depth: "WallThickness",
           height: "Altura",
         ),
-        material: "Madeira",
-        in_plan: false,
+        material: "Madeira escura",
+        in_plan: true,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
       ),
       (
-        name: "Batente",
+        name: "Batente superior simplificado",
         shape: Box(
-          x: "-Largura / 2 + 0.05",
-          y: "-WallThickness / 2",
+          x: "(-Largura/2) + 0.05",
+          y: "(-WallThickness/2)",
           z: "Altura - 0.05",
-          width: "Largura - 2 * 0.05",
+          width: "Largura - 0.1",
           depth: "WallThickness",
           height: "0.05",
         ),
-        material: "Madeira",
+        material: "Madeira escura",
         in_plan: false,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
       ),
       (
-        name: "Folha",
+        name: "Batente esquerdo",
         shape: Box(
-          x: "-Largura / 2 + 0.05",
-          y: "-0.025",
+          x: "(-Largura/2)",
+          y: "(-WallThickness/2)",
           z: "0",
-          width: "(Largura - 2 * 0.05)",
-          depth: "0.05",
-          height: "Altura - 0.05 - 0.005",
+          width: "0.04",
+          depth: "WallThickness",
+          height: "Altura",
+        ),
+        material: "Madeira escura",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Batente direito",
+        shape: Box(
+          x: "(Largura/2) - 0.04",
+          y: "(-WallThickness/2)",
+          z: "0",
+          width: "0.04",
+          depth: "WallThickness",
+          height: "Altura",
+        ),
+        material: "Madeira escura",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Batente superior",
+        shape: Box(
+          x: "(-Largura/2) + 0.04",
+          y: "(-WallThickness/2)",
+          z: "(Altura - 0.04)",
+          width: "(Largura - 0.08)",
+          depth: "WallThickness",
+          height: "0.04",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Batedor esquerdo",
+        shape: Box(
+          x: "(-Largura/2) + 0.04",
+          y: "0.0245",
+          z: "0",
+          width: "0.015",
+          depth: "(WallThickness/2 - 0.0245)",
+          height: "(Altura - 0.04)",
+        ),
+        material: "Madeira escura",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Batedor direito",
+        shape: Box(
+          x: "(Largura/2) - 0.055",
+          y: "(-WallThickness/2)",
+          z: "0",
+          width: "0.015",
+          depth: "(WallThickness/2 - 0.0245)",
+          height: "(Altura - 0.04)",
+        ),
+        material: "Madeira escura",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Batedor superior até o pivô",
+        shape: Box(
+          x: "(-Largura/2) + 0.055",
+          y: "0.0245",
+          z: "(((Altura - 0.04)) - 0.015)",
+          width: "(0.17*(Largura - 0.08)) - 0.015",
+          depth: "(WallThickness/2 - 0.0245)",
+          height: "0.015",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Batedor superior após o pivô",
+        shape: Box(
+          x: "((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))",
+          y: "(-WallThickness/2)",
+          z: "(((Altura - 0.04)) - 0.015)",
+          width: "(Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.015",
+          depth: "(WallThickness/2 - 0.0245)",
+          height: "0.015",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Vedação do batedor esquerdo",
+        shape: Box(
+          x: "(-Largura/2) + 0.043000000000000003",
+          y: "0.023",
+          z: "0.02",
+          width: "0.008",
+          depth: "0.0015",
+          height: "(((Altura - 0.04)) - 0.03)",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Vedação do batedor direito",
+        shape: Box(
+          x: "(Largura/2) - 0.051000000000000004",
+          y: "-0.0245",
+          z: "0.02",
+          width: "0.008",
+          depth: "0.0015",
+          height: "(((Altura - 0.04)) - 0.03)",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Vedação superior até o pivô",
+        shape: Box(
+          x: "(-Largura/2) + 0.051000000000000004",
+          y: "0.023",
+          z: "(((Altura - 0.04)) - 0.011)",
+          width: "(0.17*(Largura - 0.08)) - 0.05",
+          depth: "0.0015",
+          height: "0.008",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Vedação superior após o pivô",
+        shape: Box(
+          x: "((-Largura/2) + 0.04 + (0.17*(Largura - 0.08))) + 0.04",
+          y: "-0.0245",
+          z: "(((Altura - 0.04)) - 0.011)",
+          width: "(Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.051",
+          depth: "0.0015",
+          height: "0.008",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Guarnição esquerda (frente)",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "((-Largura/2) - 0.065)",
+              v: "0",
+            ),
+            (
+              u: "((-Largura/2) + 0.015)",
+              v: "0",
+            ),
+            (
+              u: "((-Largura/2) + 0.015)",
+              v: "(Altura - 0.015)",
+            ),
+            (
+              u: "((-Largura/2) - 0.065)",
+              v: "(Altura + 0.065)",
+            ),
+          ],
+          offset: "(WallThickness/2)",
+          depth: "0.015",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Guarnição direita (frente)",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "((Largura/2) - 0.015)",
+              v: "0",
+            ),
+            (
+              u: "((Largura/2) + 0.065)",
+              v: "0",
+            ),
+            (
+              u: "((Largura/2) + 0.065)",
+              v: "(Altura + 0.065)",
+            ),
+            (
+              u: "((Largura/2) - 0.015)",
+              v: "(Altura - 0.015)",
+            ),
+          ],
+          offset: "(WallThickness/2)",
+          depth: "0.015",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Guarnição superior (frente)",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "((-Largura/2) + 0.015)",
+              v: "(Altura - 0.015)",
+            ),
+            (
+              u: "((Largura/2) - 0.015)",
+              v: "(Altura - 0.015)",
+            ),
+            (
+              u: "((Largura/2) + 0.065)",
+              v: "(Altura + 0.065)",
+            ),
+            (
+              u: "((-Largura/2) - 0.065)",
+              v: "(Altura + 0.065)",
+            ),
+          ],
+          offset: "(WallThickness/2)",
+          depth: "0.015",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Guarnição esquerda - moldura (frente)",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "((-Largura/2) - 0.065)",
+              v: "0",
+            ),
+            (
+              u: "(((-Largura/2) - 0.065) + 0.018)",
+              v: "0",
+            ),
+            (
+              u: "(((-Largura/2) - 0.065) + 0.018)",
+              v: "((Altura + 0.065) - 0.018)",
+            ),
+            (
+              u: "((-Largura/2) - 0.065)",
+              v: "(Altura + 0.065)",
+            ),
+          ],
+          offset: "((WallThickness/2) + 0.015)",
+          depth: "0.005",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Guarnição direita - moldura (frente)",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "(((Largura/2) + 0.065) - 0.018)",
+              v: "0",
+            ),
+            (
+              u: "((Largura/2) + 0.065)",
+              v: "0",
+            ),
+            (
+              u: "((Largura/2) + 0.065)",
+              v: "(Altura + 0.065)",
+            ),
+            (
+              u: "(((Largura/2) + 0.065) - 0.018)",
+              v: "((Altura + 0.065) - 0.018)",
+            ),
+          ],
+          offset: "((WallThickness/2) + 0.015)",
+          depth: "0.005",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Guarnição superior - moldura (frente)",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "(((-Largura/2) - 0.065) + 0.018)",
+              v: "((Altura + 0.065) - 0.018)",
+            ),
+            (
+              u: "(((Largura/2) + 0.065) - 0.018)",
+              v: "((Altura + 0.065) - 0.018)",
+            ),
+            (
+              u: "((Largura/2) + 0.065)",
+              v: "(Altura + 0.065)",
+            ),
+            (
+              u: "((-Largura/2) - 0.065)",
+              v: "(Altura + 0.065)",
+            ),
+          ],
+          offset: "((WallThickness/2) + 0.015)",
+          depth: "0.005",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Guarnição esquerda (fundo)",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "((-Largura/2) - 0.065)",
+              v: "0",
+            ),
+            (
+              u: "((-Largura/2) + 0.015)",
+              v: "0",
+            ),
+            (
+              u: "((-Largura/2) + 0.015)",
+              v: "(Altura - 0.015)",
+            ),
+            (
+              u: "((-Largura/2) - 0.065)",
+              v: "(Altura + 0.065)",
+            ),
+          ],
+          offset: "((-WallThickness/2) - 0.015)",
+          depth: "0.015",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Guarnição direita (fundo)",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "((Largura/2) - 0.015)",
+              v: "0",
+            ),
+            (
+              u: "((Largura/2) + 0.065)",
+              v: "0",
+            ),
+            (
+              u: "((Largura/2) + 0.065)",
+              v: "(Altura + 0.065)",
+            ),
+            (
+              u: "((Largura/2) - 0.015)",
+              v: "(Altura - 0.015)",
+            ),
+          ],
+          offset: "((-WallThickness/2) - 0.015)",
+          depth: "0.015",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Guarnição superior (fundo)",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "((-Largura/2) + 0.015)",
+              v: "(Altura - 0.015)",
+            ),
+            (
+              u: "((Largura/2) - 0.015)",
+              v: "(Altura - 0.015)",
+            ),
+            (
+              u: "((Largura/2) + 0.065)",
+              v: "(Altura + 0.065)",
+            ),
+            (
+              u: "((-Largura/2) - 0.065)",
+              v: "(Altura + 0.065)",
+            ),
+          ],
+          offset: "((-WallThickness/2) - 0.015)",
+          depth: "0.015",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Guarnição esquerda - moldura (fundo)",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "((-Largura/2) - 0.065)",
+              v: "0",
+            ),
+            (
+              u: "(((-Largura/2) - 0.065) + 0.018)",
+              v: "0",
+            ),
+            (
+              u: "(((-Largura/2) - 0.065) + 0.018)",
+              v: "((Altura + 0.065) - 0.018)",
+            ),
+            (
+              u: "((-Largura/2) - 0.065)",
+              v: "(Altura + 0.065)",
+            ),
+          ],
+          offset: "(((-WallThickness/2) - 0.015) - 0.005)",
+          depth: "0.005",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Guarnição direita - moldura (fundo)",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "(((Largura/2) + 0.065) - 0.018)",
+              v: "0",
+            ),
+            (
+              u: "((Largura/2) + 0.065)",
+              v: "0",
+            ),
+            (
+              u: "((Largura/2) + 0.065)",
+              v: "(Altura + 0.065)",
+            ),
+            (
+              u: "(((Largura/2) + 0.065) - 0.018)",
+              v: "((Altura + 0.065) - 0.018)",
+            ),
+          ],
+          offset: "(((-WallThickness/2) - 0.015) - 0.005)",
+          depth: "0.005",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Guarnição superior - moldura (fundo)",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "(((-Largura/2) - 0.065) + 0.018)",
+              v: "((Altura + 0.065) - 0.018)",
+            ),
+            (
+              u: "(((Largura/2) + 0.065) - 0.018)",
+              v: "((Altura + 0.065) - 0.018)",
+            ),
+            (
+              u: "((Largura/2) + 0.065)",
+              v: "(Altura + 0.065)",
+            ),
+            (
+              u: "((-Largura/2) - 0.065)",
+              v: "(Altura + 0.065)",
+            ),
+          ],
+          offset: "(((-WallThickness/2) - 0.015) - 0.005)",
+          depth: "0.005",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha simplificada",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((0.004 - (0.17*(Largura - 0.08))))*cos(AnguloAbertura) + 0.0225*sin(AnguloAbertura)",
+              v: "0 + ((0.004 - (0.17*(Largura - 0.08))))*sin(AnguloAbertura) - 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004))*cos(AnguloAbertura) + 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004))*sin(AnguloAbertura) - 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004))*cos(AnguloAbertura) - 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004))*sin(AnguloAbertura) + 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((0.004 - (0.17*(Largura - 0.08))))*cos(AnguloAbertura) - 0.0225*sin(AnguloAbertura)",
+              v: "0 + ((0.004 - (0.17*(Largura - 0.08))))*sin(AnguloAbertura) + 0.0225*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "0.012",
+          depth: "(((((Altura - 0.04)) - 0.006)) - 0.012)",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
+      ),
+      (
+        name: "Folha - miolo",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) + 0.0185*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) - 0.0185*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) + 0.0185*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) - 0.0185*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) - 0.0185*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) + 0.0185*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) - 0.0185*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) + 0.0185*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "0.012",
+          depth: "(((((Altura - 0.04)) - 0.006)) - 0.012)",
         ),
         material: "Madeira",
-        in_plan: false,
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
       ),
       (
-        name: "Puxador",
-        shape: Box(
-          x: "Largura / 2 - 0.05 - 0.15",
-          y: "0.025",
-          z: "0.45",
-          width: "0.03",
-          depth: "0.04",
-          height: "1.2",
+        name: "Folha - fita de borda (pivô)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((0.004 - (0.17*(Largura - 0.08))))*cos(AnguloAbertura) + 0.0225*sin(AnguloAbertura)",
+              v: "0 + ((0.004 - (0.17*(Largura - 0.08))))*sin(AnguloAbertura) - 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) + 0.0225*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) - 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) - 0.0225*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) + 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((0.004 - (0.17*(Largura - 0.08))))*cos(AnguloAbertura) - 0.0225*sin(AnguloAbertura)",
+              v: "0 + ((0.004 - (0.17*(Largura - 0.08))))*sin(AnguloAbertura) + 0.0225*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "0.012",
+          depth: "(((((Altura - 0.04)) - 0.006)) - 0.012)",
         ),
-        material: "Metal cromado",
+        material: "Madeira escura",
         in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
       ),
       (
-        name: "Puxador",
-        shape: Box(
-          x: "Largura / 2 - 0.05 - 0.15",
-          y: "-0.065",
-          z: "0.45",
-          width: "0.03",
-          depth: "0.04",
-          height: "1.2",
+        name: "Folha - fita de borda (fechadura)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) + 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) - 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004))*cos(AnguloAbertura) + 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004))*sin(AnguloAbertura) - 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004))*cos(AnguloAbertura) - 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004))*sin(AnguloAbertura) + 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) - 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) + 0.0225*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "0.012",
+          depth: "(((((Altura - 0.04)) - 0.006)) - 0.012)",
         ),
-        material: "Metal cromado",
+        material: "Madeira escura",
         in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - régua 1 (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) - 0.0185*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) + 0.0185*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) - 0.0185*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) + 0.0185*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) - 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) + 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) - 0.0225*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) + 0.0225*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "((0*((((((((Altura - 0.04)) - 0.006)) - 0.012) - 0.064)/9) + 0.008)) + 0.012)",
+          depth: "(((((((Altura - 0.04)) - 0.006)) - 0.012) - 0.064)/9)",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - régua 1 (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) + 0.0225*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) - 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) + 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) - 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) + 0.0185*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) - 0.0185*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) + 0.0185*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) - 0.0185*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "((0*((((((((Altura - 0.04)) - 0.006)) - 0.012) - 0.064)/9) + 0.008)) + 0.012)",
+          depth: "(((((((Altura - 0.04)) - 0.006)) - 0.012) - 0.064)/9)",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - régua 2 (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) - 0.0185*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) + 0.0185*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) - 0.0185*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) + 0.0185*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) - 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) + 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) - 0.0225*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) + 0.0225*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "((1*((((((((Altura - 0.04)) - 0.006)) - 0.012) - 0.064)/9) + 0.008)) + 0.012)",
+          depth: "(((((((Altura - 0.04)) - 0.006)) - 0.012) - 0.064)/9)",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - régua 2 (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) + 0.0225*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) - 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) + 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) - 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) + 0.0185*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) - 0.0185*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) + 0.0185*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) - 0.0185*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "((1*((((((((Altura - 0.04)) - 0.006)) - 0.012) - 0.064)/9) + 0.008)) + 0.012)",
+          depth: "(((((((Altura - 0.04)) - 0.006)) - 0.012) - 0.064)/9)",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - régua 3 (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) - 0.0185*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) + 0.0185*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) - 0.0185*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) + 0.0185*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) - 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) + 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) - 0.0225*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) + 0.0225*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "((2*((((((((Altura - 0.04)) - 0.006)) - 0.012) - 0.064)/9) + 0.008)) + 0.012)",
+          depth: "(((((((Altura - 0.04)) - 0.006)) - 0.012) - 0.064)/9)",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - régua 3 (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) + 0.0225*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) - 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) + 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) - 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) + 0.0185*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) - 0.0185*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) + 0.0185*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) - 0.0185*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "((2*((((((((Altura - 0.04)) - 0.006)) - 0.012) - 0.064)/9) + 0.008)) + 0.012)",
+          depth: "(((((((Altura - 0.04)) - 0.006)) - 0.012) - 0.064)/9)",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - régua 4 (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) - 0.0185*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) + 0.0185*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) - 0.0185*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) + 0.0185*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) - 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) + 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) - 0.0225*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) + 0.0225*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "((3*((((((((Altura - 0.04)) - 0.006)) - 0.012) - 0.064)/9) + 0.008)) + 0.012)",
+          depth: "(((((((Altura - 0.04)) - 0.006)) - 0.012) - 0.064)/9)",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - régua 4 (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) + 0.0225*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) - 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) + 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) - 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) + 0.0185*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) - 0.0185*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) + 0.0185*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) - 0.0185*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "((3*((((((((Altura - 0.04)) - 0.006)) - 0.012) - 0.064)/9) + 0.008)) + 0.012)",
+          depth: "(((((((Altura - 0.04)) - 0.006)) - 0.012) - 0.064)/9)",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - régua 5 (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) - 0.0185*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) + 0.0185*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) - 0.0185*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) + 0.0185*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) - 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) + 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) - 0.0225*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) + 0.0225*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "((4*((((((((Altura - 0.04)) - 0.006)) - 0.012) - 0.064)/9) + 0.008)) + 0.012)",
+          depth: "(((((((Altura - 0.04)) - 0.006)) - 0.012) - 0.064)/9)",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - régua 5 (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) + 0.0225*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) - 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) + 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) - 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) + 0.0185*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) - 0.0185*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) + 0.0185*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) - 0.0185*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "((4*((((((((Altura - 0.04)) - 0.006)) - 0.012) - 0.064)/9) + 0.008)) + 0.012)",
+          depth: "(((((((Altura - 0.04)) - 0.006)) - 0.012) - 0.064)/9)",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - régua 6 (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) - 0.0185*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) + 0.0185*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) - 0.0185*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) + 0.0185*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) - 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) + 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) - 0.0225*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) + 0.0225*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "((5*((((((((Altura - 0.04)) - 0.006)) - 0.012) - 0.064)/9) + 0.008)) + 0.012)",
+          depth: "(((((((Altura - 0.04)) - 0.006)) - 0.012) - 0.064)/9)",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - régua 6 (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) + 0.0225*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) - 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) + 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) - 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) + 0.0185*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) - 0.0185*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) + 0.0185*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) - 0.0185*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "((5*((((((((Altura - 0.04)) - 0.006)) - 0.012) - 0.064)/9) + 0.008)) + 0.012)",
+          depth: "(((((((Altura - 0.04)) - 0.006)) - 0.012) - 0.064)/9)",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - régua 7 (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) - 0.0185*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) + 0.0185*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) - 0.0185*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) + 0.0185*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) - 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) + 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) - 0.0225*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) + 0.0225*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "((6*((((((((Altura - 0.04)) - 0.006)) - 0.012) - 0.064)/9) + 0.008)) + 0.012)",
+          depth: "(((((((Altura - 0.04)) - 0.006)) - 0.012) - 0.064)/9)",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - régua 7 (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) + 0.0225*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) - 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) + 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) - 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) + 0.0185*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) - 0.0185*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) + 0.0185*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) - 0.0185*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "((6*((((((((Altura - 0.04)) - 0.006)) - 0.012) - 0.064)/9) + 0.008)) + 0.012)",
+          depth: "(((((((Altura - 0.04)) - 0.006)) - 0.012) - 0.064)/9)",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - régua 8 (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) - 0.0185*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) + 0.0185*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) - 0.0185*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) + 0.0185*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) - 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) + 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) - 0.0225*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) + 0.0225*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "((7*((((((((Altura - 0.04)) - 0.006)) - 0.012) - 0.064)/9) + 0.008)) + 0.012)",
+          depth: "(((((((Altura - 0.04)) - 0.006)) - 0.012) - 0.064)/9)",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - régua 8 (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) + 0.0225*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) - 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) + 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) - 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) + 0.0185*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) - 0.0185*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) + 0.0185*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) - 0.0185*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "((7*((((((((Altura - 0.04)) - 0.006)) - 0.012) - 0.064)/9) + 0.008)) + 0.012)",
+          depth: "(((((((Altura - 0.04)) - 0.006)) - 0.012) - 0.064)/9)",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - régua 9 (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) - 0.0185*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) + 0.0185*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) - 0.0185*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) + 0.0185*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) - 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) + 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) - 0.0225*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) + 0.0225*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "((8*((((((((Altura - 0.04)) - 0.006)) - 0.012) - 0.064)/9) + 0.008)) + 0.012)",
+          depth: "(((((((Altura - 0.04)) - 0.006)) - 0.012) - 0.064)/9)",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - régua 9 (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) + 0.0225*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) - 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) + 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) - 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*cos(AnguloAbertura) + 0.0185*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.003))*sin(AnguloAbertura) - 0.0185*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*cos(AnguloAbertura) + 0.0185*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.003))*sin(AnguloAbertura) - 0.0185*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "((8*((((((((Altura - 0.04)) - 0.006)) - 0.012) - 0.064)/9) + 0.008)) + 0.012)",
+          depth: "(((((((Altura - 0.04)) - 0.006)) - 0.012) - 0.064)/9)",
+        ),
+        material: "Madeira escura",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Veda-porta - perfil",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.05))*cos(AnguloAbertura) + 0.009*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.05))*sin(AnguloAbertura) - 0.009*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.05))*cos(AnguloAbertura) + 0.009*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.05))*sin(AnguloAbertura) - 0.009*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.05))*cos(AnguloAbertura) - 0.009*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.05))*sin(AnguloAbertura) + 0.009*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.05))*cos(AnguloAbertura) - 0.009*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.05))*sin(AnguloAbertura) + 0.009*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "0.006",
+          depth: "0.006",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Veda-porta - borracha",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.05))*cos(AnguloAbertura) + 0.005*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.05))*sin(AnguloAbertura) - 0.005*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.05))*cos(AnguloAbertura) + 0.005*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.05))*sin(AnguloAbertura) - 0.005*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.05))*cos(AnguloAbertura) - 0.005*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.05))*sin(AnguloAbertura) + 0.005*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.05))*cos(AnguloAbertura) - 0.005*sin(AnguloAbertura)",
+              v: "0 + ((((0.004 - (0.17*(Largura - 0.08)))) + 0.05))*sin(AnguloAbertura) + 0.005*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "0.0015",
+          depth: "0.0045",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Pivô de piso - base",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) - 0.045",
+              v: "0 - 0.022",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + 0.045",
+              v: "0 - 0.022",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + 0.045",
+              v: "0 + 0.022",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) - 0.045",
+              v: "0 + 0.022",
+            ),
+          ],
+          offset: "0",
+          depth: "0.003",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Pivô de piso - parafuso 1",
+        shape: Cylinder(
+          x: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) - 0.033",
+          y: "0",
+          z: "0.003",
+          radius: "0.0035",
+          height: "0.001",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Pivô de piso - parafuso 2",
+        shape: Cylinder(
+          x: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + 0.033",
+          y: "0",
+          z: "0.003",
+          radius: "0.0035",
+          height: "0.001",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Pivô de piso - mancal",
+        shape: Cylinder(
+          x: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08))))",
+          y: "0",
+          z: "0.003",
+          radius: "0.012",
+          height: "0.004",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Pivô de piso - eixo",
+        shape: Cylinder(
+          x: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08))))",
+          y: "0",
+          z: "0.007",
+          radius: "0.008",
+          height: "0.03",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Pivô de piso - sapata da folha",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) - 0.04*cos(AnguloAbertura) + 0.012*sin(AnguloAbertura)",
+              v: "0 - 0.04*sin(AnguloAbertura) - 0.012*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + 0.06*cos(AnguloAbertura) + 0.012*sin(AnguloAbertura)",
+              v: "0 + 0.06*sin(AnguloAbertura) - 0.012*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + 0.06*cos(AnguloAbertura) - 0.012*sin(AnguloAbertura)",
+              v: "0 + 0.06*sin(AnguloAbertura) + 0.012*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) - 0.04*cos(AnguloAbertura) - 0.012*sin(AnguloAbertura)",
+              v: "0 - 0.04*sin(AnguloAbertura) + 0.012*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "0.012",
+          depth: "0.004",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Pivô de topo - chapa",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) - 0.035",
+              v: "0 - 0.02",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + 0.035",
+              v: "0 - 0.02",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + 0.035",
+              v: "0 + 0.02",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) - 0.035",
+              v: "0 + 0.02",
+            ),
+          ],
+          offset: "(((Altura - 0.04)) - 0.003)",
+          depth: "0.003",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Pivô de topo - parafuso 1",
+        shape: Cylinder(
+          x: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) - 0.025",
+          y: "0",
+          z: "(((Altura - 0.04)) - 0.004)",
+          radius: "0.003",
+          height: "0.001",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Pivô de topo - parafuso 2",
+        shape: Cylinder(
+          x: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + 0.025",
+          y: "0",
+          z: "(((Altura - 0.04)) - 0.004)",
+          radius: "0.003",
+          height: "0.001",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Pivô de topo - eixo",
+        shape: Cylinder(
+          x: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08))))",
+          y: "0",
+          z: "(((((Altura - 0.04)) - 0.006)) - 0.01)",
+          radius: "0.008",
+          height: "(((Altura - 0.04)) + (-(((Altura - 0.04)) - 0.006)) + 0.007)",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Pivô de topo - sapata da folha",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) - 0.03*cos(AnguloAbertura) + 0.012*sin(AnguloAbertura)",
+              v: "0 - 0.03*sin(AnguloAbertura) - 0.012*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + 0.05*cos(AnguloAbertura) + 0.012*sin(AnguloAbertura)",
+              v: "0 + 0.05*sin(AnguloAbertura) - 0.012*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + 0.05*cos(AnguloAbertura) - 0.012*sin(AnguloAbertura)",
+              v: "0 + 0.05*sin(AnguloAbertura) + 0.012*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) - 0.03*cos(AnguloAbertura) - 0.012*sin(AnguloAbertura)",
+              v: "0 - 0.03*sin(AnguloAbertura) + 0.012*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((((Altura - 0.04)) - 0.006)) - 0.003)",
+          depth: "0.003",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador (frente) - tubo",
+        shape: Cylinder(
+          x: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13))*cos(AnguloAbertura) - 0.0875*sin(AnguloAbertura)",
+          y: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13))*sin(AnguloAbertura) + 0.0875*cos(AnguloAbertura)",
+          z: "0.45",
+          radius: "0.016",
+          height: "(((Altura - 0.75)) - 0.45)",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador (frente) - ponteira inferior",
+        shape: Cylinder(
+          x: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13))*cos(AnguloAbertura) - 0.0875*sin(AnguloAbertura)",
+          y: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13))*sin(AnguloAbertura) + 0.0875*cos(AnguloAbertura)",
+          z: "0.444",
+          radius: "0.0165",
+          height: "0.006",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador (frente) - ponteira superior",
+        shape: Cylinder(
+          x: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13))*cos(AnguloAbertura) - 0.0875*sin(AnguloAbertura)",
+          y: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13))*sin(AnguloAbertura) + 0.0875*cos(AnguloAbertura)",
+          z: "(Altura - 0.75)",
+          radius: "0.0165",
+          height: "0.006",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador (frente) - haste 1",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) - 0.0095))*cos(AnguloAbertura) - 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) - 0.0095))*sin(AnguloAbertura) + 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) + 0.0095))*cos(AnguloAbertura) - 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) + 0.0095))*sin(AnguloAbertura) + 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) + 0.0095))*cos(AnguloAbertura) - 0.0875*sin(AnguloAbertura)",
+              v: "0 + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) + 0.0095))*sin(AnguloAbertura) + 0.0875*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) - 0.0095))*cos(AnguloAbertura) - 0.0875*sin(AnguloAbertura)",
+              v: "0 + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) - 0.0095))*sin(AnguloAbertura) + 0.0875*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((0.6)) - 0.0095)",
+          depth: "0.019",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador (frente) - canopla 1",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) - 0.016))*cos(AnguloAbertura) - 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) - 0.016))*sin(AnguloAbertura) + 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) + 0.016))*cos(AnguloAbertura) - 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) + 0.016))*sin(AnguloAbertura) + 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) + 0.016))*cos(AnguloAbertura) - 0.0265*sin(AnguloAbertura)",
+              v: "0 + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) + 0.016))*sin(AnguloAbertura) + 0.0265*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) - 0.016))*cos(AnguloAbertura) - 0.0265*sin(AnguloAbertura)",
+              v: "0 + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) - 0.016))*sin(AnguloAbertura) + 0.0265*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((0.6)) - 0.016)",
+          depth: "0.032",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador (frente) - haste 2",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) - 0.0095))*cos(AnguloAbertura) - 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) - 0.0095))*sin(AnguloAbertura) + 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) + 0.0095))*cos(AnguloAbertura) - 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) + 0.0095))*sin(AnguloAbertura) + 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) + 0.0095))*cos(AnguloAbertura) - 0.0875*sin(AnguloAbertura)",
+              v: "0 + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) + 0.0095))*sin(AnguloAbertura) + 0.0875*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) - 0.0095))*cos(AnguloAbertura) - 0.0875*sin(AnguloAbertura)",
+              v: "0 + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) - 0.0095))*sin(AnguloAbertura) + 0.0875*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((((Altura - 0.75)) - 0.15)) - 0.0095)",
+          depth: "0.019",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador (frente) - canopla 2",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) - 0.016))*cos(AnguloAbertura) - 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) - 0.016))*sin(AnguloAbertura) + 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) + 0.016))*cos(AnguloAbertura) - 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) + 0.016))*sin(AnguloAbertura) + 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) + 0.016))*cos(AnguloAbertura) - 0.0265*sin(AnguloAbertura)",
+              v: "0 + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) + 0.016))*sin(AnguloAbertura) + 0.0265*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) - 0.016))*cos(AnguloAbertura) - 0.0265*sin(AnguloAbertura)",
+              v: "0 + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) - 0.016))*sin(AnguloAbertura) + 0.0265*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((((Altura - 0.75)) - 0.15)) - 0.016)",
+          depth: "0.032",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fechadura (frente) - espelho",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.06))*cos(AnguloAbertura) - 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.06))*sin(AnguloAbertura) + 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.03))*cos(AnguloAbertura) - 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.03))*sin(AnguloAbertura) + 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.03))*cos(AnguloAbertura) - 0.0265*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.03))*sin(AnguloAbertura) + 0.0265*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.06))*cos(AnguloAbertura) - 0.0265*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.06))*sin(AnguloAbertura) + 0.0265*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "1.015",
+          depth: "0.07",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fechadura (frente) - cilindro",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.0535))*cos(AnguloAbertura) - 0.0265*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.0535))*sin(AnguloAbertura) + 0.0265*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.0365))*cos(AnguloAbertura) - 0.0265*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.0365))*sin(AnguloAbertura) + 0.0265*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.0365))*cos(AnguloAbertura) - 0.0305*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.0365))*sin(AnguloAbertura) + 0.0305*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.0535))*cos(AnguloAbertura) - 0.0305*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.0535))*sin(AnguloAbertura) + 0.0305*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "1.034",
+          depth: "0.032",
+        ),
+        material: "Latão",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fechadura (frente) - fenda",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.046))*cos(AnguloAbertura) - 0.0305*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.046))*sin(AnguloAbertura) + 0.0305*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.044))*cos(AnguloAbertura) - 0.0305*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.044))*sin(AnguloAbertura) + 0.0305*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.044))*cos(AnguloAbertura) - 0.031*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.044))*sin(AnguloAbertura) + 0.031*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.046))*cos(AnguloAbertura) - 0.031*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.046))*sin(AnguloAbertura) + 0.031*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "1.042",
+          depth: "0.012",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador (fundo) - tubo",
+        shape: Cylinder(
+          x: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13))*cos(AnguloAbertura) + 0.0875*sin(AnguloAbertura)",
+          y: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13))*sin(AnguloAbertura) - 0.0875*cos(AnguloAbertura)",
+          z: "0.45",
+          radius: "0.016",
+          height: "(((Altura - 0.75)) - 0.45)",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador (fundo) - ponteira inferior",
+        shape: Cylinder(
+          x: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13))*cos(AnguloAbertura) + 0.0875*sin(AnguloAbertura)",
+          y: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13))*sin(AnguloAbertura) - 0.0875*cos(AnguloAbertura)",
+          z: "0.444",
+          radius: "0.0165",
+          height: "0.006",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador (fundo) - ponteira superior",
+        shape: Cylinder(
+          x: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13))*cos(AnguloAbertura) + 0.0875*sin(AnguloAbertura)",
+          y: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13))*sin(AnguloAbertura) - 0.0875*cos(AnguloAbertura)",
+          z: "(Altura - 0.75)",
+          radius: "0.0165",
+          height: "0.006",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador (fundo) - haste 1",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) - 0.0095))*cos(AnguloAbertura) + 0.0875*sin(AnguloAbertura)",
+              v: "0 + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) - 0.0095))*sin(AnguloAbertura) - 0.0875*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) + 0.0095))*cos(AnguloAbertura) + 0.0875*sin(AnguloAbertura)",
+              v: "0 + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) + 0.0095))*sin(AnguloAbertura) - 0.0875*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) + 0.0095))*cos(AnguloAbertura) + 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) + 0.0095))*sin(AnguloAbertura) - 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) - 0.0095))*cos(AnguloAbertura) + 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) - 0.0095))*sin(AnguloAbertura) - 0.0225*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((0.6)) - 0.0095)",
+          depth: "0.019",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador (fundo) - canopla 1",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) - 0.016))*cos(AnguloAbertura) + 0.0265*sin(AnguloAbertura)",
+              v: "0 + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) - 0.016))*sin(AnguloAbertura) - 0.0265*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) + 0.016))*cos(AnguloAbertura) + 0.0265*sin(AnguloAbertura)",
+              v: "0 + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) + 0.016))*sin(AnguloAbertura) - 0.0265*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) + 0.016))*cos(AnguloAbertura) + 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) + 0.016))*sin(AnguloAbertura) - 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) - 0.016))*cos(AnguloAbertura) + 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) - 0.016))*sin(AnguloAbertura) - 0.0225*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((0.6)) - 0.016)",
+          depth: "0.032",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador (fundo) - haste 2",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) - 0.0095))*cos(AnguloAbertura) + 0.0875*sin(AnguloAbertura)",
+              v: "0 + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) - 0.0095))*sin(AnguloAbertura) - 0.0875*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) + 0.0095))*cos(AnguloAbertura) + 0.0875*sin(AnguloAbertura)",
+              v: "0 + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) + 0.0095))*sin(AnguloAbertura) - 0.0875*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) + 0.0095))*cos(AnguloAbertura) + 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) + 0.0095))*sin(AnguloAbertura) - 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) - 0.0095))*cos(AnguloAbertura) + 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) - 0.0095))*sin(AnguloAbertura) - 0.0225*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((((Altura - 0.75)) - 0.15)) - 0.0095)",
+          depth: "0.019",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador (fundo) - canopla 2",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) - 0.016))*cos(AnguloAbertura) + 0.0265*sin(AnguloAbertura)",
+              v: "0 + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) - 0.016))*sin(AnguloAbertura) - 0.0265*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) + 0.016))*cos(AnguloAbertura) + 0.0265*sin(AnguloAbertura)",
+              v: "0 + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) + 0.016))*sin(AnguloAbertura) - 0.0265*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) + 0.016))*cos(AnguloAbertura) + 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) + 0.016))*sin(AnguloAbertura) - 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) - 0.016))*cos(AnguloAbertura) + 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.13)) - 0.016))*sin(AnguloAbertura) - 0.0225*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((((Altura - 0.75)) - 0.15)) - 0.016)",
+          depth: "0.032",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fechadura (fundo) - espelho",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.06))*cos(AnguloAbertura) + 0.0265*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.06))*sin(AnguloAbertura) - 0.0265*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.03))*cos(AnguloAbertura) + 0.0265*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.03))*sin(AnguloAbertura) - 0.0265*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.03))*cos(AnguloAbertura) + 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.03))*sin(AnguloAbertura) - 0.0225*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.06))*cos(AnguloAbertura) + 0.0225*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.06))*sin(AnguloAbertura) - 0.0225*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "1.015",
+          depth: "0.07",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fechadura (fundo) - cilindro",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.0535))*cos(AnguloAbertura) + 0.0305*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.0535))*sin(AnguloAbertura) - 0.0305*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.0365))*cos(AnguloAbertura) + 0.0305*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.0365))*sin(AnguloAbertura) - 0.0305*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.0365))*cos(AnguloAbertura) + 0.0265*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.0365))*sin(AnguloAbertura) - 0.0265*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.0535))*cos(AnguloAbertura) + 0.0265*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.0535))*sin(AnguloAbertura) - 0.0265*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "1.034",
+          depth: "0.032",
+        ),
+        material: "Latão",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fechadura (fundo) - fenda",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.046))*cos(AnguloAbertura) + 0.031*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.046))*sin(AnguloAbertura) - 0.031*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.044))*cos(AnguloAbertura) + 0.031*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.044))*sin(AnguloAbertura) - 0.031*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.044))*cos(AnguloAbertura) + 0.0305*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.044))*sin(AnguloAbertura) - 0.0305*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.046))*cos(AnguloAbertura) + 0.0305*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.046))*sin(AnguloAbertura) - 0.0305*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "1.042",
+          depth: "0.012",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fechadura - testa",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.002))*cos(AnguloAbertura) - ((-0.011))*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.002))*sin(AnguloAbertura) + ((-0.011))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) + 0.0006))*cos(AnguloAbertura) - ((-0.011))*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) + 0.0006))*sin(AnguloAbertura) + ((-0.011))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) + 0.0006))*cos(AnguloAbertura) - ((0.011))*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) + 0.0006))*sin(AnguloAbertura) + ((0.011))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.002))*cos(AnguloAbertura) - ((0.011))*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.002))*sin(AnguloAbertura) + ((0.011))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(0.995)",
+          depth: "0.235",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fechadura - lingueta",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004))*cos(AnguloAbertura) - ((-0.006))*sin(AnguloAbertura)",
+              v: "0 + (((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004))*sin(AnguloAbertura) + ((-0.006))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) + 0.011))*cos(AnguloAbertura) - ((-0.006))*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) + 0.011))*sin(AnguloAbertura) + ((-0.006))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) + 0.004))*cos(AnguloAbertura) - ((0.006))*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) + 0.004))*sin(AnguloAbertura) + ((0.006))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004))*cos(AnguloAbertura) - ((0.006))*sin(AnguloAbertura)",
+              v: "0 + (((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004))*sin(AnguloAbertura) + ((0.006))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(1.118)",
+          depth: "0.024",
+        ),
+        material: "Latão",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fechadura - trinco",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.004))*cos(AnguloAbertura) - ((-0.005))*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.004))*sin(AnguloAbertura) + ((-0.005))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) + 0.0012))*cos(AnguloAbertura) - ((-0.005))*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) + 0.0012))*sin(AnguloAbertura) + ((-0.005))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) + 0.0012))*cos(AnguloAbertura) - ((0.005))*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) + 0.0012))*sin(AnguloAbertura) + ((0.005))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.004))*cos(AnguloAbertura) - ((0.005))*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) - 0.004))*sin(AnguloAbertura) + ((0.005))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(1.035)",
+          depth: "0.04",
+        ),
+        material: "Latão",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fechadura - parafuso da testa 1",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) + 0.0006))*cos(AnguloAbertura) - ((-0.004))*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) + 0.0006))*sin(AnguloAbertura) + ((-0.004))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) + 0.001))*cos(AnguloAbertura) - ((-0.004))*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) + 0.001))*sin(AnguloAbertura) + ((-0.004))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) + 0.001))*cos(AnguloAbertura) - ((0.004))*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) + 0.001))*sin(AnguloAbertura) + ((0.004))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) + 0.0006))*cos(AnguloAbertura) - ((0.004))*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) + 0.0006))*sin(AnguloAbertura) + ((0.004))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(1.002)",
+          depth: "0.008",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fechadura - parafuso da testa 2",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) + 0.0006))*cos(AnguloAbertura) - ((-0.004))*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) + 0.0006))*sin(AnguloAbertura) + ((-0.004))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) + 0.001))*cos(AnguloAbertura) - ((-0.004))*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) + 0.001))*sin(AnguloAbertura) + ((-0.004))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) + 0.001))*cos(AnguloAbertura) - ((0.004))*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) + 0.001))*sin(AnguloAbertura) + ((0.004))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) + 0.0006))*cos(AnguloAbertura) - ((0.004))*sin(AnguloAbertura)",
+              v: "0 + (((((Largura - 0.08) - (0.17*(Largura - 0.08)) - 0.004)) + 0.0006))*sin(AnguloAbertura) + ((0.004))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(1.218)",
+          depth: "0.008",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fechadura - contratesta",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((((Largura - 0.08)) + (-(0.17*(Largura - 0.08))))) - 0.0014))",
+              v: "0 + ((-0.011))",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((Largura - 0.08)) + (-(0.17*(Largura - 0.08)))))",
+              v: "0 + ((-0.011))",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((Largura - 0.08)) + (-(0.17*(Largura - 0.08)))))",
+              v: "0 + ((0.031))",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((((Largura - 0.08)) + (-(0.17*(Largura - 0.08))))) - 0.0014))",
+              v: "0 + ((0.031))",
+            ),
+          ],
+          offset: "(1.015)",
+          depth: "0.17",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fechadura - furo da lingueta",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((((Largura - 0.08)) + (-(0.17*(Largura - 0.08))))) - 0.0017))",
+              v: "0 + ((-0.007))",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((((Largura - 0.08)) + (-(0.17*(Largura - 0.08))))) - 0.0014))",
+              v: "0 + ((-0.007))",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((((Largura - 0.08)) + (-(0.17*(Largura - 0.08))))) - 0.0014))",
+              v: "0 + ((0.007))",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((((Largura - 0.08)) + (-(0.17*(Largura - 0.08))))) - 0.0017))",
+              v: "0 + ((0.007))",
+            ),
+          ],
+          offset: "(1.114)",
+          depth: "0.032",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fechadura - furo do trinco",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((((Largura - 0.08)) + (-(0.17*(Largura - 0.08))))) - 0.0017))",
+              v: "0 + ((-0.006))",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((((Largura - 0.08)) + (-(0.17*(Largura - 0.08))))) - 0.0014))",
+              v: "0 + ((-0.006))",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((((Largura - 0.08)) + (-(0.17*(Largura - 0.08))))) - 0.0014))",
+              v: "0 + ((0.006))",
+            ),
+            (
+              u: "(((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))) + ((((((Largura - 0.08)) + (-(0.17*(Largura - 0.08))))) - 0.0017))",
+              v: "0 + ((0.006))",
+            ),
+          ],
+          offset: "(1.032)",
+          depth: "0.046",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
       ),
       (
         name: "Giro",
@@ -103,51 +2550,61 @@
           plane: Plan,
           points: [
             (
-              u: "-Largura / 2 + 0.05 + (Largura - 2 * 0.05) * 0.17",
+              u: "((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))",
               v: "0",
             ),
             (
-              u: "-Largura / 2 + 0.05 + (Largura - 2 * 0.05) * 0.17 + (Largura - 2 * 0.05) * 0.83",
+              u: "((-Largura/2) + 0.04 + (0.17*(Largura - 0.08))) + ((Largura - 0.08) - (0.17*(Largura - 0.08)))",
               v: "0",
-              radius: "(Largura - 2 * 0.05) * 0.83",
+              radius: "((Largura - 0.08) - (0.17*(Largura - 0.08)))",
             ),
             (
-              u: "-Largura / 2 + 0.05 + (Largura - 2 * 0.05) * 0.17",
-              v: "(Largura - 2 * 0.05) * 0.83",
+              u: "((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))",
+              v: "((Largura - 0.08) - (0.17*(Largura - 0.08)))",
             ),
           ],
           offset: "0",
           depth: "0.001",
         ),
-        material: "",
+        material: "Madeira escura",
         in_plan: true,
         plan_only: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
       ),
       (
-        name: "Giro",
+        name: "Giro da parte estreita",
         shape: Profile(
           plane: Plan,
           points: [
             (
-              u: "-Largura / 2 + 0.05 + (Largura - 2 * 0.05) * 0.17",
+              u: "((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))",
               v: "0",
             ),
             (
-              u: "-Largura / 2 + 0.05 + (Largura - 2 * 0.05) * 0.17 - (Largura - 2 * 0.05) * 0.17",
+              u: "((-Largura/2) + 0.04 + (0.17*(Largura - 0.08))) - (0.17*(Largura - 0.08))",
               v: "0",
-              radius: "(Largura - 2 * 0.05) * 0.17",
+              radius: "(0.17*(Largura - 0.08))",
             ),
             (
-              u: "-Largura / 2 + 0.05 + (Largura - 2 * 0.05) * 0.17",
-              v: "-(Largura - 2 * 0.05) * 0.17",
+              u: "((-Largura/2) + 0.04 + (0.17*(Largura - 0.08)))",
+              v: "-(0.17*(Largura - 0.08))",
             ),
           ],
           offset: "0",
           depth: "0.001",
         ),
-        material: "",
+        material: "Madeira escura",
         in_plan: true,
         plan_only: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
       ),
     ],
     opening: Some((
@@ -161,11 +2618,12 @@
       name: "Porta pivotante 100 x 240",
       values: {
         "Altura": 2.4,
+        "AnguloAbertura": 0.0,
         "Largura": 1.0,
       },
       info: (
         type_mark: "",
-        description: "Porta de entrada pivotante, folha de madeira e puxadores de barra",
+        description: "Porta de entrada pivotante, folha maciça frisada, pivôs de piso e de topo, puxador tubular de inox",
         manufacturer: "",
         model: "",
         url: "",
@@ -180,11 +2638,12 @@
       name: "Porta pivotante 120 x 240",
       values: {
         "Altura": 2.4,
+        "AnguloAbertura": 0.0,
         "Largura": 1.2,
       },
       info: (
         type_mark: "",
-        description: "Porta de entrada pivotante, folha de madeira e puxadores de barra",
+        description: "Porta de entrada pivotante, folha maciça frisada, pivôs de piso e de topo, puxador tubular de inox",
         manufacturer: "",
         model: "",
         url: "",
@@ -199,11 +2658,12 @@
       name: "Porta pivotante 150 x 240",
       values: {
         "Altura": 2.4,
+        "AnguloAbertura": 0.0,
         "Largura": 1.5,
       },
       info: (
         type_mark: "",
-        description: "Porta de entrada pivotante, folha de madeira e puxadores de barra",
+        description: "Porta de entrada pivotante, folha maciça frisada, pivôs de piso e de topo, puxador tubular de inox",
         manufacturer: "",
         model: "",
         url: "",
@@ -265,11 +2725,11 @@
       ),
     ),
     (
-      name: "Metal cromado",
-      color: (205, 205, 210),
+      name: "Madeira escura",
+      color: (92, 62, 40),
       identity: (
         description: "",
-        class: Generic,
+        class: Wood,
         comments: "",
         keywords: "",
         manufacturer: "",
@@ -296,8 +2756,296 @@
         ),
       ),
       appearance: (
-        color: (205, 205, 210),
+        color: (92, 62, 40),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Borracha",
+      color: (30, 30, 30),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (30, 30, 30),
         finish: Matte,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Alumínio anodizado",
+      color: (206, 208, 210),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (206, 208, 210),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Inox escovado",
+      color: (198, 200, 203),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (198, 200, 203),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Cromado",
+      color: (226, 229, 233),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (226, 229, 233),
+        finish: Polished,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Latão",
+      color: (192, 160, 84),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (192, 160, 84),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Plástico preto",
+      color: (34, 34, 37),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (34, 34, 37),
+        finish: Satin,
         description: "",
       ),
       physical: (

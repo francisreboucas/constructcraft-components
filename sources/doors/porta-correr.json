@@ -14,98 +14,3828 @@
         "value": 2.1,
         "kind": "Length",
         "instance": false
+      },
+      {
+        "name": "Abertura",
+        "value": 0.0,
+        "kind": "Number",
+        "instance": true
       }
     ],
     "items": [
       {
-        "name": "Batente",
-        "material": "Madeira",
-        "in_plan": false,
+        "name": "Batente esquerdo simplificado",
         "shape": {
           "Box": {
-            "x": "-Largura / 2",
-            "y": "-WallThickness / 2",
+            "x": "(-Largura/2)",
+            "y": "(-WallThickness/2)",
             "z": "0",
             "width": "0.05",
             "depth": "WallThickness",
             "height": "Altura"
           }
+        },
+        "material": "Madeira",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
         }
       },
       {
-        "name": "Batente",
-        "material": "Madeira",
-        "in_plan": false,
+        "name": "Batente direito simplificado",
         "shape": {
           "Box": {
-            "x": "Largura / 2 - 0.05",
-            "y": "-WallThickness / 2",
+            "x": "(Largura/2) - 0.05",
+            "y": "(-WallThickness/2)",
             "z": "0",
             "width": "0.05",
             "depth": "WallThickness",
             "height": "Altura"
           }
+        },
+        "material": "Madeira",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
         }
       },
       {
-        "name": "Batente",
-        "material": "Madeira",
-        "in_plan": false,
+        "name": "Batente superior simplificado",
         "shape": {
           "Box": {
-            "x": "-Largura / 2 + 0.05",
-            "y": "-WallThickness / 2",
+            "x": "(-Largura/2) + 0.05",
+            "y": "(-WallThickness/2)",
             "z": "Altura - 0.05",
-            "width": "Largura - 2 * 0.05",
+            "width": "Largura - 0.1",
             "depth": "WallThickness",
             "height": "0.05"
           }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
         }
       },
       {
-        "name": "Folha",
-        "material": "Madeira",
-        "in_plan": true,
+        "name": "Batente esquerdo",
         "shape": {
           "Box": {
-            "x": "-Largura / 2",
-            "y": "WallThickness / 2 + 0.01",
+            "x": "(-Largura/2)",
+            "y": "(-WallThickness/2)",
             "z": "0",
-            "width": "Largura + 0.05",
-            "depth": "0.035",
+            "width": "0.035",
+            "depth": "WallThickness",
             "height": "Altura"
           }
-        }
-      },
-      {
-        "name": "Trilho",
-        "material": "Alumínio",
+        },
+        "material": "Madeira",
         "in_plan": true,
-        "shape": {
-          "Box": {
-            "x": "-Largura / 2",
-            "y": "WallThickness / 2 + 0.005",
-            "z": "Altura",
-            "width": "2 * Largura + 0.05",
-            "depth": "0.05",
-            "height": "0.06"
-          }
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
         }
       },
       {
-        "name": "Puxador",
-        "material": "Metal cromado",
-        "in_plan": false,
+        "name": "Batente direito",
         "shape": {
           "Box": {
-            "x": "-Largura / 2 + 0.05",
-            "y": "WallThickness / 2 + 0.045",
-            "z": "1.0",
-            "width": "0.03",
-            "depth": "0.03",
-            "height": "0.25"
+            "x": "(Largura/2) - 0.035",
+            "y": "(-WallThickness/2)",
+            "z": "0",
+            "width": "0.035",
+            "depth": "WallThickness",
+            "height": "Altura"
           }
+        },
+        "material": "Madeira",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
         }
+      },
+      {
+        "name": "Batente superior",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.035",
+            "y": "(-WallThickness/2)",
+            "z": "Altura - 0.035",
+            "width": "Largura - 0.07",
+            "depth": "WallThickness",
+            "height": "0.035"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Guarnição esquerda (frente)",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) - 0.055)",
+                "v": "0"
+              },
+              {
+                "u": "((-Largura/2) + 0.015)",
+                "v": "0"
+              },
+              {
+                "u": "((-Largura/2) + 0.015)",
+                "v": "(Altura - 0.015)"
+              },
+              {
+                "u": "((-Largura/2) - 0.055)",
+                "v": "(Altura + 0.055)"
+              }
+            ],
+            "offset": "(WallThickness/2)",
+            "depth": "0.012"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Guarnição direita (frente)",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((Largura/2) - 0.015)",
+                "v": "0"
+              },
+              {
+                "u": "((Largura/2) + 0.055)",
+                "v": "0"
+              },
+              {
+                "u": "((Largura/2) + 0.055)",
+                "v": "(Altura + 0.055)"
+              },
+              {
+                "u": "((Largura/2) - 0.015)",
+                "v": "(Altura - 0.015)"
+              }
+            ],
+            "offset": "(WallThickness/2)",
+            "depth": "0.012"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Guarnição superior (frente)",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.015)",
+                "v": "(Altura - 0.015)"
+              },
+              {
+                "u": "((Largura/2) - 0.015)",
+                "v": "(Altura - 0.015)"
+              },
+              {
+                "u": "((Largura/2) + 0.055)",
+                "v": "(Altura + 0.055)"
+              },
+              {
+                "u": "((-Largura/2) - 0.055)",
+                "v": "(Altura + 0.055)"
+              }
+            ],
+            "offset": "(WallThickness/2)",
+            "depth": "0.012"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Guarnição esquerda - moldura (frente)",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) - 0.055)",
+                "v": "0"
+              },
+              {
+                "u": "(((-Largura/2) - 0.055) + 0.018)",
+                "v": "0"
+              },
+              {
+                "u": "(((-Largura/2) - 0.055) + 0.018)",
+                "v": "((Altura + 0.055) - 0.018)"
+              },
+              {
+                "u": "((-Largura/2) - 0.055)",
+                "v": "(Altura + 0.055)"
+              }
+            ],
+            "offset": "((WallThickness/2) + 0.012)",
+            "depth": "0.005"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Guarnição direita - moldura (frente)",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(((Largura/2) + 0.055) - 0.018)",
+                "v": "0"
+              },
+              {
+                "u": "((Largura/2) + 0.055)",
+                "v": "0"
+              },
+              {
+                "u": "((Largura/2) + 0.055)",
+                "v": "(Altura + 0.055)"
+              },
+              {
+                "u": "(((Largura/2) + 0.055) - 0.018)",
+                "v": "((Altura + 0.055) - 0.018)"
+              }
+            ],
+            "offset": "((WallThickness/2) + 0.012)",
+            "depth": "0.005"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Guarnição superior - moldura (frente)",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(((-Largura/2) - 0.055) + 0.018)",
+                "v": "((Altura + 0.055) - 0.018)"
+              },
+              {
+                "u": "(((Largura/2) + 0.055) - 0.018)",
+                "v": "((Altura + 0.055) - 0.018)"
+              },
+              {
+                "u": "((Largura/2) + 0.055)",
+                "v": "(Altura + 0.055)"
+              },
+              {
+                "u": "((-Largura/2) - 0.055)",
+                "v": "(Altura + 0.055)"
+              }
+            ],
+            "offset": "((WallThickness/2) + 0.012)",
+            "depth": "0.005"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Guarnição esquerda (fundo)",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) - 0.055)",
+                "v": "0"
+              },
+              {
+                "u": "((-Largura/2) + 0.015)",
+                "v": "0"
+              },
+              {
+                "u": "((-Largura/2) + 0.015)",
+                "v": "(Altura - 0.015)"
+              },
+              {
+                "u": "((-Largura/2) - 0.055)",
+                "v": "(Altura + 0.055)"
+              }
+            ],
+            "offset": "((-WallThickness/2) - 0.012)",
+            "depth": "0.012"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Guarnição direita (fundo)",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((Largura/2) - 0.015)",
+                "v": "0"
+              },
+              {
+                "u": "((Largura/2) + 0.055)",
+                "v": "0"
+              },
+              {
+                "u": "((Largura/2) + 0.055)",
+                "v": "(Altura + 0.055)"
+              },
+              {
+                "u": "((Largura/2) - 0.015)",
+                "v": "(Altura - 0.015)"
+              }
+            ],
+            "offset": "((-WallThickness/2) - 0.012)",
+            "depth": "0.012"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Guarnição superior (fundo)",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.015)",
+                "v": "(Altura - 0.015)"
+              },
+              {
+                "u": "((Largura/2) - 0.015)",
+                "v": "(Altura - 0.015)"
+              },
+              {
+                "u": "((Largura/2) + 0.055)",
+                "v": "(Altura + 0.055)"
+              },
+              {
+                "u": "((-Largura/2) - 0.055)",
+                "v": "(Altura + 0.055)"
+              }
+            ],
+            "offset": "((-WallThickness/2) - 0.012)",
+            "depth": "0.012"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Guarnição esquerda - moldura (fundo)",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) - 0.055)",
+                "v": "0"
+              },
+              {
+                "u": "(((-Largura/2) - 0.055) + 0.018)",
+                "v": "0"
+              },
+              {
+                "u": "(((-Largura/2) - 0.055) + 0.018)",
+                "v": "((Altura + 0.055) - 0.018)"
+              },
+              {
+                "u": "((-Largura/2) - 0.055)",
+                "v": "(Altura + 0.055)"
+              }
+            ],
+            "offset": "(((-WallThickness/2) - 0.012) - 0.005)",
+            "depth": "0.005"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Guarnição direita - moldura (fundo)",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(((Largura/2) + 0.055) - 0.018)",
+                "v": "0"
+              },
+              {
+                "u": "((Largura/2) + 0.055)",
+                "v": "0"
+              },
+              {
+                "u": "((Largura/2) + 0.055)",
+                "v": "(Altura + 0.055)"
+              },
+              {
+                "u": "(((Largura/2) + 0.055) - 0.018)",
+                "v": "((Altura + 0.055) - 0.018)"
+              }
+            ],
+            "offset": "(((-WallThickness/2) - 0.012) - 0.005)",
+            "depth": "0.005"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Guarnição superior - moldura (fundo)",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(((-Largura/2) - 0.055) + 0.018)",
+                "v": "((Altura + 0.055) - 0.018)"
+              },
+              {
+                "u": "(((Largura/2) + 0.055) - 0.018)",
+                "v": "((Altura + 0.055) - 0.018)"
+              },
+              {
+                "u": "((Largura/2) + 0.055)",
+                "v": "(Altura + 0.055)"
+              },
+              {
+                "u": "((-Largura/2) - 0.055)",
+                "v": "(Altura + 0.055)"
+              }
+            ],
+            "offset": "(((-WallThickness/2) - 0.012) - 0.005)",
+            "depth": "0.005"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha simplificada",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura))",
+                "v": "0 + ((WallThickness/2 + 0.022))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((Largura + 0.12))",
+                "v": "0 + ((WallThickness/2 + 0.022))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((Largura + 0.12))",
+                "v": "0 + ((WallThickness/2 + 0.057))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura))",
+                "v": "0 + ((WallThickness/2 + 0.057))"
+              }
+            ],
+            "offset": "0.01",
+            "depth": "Altura + 0.05"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Folha - montante traseiro",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura))",
+                "v": "0 + ((WallThickness/2 + 0.022))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.11))",
+                "v": "0 + ((WallThickness/2 + 0.022))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.11))",
+                "v": "0 + ((WallThickness/2 + 0.057))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura))",
+                "v": "0 + ((WallThickness/2 + 0.057))"
+              }
+            ],
+            "offset": "0.01",
+            "depth": "(((Altura + 0.06)) + (-0.01))"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - montante traseiro",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12)) - 0.11))",
+                "v": "0 + ((WallThickness/2 + 0.022))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((Largura + 0.12))",
+                "v": "0 + ((WallThickness/2 + 0.022))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((Largura + 0.12))",
+                "v": "0 + ((WallThickness/2 + 0.057))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12)) - 0.11))",
+                "v": "0 + ((WallThickness/2 + 0.057))"
+              }
+            ],
+            "offset": "0.01",
+            "depth": "(((Altura + 0.06)) + (-0.01))"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - travessa inferior",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.11))",
+                "v": "0 + ((WallThickness/2 + 0.022))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12)) - 0.11))",
+                "v": "0 + ((WallThickness/2 + 0.022))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12)) - 0.11))",
+                "v": "0 + ((WallThickness/2 + 0.057))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.11))",
+                "v": "0 + ((WallThickness/2 + 0.057))"
+              }
+            ],
+            "offset": "0.01",
+            "depth": "0.2"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - travessa superior",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.11))",
+                "v": "0 + ((WallThickness/2 + 0.022))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12)) - 0.11))",
+                "v": "0 + ((WallThickness/2 + 0.022))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12)) - 0.11))",
+                "v": "0 + ((WallThickness/2 + 0.057))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.11))",
+                "v": "0 + ((WallThickness/2 + 0.057))"
+              }
+            ],
+            "offset": "(((Altura + 0.06)) - 0.12)",
+            "depth": "0.12"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - travessa intermediária 1",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.11))",
+                "v": "0 + ((WallThickness/2 + 0.022))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12)) - 0.11))",
+                "v": "0 + ((WallThickness/2 + 0.022))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12)) - 0.11))",
+                "v": "0 + ((WallThickness/2 + 0.057))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.11))",
+                "v": "0 + ((WallThickness/2 + 0.057))"
+              }
+            ],
+            "offset": "0.88",
+            "depth": "0.14"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - travessa intermediária 2",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.11))",
+                "v": "0 + ((WallThickness/2 + 0.022))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12)) - 0.11))",
+                "v": "0 + ((WallThickness/2 + 0.022))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12)) - 0.11))",
+                "v": "0 + ((WallThickness/2 + 0.057))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.11))",
+                "v": "0 + ((WallThickness/2 + 0.057))"
+              }
+            ],
+            "offset": "1.5",
+            "depth": "0.09"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - almofada 1",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) - 0.008))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) + 0.008))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) + 0.008))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) - 0.008))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.007))"
+              }
+            ],
+            "offset": "(((0.21)) - 0.008)",
+            "depth": "((((-((0.21))) + 0.88)) + 0.016)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - almofada 1 - relevo (frente)",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.035))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.035))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.035))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.013))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.035))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.013))"
+              }
+            ],
+            "offset": "(((0.21)) + 0.035)",
+            "depth": "((((-((0.21))) + 0.88)) - 0.07)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - almofada 1 - baguete esquerdo (frente)",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.11))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.0145))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.11))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.0145))"
+              }
+            ],
+            "offset": "(0.21)",
+            "depth": "((-((0.21))) + 0.88)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - almofada 1 - baguete direito (frente)",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12)) - 0.11))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12)) - 0.11))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.0145))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.0145))"
+              }
+            ],
+            "offset": "(0.21)",
+            "depth": "((-((0.21))) + 0.88)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - almofada 1 - baguete inferior (frente)",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.0145))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.0145))"
+              }
+            ],
+            "offset": "(0.21)",
+            "depth": "0.012"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - almofada 1 - baguete superior (frente)",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.0145))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.0145))"
+              }
+            ],
+            "offset": "(0.868)",
+            "depth": "0.012"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - almofada 1 - relevo (fundo)",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.035))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.013))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.035))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.013))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.035))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.035))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.007))"
+              }
+            ],
+            "offset": "(((0.21)) + 0.035)",
+            "depth": "((((-((0.21))) + 0.88)) - 0.07)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - almofada 1 - baguete esquerdo (fundo)",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.11))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.0145))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.0145))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.11))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.007))"
+              }
+            ],
+            "offset": "(0.21)",
+            "depth": "((-((0.21))) + 0.88)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - almofada 1 - baguete direito (fundo)",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.0145))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12)) - 0.11))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.0145))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12)) - 0.11))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.007))"
+              }
+            ],
+            "offset": "(0.21)",
+            "depth": "((-((0.21))) + 0.88)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - almofada 1 - baguete inferior (fundo)",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.0145))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.0145))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.007))"
+              }
+            ],
+            "offset": "(0.21)",
+            "depth": "0.012"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - almofada 1 - baguete superior (fundo)",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.0145))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.0145))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.007))"
+              }
+            ],
+            "offset": "(0.868)",
+            "depth": "0.012"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - almofada 2",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) - 0.008))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) + 0.008))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) + 0.008))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) - 0.008))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.007))"
+              }
+            ],
+            "offset": "(((1.02)) - 0.008)",
+            "depth": "((((-((1.02))) + 1.5)) + 0.016)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - almofada 2 - relevo (frente)",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.035))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.035))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.035))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.013))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.035))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.013))"
+              }
+            ],
+            "offset": "(((1.02)) + 0.035)",
+            "depth": "((((-((1.02))) + 1.5)) - 0.07)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - almofada 2 - baguete esquerdo (frente)",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.11))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.0145))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.11))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.0145))"
+              }
+            ],
+            "offset": "(1.02)",
+            "depth": "((-((1.02))) + 1.5)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - almofada 2 - baguete direito (frente)",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12)) - 0.11))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12)) - 0.11))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.0145))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.0145))"
+              }
+            ],
+            "offset": "(1.02)",
+            "depth": "((-((1.02))) + 1.5)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - almofada 2 - baguete inferior (frente)",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.0145))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.0145))"
+              }
+            ],
+            "offset": "(1.02)",
+            "depth": "0.012"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - almofada 2 - baguete superior (frente)",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.0145))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.0145))"
+              }
+            ],
+            "offset": "(1.488)",
+            "depth": "0.012"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - almofada 2 - relevo (fundo)",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.035))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.013))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.035))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.013))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.035))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.035))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.007))"
+              }
+            ],
+            "offset": "(((1.02)) + 0.035)",
+            "depth": "((((-((1.02))) + 1.5)) - 0.07)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - almofada 2 - baguete esquerdo (fundo)",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.11))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.0145))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.0145))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.11))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.007))"
+              }
+            ],
+            "offset": "(1.02)",
+            "depth": "((-((1.02))) + 1.5)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - almofada 2 - baguete direito (fundo)",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.0145))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12)) - 0.11))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.0145))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12)) - 0.11))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.007))"
+              }
+            ],
+            "offset": "(1.02)",
+            "depth": "((-((1.02))) + 1.5)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - almofada 2 - baguete inferior (fundo)",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.0145))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.0145))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.007))"
+              }
+            ],
+            "offset": "(1.02)",
+            "depth": "0.012"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - almofada 2 - baguete superior (fundo)",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.0145))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.0145))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.007))"
+              }
+            ],
+            "offset": "(1.488)",
+            "depth": "0.012"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - almofada 3",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) - 0.008))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) + 0.008))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) + 0.008))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) - 0.008))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.007))"
+              }
+            ],
+            "offset": "(((1.59)) - 0.008)",
+            "depth": "(((((((Altura + 0.06)) - 0.12)) + (-((1.59))))) + 0.016)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - almofada 3 - relevo (frente)",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.035))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.035))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.035))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.013))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.035))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.013))"
+              }
+            ],
+            "offset": "(((1.59)) + 0.035)",
+            "depth": "(((((((Altura + 0.06)) - 0.12)) + (-((1.59))))) - 0.07)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - almofada 3 - baguete esquerdo (frente)",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.11))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.0145))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.11))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.0145))"
+              }
+            ],
+            "offset": "(1.59)",
+            "depth": "(((((Altura + 0.06)) - 0.12)) + (-((1.59))))"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - almofada 3 - baguete direito (frente)",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12)) - 0.11))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12)) - 0.11))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.0145))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.0145))"
+              }
+            ],
+            "offset": "(1.59)",
+            "depth": "(((((Altura + 0.06)) - 0.12)) + (-((1.59))))"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - almofada 3 - baguete inferior (frente)",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.0145))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.0145))"
+              }
+            ],
+            "offset": "(1.59)",
+            "depth": "0.012"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - almofada 3 - baguete superior (frente)",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.0145))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) + 0.0145))"
+              }
+            ],
+            "offset": "(((((Altura + 0.06)) - 0.12)) - 0.012)",
+            "depth": "0.012"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - almofada 3 - relevo (fundo)",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.035))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.013))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.035))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.013))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.035))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.035))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.007))"
+              }
+            ],
+            "offset": "(((1.59)) + 0.035)",
+            "depth": "(((((((Altura + 0.06)) - 0.12)) + (-((1.59))))) - 0.07)"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - almofada 3 - baguete esquerdo (fundo)",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.11))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.0145))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.0145))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.11))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.007))"
+              }
+            ],
+            "offset": "(1.59)",
+            "depth": "(((((Altura + 0.06)) - 0.12)) + (-((1.59))))"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - almofada 3 - baguete direito (fundo)",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.0145))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12)) - 0.11))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.0145))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12)) - 0.11))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.007))"
+              }
+            ],
+            "offset": "(1.59)",
+            "depth": "(((((Altura + 0.06)) - 0.12)) + (-((1.59))))"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - almofada 3 - baguete inferior (fundo)",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.0145))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.0145))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.007))"
+              }
+            ],
+            "offset": "(1.59)",
+            "depth": "0.012"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Folha - almofada 3 - baguete superior (fundo)",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.0145))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.0145))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((((Largura + 0.12)) - 0.11)) - 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.007))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((0.11)) + 0.012))",
+                "v": "0 + (((((((WallThickness/2 + 0.022)) + ((WallThickness/2 + 0.057)))/2)) - 0.007))"
+              }
+            ],
+            "offset": "(((((Altura + 0.06)) - 0.12)) - 0.012)",
+            "depth": "0.012"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Carrinho 1 - chapa",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.085))",
+                "v": "0 + ((WallThickness/2 + 0.025))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.155))",
+                "v": "0 + ((WallThickness/2 + 0.025))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.155))",
+                "v": "0 + ((WallThickness/2 + 0.054))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.085))",
+                "v": "0 + ((WallThickness/2 + 0.054))"
+              }
+            ],
+            "offset": "(Altura + 0.06)",
+            "depth": "0.004"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Carrinho 1 - parafuso da chapa 1",
+        "shape": {
+          "Cylinder": {
+            "x": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.094))",
+            "y": "0 + ((WallThickness/2 + 0.0395))",
+            "z": "(Altura + 0.06) + 0.004",
+            "radius": "0.0035",
+            "height": "0.0015"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Carrinho 1 - parafuso da chapa 2",
+        "shape": {
+          "Cylinder": {
+            "x": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.146))",
+            "y": "0 + ((WallThickness/2 + 0.0395))",
+            "z": "(Altura + 0.06) + 0.004",
+            "radius": "0.0035",
+            "height": "0.0015"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Carrinho 1 - porca de regulagem",
+        "shape": {
+          "Cylinder": {
+            "x": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + 0.12",
+            "y": "0 + ((WallThickness/2 + 0.0395))",
+            "z": "(Altura + 0.06) + 0.004",
+            "radius": "0.0075",
+            "height": "0.007"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Carrinho 1 - parafuso de suspensão",
+        "shape": {
+          "Cylinder": {
+            "x": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + 0.12",
+            "y": "0 + ((WallThickness/2 + 0.0395))",
+            "z": "(Altura + 0.06) + 0.011",
+            "radius": "0.004",
+            "height": "0.019"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Carrinho 1 - corpo",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.092))",
+                "v": "0 + ((WallThickness/2 + 0.031))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.148))",
+                "v": "0 + ((WallThickness/2 + 0.031))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.148))",
+                "v": "0 + ((WallThickness/2 + 0.048))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.092))",
+                "v": "0 + ((WallThickness/2 + 0.048))"
+              }
+            ],
+            "offset": "Altura + 0.086",
+            "depth": "0.013"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Carrinho 1 - eixo 1",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.102))",
+                "v": "(WallThickness/2 + 0.024)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.102))) + 0.0025",
+                "v": "(WallThickness/2 + 0.024)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.102))) + 0.0025",
+                "v": "((WallThickness/2 + 0.024)) + 0.031"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.102))",
+                "v": "((WallThickness/2 + 0.024)) + 0.031"
+              }
+            ],
+            "offset": "(Altura + 0.0925)",
+            "axis": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.102))",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Carrinho 1 - roda 1",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.102))",
+                "v": "(WallThickness/2 + 0.024)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.102))) + 0.0095",
+                "v": "(WallThickness/2 + 0.024)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.102))) + 0.0095",
+                "v": "((WallThickness/2 + 0.024)) + 0.0055"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.102))",
+                "v": "((WallThickness/2 + 0.024)) + 0.0055"
+              }
+            ],
+            "offset": "(Altura + 0.0925)",
+            "axis": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.102))",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Carrinho 1 - roda 2",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.102))",
+                "v": "(WallThickness/2 + 0.0495)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.102))) + 0.0095",
+                "v": "(WallThickness/2 + 0.0495)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.102))) + 0.0095",
+                "v": "((WallThickness/2 + 0.0495)) + 0.0055"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.102))",
+                "v": "((WallThickness/2 + 0.0495)) + 0.0055"
+              }
+            ],
+            "offset": "(Altura + 0.0925)",
+            "axis": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.102))",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Carrinho 1 - eixo 2",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.138))",
+                "v": "(WallThickness/2 + 0.024)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.138))) + 0.0025",
+                "v": "(WallThickness/2 + 0.024)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.138))) + 0.0025",
+                "v": "((WallThickness/2 + 0.024)) + 0.031"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.138))",
+                "v": "((WallThickness/2 + 0.024)) + 0.031"
+              }
+            ],
+            "offset": "(Altura + 0.0925)",
+            "axis": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.138))",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Carrinho 1 - roda 3",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.138))",
+                "v": "(WallThickness/2 + 0.024)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.138))) + 0.0095",
+                "v": "(WallThickness/2 + 0.024)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.138))) + 0.0095",
+                "v": "((WallThickness/2 + 0.024)) + 0.0055"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.138))",
+                "v": "((WallThickness/2 + 0.024)) + 0.0055"
+              }
+            ],
+            "offset": "(Altura + 0.0925)",
+            "axis": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.138))",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Carrinho 1 - roda 4",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.138))",
+                "v": "(WallThickness/2 + 0.0495)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.138))) + 0.0095",
+                "v": "(WallThickness/2 + 0.0495)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.138))) + 0.0095",
+                "v": "((WallThickness/2 + 0.0495)) + 0.0055"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.138))",
+                "v": "((WallThickness/2 + 0.0495)) + 0.0055"
+              }
+            ],
+            "offset": "(Altura + 0.0925)",
+            "axis": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.138))",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Carrinho 2 - chapa",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) - 0.035))",
+                "v": "0 + ((WallThickness/2 + 0.025))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) + 0.035))",
+                "v": "0 + ((WallThickness/2 + 0.025))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) + 0.035))",
+                "v": "0 + ((WallThickness/2 + 0.054))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) - 0.035))",
+                "v": "0 + ((WallThickness/2 + 0.054))"
+              }
+            ],
+            "offset": "(Altura + 0.06)",
+            "depth": "0.004"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Carrinho 2 - parafuso da chapa 1",
+        "shape": {
+          "Cylinder": {
+            "x": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) - 0.026))",
+            "y": "0 + ((WallThickness/2 + 0.0395))",
+            "z": "(Altura + 0.06) + 0.004",
+            "radius": "0.0035",
+            "height": "0.0015"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Carrinho 2 - parafuso da chapa 2",
+        "shape": {
+          "Cylinder": {
+            "x": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) + 0.026))",
+            "y": "0 + ((WallThickness/2 + 0.0395))",
+            "z": "(Altura + 0.06) + 0.004",
+            "radius": "0.0035",
+            "height": "0.0015"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Carrinho 2 - porca de regulagem",
+        "shape": {
+          "Cylinder": {
+            "x": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((Largura + 0.12) - 0.12)",
+            "y": "0 + ((WallThickness/2 + 0.0395))",
+            "z": "(Altura + 0.06) + 0.004",
+            "radius": "0.0075",
+            "height": "0.007"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Carrinho 2 - parafuso de suspensão",
+        "shape": {
+          "Cylinder": {
+            "x": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((Largura + 0.12) - 0.12)",
+            "y": "0 + ((WallThickness/2 + 0.0395))",
+            "z": "(Altura + 0.06) + 0.011",
+            "radius": "0.004",
+            "height": "0.019"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Carrinho 2 - corpo",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) - 0.028))",
+                "v": "0 + ((WallThickness/2 + 0.031))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) + 0.028))",
+                "v": "0 + ((WallThickness/2 + 0.031))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) + 0.028))",
+                "v": "0 + ((WallThickness/2 + 0.048))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) - 0.028))",
+                "v": "0 + ((WallThickness/2 + 0.048))"
+              }
+            ],
+            "offset": "Altura + 0.086",
+            "depth": "0.013"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Carrinho 2 - eixo 1",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) - 0.018))",
+                "v": "(WallThickness/2 + 0.024)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) - 0.018))) + 0.0025",
+                "v": "(WallThickness/2 + 0.024)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) - 0.018))) + 0.0025",
+                "v": "((WallThickness/2 + 0.024)) + 0.031"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) - 0.018))",
+                "v": "((WallThickness/2 + 0.024)) + 0.031"
+              }
+            ],
+            "offset": "(Altura + 0.0925)",
+            "axis": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) - 0.018))",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Carrinho 2 - roda 1",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) - 0.018))",
+                "v": "(WallThickness/2 + 0.024)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) - 0.018))) + 0.0095",
+                "v": "(WallThickness/2 + 0.024)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) - 0.018))) + 0.0095",
+                "v": "((WallThickness/2 + 0.024)) + 0.0055"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) - 0.018))",
+                "v": "((WallThickness/2 + 0.024)) + 0.0055"
+              }
+            ],
+            "offset": "(Altura + 0.0925)",
+            "axis": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) - 0.018))",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Carrinho 2 - roda 2",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) - 0.018))",
+                "v": "(WallThickness/2 + 0.0495)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) - 0.018))) + 0.0095",
+                "v": "(WallThickness/2 + 0.0495)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) - 0.018))) + 0.0095",
+                "v": "((WallThickness/2 + 0.0495)) + 0.0055"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) - 0.018))",
+                "v": "((WallThickness/2 + 0.0495)) + 0.0055"
+              }
+            ],
+            "offset": "(Altura + 0.0925)",
+            "axis": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) - 0.018))",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Carrinho 2 - eixo 2",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) + 0.018))",
+                "v": "(WallThickness/2 + 0.024)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) + 0.018))) + 0.0025",
+                "v": "(WallThickness/2 + 0.024)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) + 0.018))) + 0.0025",
+                "v": "((WallThickness/2 + 0.024)) + 0.031"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) + 0.018))",
+                "v": "((WallThickness/2 + 0.024)) + 0.031"
+              }
+            ],
+            "offset": "(Altura + 0.0925)",
+            "axis": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) + 0.018))",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Carrinho 2 - roda 3",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) + 0.018))",
+                "v": "(WallThickness/2 + 0.024)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) + 0.018))) + 0.0095",
+                "v": "(WallThickness/2 + 0.024)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) + 0.018))) + 0.0095",
+                "v": "((WallThickness/2 + 0.024)) + 0.0055"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) + 0.018))",
+                "v": "((WallThickness/2 + 0.024)) + 0.0055"
+              }
+            ],
+            "offset": "(Altura + 0.0925)",
+            "axis": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) + 0.018))",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Carrinho 2 - roda 4",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) + 0.018))",
+                "v": "(WallThickness/2 + 0.0495)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) + 0.018))) + 0.0095",
+                "v": "(WallThickness/2 + 0.0495)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) + 0.018))) + 0.0095",
+                "v": "((WallThickness/2 + 0.0495)) + 0.0055"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) + 0.018))",
+                "v": "((WallThickness/2 + 0.0495)) + 0.0055"
+              }
+            ],
+            "offset": "(Altura + 0.0925)",
+            "axis": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((((Largura + 0.12) - 0.12) + 0.018))",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trilho superior",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(WallThickness/2 + 0.0215)",
+                "v": "(Altura + 0.08)"
+              },
+              {
+                "u": "(WallThickness/2 + 0.031)",
+                "v": "(Altura + 0.08)"
+              },
+              {
+                "u": "(WallThickness/2 + 0.031)",
+                "v": "(Altura + 0.083)"
+              },
+              {
+                "u": "(WallThickness/2 + 0.0235)",
+                "v": "(Altura + 0.083)"
+              },
+              {
+                "u": "(WallThickness/2 + 0.0235)",
+                "v": "(Altura + 0.118)"
+              },
+              {
+                "u": "(WallThickness/2 + 0.0555)",
+                "v": "(Altura + 0.118)"
+              },
+              {
+                "u": "(WallThickness/2 + 0.0555)",
+                "v": "(Altura + 0.083)"
+              },
+              {
+                "u": "(WallThickness/2 + 0.048)",
+                "v": "(Altura + 0.083)"
+              },
+              {
+                "u": "(WallThickness/2 + 0.048)",
+                "v": "(Altura + 0.08)"
+              },
+              {
+                "u": "(WallThickness/2 + 0.0575)",
+                "v": "(Altura + 0.08)"
+              },
+              {
+                "u": "(WallThickness/2 + 0.0575)",
+                "v": "(Altura + 0.12)"
+              },
+              {
+                "u": "(WallThickness/2 + 0.0215)",
+                "v": "(Altura + 0.12)"
+              }
+            ],
+            "offset": "(-Largura/2 - 0.1)",
+            "depth": "((1.5*Largura + 0.1) - (-Largura/2 - 0.1))"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Testeira",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 - 0.1)",
+            "y": "(WallThickness/2 + 0)",
+            "z": "Altura + 0.07",
+            "width": "((1.5*Largura + 0.1) - (-Largura/2 - 0.1))",
+            "depth": "0.0215",
+            "height": "0.075"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa do trilho esquerda",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 - 0.1) - 0.003",
+            "y": "(WallThickness/2 + 0.0215)",
+            "z": "(Altura + 0.08)",
+            "width": "0.003",
+            "depth": "0.036",
+            "height": "0.04"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa do trilho direita",
+        "shape": {
+          "Box": {
+            "x": "(1.5*Largura + 0.1)",
+            "y": "(WallThickness/2 + 0.0215)",
+            "z": "(Altura + 0.08)",
+            "width": "0.003",
+            "depth": "0.036",
+            "height": "0.04"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Batente de fim de curso 1",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.007)",
+            "y": "(WallThickness/2 + 0.024)",
+            "z": "(Altura + 0.083)",
+            "width": "0.025",
+            "depth": "0.031",
+            "height": "0.03"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Batente de fim de curso 2",
+        "shape": {
+          "Box": {
+            "x": "(1.5*Largura - 0.032)",
+            "y": "(WallThickness/2 + 0.024)",
+            "z": "(Altura + 0.083)",
+            "width": "0.025",
+            "depth": "0.031",
+            "height": "0.03"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Bandô simplificado",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2 - 0.1) - 0.018)",
+            "y": "(WallThickness/2 + 0)",
+            "z": "Altura + 0.045",
+            "width": "(((1.5*Largura + 0.1) + 0.018) - ((-Largura/2 - 0.1) - 0.018))",
+            "depth": "0.08",
+            "height": "0.118"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Bandô - frente",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(WallThickness/2 + 0.062)",
+                "v": "Altura + 0.045"
+              },
+              {
+                "u": "(WallThickness/2 + 0.075)",
+                "v": "Altura + 0.045",
+                "radius": "0.005"
+              },
+              {
+                "u": "(WallThickness/2 + 0.08)",
+                "v": "Altura + 0.05"
+              },
+              {
+                "u": "(WallThickness/2 + 0.08)",
+                "v": "Altura + 0.145"
+              },
+              {
+                "u": "(WallThickness/2 + 0.062)",
+                "v": "Altura + 0.145"
+              }
+            ],
+            "offset": "((-Largura/2 - 0.1) - 0.018)",
+            "depth": "(((1.5*Largura + 0.1) + 0.018) - ((-Largura/2 - 0.1) - 0.018))"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Bandô - tampa",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(WallThickness/2 + 0)",
+                "v": "Altura + 0.145"
+              },
+              {
+                "u": "(WallThickness/2 + 0.08)",
+                "v": "Altura + 0.145"
+              },
+              {
+                "u": "(WallThickness/2 + 0.08)",
+                "v": "Altura + 0.158",
+                "radius": "0.005"
+              },
+              {
+                "u": "(WallThickness/2 + 0.075)",
+                "v": "Altura + 0.163"
+              },
+              {
+                "u": "(WallThickness/2 + 0)",
+                "v": "Altura + 0.163"
+              }
+            ],
+            "offset": "((-Largura/2 - 0.1) - 0.018)",
+            "depth": "(((1.5*Largura + 0.1) + 0.018) - ((-Largura/2 - 0.1) - 0.018))"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Bandô - cabeceira esquerda",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2 - 0.1) - 0.018)",
+            "y": "(WallThickness/2 + 0)",
+            "z": "Altura + 0.045",
+            "width": "0.018",
+            "depth": "0.062",
+            "height": "0.1"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Bandô - cabeceira direita",
+        "shape": {
+          "Box": {
+            "x": "(1.5*Largura + 0.1)",
+            "y": "(WallThickness/2 + 0)",
+            "z": "Altura + 0.045",
+            "width": "0.018",
+            "depth": "0.062",
+            "height": "0.1"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Guia de piso - base",
+        "shape": {
+          "Box": {
+            "x": "(Largura/2 + 0.02) - 0.025",
+            "y": "(WallThickness/2 + 0.0185)",
+            "z": "0",
+            "width": "0.05",
+            "depth": "0.051",
+            "height": "0.003"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Guia de piso - aba traseira",
+        "shape": {
+          "Box": {
+            "x": "(Largura/2 + 0.02) - 0.025",
+            "y": "(WallThickness/2 + 0.0185)",
+            "z": "0.003",
+            "width": "0.05",
+            "depth": "0.002",
+            "height": "0.03"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Guia de piso - aba frontal",
+        "shape": {
+          "Box": {
+            "x": "(Largura/2 + 0.02) - 0.025",
+            "y": "(WallThickness/2 + 0.0585)",
+            "z": "0.003",
+            "width": "0.05",
+            "depth": "0.002",
+            "height": "0.03"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Guia de piso - parafuso 1",
+        "shape": {
+          "Cylinder": {
+            "x": "(Largura/2 + 0.02) + -0.016",
+            "y": "(WallThickness/2 + 0.0645)",
+            "z": "0.003",
+            "radius": "0.0035",
+            "height": "0.0012"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Guia de piso - parafuso 2",
+        "shape": {
+          "Cylinder": {
+            "x": "(Largura/2 + 0.02) + 0.016",
+            "y": "(WallThickness/2 + 0.0645)",
+            "z": "0.003",
+            "radius": "0.0035",
+            "height": "0.0012"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Puxador (frente) - barra",
+        "shape": {
+          "Cylinder": {
+            "x": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + 0.1",
+            "y": "(WallThickness/2 + 0.107)",
+            "z": "1.05 - 0.225",
+            "radius": "0.0125",
+            "height": "0.45"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Puxador (frente) - haste 1",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + 0.1",
+                "v": "(WallThickness/2 + 0.057)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + 0.1) + 0.008",
+                "v": "(WallThickness/2 + 0.057)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + 0.1) + 0.008",
+                "v": "((WallThickness/2 + 0.057)) + 0.045"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + 0.1",
+                "v": "((WallThickness/2 + 0.057)) + 0.045"
+              }
+            ],
+            "offset": "1.05 + -0.165",
+            "axis": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + 0.1",
+            "angle": "360"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Puxador (frente) - bucha 1",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + 0.1",
+                "v": "(WallThickness/2 + 0.057)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + 0.1) + 0.013",
+                "v": "(WallThickness/2 + 0.057)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + 0.1) + 0.013",
+                "v": "((WallThickness/2 + 0.057)) + 0.003"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + 0.1",
+                "v": "((WallThickness/2 + 0.057)) + 0.003"
+              }
+            ],
+            "offset": "1.05 + -0.165",
+            "axis": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + 0.1",
+            "angle": "360"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Puxador (frente) - haste 2",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + 0.1",
+                "v": "(WallThickness/2 + 0.057)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + 0.1) + 0.008",
+                "v": "(WallThickness/2 + 0.057)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + 0.1) + 0.008",
+                "v": "((WallThickness/2 + 0.057)) + 0.045"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + 0.1",
+                "v": "((WallThickness/2 + 0.057)) + 0.045"
+              }
+            ],
+            "offset": "1.05 + 0.165",
+            "axis": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + 0.1",
+            "angle": "360"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Puxador (frente) - bucha 2",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + 0.1",
+                "v": "(WallThickness/2 + 0.057)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + 0.1) + 0.013",
+                "v": "(WallThickness/2 + 0.057)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + 0.1) + 0.013",
+                "v": "((WallThickness/2 + 0.057)) + 0.003"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + 0.1",
+                "v": "((WallThickness/2 + 0.057)) + 0.003"
+              }
+            ],
+            "offset": "1.05 + 0.165",
+            "axis": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + 0.1",
+            "angle": "360"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Puxador concha (fundo) - aro",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.0775))) + 0.02",
+                "v": "1.05 - 0.08"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.0775)) + 0.045) - 0.02",
+                "v": "1.05 - 0.08",
+                "radius": "0.02"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.0775)) + 0.045",
+                "v": "(1.05 - 0.08) + 0.02"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.0775)) + 0.045",
+                "v": "(1.05 + 0.08) - 0.02",
+                "radius": "0.02"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.0775)) + 0.045) - 0.02",
+                "v": "1.05 + 0.08"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.0775))) + 0.02",
+                "v": "1.05 + 0.08",
+                "radius": "0.02"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.0775))",
+                "v": "(1.05 + 0.08) - 0.02"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.0775))",
+                "v": "(1.05 - 0.08) + 0.02",
+                "radius": "0.02"
+              }
+            ],
+            "offset": "(WallThickness/2 + 0.0205)",
+            "depth": "0.0015"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Puxador concha (fundo) - concha",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.0775)) + 0.006) + 0.015",
+                "v": "1.05 - 0.08 + 0.006"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.0775)) + 0.039) - 0.015",
+                "v": "1.05 - 0.08 + 0.006",
+                "radius": "0.015"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.0775)) + 0.039",
+                "v": "(1.05 - 0.08 + 0.006) + 0.015"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.0775)) + 0.039",
+                "v": "(1.05 + 0.08 - 0.006) - 0.015",
+                "radius": "0.015"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.0775)) + 0.039) - 0.015",
+                "v": "1.05 + 0.08 - 0.006"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.0775)) + 0.006) + 0.015",
+                "v": "1.05 + 0.08 - 0.006",
+                "radius": "0.015"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.0775)) + 0.006",
+                "v": "(1.05 + 0.08 - 0.006) - 0.015"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.0775)) + 0.006",
+                "v": "(1.05 - 0.08 + 0.006) + 0.015",
+                "radius": "0.015"
+              }
+            ],
+            "offset": "(WallThickness/2 + 0.0202)",
+            "depth": "0.0003"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Fechadura - testa",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((-0.0006))",
+                "v": "0 + ((WallThickness/2 + 0.0305))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0))",
+                "v": "0 + ((WallThickness/2 + 0.0305))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0))",
+                "v": "0 + ((WallThickness/2 + 0.0485))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((-0.0006))",
+                "v": "0 + ((WallThickness/2 + 0.0485))"
+              }
+            ],
+            "offset": "1.0 - 0.1",
+            "depth": "0.2"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Fechadura - bico",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((-0.0008))",
+                "v": "0 + ((WallThickness/2 + 0.0355))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((-0.0006))",
+                "v": "0 + ((WallThickness/2 + 0.0355))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((-0.0006))",
+                "v": "0 + ((WallThickness/2 + 0.0435))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((-0.0008))",
+                "v": "0 + ((WallThickness/2 + 0.0435))"
+              }
+            ],
+            "offset": "1.0 - 0.02",
+            "depth": "0.04"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Fechadura - parafuso da testa 1",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((-0.0008))",
+                "v": "0 + ((WallThickness/2 + 0.0365))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((-0.0006))",
+                "v": "0 + ((WallThickness/2 + 0.0365))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((-0.0006))",
+                "v": "0 + ((WallThickness/2 + 0.0425))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((-0.0008))",
+                "v": "0 + ((WallThickness/2 + 0.0425))"
+              }
+            ],
+            "offset": "1.0 + -0.09",
+            "depth": "0.008"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Fechadura - parafuso da testa 2",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((-0.0008))",
+                "v": "0 + ((WallThickness/2 + 0.0365))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((-0.0006))",
+                "v": "0 + ((WallThickness/2 + 0.0365))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((-0.0006))",
+                "v": "0 + ((WallThickness/2 + 0.0425))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((-0.0008))",
+                "v": "0 + ((WallThickness/2 + 0.0425))"
+              }
+            ],
+            "offset": "1.0 + 0.082",
+            "depth": "0.008"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Fechadura - espelho (frente)",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.04))",
+                "v": "(WallThickness/2 + 0.057)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.04))) + 0.02",
+                "v": "(WallThickness/2 + 0.057)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.04))) + 0.02",
+                "v": "((WallThickness/2 + 0.057)) + 0.004"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.04))",
+                "v": "((WallThickness/2 + 0.057)) + 0.004"
+              }
+            ],
+            "offset": "1",
+            "axis": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.04))",
+            "angle": "360"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Fechadura - cilindro (frente)",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.04))",
+                "v": "(WallThickness/2 + 0.061)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.04))) + 0.0085",
+                "v": "(WallThickness/2 + 0.061)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.04))) + 0.0085",
+                "v": "((WallThickness/2 + 0.061)) + 0.002"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.04))",
+                "v": "((WallThickness/2 + 0.061)) + 0.002"
+              }
+            ],
+            "offset": "1",
+            "axis": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.04))",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Fechadura - fenda da chave (frente)",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.04)) - 0.001",
+            "y": "(WallThickness/2 + 0.063)",
+            "z": "1.0 - 0.006",
+            "width": "0.002",
+            "depth": "0.0004",
+            "height": "0.011"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Fechadura - espelho (fundo)",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.04))",
+                "v": "(WallThickness/2 + 0.0205)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.04))) + 0.02",
+                "v": "(WallThickness/2 + 0.0205)"
+              },
+              {
+                "u": "((((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.04))) + 0.02",
+                "v": "((WallThickness/2 + 0.0205)) + 0.0015"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.04))",
+                "v": "((WallThickness/2 + 0.0205)) + 0.0015"
+              }
+            ],
+            "offset": "1",
+            "axis": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.04))",
+            "angle": "360"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Fechadura - tranqueta embutida (fundo)",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((0.04)) - 0.003",
+            "y": "(WallThickness/2 + 0.0201)",
+            "z": "1.0 - 0.012",
+            "width": "0.006",
+            "depth": "0.0004",
+            "height": "0.024"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Batedor de encosto",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 - 0.062) - 0.03",
+            "y": "(WallThickness/2 + 0)",
+            "z": "0",
+            "width": "0.03",
+            "depth": "0.057",
+            "height": "Altura + 0.06"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Amortecedor do batedor 1",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 - 0.062)",
+            "y": "(WallThickness/2 + 0.0315)",
+            "z": "0.3",
+            "width": "0.0015",
+            "depth": "0.016",
+            "height": "0.04"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Amortecedor do batedor 2",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 - 0.062)",
+            "y": "(WallThickness/2 + 0.0315)",
+            "z": "Altura - 0.3",
+            "width": "0.0015",
+            "depth": "0.016",
+            "height": "0.04"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Contratesta",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 - 0.062)",
+            "y": "(WallThickness/2 + 0.0305)",
+            "z": "0.9",
+            "width": "0.0006",
+            "depth": "0.018",
+            "height": "0.2"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Furo do bico",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 - 0.062) + 0.0006",
+            "y": "(WallThickness/2 + 0.0345)",
+            "z": "0.975",
+            "width": "0.0002",
+            "depth": "0.01",
+            "height": "0.05"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Símbolo da folha",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura))",
+                "v": "0 + ((WallThickness/2 + 0.022))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((Largura + 0.12))",
+                "v": "0 + ((WallThickness/2 + 0.022))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura)) + ((Largura + 0.12))",
+                "v": "0 + ((WallThickness/2 + 0.057))"
+              },
+              {
+                "u": "(((-Largura/2 - 0.06) + min(max(Abertura, 0), 1)*Largura))",
+                "v": "0 + ((WallThickness/2 + 0.057))"
+              }
+            ],
+            "offset": "0",
+            "depth": "0.001"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        },
+        "plan_only": true
+      },
+      {
+        "name": "Sentido de abertura da folha",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2 - 0.06)) + (((((Largura + 0.12))/2) - 0.15))",
+                "v": "0 + ((WallThickness/2 + 0.113))"
+              },
+              {
+                "u": "((-Largura/2 - 0.06)) + (((((Largura + 0.12))/2) + 0.09))",
+                "v": "0 + ((WallThickness/2 + 0.113))"
+              },
+              {
+                "u": "((-Largura/2 - 0.06)) + (((((Largura + 0.12))/2) + 0.09))",
+                "v": "0 + ((WallThickness/2 + 0.097))"
+              },
+              {
+                "u": "((-Largura/2 - 0.06)) + (((((Largura + 0.12))/2) + 0.15))",
+                "v": "0 + ((WallThickness/2 + 0.117))"
+              },
+              {
+                "u": "((-Largura/2 - 0.06)) + (((((Largura + 0.12))/2) + 0.09))",
+                "v": "0 + ((WallThickness/2 + 0.137))"
+              },
+              {
+                "u": "((-Largura/2 - 0.06)) + (((((Largura + 0.12))/2) + 0.09))",
+                "v": "0 + ((WallThickness/2 + 0.121))"
+              },
+              {
+                "u": "((-Largura/2 - 0.06)) + (((((Largura + 0.12))/2) - 0.15))",
+                "v": "0 + ((WallThickness/2 + 0.121))"
+              }
+            ],
+            "offset": "0",
+            "depth": "0.001"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        },
+        "plan_only": true
       }
     ],
     "opening": {
@@ -148,28 +3878,103 @@
   ],
   "materials": [
     {
-      "name": "Madeira",
+      "name": "Aço galvanizado",
       "color": [
-        150,
-        105,
-        70
-      ]
+        160,
+        165,
+        170
+      ],
+      "class": "Metal",
+      "finish": "Matte",
+      "transparency": 0
     },
     {
-      "name": "Alumínio",
+      "name": "Cromado",
       "color": [
-        200,
-        200,
-        205
-      ]
+        226,
+        229,
+        233
+      ],
+      "class": "Metal",
+      "finish": "Polished",
+      "transparency": 0
     },
     {
-      "name": "Metal cromado",
+      "name": "Plástico cinza claro",
       "color": [
-        205,
-        205,
+        196,
+        198,
+        200
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Alumínio anodizado",
+      "color": [
+        206,
+        208,
         210
-      ]
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico preto",
+      "color": [
+        34,
+        34,
+        37
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Borracha",
+      "color": [
+        30,
+        30,
+        30
+      ],
+      "class": "Plastic",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Inox escovado",
+      "color": [
+        198,
+        200,
+        203
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Aço pintado preto",
+      "color": [
+        30,
+        30,
+        32
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Latão",
+      "color": [
+        192,
+        160,
+        84
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
     }
   ]
 }
