@@ -47,7 +47,7 @@
         "name": "Marco simplificado direito",
         "shape": {
           "Box": {
-            "x": "(Largura/2) - 0.04",
+            "x": "(Largura/2 - 0.04)",
             "y": "-0.04",
             "z": "0",
             "width": "0.04",
@@ -67,10 +67,10 @@
         "name": "Marco simplificado inferior",
         "shape": {
           "Box": {
-            "x": "(-Largura/2) + 0.04",
+            "x": "(-Largura/2 + 0.04)",
             "y": "-0.04",
             "z": "0",
-            "width": "Largura - 0.08",
+            "width": "(Largura - 0.08)",
             "depth": "0.08",
             "height": "0.04"
           }
@@ -87,10 +87,10 @@
         "name": "Marco simplificado superior",
         "shape": {
           "Box": {
-            "x": "(-Largura/2) + 0.04",
+            "x": "(-Largura/2 + 0.04)",
             "y": "-0.04",
-            "z": "Altura - 0.04",
-            "width": "Largura - 0.08",
+            "z": "(Altura - 0.04)",
+            "width": "(Largura - 0.08)",
             "depth": "0.08",
             "height": "0.04"
           }
