@@ -77,35 +77,54 @@
       {
         "name": "Tampo",
         "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0",
+            "z": "Altura - 0.03",
+            "radius": "Diametro/2 - 0.02",
+            "height": "0.03"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Borda do tampo",
+        "shape": {
           "Revolution": {
             "plane": "Front",
             "points": [
               {
-                "u": "0",
+                "u": "Diametro/2 - 0.02",
                 "v": "Altura - 0.03"
               },
               {
-                "u": "0 + (Diametro/2 - 0.016)",
+                "u": "Diametro/2 - 0.016",
                 "v": "Altura - 0.03"
               },
               {
-                "u": "0 + (Diametro/2 - 0.003)",
+                "u": "Diametro/2 - 0.003",
                 "v": "Altura - 0.017"
               },
               {
-                "u": "0 + (Diametro/2)",
+                "u": "Diametro/2",
                 "v": "Altura - 0.01"
               },
               {
-                "u": "0 + (Diametro/2 - 0.0015)",
+                "u": "Diametro/2 - 0.0015",
                 "v": "Altura - 0.003"
               },
               {
-                "u": "0 + (Diametro/2 - 0.006)",
+                "u": "Diametro/2 - 0.006",
                 "v": "Altura"
               },
               {
-                "u": "0",
+                "u": "Diametro/2 - 0.02",
                 "v": "Altura"
               }
             ],

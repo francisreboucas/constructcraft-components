@@ -242,10 +242,10 @@
         "shape": {
           "Box": {
             "x": "(-Largura/2 + 0.022)",
-            "y": "-0.94*Profundidade",
-            "z": "0.65*Altura",
+            "y": "-Profundidade + 0.0005",
+            "z": "0.5*Altura",
             "width": "(Largura - 0.044)",
-            "depth": "0.94*Profundidade + -0.004",
+            "depth": "Profundidade - 0.0005 + -0.004",
             "height": "0.1*Altura"
           }
         },
