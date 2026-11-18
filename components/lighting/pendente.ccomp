@@ -1,6 +1,6 @@
 (
   format_version: 1,
-  generator: "ConstructCAD 0.9.0",
+  generator: "ConstructCraft 0.12.0",
   component: "Luminária pendente",
   def: (
     kind: Lighting,
@@ -20,16 +20,419 @@
     ],
     items: [
       (
+        name: "Canopla",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "0",
+              v: "0",
+            ),
+            (
+              u: "0.06",
+              v: "0",
+            ),
+            (
+              u: "0.06",
+              v: "-0.022",
+              radius: "-0.008",
+            ),
+            (
+              u: "0.052",
+              v: "-0.03",
+            ),
+            (
+              u: "0",
+              v: "-0.03",
+            ),
+          ],
+          offset: "0",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "Aço pintado preto",
+        in_plan: false,
+      ),
+      (
+        name: "Canopla - parafuso lateral 1",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "0 - 0.0022",
+              v: "-0.012",
+              radius: "0.0022",
+            ),
+            (
+              u: "0 + 0.0022",
+              v: "-0.012",
+              radius: "0.0022",
+            ),
+          ],
+          offset: "-0.0618",
+          depth: "0.002",
+        ),
+        material: "Latão",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Canopla - parafuso lateral 2",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "0 - 0.0022",
+              v: "-0.012",
+              radius: "0.0022",
+            ),
+            (
+              u: "0 + 0.0022",
+              v: "-0.012",
+              radius: "0.0022",
+            ),
+          ],
+          offset: "0.0598",
+          depth: "0.002",
+        ),
+        material: "Latão",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Prensa-cabo da canopla",
+        shape: Cylinder(
+          x: "0",
+          y: "0",
+          z: "-0.042",
+          radius: "0.007",
+          height: "0.012",
+        ),
+        material: "Aço pintado preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Prensa-cabo da canopla - porca",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "0 + 0.007",
+              v: "-0.034",
+            ),
+            (
+              u: "0 + 0.0085",
+              v: "-0.034",
+            ),
+            (
+              u: "0 + 0.0085",
+              v: "-0.03",
+            ),
+            (
+              u: "0 + 0.007",
+              v: "-0.03",
+            ),
+          ],
+          offset: "0",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "Aço pintado preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
         name: "Cabo",
         shape: Cylinder(
           x: "0",
           y: "0",
-          z: "-Queda",
-          radius: "0.005",
-          height: "Queda",
+          z: "(-Queda + (0.55*Diametro)) + 0.032",
+          radius: "0.0032",
+          height: "-0.042 - (-Queda + (0.55*Diametro)) - 0.032",
         ),
-        material: "Aço",
+        material: "Plástico preto",
         in_plan: false,
+      ),
+      (
+        name: "Cúpula simplificada",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "0",
+              v: "(-Queda + (0.55*Diametro)) + 0.03",
+            ),
+            (
+              u: "0.03",
+              v: "(-Queda + (0.55*Diametro)) + 0.03",
+            ),
+            (
+              u: "0.03",
+              v: "(-Queda + (0.55*Diametro)) - 0.03",
+              radius: "-(0.5*Diametro)",
+            ),
+            (
+              u: "(Diametro/2)",
+              v: "(-Queda)",
+            ),
+            (
+              u: "0",
+              v: "(-Queda)",
+            ),
+          ],
+          offset: "0",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "Aço pintado preto",
+        in_plan: true,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
+      ),
+      (
+        name: "Soquete - tampa",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "0",
+              v: "(-Queda + (0.55*Diametro)) + 0.032",
+            ),
+            (
+              u: "0.006",
+              v: "(-Queda + (0.55*Diametro)) + 0.032",
+            ),
+            (
+              u: "0.016",
+              v: "(-Queda + (0.55*Diametro)) + 0.022",
+            ),
+            (
+              u: "0.017",
+              v: "(-Queda + (0.55*Diametro))",
+            ),
+            (
+              u: "0",
+              v: "(-Queda + (0.55*Diametro))",
+            ),
+          ],
+          offset: "0",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "Aço pintado preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Soquete - prensa-cabo",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "0 + 0.0032",
+              v: "(-Queda + (0.55*Diametro)) + 0.032",
+            ),
+            (
+              u: "0 + 0.0055",
+              v: "(-Queda + (0.55*Diametro)) + 0.032",
+            ),
+            (
+              u: "0 + 0.0055",
+              v: "(-Queda + (0.55*Diametro)) + 0.038",
+            ),
+            (
+              u: "0 + 0.0032",
+              v: "(-Queda + (0.55*Diametro)) + 0.038",
+            ),
+          ],
+          offset: "0",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "Aço pintado preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Soquete",
+        shape: Cylinder(
+          x: "0",
+          y: "0",
+          z: "((-Queda + (0.55*Diametro)) - 0.045)",
+          radius: "0.0205",
+          height: "(-Queda + (0.55*Diametro)) - ((-Queda + (0.55*Diametro)) - 0.045)",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Soquete - anel de fixação",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "0 + 0.0205",
+              v: "(-Queda + (0.55*Diametro)) - 0.008",
+            ),
+            (
+              u: "0 + 0.026",
+              v: "(-Queda + (0.55*Diametro)) - 0.008",
+            ),
+            (
+              u: "0 + 0.026",
+              v: "(-Queda + (0.55*Diametro)) - 0.003",
+            ),
+            (
+              u: "0 + 0.0205",
+              v: "(-Queda + (0.55*Diametro)) - 0.003",
+            ),
+          ],
+          offset: "0",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Soquete - nervura 1",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "0 + 0.0205",
+              v: "((-Queda + (0.55*Diametro)) - 0.045) + 0.006",
+            ),
+            (
+              u: "0 + 0.0215",
+              v: "((-Queda + (0.55*Diametro)) - 0.045) + 0.006",
+            ),
+            (
+              u: "0 + 0.0215",
+              v: "((-Queda + (0.55*Diametro)) - 0.045) + 0.0075",
+            ),
+            (
+              u: "0 + 0.0205",
+              v: "((-Queda + (0.55*Diametro)) - 0.045) + 0.0075",
+            ),
+          ],
+          offset: "0",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Soquete - nervura 2",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "0 + 0.0205",
+              v: "((-Queda + (0.55*Diametro)) - 0.045) + 0.014",
+            ),
+            (
+              u: "0 + 0.0215",
+              v: "((-Queda + (0.55*Diametro)) - 0.045) + 0.014",
+            ),
+            (
+              u: "0 + 0.0215",
+              v: "((-Queda + (0.55*Diametro)) - 0.045) + 0.0155",
+            ),
+            (
+              u: "0 + 0.0205",
+              v: "((-Queda + (0.55*Diametro)) - 0.045) + 0.0155",
+            ),
+          ],
+          offset: "0",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Soquete - nervura 3",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "0 + 0.0205",
+              v: "((-Queda + (0.55*Diametro)) - 0.045) + 0.022",
+            ),
+            (
+              u: "0 + 0.0215",
+              v: "((-Queda + (0.55*Diametro)) - 0.045) + 0.022",
+            ),
+            (
+              u: "0 + 0.0215",
+              v: "((-Queda + (0.55*Diametro)) - 0.045) + 0.0235",
+            ),
+            (
+              u: "0 + 0.0205",
+              v: "((-Queda + (0.55*Diametro)) - 0.045) + 0.0235",
+            ),
+          ],
+          offset: "0",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
       ),
       (
         name: "Cúpula",
@@ -37,40 +440,276 @@
           plane: Front,
           points: [
             (
-              u: "0",
-              v: "-Queda - 0.02",
+              u: "0.03",
+              v: "(-Queda + (0.55*Diametro))",
             ),
             (
-              u: "Diametro / 2",
-              v: "-Queda - 0.02",
+              u: "0.03",
+              v: "(-Queda + (0.55*Diametro)) - 0.03",
+              radius: "-((0.5*Diametro) - 0)",
             ),
             (
-              u: "0.04",
-              v: "-Queda + 0.2",
+              u: "(Diametro/2) - 0",
+              v: "(-Queda)",
             ),
             (
-              u: "0",
-              v: "-Queda + 0.2",
+              u: "(Diametro/2) - 0.0012",
+              v: "(-Queda)",
+              radius: "(0.5*Diametro) - 0.0012",
+            ),
+            (
+              u: "0.0288",
+              v: "(-Queda + (0.55*Diametro)) - 0.03",
+            ),
+            (
+              u: "0.0288",
+              v: "(-Queda + (0.55*Diametro))",
             ),
           ],
           offset: "0",
           axis: "0",
           angle: "360",
         ),
-        material: "Alumínio",
+        material: "Aço pintado preto",
         in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
       ),
       (
-        name: "Canopla",
+        name: "Cúpula - pintura interna",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "0.0288",
+              v: "(-Queda + (0.55*Diametro))",
+            ),
+            (
+              u: "0.0288",
+              v: "(-Queda + (0.55*Diametro)) - 0.03",
+              radius: "-((0.5*Diametro) - 0.0012)",
+            ),
+            (
+              u: "(Diametro/2) - 0.0012",
+              v: "(-Queda)",
+            ),
+            (
+              u: "(Diametro/2) - 0.002",
+              v: "(-Queda)",
+              radius: "(0.5*Diametro) - 0.002",
+            ),
+            (
+              u: "0.028",
+              v: "(-Queda + (0.55*Diametro)) - 0.03",
+            ),
+            (
+              u: "0.028",
+              v: "(-Queda + (0.55*Diametro))",
+            ),
+          ],
+          offset: "0",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "Aço pintado branco",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Cúpula - tampo",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "0 + 0.0215",
+              v: "(-Queda + (0.55*Diametro)) - 0.002",
+            ),
+            (
+              u: "0 + 0.03",
+              v: "(-Queda + (0.55*Diametro)) - 0.002",
+            ),
+            (
+              u: "0 + 0.03",
+              v: "(-Queda + (0.55*Diametro))",
+            ),
+            (
+              u: "0 + 0.0215",
+              v: "(-Queda + (0.55*Diametro))",
+            ),
+          ],
+          offset: "0",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "Aço pintado preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Cúpula - friso da borda",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "0 + ((Diametro/2) - 0.003)",
+              v: "(-Queda)",
+            ),
+            (
+              u: "0 + ((Diametro/2) + 0.0008)",
+              v: "(-Queda)",
+            ),
+            (
+              u: "0 + ((Diametro/2) + 0.0008)",
+              v: "(-Queda) + 0.0035",
+            ),
+            (
+              u: "0 + ((Diametro/2) - 0.003)",
+              v: "(-Queda) + 0.0035",
+            ),
+          ],
+          offset: "0",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "Aço pintado preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Lâmpada - rosca E27",
         shape: Cylinder(
           x: "0",
           y: "0",
-          z: "-0.03",
-          radius: "0.06",
-          height: "0.03",
+          z: "((-Queda + (0.55*Diametro)) - 0.045) - 0.004",
+          radius: "0.0132",
+          height: "0.006",
         ),
-        material: "Aço",
+        material: "Alumínio anodizado",
         in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Lâmpada - corpo",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "0",
+              v: "((-Queda + (0.55*Diametro)) - 0.045) - 0.004",
+            ),
+            (
+              u: "0.016",
+              v: "((-Queda + (0.55*Diametro)) - 0.045) - 0.004",
+            ),
+            (
+              u: "0.0235",
+              v: "((-Queda + (0.55*Diametro)) - 0.045) - 0.03",
+            ),
+            (
+              u: "0",
+              v: "((-Queda + (0.55*Diametro)) - 0.045) - 0.03",
+            ),
+          ],
+          offset: "0",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "Branco",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Lâmpada - bulbo",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "0",
+              v: "((-Queda + (0.55*Diametro)) - 0.045) - 0.03",
+            ),
+            (
+              u: "0.0235",
+              v: "((-Queda + (0.55*Diametro)) - 0.045) - 0.03",
+              radius: "-0.045",
+            ),
+            (
+              u: "0.03",
+              v: "((-Queda + (0.55*Diametro)) - 0.045) - 0.058",
+              radius: "-0.03",
+            ),
+            (
+              u: "0",
+              v: "((-Queda + (0.55*Diametro)) - 0.045) - 0.088",
+            ),
+          ],
+          offset: "0",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "Difusor opalino",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Lâmpada - anel do bulbo",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "0 + 0.0225",
+              v: "((-Queda + (0.55*Diametro)) - 0.045) - 0.031",
+            ),
+            (
+              u: "0 + 0.0238",
+              v: "((-Queda + (0.55*Diametro)) - 0.045) - 0.031",
+            ),
+            (
+              u: "0 + 0.0238",
+              v: "((-Queda + (0.55*Diametro)) - 0.045) - 0.028",
+            ),
+            (
+              u: "0 + 0.0225",
+              v: "((-Queda + (0.55*Diametro)) - 0.045) - 0.028",
+            ),
+          ],
+          offset: "0",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "Plástico cinza claro",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
       ),
     ],
     mep: Some(Device(
@@ -120,8 +759,8 @@
   ],
   materials: [
     (
-      name: "Aço",
-      color: (140, 146, 152),
+      name: "Aço pintado preto",
+      color: (30, 30, 32),
       identity: (
         description: "",
         class: Metal,
@@ -151,8 +790,8 @@
         ),
       ),
       appearance: (
-        color: (140, 146, 152),
-        finish: Matte,
+        color: (30, 30, 32),
+        finish: Satin,
         description: "",
       ),
       physical: (
@@ -168,11 +807,11 @@
       ),
     ),
     (
-      name: "Alumínio",
-      color: (200, 200, 205),
+      name: "Latão",
+      color: (192, 160, 84),
       identity: (
         description: "",
-        class: Generic,
+        class: Metal,
         comments: "",
         keywords: "",
         manufacturer: "",
@@ -199,8 +838,296 @@
         ),
       ),
       appearance: (
-        color: (200, 200, 205),
-        finish: Matte,
+        color: (192, 160, 84),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Plástico preto",
+      color: (34, 34, 37),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (34, 34, 37),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Aço pintado branco",
+      color: (240, 240, 236),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (240, 240, 236),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Alumínio anodizado",
+      color: (206, 208, 210),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (206, 208, 210),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Branco",
+      color: (244, 244, 240),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (244, 244, 240),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Difusor opalino",
+      color: (250, 250, 245),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.3,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (250, 250, 245),
+        finish: Glossy,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Plástico cinza claro",
+      color: (196, 198, 200),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (196, 198, 200),
+        finish: Satin,
         description: "",
       ),
       physical: (

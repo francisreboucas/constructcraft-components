@@ -18,17 +18,1454 @@
     ],
     "items": [
       {
-        "name": "Corpo",
-        "material": "Esmalte branco",
-        "in_plan": true,
+        "name": "Volume simplificado",
         "shape": {
           "Cylinder": {
             "x": "0",
             "y": "0",
             "z": "-Altura",
-            "radius": "Diametro / 2",
+            "radius": "(Diametro/2)",
             "height": "Altura"
           }
+        },
+        "material": "Branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Base",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "0"
+              },
+              {
+                "u": "((Diametro/2) - 0.004)",
+                "v": "0"
+              },
+              {
+                "u": "((Diametro/2) - 0.004)",
+                "v": "-(0.35*Altura) + 0.004",
+                "radius": "-0.004"
+              },
+              {
+                "u": "((Diametro/2) - 0.004) - 0.004",
+                "v": "-(0.35*Altura)"
+              },
+              {
+                "u": "0",
+                "v": "-(0.35*Altura)"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Base - nervura de reforço",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0 + (0.55*(Diametro/2))",
+                "v": "-0.0011"
+              },
+              {
+                "u": "0 + (0.55*(Diametro/2) + 0.004)",
+                "v": "-0.0011"
+              },
+              {
+                "u": "0 + (0.55*(Diametro/2) + 0.004)",
+                "v": "0.0004"
+              },
+              {
+                "u": "0 + (0.55*(Diametro/2))",
+                "v": "0.0004"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Passa-fios",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0 + 0.007",
+                "v": "-0.001"
+              },
+              {
+                "u": "0 + 0.011",
+                "v": "-0.001"
+              },
+              {
+                "u": "0 + 0.011",
+                "v": "0.0005"
+              },
+              {
+                "u": "0 + 0.007",
+                "v": "0.0005"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Furo oblongo de fixação 1",
+        "shape": {
+          "Box": {
+            "x": "-1*0.38*(Diametro/2) - 0.009",
+            "y": "-0.0025",
+            "z": "-0.0004",
+            "width": "0.018",
+            "depth": "0.005",
+            "height": "0.0008"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Furo oblongo de fixação 2",
+        "shape": {
+          "Box": {
+            "x": "1*0.38*(Diametro/2) - 0.009",
+            "y": "-0.0025",
+            "z": "-0.0004",
+            "width": "0.018",
+            "depth": "0.005",
+            "height": "0.0008"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Aro",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((Diametro/2) - 0.003) - 0.002",
+                "v": "-(0.35*Altura) + 0.001"
+              },
+              {
+                "u": "(Diametro/2) - 0.001",
+                "v": "-(0.35*Altura) + 0.001"
+              },
+              {
+                "u": "(Diametro/2)",
+                "v": "-(0.35*Altura) - 0.0015",
+                "radius": "-0.003"
+              },
+              {
+                "u": "(Diametro/2) - 0.001",
+                "v": "-(0.35*Altura) - 0.005"
+              },
+              {
+                "u": "((Diametro/2) - 0.003) - 0.002",
+                "v": "-(0.35*Altura) - 0.005"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Difusor",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((Diametro/2) - 0.003)",
+                "v": "(-(0.35*Altura) - 0.002)",
+                "radius": "-(0.65*Altura - 0.002)"
+              },
+              {
+                "u": "((Diametro/2) - 0.003) - (0.65*Altura - 0.002)",
+                "v": "-Altura"
+              },
+              {
+                "u": "0",
+                "v": "-Altura"
+              },
+              {
+                "u": "0",
+                "v": "-Altura + 0.0025"
+              },
+              {
+                "u": "((Diametro/2) - 0.003) - (0.65*Altura - 0.002)",
+                "v": "-Altura + 0.0025",
+                "radius": "((0.65*Altura - 0.002) - 0.0025)"
+              },
+              {
+                "u": "((Diametro/2) - 0.003) - 0.0025",
+                "v": "(-(0.35*Altura) - 0.002)"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Difusor opalino",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Difusor - friso central",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0 + (0.30*(Diametro/2))",
+                "v": "-Altura - 0.0004"
+              },
+              {
+                "u": "0 + (0.30*(Diametro/2) + 0.0015)",
+                "v": "-Altura - 0.0004"
+              },
+              {
+                "u": "0 + (0.30*(Diametro/2) + 0.0015)",
+                "v": "-Altura"
+              },
+              {
+                "u": "0 + (0.30*(Diametro/2))",
+                "v": "-Altura"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Difusor opalino",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trava do difusor 1",
+        "shape": {
+          "Box": {
+            "x": "0.0000*(((Diametro/2) - 0.003) - 0.002) - 0.004",
+            "y": "1.0000*(((Diametro/2) - 0.003) - 0.002) - 0.004",
+            "z": "(-(0.35*Altura) - 0.002) - 0.004",
+            "width": "0.008",
+            "depth": "0.008",
+            "height": "0.004"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trava do difusor 2",
+        "shape": {
+          "Box": {
+            "x": "-0.8660*(((Diametro/2) - 0.003) - 0.002) - 0.004",
+            "y": "-0.5000*(((Diametro/2) - 0.003) - 0.002) - 0.004",
+            "z": "(-(0.35*Altura) - 0.002) - 0.004",
+            "width": "0.008",
+            "depth": "0.008",
+            "height": "0.004"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trava do difusor 3",
+        "shape": {
+          "Box": {
+            "x": "0.8660*(((Diametro/2) - 0.003) - 0.002) - 0.004",
+            "y": "-0.5000*(((Diametro/2) - 0.003) - 0.002) - 0.004",
+            "z": "(-(0.35*Altura) - 0.002) - 0.004",
+            "width": "0.008",
+            "depth": "0.008",
+            "height": "0.004"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Placa de LED",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0",
+            "z": "(-(0.35*Altura) - 0.0016)",
+            "radius": "0.86*(Diametro/2)",
+            "height": "0.0016"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 1.1",
+        "shape": {
+          "Box": {
+            "x": "0.7535*(Diametro/2) - 0.0028",
+            "y": "0.0992*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 1.2",
+        "shape": {
+          "Box": {
+            "x": "0.7021*(Diametro/2) - 0.0028",
+            "y": "0.2908*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 1.3",
+        "shape": {
+          "Box": {
+            "x": "0.6029*(Diametro/2) - 0.0028",
+            "y": "0.4627*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 1.4",
+        "shape": {
+          "Box": {
+            "x": "0.4627*(Diametro/2) - 0.0028",
+            "y": "0.6029*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 1.5",
+        "shape": {
+          "Box": {
+            "x": "0.2908*(Diametro/2) - 0.0028",
+            "y": "0.7021*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 1.6",
+        "shape": {
+          "Box": {
+            "x": "0.0992*(Diametro/2) - 0.0028",
+            "y": "0.7535*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 1.7",
+        "shape": {
+          "Box": {
+            "x": "-0.0992*(Diametro/2) - 0.0028",
+            "y": "0.7535*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 1.8",
+        "shape": {
+          "Box": {
+            "x": "-0.2908*(Diametro/2) - 0.0028",
+            "y": "0.7021*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 1.9",
+        "shape": {
+          "Box": {
+            "x": "-0.4627*(Diametro/2) - 0.0028",
+            "y": "0.6029*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 1.10",
+        "shape": {
+          "Box": {
+            "x": "-0.6029*(Diametro/2) - 0.0028",
+            "y": "0.4627*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 1.11",
+        "shape": {
+          "Box": {
+            "x": "-0.7021*(Diametro/2) - 0.0028",
+            "y": "0.2908*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 1.12",
+        "shape": {
+          "Box": {
+            "x": "-0.7535*(Diametro/2) - 0.0028",
+            "y": "0.0992*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 1.13",
+        "shape": {
+          "Box": {
+            "x": "-0.7535*(Diametro/2) - 0.0028",
+            "y": "-0.0992*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 1.14",
+        "shape": {
+          "Box": {
+            "x": "-0.7021*(Diametro/2) - 0.0028",
+            "y": "-0.2908*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 1.15",
+        "shape": {
+          "Box": {
+            "x": "-0.6029*(Diametro/2) - 0.0028",
+            "y": "-0.4627*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 1.16",
+        "shape": {
+          "Box": {
+            "x": "-0.4627*(Diametro/2) - 0.0028",
+            "y": "-0.6029*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 1.17",
+        "shape": {
+          "Box": {
+            "x": "-0.2908*(Diametro/2) - 0.0028",
+            "y": "-0.7021*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 1.18",
+        "shape": {
+          "Box": {
+            "x": "-0.0992*(Diametro/2) - 0.0028",
+            "y": "-0.7535*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 1.19",
+        "shape": {
+          "Box": {
+            "x": "0.0992*(Diametro/2) - 0.0028",
+            "y": "-0.7535*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 1.20",
+        "shape": {
+          "Box": {
+            "x": "0.2908*(Diametro/2) - 0.0028",
+            "y": "-0.7021*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 1.21",
+        "shape": {
+          "Box": {
+            "x": "0.4627*(Diametro/2) - 0.0028",
+            "y": "-0.6029*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 1.22",
+        "shape": {
+          "Box": {
+            "x": "0.6029*(Diametro/2) - 0.0028",
+            "y": "-0.4627*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 1.23",
+        "shape": {
+          "Box": {
+            "x": "0.7021*(Diametro/2) - 0.0028",
+            "y": "-0.2908*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 1.24",
+        "shape": {
+          "Box": {
+            "x": "0.7535*(Diametro/2) - 0.0028",
+            "y": "-0.0992*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 2.1",
+        "shape": {
+          "Box": {
+            "x": "0.5600*(Diametro/2) - 0.0028",
+            "y": "0.0000*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 2.2",
+        "shape": {
+          "Box": {
+            "x": "0.5174*(Diametro/2) - 0.0028",
+            "y": "0.2143*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 2.3",
+        "shape": {
+          "Box": {
+            "x": "0.3960*(Diametro/2) - 0.0028",
+            "y": "0.3960*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 2.4",
+        "shape": {
+          "Box": {
+            "x": "0.2143*(Diametro/2) - 0.0028",
+            "y": "0.5174*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 2.5",
+        "shape": {
+          "Box": {
+            "x": "0.0000*(Diametro/2) - 0.0028",
+            "y": "0.5600*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 2.6",
+        "shape": {
+          "Box": {
+            "x": "-0.2143*(Diametro/2) - 0.0028",
+            "y": "0.5174*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 2.7",
+        "shape": {
+          "Box": {
+            "x": "-0.3960*(Diametro/2) - 0.0028",
+            "y": "0.3960*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 2.8",
+        "shape": {
+          "Box": {
+            "x": "-0.5174*(Diametro/2) - 0.0028",
+            "y": "0.2143*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 2.9",
+        "shape": {
+          "Box": {
+            "x": "-0.5600*(Diametro/2) - 0.0028",
+            "y": "0.0000*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 2.10",
+        "shape": {
+          "Box": {
+            "x": "-0.5174*(Diametro/2) - 0.0028",
+            "y": "-0.2143*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 2.11",
+        "shape": {
+          "Box": {
+            "x": "-0.3960*(Diametro/2) - 0.0028",
+            "y": "-0.3960*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 2.12",
+        "shape": {
+          "Box": {
+            "x": "-0.2143*(Diametro/2) - 0.0028",
+            "y": "-0.5174*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 2.13",
+        "shape": {
+          "Box": {
+            "x": "-0.0000*(Diametro/2) - 0.0028",
+            "y": "-0.5600*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 2.14",
+        "shape": {
+          "Box": {
+            "x": "0.2143*(Diametro/2) - 0.0028",
+            "y": "-0.5174*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 2.15",
+        "shape": {
+          "Box": {
+            "x": "0.3960*(Diametro/2) - 0.0028",
+            "y": "-0.3960*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 2.16",
+        "shape": {
+          "Box": {
+            "x": "0.5174*(Diametro/2) - 0.0028",
+            "y": "-0.2143*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 3.1",
+        "shape": {
+          "Box": {
+            "x": "0.3326*(Diametro/2) - 0.0028",
+            "y": "0.1378*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 3.2",
+        "shape": {
+          "Box": {
+            "x": "0.1378*(Diametro/2) - 0.0028",
+            "y": "0.3326*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 3.3",
+        "shape": {
+          "Box": {
+            "x": "-0.1378*(Diametro/2) - 0.0028",
+            "y": "0.3326*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 3.4",
+        "shape": {
+          "Box": {
+            "x": "-0.3326*(Diametro/2) - 0.0028",
+            "y": "0.1378*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 3.5",
+        "shape": {
+          "Box": {
+            "x": "-0.3326*(Diametro/2) - 0.0028",
+            "y": "-0.1378*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 3.6",
+        "shape": {
+          "Box": {
+            "x": "-0.1378*(Diametro/2) - 0.0028",
+            "y": "-0.3326*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 3.7",
+        "shape": {
+          "Box": {
+            "x": "0.1378*(Diametro/2) - 0.0028",
+            "y": "-0.3326*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED 3.8",
+        "shape": {
+          "Box": {
+            "x": "0.3326*(Diametro/2) - 0.0028",
+            "y": "-0.1378*(Diametro/2) - 0.0028",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0012",
+            "width": "0.0056",
+            "depth": "0.0056",
+            "height": "0.0012"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Driver",
+        "shape": {
+          "Box": {
+            "x": "-0.032",
+            "y": "-0.019",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.019",
+            "width": "0.064",
+            "depth": "0.038",
+            "height": "0.019"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Driver - etiqueta",
+        "shape": {
+          "Box": {
+            "x": "-0.026",
+            "y": "-0.0195",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.016",
+            "width": "0.03",
+            "depth": "0.0005",
+            "height": "0.012"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Conector de ligação",
+        "shape": {
+          "Box": {
+            "x": "0.036",
+            "y": "-0.008",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.011",
+            "width": "0.014",
+            "depth": "0.016",
+            "height": "0.011"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Conector de ligação - parafuso 1",
+        "shape": {
+          "Cylinder": {
+            "x": "0.043",
+            "y": "-0.0055 + 0*0.0055",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0115",
+            "radius": "0.0018",
+            "height": "0.0005"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Conector de ligação - parafuso 2",
+        "shape": {
+          "Cylinder": {
+            "x": "0.043",
+            "y": "-0.0055 + 1*0.0055",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0115",
+            "radius": "0.0018",
+            "height": "0.0005"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Conector de ligação - parafuso 3",
+        "shape": {
+          "Cylinder": {
+            "x": "0.043",
+            "y": "-0.0055 + 2*0.0055",
+            "z": "(-(0.35*Altura) - 0.0016) - 0.0115",
+            "radius": "0.0018",
+            "height": "0.0005"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
         }
       }
     ],
@@ -59,12 +1496,114 @@
   ],
   "materials": [
     {
-      "name": "Esmalte branco",
+      "name": "Branco",
       "color": [
-        245,
-        245,
+        244,
+        244,
+        240
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Aço pintado branco",
+      "color": [
+        240,
+        240,
+        236
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Borracha",
+      "color": [
+        30,
+        30,
+        30
+      ],
+      "class": "Plastic",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Aço pintado preto",
+      "color": [
+        30,
+        30,
+        32
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Cromado",
+      "color": [
+        226,
+        229,
+        233
+      ],
+      "class": "Metal",
+      "finish": "Polished",
+      "transparency": 0
+    },
+    {
+      "name": "Difusor opalino",
+      "color": [
+        250,
+        250,
         245
-      ]
+      ],
+      "class": "Plastic",
+      "finish": "Glossy",
+      "transparency": 0.3
+    },
+    {
+      "name": "Plástico cinza claro",
+      "color": [
+        196,
+        198,
+        200
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Fita de LED",
+      "color": [
+        255,
+        244,
+        214
+      ],
+      "class": "Plastic",
+      "finish": "Glossy",
+      "transparency": 0.3
+    },
+    {
+      "name": "Plástico cinza",
+      "color": [
+        120,
+        122,
+        126
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Aço galvanizado",
+      "color": [
+        160,
+        165,
+        170
+      ],
+      "class": "Metal",
+      "finish": "Matte",
+      "transparency": 0
     }
   ]
 }

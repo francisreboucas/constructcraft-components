@@ -24,18 +24,649 @@
     ],
     "items": [
       {
-        "name": "Corpo",
-        "material": "Alumínio",
-        "in_plan": true,
+        "name": "Volume simplificado",
         "shape": {
           "Box": {
-            "x": "-Largura / 2",
+            "x": "-(Largura/2)",
             "y": "-Profundidade",
             "z": "0",
             "width": "Largura",
             "depth": "Profundidade",
             "height": "Altura"
           }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Base de fixação",
+        "shape": {
+          "Box": {
+            "x": "-(Largura/2) + 0.008",
+            "y": "-0.003",
+            "z": "0.008",
+            "width": "Largura - 0.016",
+            "depth": "0.003",
+            "height": "Altura - 0.016"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Junta de vedação",
+        "shape": {
+          "Box": {
+            "x": "-(Largura/2) + 0.006",
+            "y": "-0.0034",
+            "z": "0.006",
+            "width": "Largura - 0.012",
+            "depth": "0.0004",
+            "height": "Altura - 0.012"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Corpo",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-(Largura/2) + (0.18*Profundidade)",
+                "v": "-Profundidade + 0"
+              },
+              {
+                "u": "(Largura/2) - (0.18*Profundidade)",
+                "v": "-Profundidade + 0",
+                "radius": "((0.18*Profundidade) - 0)"
+              },
+              {
+                "u": "(Largura/2) - 0",
+                "v": "-Profundidade + (0.18*Profundidade)"
+              },
+              {
+                "u": "(Largura/2) - 0",
+                "v": "-0.003"
+              },
+              {
+                "u": "-(Largura/2) + 0",
+                "v": "-0.003"
+              },
+              {
+                "u": "-(Largura/2) + 0",
+                "v": "-Profundidade + (0.18*Profundidade)",
+                "radius": "((0.18*Profundidade) - 0)"
+              }
+            ],
+            "offset": "0.009",
+            "depth": "Altura - 0.018000000000000002"
+          }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Colar superior",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-(Largura/2)",
+                "v": "-0.003"
+              },
+              {
+                "u": "-(Largura/2)",
+                "v": "-Profundidade + (0.18*Profundidade)",
+                "radius": "(0.18*Profundidade)"
+              },
+              {
+                "u": "-(Largura/2) + (0.18*Profundidade)",
+                "v": "-Profundidade"
+              },
+              {
+                "u": "(Largura/2) - (0.18*Profundidade)",
+                "v": "-Profundidade",
+                "radius": "(0.18*Profundidade)"
+              },
+              {
+                "u": "(Largura/2)",
+                "v": "-Profundidade + (0.18*Profundidade)"
+              },
+              {
+                "u": "(Largura/2)",
+                "v": "-0.003"
+              },
+              {
+                "u": "(Largura/2) - 0.005",
+                "v": "-0.003"
+              },
+              {
+                "u": "(Largura/2) - 0.005",
+                "v": "-Profundidade + (0.18*Profundidade)",
+                "radius": "-((0.18*Profundidade) - 0.005)"
+              },
+              {
+                "u": "(Largura/2) - (0.18*Profundidade)",
+                "v": "-Profundidade + 0.005"
+              },
+              {
+                "u": "-(Largura/2) + (0.18*Profundidade)",
+                "v": "-Profundidade + 0.005",
+                "radius": "-((0.18*Profundidade) - 0.005)"
+              },
+              {
+                "u": "-(Largura/2) + 0.005",
+                "v": "-Profundidade + (0.18*Profundidade)"
+              },
+              {
+                "u": "-(Largura/2) + 0.005",
+                "v": "-0.003"
+              }
+            ],
+            "offset": "Altura - 0.009000000000000001",
+            "depth": "0.009"
+          }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Colar superior - fundo",
+        "shape": {
+          "Box": {
+            "x": "-(Largura/2) + 0.005",
+            "y": "-0.008",
+            "z": "Altura - 0.009000000000000001",
+            "width": "Largura - 0.01",
+            "depth": "0.005",
+            "height": "0.009"
+          }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Colar inferior",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-(Largura/2)",
+                "v": "-0.003"
+              },
+              {
+                "u": "-(Largura/2)",
+                "v": "-Profundidade + (0.18*Profundidade)",
+                "radius": "(0.18*Profundidade)"
+              },
+              {
+                "u": "-(Largura/2) + (0.18*Profundidade)",
+                "v": "-Profundidade"
+              },
+              {
+                "u": "(Largura/2) - (0.18*Profundidade)",
+                "v": "-Profundidade",
+                "radius": "(0.18*Profundidade)"
+              },
+              {
+                "u": "(Largura/2)",
+                "v": "-Profundidade + (0.18*Profundidade)"
+              },
+              {
+                "u": "(Largura/2)",
+                "v": "-0.003"
+              },
+              {
+                "u": "(Largura/2) - 0.005",
+                "v": "-0.003"
+              },
+              {
+                "u": "(Largura/2) - 0.005",
+                "v": "-Profundidade + (0.18*Profundidade)",
+                "radius": "-((0.18*Profundidade) - 0.005)"
+              },
+              {
+                "u": "(Largura/2) - (0.18*Profundidade)",
+                "v": "-Profundidade + 0.005"
+              },
+              {
+                "u": "-(Largura/2) + (0.18*Profundidade)",
+                "v": "-Profundidade + 0.005",
+                "radius": "-((0.18*Profundidade) - 0.005)"
+              },
+              {
+                "u": "-(Largura/2) + 0.005",
+                "v": "-Profundidade + (0.18*Profundidade)"
+              },
+              {
+                "u": "-(Largura/2) + 0.005",
+                "v": "-0.003"
+              }
+            ],
+            "offset": "0",
+            "depth": "0.009"
+          }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Colar inferior - fundo",
+        "shape": {
+          "Box": {
+            "x": "-(Largura/2) + 0.005",
+            "y": "-0.008",
+            "z": "0",
+            "width": "Largura - 0.01",
+            "depth": "0.005",
+            "height": "0.009"
+          }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Difusor superior",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-(Largura/2) + (0.18*Profundidade)",
+                "v": "-Profundidade + 0.005"
+              },
+              {
+                "u": "(Largura/2) - (0.18*Profundidade)",
+                "v": "-Profundidade + 0.005",
+                "radius": "((0.18*Profundidade) - 0.005)"
+              },
+              {
+                "u": "(Largura/2) - 0.005",
+                "v": "-Profundidade + (0.18*Profundidade)"
+              },
+              {
+                "u": "(Largura/2) - 0.005",
+                "v": "-0.008"
+              },
+              {
+                "u": "-(Largura/2) + 0.005",
+                "v": "-0.008"
+              },
+              {
+                "u": "-(Largura/2) + 0.005",
+                "v": "-Profundidade + (0.18*Profundidade)",
+                "radius": "((0.18*Profundidade) - 0.005)"
+              }
+            ],
+            "offset": "Altura - 0.009000000000000001",
+            "depth": "0.003"
+          }
+        },
+        "material": "Difusor opalino",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Difusor inferior",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-(Largura/2) + (0.18*Profundidade)",
+                "v": "-Profundidade + 0.005"
+              },
+              {
+                "u": "(Largura/2) - (0.18*Profundidade)",
+                "v": "-Profundidade + 0.005",
+                "radius": "((0.18*Profundidade) - 0.005)"
+              },
+              {
+                "u": "(Largura/2) - 0.005",
+                "v": "-Profundidade + (0.18*Profundidade)"
+              },
+              {
+                "u": "(Largura/2) - 0.005",
+                "v": "-0.008"
+              },
+              {
+                "u": "-(Largura/2) + 0.005",
+                "v": "-0.008"
+              },
+              {
+                "u": "-(Largura/2) + 0.005",
+                "v": "-Profundidade + (0.18*Profundidade)",
+                "radius": "((0.18*Profundidade) - 0.005)"
+              }
+            ],
+            "offset": "0.006",
+            "depth": "0.003"
+          }
+        },
+        "material": "Difusor opalino",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Friso frontal",
+        "shape": {
+          "Box": {
+            "x": "-(Largura/2) + (0.18*Profundidade)",
+            "y": "-Profundidade - 0.001",
+            "z": "Altura/2 - 0.0012",
+            "width": "Largura - 2*(0.18*Profundidade)",
+            "depth": "0.0025",
+            "height": "0.0024"
+          }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        },
+        "void": true
+      },
+      {
+        "name": "Aleta lateral 1.1",
+        "shape": {
+          "Box": {
+            "x": "-1*(Largura/2) - 0.0015",
+            "y": "-Profundidade + (0.18*Profundidade) + 0.004",
+            "z": "0.30*Altura - 0.001",
+            "width": "0.003",
+            "depth": "Profundidade - (0.18*Profundidade) - 0.003 - 0.012",
+            "height": "0.002"
+          }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        },
+        "void": true
+      },
+      {
+        "name": "Aleta lateral 1.2",
+        "shape": {
+          "Box": {
+            "x": "-1*(Largura/2) - 0.0015",
+            "y": "-Profundidade + (0.18*Profundidade) + 0.004",
+            "z": "0.40*Altura - 0.001",
+            "width": "0.003",
+            "depth": "Profundidade - (0.18*Profundidade) - 0.003 - 0.012",
+            "height": "0.002"
+          }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        },
+        "void": true
+      },
+      {
+        "name": "Aleta lateral 1.3",
+        "shape": {
+          "Box": {
+            "x": "-1*(Largura/2) - 0.0015",
+            "y": "-Profundidade + (0.18*Profundidade) + 0.004",
+            "z": "0.50*Altura - 0.001",
+            "width": "0.003",
+            "depth": "Profundidade - (0.18*Profundidade) - 0.003 - 0.012",
+            "height": "0.002"
+          }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        },
+        "void": true
+      },
+      {
+        "name": "Aleta lateral 1.4",
+        "shape": {
+          "Box": {
+            "x": "-1*(Largura/2) - 0.0015",
+            "y": "-Profundidade + (0.18*Profundidade) + 0.004",
+            "z": "0.60*Altura - 0.001",
+            "width": "0.003",
+            "depth": "Profundidade - (0.18*Profundidade) - 0.003 - 0.012",
+            "height": "0.002"
+          }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        },
+        "void": true
+      },
+      {
+        "name": "Aleta lateral 1.5",
+        "shape": {
+          "Box": {
+            "x": "-1*(Largura/2) - 0.0015",
+            "y": "-Profundidade + (0.18*Profundidade) + 0.004",
+            "z": "0.70*Altura - 0.001",
+            "width": "0.003",
+            "depth": "Profundidade - (0.18*Profundidade) - 0.003 - 0.012",
+            "height": "0.002"
+          }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        },
+        "void": true
+      },
+      {
+        "name": "Aleta lateral 2.1",
+        "shape": {
+          "Box": {
+            "x": "1*(Largura/2) - 0.0015",
+            "y": "-Profundidade + (0.18*Profundidade) + 0.004",
+            "z": "0.30*Altura - 0.001",
+            "width": "0.003",
+            "depth": "Profundidade - (0.18*Profundidade) - 0.003 - 0.012",
+            "height": "0.002"
+          }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        },
+        "void": true
+      },
+      {
+        "name": "Aleta lateral 2.2",
+        "shape": {
+          "Box": {
+            "x": "1*(Largura/2) - 0.0015",
+            "y": "-Profundidade + (0.18*Profundidade) + 0.004",
+            "z": "0.40*Altura - 0.001",
+            "width": "0.003",
+            "depth": "Profundidade - (0.18*Profundidade) - 0.003 - 0.012",
+            "height": "0.002"
+          }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        },
+        "void": true
+      },
+      {
+        "name": "Aleta lateral 2.3",
+        "shape": {
+          "Box": {
+            "x": "1*(Largura/2) - 0.0015",
+            "y": "-Profundidade + (0.18*Profundidade) + 0.004",
+            "z": "0.50*Altura - 0.001",
+            "width": "0.003",
+            "depth": "Profundidade - (0.18*Profundidade) - 0.003 - 0.012",
+            "height": "0.002"
+          }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        },
+        "void": true
+      },
+      {
+        "name": "Aleta lateral 2.4",
+        "shape": {
+          "Box": {
+            "x": "1*(Largura/2) - 0.0015",
+            "y": "-Profundidade + (0.18*Profundidade) + 0.004",
+            "z": "0.60*Altura - 0.001",
+            "width": "0.003",
+            "depth": "Profundidade - (0.18*Profundidade) - 0.003 - 0.012",
+            "height": "0.002"
+          }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        },
+        "void": true
+      },
+      {
+        "name": "Aleta lateral 2.5",
+        "shape": {
+          "Box": {
+            "x": "1*(Largura/2) - 0.0015",
+            "y": "-Profundidade + (0.18*Profundidade) + 0.004",
+            "z": "0.70*Altura - 0.001",
+            "width": "0.003",
+            "depth": "Profundidade - (0.18*Profundidade) - 0.003 - 0.012",
+            "height": "0.002"
+          }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        },
+        "void": true
+      },
+      {
+        "name": "Parafuso de travamento 1",
+        "shape": {
+          "Cylinder": {
+            "x": "-1*0.3*Largura",
+            "y": "-0.0055",
+            "z": "-0.0008",
+            "radius": "0.0018",
+            "height": "0.0012"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso de travamento 2",
+        "shape": {
+          "Cylinder": {
+            "x": "1*0.3*Largura",
+            "y": "-0.0055",
+            "z": "-0.0008",
+            "radius": "0.0018",
+            "height": "0.0012"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
         }
       }
     ],
@@ -68,12 +699,59 @@
   ],
   "materials": [
     {
-      "name": "Alumínio",
+      "name": "Alumínio fundido",
       "color": [
+        172,
+        174,
+        177
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Aço galvanizado",
+      "color": [
+        160,
+        165,
+        170
+      ],
+      "class": "Metal",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Borracha",
+      "color": [
+        30,
+        30,
+        30
+      ],
+      "class": "Plastic",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Difusor opalino",
+      "color": [
+        250,
+        250,
+        245
+      ],
+      "class": "Plastic",
+      "finish": "Glossy",
+      "transparency": 0.3
+    },
+    {
+      "name": "Inox escovado",
+      "color": [
+        198,
         200,
-        200,
-        205
-      ]
+        203
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
     }
   ]
 }

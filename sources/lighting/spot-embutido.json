@@ -12,17 +12,1242 @@
     ],
     "items": [
       {
-        "name": "Corpo",
-        "material": "Alumínio",
-        "in_plan": true,
+        "name": "Aro simplificado",
         "shape": {
           "Cylinder": {
             "x": "0",
             "y": "0",
-            "z": "-0.02",
-            "radius": "Diametro / 2",
+            "z": "-0.004",
+            "radius": "(Diametro/2)",
+            "height": "0.004"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Corpo simplificado",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0",
+            "z": "0",
+            "radius": "(0.38*Diametro)",
+            "height": "(0.5*Diametro + 0.005)"
+          }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Aro",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(0.33*Diametro)",
+                "v": "0"
+              },
+              {
+                "u": "(Diametro/2)",
+                "v": "0"
+              },
+              {
+                "u": "(Diametro/2)",
+                "v": "-0.0015",
+                "radius": "-0.003"
+              },
+              {
+                "u": "(Diametro/2) - 0.004",
+                "v": "-0.004"
+              },
+              {
+                "u": "(0.33*Diametro)",
+                "v": "-0.004"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Aro - borda interna",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0 + ((0.33*Diametro) - 0.0012)",
+                "v": "-0.0042"
+              },
+              {
+                "u": "0 + ((0.33*Diametro))",
+                "v": "-0.0042"
+              },
+              {
+                "u": "0 + ((0.33*Diametro))",
+                "v": "0"
+              },
+              {
+                "u": "0 + ((0.33*Diametro) - 0.0012)",
+                "v": "0"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Colar",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0 + ((0.38*Diametro) - 0.002)",
+                "v": "0"
+              },
+              {
+                "u": "0 + ((0.38*Diametro))",
+                "v": "0"
+              },
+              {
+                "u": "0 + ((0.38*Diametro))",
+                "v": "(0.3*Diametro)"
+              },
+              {
+                "u": "0 + ((0.38*Diametro) - 0.002)",
+                "v": "(0.3*Diametro)"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Refletor",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(0.33*Diametro) - 0.0012",
+                "v": "-0.003"
+              },
+              {
+                "u": "(0.33*Diametro)",
+                "v": "-0.003"
+              },
+              {
+                "u": "(0.12*Diametro) + 0.0012",
+                "v": "(0.3*Diametro)"
+              },
+              {
+                "u": "(0.12*Diametro)",
+                "v": "(0.3*Diametro)"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Refletor - anel de fixação",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0 + ((0.33*Diametro))",
+                "v": "-0.001"
+              },
+              {
+                "u": "0 + ((0.38*Diametro) - 0.002)",
+                "v": "-0.001"
+              },
+              {
+                "u": "0 + ((0.38*Diametro) - 0.002)",
+                "v": "0.004"
+              },
+              {
+                "u": "0 + ((0.33*Diametro))",
+                "v": "0.004"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Módulo LED (COB)",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0",
+            "z": "(0.3*Diametro) - 0.0015",
+            "radius": "(0.12*Diametro)",
+            "height": "0.0015"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lente",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0",
+            "z": "(0.3*Diametro) - 0.0045",
+            "radius": "0.8*(0.12*Diametro)",
+            "height": "0.003"
+          }
+        },
+        "material": "Difusor opalino",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lente - anel",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0 + (0.8*(0.12*Diametro))",
+                "v": "(0.3*Diametro) - 0.0045"
+              },
+              {
+                "u": "0 + ((0.12*Diametro))",
+                "v": "(0.3*Diametro) - 0.0045"
+              },
+              {
+                "u": "0 + ((0.12*Diametro))",
+                "v": "(0.3*Diametro) - 0.0015"
+              },
+              {
+                "u": "0 + (0.8*(0.12*Diametro))",
+                "v": "(0.3*Diametro) - 0.0015"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Base do dissipador",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0",
+            "z": "(0.3*Diametro)",
+            "radius": "(0.38*Diametro)",
+            "height": "0.004"
+          }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Núcleo do dissipador",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0",
+            "z": "(0.3*Diametro) + 0.004",
+            "radius": "0.2*Diametro",
+            "height": "(0.5*Diametro + 0.005) - (0.3*Diametro) - 0.004"
+          }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Aleta do dissipador 1",
+        "shape": {
+          "Extrusion": {
+            "points": [
+              [
+                "0.9659*(0.19*Diametro) - 0.00031",
+                "0.2588*(0.19*Diametro) + 0.00116"
+              ],
+              [
+                "0.9659*((0.38*Diametro) - 0.0005) - 0.00031",
+                "0.2588*((0.38*Diametro) - 0.0005) + 0.00116"
+              ],
+              [
+                "0.9659*((0.38*Diametro) - 0.0005) - -0.00031",
+                "0.2588*((0.38*Diametro) - 0.0005) + -0.00116"
+              ],
+              [
+                "0.9659*(0.19*Diametro) - -0.00031",
+                "0.2588*(0.19*Diametro) + -0.00116"
+              ]
+            ],
+            "z": "(0.3*Diametro) + 0.004",
+            "height": "(0.5*Diametro + 0.005) - (0.3*Diametro) - 0.006"
+          }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Aleta do dissipador 2",
+        "shape": {
+          "Extrusion": {
+            "points": [
+              [
+                "0.7071*(0.19*Diametro) - 0.00085",
+                "0.7071*(0.19*Diametro) + 0.00085"
+              ],
+              [
+                "0.7071*((0.38*Diametro) - 0.0005) - 0.00085",
+                "0.7071*((0.38*Diametro) - 0.0005) + 0.00085"
+              ],
+              [
+                "0.7071*((0.38*Diametro) - 0.0005) - -0.00085",
+                "0.7071*((0.38*Diametro) - 0.0005) + -0.00085"
+              ],
+              [
+                "0.7071*(0.19*Diametro) - -0.00085",
+                "0.7071*(0.19*Diametro) + -0.00085"
+              ]
+            ],
+            "z": "(0.3*Diametro) + 0.004",
+            "height": "(0.5*Diametro + 0.005) - (0.3*Diametro) - 0.006"
+          }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Aleta do dissipador 3",
+        "shape": {
+          "Extrusion": {
+            "points": [
+              [
+                "0.2588*(0.19*Diametro) - 0.00116",
+                "0.9659*(0.19*Diametro) + 0.00031"
+              ],
+              [
+                "0.2588*((0.38*Diametro) - 0.0005) - 0.00116",
+                "0.9659*((0.38*Diametro) - 0.0005) + 0.00031"
+              ],
+              [
+                "0.2588*((0.38*Diametro) - 0.0005) - -0.00116",
+                "0.9659*((0.38*Diametro) - 0.0005) + -0.00031"
+              ],
+              [
+                "0.2588*(0.19*Diametro) - -0.00116",
+                "0.9659*(0.19*Diametro) + -0.00031"
+              ]
+            ],
+            "z": "(0.3*Diametro) + 0.004",
+            "height": "(0.5*Diametro + 0.005) - (0.3*Diametro) - 0.006"
+          }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Aleta do dissipador 4",
+        "shape": {
+          "Extrusion": {
+            "points": [
+              [
+                "-0.2588*(0.19*Diametro) - 0.00116",
+                "0.9659*(0.19*Diametro) + -0.00031"
+              ],
+              [
+                "-0.2588*((0.38*Diametro) - 0.0005) - 0.00116",
+                "0.9659*((0.38*Diametro) - 0.0005) + -0.00031"
+              ],
+              [
+                "-0.2588*((0.38*Diametro) - 0.0005) - -0.00116",
+                "0.9659*((0.38*Diametro) - 0.0005) + 0.00031"
+              ],
+              [
+                "-0.2588*(0.19*Diametro) - -0.00116",
+                "0.9659*(0.19*Diametro) + 0.00031"
+              ]
+            ],
+            "z": "(0.3*Diametro) + 0.004",
+            "height": "(0.5*Diametro + 0.005) - (0.3*Diametro) - 0.006"
+          }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Aleta do dissipador 5",
+        "shape": {
+          "Extrusion": {
+            "points": [
+              [
+                "-0.7071*(0.19*Diametro) - 0.00085",
+                "0.7071*(0.19*Diametro) + -0.00085"
+              ],
+              [
+                "-0.7071*((0.38*Diametro) - 0.0005) - 0.00085",
+                "0.7071*((0.38*Diametro) - 0.0005) + -0.00085"
+              ],
+              [
+                "-0.7071*((0.38*Diametro) - 0.0005) - -0.00085",
+                "0.7071*((0.38*Diametro) - 0.0005) + 0.00085"
+              ],
+              [
+                "-0.7071*(0.19*Diametro) - -0.00085",
+                "0.7071*(0.19*Diametro) + 0.00085"
+              ]
+            ],
+            "z": "(0.3*Diametro) + 0.004",
+            "height": "(0.5*Diametro + 0.005) - (0.3*Diametro) - 0.006"
+          }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Aleta do dissipador 6",
+        "shape": {
+          "Extrusion": {
+            "points": [
+              [
+                "-0.9659*(0.19*Diametro) - 0.00031",
+                "0.2588*(0.19*Diametro) + -0.00116"
+              ],
+              [
+                "-0.9659*((0.38*Diametro) - 0.0005) - 0.00031",
+                "0.2588*((0.38*Diametro) - 0.0005) + -0.00116"
+              ],
+              [
+                "-0.9659*((0.38*Diametro) - 0.0005) - -0.00031",
+                "0.2588*((0.38*Diametro) - 0.0005) + 0.00116"
+              ],
+              [
+                "-0.9659*(0.19*Diametro) - -0.00031",
+                "0.2588*(0.19*Diametro) + 0.00116"
+              ]
+            ],
+            "z": "(0.3*Diametro) + 0.004",
+            "height": "(0.5*Diametro + 0.005) - (0.3*Diametro) - 0.006"
+          }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Aleta do dissipador 7",
+        "shape": {
+          "Extrusion": {
+            "points": [
+              [
+                "-0.9659*(0.19*Diametro) - -0.00031",
+                "-0.2588*(0.19*Diametro) + -0.00116"
+              ],
+              [
+                "-0.9659*((0.38*Diametro) - 0.0005) - -0.00031",
+                "-0.2588*((0.38*Diametro) - 0.0005) + -0.00116"
+              ],
+              [
+                "-0.9659*((0.38*Diametro) - 0.0005) - 0.00031",
+                "-0.2588*((0.38*Diametro) - 0.0005) + 0.00116"
+              ],
+              [
+                "-0.9659*(0.19*Diametro) - 0.00031",
+                "-0.2588*(0.19*Diametro) + 0.00116"
+              ]
+            ],
+            "z": "(0.3*Diametro) + 0.004",
+            "height": "(0.5*Diametro + 0.005) - (0.3*Diametro) - 0.006"
+          }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Aleta do dissipador 8",
+        "shape": {
+          "Extrusion": {
+            "points": [
+              [
+                "-0.7071*(0.19*Diametro) - -0.00085",
+                "-0.7071*(0.19*Diametro) + -0.00085"
+              ],
+              [
+                "-0.7071*((0.38*Diametro) - 0.0005) - -0.00085",
+                "-0.7071*((0.38*Diametro) - 0.0005) + -0.00085"
+              ],
+              [
+                "-0.7071*((0.38*Diametro) - 0.0005) - 0.00085",
+                "-0.7071*((0.38*Diametro) - 0.0005) + 0.00085"
+              ],
+              [
+                "-0.7071*(0.19*Diametro) - 0.00085",
+                "-0.7071*(0.19*Diametro) + 0.00085"
+              ]
+            ],
+            "z": "(0.3*Diametro) + 0.004",
+            "height": "(0.5*Diametro + 0.005) - (0.3*Diametro) - 0.006"
+          }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Aleta do dissipador 9",
+        "shape": {
+          "Extrusion": {
+            "points": [
+              [
+                "-0.2588*(0.19*Diametro) - -0.00116",
+                "-0.9659*(0.19*Diametro) + -0.00031"
+              ],
+              [
+                "-0.2588*((0.38*Diametro) - 0.0005) - -0.00116",
+                "-0.9659*((0.38*Diametro) - 0.0005) + -0.00031"
+              ],
+              [
+                "-0.2588*((0.38*Diametro) - 0.0005) - 0.00116",
+                "-0.9659*((0.38*Diametro) - 0.0005) + 0.00031"
+              ],
+              [
+                "-0.2588*(0.19*Diametro) - 0.00116",
+                "-0.9659*(0.19*Diametro) + 0.00031"
+              ]
+            ],
+            "z": "(0.3*Diametro) + 0.004",
+            "height": "(0.5*Diametro + 0.005) - (0.3*Diametro) - 0.006"
+          }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Aleta do dissipador 10",
+        "shape": {
+          "Extrusion": {
+            "points": [
+              [
+                "0.2588*(0.19*Diametro) - -0.00116",
+                "-0.9659*(0.19*Diametro) + 0.00031"
+              ],
+              [
+                "0.2588*((0.38*Diametro) - 0.0005) - -0.00116",
+                "-0.9659*((0.38*Diametro) - 0.0005) + 0.00031"
+              ],
+              [
+                "0.2588*((0.38*Diametro) - 0.0005) - 0.00116",
+                "-0.9659*((0.38*Diametro) - 0.0005) + -0.00031"
+              ],
+              [
+                "0.2588*(0.19*Diametro) - 0.00116",
+                "-0.9659*(0.19*Diametro) + -0.00031"
+              ]
+            ],
+            "z": "(0.3*Diametro) + 0.004",
+            "height": "(0.5*Diametro + 0.005) - (0.3*Diametro) - 0.006"
+          }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Aleta do dissipador 11",
+        "shape": {
+          "Extrusion": {
+            "points": [
+              [
+                "0.7071*(0.19*Diametro) - -0.00085",
+                "-0.7071*(0.19*Diametro) + 0.00085"
+              ],
+              [
+                "0.7071*((0.38*Diametro) - 0.0005) - -0.00085",
+                "-0.7071*((0.38*Diametro) - 0.0005) + 0.00085"
+              ],
+              [
+                "0.7071*((0.38*Diametro) - 0.0005) - 0.00085",
+                "-0.7071*((0.38*Diametro) - 0.0005) + -0.00085"
+              ],
+              [
+                "0.7071*(0.19*Diametro) - 0.00085",
+                "-0.7071*(0.19*Diametro) + -0.00085"
+              ]
+            ],
+            "z": "(0.3*Diametro) + 0.004",
+            "height": "(0.5*Diametro + 0.005) - (0.3*Diametro) - 0.006"
+          }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Aleta do dissipador 12",
+        "shape": {
+          "Extrusion": {
+            "points": [
+              [
+                "0.9659*(0.19*Diametro) - -0.00031",
+                "-0.2588*(0.19*Diametro) + 0.00116"
+              ],
+              [
+                "0.9659*((0.38*Diametro) - 0.0005) - -0.00031",
+                "-0.2588*((0.38*Diametro) - 0.0005) + 0.00116"
+              ],
+              [
+                "0.9659*((0.38*Diametro) - 0.0005) - 0.00031",
+                "-0.2588*((0.38*Diametro) - 0.0005) + -0.00116"
+              ],
+              [
+                "0.9659*(0.19*Diametro) - 0.00031",
+                "-0.2588*(0.19*Diametro) + -0.00116"
+              ]
+            ],
+            "z": "(0.3*Diametro) + 0.004",
+            "height": "(0.5*Diametro + 0.005) - (0.3*Diametro) - 0.006"
+          }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa do dissipador",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0",
+            "z": "(0.5*Diametro + 0.005) - 0.002",
+            "radius": "0.2*Diametro + 0.002",
+            "height": "0.002"
+          }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Prensa-cabo do corpo",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0.2*Diametro",
+            "z": "(0.5*Diametro + 0.005) - 0.012",
+            "radius": "0.004",
+            "height": "0.008"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Mola 1 - suporte",
+        "shape": {
+          "Box": {
+            "x": "-1*((0.38*Diametro) + 0.004)",
+            "y": "-0.007",
+            "z": "0.0165",
+            "width": "0.004",
+            "depth": "0.014",
             "height": "0.02"
           }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Mola 1 - espiral",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-1*((0.38*Diametro) + 0.008)",
+                "v": "-0.006"
+              },
+              {
+                "u": "(-1*((0.38*Diametro) + 0.008)) + 0.0045",
+                "v": "-0.006"
+              },
+              {
+                "u": "(-1*((0.38*Diametro) + 0.008)) + 0.0045",
+                "v": "(-0.006) + 0.012"
+              },
+              {
+                "u": "-1*((0.38*Diametro) + 0.008)",
+                "v": "(-0.006) + 0.012"
+              }
+            ],
+            "offset": "0.0245",
+            "axis": "-1*((0.38*Diametro) + 0.008)",
+            "angle": "360"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Mola 1 - braço",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "-1*((0.38*Diametro) + 0.007)",
+                "v": "0.02"
+              },
+              {
+                "u": "-1*((0.38*Diametro) + 0.04)",
+                "v": "0.0125"
+              },
+              {
+                "u": "-1*((0.38*Diametro) + 0.0505)",
+                "v": "0.0125"
+              },
+              {
+                "u": "-1*((0.38*Diametro) + 0.0547)",
+                "v": "0.0162"
+              },
+              {
+                "u": "-1*((0.38*Diametro) + 0.0535)",
+                "v": "0.017"
+              },
+              {
+                "u": "-1*((0.38*Diametro) + 0.05)",
+                "v": "0.0135"
+              },
+              {
+                "u": "-1*((0.38*Diametro) + 0.04)",
+                "v": "0.0135"
+              },
+              {
+                "u": "-1*((0.38*Diametro) + 0.007)",
+                "v": "0.021"
+              }
+            ],
+            "offset": "-0.004",
+            "depth": "0.008"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Mola 1 - pino",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-1*((0.38*Diametro) + 0.008)",
+                "v": "-0.008"
+              },
+              {
+                "u": "(-1*((0.38*Diametro) + 0.008)) + 0.0012",
+                "v": "-0.008"
+              },
+              {
+                "u": "(-1*((0.38*Diametro) + 0.008)) + 0.0012",
+                "v": "(-0.008) + 0.016"
+              },
+              {
+                "u": "-1*((0.38*Diametro) + 0.008)",
+                "v": "(-0.008) + 0.016"
+              }
+            ],
+            "offset": "0.0245",
+            "axis": "-1*((0.38*Diametro) + 0.008)",
+            "angle": "360"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Mola 2 - suporte",
+        "shape": {
+          "Box": {
+            "x": "1*((0.38*Diametro) + 0)",
+            "y": "-0.007",
+            "z": "0.0165",
+            "width": "0.004",
+            "depth": "0.014",
+            "height": "0.02"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Mola 2 - espiral",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "1*((0.38*Diametro) + 0.008)",
+                "v": "-0.006"
+              },
+              {
+                "u": "(1*((0.38*Diametro) + 0.008)) + 0.0045",
+                "v": "-0.006"
+              },
+              {
+                "u": "(1*((0.38*Diametro) + 0.008)) + 0.0045",
+                "v": "(-0.006) + 0.012"
+              },
+              {
+                "u": "1*((0.38*Diametro) + 0.008)",
+                "v": "(-0.006) + 0.012"
+              }
+            ],
+            "offset": "0.0245",
+            "axis": "1*((0.38*Diametro) + 0.008)",
+            "angle": "360"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Mola 2 - braço",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "1*((0.38*Diametro) + 0.007)",
+                "v": "0.021"
+              },
+              {
+                "u": "1*((0.38*Diametro) + 0.04)",
+                "v": "0.0135"
+              },
+              {
+                "u": "1*((0.38*Diametro) + 0.05)",
+                "v": "0.0135"
+              },
+              {
+                "u": "1*((0.38*Diametro) + 0.0535)",
+                "v": "0.017"
+              },
+              {
+                "u": "1*((0.38*Diametro) + 0.0547)",
+                "v": "0.0162"
+              },
+              {
+                "u": "1*((0.38*Diametro) + 0.0505)",
+                "v": "0.0125"
+              },
+              {
+                "u": "1*((0.38*Diametro) + 0.04)",
+                "v": "0.0125"
+              },
+              {
+                "u": "1*((0.38*Diametro) + 0.007)",
+                "v": "0.02"
+              }
+            ],
+            "offset": "-0.004",
+            "depth": "0.008"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Mola 2 - pino",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "1*((0.38*Diametro) + 0.008)",
+                "v": "-0.008"
+              },
+              {
+                "u": "(1*((0.38*Diametro) + 0.008)) + 0.0012",
+                "v": "-0.008"
+              },
+              {
+                "u": "(1*((0.38*Diametro) + 0.008)) + 0.0012",
+                "v": "(-0.008) + 0.016"
+              },
+              {
+                "u": "1*((0.38*Diametro) + 0.008)",
+                "v": "(-0.008) + 0.016"
+              }
+            ],
+            "offset": "0.0245",
+            "axis": "1*((0.38*Diametro) + 0.008)",
+            "angle": "360"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Driver",
+        "shape": {
+          "Box": {
+            "x": "-0.0175",
+            "y": "((0.38*Diametro) + 0.06)",
+            "z": "0.0125",
+            "width": "0.035",
+            "depth": "0.075",
+            "height": "0.022"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Driver - tampa do borne 1",
+        "shape": {
+          "Box": {
+            "x": "-0.016",
+            "y": "((0.38*Diametro) + 0.06) - 0.006",
+            "z": "0.0135",
+            "width": "0.032",
+            "depth": "0.006",
+            "height": "0.02"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Driver - tampa do borne 2",
+        "shape": {
+          "Box": {
+            "x": "-0.016",
+            "y": "((0.38*Diametro) + 0.06) + 0.075",
+            "z": "0.0135",
+            "width": "0.032",
+            "depth": "0.006",
+            "height": "0.02"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Driver - etiqueta",
+        "shape": {
+          "Box": {
+            "x": "-0.012",
+            "y": "((0.38*Diametro) + 0.06) + 0.012",
+            "z": "0.0345",
+            "width": "0.024",
+            "depth": "0.05",
+            "height": "0.0004"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cabo do LED",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0",
+                "v": "(0.38*Diametro) - 0.001"
+              },
+              {
+                "u": "0 + 0.0025",
+                "v": "(0.38*Diametro) - 0.001"
+              },
+              {
+                "u": "0 + 0.0025",
+                "v": "((0.38*Diametro) - 0.001) + (((0.38*Diametro) + 0.06) - (0.38*Diametro) - 0.005)"
+              },
+              {
+                "u": "0",
+                "v": "((0.38*Diametro) - 0.001) + (((0.38*Diametro) + 0.06) - (0.38*Diametro) - 0.005)"
+              }
+            ],
+            "offset": "0.0235",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cabo de alimentação",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0",
+                "v": "((0.38*Diametro) + 0.06) + 0.081"
+              },
+              {
+                "u": "0 + 0.003",
+                "v": "((0.38*Diametro) + 0.06) + 0.081"
+              },
+              {
+                "u": "0 + 0.003",
+                "v": "(((0.38*Diametro) + 0.06) + 0.081) + 0.04"
+              },
+              {
+                "u": "0",
+                "v": "(((0.38*Diametro) + 0.06) + 0.081) + 0.04"
+              }
+            ],
+            "offset": "0.0235",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Conector de engate rápido",
+        "shape": {
+          "Box": {
+            "x": "-0.008",
+            "y": "((0.38*Diametro) + 0.06) + 0.121",
+            "z": "0.0165",
+            "width": "0.016",
+            "depth": "0.02",
+            "height": "0.014"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
         }
       }
     ],
@@ -53,12 +1278,125 @@
   ],
   "materials": [
     {
-      "name": "Alumínio",
+      "name": "Aço pintado branco",
       "color": [
-        200,
-        200,
-        205
-      ]
+        240,
+        240,
+        236
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Alumínio fundido",
+      "color": [
+        172,
+        174,
+        177
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Cromado",
+      "color": [
+        226,
+        229,
+        233
+      ],
+      "class": "Metal",
+      "finish": "Polished",
+      "transparency": 0
+    },
+    {
+      "name": "Alumínio anodizado",
+      "color": [
+        206,
+        208,
+        210
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Fita de LED",
+      "color": [
+        255,
+        244,
+        214
+      ],
+      "class": "Plastic",
+      "finish": "Glossy",
+      "transparency": 0.3
+    },
+    {
+      "name": "Difusor opalino",
+      "color": [
+        250,
+        250,
+        245
+      ],
+      "class": "Plastic",
+      "finish": "Glossy",
+      "transparency": 0.3
+    },
+    {
+      "name": "Plástico preto",
+      "color": [
+        34,
+        34,
+        37
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Borracha",
+      "color": [
+        30,
+        30,
+        30
+      ],
+      "class": "Plastic",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Aço galvanizado",
+      "color": [
+        160,
+        165,
+        170
+      ],
+      "class": "Metal",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Branco",
+      "color": [
+        244,
+        244,
+        240
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico cinza claro",
+      "color": [
+        196,
+        198,
+        200
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
     }
   ]
 }
