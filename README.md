@@ -5,7 +5,11 @@
 
 A free library of parametric components for [ConstructCraft](https://github.com/francisreboucas/constructcraft): furniture, casework, plumbing fixtures, electrical devices, lighting and planting, ready to load into any project.
 
-[Português (Brasil)](README.pt-BR.md) · [Catalog](CATALOG.md) · [Contributing](CONTRIBUTING.md)
+[Português (Brasil)](README.pt-BR.md) · [Viewer](https://francisreboucas.github.io/constructcraft-components/) · [Catalog](CATALOG.md) · [Contributing](CONTRIBUTING.md)
+
+## Browse online
+
+The [online viewer](https://francisreboucas.github.io/constructcraft-components/) shows every component in 3D with its dimensions, types and MEP data, and a link to download its `.ccomp` file.
 
 ![The library placed in a project: furniture, casework, plumbing fixtures, electrical devices and lighting](docs/vitrine-3d.png)
 
@@ -57,4 +61,4 @@ The planting sources are generated: [`tools/vegetation.py`](tools/vegetation.py)
 
 ## License
 
-The components are licensed under [Creative Commons Attribution 4.0](LICENSE): use them in any project, commercial or not; if you redistribute the library or derived components, credit "ConstructCraft Components contributors".
+The components are licensed under [Creative Commons Attribution 4.0](LICENSE): use them in any project, commercial or not; if you redistribute the library or derived components, credit "ConstructCraft Components contributors". The viewer code in [`viewer/`](viewer) is licensed under [GPL-3.0-or-later](viewer/LICENSE).
