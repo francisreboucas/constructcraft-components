@@ -1,0 +1,3128 @@
+{
+  "component": "Ar-condicionado split - evaporadora",
+  "def": {
+    "kind": "Furniture",
+    "params": [
+      {
+        "name": "Largura",
+        "value": 0.8,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Profundidade",
+        "value": 0.2,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Altura",
+        "value": 0.29,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "AnguloAleta",
+        "value": 0,
+        "kind": "Angle",
+        "instance": true
+      }
+    ],
+    "items": [
+      {
+        "name": "Corpo simplificado",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-0.004",
+                "v": "0"
+              },
+              {
+                "u": "-0.004",
+                "v": "Altura + 0.0"
+              },
+              {
+                "u": "-0.55*Profundidade",
+                "v": "Altura + 0.0",
+                "radius": "(0.8*sqrt(0.2025*Profundidade*Profundidade + 0.1444*Altura*Altura)) + 0.0"
+              },
+              {
+                "u": "-Profundidade - 0.0",
+                "v": "0.62*Altura"
+              },
+              {
+                "u": "-Profundidade - 0.0",
+                "v": "(0.42*Profundidade) - 0.0"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - 0.0",
+                "v": "0"
+              }
+            ],
+            "offset": "-Largura/2",
+            "depth": "Largura"
+          }
+        },
+        "material": "Branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Corpo",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-0.004",
+                "v": "0"
+              },
+              {
+                "u": "-0.004",
+                "v": "Altura + 0.0"
+              },
+              {
+                "u": "(-0.10*Profundidade)",
+                "v": "Altura + 0.0"
+              },
+              {
+                "u": "(-0.10*Profundidade)",
+                "v": "Altura - 0.008"
+              },
+              {
+                "u": "(-0.10*Profundidade) - 0.03*Profundidade",
+                "v": "Altura - 0.008"
+              },
+              {
+                "u": "(-0.10*Profundidade) - 0.03*Profundidade",
+                "v": "Altura + 0.0"
+              },
+              {
+                "u": "(-0.16*Profundidade)",
+                "v": "Altura + 0.0"
+              },
+              {
+                "u": "(-0.16*Profundidade)",
+                "v": "Altura - 0.008"
+              },
+              {
+                "u": "(-0.16*Profundidade) - 0.03*Profundidade",
+                "v": "Altura - 0.008"
+              },
+              {
+                "u": "(-0.16*Profundidade) - 0.03*Profundidade",
+                "v": "Altura + 0.0"
+              },
+              {
+                "u": "(-0.22*Profundidade)",
+                "v": "Altura + 0.0"
+              },
+              {
+                "u": "(-0.22*Profundidade)",
+                "v": "Altura - 0.008"
+              },
+              {
+                "u": "(-0.22*Profundidade) - 0.03*Profundidade",
+                "v": "Altura - 0.008"
+              },
+              {
+                "u": "(-0.22*Profundidade) - 0.03*Profundidade",
+                "v": "Altura + 0.0"
+              },
+              {
+                "u": "(-0.28*Profundidade)",
+                "v": "Altura + 0.0"
+              },
+              {
+                "u": "(-0.28*Profundidade)",
+                "v": "Altura - 0.008"
+              },
+              {
+                "u": "(-0.28*Profundidade) - 0.03*Profundidade",
+                "v": "Altura - 0.008"
+              },
+              {
+                "u": "(-0.28*Profundidade) - 0.03*Profundidade",
+                "v": "Altura + 0.0"
+              },
+              {
+                "u": "(-0.34*Profundidade)",
+                "v": "Altura + 0.0"
+              },
+              {
+                "u": "(-0.34*Profundidade)",
+                "v": "Altura - 0.008"
+              },
+              {
+                "u": "(-0.34*Profundidade) - 0.03*Profundidade",
+                "v": "Altura - 0.008"
+              },
+              {
+                "u": "(-0.34*Profundidade) - 0.03*Profundidade",
+                "v": "Altura + 0.0"
+              },
+              {
+                "u": "(-0.40*Profundidade)",
+                "v": "Altura + 0.0"
+              },
+              {
+                "u": "(-0.40*Profundidade)",
+                "v": "Altura - 0.008"
+              },
+              {
+                "u": "(-0.40*Profundidade) - 0.03*Profundidade",
+                "v": "Altura - 0.008"
+              },
+              {
+                "u": "(-0.40*Profundidade) - 0.03*Profundidade",
+                "v": "Altura + 0.0"
+              },
+              {
+                "u": "(-0.46*Profundidade)",
+                "v": "Altura + 0.0"
+              },
+              {
+                "u": "(-0.46*Profundidade)",
+                "v": "Altura - 0.008"
+              },
+              {
+                "u": "(-0.46*Profundidade) - 0.03*Profundidade",
+                "v": "Altura - 0.008"
+              },
+              {
+                "u": "(-0.46*Profundidade) - 0.03*Profundidade",
+                "v": "Altura + 0.0"
+              },
+              {
+                "u": "-0.55*Profundidade",
+                "v": "Altura + 0.0",
+                "radius": "(0.8*sqrt(0.2025*Profundidade*Profundidade + 0.1444*Altura*Altura)) + 0.0"
+              },
+              {
+                "u": "-Profundidade - 0.0",
+                "v": "0.62*Altura"
+              },
+              {
+                "u": "-Profundidade - 0.0",
+                "v": "(0.42*Profundidade) - 0.0"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - (((0.594*Profundidade)) + (-(0.2*Profundidade)))*0.70710678",
+                "v": "(((0.594*Profundidade)) - (-(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - (0 + (-(0.2*Profundidade)))*0.70710678",
+                "v": "(0 - (-(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - 0.0",
+                "v": "0"
+              }
+            ],
+            "offset": "(-Largura/2 + 0.022)",
+            "depth": "(Largura - 0.044)"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Chassi",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.022)",
+            "y": "-0.94*Profundidade",
+            "z": "0.65*Altura",
+            "width": "(Largura - 0.044)",
+            "depth": "0.94*Profundidade + -0.004",
+            "height": "0.1*Altura"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa lateral esquerda",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-0.004",
+                "v": "-0.0015"
+              },
+              {
+                "u": "-0.004",
+                "v": "Altura + 0.0015"
+              },
+              {
+                "u": "-0.55*Profundidade",
+                "v": "Altura + 0.0015",
+                "radius": "(0.8*sqrt(0.2025*Profundidade*Profundidade + 0.1444*Altura*Altura)) + 0.0015"
+              },
+              {
+                "u": "-Profundidade - 0.0015",
+                "v": "0.62*Altura"
+              },
+              {
+                "u": "-Profundidade - 0.0015",
+                "v": "(0.42*Profundidade) - 0.0006000000000000001"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - 0.0006000000000000001",
+                "v": "-0.0015"
+              }
+            ],
+            "offset": "-Largura/2",
+            "depth": "0.022"
+          }
+        },
+        "material": "Branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa lateral direita",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-0.004",
+                "v": "-0.0015"
+              },
+              {
+                "u": "-0.004",
+                "v": "Altura + 0.0015"
+              },
+              {
+                "u": "-0.55*Profundidade",
+                "v": "Altura + 0.0015",
+                "radius": "(0.8*sqrt(0.2025*Profundidade*Profundidade + 0.1444*Altura*Altura)) + 0.0015"
+              },
+              {
+                "u": "-Profundidade - 0.0015",
+                "v": "0.62*Altura"
+              },
+              {
+                "u": "-Profundidade - 0.0015",
+                "v": "(0.42*Profundidade) - 0.0006000000000000001"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - 0.0006000000000000001",
+                "v": "-0.0015"
+              }
+            ],
+            "offset": "Largura/2 - 0.022",
+            "depth": "0.022"
+          }
+        },
+        "material": "Branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Painel frontal",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-0.5*Profundidade",
+                "v": "Altura + 0.0025",
+                "radius": "(0.8*sqrt(0.2025*Profundidade*Profundidade + 0.1444*Altura*Altura)) + 0.0025"
+              },
+              {
+                "u": "-Profundidade - 0.0025",
+                "v": "0.62*Altura"
+              },
+              {
+                "u": "-Profundidade - 0.0025",
+                "v": "(0.42*Profundidade) + 0.006"
+              },
+              {
+                "u": "-Profundidade + 0.01",
+                "v": "(0.42*Profundidade) + 0.006"
+              },
+              {
+                "u": "-Profundidade + 0.01",
+                "v": "0.62*Altura"
+              },
+              {
+                "u": "-0.5*Profundidade",
+                "v": "Altura - 0.01"
+              }
+            ],
+            "offset": "(-Largura/2 + 0.022) + 0.004",
+            "depth": "(Largura - 0.044) - 0.008"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Friso do painel",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.022) + 0.004",
+            "y": "-Profundidade - 0.0032",
+            "z": "(0.42*Profundidade) + 0.006",
+            "width": "(Largura - 0.044) - 0.008",
+            "depth": "0.004",
+            "height": "0.004"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Filtro de ar",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.022) + 0.002",
+            "y": "-0.5*Profundidade",
+            "z": "Altura - 0.0085",
+            "width": "(Largura - 0.044) - 0.004",
+            "depth": "0.41*Profundidade",
+            "height": "0.001"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade superior - nervura 1",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.022) + 0.0455*(Largura - 0.044) - 0.0015",
+            "y": "-0.49*Profundidade",
+            "z": "Altura - 0.008",
+            "width": "0.003",
+            "depth": "0.39*Profundidade",
+            "height": "0.0075"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade superior - nervura 2",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.022) + 0.1364*(Largura - 0.044) - 0.0015",
+            "y": "-0.49*Profundidade",
+            "z": "Altura - 0.008",
+            "width": "0.003",
+            "depth": "0.39*Profundidade",
+            "height": "0.0075"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade superior - nervura 3",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.022) + 0.2273*(Largura - 0.044) - 0.0015",
+            "y": "-0.49*Profundidade",
+            "z": "Altura - 0.008",
+            "width": "0.003",
+            "depth": "0.39*Profundidade",
+            "height": "0.0075"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade superior - nervura 4",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.022) + 0.3182*(Largura - 0.044) - 0.0015",
+            "y": "-0.49*Profundidade",
+            "z": "Altura - 0.008",
+            "width": "0.003",
+            "depth": "0.39*Profundidade",
+            "height": "0.0075"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade superior - nervura 5",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.022) + 0.4091*(Largura - 0.044) - 0.0015",
+            "y": "-0.49*Profundidade",
+            "z": "Altura - 0.008",
+            "width": "0.003",
+            "depth": "0.39*Profundidade",
+            "height": "0.0075"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade superior - nervura 6",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.022) + 0.5000*(Largura - 0.044) - 0.0015",
+            "y": "-0.49*Profundidade",
+            "z": "Altura - 0.008",
+            "width": "0.003",
+            "depth": "0.39*Profundidade",
+            "height": "0.0075"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade superior - nervura 7",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.022) + 0.5909*(Largura - 0.044) - 0.0015",
+            "y": "-0.49*Profundidade",
+            "z": "Altura - 0.008",
+            "width": "0.003",
+            "depth": "0.39*Profundidade",
+            "height": "0.0075"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade superior - nervura 8",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.022) + 0.6818*(Largura - 0.044) - 0.0015",
+            "y": "-0.49*Profundidade",
+            "z": "Altura - 0.008",
+            "width": "0.003",
+            "depth": "0.39*Profundidade",
+            "height": "0.0075"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade superior - nervura 9",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.022) + 0.7727*(Largura - 0.044) - 0.0015",
+            "y": "-0.49*Profundidade",
+            "z": "Altura - 0.008",
+            "width": "0.003",
+            "depth": "0.39*Profundidade",
+            "height": "0.0075"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade superior - nervura 10",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.022) + 0.8636*(Largura - 0.044) - 0.0015",
+            "y": "-0.49*Profundidade",
+            "z": "Altura - 0.008",
+            "width": "0.003",
+            "depth": "0.39*Profundidade",
+            "height": "0.0075"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade superior - nervura 11",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.022) + 0.9545*(Largura - 0.044) - 0.0015",
+            "y": "-0.49*Profundidade",
+            "z": "Altura - 0.008",
+            "width": "0.003",
+            "depth": "0.39*Profundidade",
+            "height": "0.0075"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Filtro de ar - puxador 1",
+        "shape": {
+          "Box": {
+            "x": "-0.22*Largura - 0.02",
+            "y": "-0.52*Profundidade",
+            "z": "Altura - 0.004",
+            "width": "0.04",
+            "depth": "0.012",
+            "height": "0.0048"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Filtro de ar - puxador 2",
+        "shape": {
+          "Box": {
+            "x": "0.22*Largura - 0.02",
+            "y": "-0.52*Profundidade",
+            "z": "Altura - 0.004",
+            "width": "0.04",
+            "depth": "0.012",
+            "height": "0.0048"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída de ar - fundo",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - (0 + (-(0.2*Profundidade)))*0.70710678",
+                "v": "(0 - (-(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - (0 + (-(0.2*Profundidade) + 0.002))*0.70710678",
+                "v": "(0 - (-(0.2*Profundidade) + 0.002))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - (((0.594*Profundidade)) + (-(0.2*Profundidade) + 0.002))*0.70710678",
+                "v": "(((0.594*Profundidade)) - (-(0.2*Profundidade) + 0.002))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - (((0.594*Profundidade)) + (-(0.2*Profundidade)))*0.70710678",
+                "v": "(((0.594*Profundidade)) - (-(0.2*Profundidade)))*0.70710678"
+              }
+            ],
+            "offset": "(-Largura/2 + 0.022)",
+            "depth": "(Largura - 0.044)"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída de ar - parede superior",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - (((0.594*Profundidade) - 0.002) + (-(0.2*Profundidade)))*0.70710678",
+                "v": "(((0.594*Profundidade) - 0.002) - (-(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - (((0.594*Profundidade) - 0.002) + (-0.001))*0.70710678",
+                "v": "(((0.594*Profundidade) - 0.002) - (-0.001))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - (((0.594*Profundidade)) + (-0.001))*0.70710678",
+                "v": "(((0.594*Profundidade)) - (-0.001))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - (((0.594*Profundidade)) + (-(0.2*Profundidade)))*0.70710678",
+                "v": "(((0.594*Profundidade)) - (-(0.2*Profundidade)))*0.70710678"
+              }
+            ],
+            "offset": "(-Largura/2 + 0.022)",
+            "depth": "(Largura - 0.044)"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída de ar - parede inferior",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - (0 + (-(0.2*Profundidade)))*0.70710678",
+                "v": "(0 - (-(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - (0 + (-0.001))*0.70710678",
+                "v": "(0 - (-0.001))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - (0.002 + (-0.001))*0.70710678",
+                "v": "(0.002 - (-0.001))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - (0.002 + (-(0.2*Profundidade)))*0.70710678",
+                "v": "(0.002 - (-(0.2*Profundidade)))*0.70710678"
+              }
+            ],
+            "offset": "(-Largura/2 + 0.022)",
+            "depth": "(Largura - 0.044)"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída de ar - parede esquerda",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - (0 + (-(0.2*Profundidade)))*0.70710678",
+                "v": "(0 - (-(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - (0 + (-0.001))*0.70710678",
+                "v": "(0 - (-0.001))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - (((0.594*Profundidade)) + (-0.001))*0.70710678",
+                "v": "(((0.594*Profundidade)) - (-0.001))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - (((0.594*Profundidade)) + (-(0.2*Profundidade)))*0.70710678",
+                "v": "(((0.594*Profundidade)) - (-(0.2*Profundidade)))*0.70710678"
+              }
+            ],
+            "offset": "(-Largura/2 + 0.022)",
+            "depth": "0.002"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída de ar - parede direita",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - (0 + (-(0.2*Profundidade)))*0.70710678",
+                "v": "(0 - (-(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - (0 + (-0.001))*0.70710678",
+                "v": "(0 - (-0.001))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - (((0.594*Profundidade)) + (-0.001))*0.70710678",
+                "v": "(((0.594*Profundidade)) - (-0.001))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - (((0.594*Profundidade)) + (-(0.2*Profundidade)))*0.70710678",
+                "v": "(((0.594*Profundidade)) - (-(0.2*Profundidade)))*0.70710678"
+              }
+            ],
+            "offset": "(-Largura/2 + 0.022) + (Largura - 0.044) - 0.002",
+            "depth": "0.002"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Turbina tangencial",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(-Profundidade + (0.42*Profundidade) - ((0.5*(0.594*Profundidade)) + (-(0.2*Profundidade) - 0.022))*0.70710678) - 0.036",
+                "v": "((0.5*(0.594*Profundidade)) - (-(0.2*Profundidade) - 0.022))*0.70710678",
+                "radius": "0.036"
+              },
+              {
+                "u": "(-Profundidade + (0.42*Profundidade) - ((0.5*(0.594*Profundidade)) + (-(0.2*Profundidade) - 0.022))*0.70710678) + 0.036",
+                "v": "((0.5*(0.594*Profundidade)) - (-(0.2*Profundidade) - 0.022))*0.70710678",
+                "radius": "0.036"
+              }
+            ],
+            "offset": "(-Largura/2 + 0.022) + 0.03",
+            "depth": "(Largura - 0.044) - 0.09"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Motor da turbina",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(-Profundidade + (0.42*Profundidade) - ((0.5*(0.594*Profundidade)) + (-(0.2*Profundidade) - 0.022))*0.70710678) - 0.03",
+                "v": "((0.5*(0.594*Profundidade)) - (-(0.2*Profundidade) - 0.022))*0.70710678",
+                "radius": "0.03"
+              },
+              {
+                "u": "(-Profundidade + (0.42*Profundidade) - ((0.5*(0.594*Profundidade)) + (-(0.2*Profundidade) - 0.022))*0.70710678) + 0.03",
+                "v": "((0.5*(0.594*Profundidade)) - (-(0.2*Profundidade) - 0.022))*0.70710678",
+                "radius": "0.03"
+              }
+            ],
+            "offset": "(-Largura/2 + 0.022) + (Largura - 0.044) - 0.06",
+            "depth": "0.05"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Mancal da turbina",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(-Profundidade + (0.42*Profundidade) - ((0.5*(0.594*Profundidade)) + (-(0.2*Profundidade) - 0.022))*0.70710678) - 0.012",
+                "v": "((0.5*(0.594*Profundidade)) - (-(0.2*Profundidade) - 0.022))*0.70710678",
+                "radius": "0.012"
+              },
+              {
+                "u": "(-Profundidade + (0.42*Profundidade) - ((0.5*(0.594*Profundidade)) + (-(0.2*Profundidade) - 0.022))*0.70710678) + 0.012",
+                "v": "((0.5*(0.594*Profundidade)) - (-(0.2*Profundidade) - 0.022))*0.70710678",
+                "radius": "0.012"
+              }
+            ],
+            "offset": "(-Largura/2 + 0.022) + 0.012",
+            "depth": "0.018"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Aleta interna",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.5*(0.594*Profundidade) - 0.001) + (-(0.2*Profundidade) + 0.004))*0.70710678",
+                "v": "((0.5*(0.594*Profundidade) - 0.001) - (-(0.2*Profundidade) + 0.004))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.5*(0.594*Profundidade) - 0.001) + (-0.012))*0.70710678",
+                "v": "((0.5*(0.594*Profundidade) - 0.001) - (-0.012))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.5*(0.594*Profundidade) + 0.001) + (-0.012))*0.70710678",
+                "v": "((0.5*(0.594*Profundidade) + 0.001) - (-0.012))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.5*(0.594*Profundidade) + 0.001) + (-(0.2*Profundidade) + 0.004))*0.70710678",
+                "v": "((0.5*(0.594*Profundidade) + 0.001) - (-(0.2*Profundidade) + 0.004))*0.70710678"
+              }
+            ],
+            "offset": "(-Largura/2 + 0.022) + 0.004",
+            "depth": "(Largura - 0.044) - 0.008"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Defletor vertical 1",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.12*(0.594*Profundidade)) + (-(0.2*Profundidade) + 0.002))*0.70710678",
+                "v": "((0.12*(0.594*Profundidade)) - (-(0.2*Profundidade) + 0.002))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.12*(0.594*Profundidade)) + (-0.4*(0.2*Profundidade)))*0.70710678",
+                "v": "((0.12*(0.594*Profundidade)) - (-0.4*(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.88*(0.594*Profundidade)) + (-0.4*(0.2*Profundidade)))*0.70710678",
+                "v": "((0.88*(0.594*Profundidade)) - (-0.4*(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.88*(0.594*Profundidade)) + (-(0.2*Profundidade) + 0.002))*0.70710678",
+                "v": "((0.88*(0.594*Profundidade)) - (-(0.2*Profundidade) + 0.002))*0.70710678"
+              }
+            ],
+            "offset": "(-Largura/2 + 0.022) + 0.0312*(Largura - 0.044) - 0.001",
+            "depth": "0.002"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Defletor vertical 2",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.12*(0.594*Profundidade)) + (-(0.2*Profundidade) + 0.002))*0.70710678",
+                "v": "((0.12*(0.594*Profundidade)) - (-(0.2*Profundidade) + 0.002))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.12*(0.594*Profundidade)) + (-0.4*(0.2*Profundidade)))*0.70710678",
+                "v": "((0.12*(0.594*Profundidade)) - (-0.4*(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.88*(0.594*Profundidade)) + (-0.4*(0.2*Profundidade)))*0.70710678",
+                "v": "((0.88*(0.594*Profundidade)) - (-0.4*(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.88*(0.594*Profundidade)) + (-(0.2*Profundidade) + 0.002))*0.70710678",
+                "v": "((0.88*(0.594*Profundidade)) - (-(0.2*Profundidade) + 0.002))*0.70710678"
+              }
+            ],
+            "offset": "(-Largura/2 + 0.022) + 0.0938*(Largura - 0.044) - 0.001",
+            "depth": "0.002"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Defletor vertical 3",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.12*(0.594*Profundidade)) + (-(0.2*Profundidade) + 0.002))*0.70710678",
+                "v": "((0.12*(0.594*Profundidade)) - (-(0.2*Profundidade) + 0.002))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.12*(0.594*Profundidade)) + (-0.4*(0.2*Profundidade)))*0.70710678",
+                "v": "((0.12*(0.594*Profundidade)) - (-0.4*(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.88*(0.594*Profundidade)) + (-0.4*(0.2*Profundidade)))*0.70710678",
+                "v": "((0.88*(0.594*Profundidade)) - (-0.4*(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.88*(0.594*Profundidade)) + (-(0.2*Profundidade) + 0.002))*0.70710678",
+                "v": "((0.88*(0.594*Profundidade)) - (-(0.2*Profundidade) + 0.002))*0.70710678"
+              }
+            ],
+            "offset": "(-Largura/2 + 0.022) + 0.1562*(Largura - 0.044) - 0.001",
+            "depth": "0.002"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Defletor vertical 4",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.12*(0.594*Profundidade)) + (-(0.2*Profundidade) + 0.002))*0.70710678",
+                "v": "((0.12*(0.594*Profundidade)) - (-(0.2*Profundidade) + 0.002))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.12*(0.594*Profundidade)) + (-0.4*(0.2*Profundidade)))*0.70710678",
+                "v": "((0.12*(0.594*Profundidade)) - (-0.4*(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.88*(0.594*Profundidade)) + (-0.4*(0.2*Profundidade)))*0.70710678",
+                "v": "((0.88*(0.594*Profundidade)) - (-0.4*(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.88*(0.594*Profundidade)) + (-(0.2*Profundidade) + 0.002))*0.70710678",
+                "v": "((0.88*(0.594*Profundidade)) - (-(0.2*Profundidade) + 0.002))*0.70710678"
+              }
+            ],
+            "offset": "(-Largura/2 + 0.022) + 0.2188*(Largura - 0.044) - 0.001",
+            "depth": "0.002"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Defletor vertical 5",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.12*(0.594*Profundidade)) + (-(0.2*Profundidade) + 0.002))*0.70710678",
+                "v": "((0.12*(0.594*Profundidade)) - (-(0.2*Profundidade) + 0.002))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.12*(0.594*Profundidade)) + (-0.4*(0.2*Profundidade)))*0.70710678",
+                "v": "((0.12*(0.594*Profundidade)) - (-0.4*(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.88*(0.594*Profundidade)) + (-0.4*(0.2*Profundidade)))*0.70710678",
+                "v": "((0.88*(0.594*Profundidade)) - (-0.4*(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.88*(0.594*Profundidade)) + (-(0.2*Profundidade) + 0.002))*0.70710678",
+                "v": "((0.88*(0.594*Profundidade)) - (-(0.2*Profundidade) + 0.002))*0.70710678"
+              }
+            ],
+            "offset": "(-Largura/2 + 0.022) + 0.2812*(Largura - 0.044) - 0.001",
+            "depth": "0.002"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Defletor vertical 6",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.12*(0.594*Profundidade)) + (-(0.2*Profundidade) + 0.002))*0.70710678",
+                "v": "((0.12*(0.594*Profundidade)) - (-(0.2*Profundidade) + 0.002))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.12*(0.594*Profundidade)) + (-0.4*(0.2*Profundidade)))*0.70710678",
+                "v": "((0.12*(0.594*Profundidade)) - (-0.4*(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.88*(0.594*Profundidade)) + (-0.4*(0.2*Profundidade)))*0.70710678",
+                "v": "((0.88*(0.594*Profundidade)) - (-0.4*(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.88*(0.594*Profundidade)) + (-(0.2*Profundidade) + 0.002))*0.70710678",
+                "v": "((0.88*(0.594*Profundidade)) - (-(0.2*Profundidade) + 0.002))*0.70710678"
+              }
+            ],
+            "offset": "(-Largura/2 + 0.022) + 0.3438*(Largura - 0.044) - 0.001",
+            "depth": "0.002"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Defletor vertical 7",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.12*(0.594*Profundidade)) + (-(0.2*Profundidade) + 0.002))*0.70710678",
+                "v": "((0.12*(0.594*Profundidade)) - (-(0.2*Profundidade) + 0.002))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.12*(0.594*Profundidade)) + (-0.4*(0.2*Profundidade)))*0.70710678",
+                "v": "((0.12*(0.594*Profundidade)) - (-0.4*(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.88*(0.594*Profundidade)) + (-0.4*(0.2*Profundidade)))*0.70710678",
+                "v": "((0.88*(0.594*Profundidade)) - (-0.4*(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.88*(0.594*Profundidade)) + (-(0.2*Profundidade) + 0.002))*0.70710678",
+                "v": "((0.88*(0.594*Profundidade)) - (-(0.2*Profundidade) + 0.002))*0.70710678"
+              }
+            ],
+            "offset": "(-Largura/2 + 0.022) + 0.4062*(Largura - 0.044) - 0.001",
+            "depth": "0.002"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Defletor vertical 8",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.12*(0.594*Profundidade)) + (-(0.2*Profundidade) + 0.002))*0.70710678",
+                "v": "((0.12*(0.594*Profundidade)) - (-(0.2*Profundidade) + 0.002))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.12*(0.594*Profundidade)) + (-0.4*(0.2*Profundidade)))*0.70710678",
+                "v": "((0.12*(0.594*Profundidade)) - (-0.4*(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.88*(0.594*Profundidade)) + (-0.4*(0.2*Profundidade)))*0.70710678",
+                "v": "((0.88*(0.594*Profundidade)) - (-0.4*(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.88*(0.594*Profundidade)) + (-(0.2*Profundidade) + 0.002))*0.70710678",
+                "v": "((0.88*(0.594*Profundidade)) - (-(0.2*Profundidade) + 0.002))*0.70710678"
+              }
+            ],
+            "offset": "(-Largura/2 + 0.022) + 0.4688*(Largura - 0.044) - 0.001",
+            "depth": "0.002"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Defletor vertical 9",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.12*(0.594*Profundidade)) + (-(0.2*Profundidade) + 0.002))*0.70710678",
+                "v": "((0.12*(0.594*Profundidade)) - (-(0.2*Profundidade) + 0.002))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.12*(0.594*Profundidade)) + (-0.4*(0.2*Profundidade)))*0.70710678",
+                "v": "((0.12*(0.594*Profundidade)) - (-0.4*(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.88*(0.594*Profundidade)) + (-0.4*(0.2*Profundidade)))*0.70710678",
+                "v": "((0.88*(0.594*Profundidade)) - (-0.4*(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.88*(0.594*Profundidade)) + (-(0.2*Profundidade) + 0.002))*0.70710678",
+                "v": "((0.88*(0.594*Profundidade)) - (-(0.2*Profundidade) + 0.002))*0.70710678"
+              }
+            ],
+            "offset": "(-Largura/2 + 0.022) + 0.5312*(Largura - 0.044) - 0.001",
+            "depth": "0.002"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Defletor vertical 10",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.12*(0.594*Profundidade)) + (-(0.2*Profundidade) + 0.002))*0.70710678",
+                "v": "((0.12*(0.594*Profundidade)) - (-(0.2*Profundidade) + 0.002))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.12*(0.594*Profundidade)) + (-0.4*(0.2*Profundidade)))*0.70710678",
+                "v": "((0.12*(0.594*Profundidade)) - (-0.4*(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.88*(0.594*Profundidade)) + (-0.4*(0.2*Profundidade)))*0.70710678",
+                "v": "((0.88*(0.594*Profundidade)) - (-0.4*(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.88*(0.594*Profundidade)) + (-(0.2*Profundidade) + 0.002))*0.70710678",
+                "v": "((0.88*(0.594*Profundidade)) - (-(0.2*Profundidade) + 0.002))*0.70710678"
+              }
+            ],
+            "offset": "(-Largura/2 + 0.022) + 0.5938*(Largura - 0.044) - 0.001",
+            "depth": "0.002"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Defletor vertical 11",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.12*(0.594*Profundidade)) + (-(0.2*Profundidade) + 0.002))*0.70710678",
+                "v": "((0.12*(0.594*Profundidade)) - (-(0.2*Profundidade) + 0.002))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.12*(0.594*Profundidade)) + (-0.4*(0.2*Profundidade)))*0.70710678",
+                "v": "((0.12*(0.594*Profundidade)) - (-0.4*(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.88*(0.594*Profundidade)) + (-0.4*(0.2*Profundidade)))*0.70710678",
+                "v": "((0.88*(0.594*Profundidade)) - (-0.4*(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.88*(0.594*Profundidade)) + (-(0.2*Profundidade) + 0.002))*0.70710678",
+                "v": "((0.88*(0.594*Profundidade)) - (-(0.2*Profundidade) + 0.002))*0.70710678"
+              }
+            ],
+            "offset": "(-Largura/2 + 0.022) + 0.6562*(Largura - 0.044) - 0.001",
+            "depth": "0.002"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Defletor vertical 12",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.12*(0.594*Profundidade)) + (-(0.2*Profundidade) + 0.002))*0.70710678",
+                "v": "((0.12*(0.594*Profundidade)) - (-(0.2*Profundidade) + 0.002))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.12*(0.594*Profundidade)) + (-0.4*(0.2*Profundidade)))*0.70710678",
+                "v": "((0.12*(0.594*Profundidade)) - (-0.4*(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.88*(0.594*Profundidade)) + (-0.4*(0.2*Profundidade)))*0.70710678",
+                "v": "((0.88*(0.594*Profundidade)) - (-0.4*(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.88*(0.594*Profundidade)) + (-(0.2*Profundidade) + 0.002))*0.70710678",
+                "v": "((0.88*(0.594*Profundidade)) - (-(0.2*Profundidade) + 0.002))*0.70710678"
+              }
+            ],
+            "offset": "(-Largura/2 + 0.022) + 0.7188*(Largura - 0.044) - 0.001",
+            "depth": "0.002"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Defletor vertical 13",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.12*(0.594*Profundidade)) + (-(0.2*Profundidade) + 0.002))*0.70710678",
+                "v": "((0.12*(0.594*Profundidade)) - (-(0.2*Profundidade) + 0.002))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.12*(0.594*Profundidade)) + (-0.4*(0.2*Profundidade)))*0.70710678",
+                "v": "((0.12*(0.594*Profundidade)) - (-0.4*(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.88*(0.594*Profundidade)) + (-0.4*(0.2*Profundidade)))*0.70710678",
+                "v": "((0.88*(0.594*Profundidade)) - (-0.4*(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.88*(0.594*Profundidade)) + (-(0.2*Profundidade) + 0.002))*0.70710678",
+                "v": "((0.88*(0.594*Profundidade)) - (-(0.2*Profundidade) + 0.002))*0.70710678"
+              }
+            ],
+            "offset": "(-Largura/2 + 0.022) + 0.7812*(Largura - 0.044) - 0.001",
+            "depth": "0.002"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Defletor vertical 14",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.12*(0.594*Profundidade)) + (-(0.2*Profundidade) + 0.002))*0.70710678",
+                "v": "((0.12*(0.594*Profundidade)) - (-(0.2*Profundidade) + 0.002))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.12*(0.594*Profundidade)) + (-0.4*(0.2*Profundidade)))*0.70710678",
+                "v": "((0.12*(0.594*Profundidade)) - (-0.4*(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.88*(0.594*Profundidade)) + (-0.4*(0.2*Profundidade)))*0.70710678",
+                "v": "((0.88*(0.594*Profundidade)) - (-0.4*(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.88*(0.594*Profundidade)) + (-(0.2*Profundidade) + 0.002))*0.70710678",
+                "v": "((0.88*(0.594*Profundidade)) - (-(0.2*Profundidade) + 0.002))*0.70710678"
+              }
+            ],
+            "offset": "(-Largura/2 + 0.022) + 0.8438*(Largura - 0.044) - 0.001",
+            "depth": "0.002"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Defletor vertical 15",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.12*(0.594*Profundidade)) + (-(0.2*Profundidade) + 0.002))*0.70710678",
+                "v": "((0.12*(0.594*Profundidade)) - (-(0.2*Profundidade) + 0.002))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.12*(0.594*Profundidade)) + (-0.4*(0.2*Profundidade)))*0.70710678",
+                "v": "((0.12*(0.594*Profundidade)) - (-0.4*(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.88*(0.594*Profundidade)) + (-0.4*(0.2*Profundidade)))*0.70710678",
+                "v": "((0.88*(0.594*Profundidade)) - (-0.4*(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.88*(0.594*Profundidade)) + (-(0.2*Profundidade) + 0.002))*0.70710678",
+                "v": "((0.88*(0.594*Profundidade)) - (-(0.2*Profundidade) + 0.002))*0.70710678"
+              }
+            ],
+            "offset": "(-Largura/2 + 0.022) + 0.9062*(Largura - 0.044) - 0.001",
+            "depth": "0.002"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Defletor vertical 16",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.12*(0.594*Profundidade)) + (-(0.2*Profundidade) + 0.002))*0.70710678",
+                "v": "((0.12*(0.594*Profundidade)) - (-(0.2*Profundidade) + 0.002))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.12*(0.594*Profundidade)) + (-0.4*(0.2*Profundidade)))*0.70710678",
+                "v": "((0.12*(0.594*Profundidade)) - (-0.4*(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.88*(0.594*Profundidade)) + (-0.4*(0.2*Profundidade)))*0.70710678",
+                "v": "((0.88*(0.594*Profundidade)) - (-0.4*(0.2*Profundidade)))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.88*(0.594*Profundidade)) + (-(0.2*Profundidade) + 0.002))*0.70710678",
+                "v": "((0.88*(0.594*Profundidade)) - (-(0.2*Profundidade) + 0.002))*0.70710678"
+              }
+            ],
+            "offset": "(-Largura/2 + 0.022) + 0.9688*(Largura - 0.044) - 0.001",
+            "depth": "0.002"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Haste dos defletores",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.3*(0.594*Profundidade)) + (-0.4*(0.2*Profundidade) - 0.006))*0.70710678",
+                "v": "((0.3*(0.594*Profundidade)) - (-0.4*(0.2*Profundidade) - 0.006))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.3*(0.594*Profundidade)) + (-0.4*(0.2*Profundidade) - 0.002))*0.70710678",
+                "v": "((0.3*(0.594*Profundidade)) - (-0.4*(0.2*Profundidade) - 0.002))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.3*(0.594*Profundidade) + 0.004) + (-0.4*(0.2*Profundidade) - 0.002))*0.70710678",
+                "v": "((0.3*(0.594*Profundidade) + 0.004) - (-0.4*(0.2*Profundidade) - 0.002))*0.70710678"
+              },
+              {
+                "u": "-Profundidade + (0.42*Profundidade) - ((0.3*(0.594*Profundidade) + 0.004) + (-0.4*(0.2*Profundidade) - 0.006))*0.70710678",
+                "v": "((0.3*(0.594*Profundidade) + 0.004) - (-0.4*(0.2*Profundidade) - 0.006))*0.70710678"
+              }
+            ],
+            "offset": "(-Largura/2 + 0.022) + 0.02",
+            "depth": "(Largura - 0.044) - 0.04"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Aleta horizontal",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((-Profundidade + (0.42*Profundidade))) - (-0.001)*cos(((45 + AnguloAleta))) - 0.003*sin(((45 + AnguloAleta)))",
+                "v": "0 + 0.003*cos(((45 + AnguloAleta))) - (-0.001)*sin(((45 + AnguloAleta)))"
+              },
+              {
+                "u": "((-Profundidade + (0.42*Profundidade))) - 0.004*cos(((45 + AnguloAleta))) - 0.003*sin(((45 + AnguloAleta)))",
+                "v": "0 + 0.003*cos(((45 + AnguloAleta))) - 0.004*sin(((45 + AnguloAleta)))"
+              },
+              {
+                "u": "((-Profundidade + (0.42*Profundidade))) - 0.004*cos(((45 + AnguloAleta))) - ((0.594*Profundidade) - 0.003)*sin(((45 + AnguloAleta)))",
+                "v": "0 + ((0.594*Profundidade) - 0.003)*cos(((45 + AnguloAleta))) - 0.004*sin(((45 + AnguloAleta)))"
+              },
+              {
+                "u": "((-Profundidade + (0.42*Profundidade))) - (-0.001)*cos(((45 + AnguloAleta))) - ((0.594*Profundidade) - 0.003)*sin(((45 + AnguloAleta)))",
+                "v": "0 + ((0.594*Profundidade) - 0.003)*cos(((45 + AnguloAleta))) - (-0.001)*sin(((45 + AnguloAleta)))"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.022) + 0.004)",
+            "depth": "((Largura - 0.044) - 0.008)"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Aleta horizontal - borda",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((-Profundidade + (0.42*Profundidade))) - 0.004*cos(((45 + AnguloAleta))) - ((0.594*Profundidade) - 0.008)*sin(((45 + AnguloAleta)))",
+                "v": "0 + ((0.594*Profundidade) - 0.008)*cos(((45 + AnguloAleta))) - 0.004*sin(((45 + AnguloAleta)))"
+              },
+              {
+                "u": "((-Profundidade + (0.42*Profundidade))) - 0.0055*cos(((45 + AnguloAleta))) - ((0.594*Profundidade) - 0.008)*sin(((45 + AnguloAleta)))",
+                "v": "0 + ((0.594*Profundidade) - 0.008)*cos(((45 + AnguloAleta))) - 0.0055*sin(((45 + AnguloAleta)))"
+              },
+              {
+                "u": "((-Profundidade + (0.42*Profundidade))) - 0.0055*cos(((45 + AnguloAleta))) - ((0.594*Profundidade) - 0.003)*sin(((45 + AnguloAleta)))",
+                "v": "0 + ((0.594*Profundidade) - 0.003)*cos(((45 + AnguloAleta))) - 0.0055*sin(((45 + AnguloAleta)))"
+              },
+              {
+                "u": "((-Profundidade + (0.42*Profundidade))) - 0.004*cos(((45 + AnguloAleta))) - ((0.594*Profundidade) - 0.003)*sin(((45 + AnguloAleta)))",
+                "v": "0 + ((0.594*Profundidade) - 0.003)*cos(((45 + AnguloAleta))) - 0.004*sin(((45 + AnguloAleta)))"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.022) + 0.004)",
+            "depth": "((Largura - 0.044) - 0.008)"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Aleta horizontal - nervura 1",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((-Profundidade + (0.42*Profundidade))) - (-0.004)*cos(((45 + AnguloAleta))) - 0.006*sin(((45 + AnguloAleta)))",
+                "v": "0 + 0.006*cos(((45 + AnguloAleta))) - (-0.004)*sin(((45 + AnguloAleta)))"
+              },
+              {
+                "u": "((-Profundidade + (0.42*Profundidade))) - (-0.001)*cos(((45 + AnguloAleta))) - 0.006*sin(((45 + AnguloAleta)))",
+                "v": "0 + 0.006*cos(((45 + AnguloAleta))) - (-0.001)*sin(((45 + AnguloAleta)))"
+              },
+              {
+                "u": "((-Profundidade + (0.42*Profundidade))) - (-0.001)*cos(((45 + AnguloAleta))) - (0.8*(0.594*Profundidade))*sin(((45 + AnguloAleta)))",
+                "v": "0 + (0.8*(0.594*Profundidade))*cos(((45 + AnguloAleta))) - (-0.001)*sin(((45 + AnguloAleta)))"
+              },
+              {
+                "u": "((-Profundidade + (0.42*Profundidade))) - (-0.004)*cos(((45 + AnguloAleta))) - (0.8*(0.594*Profundidade))*sin(((45 + AnguloAleta)))",
+                "v": "0 + (0.8*(0.594*Profundidade))*cos(((45 + AnguloAleta))) - (-0.004)*sin(((45 + AnguloAleta)))"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.022) + 0.004) + 0.10*((Largura - 0.044) - 0.008) - 0.002",
+            "depth": "0.004"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Aleta horizontal - nervura 2",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((-Profundidade + (0.42*Profundidade))) - (-0.004)*cos(((45 + AnguloAleta))) - 0.006*sin(((45 + AnguloAleta)))",
+                "v": "0 + 0.006*cos(((45 + AnguloAleta))) - (-0.004)*sin(((45 + AnguloAleta)))"
+              },
+              {
+                "u": "((-Profundidade + (0.42*Profundidade))) - (-0.001)*cos(((45 + AnguloAleta))) - 0.006*sin(((45 + AnguloAleta)))",
+                "v": "0 + 0.006*cos(((45 + AnguloAleta))) - (-0.001)*sin(((45 + AnguloAleta)))"
+              },
+              {
+                "u": "((-Profundidade + (0.42*Profundidade))) - (-0.001)*cos(((45 + AnguloAleta))) - (0.8*(0.594*Profundidade))*sin(((45 + AnguloAleta)))",
+                "v": "0 + (0.8*(0.594*Profundidade))*cos(((45 + AnguloAleta))) - (-0.001)*sin(((45 + AnguloAleta)))"
+              },
+              {
+                "u": "((-Profundidade + (0.42*Profundidade))) - (-0.004)*cos(((45 + AnguloAleta))) - (0.8*(0.594*Profundidade))*sin(((45 + AnguloAleta)))",
+                "v": "0 + (0.8*(0.594*Profundidade))*cos(((45 + AnguloAleta))) - (-0.004)*sin(((45 + AnguloAleta)))"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.022) + 0.004) + 0.30*((Largura - 0.044) - 0.008) - 0.002",
+            "depth": "0.004"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Aleta horizontal - nervura 3",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((-Profundidade + (0.42*Profundidade))) - (-0.004)*cos(((45 + AnguloAleta))) - 0.006*sin(((45 + AnguloAleta)))",
+                "v": "0 + 0.006*cos(((45 + AnguloAleta))) - (-0.004)*sin(((45 + AnguloAleta)))"
+              },
+              {
+                "u": "((-Profundidade + (0.42*Profundidade))) - (-0.001)*cos(((45 + AnguloAleta))) - 0.006*sin(((45 + AnguloAleta)))",
+                "v": "0 + 0.006*cos(((45 + AnguloAleta))) - (-0.001)*sin(((45 + AnguloAleta)))"
+              },
+              {
+                "u": "((-Profundidade + (0.42*Profundidade))) - (-0.001)*cos(((45 + AnguloAleta))) - (0.8*(0.594*Profundidade))*sin(((45 + AnguloAleta)))",
+                "v": "0 + (0.8*(0.594*Profundidade))*cos(((45 + AnguloAleta))) - (-0.001)*sin(((45 + AnguloAleta)))"
+              },
+              {
+                "u": "((-Profundidade + (0.42*Profundidade))) - (-0.004)*cos(((45 + AnguloAleta))) - (0.8*(0.594*Profundidade))*sin(((45 + AnguloAleta)))",
+                "v": "0 + (0.8*(0.594*Profundidade))*cos(((45 + AnguloAleta))) - (-0.004)*sin(((45 + AnguloAleta)))"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.022) + 0.004) + 0.50*((Largura - 0.044) - 0.008) - 0.002",
+            "depth": "0.004"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Aleta horizontal - nervura 4",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((-Profundidade + (0.42*Profundidade))) - (-0.004)*cos(((45 + AnguloAleta))) - 0.006*sin(((45 + AnguloAleta)))",
+                "v": "0 + 0.006*cos(((45 + AnguloAleta))) - (-0.004)*sin(((45 + AnguloAleta)))"
+              },
+              {
+                "u": "((-Profundidade + (0.42*Profundidade))) - (-0.001)*cos(((45 + AnguloAleta))) - 0.006*sin(((45 + AnguloAleta)))",
+                "v": "0 + 0.006*cos(((45 + AnguloAleta))) - (-0.001)*sin(((45 + AnguloAleta)))"
+              },
+              {
+                "u": "((-Profundidade + (0.42*Profundidade))) - (-0.001)*cos(((45 + AnguloAleta))) - (0.8*(0.594*Profundidade))*sin(((45 + AnguloAleta)))",
+                "v": "0 + (0.8*(0.594*Profundidade))*cos(((45 + AnguloAleta))) - (-0.001)*sin(((45 + AnguloAleta)))"
+              },
+              {
+                "u": "((-Profundidade + (0.42*Profundidade))) - (-0.004)*cos(((45 + AnguloAleta))) - (0.8*(0.594*Profundidade))*sin(((45 + AnguloAleta)))",
+                "v": "0 + (0.8*(0.594*Profundidade))*cos(((45 + AnguloAleta))) - (-0.004)*sin(((45 + AnguloAleta)))"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.022) + 0.004) + 0.70*((Largura - 0.044) - 0.008) - 0.002",
+            "depth": "0.004"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Aleta horizontal - nervura 5",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((-Profundidade + (0.42*Profundidade))) - (-0.004)*cos(((45 + AnguloAleta))) - 0.006*sin(((45 + AnguloAleta)))",
+                "v": "0 + 0.006*cos(((45 + AnguloAleta))) - (-0.004)*sin(((45 + AnguloAleta)))"
+              },
+              {
+                "u": "((-Profundidade + (0.42*Profundidade))) - (-0.001)*cos(((45 + AnguloAleta))) - 0.006*sin(((45 + AnguloAleta)))",
+                "v": "0 + 0.006*cos(((45 + AnguloAleta))) - (-0.001)*sin(((45 + AnguloAleta)))"
+              },
+              {
+                "u": "((-Profundidade + (0.42*Profundidade))) - (-0.001)*cos(((45 + AnguloAleta))) - (0.8*(0.594*Profundidade))*sin(((45 + AnguloAleta)))",
+                "v": "0 + (0.8*(0.594*Profundidade))*cos(((45 + AnguloAleta))) - (-0.001)*sin(((45 + AnguloAleta)))"
+              },
+              {
+                "u": "((-Profundidade + (0.42*Profundidade))) - (-0.004)*cos(((45 + AnguloAleta))) - (0.8*(0.594*Profundidade))*sin(((45 + AnguloAleta)))",
+                "v": "0 + (0.8*(0.594*Profundidade))*cos(((45 + AnguloAleta))) - (-0.004)*sin(((45 + AnguloAleta)))"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.022) + 0.004) + 0.90*((Largura - 0.044) - 0.008) - 0.002",
+            "depth": "0.004"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Aleta horizontal - pino 1",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(-Profundidade + (0.42*Profundidade) - 0.004) - 0.004",
+                "v": "0.004",
+                "radius": "0.004"
+              },
+              {
+                "u": "(-Profundidade + (0.42*Profundidade) - 0.004) + 0.004",
+                "v": "0.004",
+                "radius": "0.004"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.022) + 0.004) - 0.003",
+            "depth": "0.008"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Aleta horizontal - pino 2",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(-Profundidade + (0.42*Profundidade) - 0.004) - 0.004",
+                "v": "0.004",
+                "radius": "0.004"
+              },
+              {
+                "u": "(-Profundidade + (0.42*Profundidade) - 0.004) + 0.004",
+                "v": "0.004",
+                "radius": "0.004"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.022) + 0.004) + ((Largura - 0.044) - 0.008)/2 - 0.004",
+            "depth": "0.008"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Aleta horizontal - pino 3",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(-Profundidade + (0.42*Profundidade) - 0.004) - 0.004",
+                "v": "0.004",
+                "radius": "0.004"
+              },
+              {
+                "u": "(-Profundidade + (0.42*Profundidade) - 0.004) + 0.004",
+                "v": "0.004",
+                "radius": "0.004"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.022) + 0.004) + ((Largura - 0.044) - 0.008) - 0.005",
+            "depth": "0.008"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Motor de passo da aleta",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.022) + (Largura - 0.044) - 0.036",
+            "y": "-Profundidade + (0.42*Profundidade) + 0.004",
+            "z": "0.006",
+            "width": "0.03",
+            "depth": "0.03",
+            "height": "0.03"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Visor - janela",
+        "shape": {
+          "Box": {
+            "x": "(Largura/2 - 0.17)",
+            "y": "(-Profundidade - 0.0025) - 0.0008",
+            "z": "(0.62*Altura - 0.04)",
+            "width": "0.075",
+            "depth": "0.001",
+            "height": "0.026"
+          }
+        },
+        "material": "Plástico fumê",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Visor de temperatura",
+        "shape": {
+          "Box": {
+            "x": "(Largura/2 - 0.17) + 0.008",
+            "y": "(-Profundidade - 0.0025) - 0.0012",
+            "z": "(0.62*Altura - 0.04) + 0.006",
+            "width": "0.03",
+            "depth": "0.001",
+            "height": "0.014"
+          }
+        },
+        "material": "Visor LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Visor - LED 1",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(Largura/2 - 0.17) + 0.048 + 0*0.009",
+                "v": "(-Profundidade - 0.0025) - 0.0014"
+              },
+              {
+                "u": "((Largura/2 - 0.17) + 0.048 + 0*0.009) + 0.002",
+                "v": "(-Profundidade - 0.0025) - 0.0014"
+              },
+              {
+                "u": "((Largura/2 - 0.17) + 0.048 + 0*0.009) + 0.002",
+                "v": "((-Profundidade - 0.0025) - 0.0014) + 0.001"
+              },
+              {
+                "u": "(Largura/2 - 0.17) + 0.048 + 0*0.009",
+                "v": "((-Profundidade - 0.0025) - 0.0014) + 0.001"
+              }
+            ],
+            "offset": "(0.62*Altura - 0.04) + 0.008",
+            "axis": "(Largura/2 - 0.17) + 0.048 + 0*0.009",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico verde",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Visor - LED 2",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(Largura/2 - 0.17) + 0.048 + 1*0.009",
+                "v": "(-Profundidade - 0.0025) - 0.0014"
+              },
+              {
+                "u": "((Largura/2 - 0.17) + 0.048 + 1*0.009) + 0.002",
+                "v": "(-Profundidade - 0.0025) - 0.0014"
+              },
+              {
+                "u": "((Largura/2 - 0.17) + 0.048 + 1*0.009) + 0.002",
+                "v": "((-Profundidade - 0.0025) - 0.0014) + 0.001"
+              },
+              {
+                "u": "(Largura/2 - 0.17) + 0.048 + 1*0.009",
+                "v": "((-Profundidade - 0.0025) - 0.0014) + 0.001"
+              }
+            ],
+            "offset": "(0.62*Altura - 0.04) + 0.008",
+            "axis": "(Largura/2 - 0.17) + 0.048 + 1*0.009",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico vermelho",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Visor - LED 3",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(Largura/2 - 0.17) + 0.048 + 2*0.009",
+                "v": "(-Profundidade - 0.0025) - 0.0014"
+              },
+              {
+                "u": "((Largura/2 - 0.17) + 0.048 + 2*0.009) + 0.002",
+                "v": "(-Profundidade - 0.0025) - 0.0014"
+              },
+              {
+                "u": "((Largura/2 - 0.17) + 0.048 + 2*0.009) + 0.002",
+                "v": "((-Profundidade - 0.0025) - 0.0014) + 0.001"
+              },
+              {
+                "u": "(Largura/2 - 0.17) + 0.048 + 2*0.009",
+                "v": "((-Profundidade - 0.0025) - 0.0014) + 0.001"
+              }
+            ],
+            "offset": "(0.62*Altura - 0.04) + 0.008",
+            "axis": "(Largura/2 - 0.17) + 0.048 + 2*0.009",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico azul",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Receptor infravermelho",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(Largura/2 - 0.17) + 0.057",
+                "v": "(-Profundidade - 0.0025) - 0.0014"
+              },
+              {
+                "u": "((Largura/2 - 0.17) + 0.057) + 0.004",
+                "v": "(-Profundidade - 0.0025) - 0.0014"
+              },
+              {
+                "u": "((Largura/2 - 0.17) + 0.057) + 0.004",
+                "v": "((-Profundidade - 0.0025) - 0.0014) + 0.001"
+              },
+              {
+                "u": "(Largura/2 - 0.17) + 0.057",
+                "v": "((-Profundidade - 0.0025) - 0.0014) + 0.001"
+              }
+            ],
+            "offset": "(0.62*Altura - 0.04) + 0.018",
+            "axis": "(Largura/2 - 0.17) + 0.057",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico preto brilhante",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Botão de emergência",
+        "shape": {
+          "Box": {
+            "x": "Largura/2 - 0.022 - 0.035",
+            "y": "-Profundidade + (0.42*Profundidade) + 0.02",
+            "z": "-0.0015",
+            "width": "0.016",
+            "depth": "0.01",
+            "height": "0.002"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Etiqueta de eficiência energética",
+        "shape": {
+          "Box": {
+            "x": "Largura/2 + 0.0015",
+            "y": "-0.75*Profundidade",
+            "z": "0.3*Altura",
+            "width": "0.0005",
+            "depth": "0.4*Profundidade",
+            "height": "0.45*Altura"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Etiqueta de dados",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.08",
+            "y": "-0.45*Profundidade",
+            "z": "-0.0004",
+            "width": "0.12",
+            "depth": "0.3*Profundidade",
+            "height": "0.0005"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa de parafuso 1",
+        "shape": {
+          "Box": {
+            "x": "-0.3*Largura - 0.01",
+            "y": "-Profundidade + (0.42*Profundidade) + 0.012",
+            "z": "-0.001",
+            "width": "0.02",
+            "depth": "0.012",
+            "height": "0.0015"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa de parafuso 2",
+        "shape": {
+          "Box": {
+            "x": "0.0*Largura - 0.01",
+            "y": "-Profundidade + (0.42*Profundidade) + 0.012",
+            "z": "-0.001",
+            "width": "0.02",
+            "depth": "0.012",
+            "height": "0.0015"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa de parafuso 3",
+        "shape": {
+          "Box": {
+            "x": "0.3*Largura - 0.01",
+            "y": "-Profundidade + (0.42*Profundidade) + 0.012",
+            "z": "-0.001",
+            "width": "0.02",
+            "depth": "0.012",
+            "height": "0.0015"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trava do painel 1",
+        "shape": {
+          "Box": {
+            "x": "-1*(Largura/2 - 0.0005) - 0.001",
+            "y": "-0.8*Profundidade",
+            "z": "0.55*Altura",
+            "width": "0.002",
+            "depth": "0.03",
+            "height": "0.008"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trava do painel 2",
+        "shape": {
+          "Box": {
+            "x": "1*(Largura/2 - 0.0005) - 0.001",
+            "y": "-0.8*Profundidade",
+            "z": "0.55*Altura",
+            "width": "0.002",
+            "depth": "0.03",
+            "height": "0.008"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa da passagem de tubos",
+        "shape": {
+          "Box": {
+            "x": "Largura/2 - 0.0005",
+            "y": "-0.3*Profundidade",
+            "z": "0.012",
+            "width": "0.002",
+            "depth": "0.22*Profundidade",
+            "height": "0.06"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina evaporadora",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.022) + 0.02",
+            "y": "-0.85*Profundidade",
+            "z": "0.55*Altura",
+            "width": "(Largura - 0.044) - 0.08",
+            "depth": "0.6*Profundidade",
+            "height": "0.3*Altura"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Bandeja de dreno",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.022) + 0.02",
+            "y": "-0.4*Profundidade",
+            "z": "0.012",
+            "width": "(Largura - 0.044) - 0.04",
+            "depth": "0.3*Profundidade",
+            "height": "0.02"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Placa eletrônica",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.022) + (Largura - 0.044) - 0.055",
+            "y": "-0.7*Profundidade",
+            "z": "0.45*Altura",
+            "width": "0.04",
+            "depth": "0.5*Profundidade",
+            "height": "0.4*Altura"
+          }
+        },
+        "material": "Plástico verde",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte de parede",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.07",
+            "y": "-0.004",
+            "z": "0.035",
+            "width": "Largura - 0.14",
+            "depth": "0.004",
+            "height": "Altura - 0.06"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte de parede - gancho 1",
+        "shape": {
+          "Box": {
+            "x": "-1*0.3*Largura - 0.03",
+            "y": "-0.01",
+            "z": "Altura - 0.04",
+            "width": "0.06",
+            "depth": "0.006",
+            "height": "0.012"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte de parede - trava inferior 1",
+        "shape": {
+          "Box": {
+            "x": "-1*0.3*Largura - 0.02",
+            "y": "-0.01",
+            "z": "0.04",
+            "width": "0.04",
+            "depth": "0.006",
+            "height": "0.01"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte de parede - gancho 2",
+        "shape": {
+          "Box": {
+            "x": "1*0.3*Largura - 0.03",
+            "y": "-0.01",
+            "z": "Altura - 0.04",
+            "width": "0.06",
+            "depth": "0.006",
+            "height": "0.012"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte de parede - trava inferior 2",
+        "shape": {
+          "Box": {
+            "x": "1*0.3*Largura - 0.02",
+            "y": "-0.01",
+            "z": "0.04",
+            "width": "0.04",
+            "depth": "0.006",
+            "height": "0.01"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte de parede - parafuso 1",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-0.36*Largura",
+                "v": "-0.0005"
+              },
+              {
+                "u": "(-0.36*Largura) + 0.005",
+                "v": "-0.0005"
+              },
+              {
+                "u": "(-0.36*Largura) + 0.005",
+                "v": "(-0.0005) + 0.001"
+              },
+              {
+                "u": "-0.36*Largura",
+                "v": "(-0.0005) + 0.001"
+              }
+            ],
+            "offset": "0.78*Altura",
+            "axis": "-0.36*Largura",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte de parede - parafuso 2",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0*Largura",
+                "v": "-0.0005"
+              },
+              {
+                "u": "(0*Largura) + 0.005",
+                "v": "-0.0005"
+              },
+              {
+                "u": "(0*Largura) + 0.005",
+                "v": "(-0.0005) + 0.001"
+              },
+              {
+                "u": "0*Largura",
+                "v": "(-0.0005) + 0.001"
+              }
+            ],
+            "offset": "0.78*Altura",
+            "axis": "0*Largura",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte de parede - parafuso 3",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.36*Largura",
+                "v": "-0.0005"
+              },
+              {
+                "u": "(0.36*Largura) + 0.005",
+                "v": "-0.0005"
+              },
+              {
+                "u": "(0.36*Largura) + 0.005",
+                "v": "(-0.0005) + 0.001"
+              },
+              {
+                "u": "0.36*Largura",
+                "v": "(-0.0005) + 0.001"
+              }
+            ],
+            "offset": "0.78*Altura",
+            "axis": "0.36*Largura",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte de parede - parafuso 4",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-0.36*Largura",
+                "v": "-0.0005"
+              },
+              {
+                "u": "(-0.36*Largura) + 0.005",
+                "v": "-0.0005"
+              },
+              {
+                "u": "(-0.36*Largura) + 0.005",
+                "v": "(-0.0005) + 0.001"
+              },
+              {
+                "u": "-0.36*Largura",
+                "v": "(-0.0005) + 0.001"
+              }
+            ],
+            "offset": "0.3*Altura",
+            "axis": "-0.36*Largura",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte de parede - parafuso 5",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0*Largura",
+                "v": "-0.0005"
+              },
+              {
+                "u": "(0*Largura) + 0.005",
+                "v": "-0.0005"
+              },
+              {
+                "u": "(0*Largura) + 0.005",
+                "v": "(-0.0005) + 0.001"
+              },
+              {
+                "u": "0*Largura",
+                "v": "(-0.0005) + 0.001"
+              }
+            ],
+            "offset": "0.3*Altura",
+            "axis": "0*Largura",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte de parede - parafuso 6",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.36*Largura",
+                "v": "-0.0005"
+              },
+              {
+                "u": "(0.36*Largura) + 0.005",
+                "v": "-0.0005"
+              },
+              {
+                "u": "(0.36*Largura) + 0.005",
+                "v": "(-0.0005) + 0.001"
+              },
+              {
+                "u": "0.36*Largura",
+                "v": "(-0.0005) + 0.001"
+              }
+            ],
+            "offset": "0.3*Altura",
+            "axis": "0.36*Largura",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tubo de gás - isolamento",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(Largura/2 - 0.085)",
+                "v": "-0.004"
+              },
+              {
+                "u": "((Largura/2 - 0.085)) + 0.012",
+                "v": "-0.004"
+              },
+              {
+                "u": "((Largura/2 - 0.085)) + 0.012",
+                "v": "(-0.004) + 0.074"
+              },
+              {
+                "u": "(Largura/2 - 0.085)",
+                "v": "(-0.004) + 0.074"
+              }
+            ],
+            "offset": "0.07",
+            "axis": "(Largura/2 - 0.085)",
+            "angle": "360"
+          }
+        },
+        "material": "Borracha cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tubo de gás",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(Largura/2 - 0.085)",
+                "v": "-0.004"
+              },
+              {
+                "u": "((Largura/2 - 0.085)) + 0.0065",
+                "v": "-0.004"
+              },
+              {
+                "u": "((Largura/2 - 0.085)) + 0.0065",
+                "v": "(-0.004) + 0.1"
+              },
+              {
+                "u": "(Largura/2 - 0.085)",
+                "v": "(-0.004) + 0.1"
+              }
+            ],
+            "offset": "0.07",
+            "axis": "(Largura/2 - 0.085)",
+            "angle": "360"
+          }
+        },
+        "material": "Cobre",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tubo de líquido - isolamento",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(Largura/2 - 0.085) + 0.027",
+                "v": "-0.004"
+              },
+              {
+                "u": "((Largura/2 - 0.085) + 0.027) + 0.009",
+                "v": "-0.004"
+              },
+              {
+                "u": "((Largura/2 - 0.085) + 0.027) + 0.009",
+                "v": "(-0.004) + 0.074"
+              },
+              {
+                "u": "(Largura/2 - 0.085) + 0.027",
+                "v": "(-0.004) + 0.074"
+              }
+            ],
+            "offset": "0.07",
+            "axis": "(Largura/2 - 0.085) + 0.027",
+            "angle": "360"
+          }
+        },
+        "material": "Borracha cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tubo de líquido",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(Largura/2 - 0.085) + 0.027",
+                "v": "-0.004"
+              },
+              {
+                "u": "((Largura/2 - 0.085) + 0.027) + 0.0035",
+                "v": "-0.004"
+              },
+              {
+                "u": "((Largura/2 - 0.085) + 0.027) + 0.0035",
+                "v": "(-0.004) + 0.1"
+              },
+              {
+                "u": "(Largura/2 - 0.085) + 0.027",
+                "v": "(-0.004) + 0.1"
+              }
+            ],
+            "offset": "0.07",
+            "axis": "(Largura/2 - 0.085) + 0.027",
+            "angle": "360"
+          }
+        },
+        "material": "Cobre",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Mangueira de dreno",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(Largura/2 - 0.085) + 0.012",
+                "v": "-0.004"
+              },
+              {
+                "u": "((Largura/2 - 0.085) + 0.012) + 0.008",
+                "v": "-0.004"
+              },
+              {
+                "u": "((Largura/2 - 0.085) + 0.012) + 0.008",
+                "v": "(-0.004) + 0.11"
+              },
+              {
+                "u": "(Largura/2 - 0.085) + 0.012",
+                "v": "(-0.004) + 0.11"
+              }
+            ],
+            "offset": "0.047",
+            "axis": "(Largura/2 - 0.085) + 0.012",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cabo de interligação",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(Largura/2 - 0.085) - 0.012",
+                "v": "-0.004"
+              },
+              {
+                "u": "((Largura/2 - 0.085) - 0.012) + 0.0045",
+                "v": "-0.004"
+              },
+              {
+                "u": "((Largura/2 - 0.085) - 0.012) + 0.0045",
+                "v": "(-0.004) + 0.1"
+              },
+              {
+                "u": "(Largura/2 - 0.085) - 0.012",
+                "v": "(-0.004) + 0.1"
+              }
+            ],
+            "offset": "0.047",
+            "axis": "(Largura/2 - 0.085) - 0.012",
+            "angle": "360"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Fita de acabamento dos tubos",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(Largura/2 - 0.085) + 0.01",
+                "v": "0.03"
+              },
+              {
+                "u": "((Largura/2 - 0.085) + 0.01) + 0.028",
+                "v": "0.03"
+              },
+              {
+                "u": "((Largura/2 - 0.085) + 0.01) + 0.028",
+                "v": "0.03 + 0.012"
+              },
+              {
+                "u": "(Largura/2 - 0.085) + 0.01",
+                "v": "0.03 + 0.012"
+              }
+            ],
+            "offset": "0.06",
+            "axis": "(Largura/2 - 0.085) + 0.01",
+            "angle": "360"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      }
+    ]
+  },
+  "types": [
+    {
+      "name": "Evaporadora split 9.000 a 12.000 BTU",
+      "values": {},
+      "info": {
+        "description": "Unidade interna hi-wall de 9.000 a 12.000 BTU/h, 80 x 20 x 29 cm"
+      }
+    },
+    {
+      "name": "Evaporadora split 18.000 a 24.000 BTU",
+      "values": {
+        "Largura": 1.05,
+        "Profundidade": 0.23,
+        "Altura": 0.33
+      },
+      "info": {
+        "description": "Unidade interna hi-wall de 18.000 a 24.000 BTU/h, 105 x 23 x 33 cm"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "name": "Branco",
+      "color": [
+        244,
+        244,
+        240
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico cinza claro",
+      "color": [
+        196,
+        198,
+        200
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Alumínio anodizado",
+      "color": [
+        206,
+        208,
+        210
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico cinza",
+      "color": [
+        120,
+        122,
+        126
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico preto",
+      "color": [
+        34,
+        34,
+        37
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Aço galvanizado",
+      "color": [
+        160,
+        165,
+        170
+      ],
+      "class": "Metal",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Borracha",
+      "color": [
+        30,
+        30,
+        30
+      ],
+      "class": "Plastic",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico fumê",
+      "color": [
+        60,
+        62,
+        66
+      ],
+      "class": "Plastic",
+      "finish": "Glossy",
+      "transparency": 0.5
+    },
+    {
+      "name": "Visor LED",
+      "color": [
+        24,
+        60,
+        96
+      ],
+      "class": "Glass",
+      "finish": "Glossy",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico verde",
+      "color": [
+        60,
+        160,
+        90
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico vermelho",
+      "color": [
+        196,
+        56,
+        48
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico azul",
+      "color": [
+        126,
+        176,
+        222
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico preto brilhante",
+      "color": [
+        18,
+        18,
+        20
+      ],
+      "class": "Plastic",
+      "finish": "Glossy",
+      "transparency": 0
+    },
+    {
+      "name": "Aço pintado preto",
+      "color": [
+        30,
+        30,
+        32
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Borracha cinza",
+      "color": [
+        150,
+        152,
+        154
+      ],
+      "class": "Plastic",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Cobre",
+      "color": [
+        184,
+        115,
+        72
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    }
+  ]
+}

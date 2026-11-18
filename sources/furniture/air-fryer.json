@@ -1,0 +1,3683 @@
+{
+  "component": "Air fryer",
+  "def": {
+    "kind": "Furniture",
+    "params": [
+      {
+        "name": "Diametro",
+        "value": 0.27,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Altura",
+        "value": 0.32,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "AberturaGaveta",
+        "value": 0,
+        "kind": "Length",
+        "instance": true
+      }
+    ],
+    "items": [
+      {
+        "name": "Corpo simplificado",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "0"
+              },
+              {
+                "u": "(Diametro/2)*0.82",
+                "v": "0"
+              },
+              {
+                "u": "(Diametro/2)",
+                "v": "0.050"
+              },
+              {
+                "u": "(Diametro/2)",
+                "v": "(Altura*0.74)"
+              },
+              {
+                "u": "(Diametro/2)*0.62",
+                "v": "Altura"
+              },
+              {
+                "u": "0",
+                "v": "Altura"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Puxador simplificado",
+        "shape": {
+          "Box": {
+            "x": "-0.018",
+            "y": "-(Diametro/2) - 0.085 - AberturaGaveta",
+            "z": "(0.050 + ((Altura*0.62) - 0.050)*0.56) - 0.018",
+            "width": "0.036",
+            "depth": "0.087",
+            "height": "0.038"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Base",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "0.008"
+              },
+              {
+                "u": "(Diametro/2)*0.82",
+                "v": "0.008",
+                "radius": "0.050*1.3"
+              },
+              {
+                "u": "(Diametro/2)",
+                "v": "0.050"
+              },
+              {
+                "u": "0",
+                "v": "0.050"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Base - fundo",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "0.005"
+              },
+              {
+                "u": "(Diametro/2)*0.80",
+                "v": "0.005"
+              },
+              {
+                "u": "(Diametro/2)*0.80",
+                "v": "0.008"
+              },
+              {
+                "u": "0",
+                "v": "0.008"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Corpo - parede da cavidade",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((Diametro/2))*0.81915",
+                "v": "((Diametro/2))*-0.57358",
+                "radius": "(Diametro/2)"
+              },
+              {
+                "u": "((Diametro/2))*0.88701",
+                "v": "((Diametro/2))*0.46175",
+                "radius": "(Diametro/2)"
+              },
+              {
+                "u": "((Diametro/2))*0.0",
+                "v": "((Diametro/2))*1.0",
+                "radius": "(Diametro/2)"
+              },
+              {
+                "u": "((Diametro/2))*-0.88701",
+                "v": "((Diametro/2))*0.46175",
+                "radius": "(Diametro/2)"
+              },
+              {
+                "u": "((Diametro/2))*-0.81915",
+                "v": "((Diametro/2))*-0.57358"
+              },
+              {
+                "u": "(((Diametro/2) - 0.012))*-0.81915",
+                "v": "(((Diametro/2) - 0.012))*-0.57358"
+              },
+              {
+                "u": "(((Diametro/2) - 0.012))*-0.89363",
+                "v": "(((Diametro/2) - 0.012))*-0.4488"
+              },
+              {
+                "u": "(((Diametro/2) - 0.012))*-0.94924",
+                "v": "(((Diametro/2) - 0.012))*-0.31454"
+              },
+              {
+                "u": "(((Diametro/2) - 0.012))*-0.98481",
+                "v": "(((Diametro/2) - 0.012))*-0.17365"
+              },
+              {
+                "u": "(((Diametro/2) - 0.012))*-0.99958",
+                "v": "(((Diametro/2) - 0.012))*-0.02908"
+              },
+              {
+                "u": "(((Diametro/2) - 0.012))*-0.99324",
+                "v": "(((Diametro/2) - 0.012))*0.11609"
+              },
+              {
+                "u": "(((Diametro/2) - 0.012))*-0.96593",
+                "v": "(((Diametro/2) - 0.012))*0.25882"
+              },
+              {
+                "u": "(((Diametro/2) - 0.012))*-0.91822",
+                "v": "(((Diametro/2) - 0.012))*0.39608"
+              },
+              {
+                "u": "(((Diametro/2) - 0.012))*-0.85112",
+                "v": "(((Diametro/2) - 0.012))*0.52498"
+              },
+              {
+                "u": "(((Diametro/2) - 0.012))*-0.76604",
+                "v": "(((Diametro/2) - 0.012))*0.64279"
+              },
+              {
+                "u": "(((Diametro/2) - 0.012))*-0.6648",
+                "v": "(((Diametro/2) - 0.012))*0.74703"
+              },
+              {
+                "u": "(((Diametro/2) - 0.012))*-0.54951",
+                "v": "(((Diametro/2) - 0.012))*0.83549"
+              },
+              {
+                "u": "(((Diametro/2) - 0.012))*-0.42262",
+                "v": "(((Diametro/2) - 0.012))*0.90631"
+              },
+              {
+                "u": "(((Diametro/2) - 0.012))*-0.2868",
+                "v": "(((Diametro/2) - 0.012))*0.95799"
+              },
+              {
+                "u": "(((Diametro/2) - 0.012))*-0.14493",
+                "v": "(((Diametro/2) - 0.012))*0.98944"
+              },
+              {
+                "u": "(((Diametro/2) - 0.012))*0.0",
+                "v": "(((Diametro/2) - 0.012))*1.0"
+              },
+              {
+                "u": "(((Diametro/2) - 0.012))*0.14493",
+                "v": "(((Diametro/2) - 0.012))*0.98944"
+              },
+              {
+                "u": "(((Diametro/2) - 0.012))*0.2868",
+                "v": "(((Diametro/2) - 0.012))*0.95799"
+              },
+              {
+                "u": "(((Diametro/2) - 0.012))*0.42262",
+                "v": "(((Diametro/2) - 0.012))*0.90631"
+              },
+              {
+                "u": "(((Diametro/2) - 0.012))*0.54951",
+                "v": "(((Diametro/2) - 0.012))*0.83549"
+              },
+              {
+                "u": "(((Diametro/2) - 0.012))*0.6648",
+                "v": "(((Diametro/2) - 0.012))*0.74703"
+              },
+              {
+                "u": "(((Diametro/2) - 0.012))*0.76604",
+                "v": "(((Diametro/2) - 0.012))*0.64279"
+              },
+              {
+                "u": "(((Diametro/2) - 0.012))*0.85112",
+                "v": "(((Diametro/2) - 0.012))*0.52498"
+              },
+              {
+                "u": "(((Diametro/2) - 0.012))*0.91822",
+                "v": "(((Diametro/2) - 0.012))*0.39608"
+              },
+              {
+                "u": "(((Diametro/2) - 0.012))*0.96593",
+                "v": "(((Diametro/2) - 0.012))*0.25882"
+              },
+              {
+                "u": "(((Diametro/2) - 0.012))*0.99324",
+                "v": "(((Diametro/2) - 0.012))*0.11609"
+              },
+              {
+                "u": "(((Diametro/2) - 0.012))*0.99958",
+                "v": "(((Diametro/2) - 0.012))*-0.02908"
+              },
+              {
+                "u": "(((Diametro/2) - 0.012))*0.98481",
+                "v": "(((Diametro/2) - 0.012))*-0.17365"
+              },
+              {
+                "u": "(((Diametro/2) - 0.012))*0.94924",
+                "v": "(((Diametro/2) - 0.012))*-0.31454"
+              },
+              {
+                "u": "(((Diametro/2) - 0.012))*0.89363",
+                "v": "(((Diametro/2) - 0.012))*-0.4488"
+              },
+              {
+                "u": "(((Diametro/2) - 0.012))*0.81915",
+                "v": "(((Diametro/2) - 0.012))*-0.57358"
+              }
+            ],
+            "offset": "0.050",
+            "depth": "(Altura*0.62) - 0.050"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Corpo superior",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "(Altura*0.62)"
+              },
+              {
+                "u": "(Diametro/2)",
+                "v": "(Altura*0.62)"
+              },
+              {
+                "u": "(Diametro/2)",
+                "v": "(Altura*0.74)",
+                "radius": "Altura*0.36"
+              },
+              {
+                "u": "(Diametro/2)*0.62",
+                "v": "Altura"
+              },
+              {
+                "u": "0",
+                "v": "Altura"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Friso do corpo",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(Diametro/2) - 0.002",
+                "v": "(Altura*0.62) + 0.001"
+              },
+              {
+                "u": "(Diametro/2) + 0.0012",
+                "v": "(Altura*0.62) + 0.001"
+              },
+              {
+                "u": "(Diametro/2) + 0.0012",
+                "v": "(Altura*0.62) + 0.005"
+              },
+              {
+                "u": "(Diametro/2) - 0.002",
+                "v": "(Altura*0.62) + 0.005"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pé antiderrapante 1",
+        "shape": {
+          "Cylinder": {
+            "x": "(((Diametro/2)*0.62))*0.70711",
+            "y": "(((Diametro/2)*0.62))*0.70711",
+            "z": "0",
+            "radius": "0.011",
+            "height": "0.006"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pé antiderrapante 2",
+        "shape": {
+          "Cylinder": {
+            "x": "(((Diametro/2)*0.62))*-0.70711",
+            "y": "(((Diametro/2)*0.62))*0.70711",
+            "z": "0",
+            "radius": "0.011",
+            "height": "0.006"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pé antiderrapante 3",
+        "shape": {
+          "Cylinder": {
+            "x": "(((Diametro/2)*0.62))*-0.70711",
+            "y": "(((Diametro/2)*0.62))*-0.70711",
+            "z": "0",
+            "radius": "0.011",
+            "height": "0.006"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pé antiderrapante 4",
+        "shape": {
+          "Cylinder": {
+            "x": "(((Diametro/2)*0.62))*0.70711",
+            "y": "(((Diametro/2)*0.62))*-0.70711",
+            "z": "0",
+            "radius": "0.011",
+            "height": "0.006"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ventilação inferior 1",
+        "shape": {
+          "Box": {
+            "x": "-(Diametro/2)*0.3",
+            "y": "-0.024",
+            "z": "0.0043",
+            "width": "(Diametro/2)*0.6",
+            "depth": "0.005",
+            "height": "0.001"
+          }
+        },
+        "material": "Tela perfurada",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ventilação inferior 2",
+        "shape": {
+          "Box": {
+            "x": "-(Diametro/2)*0.3",
+            "y": "-0.012",
+            "z": "0.0043",
+            "width": "(Diametro/2)*0.6",
+            "depth": "0.005",
+            "height": "0.001"
+          }
+        },
+        "material": "Tela perfurada",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ventilação inferior 3",
+        "shape": {
+          "Box": {
+            "x": "-(Diametro/2)*0.3",
+            "y": "0.0",
+            "z": "0.0043",
+            "width": "(Diametro/2)*0.6",
+            "depth": "0.005",
+            "height": "0.001"
+          }
+        },
+        "material": "Tela perfurada",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ventilação inferior 4",
+        "shape": {
+          "Box": {
+            "x": "-(Diametro/2)*0.3",
+            "y": "0.012000000000000004",
+            "z": "0.0043",
+            "width": "(Diametro/2)*0.6",
+            "depth": "0.005",
+            "height": "0.001"
+          }
+        },
+        "material": "Tela perfurada",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ventilação inferior 5",
+        "shape": {
+          "Box": {
+            "x": "-(Diametro/2)*0.3",
+            "y": "0.024",
+            "z": "0.0043",
+            "width": "(Diametro/2)*0.6",
+            "depth": "0.005",
+            "height": "0.001"
+          }
+        },
+        "material": "Tela perfurada",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Etiqueta de identificação",
+        "shape": {
+          "Box": {
+            "x": "-(Diametro/2)*0.25",
+            "y": "(Diametro/2)*0.42",
+            "z": "0.0044",
+            "width": "(Diametro/2)*0.5",
+            "depth": "(Diametro/2)*0.2",
+            "height": "0.0008"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cavidade - teto refletor",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0",
+            "z": "(Altura*0.62) - 0.002",
+            "radius": "(Diametro/2) - 0.013",
+            "height": "0.0015"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cavidade - piso",
+        "shape": {
+          "Box": {
+            "x": "-(Diametro/2)*0.6",
+            "y": "-(Diametro/2)*0.6",
+            "z": "0.050",
+            "width": "(Diametro/2)*1.2",
+            "depth": "(Diametro/2)*1.2",
+            "height": "0.001"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ventilador - cubo",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0",
+            "z": "(Altura*0.62) - 0.020",
+            "radius": "0.014",
+            "height": "0.018"
+          }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ventilador - pá 1",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.012*0.93969",
+                "v": "0.012*-0.34202"
+              },
+              {
+                "u": "(((Diametro/2)*0.40))*0.99027",
+                "v": "(((Diametro/2)*0.40))*-0.13917"
+              },
+              {
+                "u": "(((Diametro/2)*0.40))*0.9703",
+                "v": "(((Diametro/2)*0.40))*0.24192"
+              },
+              {
+                "u": "0.012*0.93969",
+                "v": "0.012*0.34202"
+              }
+            ],
+            "offset": "(Altura*0.62) - 0.018",
+            "depth": "0.01"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ventilador - pá 2",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.012*0.76604",
+                "v": "0.012*0.64279"
+              },
+              {
+                "u": "(((Diametro/2)*0.40))*0.61566",
+                "v": "(((Diametro/2)*0.40))*0.78801"
+              },
+              {
+                "u": "(((Diametro/2)*0.40))*0.27564",
+                "v": "(((Diametro/2)*0.40))*0.96126"
+              },
+              {
+                "u": "0.012*0.17365",
+                "v": "0.012*0.98481"
+              }
+            ],
+            "offset": "(Altura*0.62) - 0.018",
+            "depth": "0.01"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ventilador - pá 3",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.012*-0.17365",
+                "v": "0.012*0.98481"
+              },
+              {
+                "u": "(((Diametro/2)*0.40))*-0.37461",
+                "v": "(((Diametro/2)*0.40))*0.92718"
+              },
+              {
+                "u": "(((Diametro/2)*0.40))*-0.69466",
+                "v": "(((Diametro/2)*0.40))*0.71934"
+              },
+              {
+                "u": "0.012*-0.76604",
+                "v": "0.012*0.64279"
+              }
+            ],
+            "offset": "(Altura*0.62) - 0.018",
+            "depth": "0.01"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ventilador - pá 4",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.012*-0.93969",
+                "v": "0.012*0.34202"
+              },
+              {
+                "u": "(((Diametro/2)*0.40))*-0.99027",
+                "v": "(((Diametro/2)*0.40))*0.13917"
+              },
+              {
+                "u": "(((Diametro/2)*0.40))*-0.9703",
+                "v": "(((Diametro/2)*0.40))*-0.24192"
+              },
+              {
+                "u": "0.012*-0.93969",
+                "v": "0.012*-0.34202"
+              }
+            ],
+            "offset": "(Altura*0.62) - 0.018",
+            "depth": "0.01"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ventilador - pá 5",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.012*-0.76604",
+                "v": "0.012*-0.64279"
+              },
+              {
+                "u": "(((Diametro/2)*0.40))*-0.61566",
+                "v": "(((Diametro/2)*0.40))*-0.78801"
+              },
+              {
+                "u": "(((Diametro/2)*0.40))*-0.27564",
+                "v": "(((Diametro/2)*0.40))*-0.96126"
+              },
+              {
+                "u": "0.012*-0.17365",
+                "v": "0.012*-0.98481"
+              }
+            ],
+            "offset": "(Altura*0.62) - 0.018",
+            "depth": "0.01"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ventilador - pá 6",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.012*0.17365",
+                "v": "0.012*-0.98481"
+              },
+              {
+                "u": "(((Diametro/2)*0.40))*0.37461",
+                "v": "(((Diametro/2)*0.40))*-0.92718"
+              },
+              {
+                "u": "(((Diametro/2)*0.40))*0.69466",
+                "v": "(((Diametro/2)*0.40))*-0.71934"
+              },
+              {
+                "u": "0.012*0.76604",
+                "v": "0.012*-0.64279"
+              }
+            ],
+            "offset": "(Altura*0.62) - 0.018",
+            "depth": "0.01"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Resistência - espira 1",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((Diametro/2)*0.3) - 0.004",
+                "v": "((Altura*0.62) - 0.034)",
+                "radius": "0.004"
+              },
+              {
+                "u": "((Diametro/2)*0.3) + 0.004",
+                "v": "((Altura*0.62) - 0.034)",
+                "radius": "0.004"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Resistência - espira 2",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((Diametro/2)*0.48) - 0.004",
+                "v": "((Altura*0.62) - 0.034)",
+                "radius": "0.004"
+              },
+              {
+                "u": "((Diametro/2)*0.48) + 0.004",
+                "v": "((Altura*0.62) - 0.034)",
+                "radius": "0.004"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Resistência - espira 3",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((Diametro/2)*0.66) - 0.004",
+                "v": "((Altura*0.62) - 0.034)",
+                "radius": "0.004"
+              },
+              {
+                "u": "((Diametro/2)*0.66) + 0.004",
+                "v": "((Altura*0.62) - 0.034)",
+                "radius": "0.004"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Resistência - ligação entre espiras",
+        "shape": {
+          "Box": {
+            "x": "(Diametro/2)*0.30",
+            "y": "-0.004",
+            "z": "((Altura*0.62) - 0.034) - 0.004",
+            "width": "(Diametro/2)*0.36",
+            "depth": "0.008",
+            "height": "0.008"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Resistência - terminal 1",
+        "shape": {
+          "Cylinder": {
+            "x": "-1*0.012",
+            "y": "(Diametro/2)*0.66",
+            "z": "((Altura*0.62) - 0.034)",
+            "radius": "0.004",
+            "height": "(Altura*0.62) - ((Altura*0.62) - 0.034)"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Resistência - suporte 1",
+        "shape": {
+          "Cylinder": {
+            "x": "-1*(Diametro/2)*0.48",
+            "y": "0",
+            "z": "((Altura*0.62) - 0.034)",
+            "radius": "0.0025",
+            "height": "(Altura*0.62) - ((Altura*0.62) - 0.034)"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Resistência - terminal 2",
+        "shape": {
+          "Cylinder": {
+            "x": "1*0.012",
+            "y": "(Diametro/2)*0.66",
+            "z": "((Altura*0.62) - 0.034)",
+            "radius": "0.004",
+            "height": "(Altura*0.62) - ((Altura*0.62) - 0.034)"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Resistência - suporte 2",
+        "shape": {
+          "Cylinder": {
+            "x": "1*(Diametro/2)*0.48",
+            "y": "0",
+            "z": "((Altura*0.62) - 0.034)",
+            "radius": "0.0025",
+            "height": "(Altura*0.62) - ((Altura*0.62) - 0.034)"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Sensor de temperatura",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(Diametro/2)*0.3",
+                "v": "(Diametro/2) - 0.030"
+              },
+              {
+                "u": "((Diametro/2)*0.3) + 0.003",
+                "v": "(Diametro/2) - 0.030"
+              },
+              {
+                "u": "((Diametro/2)*0.3) + 0.003",
+                "v": "((Diametro/2) - 0.030) + 0.018"
+              },
+              {
+                "u": "(Diametro/2)*0.3",
+                "v": "((Diametro/2) - 0.030) + 0.018"
+              }
+            ],
+            "offset": "(Altura*0.62) - 0.05",
+            "axis": "(Diametro/2)*0.3",
+            "angle": "360"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Interruptor de segurança da gaveta",
+        "shape": {
+          "Box": {
+            "x": "-0.01",
+            "y": "(Diametro/2) - 0.020",
+            "z": "0.050 + 0.030",
+            "width": "0.02",
+            "depth": "0.008",
+            "height": "0.012"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Guia da gaveta 1",
+        "shape": {
+          "Box": {
+            "x": "-1*(Diametro/2)*0.5 - 0.004",
+            "y": "-(Diametro/2)*0.6",
+            "z": "0.050 + 0.001",
+            "width": "0.008",
+            "depth": "(Diametro/2)*1.2",
+            "height": "0.003"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Guia da gaveta 2",
+        "shape": {
+          "Box": {
+            "x": "1*(Diametro/2)*0.5 - 0.004",
+            "y": "-(Diametro/2)*0.6",
+            "z": "0.050 + 0.001",
+            "width": "0.008",
+            "depth": "(Diametro/2)*1.2",
+            "height": "0.003"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Painel superior",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0",
+            "z": "Altura",
+            "radius": "((Diametro/2)*0.54)",
+            "height": "0.0015"
+          }
+        },
+        "material": "Plástico preto brilhante",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Painel superior - aro",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((Diametro/2)*0.54)",
+                "v": "Altura - 0.001"
+              },
+              {
+                "u": "((Diametro/2)*0.54) + 0.003",
+                "v": "Altura - 0.001"
+              },
+              {
+                "u": "((Diametro/2)*0.54) + 0.003",
+                "v": "Altura + 0.0022"
+              },
+              {
+                "u": "((Diametro/2)*0.54)",
+                "v": "Altura + 0.0022"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Visor",
+        "shape": {
+          "Box": {
+            "x": "-(Diametro/2)*0.21",
+            "y": "(Diametro/2)*0.09",
+            "z": "(Altura + 0.0015)",
+            "width": "(Diametro/2)*0.42",
+            "depth": "(Diametro/2)*0.17",
+            "height": "0.0005"
+          }
+        },
+        "material": "Visor LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Visor - dígito 1",
+        "shape": {
+          "Box": {
+            "x": "(Diametro/2)*-0.14",
+            "y": "(Diametro/2)*0.12",
+            "z": "(Altura + 0.0015) + 0.0005",
+            "width": "(Diametro/2)*0.05",
+            "depth": "(Diametro/2)*0.11",
+            "height": "0.0003"
+          }
+        },
+        "material": "Plástico azul",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Visor - dígito 2",
+        "shape": {
+          "Box": {
+            "x": "(Diametro/2)*-0.06",
+            "y": "(Diametro/2)*0.12",
+            "z": "(Altura + 0.0015) + 0.0005",
+            "width": "(Diametro/2)*0.05",
+            "depth": "(Diametro/2)*0.11",
+            "height": "0.0003"
+          }
+        },
+        "material": "Plástico azul",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Visor - dígito 3",
+        "shape": {
+          "Box": {
+            "x": "(Diametro/2)*0.04",
+            "y": "(Diametro/2)*0.12",
+            "z": "(Altura + 0.0015) + 0.0005",
+            "width": "(Diametro/2)*0.05",
+            "depth": "(Diametro/2)*0.11",
+            "height": "0.0003"
+          }
+        },
+        "material": "Plástico azul",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Visor - dígito 4",
+        "shape": {
+          "Box": {
+            "x": "(Diametro/2)*0.12",
+            "y": "(Diametro/2)*0.12",
+            "z": "(Altura + 0.0015) + 0.0005",
+            "width": "(Diametro/2)*0.05",
+            "depth": "(Diametro/2)*0.11",
+            "height": "0.0003"
+          }
+        },
+        "material": "Plástico azul",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tecla Batata frita",
+        "shape": {
+          "Cylinder": {
+            "x": "(Diametro/2)*-0.27",
+            "y": "(Diametro/2)*-0.07",
+            "z": "(Altura + 0.0015)",
+            "radius": "0.0065",
+            "height": "0.0005"
+          }
+        },
+        "material": "Teclado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tecla Batata frita - ícone",
+        "shape": {
+          "Cylinder": {
+            "x": "(Diametro/2)*-0.27",
+            "y": "(Diametro/2)*-0.07",
+            "z": "(Altura + 0.0015) + 0.0005",
+            "radius": "0.003",
+            "height": "0.0003"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tecla Frango",
+        "shape": {
+          "Cylinder": {
+            "x": "(Diametro/2)*-0.09",
+            "y": "(Diametro/2)*-0.07",
+            "z": "(Altura + 0.0015)",
+            "radius": "0.0065",
+            "height": "0.0005"
+          }
+        },
+        "material": "Teclado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tecla Frango - ícone",
+        "shape": {
+          "Cylinder": {
+            "x": "(Diametro/2)*-0.09",
+            "y": "(Diametro/2)*-0.07",
+            "z": "(Altura + 0.0015) + 0.0005",
+            "radius": "0.003",
+            "height": "0.0003"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tecla Carne",
+        "shape": {
+          "Cylinder": {
+            "x": "(Diametro/2)*0.09",
+            "y": "(Diametro/2)*-0.07",
+            "z": "(Altura + 0.0015)",
+            "radius": "0.0065",
+            "height": "0.0005"
+          }
+        },
+        "material": "Teclado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tecla Carne - ícone",
+        "shape": {
+          "Cylinder": {
+            "x": "(Diametro/2)*0.09",
+            "y": "(Diametro/2)*-0.07",
+            "z": "(Altura + 0.0015) + 0.0005",
+            "radius": "0.003",
+            "height": "0.0003"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tecla Peixe",
+        "shape": {
+          "Cylinder": {
+            "x": "(Diametro/2)*0.27",
+            "y": "(Diametro/2)*-0.07",
+            "z": "(Altura + 0.0015)",
+            "radius": "0.0065",
+            "height": "0.0005"
+          }
+        },
+        "material": "Teclado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tecla Peixe - ícone",
+        "shape": {
+          "Cylinder": {
+            "x": "(Diametro/2)*0.27",
+            "y": "(Diametro/2)*-0.07",
+            "z": "(Altura + 0.0015) + 0.0005",
+            "radius": "0.003",
+            "height": "0.0003"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tecla Legumes",
+        "shape": {
+          "Cylinder": {
+            "x": "(Diametro/2)*-0.27",
+            "y": "(Diametro/2)*-0.24",
+            "z": "(Altura + 0.0015)",
+            "radius": "0.0065",
+            "height": "0.0005"
+          }
+        },
+        "material": "Teclado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tecla Legumes - ícone",
+        "shape": {
+          "Cylinder": {
+            "x": "(Diametro/2)*-0.27",
+            "y": "(Diametro/2)*-0.24",
+            "z": "(Altura + 0.0015) + 0.0005",
+            "radius": "0.003",
+            "height": "0.0003"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tecla Bolo",
+        "shape": {
+          "Cylinder": {
+            "x": "(Diametro/2)*-0.09",
+            "y": "(Diametro/2)*-0.24",
+            "z": "(Altura + 0.0015)",
+            "radius": "0.0065",
+            "height": "0.0005"
+          }
+        },
+        "material": "Teclado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tecla Bolo - ícone",
+        "shape": {
+          "Cylinder": {
+            "x": "(Diametro/2)*-0.09",
+            "y": "(Diametro/2)*-0.24",
+            "z": "(Altura + 0.0015) + 0.0005",
+            "radius": "0.003",
+            "height": "0.0003"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tecla Pizza",
+        "shape": {
+          "Cylinder": {
+            "x": "(Diametro/2)*0.09",
+            "y": "(Diametro/2)*-0.24",
+            "z": "(Altura + 0.0015)",
+            "radius": "0.0065",
+            "height": "0.0005"
+          }
+        },
+        "material": "Teclado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tecla Pizza - ícone",
+        "shape": {
+          "Cylinder": {
+            "x": "(Diametro/2)*0.09",
+            "y": "(Diametro/2)*-0.24",
+            "z": "(Altura + 0.0015) + 0.0005",
+            "radius": "0.003",
+            "height": "0.0003"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tecla Reaquecer",
+        "shape": {
+          "Cylinder": {
+            "x": "(Diametro/2)*0.27",
+            "y": "(Diametro/2)*-0.24",
+            "z": "(Altura + 0.0015)",
+            "radius": "0.0065",
+            "height": "0.0005"
+          }
+        },
+        "material": "Teclado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tecla Reaquecer - ícone",
+        "shape": {
+          "Cylinder": {
+            "x": "(Diametro/2)*0.27",
+            "y": "(Diametro/2)*-0.24",
+            "z": "(Altura + 0.0015) + 0.0005",
+            "radius": "0.003",
+            "height": "0.0003"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tecla Temperatura +",
+        "shape": {
+          "Cylinder": {
+            "x": "(Diametro/2)*0.36",
+            "y": "(Diametro/2)*0.25",
+            "z": "(Altura + 0.0015)",
+            "radius": "0.006",
+            "height": "0.0005"
+          }
+        },
+        "material": "Teclado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tecla Temperatura -",
+        "shape": {
+          "Cylinder": {
+            "x": "(Diametro/2)*0.36",
+            "y": "(Diametro/2)*0.11",
+            "z": "(Altura + 0.0015)",
+            "radius": "0.006",
+            "height": "0.0005"
+          }
+        },
+        "material": "Teclado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tecla Tempo +",
+        "shape": {
+          "Cylinder": {
+            "x": "(Diametro/2)*-0.36",
+            "y": "(Diametro/2)*0.25",
+            "z": "(Altura + 0.0015)",
+            "radius": "0.006",
+            "height": "0.0005"
+          }
+        },
+        "material": "Teclado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tecla Tempo -",
+        "shape": {
+          "Cylinder": {
+            "x": "(Diametro/2)*-0.36",
+            "y": "(Diametro/2)*0.11",
+            "z": "(Altura + 0.0015)",
+            "radius": "0.006",
+            "height": "0.0005"
+          }
+        },
+        "material": "Teclado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tecla Liga/Desliga - aro",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "-(Diametro/2)*0.41",
+            "z": "(Altura + 0.0015)",
+            "radius": "0.009",
+            "height": "0.0005"
+          }
+        },
+        "material": "Plástico vermelho",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tecla Liga/Desliga",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "-(Diametro/2)*0.41",
+            "z": "(Altura + 0.0015)",
+            "radius": "0.007",
+            "height": "0.0008"
+          }
+        },
+        "material": "Teclado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída de ar - moldura",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((Diametro/2) + 0.010))*0.52992",
+                "v": "(((Diametro/2) + 0.010))*0.84805",
+                "radius": "((Diametro/2) + 0.010)"
+              },
+              {
+                "u": "(((Diametro/2) + 0.010))*-0.52992",
+                "v": "(((Diametro/2) + 0.010))*0.84805"
+              },
+              {
+                "u": "(((Diametro/2) - 0.004))*-0.52992",
+                "v": "(((Diametro/2) - 0.004))*0.84805"
+              },
+              {
+                "u": "(((Diametro/2) - 0.004))*-0.40674",
+                "v": "(((Diametro/2) - 0.004))*0.91355"
+              },
+              {
+                "u": "(((Diametro/2) - 0.004))*-0.27564",
+                "v": "(((Diametro/2) - 0.004))*0.96126"
+              },
+              {
+                "u": "(((Diametro/2) - 0.004))*-0.13917",
+                "v": "(((Diametro/2) - 0.004))*0.99027"
+              },
+              {
+                "u": "(((Diametro/2) - 0.004))*0.0",
+                "v": "(((Diametro/2) - 0.004))*1.0"
+              },
+              {
+                "u": "(((Diametro/2) - 0.004))*0.13917",
+                "v": "(((Diametro/2) - 0.004))*0.99027"
+              },
+              {
+                "u": "(((Diametro/2) - 0.004))*0.27564",
+                "v": "(((Diametro/2) - 0.004))*0.96126"
+              },
+              {
+                "u": "(((Diametro/2) - 0.004))*0.40674",
+                "v": "(((Diametro/2) - 0.004))*0.91355"
+              },
+              {
+                "u": "(((Diametro/2) - 0.004))*0.52992",
+                "v": "(((Diametro/2) - 0.004))*0.84805"
+              }
+            ],
+            "offset": "((Altura*0.62) + 0.010)",
+            "depth": "((Altura*0.74) - 0.002) - ((Altura*0.62) + 0.010)"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída de ar - fenda 1",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) + 0.0095))*0.46947 - 0.003",
+            "y": "(((Diametro/2) + 0.0095))*0.88295 - 0.001",
+            "z": "((Altura*0.62) + 0.010) + 0.004",
+            "width": "0.006",
+            "depth": "0.0025",
+            "height": "((Altura*0.74) - 0.002) - ((Altura*0.62) + 0.010) - 0.008"
+          }
+        },
+        "material": "Tela perfurada",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída de ar - fenda 2",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) + 0.0095))*0.35837 - 0.003",
+            "y": "(((Diametro/2) + 0.0095))*0.93358 - 0.001",
+            "z": "((Altura*0.62) + 0.010) + 0.004",
+            "width": "0.006",
+            "depth": "0.0025",
+            "height": "((Altura*0.74) - 0.002) - ((Altura*0.62) + 0.010) - 0.008"
+          }
+        },
+        "material": "Tela perfurada",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída de ar - fenda 3",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) + 0.0095))*0.24192 - 0.003",
+            "y": "(((Diametro/2) + 0.0095))*0.9703 - 0.001",
+            "z": "((Altura*0.62) + 0.010) + 0.004",
+            "width": "0.006",
+            "depth": "0.0025",
+            "height": "((Altura*0.74) - 0.002) - ((Altura*0.62) + 0.010) - 0.008"
+          }
+        },
+        "material": "Tela perfurada",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída de ar - fenda 4",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) + 0.0095))*0.12187 - 0.003",
+            "y": "(((Diametro/2) + 0.0095))*0.99255 - 0.001",
+            "z": "((Altura*0.62) + 0.010) + 0.004",
+            "width": "0.006",
+            "depth": "0.0025",
+            "height": "((Altura*0.74) - 0.002) - ((Altura*0.62) + 0.010) - 0.008"
+          }
+        },
+        "material": "Tela perfurada",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída de ar - fenda 5",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) + 0.0095))*0.0 - 0.003",
+            "y": "(((Diametro/2) + 0.0095))*1.0 - 0.001",
+            "z": "((Altura*0.62) + 0.010) + 0.004",
+            "width": "0.006",
+            "depth": "0.0025",
+            "height": "((Altura*0.74) - 0.002) - ((Altura*0.62) + 0.010) - 0.008"
+          }
+        },
+        "material": "Tela perfurada",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída de ar - fenda 6",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) + 0.0095))*-0.12187 - 0.003",
+            "y": "(((Diametro/2) + 0.0095))*0.99255 - 0.001",
+            "z": "((Altura*0.62) + 0.010) + 0.004",
+            "width": "0.006",
+            "depth": "0.0025",
+            "height": "((Altura*0.74) - 0.002) - ((Altura*0.62) + 0.010) - 0.008"
+          }
+        },
+        "material": "Tela perfurada",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída de ar - fenda 7",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) + 0.0095))*-0.24192 - 0.003",
+            "y": "(((Diametro/2) + 0.0095))*0.9703 - 0.001",
+            "z": "((Altura*0.62) + 0.010) + 0.004",
+            "width": "0.006",
+            "depth": "0.0025",
+            "height": "((Altura*0.74) - 0.002) - ((Altura*0.62) + 0.010) - 0.008"
+          }
+        },
+        "material": "Tela perfurada",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída de ar - fenda 8",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) + 0.0095))*-0.35837 - 0.003",
+            "y": "(((Diametro/2) + 0.0095))*0.93358 - 0.001",
+            "z": "((Altura*0.62) + 0.010) + 0.004",
+            "width": "0.006",
+            "depth": "0.0025",
+            "height": "((Altura*0.74) - 0.002) - ((Altura*0.62) + 0.010) - 0.008"
+          }
+        },
+        "material": "Tela perfurada",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída de ar - fenda 9",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) + 0.0095))*-0.46947 - 0.003",
+            "y": "(((Diametro/2) + 0.0095))*0.88295 - 0.001",
+            "z": "((Altura*0.62) + 0.010) + 0.004",
+            "width": "0.006",
+            "depth": "0.0025",
+            "height": "((Altura*0.74) - 0.002) - ((Altura*0.62) + 0.010) - 0.008"
+          }
+        },
+        "material": "Tela perfurada",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Passa-cabo",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(Diametro/2)*0.3",
+                "v": "(Diametro/2)*0.93"
+              },
+              {
+                "u": "((Diametro/2)*0.3) + 0.006",
+                "v": "(Diametro/2)*0.93"
+              },
+              {
+                "u": "((Diametro/2)*0.3) + 0.006",
+                "v": "((Diametro/2)*0.93) + 0.014"
+              },
+              {
+                "u": "(Diametro/2)*0.3",
+                "v": "((Diametro/2)*0.93) + 0.014"
+              }
+            ],
+            "offset": "0.03",
+            "axis": "(Diametro/2)*0.3",
+            "angle": "360"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cabo elétrico - saída",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(Diametro/2)*0.3",
+                "v": "((Diametro/2)*0.93) + 0.014"
+              },
+              {
+                "u": "((Diametro/2)*0.3) + 0.003",
+                "v": "((Diametro/2)*0.93) + 0.014"
+              },
+              {
+                "u": "((Diametro/2)*0.3) + 0.003",
+                "v": "(((Diametro/2)*0.93) + 0.014) + 0.014"
+              },
+              {
+                "u": "(Diametro/2)*0.3",
+                "v": "(((Diametro/2)*0.93) + 0.014) + 0.014"
+              }
+            ],
+            "offset": "0.03",
+            "axis": "(Diametro/2)*0.3",
+            "angle": "360"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cabo elétrico - descida",
+        "shape": {
+          "Cylinder": {
+            "x": "(Diametro/2)*0.3",
+            "y": "((Diametro/2)*0.93) + 0.026",
+            "z": "0.003",
+            "radius": "0.003",
+            "height": "0.03 - 0.003"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cabo elétrico - trecho na bancada",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((Diametro/2)*0.93) + 0.026) - 0.003",
+                "v": "0.003",
+                "radius": "0.003"
+              },
+              {
+                "u": "(((Diametro/2)*0.93) + 0.026) + 0.003",
+                "v": "0.003",
+                "radius": "0.003"
+              }
+            ],
+            "offset": "((Diametro/2)*0.3) - 0.14",
+            "depth": "0.14"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Plugue - corpo",
+        "shape": {
+          "Box": {
+            "x": "((Diametro/2)*0.3) - 0.14 - 0.034",
+            "y": "((Diametro/2)*0.93) + 0.026 - 0.017",
+            "z": "0",
+            "width": "0.034",
+            "depth": "0.034",
+            "height": "0.016"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Plugue - pino 1",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((Diametro/2)*0.93) + 0.026 + -0.0095) - 0.002",
+                "v": "0.008",
+                "radius": "0.002"
+              },
+              {
+                "u": "(((Diametro/2)*0.93) + 0.026 + -0.0095) + 0.002",
+                "v": "0.008",
+                "radius": "0.002"
+              }
+            ],
+            "offset": "((Diametro/2)*0.3) - 0.14 - 0.052",
+            "depth": "0.018"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Plugue - pino 2",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((Diametro/2)*0.93) + 0.026 + 0.0095) - 0.002",
+                "v": "0.008",
+                "radius": "0.002"
+              },
+              {
+                "u": "(((Diametro/2)*0.93) + 0.026 + 0.0095) + 0.002",
+                "v": "0.008",
+                "radius": "0.002"
+              }
+            ],
+            "offset": "((Diametro/2)*0.3) - 0.14 - 0.052",
+            "depth": "0.018"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta - frente",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((Diametro/2) + 0.0015))*-0.80902",
+                "v": "(((Diametro/2) + 0.0015))*-0.58779 + ((-AberturaGaveta))",
+                "radius": "((Diametro/2) + 0.0015)"
+              },
+              {
+                "u": "(((Diametro/2) + 0.0015))*0.0",
+                "v": "(((Diametro/2) + 0.0015))*-1.0 + ((-AberturaGaveta))",
+                "radius": "((Diametro/2) + 0.0015)"
+              },
+              {
+                "u": "(((Diametro/2) + 0.0015))*0.80902",
+                "v": "(((Diametro/2) + 0.0015))*-0.58779 + ((-AberturaGaveta))"
+              },
+              {
+                "u": "(((Diametro/2) - 0.010))*0.80902",
+                "v": "(((Diametro/2) - 0.010))*-0.58779 + ((-AberturaGaveta))"
+              },
+              {
+                "u": "(((Diametro/2) - 0.010))*0.68455",
+                "v": "(((Diametro/2) - 0.010))*-0.72897 + ((-AberturaGaveta))"
+              },
+              {
+                "u": "(((Diametro/2) - 0.010))*0.53583",
+                "v": "(((Diametro/2) - 0.010))*-0.84433 + ((-AberturaGaveta))"
+              },
+              {
+                "u": "(((Diametro/2) - 0.010))*0.36812",
+                "v": "(((Diametro/2) - 0.010))*-0.92978 + ((-AberturaGaveta))"
+              },
+              {
+                "u": "(((Diametro/2) - 0.010))*0.18738",
+                "v": "(((Diametro/2) - 0.010))*-0.98229 + ((-AberturaGaveta))"
+              },
+              {
+                "u": "(((Diametro/2) - 0.010))*0.0",
+                "v": "(((Diametro/2) - 0.010))*-1.0 + ((-AberturaGaveta))"
+              },
+              {
+                "u": "(((Diametro/2) - 0.010))*-0.18738",
+                "v": "(((Diametro/2) - 0.010))*-0.98229 + ((-AberturaGaveta))"
+              },
+              {
+                "u": "(((Diametro/2) - 0.010))*-0.36812",
+                "v": "(((Diametro/2) - 0.010))*-0.92978 + ((-AberturaGaveta))"
+              },
+              {
+                "u": "(((Diametro/2) - 0.010))*-0.53583",
+                "v": "(((Diametro/2) - 0.010))*-0.84433 + ((-AberturaGaveta))"
+              },
+              {
+                "u": "(((Diametro/2) - 0.010))*-0.68455",
+                "v": "(((Diametro/2) - 0.010))*-0.72897 + ((-AberturaGaveta))"
+              },
+              {
+                "u": "(((Diametro/2) - 0.010))*-0.80902",
+                "v": "(((Diametro/2) - 0.010))*-0.58779 + ((-AberturaGaveta))"
+              }
+            ],
+            "offset": "(0.050 + 0.003)",
+            "depth": "((Altura*0.62) - 0.003) - (0.050 + 0.003)"
+          }
+        },
+        "material": "Plástico preto brilhante",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta - cuba",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "(0.050 + 0.005)"
+              },
+              {
+                "u": "((Diametro/2) - 0.016) - 0.010",
+                "v": "(0.050 + 0.005)"
+              },
+              {
+                "u": "((Diametro/2) - 0.016)",
+                "v": "(0.050 + 0.005) + 0.010"
+              },
+              {
+                "u": "((Diametro/2) - 0.016)",
+                "v": "((Altura*0.62) - 0.046)"
+              },
+              {
+                "u": "((Diametro/2) - 0.016) - 0.003",
+                "v": "((Altura*0.62) - 0.046)"
+              },
+              {
+                "u": "((Diametro/2) - 0.016) - 0.003",
+                "v": "(0.050 + 0.005) + 0.011"
+              },
+              {
+                "u": "((Diametro/2) - 0.016) - 0.011",
+                "v": "(0.050 + 0.005) + 0.003"
+              },
+              {
+                "u": "0",
+                "v": "(0.050 + 0.005) + 0.003"
+              }
+            ],
+            "offset": "(-AberturaGaveta)",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cesto",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "((0.050 + 0.005) + 0.012)"
+              },
+              {
+                "u": "(((Diametro/2) - 0.016) - 0.007) - 0.008",
+                "v": "((0.050 + 0.005) + 0.012)"
+              },
+              {
+                "u": "(((Diametro/2) - 0.016) - 0.007)",
+                "v": "((0.050 + 0.005) + 0.012) + 0.008"
+              },
+              {
+                "u": "(((Diametro/2) - 0.016) - 0.007)",
+                "v": "((Altura*0.62) - 0.046) + 0.002"
+              },
+              {
+                "u": "(((Diametro/2) - 0.016) - 0.007) + 0.006",
+                "v": "((Altura*0.62) - 0.046) + 0.002"
+              },
+              {
+                "u": "(((Diametro/2) - 0.016) - 0.007) + 0.006",
+                "v": "((Altura*0.62) - 0.046) + 0.005"
+              },
+              {
+                "u": "(((Diametro/2) - 0.016) - 0.007) - 0.002",
+                "v": "((Altura*0.62) - 0.046) + 0.005"
+              },
+              {
+                "u": "(((Diametro/2) - 0.016) - 0.007) - 0.002",
+                "v": "((0.050 + 0.005) + 0.012) + 0.009"
+              },
+              {
+                "u": "(((Diametro/2) - 0.016) - 0.007) - 0.009",
+                "v": "((0.050 + 0.005) + 0.012) + 0.002"
+              },
+              {
+                "u": "0",
+                "v": "((0.050 + 0.005) + 0.012) + 0.002"
+              }
+            ],
+            "offset": "(-AberturaGaveta)",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "(((0.050 + 0.005) + 0.012) + 0.022)"
+              },
+              {
+                "u": "(((Diametro/2) - 0.016) - 0.007) - 0.004",
+                "v": "(((0.050 + 0.005) + 0.012) + 0.022)"
+              },
+              {
+                "u": "(((Diametro/2) - 0.016) - 0.007) - 0.004",
+                "v": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003"
+              },
+              {
+                "u": "0",
+                "v": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003"
+              }
+            ],
+            "offset": "(-AberturaGaveta)",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - fenda 1",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) - 0.016) - 0.007)*-0.24 - (((Diametro/2) - 0.016) - 0.007)*0.09",
+            "y": "(((Diametro/2) - 0.016) - 0.007)*-0.72 - 0.003 - AberturaGaveta",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "width": "(((Diametro/2) - 0.016) - 0.007)*0.18",
+            "depth": "0.006",
+            "height": "0.0004"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - fenda 2",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) - 0.016) - 0.007)*0.0 - (((Diametro/2) - 0.016) - 0.007)*0.09",
+            "y": "(((Diametro/2) - 0.016) - 0.007)*-0.72 - 0.003 - AberturaGaveta",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "width": "(((Diametro/2) - 0.016) - 0.007)*0.18",
+            "depth": "0.006",
+            "height": "0.0004"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - fenda 3",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) - 0.016) - 0.007)*0.24 - (((Diametro/2) - 0.016) - 0.007)*0.09",
+            "y": "(((Diametro/2) - 0.016) - 0.007)*-0.72 - 0.003 - AberturaGaveta",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "width": "(((Diametro/2) - 0.016) - 0.007)*0.18",
+            "depth": "0.006",
+            "height": "0.0004"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - fenda 4",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) - 0.016) - 0.007)*-0.48 - (((Diametro/2) - 0.016) - 0.007)*0.09",
+            "y": "(((Diametro/2) - 0.016) - 0.007)*-0.48 - 0.003 - AberturaGaveta",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "width": "(((Diametro/2) - 0.016) - 0.007)*0.18",
+            "depth": "0.006",
+            "height": "0.0004"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - fenda 5",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) - 0.016) - 0.007)*-0.24 - (((Diametro/2) - 0.016) - 0.007)*0.09",
+            "y": "(((Diametro/2) - 0.016) - 0.007)*-0.48 - 0.003 - AberturaGaveta",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "width": "(((Diametro/2) - 0.016) - 0.007)*0.18",
+            "depth": "0.006",
+            "height": "0.0004"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - fenda 6",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) - 0.016) - 0.007)*0.0 - (((Diametro/2) - 0.016) - 0.007)*0.09",
+            "y": "(((Diametro/2) - 0.016) - 0.007)*-0.48 - 0.003 - AberturaGaveta",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "width": "(((Diametro/2) - 0.016) - 0.007)*0.18",
+            "depth": "0.006",
+            "height": "0.0004"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - fenda 7",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) - 0.016) - 0.007)*0.24 - (((Diametro/2) - 0.016) - 0.007)*0.09",
+            "y": "(((Diametro/2) - 0.016) - 0.007)*-0.48 - 0.003 - AberturaGaveta",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "width": "(((Diametro/2) - 0.016) - 0.007)*0.18",
+            "depth": "0.006",
+            "height": "0.0004"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - fenda 8",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) - 0.016) - 0.007)*0.48 - (((Diametro/2) - 0.016) - 0.007)*0.09",
+            "y": "(((Diametro/2) - 0.016) - 0.007)*-0.48 - 0.003 - AberturaGaveta",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "width": "(((Diametro/2) - 0.016) - 0.007)*0.18",
+            "depth": "0.006",
+            "height": "0.0004"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - fenda 9",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) - 0.016) - 0.007)*-0.72 - (((Diametro/2) - 0.016) - 0.007)*0.09",
+            "y": "(((Diametro/2) - 0.016) - 0.007)*-0.24 - 0.003 - AberturaGaveta",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "width": "(((Diametro/2) - 0.016) - 0.007)*0.18",
+            "depth": "0.006",
+            "height": "0.0004"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - fenda 10",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) - 0.016) - 0.007)*-0.48 - (((Diametro/2) - 0.016) - 0.007)*0.09",
+            "y": "(((Diametro/2) - 0.016) - 0.007)*-0.24 - 0.003 - AberturaGaveta",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "width": "(((Diametro/2) - 0.016) - 0.007)*0.18",
+            "depth": "0.006",
+            "height": "0.0004"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - fenda 11",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) - 0.016) - 0.007)*-0.24 - (((Diametro/2) - 0.016) - 0.007)*0.09",
+            "y": "(((Diametro/2) - 0.016) - 0.007)*-0.24 - 0.003 - AberturaGaveta",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "width": "(((Diametro/2) - 0.016) - 0.007)*0.18",
+            "depth": "0.006",
+            "height": "0.0004"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - fenda 12",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) - 0.016) - 0.007)*0.0 - (((Diametro/2) - 0.016) - 0.007)*0.09",
+            "y": "(((Diametro/2) - 0.016) - 0.007)*-0.24 - 0.003 - AberturaGaveta",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "width": "(((Diametro/2) - 0.016) - 0.007)*0.18",
+            "depth": "0.006",
+            "height": "0.0004"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - fenda 13",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) - 0.016) - 0.007)*0.24 - (((Diametro/2) - 0.016) - 0.007)*0.09",
+            "y": "(((Diametro/2) - 0.016) - 0.007)*-0.24 - 0.003 - AberturaGaveta",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "width": "(((Diametro/2) - 0.016) - 0.007)*0.18",
+            "depth": "0.006",
+            "height": "0.0004"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - fenda 14",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) - 0.016) - 0.007)*0.48 - (((Diametro/2) - 0.016) - 0.007)*0.09",
+            "y": "(((Diametro/2) - 0.016) - 0.007)*-0.24 - 0.003 - AberturaGaveta",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "width": "(((Diametro/2) - 0.016) - 0.007)*0.18",
+            "depth": "0.006",
+            "height": "0.0004"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - fenda 15",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) - 0.016) - 0.007)*0.72 - (((Diametro/2) - 0.016) - 0.007)*0.09",
+            "y": "(((Diametro/2) - 0.016) - 0.007)*-0.24 - 0.003 - AberturaGaveta",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "width": "(((Diametro/2) - 0.016) - 0.007)*0.18",
+            "depth": "0.006",
+            "height": "0.0004"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - fenda 16",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) - 0.016) - 0.007)*-0.72 - (((Diametro/2) - 0.016) - 0.007)*0.09",
+            "y": "(((Diametro/2) - 0.016) - 0.007)*0.0 - 0.003 - AberturaGaveta",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "width": "(((Diametro/2) - 0.016) - 0.007)*0.18",
+            "depth": "0.006",
+            "height": "0.0004"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - fenda 17",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) - 0.016) - 0.007)*-0.48 - (((Diametro/2) - 0.016) - 0.007)*0.09",
+            "y": "(((Diametro/2) - 0.016) - 0.007)*0.0 - 0.003 - AberturaGaveta",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "width": "(((Diametro/2) - 0.016) - 0.007)*0.18",
+            "depth": "0.006",
+            "height": "0.0004"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - fenda 18",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) - 0.016) - 0.007)*-0.24 - (((Diametro/2) - 0.016) - 0.007)*0.09",
+            "y": "(((Diametro/2) - 0.016) - 0.007)*0.0 - 0.003 - AberturaGaveta",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "width": "(((Diametro/2) - 0.016) - 0.007)*0.18",
+            "depth": "0.006",
+            "height": "0.0004"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - fenda 19",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) - 0.016) - 0.007)*0.0 - (((Diametro/2) - 0.016) - 0.007)*0.09",
+            "y": "(((Diametro/2) - 0.016) - 0.007)*0.0 - 0.003 - AberturaGaveta",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "width": "(((Diametro/2) - 0.016) - 0.007)*0.18",
+            "depth": "0.006",
+            "height": "0.0004"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - fenda 20",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) - 0.016) - 0.007)*0.24 - (((Diametro/2) - 0.016) - 0.007)*0.09",
+            "y": "(((Diametro/2) - 0.016) - 0.007)*0.0 - 0.003 - AberturaGaveta",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "width": "(((Diametro/2) - 0.016) - 0.007)*0.18",
+            "depth": "0.006",
+            "height": "0.0004"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - fenda 21",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) - 0.016) - 0.007)*0.48 - (((Diametro/2) - 0.016) - 0.007)*0.09",
+            "y": "(((Diametro/2) - 0.016) - 0.007)*0.0 - 0.003 - AberturaGaveta",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "width": "(((Diametro/2) - 0.016) - 0.007)*0.18",
+            "depth": "0.006",
+            "height": "0.0004"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - fenda 22",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) - 0.016) - 0.007)*0.72 - (((Diametro/2) - 0.016) - 0.007)*0.09",
+            "y": "(((Diametro/2) - 0.016) - 0.007)*0.0 - 0.003 - AberturaGaveta",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "width": "(((Diametro/2) - 0.016) - 0.007)*0.18",
+            "depth": "0.006",
+            "height": "0.0004"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - fenda 23",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) - 0.016) - 0.007)*-0.72 - (((Diametro/2) - 0.016) - 0.007)*0.09",
+            "y": "(((Diametro/2) - 0.016) - 0.007)*0.24 - 0.003 - AberturaGaveta",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "width": "(((Diametro/2) - 0.016) - 0.007)*0.18",
+            "depth": "0.006",
+            "height": "0.0004"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - fenda 24",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) - 0.016) - 0.007)*-0.48 - (((Diametro/2) - 0.016) - 0.007)*0.09",
+            "y": "(((Diametro/2) - 0.016) - 0.007)*0.24 - 0.003 - AberturaGaveta",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "width": "(((Diametro/2) - 0.016) - 0.007)*0.18",
+            "depth": "0.006",
+            "height": "0.0004"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - fenda 25",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) - 0.016) - 0.007)*-0.24 - (((Diametro/2) - 0.016) - 0.007)*0.09",
+            "y": "(((Diametro/2) - 0.016) - 0.007)*0.24 - 0.003 - AberturaGaveta",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "width": "(((Diametro/2) - 0.016) - 0.007)*0.18",
+            "depth": "0.006",
+            "height": "0.0004"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - fenda 26",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) - 0.016) - 0.007)*0.0 - (((Diametro/2) - 0.016) - 0.007)*0.09",
+            "y": "(((Diametro/2) - 0.016) - 0.007)*0.24 - 0.003 - AberturaGaveta",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "width": "(((Diametro/2) - 0.016) - 0.007)*0.18",
+            "depth": "0.006",
+            "height": "0.0004"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - fenda 27",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) - 0.016) - 0.007)*0.24 - (((Diametro/2) - 0.016) - 0.007)*0.09",
+            "y": "(((Diametro/2) - 0.016) - 0.007)*0.24 - 0.003 - AberturaGaveta",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "width": "(((Diametro/2) - 0.016) - 0.007)*0.18",
+            "depth": "0.006",
+            "height": "0.0004"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - fenda 28",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) - 0.016) - 0.007)*0.48 - (((Diametro/2) - 0.016) - 0.007)*0.09",
+            "y": "(((Diametro/2) - 0.016) - 0.007)*0.24 - 0.003 - AberturaGaveta",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "width": "(((Diametro/2) - 0.016) - 0.007)*0.18",
+            "depth": "0.006",
+            "height": "0.0004"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - fenda 29",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) - 0.016) - 0.007)*0.72 - (((Diametro/2) - 0.016) - 0.007)*0.09",
+            "y": "(((Diametro/2) - 0.016) - 0.007)*0.24 - 0.003 - AberturaGaveta",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "width": "(((Diametro/2) - 0.016) - 0.007)*0.18",
+            "depth": "0.006",
+            "height": "0.0004"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - fenda 30",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) - 0.016) - 0.007)*-0.48 - (((Diametro/2) - 0.016) - 0.007)*0.09",
+            "y": "(((Diametro/2) - 0.016) - 0.007)*0.48 - 0.003 - AberturaGaveta",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "width": "(((Diametro/2) - 0.016) - 0.007)*0.18",
+            "depth": "0.006",
+            "height": "0.0004"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - fenda 31",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) - 0.016) - 0.007)*-0.24 - (((Diametro/2) - 0.016) - 0.007)*0.09",
+            "y": "(((Diametro/2) - 0.016) - 0.007)*0.48 - 0.003 - AberturaGaveta",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "width": "(((Diametro/2) - 0.016) - 0.007)*0.18",
+            "depth": "0.006",
+            "height": "0.0004"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - fenda 32",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) - 0.016) - 0.007)*0.0 - (((Diametro/2) - 0.016) - 0.007)*0.09",
+            "y": "(((Diametro/2) - 0.016) - 0.007)*0.48 - 0.003 - AberturaGaveta",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "width": "(((Diametro/2) - 0.016) - 0.007)*0.18",
+            "depth": "0.006",
+            "height": "0.0004"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - fenda 33",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) - 0.016) - 0.007)*0.24 - (((Diametro/2) - 0.016) - 0.007)*0.09",
+            "y": "(((Diametro/2) - 0.016) - 0.007)*0.48 - 0.003 - AberturaGaveta",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "width": "(((Diametro/2) - 0.016) - 0.007)*0.18",
+            "depth": "0.006",
+            "height": "0.0004"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - fenda 34",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) - 0.016) - 0.007)*0.48 - (((Diametro/2) - 0.016) - 0.007)*0.09",
+            "y": "(((Diametro/2) - 0.016) - 0.007)*0.48 - 0.003 - AberturaGaveta",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "width": "(((Diametro/2) - 0.016) - 0.007)*0.18",
+            "depth": "0.006",
+            "height": "0.0004"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - fenda 35",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) - 0.016) - 0.007)*-0.24 - (((Diametro/2) - 0.016) - 0.007)*0.09",
+            "y": "(((Diametro/2) - 0.016) - 0.007)*0.72 - 0.003 - AberturaGaveta",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "width": "(((Diametro/2) - 0.016) - 0.007)*0.18",
+            "depth": "0.006",
+            "height": "0.0004"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - fenda 36",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) - 0.016) - 0.007)*0.0 - (((Diametro/2) - 0.016) - 0.007)*0.09",
+            "y": "(((Diametro/2) - 0.016) - 0.007)*0.72 - 0.003 - AberturaGaveta",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "width": "(((Diametro/2) - 0.016) - 0.007)*0.18",
+            "depth": "0.006",
+            "height": "0.0004"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - fenda 37",
+        "shape": {
+          "Box": {
+            "x": "(((Diametro/2) - 0.016) - 0.007)*0.24 - (((Diametro/2) - 0.016) - 0.007)*0.09",
+            "y": "(((Diametro/2) - 0.016) - 0.007)*0.72 - 0.003 - AberturaGaveta",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "width": "(((Diametro/2) - 0.016) - 0.007)*0.18",
+            "depth": "0.006",
+            "height": "0.0004"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - batente de silicone 1",
+        "shape": {
+          "Cylinder": {
+            "x": "(((((Diametro/2) - 0.016) - 0.007) - 0.006))*0.0",
+            "y": "(((((Diametro/2) - 0.016) - 0.007) - 0.006))*1.0 + ((-AberturaGaveta))",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) - 0.002",
+            "radius": "0.005",
+            "height": "0.007"
+          }
+        },
+        "material": "Borracha cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - batente de silicone 2",
+        "shape": {
+          "Cylinder": {
+            "x": "(((((Diametro/2) - 0.016) - 0.007) - 0.006))*-0.86603",
+            "y": "(((((Diametro/2) - 0.016) - 0.007) - 0.006))*-0.5 + ((-AberturaGaveta))",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) - 0.002",
+            "radius": "0.005",
+            "height": "0.007"
+          }
+        },
+        "material": "Borracha cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - batente de silicone 3",
+        "shape": {
+          "Cylinder": {
+            "x": "(((((Diametro/2) - 0.016) - 0.007) - 0.006))*0.86603",
+            "y": "(((((Diametro/2) - 0.016) - 0.007) - 0.006))*-0.5 + ((-AberturaGaveta))",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) - 0.002",
+            "radius": "0.005",
+            "height": "0.007"
+          }
+        },
+        "material": "Borracha cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha perfurada - pega",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "(-AberturaGaveta)",
+            "z": "(((0.050 + 0.005) + 0.012) + 0.022) + 0.003",
+            "radius": "0.008",
+            "height": "0.012"
+          }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cesto - marca de nível máximo",
+        "shape": {
+          "Box": {
+            "x": "-0.012",
+            "y": "(((Diametro/2) - 0.016) - 0.007) - 0.003 - AberturaGaveta",
+            "z": "((Altura*0.62) - 0.046) - 0.020",
+            "width": "0.024",
+            "depth": "0.0015",
+            "height": "0.002"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Puxador",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(-(Diametro/2) - AberturaGaveta) + 0.006",
+                "v": "(0.050 + ((Altura*0.62) - 0.050)*0.56) - 0.020"
+              },
+              {
+                "u": "(-(Diametro/2) - AberturaGaveta) + 0.006",
+                "v": "(0.050 + ((Altura*0.62) - 0.050)*0.56) + 0.020"
+              },
+              {
+                "u": "(-(Diametro/2) - AberturaGaveta) - 0.073",
+                "v": "(0.050 + ((Altura*0.62) - 0.050)*0.56) + 0.020",
+                "radius": "0.012"
+              },
+              {
+                "u": "(-(Diametro/2) - AberturaGaveta) - 0.085",
+                "v": "(0.050 + ((Altura*0.62) - 0.050)*0.56) + 0.008"
+              },
+              {
+                "u": "(-(Diametro/2) - AberturaGaveta) - 0.085",
+                "v": "(0.050 + ((Altura*0.62) - 0.050)*0.56) - 0.002"
+              },
+              {
+                "u": "(-(Diametro/2) - AberturaGaveta) - 0.030",
+                "v": "(0.050 + ((Altura*0.62) - 0.050)*0.56) - 0.020"
+              }
+            ],
+            "offset": "-0.018",
+            "depth": "0.036"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Puxador - base de fixação",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(-(Diametro/2) - AberturaGaveta) - 0.004",
+                "v": "(0.050 + ((Altura*0.62) - 0.050)*0.56) - 0.032"
+              },
+              {
+                "u": "(-(Diametro/2) - AberturaGaveta) + 0.006",
+                "v": "(0.050 + ((Altura*0.62) - 0.050)*0.56) - 0.032"
+              },
+              {
+                "u": "(-(Diametro/2) - AberturaGaveta) + 0.006",
+                "v": "(0.050 + ((Altura*0.62) - 0.050)*0.56) + 0.030"
+              },
+              {
+                "u": "(-(Diametro/2) - AberturaGaveta) - 0.004",
+                "v": "(0.050 + ((Altura*0.62) - 0.050)*0.56) + 0.030"
+              }
+            ],
+            "offset": "-0.026",
+            "depth": "0.052"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Puxador - friso",
+        "shape": {
+          "Box": {
+            "x": "-0.012",
+            "y": "(-(Diametro/2) - AberturaGaveta) - 0.070",
+            "z": "(0.050 + ((Altura*0.62) - 0.050)*0.56) + 0.020",
+            "width": "0.024",
+            "depth": "0.03",
+            "height": "0.0008"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Botão de liberação do cesto",
+        "shape": {
+          "Box": {
+            "x": "-0.008",
+            "y": "(-(Diametro/2) - AberturaGaveta) - 0.034",
+            "z": "(0.050 + ((Altura*0.62) - 0.050)*0.56) + 0.020",
+            "width": "0.016",
+            "depth": "0.022",
+            "height": "0.004"
+          }
+        },
+        "material": "Plástico vermelho",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Proteção do botão de liberação",
+        "shape": {
+          "Box": {
+            "x": "-0.011",
+            "y": "(-(Diametro/2) - AberturaGaveta) - 0.037",
+            "z": "(0.050 + ((Altura*0.62) - 0.050)*0.56) + 0.020",
+            "width": "0.022",
+            "depth": "0.028",
+            "height": "0.007"
+          }
+        },
+        "material": "Plástico translúcido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso do puxador 1",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-1*0.010",
+                "v": "(-(Diametro/2) - AberturaGaveta) + 0.009 + 0.0005"
+              },
+              {
+                "u": "(-1*0.010) + 0.003",
+                "v": "(-(Diametro/2) - AberturaGaveta) + 0.009 + 0.0005"
+              },
+              {
+                "u": "(-1*0.010) + 0.003",
+                "v": "((-(Diametro/2) - AberturaGaveta) + 0.009 + 0.0005) + 0.002"
+              },
+              {
+                "u": "-1*0.010",
+                "v": "((-(Diametro/2) - AberturaGaveta) + 0.009 + 0.0005) + 0.002"
+              }
+            ],
+            "offset": "(0.050 + ((Altura*0.62) - 0.050)*0.56) - 0.006",
+            "axis": "-1*0.010",
+            "angle": "360"
+          }
+        },
+        "material": "Aço",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso do puxador 2",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "1*0.010",
+                "v": "(-(Diametro/2) - AberturaGaveta) + 0.009 + 0.0005"
+              },
+              {
+                "u": "(1*0.010) + 0.003",
+                "v": "(-(Diametro/2) - AberturaGaveta) + 0.009 + 0.0005"
+              },
+              {
+                "u": "(1*0.010) + 0.003",
+                "v": "((-(Diametro/2) - AberturaGaveta) + 0.009 + 0.0005) + 0.002"
+              },
+              {
+                "u": "1*0.010",
+                "v": "((-(Diametro/2) - AberturaGaveta) + 0.009 + 0.0005) + 0.002"
+              }
+            ],
+            "offset": "(0.050 + ((Altura*0.62) - 0.050)*0.56) - 0.006",
+            "axis": "1*0.010",
+            "angle": "360"
+          }
+        },
+        "material": "Aço",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      }
+    ]
+  },
+  "types": [
+    {
+      "name": "Air fryer 4 L",
+      "values": {},
+      "info": {
+        "description": "Fritadeira elétrica sem óleo de 4 litros, com painel digital e gaveta com cesto antiaderente"
+      }
+    },
+    {
+      "name": "Air fryer 7 L",
+      "values": {
+        "Diametro": 0.33,
+        "Altura": 0.37
+      },
+      "info": {
+        "description": "Fritadeira elétrica sem óleo de 7 litros, com painel digital e gaveta com cesto antiaderente"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "name": "Plástico preto",
+      "color": [
+        34,
+        34,
+        37
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico cinza",
+      "color": [
+        120,
+        122,
+        126
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Inox escovado",
+      "color": [
+        198,
+        200,
+        203
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Borracha",
+      "color": [
+        30,
+        30,
+        30
+      ],
+      "class": "Plastic",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Tela perfurada",
+      "color": [
+        24,
+        24,
+        26
+      ],
+      "class": "Metal",
+      "finish": "Matte",
+      "transparency": 0.4
+    },
+    {
+      "name": "Alumínio anodizado",
+      "color": [
+        206,
+        208,
+        210
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Aço galvanizado",
+      "color": [
+        160,
+        165,
+        170
+      ],
+      "class": "Metal",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Alumínio fundido",
+      "color": [
+        172,
+        174,
+        177
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Aço pintado preto",
+      "color": [
+        30,
+        30,
+        32
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Branco",
+      "color": [
+        244,
+        244,
+        240
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico preto brilhante",
+      "color": [
+        18,
+        18,
+        20
+      ],
+      "class": "Plastic",
+      "finish": "Glossy",
+      "transparency": 0
+    },
+    {
+      "name": "Cromado",
+      "color": [
+        226,
+        229,
+        233
+      ],
+      "class": "Metal",
+      "finish": "Polished",
+      "transparency": 0
+    },
+    {
+      "name": "Visor LED",
+      "color": [
+        24,
+        60,
+        96
+      ],
+      "class": "Glass",
+      "finish": "Glossy",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico azul",
+      "color": [
+        126,
+        176,
+        222
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Teclado",
+      "color": [
+        74,
+        76,
+        80
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico vermelho",
+      "color": [
+        196,
+        56,
+        48
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Latão",
+      "color": [
+        192,
+        160,
+        84
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Aço pintado cinza",
+      "color": [
+        128,
+        130,
+        134
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Borracha cinza",
+      "color": [
+        150,
+        152,
+        154
+      ],
+      "class": "Plastic",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico translúcido",
+      "color": [
+        222,
+        236,
+        240
+      ],
+      "class": "Plastic",
+      "finish": "Glossy",
+      "transparency": 0.6
+    }
+  ]
+}

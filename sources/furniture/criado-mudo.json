@@ -20,82 +20,1572 @@
         "value": 0.55,
         "kind": "Length",
         "instance": false
+      },
+      {
+        "name": "AlturaPes",
+        "value": 0.1,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "AberturaGaveta1",
+        "value": 0,
+        "kind": "Length",
+        "instance": true
+      },
+      {
+        "name": "AberturaGaveta2",
+        "value": 0,
+        "kind": "Length",
+        "instance": true
       }
     ],
     "items": [
       {
-        "name": "Corpo",
-        "material": "Madeira",
-        "in_plan": true,
+        "name": "Corpo simplificado",
         "shape": {
           "Box": {
-            "x": "-Largura / 2",
-            "y": "-Profundidade / 2",
-            "z": "0.1",
+            "x": "-Largura/2",
+            "y": "-Profundidade/2",
+            "z": "AlturaPes",
             "width": "Largura",
             "depth": "Profundidade",
-            "height": "Altura - 0.1"
+            "height": "Altura - AlturaPes"
           }
+        },
+        "material": "Madeira",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
         }
       },
       {
-        "name": "Perna 1",
-        "material": "Madeira",
-        "in_plan": false,
+        "name": "Perna simplificada 1",
         "shape": {
           "Box": {
-            "x": "-Largura / 2 + 0.02",
-            "y": "-Profundidade / 2 + 0.02",
+            "x": "-1*(Largura/2 - 0.045) - 0.015",
+            "y": "-1*(Profundidade/2 - 0.045) - 0.015",
             "z": "0",
             "width": "0.03",
             "depth": "0.03",
-            "height": "0.1"
+            "height": "AlturaPes"
           }
+        },
+        "material": "Madeira escura",
+        "in_plan": false,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
         }
       },
       {
-        "name": "Perna 2",
-        "material": "Madeira",
-        "in_plan": false,
+        "name": "Perna simplificada 2",
         "shape": {
           "Box": {
-            "x": "Largura / 2 - 0.02 - 0.03",
-            "y": "-Profundidade / 2 + 0.02",
+            "x": "1*(Largura/2 - 0.045) - 0.015",
+            "y": "-1*(Profundidade/2 - 0.045) - 0.015",
             "z": "0",
             "width": "0.03",
             "depth": "0.03",
-            "height": "0.1"
+            "height": "AlturaPes"
           }
+        },
+        "material": "Madeira escura",
+        "in_plan": false,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
         }
       },
       {
-        "name": "Perna 3",
-        "material": "Madeira",
-        "in_plan": false,
+        "name": "Perna simplificada 3",
         "shape": {
           "Box": {
-            "x": "-Largura / 2 + 0.02",
-            "y": "Profundidade / 2 - 0.02 - 0.03",
+            "x": "-1*(Largura/2 - 0.045) - 0.015",
+            "y": "1*(Profundidade/2 - 0.045) - 0.015",
             "z": "0",
             "width": "0.03",
             "depth": "0.03",
-            "height": "0.1"
+            "height": "AlturaPes"
           }
+        },
+        "material": "Madeira escura",
+        "in_plan": false,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
         }
       },
       {
-        "name": "Perna 4",
-        "material": "Madeira",
-        "in_plan": false,
+        "name": "Perna simplificada 4",
         "shape": {
           "Box": {
-            "x": "Largura / 2 - 0.02 - 0.03",
-            "y": "Profundidade / 2 - 0.02 - 0.03",
+            "x": "1*(Largura/2 - 0.045) - 0.015",
+            "y": "1*(Profundidade/2 - 0.045) - 0.015",
             "z": "0",
             "width": "0.03",
             "depth": "0.03",
-            "height": "0.1"
+            "height": "AlturaPes"
           }
+        },
+        "material": "Madeira escura",
+        "in_plan": false,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Tampo",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Profundidade/2 + 0.008",
+                "v": "Altura - 0.022"
+              },
+              {
+                "u": "Profundidade/2",
+                "v": "Altura - 0.022"
+              },
+              {
+                "u": "Profundidade/2",
+                "v": "Altura"
+              },
+              {
+                "u": "-Profundidade/2 + 0.008",
+                "v": "Altura",
+                "radius": "0.008"
+              },
+              {
+                "u": "-Profundidade/2",
+                "v": "Altura - 0.008"
+              },
+              {
+                "u": "-Profundidade/2",
+                "v": "Altura - 0.022 + 0.008",
+                "radius": "0.008"
+              }
+            ],
+            "offset": "-Largura/2",
+            "depth": "Largura"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lateral esquerda",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.002",
+            "y": "-Profundidade/2 + 0.006",
+            "z": "AlturaPes",
+            "width": "0.018",
+            "depth": "Profundidade - 0.006",
+            "height": "Altura - 0.022 - AlturaPes"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lateral direita",
+        "shape": {
+          "Box": {
+            "x": "Largura/2 - 0.002 - 0.018",
+            "y": "-Profundidade/2 + 0.006",
+            "z": "AlturaPes",
+            "width": "0.018",
+            "depth": "Profundidade - 0.006",
+            "height": "Altura - 0.022 - AlturaPes"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Base da caixa",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.002 + 0.018",
+            "y": "-Profundidade/2 + 0.006",
+            "z": "AlturaPes",
+            "width": "Largura - 0.004 - 0.036",
+            "depth": "Profundidade - 0.006",
+            "height": "0.018"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travessa superior frontal",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.002 + 0.018",
+            "y": "-Profundidade/2 + 0.006 + 0.02",
+            "z": "Altura - 0.022 - 0.02",
+            "width": "Largura - 0.004 - 0.036",
+            "depth": "0.06",
+            "height": "0.02"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travessa superior traseira",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.002 + 0.018",
+            "y": "Profundidade/2 - 0.08",
+            "z": "Altura - 0.022 - 0.02",
+            "width": "Largura - 0.004 - 0.036",
+            "depth": "0.06",
+            "height": "0.02"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Fundo",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.002 + 0.018",
+            "y": "Profundidade/2 - 0.012",
+            "z": "AlturaPes + 0.018",
+            "width": "Largura - 0.004 - 0.036",
+            "depth": "0.006",
+            "height": "Altura - 0.022 - AlturaPes - 0.018"
+          }
+        },
+        "material": "Laminado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travessa entre gavetas",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.002 + 0.018",
+            "y": "-Profundidade/2 + 0.006",
+            "z": "(AlturaPes + 0.018 + Altura - 0.022)/2 - 0.009",
+            "width": "Largura - 0.004 - 0.036",
+            "depth": "0.05",
+            "height": "0.018"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Rebaixo sob o tampo",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.006",
+            "y": "-Profundidade/2 + 0.006 + 0.004",
+            "z": "Altura - 0.0225",
+            "width": "Largura - 0.012",
+            "depth": "Profundidade - 0.006 - 0.008",
+            "height": "0.001"
+          }
+        },
+        "material": "Madeira escura",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - frente",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.002 + 0.018) + 0.0025",
+            "y": "(-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta1",
+            "z": "((AlturaPes + 0.018 + Altura - 0.022)/2 + 0.009) + 0.0025",
+            "width": "(Largura/2 - 0.002 - 0.018) - (-Largura/2 + 0.002 + 0.018) - 0.005",
+            "depth": "0.018",
+            "height": "(Altura - 0.022) - ((AlturaPes + 0.018 + Altura - 0.022)/2 + 0.009) - 0.005"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - lateral esquerda",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.002 + 0.018) + 0.0125",
+            "y": "(-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta1 + 0.018",
+            "z": "((AlturaPes + 0.018 + Altura - 0.022)/2 + 0.009) + 0.018",
+            "width": "0.012",
+            "depth": "(Profundidade - 0.05) - 0.018",
+            "height": "(Altura - 0.022) - 0.03 - (((AlturaPes + 0.018 + Altura - 0.022)/2 + 0.009) + 0.018)"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - lateral direita",
+        "shape": {
+          "Box": {
+            "x": "(Largura/2 - 0.002 - 0.018) - 0.0125 - 0.012",
+            "y": "(-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta1 + 0.018",
+            "z": "((AlturaPes + 0.018 + Altura - 0.022)/2 + 0.009) + 0.018",
+            "width": "0.012",
+            "depth": "(Profundidade - 0.05) - 0.018",
+            "height": "(Altura - 0.022) - 0.03 - (((AlturaPes + 0.018 + Altura - 0.022)/2 + 0.009) + 0.018)"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - fundo traseiro",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.002 + 0.018) + 0.0125 + 0.012",
+            "y": "(-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta1 + (Profundidade - 0.05) - 0.012",
+            "z": "((AlturaPes + 0.018 + Altura - 0.022)/2 + 0.009) + 0.018",
+            "width": "(Largura/2 - 0.002 - 0.018) - 0.0125 - ((-Largura/2 + 0.002 + 0.018) + 0.0125) - 0.024",
+            "depth": "0.012",
+            "height": "(Altura - 0.022) - 0.03 - (((AlturaPes + 0.018 + Altura - 0.022)/2 + 0.009) + 0.018) - 0.01"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - base",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.002 + 0.018) + 0.0125 + 0.012",
+            "y": "(-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta1 + 0.018",
+            "z": "((AlturaPes + 0.018 + Altura - 0.022)/2 + 0.009) + 0.018 + 0.008",
+            "width": "(Largura/2 - 0.002 - 0.018) - 0.0125 - ((-Largura/2 + 0.002 + 0.018) + 0.0125) - 0.024",
+            "depth": "(Profundidade - 0.05) - 0.018 - 0.012",
+            "height": "0.005"
+          }
+        },
+        "material": "Laminado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - corrediça fixa esquerda",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.002 + 0.018) + 0.0",
+            "y": "(-Profundidade/2 + 0.006 + 0.002) + 0.03",
+            "z": "(((AlturaPes + 0.018 + Altura - 0.022)/2 + 0.009) + (Altura - 0.022))/2 - 0.022",
+            "width": "0.0045",
+            "depth": "(Profundidade - 0.05) - 0.05",
+            "height": "0.044"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - corrediça intermediária esquerda",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.002 + 0.018) + 0.0042",
+            "y": "(-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta1/2 + 0.03",
+            "z": "(((AlturaPes + 0.018 + Altura - 0.022)/2 + 0.009) + (Altura - 0.022))/2 - 0.022 + 0.004",
+            "width": "0.004",
+            "depth": "(Profundidade - 0.05) - 0.05",
+            "height": "0.036"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - corrediça móvel esquerda",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.002 + 0.018) + 0.008",
+            "y": "(-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta1 + 0.03",
+            "z": "(((AlturaPes + 0.018 + Altura - 0.022)/2 + 0.009) + (Altura - 0.022))/2 - 0.022 + 0.008",
+            "width": "0.0045",
+            "depth": "(Profundidade - 0.05) - 0.05",
+            "height": "0.028"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - corrediça fixa direita",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2 - 0.002 - 0.018) - 0.0125) + 0.008",
+            "y": "(-Profundidade/2 + 0.006 + 0.002) + 0.03",
+            "z": "(((AlturaPes + 0.018 + Altura - 0.022)/2 + 0.009) + (Altura - 0.022))/2 - 0.022",
+            "width": "0.0045",
+            "depth": "(Profundidade - 0.05) - 0.05",
+            "height": "0.044"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - corrediça intermediária direita",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2 - 0.002 - 0.018) - 0.0125) + 0.0042",
+            "y": "(-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta1/2 + 0.03",
+            "z": "(((AlturaPes + 0.018 + Altura - 0.022)/2 + 0.009) + (Altura - 0.022))/2 - 0.022 + 0.004",
+            "width": "0.004",
+            "depth": "(Profundidade - 0.05) - 0.05",
+            "height": "0.036"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - corrediça móvel direita",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2 - 0.002 - 0.018) - 0.0125) + 0.0",
+            "y": "(-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta1 + 0.03",
+            "z": "(((AlturaPes + 0.018 + Altura - 0.022)/2 + 0.009) + (Altura - 0.022))/2 - 0.022 + 0.008",
+            "width": "0.0045",
+            "depth": "(Profundidade - 0.05) - 0.05",
+            "height": "0.028"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - puxador",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta1 - 0.026) - 0.005",
+                "v": "(((AlturaPes + 0.018 + Altura - 0.022)/2 + 0.009) + (Altura - 0.022))/2",
+                "radius": "0.005"
+              },
+              {
+                "u": "((-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta1 - 0.026) + 0.005",
+                "v": "(((AlturaPes + 0.018 + Altura - 0.022)/2 + 0.009) + (Altura - 0.022))/2",
+                "radius": "0.005"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 - (0.28*Largura)/2",
+            "depth": "0.28*Largura"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - pino do puxador esquerdo",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 - ((0.28*Largura)/2 - 0.015)",
+                "v": "(-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta1 - 0.026"
+              },
+              {
+                "u": "(((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 - ((0.28*Largura)/2 - 0.015)) + 0.0035",
+                "v": "(-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta1 - 0.026"
+              },
+              {
+                "u": "(((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 - ((0.28*Largura)/2 - 0.015)) + 0.0035",
+                "v": "((-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta1 - 0.026) + 0.026"
+              },
+              {
+                "u": "((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 - ((0.28*Largura)/2 - 0.015)",
+                "v": "((-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta1 - 0.026) + 0.026"
+              }
+            ],
+            "offset": "(((AlturaPes + 0.018 + Altura - 0.022)/2 + 0.009) + (Altura - 0.022))/2",
+            "axis": "((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 - ((0.28*Largura)/2 - 0.015)",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - roseta do puxador esquerdo",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 - ((0.28*Largura)/2 - 0.015)",
+                "v": "(-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta1 - 0.003"
+              },
+              {
+                "u": "(((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 - ((0.28*Largura)/2 - 0.015)) + 0.008",
+                "v": "(-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta1 - 0.003"
+              },
+              {
+                "u": "(((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 - ((0.28*Largura)/2 - 0.015)) + 0.008",
+                "v": "((-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta1 - 0.003) + 0.003"
+              },
+              {
+                "u": "((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 - ((0.28*Largura)/2 - 0.015)",
+                "v": "((-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta1 - 0.003) + 0.003"
+              }
+            ],
+            "offset": "(((AlturaPes + 0.018 + Altura - 0.022)/2 + 0.009) + (Altura - 0.022))/2",
+            "axis": "((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 - ((0.28*Largura)/2 - 0.015)",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - pino do puxador direito",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 + ((0.28*Largura)/2 - 0.015)",
+                "v": "(-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta1 - 0.026"
+              },
+              {
+                "u": "(((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 + ((0.28*Largura)/2 - 0.015)) + 0.0035",
+                "v": "(-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta1 - 0.026"
+              },
+              {
+                "u": "(((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 + ((0.28*Largura)/2 - 0.015)) + 0.0035",
+                "v": "((-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta1 - 0.026) + 0.026"
+              },
+              {
+                "u": "((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 + ((0.28*Largura)/2 - 0.015)",
+                "v": "((-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta1 - 0.026) + 0.026"
+              }
+            ],
+            "offset": "(((AlturaPes + 0.018 + Altura - 0.022)/2 + 0.009) + (Altura - 0.022))/2",
+            "axis": "((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 + ((0.28*Largura)/2 - 0.015)",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - roseta do puxador direito",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 + ((0.28*Largura)/2 - 0.015)",
+                "v": "(-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta1 - 0.003"
+              },
+              {
+                "u": "(((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 + ((0.28*Largura)/2 - 0.015)) + 0.008",
+                "v": "(-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta1 - 0.003"
+              },
+              {
+                "u": "(((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 + ((0.28*Largura)/2 - 0.015)) + 0.008",
+                "v": "((-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta1 - 0.003) + 0.003"
+              },
+              {
+                "u": "((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 + ((0.28*Largura)/2 - 0.015)",
+                "v": "((-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta1 - 0.003) + 0.003"
+              }
+            ],
+            "offset": "(((AlturaPes + 0.018 + Altura - 0.022)/2 + 0.009) + (Altura - 0.022))/2",
+            "axis": "((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 + ((0.28*Largura)/2 - 0.015)",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - frente",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.002 + 0.018) + 0.0025",
+            "y": "(-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta2",
+            "z": "(AlturaPes + 0.018) + 0.0025",
+            "width": "(Largura/2 - 0.002 - 0.018) - (-Largura/2 + 0.002 + 0.018) - 0.005",
+            "depth": "0.018",
+            "height": "((AlturaPes + 0.018 + Altura - 0.022)/2 - 0.009) - (AlturaPes + 0.018) - 0.005"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - lateral esquerda",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.002 + 0.018) + 0.0125",
+            "y": "(-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta2 + 0.018",
+            "z": "(AlturaPes + 0.018) + 0.018",
+            "width": "0.012",
+            "depth": "(Profundidade - 0.05) - 0.018",
+            "height": "((AlturaPes + 0.018 + Altura - 0.022)/2 - 0.009) - 0.03 - ((AlturaPes + 0.018) + 0.018)"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - lateral direita",
+        "shape": {
+          "Box": {
+            "x": "(Largura/2 - 0.002 - 0.018) - 0.0125 - 0.012",
+            "y": "(-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta2 + 0.018",
+            "z": "(AlturaPes + 0.018) + 0.018",
+            "width": "0.012",
+            "depth": "(Profundidade - 0.05) - 0.018",
+            "height": "((AlturaPes + 0.018 + Altura - 0.022)/2 - 0.009) - 0.03 - ((AlturaPes + 0.018) + 0.018)"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - fundo traseiro",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.002 + 0.018) + 0.0125 + 0.012",
+            "y": "(-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta2 + (Profundidade - 0.05) - 0.012",
+            "z": "(AlturaPes + 0.018) + 0.018",
+            "width": "(Largura/2 - 0.002 - 0.018) - 0.0125 - ((-Largura/2 + 0.002 + 0.018) + 0.0125) - 0.024",
+            "depth": "0.012",
+            "height": "((AlturaPes + 0.018 + Altura - 0.022)/2 - 0.009) - 0.03 - ((AlturaPes + 0.018) + 0.018) - 0.01"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - base",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.002 + 0.018) + 0.0125 + 0.012",
+            "y": "(-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta2 + 0.018",
+            "z": "(AlturaPes + 0.018) + 0.018 + 0.008",
+            "width": "(Largura/2 - 0.002 - 0.018) - 0.0125 - ((-Largura/2 + 0.002 + 0.018) + 0.0125) - 0.024",
+            "depth": "(Profundidade - 0.05) - 0.018 - 0.012",
+            "height": "0.005"
+          }
+        },
+        "material": "Laminado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - corrediça fixa esquerda",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.002 + 0.018) + 0.0",
+            "y": "(-Profundidade/2 + 0.006 + 0.002) + 0.03",
+            "z": "((AlturaPes + 0.018) + ((AlturaPes + 0.018 + Altura - 0.022)/2 - 0.009))/2 - 0.022",
+            "width": "0.0045",
+            "depth": "(Profundidade - 0.05) - 0.05",
+            "height": "0.044"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - corrediça intermediária esquerda",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.002 + 0.018) + 0.0042",
+            "y": "(-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta2/2 + 0.03",
+            "z": "((AlturaPes + 0.018) + ((AlturaPes + 0.018 + Altura - 0.022)/2 - 0.009))/2 - 0.022 + 0.004",
+            "width": "0.004",
+            "depth": "(Profundidade - 0.05) - 0.05",
+            "height": "0.036"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - corrediça móvel esquerda",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.002 + 0.018) + 0.008",
+            "y": "(-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta2 + 0.03",
+            "z": "((AlturaPes + 0.018) + ((AlturaPes + 0.018 + Altura - 0.022)/2 - 0.009))/2 - 0.022 + 0.008",
+            "width": "0.0045",
+            "depth": "(Profundidade - 0.05) - 0.05",
+            "height": "0.028"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - corrediça fixa direita",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2 - 0.002 - 0.018) - 0.0125) + 0.008",
+            "y": "(-Profundidade/2 + 0.006 + 0.002) + 0.03",
+            "z": "((AlturaPes + 0.018) + ((AlturaPes + 0.018 + Altura - 0.022)/2 - 0.009))/2 - 0.022",
+            "width": "0.0045",
+            "depth": "(Profundidade - 0.05) - 0.05",
+            "height": "0.044"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - corrediça intermediária direita",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2 - 0.002 - 0.018) - 0.0125) + 0.0042",
+            "y": "(-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta2/2 + 0.03",
+            "z": "((AlturaPes + 0.018) + ((AlturaPes + 0.018 + Altura - 0.022)/2 - 0.009))/2 - 0.022 + 0.004",
+            "width": "0.004",
+            "depth": "(Profundidade - 0.05) - 0.05",
+            "height": "0.036"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - corrediça móvel direita",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2 - 0.002 - 0.018) - 0.0125) + 0.0",
+            "y": "(-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta2 + 0.03",
+            "z": "((AlturaPes + 0.018) + ((AlturaPes + 0.018 + Altura - 0.022)/2 - 0.009))/2 - 0.022 + 0.008",
+            "width": "0.0045",
+            "depth": "(Profundidade - 0.05) - 0.05",
+            "height": "0.028"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - puxador",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta2 - 0.026) - 0.005",
+                "v": "((AlturaPes + 0.018) + ((AlturaPes + 0.018 + Altura - 0.022)/2 - 0.009))/2",
+                "radius": "0.005"
+              },
+              {
+                "u": "((-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta2 - 0.026) + 0.005",
+                "v": "((AlturaPes + 0.018) + ((AlturaPes + 0.018 + Altura - 0.022)/2 - 0.009))/2",
+                "radius": "0.005"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 - (0.28*Largura)/2",
+            "depth": "0.28*Largura"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - pino do puxador esquerdo",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 - ((0.28*Largura)/2 - 0.015)",
+                "v": "(-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta2 - 0.026"
+              },
+              {
+                "u": "(((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 - ((0.28*Largura)/2 - 0.015)) + 0.0035",
+                "v": "(-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta2 - 0.026"
+              },
+              {
+                "u": "(((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 - ((0.28*Largura)/2 - 0.015)) + 0.0035",
+                "v": "((-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta2 - 0.026) + 0.026"
+              },
+              {
+                "u": "((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 - ((0.28*Largura)/2 - 0.015)",
+                "v": "((-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta2 - 0.026) + 0.026"
+              }
+            ],
+            "offset": "((AlturaPes + 0.018) + ((AlturaPes + 0.018 + Altura - 0.022)/2 - 0.009))/2",
+            "axis": "((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 - ((0.28*Largura)/2 - 0.015)",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - roseta do puxador esquerdo",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 - ((0.28*Largura)/2 - 0.015)",
+                "v": "(-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta2 - 0.003"
+              },
+              {
+                "u": "(((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 - ((0.28*Largura)/2 - 0.015)) + 0.008",
+                "v": "(-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta2 - 0.003"
+              },
+              {
+                "u": "(((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 - ((0.28*Largura)/2 - 0.015)) + 0.008",
+                "v": "((-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta2 - 0.003) + 0.003"
+              },
+              {
+                "u": "((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 - ((0.28*Largura)/2 - 0.015)",
+                "v": "((-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta2 - 0.003) + 0.003"
+              }
+            ],
+            "offset": "((AlturaPes + 0.018) + ((AlturaPes + 0.018 + Altura - 0.022)/2 - 0.009))/2",
+            "axis": "((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 - ((0.28*Largura)/2 - 0.015)",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - pino do puxador direito",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 + ((0.28*Largura)/2 - 0.015)",
+                "v": "(-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta2 - 0.026"
+              },
+              {
+                "u": "(((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 + ((0.28*Largura)/2 - 0.015)) + 0.0035",
+                "v": "(-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta2 - 0.026"
+              },
+              {
+                "u": "(((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 + ((0.28*Largura)/2 - 0.015)) + 0.0035",
+                "v": "((-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta2 - 0.026) + 0.026"
+              },
+              {
+                "u": "((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 + ((0.28*Largura)/2 - 0.015)",
+                "v": "((-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta2 - 0.026) + 0.026"
+              }
+            ],
+            "offset": "((AlturaPes + 0.018) + ((AlturaPes + 0.018 + Altura - 0.022)/2 - 0.009))/2",
+            "axis": "((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 + ((0.28*Largura)/2 - 0.015)",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - roseta do puxador direito",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 + ((0.28*Largura)/2 - 0.015)",
+                "v": "(-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta2 - 0.003"
+              },
+              {
+                "u": "(((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 + ((0.28*Largura)/2 - 0.015)) + 0.008",
+                "v": "(-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta2 - 0.003"
+              },
+              {
+                "u": "(((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 + ((0.28*Largura)/2 - 0.015)) + 0.008",
+                "v": "((-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta2 - 0.003) + 0.003"
+              },
+              {
+                "u": "((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 + ((0.28*Largura)/2 - 0.015)",
+                "v": "((-Profundidade/2 + 0.006 + 0.002) - AberturaGaveta2 - 0.003) + 0.003"
+              }
+            ],
+            "offset": "((AlturaPes + 0.018) + ((AlturaPes + 0.018 + Altura - 0.022)/2 - 0.009))/2",
+            "axis": "((-Largura/2 + 0.002 + 0.018) + (Largura/2 - 0.002 - 0.018))/2 + ((0.28*Largura)/2 - 0.015)",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Chapa da perna frontal esquerda",
+        "shape": {
+          "Cylinder": {
+            "x": "-1*(Largura/2 - 0.05)",
+            "y": "-1*(Profundidade/2 - 0.05)",
+            "z": "AlturaPes - 0.004",
+            "radius": "0.03",
+            "height": "0.004"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Perna frontal esquerda",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "-1*(Largura/2 - 0.05)",
+                "v": "0.028"
+              },
+              {
+                "u": "(-1*(Largura/2 - 0.05)) + 0.0125",
+                "v": "0.028"
+              },
+              {
+                "u": "(-1*(Largura/2 - 0.05)) + 0.021",
+                "v": "AlturaPes - 0.012"
+              },
+              {
+                "u": "(-1*(Largura/2 - 0.05)) + 0.021",
+                "v": "AlturaPes - 0.004"
+              },
+              {
+                "u": "-1*(Largura/2 - 0.05)",
+                "v": "AlturaPes - 0.004"
+              }
+            ],
+            "offset": "-1*(Profundidade/2 - 0.05)",
+            "axis": "-1*(Largura/2 - 0.05)",
+            "angle": "360"
+          }
+        },
+        "material": "Madeira escura",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ponteira da perna frontal esquerda",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "-1*(Largura/2 - 0.05)",
+                "v": "0.003"
+              },
+              {
+                "u": "(-1*(Largura/2 - 0.05)) + 0.0105",
+                "v": "0.003"
+              },
+              {
+                "u": "(-1*(Largura/2 - 0.05)) + 0.013",
+                "v": "0.028"
+              },
+              {
+                "u": "-1*(Largura/2 - 0.05)",
+                "v": "0.028"
+              }
+            ],
+            "offset": "-1*(Profundidade/2 - 0.05)",
+            "axis": "-1*(Largura/2 - 0.05)",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Feltro da perna frontal esquerda",
+        "shape": {
+          "Cylinder": {
+            "x": "-1*(Largura/2 - 0.05)",
+            "y": "-1*(Profundidade/2 - 0.05)",
+            "z": "0",
+            "radius": "0.0095",
+            "height": "0.003"
+          }
+        },
+        "material": "Feltro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Chapa da perna frontal direita",
+        "shape": {
+          "Cylinder": {
+            "x": "1*(Largura/2 - 0.05)",
+            "y": "-1*(Profundidade/2 - 0.05)",
+            "z": "AlturaPes - 0.004",
+            "radius": "0.03",
+            "height": "0.004"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Perna frontal direita",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "1*(Largura/2 - 0.05)",
+                "v": "0.028"
+              },
+              {
+                "u": "(1*(Largura/2 - 0.05)) + 0.0125",
+                "v": "0.028"
+              },
+              {
+                "u": "(1*(Largura/2 - 0.05)) + 0.021",
+                "v": "AlturaPes - 0.012"
+              },
+              {
+                "u": "(1*(Largura/2 - 0.05)) + 0.021",
+                "v": "AlturaPes - 0.004"
+              },
+              {
+                "u": "1*(Largura/2 - 0.05)",
+                "v": "AlturaPes - 0.004"
+              }
+            ],
+            "offset": "-1*(Profundidade/2 - 0.05)",
+            "axis": "1*(Largura/2 - 0.05)",
+            "angle": "360"
+          }
+        },
+        "material": "Madeira escura",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ponteira da perna frontal direita",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "1*(Largura/2 - 0.05)",
+                "v": "0.003"
+              },
+              {
+                "u": "(1*(Largura/2 - 0.05)) + 0.0105",
+                "v": "0.003"
+              },
+              {
+                "u": "(1*(Largura/2 - 0.05)) + 0.013",
+                "v": "0.028"
+              },
+              {
+                "u": "1*(Largura/2 - 0.05)",
+                "v": "0.028"
+              }
+            ],
+            "offset": "-1*(Profundidade/2 - 0.05)",
+            "axis": "1*(Largura/2 - 0.05)",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Feltro da perna frontal direita",
+        "shape": {
+          "Cylinder": {
+            "x": "1*(Largura/2 - 0.05)",
+            "y": "-1*(Profundidade/2 - 0.05)",
+            "z": "0",
+            "radius": "0.0095",
+            "height": "0.003"
+          }
+        },
+        "material": "Feltro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Chapa da perna traseira esquerda",
+        "shape": {
+          "Cylinder": {
+            "x": "-1*(Largura/2 - 0.05)",
+            "y": "1*(Profundidade/2 - 0.05)",
+            "z": "AlturaPes - 0.004",
+            "radius": "0.03",
+            "height": "0.004"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Perna traseira esquerda",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "-1*(Largura/2 - 0.05)",
+                "v": "0.028"
+              },
+              {
+                "u": "(-1*(Largura/2 - 0.05)) + 0.0125",
+                "v": "0.028"
+              },
+              {
+                "u": "(-1*(Largura/2 - 0.05)) + 0.021",
+                "v": "AlturaPes - 0.012"
+              },
+              {
+                "u": "(-1*(Largura/2 - 0.05)) + 0.021",
+                "v": "AlturaPes - 0.004"
+              },
+              {
+                "u": "-1*(Largura/2 - 0.05)",
+                "v": "AlturaPes - 0.004"
+              }
+            ],
+            "offset": "1*(Profundidade/2 - 0.05)",
+            "axis": "-1*(Largura/2 - 0.05)",
+            "angle": "360"
+          }
+        },
+        "material": "Madeira escura",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ponteira da perna traseira esquerda",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "-1*(Largura/2 - 0.05)",
+                "v": "0.003"
+              },
+              {
+                "u": "(-1*(Largura/2 - 0.05)) + 0.0105",
+                "v": "0.003"
+              },
+              {
+                "u": "(-1*(Largura/2 - 0.05)) + 0.013",
+                "v": "0.028"
+              },
+              {
+                "u": "-1*(Largura/2 - 0.05)",
+                "v": "0.028"
+              }
+            ],
+            "offset": "1*(Profundidade/2 - 0.05)",
+            "axis": "-1*(Largura/2 - 0.05)",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Feltro da perna traseira esquerda",
+        "shape": {
+          "Cylinder": {
+            "x": "-1*(Largura/2 - 0.05)",
+            "y": "1*(Profundidade/2 - 0.05)",
+            "z": "0",
+            "radius": "0.0095",
+            "height": "0.003"
+          }
+        },
+        "material": "Feltro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Chapa da perna traseira direita",
+        "shape": {
+          "Cylinder": {
+            "x": "1*(Largura/2 - 0.05)",
+            "y": "1*(Profundidade/2 - 0.05)",
+            "z": "AlturaPes - 0.004",
+            "radius": "0.03",
+            "height": "0.004"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Perna traseira direita",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "1*(Largura/2 - 0.05)",
+                "v": "0.028"
+              },
+              {
+                "u": "(1*(Largura/2 - 0.05)) + 0.0125",
+                "v": "0.028"
+              },
+              {
+                "u": "(1*(Largura/2 - 0.05)) + 0.021",
+                "v": "AlturaPes - 0.012"
+              },
+              {
+                "u": "(1*(Largura/2 - 0.05)) + 0.021",
+                "v": "AlturaPes - 0.004"
+              },
+              {
+                "u": "1*(Largura/2 - 0.05)",
+                "v": "AlturaPes - 0.004"
+              }
+            ],
+            "offset": "1*(Profundidade/2 - 0.05)",
+            "axis": "1*(Largura/2 - 0.05)",
+            "angle": "360"
+          }
+        },
+        "material": "Madeira escura",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ponteira da perna traseira direita",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "1*(Largura/2 - 0.05)",
+                "v": "0.003"
+              },
+              {
+                "u": "(1*(Largura/2 - 0.05)) + 0.0105",
+                "v": "0.003"
+              },
+              {
+                "u": "(1*(Largura/2 - 0.05)) + 0.013",
+                "v": "0.028"
+              },
+              {
+                "u": "1*(Largura/2 - 0.05)",
+                "v": "0.028"
+              }
+            ],
+            "offset": "1*(Profundidade/2 - 0.05)",
+            "axis": "1*(Largura/2 - 0.05)",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Feltro da perna traseira direita",
+        "shape": {
+          "Cylinder": {
+            "x": "1*(Largura/2 - 0.05)",
+            "y": "1*(Profundidade/2 - 0.05)",
+            "z": "0",
+            "radius": "0.0095",
+            "height": "0.003"
+          }
+        },
+        "material": "Feltro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
         }
       }
     ]
@@ -116,6 +1606,85 @@
       "info": {
         "description": "Mesa de cabeceira com gaveta"
       }
+    }
+  ],
+  "materials": [
+    {
+      "name": "Madeira escura",
+      "color": [
+        92,
+        62,
+        40
+      ],
+      "class": "Wood",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Laminado branco",
+      "color": [
+        238,
+        238,
+        234
+      ],
+      "class": "Wood",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Madeira clara",
+      "color": [
+        196,
+        160,
+        112
+      ],
+      "class": "Wood",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Aço galvanizado",
+      "color": [
+        160,
+        165,
+        170
+      ],
+      "class": "Metal",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Latão",
+      "color": [
+        192,
+        160,
+        84
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Aço pintado preto",
+      "color": [
+        30,
+        30,
+        32
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Feltro",
+      "color": [
+        70,
+        66,
+        60
+      ],
+      "class": "Generic",
+      "finish": "Matte",
+      "transparency": 0
     }
   ]
 }

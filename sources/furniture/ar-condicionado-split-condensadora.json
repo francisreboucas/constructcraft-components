@@ -1,0 +1,6080 @@
+{
+  "component": "Ar-condicionado split - condensadora",
+  "def": {
+    "kind": "Furniture",
+    "params": [
+      {
+        "name": "Largura",
+        "value": 0.7,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Profundidade",
+        "value": 0.26,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Altura",
+        "value": 0.5,
+        "kind": "Length",
+        "instance": false
+      }
+    ],
+    "items": [
+      {
+        "name": "Gabinete simplificado",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2)",
+            "y": "(-Profundidade/2)",
+            "z": "0.03",
+            "width": "(Largura - 0.05)",
+            "depth": "Profundidade",
+            "height": "Altura - 0.03"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Tampa das válvulas simplificada",
+        "shape": {
+          "Box": {
+            "x": "(Largura/2 - 0.05)",
+            "y": "-0.03",
+            "z": "0.06",
+            "width": "0.05",
+            "depth": "Profundidade/2 - 0.04",
+            "height": "0.19"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Grade simplificada",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura))",
+                "v": "(-Profundidade/2) - 0.012"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura))) + ((0.38*Altura))",
+                "v": "(-Profundidade/2) - 0.012"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura))) + ((0.38*Altura))",
+                "v": "((-Profundidade/2) - 0.012) + 0.012"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura))",
+                "v": "((-Profundidade/2) - 0.012) + 0.012"
+              }
+            ],
+            "offset": "((Altura + 0.03)/2)",
+            "axis": "((-Largura/2) + 0.045 + (0.38*Altura))",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Trilho simplificado 1",
+        "shape": {
+          "Box": {
+            "x": "-0.025 + -1*0.32*(Largura - 0.05) - 0.025",
+            "y": "(-Profundidade/2) - 0.02",
+            "z": "0",
+            "width": "0.05",
+            "depth": "Profundidade + 0.04",
+            "height": "0.03"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Trilho simplificado 2",
+        "shape": {
+          "Box": {
+            "x": "-0.025 + 1*0.32*(Largura - 0.05) - 0.025",
+            "y": "(-Profundidade/2) - 0.02",
+            "z": "0",
+            "width": "0.05",
+            "depth": "Profundidade + 0.04",
+            "height": "0.03"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Bandeja da base",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2)",
+            "y": "(-Profundidade/2)",
+            "z": "0.03",
+            "width": "(Largura - 0.05)",
+            "depth": "Profundidade",
+            "height": "0.02"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa superior",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) - 0.003",
+            "y": "(-Profundidade/2) - 0.003",
+            "z": "Altura - 0.02",
+            "width": "(Largura - 0.05) + 0.006",
+            "depth": "Profundidade + 0.006",
+            "height": "0.02"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa superior - nervura 1",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.04",
+            "y": "(-Profundidade/2) + 0.3*Profundidade - 0.015",
+            "z": "Altura",
+            "width": "(Largura - 0.05) - 0.08",
+            "depth": "0.03",
+            "height": "0.002"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa superior - nervura 2",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.04",
+            "y": "(-Profundidade/2) + 0.7*Profundidade - 0.015",
+            "z": "Altura",
+            "width": "(Largura - 0.05) - 0.08",
+            "depth": "0.03",
+            "height": "0.002"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Painel frontal",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2)",
+            "y": "(-Profundidade/2)",
+            "z": "0.05",
+            "width": "(Largura - 0.05)",
+            "depth": "0.003",
+            "height": "(Altura - 0.07)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Painel frontal - abertura do ventilador",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura))",
+                "v": "(-Profundidade/2) - 0.0005"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura))) + ((0.38*Altura))",
+                "v": "(-Profundidade/2) - 0.0005"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura))) + ((0.38*Altura))",
+                "v": "((-Profundidade/2) - 0.0005) + 0.004"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura))",
+                "v": "((-Profundidade/2) - 0.0005) + 0.004"
+              }
+            ],
+            "offset": "((Altura + 0.03)/2)",
+            "axis": "((-Largura/2) + 0.045 + (0.38*Altura))",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        },
+        "void": true
+      },
+      {
+        "name": "Painel frontal - bocal",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura)",
+                "v": "(-Profundidade/2) - 0.0007"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.016",
+                "v": "(-Profundidade/2) - 0.0007"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.008",
+                "v": "(-Profundidade/2) - 0.012"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura)",
+                "v": "(-Profundidade/2) - 0.012"
+              }
+            ],
+            "offset": "((Altura + 0.03)/2)",
+            "axis": "((-Largura/2) + 0.045 + (0.38*Altura))",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Bocal interno do ventilador",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura)",
+                "v": "(-Profundidade/2) + 0.003 + 0.0006"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.004",
+                "v": "(-Profundidade/2) + 0.003 + 0.0006"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.004",
+                "v": "(-Profundidade/2) + 0.05"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura)",
+                "v": "(-Profundidade/2) + 0.05"
+              }
+            ],
+            "offset": "((Altura + 0.03)/2)",
+            "axis": "((-Largura/2) + 0.045 + (0.38*Altura))",
+            "angle": "360"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Painel lateral direito",
+        "shape": {
+          "Box": {
+            "x": "(Largura/2 - 0.05) - 0.003",
+            "y": "(-Profundidade/2)",
+            "z": "0.05",
+            "width": "0.003",
+            "depth": "Profundidade",
+            "height": "(Altura - 0.07)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Painel traseiro direito",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03)",
+            "y": "(Profundidade/2) - 0.003",
+            "z": "0.05",
+            "width": "(Largura/2 - 0.05) - (((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03)",
+            "depth": "0.003",
+            "height": "(Altura - 0.07)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Coluna frontal esquerda",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2)",
+            "y": "(-Profundidade/2)",
+            "z": "0.05",
+            "width": "0.003",
+            "depth": "0.04",
+            "height": "(Altura - 0.07)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Coluna traseira esquerda",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2)",
+            "y": "(Profundidade/2) - 0.014",
+            "z": "0.05",
+            "width": "0.014",
+            "depth": "0.014",
+            "height": "(Altura - 0.07)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Divisória interna",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03)",
+            "y": "(-Profundidade/2) + 0.003",
+            "z": "0.05",
+            "width": "0.003",
+            "depth": "Profundidade - 0.006",
+            "height": "(Altura - 0.07)"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Painel frontal - friso 1",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + 0.02",
+            "y": "(-Profundidade/2) - 0.0012",
+            "z": "((Altura + 0.03)/2) + 0.060",
+            "width": "(Largura/2 - 0.05) - (((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - 0.04",
+            "depth": "0.0012",
+            "height": "0.008"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Painel frontal - friso 2",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + 0.02",
+            "y": "(-Profundidade/2) - 0.0012",
+            "z": "((Altura + 0.03)/2) + 0.030",
+            "width": "(Largura/2 - 0.05) - (((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - 0.04",
+            "depth": "0.0012",
+            "height": "0.008"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Painel frontal - friso 3",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + 0.02",
+            "y": "(-Profundidade/2) - 0.0012",
+            "z": "((Altura + 0.03)/2) + 0.000",
+            "width": "(Largura/2 - 0.05) - (((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - 0.04",
+            "depth": "0.0012",
+            "height": "0.008"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Painel frontal - friso 4",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + 0.02",
+            "y": "(-Profundidade/2) - 0.0012",
+            "z": "((Altura + 0.03)/2) + -0.030",
+            "width": "(Largura/2 - 0.05) - (((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - 0.04",
+            "depth": "0.0012",
+            "height": "0.008"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Painel frontal - friso 5",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + 0.02",
+            "y": "(-Profundidade/2) - 0.0012",
+            "z": "((Altura + 0.03)/2) + -0.060",
+            "width": "(Largura/2 - 0.05) - (((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - 0.04",
+            "depth": "0.0012",
+            "height": "0.008"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Selo de eficiência energética",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + 0.03",
+            "y": "(-Profundidade/2) - 0.0006",
+            "z": "Altura - 0.16",
+            "width": "0.07",
+            "depth": "0.0006",
+            "height": "0.1"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Plaqueta frontal",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + 0.03",
+            "y": "(-Profundidade/2) - 0.0015",
+            "z": "0.08",
+            "width": "0.06",
+            "depth": "0.0015",
+            "height": "0.014"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Painel frontal - parafuso 1",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-Largura/2) + 0.012",
+                "v": "(-Profundidade/2) - 0.0015"
+              },
+              {
+                "u": "((-Largura/2) + 0.012) + 0.004",
+                "v": "(-Profundidade/2) - 0.0015"
+              },
+              {
+                "u": "((-Largura/2) + 0.012) + 0.004",
+                "v": "((-Profundidade/2) - 0.0015) + 0.0015"
+              },
+              {
+                "u": "(-Largura/2) + 0.012",
+                "v": "((-Profundidade/2) - 0.0015) + 0.0015"
+              }
+            ],
+            "offset": "0.062",
+            "axis": "(-Largura/2) + 0.012",
+            "angle": "360"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Painel frontal - parafuso 2",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(Largura/2 - 0.05) - 0.012",
+                "v": "(-Profundidade/2) - 0.0015"
+              },
+              {
+                "u": "((Largura/2 - 0.05) - 0.012) + 0.004",
+                "v": "(-Profundidade/2) - 0.0015"
+              },
+              {
+                "u": "((Largura/2 - 0.05) - 0.012) + 0.004",
+                "v": "((-Profundidade/2) - 0.0015) + 0.0015"
+              },
+              {
+                "u": "(Largura/2 - 0.05) - 0.012",
+                "v": "((-Profundidade/2) - 0.0015) + 0.0015"
+              }
+            ],
+            "offset": "0.062",
+            "axis": "(Largura/2 - 0.05) - 0.012",
+            "angle": "360"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Painel frontal - parafuso 3",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-Largura/2) + 0.012",
+                "v": "(-Profundidade/2) - 0.0015"
+              },
+              {
+                "u": "((-Largura/2) + 0.012) + 0.004",
+                "v": "(-Profundidade/2) - 0.0015"
+              },
+              {
+                "u": "((-Largura/2) + 0.012) + 0.004",
+                "v": "((-Profundidade/2) - 0.0015) + 0.0015"
+              },
+              {
+                "u": "(-Largura/2) + 0.012",
+                "v": "((-Profundidade/2) - 0.0015) + 0.0015"
+              }
+            ],
+            "offset": "Altura - 0.032",
+            "axis": "(-Largura/2) + 0.012",
+            "angle": "360"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Painel frontal - parafuso 4",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(Largura/2 - 0.05) - 0.012",
+                "v": "(-Profundidade/2) - 0.0015"
+              },
+              {
+                "u": "((Largura/2 - 0.05) - 0.012) + 0.004",
+                "v": "(-Profundidade/2) - 0.0015"
+              },
+              {
+                "u": "((Largura/2 - 0.05) - 0.012) + 0.004",
+                "v": "((-Profundidade/2) - 0.0015) + 0.0015"
+              },
+              {
+                "u": "(Largura/2 - 0.05) - 0.012",
+                "v": "((-Profundidade/2) - 0.0015) + 0.0015"
+              }
+            ],
+            "offset": "Altura - 0.032",
+            "axis": "(Largura/2 - 0.05) - 0.012",
+            "angle": "360"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Painel frontal - parafuso 5",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + 0.0015",
+                "v": "(-Profundidade/2) - 0.0015"
+              },
+              {
+                "u": "((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + 0.0015) + 0.004",
+                "v": "(-Profundidade/2) - 0.0015"
+              },
+              {
+                "u": "((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + 0.0015) + 0.004",
+                "v": "((-Profundidade/2) - 0.0015) + 0.0015"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + 0.0015",
+                "v": "((-Profundidade/2) - 0.0015) + 0.0015"
+              }
+            ],
+            "offset": "0.062",
+            "axis": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + 0.0015",
+            "angle": "360"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Painel frontal - parafuso 6",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + 0.0015",
+                "v": "(-Profundidade/2) - 0.0015"
+              },
+              {
+                "u": "((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + 0.0015) + 0.004",
+                "v": "(-Profundidade/2) - 0.0015"
+              },
+              {
+                "u": "((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + 0.0015) + 0.004",
+                "v": "((-Profundidade/2) - 0.0015) + 0.0015"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + 0.0015",
+                "v": "((-Profundidade/2) - 0.0015) + 0.0015"
+              }
+            ],
+            "offset": "Altura - 0.032",
+            "axis": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + 0.0015",
+            "angle": "360"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade frontal - anel 1",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + 0.22222*(0.38*Altura)) - 0.003",
+                "v": "((-Profundidade/2) - 0.012) - 0.003"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + 0.22222*(0.38*Altura))",
+                "v": "((-Profundidade/2) - 0.012) - 0.003"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + 0.22222*(0.38*Altura))",
+                "v": "((-Profundidade/2) - 0.012)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + 0.22222*(0.38*Altura)) - 0.003",
+                "v": "((-Profundidade/2) - 0.012)"
+              }
+            ],
+            "offset": "((Altura + 0.03)/2)",
+            "axis": "((-Largura/2) + 0.045 + (0.38*Altura))",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade frontal - anel 2",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + 0.33333*(0.38*Altura)) - 0.003",
+                "v": "((-Profundidade/2) - 0.012) - 0.003"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + 0.33333*(0.38*Altura))",
+                "v": "((-Profundidade/2) - 0.012) - 0.003"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + 0.33333*(0.38*Altura))",
+                "v": "((-Profundidade/2) - 0.012)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + 0.33333*(0.38*Altura)) - 0.003",
+                "v": "((-Profundidade/2) - 0.012)"
+              }
+            ],
+            "offset": "((Altura + 0.03)/2)",
+            "axis": "((-Largura/2) + 0.045 + (0.38*Altura))",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade frontal - anel 3",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + 0.44444*(0.38*Altura)) - 0.003",
+                "v": "((-Profundidade/2) - 0.012) - 0.003"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + 0.44444*(0.38*Altura))",
+                "v": "((-Profundidade/2) - 0.012) - 0.003"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + 0.44444*(0.38*Altura))",
+                "v": "((-Profundidade/2) - 0.012)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + 0.44444*(0.38*Altura)) - 0.003",
+                "v": "((-Profundidade/2) - 0.012)"
+              }
+            ],
+            "offset": "((Altura + 0.03)/2)",
+            "axis": "((-Largura/2) + 0.045 + (0.38*Altura))",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade frontal - anel 4",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + 0.55556*(0.38*Altura)) - 0.003",
+                "v": "((-Profundidade/2) - 0.012) - 0.003"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + 0.55556*(0.38*Altura))",
+                "v": "((-Profundidade/2) - 0.012) - 0.003"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + 0.55556*(0.38*Altura))",
+                "v": "((-Profundidade/2) - 0.012)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + 0.55556*(0.38*Altura)) - 0.003",
+                "v": "((-Profundidade/2) - 0.012)"
+              }
+            ],
+            "offset": "((Altura + 0.03)/2)",
+            "axis": "((-Largura/2) + 0.045 + (0.38*Altura))",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade frontal - anel 5",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + 0.66667*(0.38*Altura)) - 0.003",
+                "v": "((-Profundidade/2) - 0.012) - 0.003"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + 0.66667*(0.38*Altura))",
+                "v": "((-Profundidade/2) - 0.012) - 0.003"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + 0.66667*(0.38*Altura))",
+                "v": "((-Profundidade/2) - 0.012)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + 0.66667*(0.38*Altura)) - 0.003",
+                "v": "((-Profundidade/2) - 0.012)"
+              }
+            ],
+            "offset": "((Altura + 0.03)/2)",
+            "axis": "((-Largura/2) + 0.045 + (0.38*Altura))",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade frontal - anel 6",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + 0.77778*(0.38*Altura)) - 0.003",
+                "v": "((-Profundidade/2) - 0.012) - 0.003"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + 0.77778*(0.38*Altura))",
+                "v": "((-Profundidade/2) - 0.012) - 0.003"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + 0.77778*(0.38*Altura))",
+                "v": "((-Profundidade/2) - 0.012)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + 0.77778*(0.38*Altura)) - 0.003",
+                "v": "((-Profundidade/2) - 0.012)"
+              }
+            ],
+            "offset": "((Altura + 0.03)/2)",
+            "axis": "((-Largura/2) + 0.045 + (0.38*Altura))",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade frontal - anel 7",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + 0.88889*(0.38*Altura)) - 0.003",
+                "v": "((-Profundidade/2) - 0.012) - 0.003"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + 0.88889*(0.38*Altura))",
+                "v": "((-Profundidade/2) - 0.012) - 0.003"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + 0.88889*(0.38*Altura))",
+                "v": "((-Profundidade/2) - 0.012)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + 0.88889*(0.38*Altura)) - 0.003",
+                "v": "((-Profundidade/2) - 0.012)"
+              }
+            ],
+            "offset": "((Altura + 0.03)/2)",
+            "axis": "((-Largura/2) + 0.045 + (0.38*Altura))",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade frontal - anel 8",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + 1.00000*(0.38*Altura)) - 0.003",
+                "v": "((-Profundidade/2) - 0.012) - 0.003"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + 1.00000*(0.38*Altura))",
+                "v": "((-Profundidade/2) - 0.012) - 0.003"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + 1.00000*(0.38*Altura))",
+                "v": "((-Profundidade/2) - 0.012)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + 1.00000*(0.38*Altura)) - 0.003",
+                "v": "((-Profundidade/2) - 0.012)"
+              }
+            ],
+            "offset": "((Altura + 0.03)/2)",
+            "axis": "((-Largura/2) + 0.045 + (0.38*Altura))",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade frontal - raio 1",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.11591)*(0.38*Altura) + (0.00052)",
+                "v": "((Altura + 0.03)/2) + (0.03106)*(0.38*Altura) + (-0.00193)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.96593)*(0.38*Altura) + (0.01211)",
+                "v": "((Altura + 0.03)/2) + (0.25882)*(0.38*Altura) + (0.00117)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.96593)*(0.38*Altura) + (0.01107)",
+                "v": "((Altura + 0.03)/2) + (0.25882)*(0.38*Altura) + (0.00504)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.11591)*(0.38*Altura) + (-0.00052)",
+                "v": "((Altura + 0.03)/2) + (0.03106)*(0.38*Altura) + (0.00193)"
+              }
+            ],
+            "offset": "((-Profundidade/2) - 0.012)",
+            "depth": "0.003"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade frontal - raio 2",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.08485)*(0.38*Altura) + (0.00141)",
+                "v": "((Altura + 0.03)/2) + (0.08485)*(0.38*Altura) + (-0.00141)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.70711)*(0.38*Altura) + (0.00990)",
+                "v": "((Altura + 0.03)/2) + (0.70711)*(0.38*Altura) + (0.00707)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.70711)*(0.38*Altura) + (0.00707)",
+                "v": "((Altura + 0.03)/2) + (0.70711)*(0.38*Altura) + (0.00990)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.08485)*(0.38*Altura) + (-0.00141)",
+                "v": "((Altura + 0.03)/2) + (0.08485)*(0.38*Altura) + (0.00141)"
+              }
+            ],
+            "offset": "((-Profundidade/2) - 0.012)",
+            "depth": "0.003"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade frontal - raio 3",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.03106)*(0.38*Altura) + (0.00193)",
+                "v": "((Altura + 0.03)/2) + (0.11591)*(0.38*Altura) + (-0.00052)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.25882)*(0.38*Altura) + (0.00504)",
+                "v": "((Altura + 0.03)/2) + (0.96593)*(0.38*Altura) + (0.01107)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.25882)*(0.38*Altura) + (0.00117)",
+                "v": "((Altura + 0.03)/2) + (0.96593)*(0.38*Altura) + (0.01211)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.03106)*(0.38*Altura) + (-0.00193)",
+                "v": "((Altura + 0.03)/2) + (0.11591)*(0.38*Altura) + (0.00052)"
+              }
+            ],
+            "offset": "((-Profundidade/2) - 0.012)",
+            "depth": "0.003"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade frontal - raio 4",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.03106)*(0.38*Altura) + (0.00193)",
+                "v": "((Altura + 0.03)/2) + (0.11591)*(0.38*Altura) + (0.00052)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.25882)*(0.38*Altura) + (-0.00117)",
+                "v": "((Altura + 0.03)/2) + (0.96593)*(0.38*Altura) + (0.01211)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.25882)*(0.38*Altura) + (-0.00504)",
+                "v": "((Altura + 0.03)/2) + (0.96593)*(0.38*Altura) + (0.01107)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.03106)*(0.38*Altura) + (-0.00193)",
+                "v": "((Altura + 0.03)/2) + (0.11591)*(0.38*Altura) + (-0.00052)"
+              }
+            ],
+            "offset": "((-Profundidade/2) - 0.012)",
+            "depth": "0.003"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade frontal - raio 5",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.08485)*(0.38*Altura) + (0.00141)",
+                "v": "((Altura + 0.03)/2) + (0.08485)*(0.38*Altura) + (0.00141)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.70711)*(0.38*Altura) + (-0.00707)",
+                "v": "((Altura + 0.03)/2) + (0.70711)*(0.38*Altura) + (0.00990)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.70711)*(0.38*Altura) + (-0.00990)",
+                "v": "((Altura + 0.03)/2) + (0.70711)*(0.38*Altura) + (0.00707)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.08485)*(0.38*Altura) + (-0.00141)",
+                "v": "((Altura + 0.03)/2) + (0.08485)*(0.38*Altura) + (-0.00141)"
+              }
+            ],
+            "offset": "((-Profundidade/2) - 0.012)",
+            "depth": "0.003"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade frontal - raio 6",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.11591)*(0.38*Altura) + (0.00052)",
+                "v": "((Altura + 0.03)/2) + (0.03106)*(0.38*Altura) + (0.00193)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.96593)*(0.38*Altura) + (-0.01107)",
+                "v": "((Altura + 0.03)/2) + (0.25882)*(0.38*Altura) + (0.00504)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.96593)*(0.38*Altura) + (-0.01211)",
+                "v": "((Altura + 0.03)/2) + (0.25882)*(0.38*Altura) + (0.00117)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.11591)*(0.38*Altura) + (-0.00052)",
+                "v": "((Altura + 0.03)/2) + (0.03106)*(0.38*Altura) + (-0.00193)"
+              }
+            ],
+            "offset": "((-Profundidade/2) - 0.012)",
+            "depth": "0.003"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade frontal - raio 7",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.11591)*(0.38*Altura) + (-0.00052)",
+                "v": "((Altura + 0.03)/2) + (-0.03106)*(0.38*Altura) + (0.00193)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.96593)*(0.38*Altura) + (-0.01211)",
+                "v": "((Altura + 0.03)/2) + (-0.25882)*(0.38*Altura) + (-0.00117)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.96593)*(0.38*Altura) + (-0.01107)",
+                "v": "((Altura + 0.03)/2) + (-0.25882)*(0.38*Altura) + (-0.00504)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.11591)*(0.38*Altura) + (0.00052)",
+                "v": "((Altura + 0.03)/2) + (-0.03106)*(0.38*Altura) + (-0.00193)"
+              }
+            ],
+            "offset": "((-Profundidade/2) - 0.012)",
+            "depth": "0.003"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade frontal - raio 8",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.08485)*(0.38*Altura) + (-0.00141)",
+                "v": "((Altura + 0.03)/2) + (-0.08485)*(0.38*Altura) + (0.00141)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.70711)*(0.38*Altura) + (-0.00990)",
+                "v": "((Altura + 0.03)/2) + (-0.70711)*(0.38*Altura) + (-0.00707)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.70711)*(0.38*Altura) + (-0.00707)",
+                "v": "((Altura + 0.03)/2) + (-0.70711)*(0.38*Altura) + (-0.00990)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.08485)*(0.38*Altura) + (0.00141)",
+                "v": "((Altura + 0.03)/2) + (-0.08485)*(0.38*Altura) + (-0.00141)"
+              }
+            ],
+            "offset": "((-Profundidade/2) - 0.012)",
+            "depth": "0.003"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade frontal - raio 9",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.03106)*(0.38*Altura) + (-0.00193)",
+                "v": "((Altura + 0.03)/2) + (-0.11591)*(0.38*Altura) + (0.00052)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.25882)*(0.38*Altura) + (-0.00504)",
+                "v": "((Altura + 0.03)/2) + (-0.96593)*(0.38*Altura) + (-0.01107)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.25882)*(0.38*Altura) + (-0.00117)",
+                "v": "((Altura + 0.03)/2) + (-0.96593)*(0.38*Altura) + (-0.01211)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.03106)*(0.38*Altura) + (0.00193)",
+                "v": "((Altura + 0.03)/2) + (-0.11591)*(0.38*Altura) + (-0.00052)"
+              }
+            ],
+            "offset": "((-Profundidade/2) - 0.012)",
+            "depth": "0.003"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade frontal - raio 10",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.03106)*(0.38*Altura) + (-0.00193)",
+                "v": "((Altura + 0.03)/2) + (-0.11591)*(0.38*Altura) + (-0.00052)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.25882)*(0.38*Altura) + (0.00117)",
+                "v": "((Altura + 0.03)/2) + (-0.96593)*(0.38*Altura) + (-0.01211)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.25882)*(0.38*Altura) + (0.00504)",
+                "v": "((Altura + 0.03)/2) + (-0.96593)*(0.38*Altura) + (-0.01107)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.03106)*(0.38*Altura) + (0.00193)",
+                "v": "((Altura + 0.03)/2) + (-0.11591)*(0.38*Altura) + (0.00052)"
+              }
+            ],
+            "offset": "((-Profundidade/2) - 0.012)",
+            "depth": "0.003"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade frontal - raio 11",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.08485)*(0.38*Altura) + (-0.00141)",
+                "v": "((Altura + 0.03)/2) + (-0.08485)*(0.38*Altura) + (-0.00141)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.70711)*(0.38*Altura) + (0.00707)",
+                "v": "((Altura + 0.03)/2) + (-0.70711)*(0.38*Altura) + (-0.00990)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.70711)*(0.38*Altura) + (0.00990)",
+                "v": "((Altura + 0.03)/2) + (-0.70711)*(0.38*Altura) + (-0.00707)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.08485)*(0.38*Altura) + (0.00141)",
+                "v": "((Altura + 0.03)/2) + (-0.08485)*(0.38*Altura) + (0.00141)"
+              }
+            ],
+            "offset": "((-Profundidade/2) - 0.012)",
+            "depth": "0.003"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade frontal - raio 12",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.11591)*(0.38*Altura) + (-0.00052)",
+                "v": "((Altura + 0.03)/2) + (-0.03106)*(0.38*Altura) + (-0.00193)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.96593)*(0.38*Altura) + (0.01107)",
+                "v": "((Altura + 0.03)/2) + (-0.25882)*(0.38*Altura) + (-0.00504)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.96593)*(0.38*Altura) + (0.01211)",
+                "v": "((Altura + 0.03)/2) + (-0.25882)*(0.38*Altura) + (-0.00117)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.11591)*(0.38*Altura) + (0.00052)",
+                "v": "((Altura + 0.03)/2) + (-0.03106)*(0.38*Altura) + (0.00193)"
+              }
+            ],
+            "offset": "((-Profundidade/2) - 0.012)",
+            "depth": "0.003"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade frontal - miolo",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura))",
+                "v": "((-Profundidade/2) - 0.012) - 0.005"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura))) + (0.15*(0.38*Altura))",
+                "v": "((-Profundidade/2) - 0.012) - 0.005"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura))) + (0.15*(0.38*Altura))",
+                "v": "(((-Profundidade/2) - 0.012) - 0.005) + 0.008"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura))",
+                "v": "(((-Profundidade/2) - 0.012) - 0.005) + 0.008"
+              }
+            ],
+            "offset": "((Altura + 0.03)/2)",
+            "axis": "((-Largura/2) + 0.045 + (0.38*Altura))",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade frontal - parafuso 1",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.70711)*(0.38*Altura) + (0.00566)",
+                "v": "((-Profundidade/2) - 0.012) - 0.002"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.70711)*(0.38*Altura) + (0.00566)) + 0.004",
+                "v": "((-Profundidade/2) - 0.012) - 0.002"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.70711)*(0.38*Altura) + (0.00566)) + 0.004",
+                "v": "(((-Profundidade/2) - 0.012) - 0.002) + 0.002"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.70711)*(0.38*Altura) + (0.00566)",
+                "v": "(((-Profundidade/2) - 0.012) - 0.002) + 0.002"
+              }
+            ],
+            "offset": "((Altura + 0.03)/2) + (0.70711)*(0.38*Altura) + (0.00566)",
+            "axis": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.70711)*(0.38*Altura) + (0.00566)",
+            "angle": "360"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade frontal - parafuso 2",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.70711)*(0.38*Altura) + (-0.00566)",
+                "v": "((-Profundidade/2) - 0.012) - 0.002"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.70711)*(0.38*Altura) + (-0.00566)) + 0.004",
+                "v": "((-Profundidade/2) - 0.012) - 0.002"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.70711)*(0.38*Altura) + (-0.00566)) + 0.004",
+                "v": "(((-Profundidade/2) - 0.012) - 0.002) + 0.002"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.70711)*(0.38*Altura) + (-0.00566)",
+                "v": "(((-Profundidade/2) - 0.012) - 0.002) + 0.002"
+              }
+            ],
+            "offset": "((Altura + 0.03)/2) + (0.70711)*(0.38*Altura) + (0.00566)",
+            "axis": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.70711)*(0.38*Altura) + (-0.00566)",
+            "angle": "360"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade frontal - parafuso 3",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.70711)*(0.38*Altura) + (-0.00566)",
+                "v": "((-Profundidade/2) - 0.012) - 0.002"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.70711)*(0.38*Altura) + (-0.00566)) + 0.004",
+                "v": "((-Profundidade/2) - 0.012) - 0.002"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.70711)*(0.38*Altura) + (-0.00566)) + 0.004",
+                "v": "(((-Profundidade/2) - 0.012) - 0.002) + 0.002"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.70711)*(0.38*Altura) + (-0.00566)",
+                "v": "(((-Profundidade/2) - 0.012) - 0.002) + 0.002"
+              }
+            ],
+            "offset": "((Altura + 0.03)/2) + (-0.70711)*(0.38*Altura) + (-0.00566)",
+            "axis": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.70711)*(0.38*Altura) + (-0.00566)",
+            "angle": "360"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade frontal - parafuso 4",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.70711)*(0.38*Altura) + (0.00566)",
+                "v": "((-Profundidade/2) - 0.012) - 0.002"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.70711)*(0.38*Altura) + (0.00566)) + 0.004",
+                "v": "((-Profundidade/2) - 0.012) - 0.002"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.70711)*(0.38*Altura) + (0.00566)) + 0.004",
+                "v": "(((-Profundidade/2) - 0.012) - 0.002) + 0.002"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.70711)*(0.38*Altura) + (0.00566)",
+                "v": "(((-Profundidade/2) - 0.012) - 0.002) + 0.002"
+              }
+            ],
+            "offset": "((Altura + 0.03)/2) + (-0.70711)*(0.38*Altura) + (-0.00566)",
+            "axis": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.70711)*(0.38*Altura) + (0.00566)",
+            "angle": "360"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Hélice - pá 1 (bordo de ataque)",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.04838)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (0.19406)*(0.38*Altura) + (0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.19727)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (0.40446)*(0.38*Altura) + (0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.41939)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (0.62178)*(0.38*Altura) + (0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.51446)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (0.76271)*(0.38*Altura) + (0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.45069)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (0.84763)*(0.38*Altura) + (0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.19960)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (0.93902)*(0.38*Altura) + (0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.06272)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (0.59671)*(0.38*Altura) + (0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.00000)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (0.20000)*(0.38*Altura) + (0.00000)"
+              }
+            ],
+            "offset": "((-Profundidade/2) + 0.022)",
+            "depth": "0.007"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Hélice - pá 1 (bordo de fuga)",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.00000)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (0.20000)*(0.38*Altura) + (0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.06272)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (0.59671)*(0.38*Altura) + (0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.19960)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (0.93902)*(0.38*Altura) + (0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.06697)*(0.38*Altura) + (-0.00000)",
+                "v": "((Altura + 0.03)/2) + (0.95766)*(0.38*Altura) + (0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.15628)*(0.38*Altura) + (-0.00000)",
+                "v": "((Altura + 0.03)/2) + (0.88633)*(0.38*Altura) + (0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.14554)*(0.38*Altura) + (-0.00000)",
+                "v": "((Altura + 0.03)/2) + (0.68470)*(0.38*Altura) + (0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.09356)*(0.38*Altura) + (-0.00000)",
+                "v": "((Altura + 0.03)/2) + (0.44017)*(0.38*Altura) + (0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.04838)*(0.38*Altura) + (-0.00000)",
+                "v": "((Altura + 0.03)/2) + (0.19406)*(0.38*Altura) + (0.00000)"
+              }
+            ],
+            "offset": "((-Profundidade/2) + 0.022) + 0.007",
+            "depth": "0.007"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Hélice - pá 2 (bordo de ataque)",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.19225)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (-0.05513)*(0.38*Altura) + (-0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.44890)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (-0.03139)*(0.38*Altura) + (-0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.74817)*(0.38*Altura) + (-0.00000)",
+                "v": "((Altura + 0.03)/2) + (0.05232)*(0.38*Altura) + (0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.91776)*(0.38*Altura) + (-0.00000)",
+                "v": "((Altura + 0.03)/2) + (0.06418)*(0.38*Altura) + (0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.95942)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (-0.03350)*(0.38*Altura) + (-0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.91301)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (-0.29666)*(0.38*Altura) + (-0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.54813)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (-0.24404)*(0.38*Altura) + (-0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.17321)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (-0.10000)*(0.38*Altura) + (-0.00000)"
+              }
+            ],
+            "offset": "((-Profundidade/2) + 0.022)",
+            "depth": "0.007"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Hélice - pá 2 (bordo de fuga)",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.17321)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (-0.10000)*(0.38*Altura) + (-0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.54813)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (-0.24404)*(0.38*Altura) + (-0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.91301)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (-0.29666)*(0.38*Altura) + (-0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.79588)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (-0.53683)*(0.38*Altura) + (-0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.68944)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (-0.57851)*(0.38*Altura) + (-0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.52020)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (-0.46839)*(0.38*Altura) + (-0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.33442)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (-0.30111)*(0.38*Altura) + (-0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (-0.14387)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (-0.13893)*(0.38*Altura) + (-0.00000)"
+              }
+            ],
+            "offset": "((-Profundidade/2) + 0.022) + 0.007",
+            "depth": "0.007"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Hélice - pá 3 (bordo de ataque)",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.14387)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (-0.13893)*(0.38*Altura) + (0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.25164)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (-0.37307)*(0.38*Altura) + (0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.32878)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (-0.67410)*(0.38*Altura) + (0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.40330)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (-0.82689)*(0.38*Altura) + (0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.50872)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (-0.81413)*(0.38*Altura) + (0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.71342)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (-0.64237)*(0.38*Altura) + (0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.48541)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (-0.35267)*(0.38*Altura) + (0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.17321)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (-0.10000)*(0.38*Altura) + (0.00000)"
+              }
+            ],
+            "offset": "((-Profundidade/2) + 0.022)",
+            "depth": "0.007"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Hélice - pá 3 (bordo de fuga)",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.17321)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (-0.10000)*(0.38*Altura) + (0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.48541)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (-0.35267)*(0.38*Altura) + (0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.71342)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (-0.64237)*(0.38*Altura) + (0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.86284)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (-0.42084)*(0.38*Altura) + (0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.84572)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (-0.30782)*(0.38*Altura) + (0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.66574)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (-0.21631)*(0.38*Altura) + (0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.42798)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (-0.13906)*(0.38*Altura) + (0.00000)"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura)) + (0.19225)*(0.38*Altura) + (0.00000)",
+                "v": "((Altura + 0.03)/2) + (-0.05513)*(0.38*Altura) + (0.00000)"
+              }
+            ],
+            "offset": "((-Profundidade/2) + 0.022) + 0.007",
+            "depth": "0.007"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Hélice - cubo",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura))",
+                "v": "((-Profundidade/2) + 0.022) - 0.004"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura))) + (0.22*(0.38*Altura))",
+                "v": "((-Profundidade/2) + 0.022) - 0.004"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura))) + (0.22*(0.38*Altura))",
+                "v": "(((-Profundidade/2) + 0.022) - 0.004) + 0.03"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura))",
+                "v": "(((-Profundidade/2) + 0.022) - 0.004) + 0.03"
+              }
+            ],
+            "offset": "((Altura + 0.03)/2)",
+            "axis": "((-Largura/2) + 0.045 + (0.38*Altura))",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Hélice - porca do cubo",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura))",
+                "v": "((-Profundidade/2) + 0.022) - 0.01"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura))) + 0.012",
+                "v": "((-Profundidade/2) + 0.022) - 0.01"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura))) + 0.012",
+                "v": "(((-Profundidade/2) + 0.022) - 0.01) + 0.006"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura))",
+                "v": "(((-Profundidade/2) + 0.022) - 0.01) + 0.006"
+              }
+            ],
+            "offset": "((Altura + 0.03)/2)",
+            "axis": "((-Largura/2) + 0.045 + (0.38*Altura))",
+            "angle": "360"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Motor do ventilador - eixo",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura))",
+                "v": "((-Profundidade/2) + 0.022) + 0.026"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura))) + 0.006",
+                "v": "((-Profundidade/2) + 0.022) + 0.026"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura))) + 0.006",
+                "v": "(((-Profundidade/2) + 0.022) + 0.026) + 0.02"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura))",
+                "v": "(((-Profundidade/2) + 0.022) + 0.026) + 0.02"
+              }
+            ],
+            "offset": "((Altura + 0.03)/2)",
+            "axis": "((-Largura/2) + 0.045 + (0.38*Altura))",
+            "angle": "360"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Motor do ventilador",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura))",
+                "v": "((-Profundidade/2) + 0.022) + 0.04"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura))) + 0.05",
+                "v": "((-Profundidade/2) + 0.022) + 0.04"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura))) + 0.05",
+                "v": "(((-Profundidade/2) + 0.022) + 0.04) + 0.085"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura))",
+                "v": "(((-Profundidade/2) + 0.022) + 0.04) + 0.085"
+              }
+            ],
+            "offset": "((Altura + 0.03)/2)",
+            "axis": "((-Largura/2) + 0.045 + (0.38*Altura))",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Motor do ventilador - tampa traseira",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura))",
+                "v": "((-Profundidade/2) + 0.022) + 0.125"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura))) + 0.035",
+                "v": "((-Profundidade/2) + 0.022) + 0.125"
+              },
+              {
+                "u": "(((-Largura/2) + 0.045 + (0.38*Altura))) + 0.035",
+                "v": "(((-Profundidade/2) + 0.022) + 0.125) + 0.012"
+              },
+              {
+                "u": "((-Largura/2) + 0.045 + (0.38*Altura))",
+                "v": "(((-Profundidade/2) + 0.022) + 0.125) + 0.012"
+              }
+            ],
+            "offset": "((Altura + 0.03)/2)",
+            "axis": "((-Largura/2) + 0.045 + (0.38*Altura))",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte do motor - montante 1",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.045 + (0.38*Altura)) + -1*0.065 - 0.01",
+            "y": "(((-Profundidade/2) + 0.022) + 0.07)",
+            "z": "0.05",
+            "width": "0.02",
+            "depth": "0.022",
+            "height": "(Altura - 0.07)"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte do motor - montante 2",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.045 + (0.38*Altura)) + 1*0.065 - 0.01",
+            "y": "(((-Profundidade/2) + 0.022) + 0.07)",
+            "z": "0.05",
+            "width": "0.02",
+            "depth": "0.022",
+            "height": "(Altura - 0.07)"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte do motor - travessa 1",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.045 + (0.38*Altura)) - 0.065",
+            "y": "(((-Profundidade/2) + 0.022) + 0.07)",
+            "z": "((Altura + 0.03)/2) + -1*0.058 - 0.006",
+            "width": "0.13",
+            "depth": "0.022",
+            "height": "0.012"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte do motor - travessa 2",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.045 + (0.38*Altura)) - 0.065",
+            "y": "(((-Profundidade/2) + 0.022) + 0.07)",
+            "z": "((Altura + 0.03)/2) + 1*0.058 - 0.006",
+            "width": "0.13",
+            "depth": "0.022",
+            "height": "0.012"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016)",
+            "y": "(Profundidade/2) - 0.03",
+            "z": "0.054",
+            "width": "((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016)",
+            "depth": "0.024",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 1",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.00781*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 2",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.02344*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 3",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.03906*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 4",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.05469*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 5",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.07031*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 6",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.08594*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 7",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.10156*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 8",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.11719*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 9",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.13281*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 10",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.14844*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 11",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.16406*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 12",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.17969*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 13",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.19531*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 14",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.21094*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 15",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.22656*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 16",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.24219*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 17",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.25781*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 18",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.27344*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 19",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.28906*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 20",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.30469*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 21",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.32031*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 22",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.33594*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 23",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.35156*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 24",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.36719*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 25",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.38281*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 26",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.39844*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 27",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.41406*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 28",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.42969*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 29",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.44531*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 30",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.46094*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 31",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.47656*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 32",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.49219*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 33",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.50781*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 34",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.52344*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 35",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.53906*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 36",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.55469*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 37",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.57031*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 38",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.58594*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 39",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.60156*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 40",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.61719*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 41",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.63281*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 42",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.64844*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 43",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.66406*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 44",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.67969*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 45",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.69531*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 46",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.71094*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 47",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.72656*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 48",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.74219*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 49",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.75781*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 50",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.77344*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 51",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.78906*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 52",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.80469*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 53",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.82031*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 54",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.83594*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 55",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.85156*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 56",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.86719*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 57",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.88281*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 58",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.89844*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 59",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.91406*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 60",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.92969*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 61",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.94531*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 62",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.96094*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 63",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.97656*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina traseira - aleta 64",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.016) + 0.99219*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.016) - 0.0006",
+            "y": "(Profundidade/2) - 0.006",
+            "z": "0.054",
+            "width": "0.0012",
+            "depth": "0.005",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina lateral",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.006",
+            "y": "((-Profundidade/2) + 0.045)",
+            "z": "0.054",
+            "width": "0.024",
+            "depth": "(Profundidade - 0.075)",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina lateral - aleta 1",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.001",
+            "y": "((-Profundidade/2) + 0.045) + 0.02083*(Profundidade - 0.075) - 0.0006",
+            "z": "0.054",
+            "width": "0.005",
+            "depth": "0.0012",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina lateral - aleta 2",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.001",
+            "y": "((-Profundidade/2) + 0.045) + 0.06250*(Profundidade - 0.075) - 0.0006",
+            "z": "0.054",
+            "width": "0.005",
+            "depth": "0.0012",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina lateral - aleta 3",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.001",
+            "y": "((-Profundidade/2) + 0.045) + 0.10417*(Profundidade - 0.075) - 0.0006",
+            "z": "0.054",
+            "width": "0.005",
+            "depth": "0.0012",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina lateral - aleta 4",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.001",
+            "y": "((-Profundidade/2) + 0.045) + 0.14583*(Profundidade - 0.075) - 0.0006",
+            "z": "0.054",
+            "width": "0.005",
+            "depth": "0.0012",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina lateral - aleta 5",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.001",
+            "y": "((-Profundidade/2) + 0.045) + 0.18750*(Profundidade - 0.075) - 0.0006",
+            "z": "0.054",
+            "width": "0.005",
+            "depth": "0.0012",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina lateral - aleta 6",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.001",
+            "y": "((-Profundidade/2) + 0.045) + 0.22917*(Profundidade - 0.075) - 0.0006",
+            "z": "0.054",
+            "width": "0.005",
+            "depth": "0.0012",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina lateral - aleta 7",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.001",
+            "y": "((-Profundidade/2) + 0.045) + 0.27083*(Profundidade - 0.075) - 0.0006",
+            "z": "0.054",
+            "width": "0.005",
+            "depth": "0.0012",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina lateral - aleta 8",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.001",
+            "y": "((-Profundidade/2) + 0.045) + 0.31250*(Profundidade - 0.075) - 0.0006",
+            "z": "0.054",
+            "width": "0.005",
+            "depth": "0.0012",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina lateral - aleta 9",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.001",
+            "y": "((-Profundidade/2) + 0.045) + 0.35417*(Profundidade - 0.075) - 0.0006",
+            "z": "0.054",
+            "width": "0.005",
+            "depth": "0.0012",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina lateral - aleta 10",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.001",
+            "y": "((-Profundidade/2) + 0.045) + 0.39583*(Profundidade - 0.075) - 0.0006",
+            "z": "0.054",
+            "width": "0.005",
+            "depth": "0.0012",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina lateral - aleta 11",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.001",
+            "y": "((-Profundidade/2) + 0.045) + 0.43750*(Profundidade - 0.075) - 0.0006",
+            "z": "0.054",
+            "width": "0.005",
+            "depth": "0.0012",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina lateral - aleta 12",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.001",
+            "y": "((-Profundidade/2) + 0.045) + 0.47917*(Profundidade - 0.075) - 0.0006",
+            "z": "0.054",
+            "width": "0.005",
+            "depth": "0.0012",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina lateral - aleta 13",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.001",
+            "y": "((-Profundidade/2) + 0.045) + 0.52083*(Profundidade - 0.075) - 0.0006",
+            "z": "0.054",
+            "width": "0.005",
+            "depth": "0.0012",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina lateral - aleta 14",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.001",
+            "y": "((-Profundidade/2) + 0.045) + 0.56250*(Profundidade - 0.075) - 0.0006",
+            "z": "0.054",
+            "width": "0.005",
+            "depth": "0.0012",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina lateral - aleta 15",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.001",
+            "y": "((-Profundidade/2) + 0.045) + 0.60417*(Profundidade - 0.075) - 0.0006",
+            "z": "0.054",
+            "width": "0.005",
+            "depth": "0.0012",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina lateral - aleta 16",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.001",
+            "y": "((-Profundidade/2) + 0.045) + 0.64583*(Profundidade - 0.075) - 0.0006",
+            "z": "0.054",
+            "width": "0.005",
+            "depth": "0.0012",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina lateral - aleta 17",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.001",
+            "y": "((-Profundidade/2) + 0.045) + 0.68750*(Profundidade - 0.075) - 0.0006",
+            "z": "0.054",
+            "width": "0.005",
+            "depth": "0.0012",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina lateral - aleta 18",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.001",
+            "y": "((-Profundidade/2) + 0.045) + 0.72917*(Profundidade - 0.075) - 0.0006",
+            "z": "0.054",
+            "width": "0.005",
+            "depth": "0.0012",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina lateral - aleta 19",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.001",
+            "y": "((-Profundidade/2) + 0.045) + 0.77083*(Profundidade - 0.075) - 0.0006",
+            "z": "0.054",
+            "width": "0.005",
+            "depth": "0.0012",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina lateral - aleta 20",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.001",
+            "y": "((-Profundidade/2) + 0.045) + 0.81250*(Profundidade - 0.075) - 0.0006",
+            "z": "0.054",
+            "width": "0.005",
+            "depth": "0.0012",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina lateral - aleta 21",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.001",
+            "y": "((-Profundidade/2) + 0.045) + 0.85417*(Profundidade - 0.075) - 0.0006",
+            "z": "0.054",
+            "width": "0.005",
+            "depth": "0.0012",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina lateral - aleta 22",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.001",
+            "y": "((-Profundidade/2) + 0.045) + 0.89583*(Profundidade - 0.075) - 0.0006",
+            "z": "0.054",
+            "width": "0.005",
+            "depth": "0.0012",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina lateral - aleta 23",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.001",
+            "y": "((-Profundidade/2) + 0.045) + 0.93750*(Profundidade - 0.075) - 0.0006",
+            "z": "0.054",
+            "width": "0.005",
+            "depth": "0.0012",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina lateral - aleta 24",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.001",
+            "y": "((-Profundidade/2) + 0.045) + 0.97917*(Profundidade - 0.075) - 0.0006",
+            "z": "0.054",
+            "width": "0.005",
+            "depth": "0.0012",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina - curva de cobre 1",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((Profundidade/2) - 0.018) - 0.005",
+                "v": "(0.054000000000000006 + 0.05556*(Altura - 0.078))",
+                "radius": "0.005"
+              },
+              {
+                "u": "((Profundidade/2) - 0.018) + 0.005",
+                "v": "(0.054000000000000006 + 0.05556*(Altura - 0.078))",
+                "radius": "0.005"
+              }
+            ],
+            "offset": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + 0.003",
+            "depth": "0.012"
+          }
+        },
+        "material": "Cobre",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina - curva de cobre 2",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((Profundidade/2) - 0.018) - 0.005",
+                "v": "(0.054000000000000006 + 0.16667*(Altura - 0.078))",
+                "radius": "0.005"
+              },
+              {
+                "u": "((Profundidade/2) - 0.018) + 0.005",
+                "v": "(0.054000000000000006 + 0.16667*(Altura - 0.078))",
+                "radius": "0.005"
+              }
+            ],
+            "offset": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + 0.003",
+            "depth": "0.012"
+          }
+        },
+        "material": "Cobre",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina - curva de cobre 3",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((Profundidade/2) - 0.018) - 0.005",
+                "v": "(0.054000000000000006 + 0.27778*(Altura - 0.078))",
+                "radius": "0.005"
+              },
+              {
+                "u": "((Profundidade/2) - 0.018) + 0.005",
+                "v": "(0.054000000000000006 + 0.27778*(Altura - 0.078))",
+                "radius": "0.005"
+              }
+            ],
+            "offset": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + 0.003",
+            "depth": "0.012"
+          }
+        },
+        "material": "Cobre",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina - curva de cobre 4",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((Profundidade/2) - 0.018) - 0.005",
+                "v": "(0.054000000000000006 + 0.38889*(Altura - 0.078))",
+                "radius": "0.005"
+              },
+              {
+                "u": "((Profundidade/2) - 0.018) + 0.005",
+                "v": "(0.054000000000000006 + 0.38889*(Altura - 0.078))",
+                "radius": "0.005"
+              }
+            ],
+            "offset": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + 0.003",
+            "depth": "0.012"
+          }
+        },
+        "material": "Cobre",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina - curva de cobre 5",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((Profundidade/2) - 0.018) - 0.005",
+                "v": "(0.054000000000000006 + 0.50000*(Altura - 0.078))",
+                "radius": "0.005"
+              },
+              {
+                "u": "((Profundidade/2) - 0.018) + 0.005",
+                "v": "(0.054000000000000006 + 0.50000*(Altura - 0.078))",
+                "radius": "0.005"
+              }
+            ],
+            "offset": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + 0.003",
+            "depth": "0.012"
+          }
+        },
+        "material": "Cobre",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina - curva de cobre 6",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((Profundidade/2) - 0.018) - 0.005",
+                "v": "(0.054000000000000006 + 0.61111*(Altura - 0.078))",
+                "radius": "0.005"
+              },
+              {
+                "u": "((Profundidade/2) - 0.018) + 0.005",
+                "v": "(0.054000000000000006 + 0.61111*(Altura - 0.078))",
+                "radius": "0.005"
+              }
+            ],
+            "offset": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + 0.003",
+            "depth": "0.012"
+          }
+        },
+        "material": "Cobre",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina - curva de cobre 7",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((Profundidade/2) - 0.018) - 0.005",
+                "v": "(0.054000000000000006 + 0.72222*(Altura - 0.078))",
+                "radius": "0.005"
+              },
+              {
+                "u": "((Profundidade/2) - 0.018) + 0.005",
+                "v": "(0.054000000000000006 + 0.72222*(Altura - 0.078))",
+                "radius": "0.005"
+              }
+            ],
+            "offset": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + 0.003",
+            "depth": "0.012"
+          }
+        },
+        "material": "Cobre",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina - curva de cobre 8",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((Profundidade/2) - 0.018) - 0.005",
+                "v": "(0.054000000000000006 + 0.83333*(Altura - 0.078))",
+                "radius": "0.005"
+              },
+              {
+                "u": "((Profundidade/2) - 0.018) + 0.005",
+                "v": "(0.054000000000000006 + 0.83333*(Altura - 0.078))",
+                "radius": "0.005"
+              }
+            ],
+            "offset": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + 0.003",
+            "depth": "0.012"
+          }
+        },
+        "material": "Cobre",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Serpentina - curva de cobre 9",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((Profundidade/2) - 0.018) - 0.005",
+                "v": "(0.054000000000000006 + 0.94444*(Altura - 0.078))",
+                "radius": "0.005"
+              },
+              {
+                "u": "((Profundidade/2) - 0.018) + 0.005",
+                "v": "(0.054000000000000006 + 0.94444*(Altura - 0.078))",
+                "radius": "0.005"
+              }
+            ],
+            "offset": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + 0.003",
+            "depth": "0.012"
+          }
+        },
+        "material": "Cobre",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade traseira - arame horizontal 1",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.004",
+            "y": "(Profundidade/2) + 0.0005",
+            "z": "(0.054000000000000006 + 0.06250*(Altura - 0.078) - 0.0015)",
+            "width": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.004",
+            "depth": "0.003",
+            "height": "0.003"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade lateral - arame horizontal 1",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) - 0.0035",
+            "y": "(-Profundidade/2) + 0.04",
+            "z": "(0.054000000000000006 + 0.06250*(Altura - 0.078) - 0.0015)",
+            "width": "0.003",
+            "depth": "Profundidade - 0.04 + 0.0035",
+            "height": "0.003"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade traseira - arame horizontal 2",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.004",
+            "y": "(Profundidade/2) + 0.0005",
+            "z": "(0.054000000000000006 + 0.18750*(Altura - 0.078) - 0.0015)",
+            "width": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.004",
+            "depth": "0.003",
+            "height": "0.003"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade lateral - arame horizontal 2",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) - 0.0035",
+            "y": "(-Profundidade/2) + 0.04",
+            "z": "(0.054000000000000006 + 0.18750*(Altura - 0.078) - 0.0015)",
+            "width": "0.003",
+            "depth": "Profundidade - 0.04 + 0.0035",
+            "height": "0.003"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade traseira - arame horizontal 3",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.004",
+            "y": "(Profundidade/2) + 0.0005",
+            "z": "(0.054000000000000006 + 0.31250*(Altura - 0.078) - 0.0015)",
+            "width": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.004",
+            "depth": "0.003",
+            "height": "0.003"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade lateral - arame horizontal 3",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) - 0.0035",
+            "y": "(-Profundidade/2) + 0.04",
+            "z": "(0.054000000000000006 + 0.31250*(Altura - 0.078) - 0.0015)",
+            "width": "0.003",
+            "depth": "Profundidade - 0.04 + 0.0035",
+            "height": "0.003"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade traseira - arame horizontal 4",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.004",
+            "y": "(Profundidade/2) + 0.0005",
+            "z": "(0.054000000000000006 + 0.43750*(Altura - 0.078) - 0.0015)",
+            "width": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.004",
+            "depth": "0.003",
+            "height": "0.003"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade lateral - arame horizontal 4",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) - 0.0035",
+            "y": "(-Profundidade/2) + 0.04",
+            "z": "(0.054000000000000006 + 0.43750*(Altura - 0.078) - 0.0015)",
+            "width": "0.003",
+            "depth": "Profundidade - 0.04 + 0.0035",
+            "height": "0.003"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade traseira - arame horizontal 5",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.004",
+            "y": "(Profundidade/2) + 0.0005",
+            "z": "(0.054000000000000006 + 0.56250*(Altura - 0.078) - 0.0015)",
+            "width": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.004",
+            "depth": "0.003",
+            "height": "0.003"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade lateral - arame horizontal 5",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) - 0.0035",
+            "y": "(-Profundidade/2) + 0.04",
+            "z": "(0.054000000000000006 + 0.56250*(Altura - 0.078) - 0.0015)",
+            "width": "0.003",
+            "depth": "Profundidade - 0.04 + 0.0035",
+            "height": "0.003"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade traseira - arame horizontal 6",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.004",
+            "y": "(Profundidade/2) + 0.0005",
+            "z": "(0.054000000000000006 + 0.68750*(Altura - 0.078) - 0.0015)",
+            "width": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.004",
+            "depth": "0.003",
+            "height": "0.003"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade lateral - arame horizontal 6",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) - 0.0035",
+            "y": "(-Profundidade/2) + 0.04",
+            "z": "(0.054000000000000006 + 0.68750*(Altura - 0.078) - 0.0015)",
+            "width": "0.003",
+            "depth": "Profundidade - 0.04 + 0.0035",
+            "height": "0.003"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade traseira - arame horizontal 7",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.004",
+            "y": "(Profundidade/2) + 0.0005",
+            "z": "(0.054000000000000006 + 0.81250*(Altura - 0.078) - 0.0015)",
+            "width": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.004",
+            "depth": "0.003",
+            "height": "0.003"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade lateral - arame horizontal 7",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) - 0.0035",
+            "y": "(-Profundidade/2) + 0.04",
+            "z": "(0.054000000000000006 + 0.81250*(Altura - 0.078) - 0.0015)",
+            "width": "0.003",
+            "depth": "Profundidade - 0.04 + 0.0035",
+            "height": "0.003"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade traseira - arame horizontal 8",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.004",
+            "y": "(Profundidade/2) + 0.0005",
+            "z": "(0.054000000000000006 + 0.93750*(Altura - 0.078) - 0.0015)",
+            "width": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.004",
+            "depth": "0.003",
+            "height": "0.003"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade lateral - arame horizontal 8",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) - 0.0035",
+            "y": "(-Profundidade/2) + 0.04",
+            "z": "(0.054000000000000006 + 0.93750*(Altura - 0.078) - 0.0015)",
+            "width": "0.003",
+            "depth": "Profundidade - 0.04 + 0.0035",
+            "height": "0.003"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade traseira - arame vertical 1",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.03 + 0.00*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.06)",
+            "y": "(Profundidade/2) + 0.0035",
+            "z": "0.054",
+            "width": "0.003",
+            "depth": "0.003",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade traseira - arame vertical 2",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.03 + 0.25*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.06)",
+            "y": "(Profundidade/2) + 0.0035",
+            "z": "0.054",
+            "width": "0.003",
+            "depth": "0.003",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade traseira - arame vertical 3",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.03 + 0.50*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.06)",
+            "y": "(Profundidade/2) + 0.0035",
+            "z": "0.054",
+            "width": "0.003",
+            "depth": "0.003",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade traseira - arame vertical 4",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.03 + 0.75*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.06)",
+            "y": "(Profundidade/2) + 0.0035",
+            "z": "0.054",
+            "width": "0.003",
+            "depth": "0.003",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade traseira - arame vertical 5",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) + 0.03 + 1.00*((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - (-Largura/2) - 0.06)",
+            "y": "(Profundidade/2) + 0.0035",
+            "z": "0.054",
+            "width": "0.003",
+            "depth": "0.003",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade lateral - arame vertical 1",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) - 0.0065",
+            "y": "(-Profundidade/2) + 0.08 + 0*(Profundidade - 0.13)",
+            "z": "0.054",
+            "width": "0.003",
+            "depth": "0.003",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade lateral - arame vertical 2",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2) - 0.0065",
+            "y": "(-Profundidade/2) + 0.08 + 1*(Profundidade - 0.13)",
+            "z": "0.054",
+            "width": "0.003",
+            "depth": "0.003",
+            "height": "(Altura - 0.078)"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Compressor",
+        "shape": {
+          "Cylinder": {
+            "x": "(((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + (Largura/2 - 0.05))/2)",
+            "y": "0.01",
+            "z": "0.062",
+            "radius": "0.058",
+            "height": "0.5*Altura"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Compressor - calota",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + (Largura/2 - 0.05))/2)",
+                "v": "0.062 + 0.5*Altura"
+              },
+              {
+                "u": "(((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + (Largura/2 - 0.05))/2) + 0.058",
+                "v": "0.062 + 0.5*Altura",
+                "radius": "0.07"
+              },
+              {
+                "u": "(((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + (Largura/2 - 0.05))/2)",
+                "v": "0.092 + 0.5*Altura"
+              }
+            ],
+            "offset": "0.01",
+            "axis": "(((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + (Largura/2 - 0.05))/2)",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Compressor - acumulador",
+        "shape": {
+          "Cylinder": {
+            "x": "(((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + (Largura/2 - 0.05))/2) + 0.045",
+            "y": "(Profundidade/2) - 0.06",
+            "z": "0.1",
+            "radius": "0.022",
+            "height": "0.3*Altura"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Compressor - tubo de descarga",
+        "shape": {
+          "Cylinder": {
+            "x": "(((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + (Largura/2 - 0.05))/2)",
+            "y": "0.01",
+            "z": "0.09 + 0.5*Altura",
+            "radius": "0.005",
+            "height": "0.05"
+          }
+        },
+        "material": "Cobre",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Compressor - coxim 1",
+        "shape": {
+          "Cylinder": {
+            "x": "(((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + (Largura/2 - 0.05))/2) + -1*0.05",
+            "y": "0.01 + -1*0.05",
+            "z": "0.05",
+            "radius": "0.012",
+            "height": "0.014"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Compressor - coxim 2",
+        "shape": {
+          "Cylinder": {
+            "x": "(((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + (Largura/2 - 0.05))/2) + 1*0.05",
+            "y": "0.01 + -1*0.05",
+            "z": "0.05",
+            "radius": "0.012",
+            "height": "0.014"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Compressor - coxim 3",
+        "shape": {
+          "Cylinder": {
+            "x": "(((((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + (Largura/2 - 0.05))/2) + 0*0.05",
+            "y": "0.01 + 1*0.05",
+            "z": "0.05",
+            "radius": "0.012",
+            "height": "0.014"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Caixa elétrica",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + 0.01",
+            "y": "(-Profundidade/2) + 0.02",
+            "z": "Altura - 0.14",
+            "width": "(Largura/2 - 0.05) - (((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) - 0.02",
+            "depth": "Profundidade - 0.06",
+            "height": "0.1"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Capacitor",
+        "shape": {
+          "Cylinder": {
+            "x": "(((-Largura/2) + 0.045 + (0.38*Altura)) + (0.38*Altura) + 0.03) + 0.04",
+            "y": "(-Profundidade/2) + 0.06",
+            "z": "Altura - 0.19",
+            "radius": "0.02",
+            "height": "0.05"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa elétrica",
+        "shape": {
+          "Box": {
+            "x": "(Largura/2 - 0.05)",
+            "y": "-0.04",
+            "z": "Altura - 0.19",
+            "width": "0.008",
+            "depth": "Profundidade/2 + 0.01",
+            "height": "0.13"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa elétrica - parafuso",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(-0.01) - 0.004",
+                "v": "Altura - 0.17",
+                "radius": "0.004"
+              },
+              {
+                "u": "(-0.01) + 0.004",
+                "v": "Altura - 0.17",
+                "radius": "0.004"
+              }
+            ],
+            "offset": "(Largura/2 - 0.05) + 0.008",
+            "depth": "0.0015"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Alça lateral",
+        "shape": {
+          "Box": {
+            "x": "(Largura/2 - 0.05)",
+            "y": "(-Profundidade/2) + 0.03",
+            "z": "Altura - 0.10",
+            "width": "0.012",
+            "depth": "0.07",
+            "height": "0.03"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Alça lateral - rebaixo",
+        "shape": {
+          "Box": {
+            "x": "(Largura/2 - 0.05) + 0.0005",
+            "y": "(-Profundidade/2) + 0.035",
+            "z": "Altura - 0.108",
+            "width": "0.011",
+            "depth": "0.06",
+            "height": "0.008"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Etiqueta de dados",
+        "shape": {
+          "Box": {
+            "x": "(Largura/2 - 0.05)",
+            "y": "(-Profundidade/2) + 0.03",
+            "z": "((Altura + 0.03)/2) - 0.02",
+            "width": "0.0005",
+            "depth": "0.07",
+            "height": "0.06"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa das válvulas",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(Largura/2 - 0.05)",
+                "v": "0.06"
+              },
+              {
+                "u": "(Largura/2 - 0.05) + 0.05",
+                "v": "0.06"
+              },
+              {
+                "u": "(Largura/2 - 0.05) + 0.05",
+                "v": "0.21"
+              },
+              {
+                "u": "(Largura/2 - 0.05) + 0.05 - 0.02",
+                "v": "0.25"
+              },
+              {
+                "u": "(Largura/2 - 0.05)",
+                "v": "0.25"
+              }
+            ],
+            "offset": "-0.03",
+            "depth": "Profundidade/2 - 0.04"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa das válvulas - parafuso",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(Profundidade/4 - 0.035) - 0.004",
+                "v": "0.18",
+                "radius": "0.004"
+              },
+              {
+                "u": "(Profundidade/4 - 0.035) + 0.004",
+                "v": "0.18",
+                "radius": "0.004"
+              }
+            ],
+            "offset": "(Largura/2 - 0.05) + 0.05",
+            "depth": "0.0015"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa das válvulas - nervura 1",
+        "shape": {
+          "Box": {
+            "x": "(Largura/2 - 0.05) + 0.05",
+            "y": "-0.02",
+            "z": "0.08",
+            "width": "0.001",
+            "depth": "Profundidade/2 - 0.06",
+            "height": "0.006"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa das válvulas - nervura 2",
+        "shape": {
+          "Box": {
+            "x": "(Largura/2 - 0.05) + 0.05",
+            "y": "-0.02",
+            "z": "0.1",
+            "width": "0.001",
+            "depth": "Profundidade/2 - 0.06",
+            "height": "0.006"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa das válvulas - nervura 3",
+        "shape": {
+          "Box": {
+            "x": "(Largura/2 - 0.05) + 0.05",
+            "y": "-0.02",
+            "z": "0.12",
+            "width": "0.001",
+            "depth": "Profundidade/2 - 0.06",
+            "height": "0.006"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa das válvulas - nervura 4",
+        "shape": {
+          "Box": {
+            "x": "(Largura/2 - 0.05) + 0.05",
+            "y": "-0.02",
+            "z": "0.14",
+            "width": "0.001",
+            "depth": "Profundidade/2 - 0.06",
+            "height": "0.006"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Prensa-cabo",
+        "shape": {
+          "Cylinder": {
+            "x": "(Largura/2 - 0.05) + 0.02",
+            "y": "0",
+            "z": "0.25",
+            "radius": "0.009",
+            "height": "0.014"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cabo de interligação",
+        "shape": {
+          "Cylinder": {
+            "x": "(Largura/2 - 0.05) + 0.02",
+            "y": "0",
+            "z": "0.25",
+            "radius": "0.005",
+            "height": "Altura - 0.19 - 0.25"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Válvula de serviço de gás",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((Profundidade/2) - 0.042)) - 0.011",
+                "v": "0.165",
+                "radius": "0.011"
+              },
+              {
+                "u": "(((Profundidade/2) - 0.042)) + 0.011",
+                "v": "0.165",
+                "radius": "0.011"
+              }
+            ],
+            "offset": "(Largura/2 - 0.05)",
+            "depth": "0.036"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Válvula de serviço de gás - tampa",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((Profundidade/2) - 0.042)) - 0.013",
+                "v": "0.165",
+                "radius": "0.013"
+              },
+              {
+                "u": "(((Profundidade/2) - 0.042)) + 0.013",
+                "v": "0.165",
+                "radius": "0.013"
+              }
+            ],
+            "offset": "(Largura/2 - 0.05) + 0.036",
+            "depth": "0.008"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Válvula de serviço de gás - haste",
+        "shape": {
+          "Cylinder": {
+            "x": "(Largura/2 - 0.05) + 0.024",
+            "y": "((Profundidade/2) - 0.042)",
+            "z": "0.165",
+            "radius": "0.0077",
+            "height": "0.023"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Válvula de serviço de gás - porca",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(Largura/2 - 0.05) + 0.024",
+                "v": "((Profundidade/2) - 0.042) + 0.011"
+              },
+              {
+                "u": "((Largura/2 - 0.05) + 0.024) + 0.014",
+                "v": "((Profundidade/2) - 0.042) + 0.011"
+              },
+              {
+                "u": "((Largura/2 - 0.05) + 0.024) + 0.014",
+                "v": "(((Profundidade/2) - 0.042) + 0.011) + 0.014"
+              },
+              {
+                "u": "(Largura/2 - 0.05) + 0.024",
+                "v": "(((Profundidade/2) - 0.042) + 0.011) + 0.014"
+              }
+            ],
+            "offset": "0.165",
+            "axis": "(Largura/2 - 0.05) + 0.024",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tubo de gás",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(Largura/2 - 0.05) + 0.024",
+                "v": "((Profundidade/2) - 0.042) + 0.011"
+              },
+              {
+                "u": "((Largura/2 - 0.05) + 0.024) + 0.0065",
+                "v": "((Profundidade/2) - 0.042) + 0.011"
+              },
+              {
+                "u": "((Largura/2 - 0.05) + 0.024) + 0.0065",
+                "v": "(((Profundidade/2) - 0.042) + 0.011) + 0.115"
+              },
+              {
+                "u": "(Largura/2 - 0.05) + 0.024",
+                "v": "(((Profundidade/2) - 0.042) + 0.011) + 0.115"
+              }
+            ],
+            "offset": "0.165",
+            "axis": "(Largura/2 - 0.05) + 0.024",
+            "angle": "360"
+          }
+        },
+        "material": "Cobre",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tubo de gás - isolamento",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(Largura/2 - 0.05) + 0.024",
+                "v": "((Profundidade/2) - 0.042) + 0.011 + 0.024"
+              },
+              {
+                "u": "((Largura/2 - 0.05) + 0.024) + 0.0125",
+                "v": "((Profundidade/2) - 0.042) + 0.011 + 0.024"
+              },
+              {
+                "u": "((Largura/2 - 0.05) + 0.024) + 0.0125",
+                "v": "(((Profundidade/2) - 0.042) + 0.011 + 0.024) + 0.08"
+              },
+              {
+                "u": "(Largura/2 - 0.05) + 0.024",
+                "v": "(((Profundidade/2) - 0.042) + 0.011 + 0.024) + 0.08"
+              }
+            ],
+            "offset": "0.165",
+            "axis": "(Largura/2 - 0.05) + 0.024",
+            "angle": "360"
+          }
+        },
+        "material": "Borracha cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Válvula de serviço de líquido",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((Profundidade/2) - 0.042)) - 0.008",
+                "v": "0.105",
+                "radius": "0.008"
+              },
+              {
+                "u": "(((Profundidade/2) - 0.042)) + 0.008",
+                "v": "0.105",
+                "radius": "0.008"
+              }
+            ],
+            "offset": "(Largura/2 - 0.05)",
+            "depth": "0.036"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Válvula de serviço de líquido - tampa",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((Profundidade/2) - 0.042)) - 0.01",
+                "v": "0.105",
+                "radius": "0.01"
+              },
+              {
+                "u": "(((Profundidade/2) - 0.042)) + 0.01",
+                "v": "0.105",
+                "radius": "0.01"
+              }
+            ],
+            "offset": "(Largura/2 - 0.05) + 0.036",
+            "depth": "0.008"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Válvula de serviço de líquido - haste",
+        "shape": {
+          "Cylinder": {
+            "x": "(Largura/2 - 0.05) + 0.024",
+            "y": "((Profundidade/2) - 0.042)",
+            "z": "0.105",
+            "radius": "0.0056",
+            "height": "0.02"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Válvula de serviço de líquido - porca",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(Largura/2 - 0.05) + 0.024",
+                "v": "((Profundidade/2) - 0.042) + 0.008"
+              },
+              {
+                "u": "((Largura/2 - 0.05) + 0.024) + 0.011",
+                "v": "((Profundidade/2) - 0.042) + 0.008"
+              },
+              {
+                "u": "((Largura/2 - 0.05) + 0.024) + 0.011",
+                "v": "(((Profundidade/2) - 0.042) + 0.008) + 0.014"
+              },
+              {
+                "u": "(Largura/2 - 0.05) + 0.024",
+                "v": "(((Profundidade/2) - 0.042) + 0.008) + 0.014"
+              }
+            ],
+            "offset": "0.105",
+            "axis": "(Largura/2 - 0.05) + 0.024",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tubo de líquido",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(Largura/2 - 0.05) + 0.024",
+                "v": "((Profundidade/2) - 0.042) + 0.008"
+              },
+              {
+                "u": "((Largura/2 - 0.05) + 0.024) + 0.0035",
+                "v": "((Profundidade/2) - 0.042) + 0.008"
+              },
+              {
+                "u": "((Largura/2 - 0.05) + 0.024) + 0.0035",
+                "v": "(((Profundidade/2) - 0.042) + 0.008) + 0.115"
+              },
+              {
+                "u": "(Largura/2 - 0.05) + 0.024",
+                "v": "(((Profundidade/2) - 0.042) + 0.008) + 0.115"
+              }
+            ],
+            "offset": "0.105",
+            "axis": "(Largura/2 - 0.05) + 0.024",
+            "angle": "360"
+          }
+        },
+        "material": "Cobre",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tubo de líquido - isolamento",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(Largura/2 - 0.05) + 0.024",
+                "v": "((Profundidade/2) - 0.042) + 0.008 + 0.024"
+              },
+              {
+                "u": "((Largura/2 - 0.05) + 0.024) + 0.0095",
+                "v": "((Profundidade/2) - 0.042) + 0.008 + 0.024"
+              },
+              {
+                "u": "((Largura/2 - 0.05) + 0.024) + 0.0095",
+                "v": "(((Profundidade/2) - 0.042) + 0.008 + 0.024) + 0.08"
+              },
+              {
+                "u": "(Largura/2 - 0.05) + 0.024",
+                "v": "(((Profundidade/2) - 0.042) + 0.008 + 0.024) + 0.08"
+              }
+            ],
+            "offset": "0.105",
+            "axis": "(Largura/2 - 0.05) + 0.024",
+            "angle": "360"
+          }
+        },
+        "material": "Borracha cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trilho da base 1",
+        "shape": {
+          "Box": {
+            "x": "(-0.025 + -1*0.32*(Largura - 0.05)) - 0.025",
+            "y": "(-Profundidade/2) - 0.02",
+            "z": "0.012",
+            "width": "0.05",
+            "depth": "Profundidade + 0.04",
+            "height": "0.018"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Coxim de borracha 1.1",
+        "shape": {
+          "Box": {
+            "x": "(-0.025 + -1*0.32*(Largura - 0.05)) - 0.03",
+            "y": "(-1*(Profundidade/2 + 0.005)) - 0.02",
+            "z": "0",
+            "width": "0.06",
+            "depth": "0.04",
+            "height": "0.012"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso de fixação 1.1",
+        "shape": {
+          "Cylinder": {
+            "x": "(-0.025 + -1*0.32*(Largura - 0.05))",
+            "y": "(-1*(Profundidade/2 + 0.005))",
+            "z": "0.004",
+            "radius": "0.004",
+            "height": "0.038"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso de fixação 1.1 - porca",
+        "shape": {
+          "Cylinder": {
+            "x": "(-0.025 + -1*0.32*(Largura - 0.05))",
+            "y": "(-1*(Profundidade/2 + 0.005))",
+            "z": "0.03",
+            "radius": "0.008",
+            "height": "0.006"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Coxim de borracha 1.2",
+        "shape": {
+          "Box": {
+            "x": "(-0.025 + -1*0.32*(Largura - 0.05)) - 0.03",
+            "y": "(1*(Profundidade/2 + 0.005)) - 0.02",
+            "z": "0",
+            "width": "0.06",
+            "depth": "0.04",
+            "height": "0.012"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso de fixação 1.2",
+        "shape": {
+          "Cylinder": {
+            "x": "(-0.025 + -1*0.32*(Largura - 0.05))",
+            "y": "(1*(Profundidade/2 + 0.005))",
+            "z": "0.004",
+            "radius": "0.004",
+            "height": "0.038"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso de fixação 1.2 - porca",
+        "shape": {
+          "Cylinder": {
+            "x": "(-0.025 + -1*0.32*(Largura - 0.05))",
+            "y": "(1*(Profundidade/2 + 0.005))",
+            "z": "0.03",
+            "radius": "0.008",
+            "height": "0.006"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trilho da base 2",
+        "shape": {
+          "Box": {
+            "x": "(-0.025 + 1*0.32*(Largura - 0.05)) - 0.025",
+            "y": "(-Profundidade/2) - 0.02",
+            "z": "0.012",
+            "width": "0.05",
+            "depth": "Profundidade + 0.04",
+            "height": "0.018"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Coxim de borracha 2.1",
+        "shape": {
+          "Box": {
+            "x": "(-0.025 + 1*0.32*(Largura - 0.05)) - 0.03",
+            "y": "(-1*(Profundidade/2 + 0.005)) - 0.02",
+            "z": "0",
+            "width": "0.06",
+            "depth": "0.04",
+            "height": "0.012"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso de fixação 2.1",
+        "shape": {
+          "Cylinder": {
+            "x": "(-0.025 + 1*0.32*(Largura - 0.05))",
+            "y": "(-1*(Profundidade/2 + 0.005))",
+            "z": "0.004",
+            "radius": "0.004",
+            "height": "0.038"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso de fixação 2.1 - porca",
+        "shape": {
+          "Cylinder": {
+            "x": "(-0.025 + 1*0.32*(Largura - 0.05))",
+            "y": "(-1*(Profundidade/2 + 0.005))",
+            "z": "0.03",
+            "radius": "0.008",
+            "height": "0.006"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Coxim de borracha 2.2",
+        "shape": {
+          "Box": {
+            "x": "(-0.025 + 1*0.32*(Largura - 0.05)) - 0.03",
+            "y": "(1*(Profundidade/2 + 0.005)) - 0.02",
+            "z": "0",
+            "width": "0.06",
+            "depth": "0.04",
+            "height": "0.012"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso de fixação 2.2",
+        "shape": {
+          "Cylinder": {
+            "x": "(-0.025 + 1*0.32*(Largura - 0.05))",
+            "y": "(1*(Profundidade/2 + 0.005))",
+            "z": "0.004",
+            "radius": "0.004",
+            "height": "0.038"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso de fixação 2.2 - porca",
+        "shape": {
+          "Cylinder": {
+            "x": "(-0.025 + 1*0.32*(Largura - 0.05))",
+            "y": "(1*(Profundidade/2 + 0.005))",
+            "z": "0.03",
+            "radius": "0.008",
+            "height": "0.006"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Bico de dreno",
+        "shape": {
+          "Cylinder": {
+            "x": "((-Largura/2) + 0.045 + (0.38*Altura)) + 0.05",
+            "y": "0.03",
+            "z": "0.015",
+            "radius": "0.008",
+            "height": "0.015"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      }
+    ]
+  },
+  "types": [
+    {
+      "name": "Condensadora split 9.000 a 12.000 BTU",
+      "values": {},
+      "info": {
+        "description": "Unidade externa de 9.000 a 12.000 BTU/h, 70 x 26 x 50 cm"
+      }
+    },
+    {
+      "name": "Condensadora split 18.000 a 24.000 BTU",
+      "values": {
+        "Largura": 0.85,
+        "Profundidade": 0.32,
+        "Altura": 0.6
+      },
+      "info": {
+        "description": "Unidade externa de 18.000 a 24.000 BTU/h, 85 x 32 x 60 cm"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "name": "Aço pintado branco",
+      "color": [
+        240,
+        240,
+        236
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico cinza claro",
+      "color": [
+        196,
+        198,
+        200
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Aço galvanizado",
+      "color": [
+        160,
+        165,
+        170
+      ],
+      "class": "Metal",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Alumínio anodizado",
+      "color": [
+        206,
+        208,
+        210
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico cinza",
+      "color": [
+        120,
+        122,
+        126
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Aço pintado cinza",
+      "color": [
+        128,
+        130,
+        134
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Cobre",
+      "color": [
+        184,
+        115,
+        72
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Aço pintado preto",
+      "color": [
+        30,
+        30,
+        32
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Borracha",
+      "color": [
+        30,
+        30,
+        30
+      ],
+      "class": "Plastic",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico preto",
+      "color": [
+        34,
+        34,
+        37
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Latão",
+      "color": [
+        192,
+        160,
+        84
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Borracha cinza",
+      "color": [
+        150,
+        152,
+        154
+      ],
+      "class": "Plastic",
+      "finish": "Matte",
+      "transparency": 0
+    }
+  ]
+}

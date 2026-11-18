@@ -30,93 +30,1197 @@
     ],
     "items": [
       {
-        "name": "Assento",
-        "material": "Tecido",
-        "in_plan": true,
+        "name": "Assento simplificado",
         "shape": {
           "Box": {
-            "x": "-Largura / 2",
-            "y": "-Profundidade / 2",
+            "x": "-Largura/2",
+            "y": "-Profundidade/2",
             "z": "AlturaAssento - 0.05",
             "width": "Largura",
             "depth": "Profundidade",
             "height": "0.05"
           }
+        },
+        "material": "Tecido",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
         }
       },
       {
-        "name": "Encosto",
-        "material": "Madeira",
-        "in_plan": true,
+        "name": "Encosto simplificado",
         "shape": {
           "Box": {
-            "x": "-Largura / 2",
-            "y": "Profundidade / 2 - 0.03",
+            "x": "-Largura/2",
+            "y": "Profundidade/2 - 0.03",
             "z": "AlturaAssento",
             "width": "Largura",
             "depth": "0.03",
             "height": "Altura - AlturaAssento"
           }
+        },
+        "material": "Madeira",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
         }
       },
       {
-        "name": "Perna 1",
-        "material": "Madeira",
-        "in_plan": false,
+        "name": "Perna simplificada 1",
         "shape": {
           "Box": {
-            "x": "-Largura / 2 + 0.02",
-            "y": "-Profundidade / 2 + 0.02",
+            "x": "-1*(Largura/2 - 0.04) - 0.02",
+            "y": "-1*(Profundidade/2 - 0.04) - 0.02",
             "z": "0",
             "width": "0.04",
             "depth": "0.04",
             "height": "AlturaAssento - 0.05"
           }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
         }
       },
       {
-        "name": "Perna 2",
-        "material": "Madeira",
-        "in_plan": false,
+        "name": "Perna simplificada 2",
         "shape": {
           "Box": {
-            "x": "Largura / 2 - 0.02 - 0.04",
-            "y": "-Profundidade / 2 + 0.02",
+            "x": "1*(Largura/2 - 0.04) - 0.02",
+            "y": "-1*(Profundidade/2 - 0.04) - 0.02",
             "z": "0",
             "width": "0.04",
             "depth": "0.04",
             "height": "AlturaAssento - 0.05"
           }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
         }
       },
       {
-        "name": "Perna 3",
-        "material": "Madeira",
-        "in_plan": false,
+        "name": "Perna simplificada 3",
         "shape": {
           "Box": {
-            "x": "-Largura / 2 + 0.02",
-            "y": "Profundidade / 2 - 0.02 - 0.04",
+            "x": "-1*(Largura/2 - 0.04) - 0.02",
+            "y": "1*(Profundidade/2 - 0.04) - 0.02",
             "z": "0",
             "width": "0.04",
             "depth": "0.04",
             "height": "AlturaAssento - 0.05"
           }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
         }
       },
       {
-        "name": "Perna 4",
-        "material": "Madeira",
-        "in_plan": false,
+        "name": "Perna simplificada 4",
         "shape": {
           "Box": {
-            "x": "Largura / 2 - 0.02 - 0.04",
-            "y": "Profundidade / 2 - 0.02 - 0.04",
+            "x": "1*(Largura/2 - 0.04) - 0.02",
+            "y": "1*(Profundidade/2 - 0.04) - 0.02",
             "z": "0",
             "width": "0.04",
             "depth": "0.04",
             "height": "AlturaAssento - 0.05"
           }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Montante traseiro esquerdo",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "Profundidade/2 - 0.034",
+                "v": "0.003"
+              },
+              {
+                "u": "Profundidade/2 - 0.002",
+                "v": "0.003"
+              },
+              {
+                "u": "Profundidade/2 - 0.05",
+                "v": "AlturaAssento"
+              },
+              {
+                "u": "Profundidade/2 - 0.002",
+                "v": "Altura - 0.012",
+                "radius": "0.014"
+              },
+              {
+                "u": "Profundidade/2 - 0.016",
+                "v": "Altura"
+              },
+              {
+                "u": "Profundidade/2 - 0.028",
+                "v": "Altura"
+              },
+              {
+                "u": "Profundidade/2 - 0.092",
+                "v": "AlturaAssento"
+              }
+            ],
+            "offset": "-Largura/2",
+            "depth": "0.034"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Montante traseiro direito",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "Profundidade/2 - 0.034",
+                "v": "0.003"
+              },
+              {
+                "u": "Profundidade/2 - 0.002",
+                "v": "0.003"
+              },
+              {
+                "u": "Profundidade/2 - 0.05",
+                "v": "AlturaAssento"
+              },
+              {
+                "u": "Profundidade/2 - 0.002",
+                "v": "Altura - 0.012",
+                "radius": "0.014"
+              },
+              {
+                "u": "Profundidade/2 - 0.016",
+                "v": "Altura"
+              },
+              {
+                "u": "Profundidade/2 - 0.028",
+                "v": "Altura"
+              },
+              {
+                "u": "Profundidade/2 - 0.092",
+                "v": "AlturaAssento"
+              }
+            ],
+            "offset": "Largura/2 - 0.034",
+            "depth": "0.034"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Perna frontal esquerda",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "-Largura/2",
+                "v": "0.003"
+              },
+              {
+                "u": "-Largura/2 + 0.024",
+                "v": "0.003"
+              },
+              {
+                "u": "-Largura/2 + 0.036",
+                "v": "AlturaAssento - 0.05 - 0.065"
+              },
+              {
+                "u": "-Largura/2 + 0.036",
+                "v": "AlturaAssento - 0.05"
+              },
+              {
+                "u": "-Largura/2",
+                "v": "AlturaAssento - 0.05"
+              }
+            ],
+            "offset": "-Profundidade/2 + 0.008",
+            "depth": "0.036"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Perna frontal direita",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "Largura/2 - 0.024",
+                "v": "0.003"
+              },
+              {
+                "u": "Largura/2",
+                "v": "0.003"
+              },
+              {
+                "u": "Largura/2",
+                "v": "AlturaAssento - 0.05"
+              },
+              {
+                "u": "Largura/2 - 0.036",
+                "v": "AlturaAssento - 0.05"
+              },
+              {
+                "u": "Largura/2 - 0.036",
+                "v": "AlturaAssento - 0.05 - 0.065"
+              }
+            ],
+            "offset": "-Profundidade/2 + 0.008",
+            "depth": "0.036"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travessa do assento frontal",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.036",
+            "y": "-Profundidade/2 + 0.014",
+            "z": "AlturaAssento - 0.05 - 0.065",
+            "width": "Largura - 0.072",
+            "depth": "0.022",
+            "height": "0.065"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travessa do assento traseira",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.034",
+            "y": "Profundidade/2 - 0.082",
+            "z": "AlturaAssento - 0.05 - 0.065",
+            "width": "Largura - 0.068",
+            "depth": "0.022",
+            "height": "0.065"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travessa do assento esquerda",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.006",
+            "y": "-Profundidade/2 + 0.044",
+            "z": "AlturaAssento - 0.05 - 0.065",
+            "width": "0.022",
+            "depth": "Profundidade - 0.13",
+            "height": "0.065"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travessa do assento direita",
+        "shape": {
+          "Box": {
+            "x": "Largura/2 - 0.028",
+            "y": "-Profundidade/2 + 0.044",
+            "z": "AlturaAssento - 0.05 - 0.065",
+            "width": "0.022",
+            "depth": "Profundidade - 0.13",
+            "height": "0.065"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cantoneira frontal esquerda",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-1*(Largura/2 - 0.028)",
+                "v": "-Profundidade/2 + 0.036 + 1*0.075"
+              },
+              {
+                "u": "-1*(Largura/2 - 0.105)",
+                "v": "-Profundidade/2 + 0.036"
+              },
+              {
+                "u": "-1*(Largura/2 - 0.125)",
+                "v": "-Profundidade/2 + 0.036"
+              },
+              {
+                "u": "-1*(Largura/2 - 0.028)",
+                "v": "-Profundidade/2 + 0.036 + 1*0.095"
+              }
+            ],
+            "offset": "AlturaAssento - 0.05 - 0.045",
+            "depth": "0.04"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cantoneira frontal direita",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "1*(Largura/2 - 0.028)",
+                "v": "-Profundidade/2 + 0.036 + 1*0.095"
+              },
+              {
+                "u": "1*(Largura/2 - 0.125)",
+                "v": "-Profundidade/2 + 0.036"
+              },
+              {
+                "u": "1*(Largura/2 - 0.105)",
+                "v": "-Profundidade/2 + 0.036"
+              },
+              {
+                "u": "1*(Largura/2 - 0.028)",
+                "v": "-Profundidade/2 + 0.036 + 1*0.075"
+              }
+            ],
+            "offset": "AlturaAssento - 0.05 - 0.045",
+            "depth": "0.04"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cantoneira traseira esquerda",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-1*(Largura/2 - 0.028)",
+                "v": "Profundidade/2 - 0.082 + -1*0.095"
+              },
+              {
+                "u": "-1*(Largura/2 - 0.125)",
+                "v": "Profundidade/2 - 0.082"
+              },
+              {
+                "u": "-1*(Largura/2 - 0.105)",
+                "v": "Profundidade/2 - 0.082"
+              },
+              {
+                "u": "-1*(Largura/2 - 0.028)",
+                "v": "Profundidade/2 - 0.082 + -1*0.075"
+              }
+            ],
+            "offset": "AlturaAssento - 0.05 - 0.045",
+            "depth": "0.04"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cantoneira traseira direita",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "1*(Largura/2 - 0.028)",
+                "v": "Profundidade/2 - 0.082 + -1*0.075"
+              },
+              {
+                "u": "1*(Largura/2 - 0.105)",
+                "v": "Profundidade/2 - 0.082"
+              },
+              {
+                "u": "1*(Largura/2 - 0.125)",
+                "v": "Profundidade/2 - 0.082"
+              },
+              {
+                "u": "1*(Largura/2 - 0.028)",
+                "v": "Profundidade/2 - 0.082 + -1*0.095"
+              }
+            ],
+            "offset": "AlturaAssento - 0.05 - 0.045",
+            "depth": "0.04"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travessa lateral esquerda",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.007",
+            "y": "-Profundidade/2 + 0.04",
+            "z": "0.17",
+            "width": "0.018",
+            "depth": "Profundidade - 0.085",
+            "height": "0.026"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travessa lateral direita",
+        "shape": {
+          "Box": {
+            "x": "Largura/2 - 0.025",
+            "y": "-Profundidade/2 + 0.04",
+            "z": "0.17",
+            "width": "0.018",
+            "depth": "Profundidade - 0.085",
+            "height": "0.026"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travessa central",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.025",
+            "y": "-0.05*Profundidade - 0.009",
+            "z": "0.173",
+            "width": "Largura - 0.05",
+            "depth": "0.018",
+            "height": "0.02"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travessa traseira inferior",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.034",
+            "y": "Profundidade/2 - 0.062",
+            "z": "0.26",
+            "width": "Largura - 0.068",
+            "depth": "0.018",
+            "height": "0.026"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Base do assento",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-Largura/2) + 0.022",
+                "v": "-Profundidade/2"
+              },
+              {
+                "u": "(Largura/2) - 0.022",
+                "v": "-Profundidade/2",
+                "radius": "0.022"
+              },
+              {
+                "u": "Largura/2",
+                "v": "(-Profundidade/2) + 0.022"
+              },
+              {
+                "u": "Largura/2",
+                "v": "(Profundidade/2 - 0.093) - 0.022",
+                "radius": "0.022"
+              },
+              {
+                "u": "(Largura/2) - 0.022",
+                "v": "Profundidade/2 - 0.093"
+              },
+              {
+                "u": "(-Largura/2) + 0.022",
+                "v": "Profundidade/2 - 0.093",
+                "radius": "0.022"
+              },
+              {
+                "u": "-Largura/2",
+                "v": "(Profundidade/2 - 0.093) - 0.022"
+              },
+              {
+                "u": "-Largura/2",
+                "v": "(-Profundidade/2) + 0.022",
+                "radius": "0.022"
+              }
+            ],
+            "offset": "AlturaAssento - 0.05",
+            "depth": "0.012"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Vivo do assento",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-Largura/2 + 0.002) + 0.022",
+                "v": "-Profundidade/2 + 0.002"
+              },
+              {
+                "u": "(Largura/2 - 0.002) - 0.022",
+                "v": "-Profundidade/2 + 0.002",
+                "radius": "0.022"
+              },
+              {
+                "u": "Largura/2 - 0.002",
+                "v": "(-Profundidade/2 + 0.002) + 0.022"
+              },
+              {
+                "u": "Largura/2 - 0.002",
+                "v": "(Profundidade/2 - 0.093 - 0.002) - 0.022",
+                "radius": "0.022"
+              },
+              {
+                "u": "(Largura/2 - 0.002) - 0.022",
+                "v": "Profundidade/2 - 0.093 - 0.002"
+              },
+              {
+                "u": "(-Largura/2 + 0.002) + 0.022",
+                "v": "Profundidade/2 - 0.093 - 0.002",
+                "radius": "0.022"
+              },
+              {
+                "u": "-Largura/2 + 0.002",
+                "v": "(Profundidade/2 - 0.093 - 0.002) - 0.022"
+              },
+              {
+                "u": "-Largura/2 + 0.002",
+                "v": "(-Profundidade/2 + 0.002) + 0.022",
+                "radius": "0.022"
+              }
+            ],
+            "offset": "AlturaAssento - 0.05 + 0.012",
+            "depth": "0.005"
+          }
+        },
+        "material": "Tecido cinza escuro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Almofada do assento - camada 1",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-Largura/2 + 0.005) + 0.024",
+                "v": "-Profundidade/2 + 0.005"
+              },
+              {
+                "u": "(Largura/2 - 0.005) - 0.024",
+                "v": "-Profundidade/2 + 0.005",
+                "radius": "0.024"
+              },
+              {
+                "u": "Largura/2 - 0.005",
+                "v": "(-Profundidade/2 + 0.005) + 0.024"
+              },
+              {
+                "u": "Largura/2 - 0.005",
+                "v": "(Profundidade/2 - 0.093 - 0.005) - 0.024",
+                "radius": "0.024"
+              },
+              {
+                "u": "(Largura/2 - 0.005) - 0.024",
+                "v": "Profundidade/2 - 0.093 - 0.005"
+              },
+              {
+                "u": "(-Largura/2 + 0.005) + 0.024",
+                "v": "Profundidade/2 - 0.093 - 0.005",
+                "radius": "0.024"
+              },
+              {
+                "u": "-Largura/2 + 0.005",
+                "v": "(Profundidade/2 - 0.093 - 0.005) - 0.024"
+              },
+              {
+                "u": "-Largura/2 + 0.005",
+                "v": "(-Profundidade/2 + 0.005) + 0.024",
+                "radius": "0.024"
+              }
+            ],
+            "offset": "AlturaAssento - 0.05 + 0.012",
+            "depth": "0.022"
+          }
+        },
+        "material": "Tecido",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Almofada do assento - camada 2",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-Largura/2 + 0.012) + 0.03",
+                "v": "-Profundidade/2 + 0.012"
+              },
+              {
+                "u": "(Largura/2 - 0.012) - 0.03",
+                "v": "-Profundidade/2 + 0.012",
+                "radius": "0.03"
+              },
+              {
+                "u": "Largura/2 - 0.012",
+                "v": "(-Profundidade/2 + 0.012) + 0.03"
+              },
+              {
+                "u": "Largura/2 - 0.012",
+                "v": "(Profundidade/2 - 0.093 - 0.012) - 0.03",
+                "radius": "0.03"
+              },
+              {
+                "u": "(Largura/2 - 0.012) - 0.03",
+                "v": "Profundidade/2 - 0.093 - 0.012"
+              },
+              {
+                "u": "(-Largura/2 + 0.012) + 0.03",
+                "v": "Profundidade/2 - 0.093 - 0.012",
+                "radius": "0.03"
+              },
+              {
+                "u": "-Largura/2 + 0.012",
+                "v": "(Profundidade/2 - 0.093 - 0.012) - 0.03"
+              },
+              {
+                "u": "-Largura/2 + 0.012",
+                "v": "(-Profundidade/2 + 0.012) + 0.03",
+                "radius": "0.03"
+              }
+            ],
+            "offset": "AlturaAssento - 0.05 + 0.034",
+            "depth": "0.009"
+          }
+        },
+        "material": "Tecido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Almofada do assento - camada 3",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-Largura/2 + 0.028) + 0.04",
+                "v": "-Profundidade/2 + 0.028"
+              },
+              {
+                "u": "(Largura/2 - 0.028) - 0.04",
+                "v": "-Profundidade/2 + 0.028",
+                "radius": "0.04"
+              },
+              {
+                "u": "Largura/2 - 0.028",
+                "v": "(-Profundidade/2 + 0.028) + 0.04"
+              },
+              {
+                "u": "Largura/2 - 0.028",
+                "v": "(Profundidade/2 - 0.093 - 0.028) - 0.04",
+                "radius": "0.04"
+              },
+              {
+                "u": "(Largura/2 - 0.028) - 0.04",
+                "v": "Profundidade/2 - 0.093 - 0.028"
+              },
+              {
+                "u": "(-Largura/2 + 0.028) + 0.04",
+                "v": "Profundidade/2 - 0.093 - 0.028",
+                "radius": "0.04"
+              },
+              {
+                "u": "-Largura/2 + 0.028",
+                "v": "(Profundidade/2 - 0.093 - 0.028) - 0.04"
+              },
+              {
+                "u": "-Largura/2 + 0.028",
+                "v": "(-Profundidade/2 + 0.028) + 0.04",
+                "radius": "0.04"
+              }
+            ],
+            "offset": "AlturaAssento - 0.05 + 0.043",
+            "depth": "0.007"
+          }
+        },
+        "material": "Tecido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travessa superior do encosto",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-Largura/2 + 0.034",
+                "v": "Profundidade/2 - 0.092 + 0.064/(Altura - AlturaAssento)*(Altura - 0.085 + 0.0375 - AlturaAssento) + 0.004",
+                "radius": "-(((Largura - 0.068)*(Largura - 0.068)/4 + 0.000144)/0.024)"
+              },
+              {
+                "u": "Largura/2 - 0.034",
+                "v": "Profundidade/2 - 0.092 + 0.064/(Altura - AlturaAssento)*(Altura - 0.085 + 0.0375 - AlturaAssento) + 0.004"
+              },
+              {
+                "u": "Largura/2 - 0.034",
+                "v": "Profundidade/2 - 0.092 + 0.064/(Altura - AlturaAssento)*(Altura - 0.085 + 0.0375 - AlturaAssento) + 0.004 + 0.018",
+                "radius": "((Largura - 0.068)*(Largura - 0.068)/4 + 0.000144)/0.024"
+              },
+              {
+                "u": "-Largura/2 + 0.034",
+                "v": "Profundidade/2 - 0.092 + 0.064/(Altura - AlturaAssento)*(Altura - 0.085 + 0.0375 - AlturaAssento) + 0.004 + 0.018"
+              }
+            ],
+            "offset": "Altura - 0.085",
+            "depth": "0.075"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travessa inferior do encosto",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-Largura/2 + 0.034",
+                "v": "Profundidade/2 - 0.092 + 0.064/(Altura - AlturaAssento)*(AlturaAssento + 0.11 + 0.02 - AlturaAssento) + 0.004",
+                "radius": "-(((Largura - 0.068)*(Largura - 0.068)/4 + 0.000144)/0.024)"
+              },
+              {
+                "u": "Largura/2 - 0.034",
+                "v": "Profundidade/2 - 0.092 + 0.064/(Altura - AlturaAssento)*(AlturaAssento + 0.11 + 0.02 - AlturaAssento) + 0.004"
+              },
+              {
+                "u": "Largura/2 - 0.034",
+                "v": "Profundidade/2 - 0.092 + 0.064/(Altura - AlturaAssento)*(AlturaAssento + 0.11 + 0.02 - AlturaAssento) + 0.004 + 0.018",
+                "radius": "((Largura - 0.068)*(Largura - 0.068)/4 + 0.000144)/0.024"
+              },
+              {
+                "u": "-Largura/2 + 0.034",
+                "v": "Profundidade/2 - 0.092 + 0.064/(Altura - AlturaAssento)*(AlturaAssento + 0.11 + 0.02 - AlturaAssento) + 0.004 + 0.018"
+              }
+            ],
+            "offset": "AlturaAssento + 0.11",
+            "depth": "0.04"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ripa do encosto 1",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "Profundidade/2 - 0.092 + 0.064/(Altura - AlturaAssento)*(0.145) + 0.01345",
+                "v": "AlturaAssento + 0.145"
+              },
+              {
+                "u": "Profundidade/2 - 0.092 + 0.064/(Altura - AlturaAssento)*(0.145) + 0.01345 + 0.012",
+                "v": "AlturaAssento + 0.145"
+              },
+              {
+                "u": "Profundidade/2 - 0.092 + 0.064/(Altura - AlturaAssento)*(Altura - 0.08 - AlturaAssento) + 0.01345 + 0.012",
+                "v": "Altura - 0.08"
+              },
+              {
+                "u": "Profundidade/2 - 0.092 + 0.064/(Altura - AlturaAssento)*(Altura - 0.08 - AlturaAssento) + 0.01345",
+                "v": "Altura - 0.08"
+              }
+            ],
+            "offset": "-0.34*(Largura - 0.068) - 0.016",
+            "depth": "0.032"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ripa do encosto 2",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "Profundidade/2 - 0.092 + 0.064/(Altura - AlturaAssento)*(0.145) + 0.01761",
+                "v": "AlturaAssento + 0.145"
+              },
+              {
+                "u": "Profundidade/2 - 0.092 + 0.064/(Altura - AlturaAssento)*(0.145) + 0.01761 + 0.012",
+                "v": "AlturaAssento + 0.145"
+              },
+              {
+                "u": "Profundidade/2 - 0.092 + 0.064/(Altura - AlturaAssento)*(Altura - 0.08 - AlturaAssento) + 0.01761 + 0.012",
+                "v": "Altura - 0.08"
+              },
+              {
+                "u": "Profundidade/2 - 0.092 + 0.064/(Altura - AlturaAssento)*(Altura - 0.08 - AlturaAssento) + 0.01761",
+                "v": "Altura - 0.08"
+              }
+            ],
+            "offset": "-0.17*(Largura - 0.068) - 0.016",
+            "depth": "0.032"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ripa do encosto 3",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "Profundidade/2 - 0.092 + 0.064/(Altura - AlturaAssento)*(0.145) + 0.01900",
+                "v": "AlturaAssento + 0.145"
+              },
+              {
+                "u": "Profundidade/2 - 0.092 + 0.064/(Altura - AlturaAssento)*(0.145) + 0.01900 + 0.012",
+                "v": "AlturaAssento + 0.145"
+              },
+              {
+                "u": "Profundidade/2 - 0.092 + 0.064/(Altura - AlturaAssento)*(Altura - 0.08 - AlturaAssento) + 0.01900 + 0.012",
+                "v": "Altura - 0.08"
+              },
+              {
+                "u": "Profundidade/2 - 0.092 + 0.064/(Altura - AlturaAssento)*(Altura - 0.08 - AlturaAssento) + 0.01900",
+                "v": "Altura - 0.08"
+              }
+            ],
+            "offset": "0.0*(Largura - 0.068) - 0.016",
+            "depth": "0.032"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ripa do encosto 4",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "Profundidade/2 - 0.092 + 0.064/(Altura - AlturaAssento)*(0.145) + 0.01761",
+                "v": "AlturaAssento + 0.145"
+              },
+              {
+                "u": "Profundidade/2 - 0.092 + 0.064/(Altura - AlturaAssento)*(0.145) + 0.01761 + 0.012",
+                "v": "AlturaAssento + 0.145"
+              },
+              {
+                "u": "Profundidade/2 - 0.092 + 0.064/(Altura - AlturaAssento)*(Altura - 0.08 - AlturaAssento) + 0.01761 + 0.012",
+                "v": "Altura - 0.08"
+              },
+              {
+                "u": "Profundidade/2 - 0.092 + 0.064/(Altura - AlturaAssento)*(Altura - 0.08 - AlturaAssento) + 0.01761",
+                "v": "Altura - 0.08"
+              }
+            ],
+            "offset": "0.17*(Largura - 0.068) - 0.016",
+            "depth": "0.032"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ripa do encosto 5",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "Profundidade/2 - 0.092 + 0.064/(Altura - AlturaAssento)*(0.145) + 0.01345",
+                "v": "AlturaAssento + 0.145"
+              },
+              {
+                "u": "Profundidade/2 - 0.092 + 0.064/(Altura - AlturaAssento)*(0.145) + 0.01345 + 0.012",
+                "v": "AlturaAssento + 0.145"
+              },
+              {
+                "u": "Profundidade/2 - 0.092 + 0.064/(Altura - AlturaAssento)*(Altura - 0.08 - AlturaAssento) + 0.01345 + 0.012",
+                "v": "Altura - 0.08"
+              },
+              {
+                "u": "Profundidade/2 - 0.092 + 0.064/(Altura - AlturaAssento)*(Altura - 0.08 - AlturaAssento) + 0.01345",
+                "v": "Altura - 0.08"
+              }
+            ],
+            "offset": "0.34*(Largura - 0.068) - 0.016",
+            "depth": "0.032"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Deslizador frontal esquerda",
+        "shape": {
+          "Cylinder": {
+            "x": "-Largura/2 + 0.012",
+            "y": "-Profundidade/2 + 0.026",
+            "z": "0",
+            "radius": "0.01",
+            "height": "0.003"
+          }
+        },
+        "material": "Feltro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Deslizador frontal direita",
+        "shape": {
+          "Cylinder": {
+            "x": "Largura/2 - 0.012",
+            "y": "-Profundidade/2 + 0.026",
+            "z": "0",
+            "radius": "0.01",
+            "height": "0.003"
+          }
+        },
+        "material": "Feltro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Deslizador traseira esquerda",
+        "shape": {
+          "Cylinder": {
+            "x": "-Largura/2 + 0.017",
+            "y": "Profundidade/2 - 0.018",
+            "z": "0",
+            "radius": "0.01",
+            "height": "0.003"
+          }
+        },
+        "material": "Feltro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Deslizador traseira direita",
+        "shape": {
+          "Cylinder": {
+            "x": "Largura/2 - 0.017",
+            "y": "Profundidade/2 - 0.018",
+            "z": "0",
+            "radius": "0.01",
+            "height": "0.003"
+          }
+        },
+        "material": "Feltro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
         }
       }
     ]
@@ -140,6 +1244,30 @@
       "info": {
         "description": "Cadeira de trabalho"
       }
+    }
+  ],
+  "materials": [
+    {
+      "name": "Tecido cinza escuro",
+      "color": [
+        92,
+        95,
+        100
+      ],
+      "class": "Generic",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Feltro",
+      "color": [
+        70,
+        66,
+        60
+      ],
+      "class": "Generic",
+      "finish": "Matte",
+      "transparency": 0
     }
   ]
 }

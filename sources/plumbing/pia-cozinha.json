@@ -20,28 +20,57 @@
         "value": 0.9,
         "kind": "Length",
         "instance": false
+      },
+      {
+        "name": "AberturaPortas",
+        "value": 0,
+        "kind": "Angle",
+        "instance": true
       }
     ],
     "items": [
       {
-        "name": "Gabinete",
-        "material": "MDF branco",
-        "in_plan": false,
+        "name": "Gabinete simplificado",
         "shape": {
           "Box": {
             "x": "-Largura / 2",
-            "y": "-Profundidade / 2 + 0.03",
+            "y": "0.03 - Profundidade / 2",
             "z": "0.1",
             "width": "Largura",
             "depth": "Profundidade - 0.03",
             "height": "Altura - 0.13"
           }
+        },
+        "material": "Laminado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Cuba simplificada",
+        "shape": {
+          "Box": {
+            "x": "-0.25",
+            "y": "0.075 - Profundidade / 2",
+            "z": "Altura - 0.2",
+            "width": "0.5",
+            "depth": "Profundidade - 0.15",
+            "height": "0.17"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
         }
       },
       {
         "name": "Bancada",
-        "material": "Granito",
-        "in_plan": true,
         "shape": {
           "Box": {
             "x": "-Largura / 2",
@@ -51,38 +80,2874 @@
             "depth": "Profundidade",
             "height": "0.03"
           }
+        },
+        "material": "Granito cinza",
+        "in_plan": true
+      },
+      {
+        "name": "Saia frontal",
+        "shape": {
+          "Box": {
+            "x": "-Largura / 2",
+            "y": "-Profundidade / 2",
+            "z": "Altura - 0.06",
+            "width": "Largura",
+            "depth": "0.02",
+            "height": "0.03"
+          }
+        },
+        "material": "Granito cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
         }
+      },
+      {
+        "name": "Rodabanca",
+        "shape": {
+          "Box": {
+            "x": "-Largura / 2",
+            "y": "Profundidade / 2 - 0.02",
+            "z": "Altura",
+            "width": "Largura",
+            "depth": "0.02",
+            "height": "0.07"
+          }
+        },
+        "material": "Granito cinza",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Recorte da cuba",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-0.24) + 0.06",
+                "v": "0.085 - Profundidade / 2"
+              },
+              {
+                "u": "0.24 - 0.06",
+                "v": "0.085 - Profundidade / 2",
+                "radius": "0.06"
+              },
+              {
+                "u": "0.24",
+                "v": "(0.085 - Profundidade / 2) + 0.06"
+              },
+              {
+                "u": "0.24",
+                "v": "(Profundidade / 2 - 0.085) - 0.06",
+                "radius": "0.06"
+              },
+              {
+                "u": "0.24 - 0.06",
+                "v": "Profundidade / 2 - 0.085"
+              },
+              {
+                "u": "(-0.24) + 0.06",
+                "v": "Profundidade / 2 - 0.085",
+                "radius": "0.06"
+              },
+              {
+                "u": "-0.24",
+                "v": "(Profundidade / 2 - 0.085) - 0.06"
+              },
+              {
+                "u": "-0.24",
+                "v": "(0.085 - Profundidade / 2) + 0.06",
+                "radius": "0.06"
+              }
+            ],
+            "offset": "Altura - 0.031",
+            "depth": "0.032"
+          }
+        },
+        "material": "Granito cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        },
+        "void": true
+      },
+      {
+        "name": "Sulco do escorredor 1",
+        "shape": {
+          "Box": {
+            "x": "0.295",
+            "y": "-0.24545 * Profundidade - 0.004",
+            "z": "Altura - 0.004",
+            "width": "min(Largura / 2 - 0.355, 0.45)",
+            "depth": "0.008",
+            "height": "0.005"
+          }
+        },
+        "material": "Granito cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        },
+        "void": true
+      },
+      {
+        "name": "Sulco do escorredor 2",
+        "shape": {
+          "Box": {
+            "x": "0.295",
+            "y": "-0.16364 * Profundidade - 0.004",
+            "z": "Altura - 0.004",
+            "width": "min(Largura / 2 - 0.355, 0.45)",
+            "depth": "0.008",
+            "height": "0.005"
+          }
+        },
+        "material": "Granito cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        },
+        "void": true
+      },
+      {
+        "name": "Sulco do escorredor 3",
+        "shape": {
+          "Box": {
+            "x": "0.295",
+            "y": "-0.08182 * Profundidade - 0.004",
+            "z": "Altura - 0.004",
+            "width": "min(Largura / 2 - 0.355, 0.45)",
+            "depth": "0.008",
+            "height": "0.005"
+          }
+        },
+        "material": "Granito cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        },
+        "void": true
+      },
+      {
+        "name": "Sulco do escorredor 4",
+        "shape": {
+          "Box": {
+            "x": "0.295",
+            "y": "0.00000 * Profundidade - 0.004",
+            "z": "Altura - 0.004",
+            "width": "min(Largura / 2 - 0.355, 0.45)",
+            "depth": "0.008",
+            "height": "0.005"
+          }
+        },
+        "material": "Granito cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        },
+        "void": true
+      },
+      {
+        "name": "Sulco do escorredor 5",
+        "shape": {
+          "Box": {
+            "x": "0.295",
+            "y": "0.08182 * Profundidade - 0.004",
+            "z": "Altura - 0.004",
+            "width": "min(Largura / 2 - 0.355, 0.45)",
+            "depth": "0.008",
+            "height": "0.005"
+          }
+        },
+        "material": "Granito cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        },
+        "void": true
+      },
+      {
+        "name": "Sulco do escorredor 6",
+        "shape": {
+          "Box": {
+            "x": "0.295",
+            "y": "0.16364 * Profundidade - 0.004",
+            "z": "Altura - 0.004",
+            "width": "min(Largura / 2 - 0.355, 0.45)",
+            "depth": "0.008",
+            "height": "0.005"
+          }
+        },
+        "material": "Granito cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        },
+        "void": true
+      },
+      {
+        "name": "Sulco do escorredor 7",
+        "shape": {
+          "Box": {
+            "x": "0.295",
+            "y": "0.24545 * Profundidade - 0.004",
+            "z": "Altura - 0.004",
+            "width": "min(Largura / 2 - 0.355, 0.45)",
+            "depth": "0.008",
+            "height": "0.005"
+          }
+        },
+        "material": "Granito cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        },
+        "void": true
       },
       {
         "name": "Cuba",
-        "material": "Aço inox",
-        "in_plan": true,
         "shape": {
-          "Box": {
-            "x": "-0.25",
-            "y": "-0.2",
-            "z": "Altura - 0.2",
-            "width": "0.5",
-            "depth": "0.4",
-            "height": "0.17"
+          "Sweep": {
+            "plane": "Plan",
+            "path": [
+              {
+                "u": "0",
+                "v": "Profundidade / 2 - 0.085"
+              },
+              {
+                "u": "-0.18",
+                "v": "Profundidade / 2 - 0.085",
+                "radius": "0.06"
+              },
+              {
+                "u": "-0.24",
+                "v": "Profundidade / 2 - 0.085 - 0.06"
+              },
+              {
+                "u": "-0.24",
+                "v": "0.085 - Profundidade / 2 + 0.06",
+                "radius": "0.06"
+              },
+              {
+                "u": "-0.18",
+                "v": "0.085 - Profundidade / 2"
+              },
+              {
+                "u": "0.18",
+                "v": "0.085 - Profundidade / 2",
+                "radius": "0.06"
+              },
+              {
+                "u": "0.24",
+                "v": "0.085 - Profundidade / 2 + 0.06"
+              },
+              {
+                "u": "0.24",
+                "v": "Profundidade / 2 - 0.085 - 0.06",
+                "radius": "0.06"
+              },
+              {
+                "u": "0.18",
+                "v": "Profundidade / 2 - 0.085"
+              },
+              {
+                "u": "0",
+                "v": "Profundidade / 2 - 0.085"
+              }
+            ],
+            "offset": "Altura - 0.19",
+            "profile": [
+              {
+                "u": "-0.004",
+                "v": "-0.004"
+              },
+              {
+                "u": "0.022",
+                "v": "-0.004"
+              },
+              {
+                "u": "0.022",
+                "v": "0",
+                "radius": "-0.022"
+              },
+              {
+                "u": "0",
+                "v": "0.022"
+              },
+              {
+                "u": "0",
+                "v": "0.16"
+              },
+              {
+                "u": "-0.016",
+                "v": "0.16"
+              },
+              {
+                "u": "-0.016",
+                "v": "0.157"
+              },
+              {
+                "u": "-0.004",
+                "v": "0.157"
+              }
+            ]
           }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
         }
       },
       {
-        "name": "Cuba vazio",
-        "material": "Aço inox",
-        "in_plan": false,
+        "name": "Fundo da cuba",
         "shape": {
-          "Box": {
-            "x": "-0.24",
-            "y": "-0.19",
-            "z": "Altura - 0.19",
-            "width": "0.48",
-            "depth": "0.38",
-            "height": "0.2"
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-0.24) + 0.06",
+                "v": "0.085 - Profundidade / 2"
+              },
+              {
+                "u": "0.24 - 0.06",
+                "v": "0.085 - Profundidade / 2",
+                "radius": "0.06"
+              },
+              {
+                "u": "0.24",
+                "v": "(0.085 - Profundidade / 2) + 0.06"
+              },
+              {
+                "u": "0.24",
+                "v": "(Profundidade / 2 - 0.085) - 0.06",
+                "radius": "0.06"
+              },
+              {
+                "u": "0.24 - 0.06",
+                "v": "Profundidade / 2 - 0.085"
+              },
+              {
+                "u": "(-0.24) + 0.06",
+                "v": "Profundidade / 2 - 0.085",
+                "radius": "0.06"
+              },
+              {
+                "u": "-0.24",
+                "v": "(Profundidade / 2 - 0.085) - 0.06"
+              },
+              {
+                "u": "-0.24",
+                "v": "(0.085 - Profundidade / 2) + 0.06",
+                "radius": "0.06"
+              }
+            ],
+            "offset": "Altura - 0.1935",
+            "depth": "0.0035"
           }
         },
-        "void": true
+        "material": "Inox escovado",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Válvula da cuba",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0.031",
+                "v": "Altura - 0.19"
+              },
+              {
+                "u": "0.046",
+                "v": "Altura - 0.19"
+              },
+              {
+                "u": "0.044",
+                "v": "Altura - 0.1878"
+              },
+              {
+                "u": "0.031",
+                "v": "Altura - 0.1878"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cesto da válvula",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0",
+            "z": "Altura - 0.19",
+            "radius": "0.031",
+            "height": "0.0012"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Furos do cesto 1",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0.0105",
+                "v": "Altura - 0.189"
+              },
+              {
+                "u": "0.0135",
+                "v": "Altura - 0.189"
+              },
+              {
+                "u": "0.0135",
+                "v": "Altura - 0.1884"
+              },
+              {
+                "u": "0.0105",
+                "v": "Altura - 0.1884"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Furos do cesto 2",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0.0175",
+                "v": "Altura - 0.189"
+              },
+              {
+                "u": "0.0205",
+                "v": "Altura - 0.189"
+              },
+              {
+                "u": "0.0205",
+                "v": "Altura - 0.1884"
+              },
+              {
+                "u": "0.0175",
+                "v": "Altura - 0.1884"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Furos do cesto 3",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0.0245",
+                "v": "Altura - 0.189"
+              },
+              {
+                "u": "0.0275",
+                "v": "Altura - 0.189"
+              },
+              {
+                "u": "0.0275",
+                "v": "Altura - 0.1884"
+              },
+              {
+                "u": "0.0245",
+                "v": "Altura - 0.1884"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pino do cesto",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "Altura - 0.189"
+              },
+              {
+                "u": "0.004",
+                "v": "Altura - 0.189"
+              },
+              {
+                "u": "0.004",
+                "v": "Altura - 0.183"
+              },
+              {
+                "u": "0.007",
+                "v": "Altura - 0.181",
+                "radius": "0.0045"
+              },
+              {
+                "u": "0",
+                "v": "Altura - 0.177"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Corpo da válvula",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0",
+            "z": "Altura - 0.225",
+            "radius": "0.04",
+            "height": "0.0315"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porca da válvula",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0",
+            "z": "Altura - 0.213",
+            "radius": "0.05",
+            "height": "0.014"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tubo de descida",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0",
+            "z": "0.55",
+            "radius": "0.019",
+            "height": "Altura - 0.775"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porca de descida",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0",
+            "z": "Altura - 0.245",
+            "radius": "0.027",
+            "height": "0.02"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Copo do sifão",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "0.43"
+              },
+              {
+                "u": "0.03",
+                "v": "0.43",
+                "radius": "0.02"
+              },
+              {
+                "u": "0.045",
+                "v": "0.447"
+              },
+              {
+                "u": "0.045",
+                "v": "0.535"
+              },
+              {
+                "u": "0.03",
+                "v": "0.552"
+              },
+              {
+                "u": "0",
+                "v": "0.552"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porca do sifão",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0",
+            "z": "0.548",
+            "radius": "0.03",
+            "height": "0.018"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa de limpeza do sifão",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "0.418"
+              },
+              {
+                "u": "0.022",
+                "v": "0.418"
+              },
+              {
+                "u": "0.022",
+                "v": "0.432"
+              },
+              {
+                "u": "0",
+                "v": "0.432"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Braço do sifão",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0",
+                "v": "0.04"
+              },
+              {
+                "u": "0 + 0.02",
+                "v": "0.04"
+              },
+              {
+                "u": "0 + 0.02",
+                "v": "0.04 + (Profundidade / 2 - 0.04)"
+              },
+              {
+                "u": "0",
+                "v": "0.04 + (Profundidade / 2 - 0.04)"
+              }
+            ],
+            "offset": "0.5",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porca do braço do sifão",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0",
+                "v": "0.042"
+              },
+              {
+                "u": "0 + 0.028",
+                "v": "0.042"
+              },
+              {
+                "u": "0 + 0.028",
+                "v": "0.042 + 0.02"
+              },
+              {
+                "u": "0",
+                "v": "0.042 + 0.02"
+              }
+            ],
+            "offset": "0.5",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Luva de esgoto",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0",
+                "v": "Profundidade / 2 - 0.045"
+              },
+              {
+                "u": "0 + 0.025",
+                "v": "Profundidade / 2 - 0.045"
+              },
+              {
+                "u": "0 + 0.025",
+                "v": "(Profundidade / 2 - 0.045) + 0.045"
+              },
+              {
+                "u": "0",
+                "v": "(Profundidade / 2 - 0.045) + 0.045"
+              }
+            ],
+            "offset": "0.5",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "PVC",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Canopla do esgoto",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0",
+                "v": "Profundidade / 2 - 0.006"
+              },
+              {
+                "u": "0 + 0.04",
+                "v": "Profundidade / 2 - 0.006"
+              },
+              {
+                "u": "0 + 0.04",
+                "v": "(Profundidade / 2 - 0.006) + 0.006"
+              },
+              {
+                "u": "0",
+                "v": "(Profundidade / 2 - 0.006) + 0.006"
+              }
+            ],
+            "offset": "0.5",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Canopla do registro fria",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-0.1",
+                "v": "Profundidade / 2 - 0.005"
+              },
+              {
+                "u": "(-0.1) + 0.026",
+                "v": "Profundidade / 2 - 0.005"
+              },
+              {
+                "u": "(-0.1) + 0.026",
+                "v": "(Profundidade / 2 - 0.005) + 0.005"
+              },
+              {
+                "u": "-0.1",
+                "v": "(Profundidade / 2 - 0.005) + 0.005"
+              }
+            ],
+            "offset": "0.6",
+            "axis": "-0.1",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Niple do registro fria",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-0.1",
+                "v": "Profundidade / 2 - 0.04"
+              },
+              {
+                "u": "(-0.1) + 0.009",
+                "v": "Profundidade / 2 - 0.04"
+              },
+              {
+                "u": "(-0.1) + 0.009",
+                "v": "(Profundidade / 2 - 0.04) + 0.04"
+              },
+              {
+                "u": "-0.1",
+                "v": "(Profundidade / 2 - 0.04) + 0.04"
+              }
+            ],
+            "offset": "0.6",
+            "axis": "-0.1",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Registro fria",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-0.1",
+                "v": "Profundidade / 2 - 0.07"
+              },
+              {
+                "u": "-0.089",
+                "v": "Profundidade / 2 - 0.07"
+              },
+              {
+                "u": "-0.086",
+                "v": "Profundidade / 2 - 0.062"
+              },
+              {
+                "u": "-0.086",
+                "v": "Profundidade / 2 - 0.036"
+              },
+              {
+                "u": "-0.1",
+                "v": "Profundidade / 2 - 0.036"
+              }
+            ],
+            "offset": "0.6",
+            "axis": "-0.1",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Volante do registro fria",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-0.1",
+                "v": "Profundidade / 2 - 0.088"
+              },
+              {
+                "u": "-0.086",
+                "v": "Profundidade / 2 - 0.088",
+                "radius": "0.004"
+              },
+              {
+                "u": "-0.083",
+                "v": "Profundidade / 2 - 0.084"
+              },
+              {
+                "u": "-0.083",
+                "v": "Profundidade / 2 - 0.076"
+              },
+              {
+                "u": "-0.094",
+                "v": "Profundidade / 2 - 0.07"
+              },
+              {
+                "u": "-0.1",
+                "v": "Profundidade / 2 - 0.07"
+              }
+            ],
+            "offset": "0.6",
+            "axis": "-0.1",
+            "angle": "360"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída do registro fria",
+        "shape": {
+          "Cylinder": {
+            "x": "-0.1",
+            "y": "Profundidade / 2 - 0.045",
+            "z": "0.6",
+            "radius": "0.007",
+            "height": "0.03"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porca inferior do flexível fria",
+        "shape": {
+          "Cylinder": {
+            "x": "-0.1",
+            "y": "Profundidade / 2 - 0.045",
+            "z": "0.626",
+            "radius": "0.0095",
+            "height": "0.016"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Flexível fria",
+        "shape": {
+          "Sweep": {
+            "plane": "Front",
+            "path": [
+              {
+                "u": "-0.1",
+                "v": "0.64"
+              },
+              {
+                "u": "-0.1",
+                "v": "0.69",
+                "radius": "-0.044"
+              },
+              {
+                "u": "-0.056",
+                "v": "0.734",
+                "radius": "0.044"
+              },
+              {
+                "u": "-0.012",
+                "v": "0.778"
+              },
+              {
+                "u": "-0.012",
+                "v": "Altura - 0.085"
+              }
+            ],
+            "offset": "Profundidade / 2 - 0.045",
+            "profile": [
+              {
+                "u": "0 - 0.006",
+                "v": "0",
+                "radius": "0.006"
+              },
+              {
+                "u": "0 + 0.006",
+                "v": "0",
+                "radius": "0.006"
+              }
+            ]
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porca superior do flexível fria",
+        "shape": {
+          "Cylinder": {
+            "x": "-0.012",
+            "y": "Profundidade / 2 - 0.045",
+            "z": "Altura - 0.098",
+            "radius": "0.0085",
+            "height": "0.016"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Canopla do registro quente",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.1",
+                "v": "Profundidade / 2 - 0.005"
+              },
+              {
+                "u": "0.1 + 0.026",
+                "v": "Profundidade / 2 - 0.005"
+              },
+              {
+                "u": "0.1 + 0.026",
+                "v": "(Profundidade / 2 - 0.005) + 0.005"
+              },
+              {
+                "u": "0.1",
+                "v": "(Profundidade / 2 - 0.005) + 0.005"
+              }
+            ],
+            "offset": "0.6",
+            "axis": "0.1",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Niple do registro quente",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.1",
+                "v": "Profundidade / 2 - 0.04"
+              },
+              {
+                "u": "0.1 + 0.009",
+                "v": "Profundidade / 2 - 0.04"
+              },
+              {
+                "u": "0.1 + 0.009",
+                "v": "(Profundidade / 2 - 0.04) + 0.04"
+              },
+              {
+                "u": "0.1",
+                "v": "(Profundidade / 2 - 0.04) + 0.04"
+              }
+            ],
+            "offset": "0.6",
+            "axis": "0.1",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Registro quente",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.1",
+                "v": "Profundidade / 2 - 0.07"
+              },
+              {
+                "u": "0.111",
+                "v": "Profundidade / 2 - 0.07"
+              },
+              {
+                "u": "0.114",
+                "v": "Profundidade / 2 - 0.062"
+              },
+              {
+                "u": "0.114",
+                "v": "Profundidade / 2 - 0.036"
+              },
+              {
+                "u": "0.1",
+                "v": "Profundidade / 2 - 0.036"
+              }
+            ],
+            "offset": "0.6",
+            "axis": "0.1",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Volante do registro quente",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.1",
+                "v": "Profundidade / 2 - 0.088"
+              },
+              {
+                "u": "0.114",
+                "v": "Profundidade / 2 - 0.088",
+                "radius": "0.004"
+              },
+              {
+                "u": "0.117",
+                "v": "Profundidade / 2 - 0.084"
+              },
+              {
+                "u": "0.117",
+                "v": "Profundidade / 2 - 0.076"
+              },
+              {
+                "u": "0.106",
+                "v": "Profundidade / 2 - 0.07"
+              },
+              {
+                "u": "0.1",
+                "v": "Profundidade / 2 - 0.07"
+              }
+            ],
+            "offset": "0.6",
+            "axis": "0.1",
+            "angle": "360"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída do registro quente",
+        "shape": {
+          "Cylinder": {
+            "x": "0.1",
+            "y": "Profundidade / 2 - 0.045",
+            "z": "0.6",
+            "radius": "0.007",
+            "height": "0.03"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porca inferior do flexível quente",
+        "shape": {
+          "Cylinder": {
+            "x": "0.1",
+            "y": "Profundidade / 2 - 0.045",
+            "z": "0.626",
+            "radius": "0.0095",
+            "height": "0.016"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Flexível quente",
+        "shape": {
+          "Sweep": {
+            "plane": "Front",
+            "path": [
+              {
+                "u": "0.1",
+                "v": "0.64"
+              },
+              {
+                "u": "0.1",
+                "v": "0.69",
+                "radius": "0.044"
+              },
+              {
+                "u": "0.056",
+                "v": "0.734",
+                "radius": "-0.044"
+              },
+              {
+                "u": "0.012",
+                "v": "0.778"
+              },
+              {
+                "u": "0.012",
+                "v": "Altura - 0.085"
+              }
+            ],
+            "offset": "Profundidade / 2 - 0.045",
+            "profile": [
+              {
+                "u": "0 - 0.006",
+                "v": "0",
+                "radius": "0.006"
+              },
+              {
+                "u": "0 + 0.006",
+                "v": "0",
+                "radius": "0.006"
+              }
+            ]
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porca superior do flexível quente",
+        "shape": {
+          "Cylinder": {
+            "x": "0.012",
+            "y": "Profundidade / 2 - 0.045",
+            "z": "Altura - 0.098",
+            "radius": "0.0085",
+            "height": "0.016"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Haste roscada da torneira",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "Profundidade / 2 - 0.047",
+            "z": "Altura - 0.085",
+            "radius": "0.017",
+            "height": "0.056"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porca de fixação da torneira",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "Profundidade / 2 - 0.047",
+            "z": "Altura - 0.048",
+            "radius": "0.026",
+            "height": "0.012"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Arruela da torneira",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "Profundidade / 2 - 0.047",
+            "z": "Altura - 0.035",
+            "radius": "0.03",
+            "height": "0.005"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Base da torneira",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "Altura"
+              },
+              {
+                "u": "0.027",
+                "v": "Altura"
+              },
+              {
+                "u": "0.027",
+                "v": "Altura + 0.004",
+                "radius": "0.012"
+              },
+              {
+                "u": "0.021",
+                "v": "Altura + 0.012"
+              },
+              {
+                "u": "0.021",
+                "v": "Altura + 0.085",
+                "radius": "0.014"
+              },
+              {
+                "u": "0.0125",
+                "v": "Altura + 0.1"
+              },
+              {
+                "u": "0",
+                "v": "Altura + 0.1"
+              }
+            ],
+            "offset": "Profundidade / 2 - 0.047",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Bica",
+        "shape": {
+          "Sweep": {
+            "plane": "Side",
+            "path": [
+              {
+                "u": "Profundidade / 2 - 0.047",
+                "v": "Altura + 0.095"
+              },
+              {
+                "u": "Profundidade / 2 - 0.047",
+                "v": "Altura + 0.285",
+                "radius": "0.075"
+              },
+              {
+                "u": "Profundidade / 2 - 0.047 - 0.15",
+                "v": "Altura + 0.285"
+              },
+              {
+                "u": "Profundidade / 2 - 0.047 - 0.15",
+                "v": "Altura + 0.24"
+              }
+            ],
+            "offset": "0",
+            "profile": [
+              {
+                "u": "0 - 0.011",
+                "v": "0",
+                "radius": "0.011"
+              },
+              {
+                "u": "0 + 0.011",
+                "v": "0",
+                "radius": "0.011"
+              }
+            ]
+          }
+        },
+        "material": "Cromado",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Arejador",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "Profundidade / 2 - 0.047 - 0.15",
+            "z": "Altura + 0.222",
+            "radius": "0.0128",
+            "height": "0.022"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tela do arejador",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "Profundidade / 2 - 0.047 - 0.15",
+            "z": "Altura + 0.2205",
+            "radius": "0.0095",
+            "height": "0.003"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cartucho do misturador",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(Profundidade / 2 - 0.047) - 0.0155",
+                "v": "Altura + 0.05",
+                "radius": "0.0155"
+              },
+              {
+                "u": "(Profundidade / 2 - 0.047) + 0.0155",
+                "v": "Altura + 0.05",
+                "radius": "0.0155"
+              }
+            ],
+            "offset": "0.016",
+            "depth": "0.018"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Alavanca do misturador",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0.03",
+                "v": "Altura + 0.043"
+              },
+              {
+                "u": "0.04",
+                "v": "Altura + 0.04"
+              },
+              {
+                "u": "0.092",
+                "v": "Altura + 0.085",
+                "radius": "0.0045"
+              },
+              {
+                "u": "0.088",
+                "v": "Altura + 0.092"
+              },
+              {
+                "u": "0.036",
+                "v": "Altura + 0.058"
+              },
+              {
+                "u": "0.03",
+                "v": "Altura + 0.058"
+              }
+            ],
+            "offset": "Profundidade / 2 - 0.047 - 0.007",
+            "depth": "0.014"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa do cartucho",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(Profundidade / 2 - 0.047) - 0.011",
+                "v": "Altura + 0.05",
+                "radius": "0.011"
+              },
+              {
+                "u": "(Profundidade / 2 - 0.047) + 0.011",
+                "v": "Altura + 0.05",
+                "radius": "0.011"
+              }
+            ],
+            "offset": "0.034",
+            "depth": "0.003"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Indicador frio",
+        "shape": {
+          "Box": {
+            "x": "0.0355",
+            "y": "Profundidade / 2 - 0.047 - 0.0078",
+            "z": "Altura + 0.046",
+            "width": "0.004",
+            "depth": "0.001",
+            "height": "0.004"
+          }
+        },
+        "material": "Plástico azul",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Indicador quente",
+        "shape": {
+          "Box": {
+            "x": "0.0355",
+            "y": "Profundidade / 2 - 0.047 - 0.0078",
+            "z": "Altura + 0.052",
+            "width": "0.004",
+            "depth": "0.001",
+            "height": "0.004"
+          }
+        },
+        "material": "Plástico vermelho",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lateral esquerda",
+        "shape": {
+          "Box": {
+            "x": "-(Largura / 2 - 0.01)",
+            "y": "0.05 - Profundidade / 2",
+            "z": "0.1",
+            "width": "0.018",
+            "depth": "Profundidade - 0.05",
+            "height": "Altura - 0.13"
+          }
+        },
+        "material": "Laminado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lateral direita",
+        "shape": {
+          "Box": {
+            "x": "(Largura / 2 - 0.01) - 0.018",
+            "y": "0.05 - Profundidade / 2",
+            "z": "0.1",
+            "width": "0.018",
+            "depth": "Profundidade - 0.05",
+            "height": "Altura - 0.13"
+          }
+        },
+        "material": "Laminado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Fundo do gabinete",
+        "shape": {
+          "Box": {
+            "x": "0.018 - (Largura / 2 - 0.01)",
+            "y": "0.05 - Profundidade / 2",
+            "z": "0.1",
+            "width": "2 * (Largura / 2 - 0.01) - 0.036",
+            "depth": "Profundidade - 0.05",
+            "height": "0.018"
+          }
+        },
+        "material": "Laminado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Divisória esquerda",
+        "shape": {
+          "Box": {
+            "x": "-(Largura / 2 - 0.01) / 2 - 0.009",
+            "y": "0.05 - Profundidade / 2 + 0.002",
+            "z": "0.118",
+            "width": "0.018",
+            "depth": "Profundidade - 0.05 - 0.002",
+            "height": "Altura - 0.148"
+          }
+        },
+        "material": "Laminado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Divisória direita",
+        "shape": {
+          "Box": {
+            "x": "(Largura / 2 - 0.01) / 2 - 0.009",
+            "y": "0.05 - Profundidade / 2 + 0.002",
+            "z": "0.118",
+            "width": "0.018",
+            "depth": "Profundidade - 0.05 - 0.002",
+            "height": "Altura - 0.148"
+          }
+        },
+        "material": "Laminado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travessa frontal",
+        "shape": {
+          "Box": {
+            "x": "0.018 - (Largura / 2 - 0.01)",
+            "y": "0.05 - Profundidade / 2",
+            "z": "Altura - 0.11",
+            "width": "2 * (Largura / 2 - 0.01) - 0.036",
+            "depth": "0.018",
+            "height": "0.08"
+          }
+        },
+        "material": "Laminado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travessa traseira",
+        "shape": {
+          "Box": {
+            "x": "0.018 - (Largura / 2 - 0.01)",
+            "y": "Profundidade / 2 - 0.018",
+            "z": "Altura - 0.13",
+            "width": "2 * (Largura / 2 - 0.01) - 0.036",
+            "depth": "0.018",
+            "height": "0.1"
+          }
+        },
+        "material": "Laminado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Rodapé frontal",
+        "shape": {
+          "Box": {
+            "x": "-(Largura / 2 - 0.01)",
+            "y": "0.09 - Profundidade / 2",
+            "z": "0",
+            "width": "2 * (Largura / 2 - 0.01)",
+            "depth": "0.018",
+            "height": "0.1"
+          }
+        },
+        "material": "Laminado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Rodapé esquerdo",
+        "shape": {
+          "Box": {
+            "x": "-(Largura / 2 - 0.01)",
+            "y": "0.108 - Profundidade / 2",
+            "z": "0",
+            "width": "0.018",
+            "depth": "Profundidade - 0.108",
+            "height": "0.1"
+          }
+        },
+        "material": "Laminado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Rodapé direito",
+        "shape": {
+          "Box": {
+            "x": "(Largura / 2 - 0.01) - 0.018",
+            "y": "0.108 - Profundidade / 2",
+            "z": "0",
+            "width": "0.018",
+            "depth": "Profundidade - 0.108",
+            "height": "0.1"
+          }
+        },
+        "material": "Laminado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Prateleira esquerda",
+        "shape": {
+          "Box": {
+            "x": "0.018 - (Largura / 2 - 0.01)",
+            "y": "0.05 - Profundidade / 2 + 0.03",
+            "z": "0.45",
+            "width": "(Largura / 2 - 0.01) / 2 - 0.027",
+            "depth": "Profundidade - 0.05 - 0.03",
+            "height": "0.018"
+          }
+        },
+        "material": "Laminado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Prateleira direita",
+        "shape": {
+          "Box": {
+            "x": "(Largura / 2 - 0.01) / 2 + 0.009",
+            "y": "0.05 - Profundidade / 2 + 0.03",
+            "z": "0.45",
+            "width": "(Largura / 2 - 0.01) / 2 - 0.027",
+            "depth": "Profundidade - 0.05 - 0.03",
+            "height": "0.018"
+          }
+        },
+        "material": "Laminado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porta 1",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01)) + 0*cos(AberturaPortas) - 0*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0*sin(AberturaPortas) - 0*cos(AberturaPortas)"
+              },
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01)) + (((Largura / 2 - 0.01) / 2 - 0.003))*cos(AberturaPortas) - 0*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003))*sin(AberturaPortas) - 0*cos(AberturaPortas)"
+              },
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01)) + (((Largura / 2 - 0.01) / 2 - 0.003))*cos(AberturaPortas) - 0.018*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003))*sin(AberturaPortas) - 0.018*cos(AberturaPortas)"
+              },
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01)) + 0*cos(AberturaPortas) - 0.018*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0*sin(AberturaPortas) - 0.018*cos(AberturaPortas)"
+              }
+            ],
+            "offset": "0.102",
+            "depth": "Altura - 0.14"
+          }
+        },
+        "material": "Laminado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Puxador 1",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01)) + (((Largura / 2 - 0.01) / 2 - 0.003) - 0.046)*cos(AberturaPortas) - 0.04*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.046)*sin(AberturaPortas) - 0.04*cos(AberturaPortas)"
+              },
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01)) + (((Largura / 2 - 0.01) / 2 - 0.003) - 0.034)*cos(AberturaPortas) - 0.04*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.034)*sin(AberturaPortas) - 0.04*cos(AberturaPortas)"
+              },
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01)) + (((Largura / 2 - 0.01) / 2 - 0.003) - 0.034)*cos(AberturaPortas) - 0.05*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.034)*sin(AberturaPortas) - 0.05*cos(AberturaPortas)"
+              },
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01)) + (((Largura / 2 - 0.01) / 2 - 0.003) - 0.046)*cos(AberturaPortas) - 0.05*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.046)*sin(AberturaPortas) - 0.05*cos(AberturaPortas)"
+              }
+            ],
+            "offset": "Altura - 0.23",
+            "depth": "0.16"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pé superior do puxador 1",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01)) + (((Largura / 2 - 0.01) / 2 - 0.003) - 0.044)*cos(AberturaPortas) - 0.018*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.044)*sin(AberturaPortas) - 0.018*cos(AberturaPortas)"
+              },
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01)) + (((Largura / 2 - 0.01) / 2 - 0.003) - 0.036)*cos(AberturaPortas) - 0.018*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.036)*sin(AberturaPortas) - 0.018*cos(AberturaPortas)"
+              },
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01)) + (((Largura / 2 - 0.01) / 2 - 0.003) - 0.036)*cos(AberturaPortas) - 0.041*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.036)*sin(AberturaPortas) - 0.041*cos(AberturaPortas)"
+              },
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01)) + (((Largura / 2 - 0.01) / 2 - 0.003) - 0.044)*cos(AberturaPortas) - 0.041*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.044)*sin(AberturaPortas) - 0.041*cos(AberturaPortas)"
+              }
+            ],
+            "offset": "Altura - 0.095",
+            "depth": "0.008"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pé inferior do puxador 1",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01)) + (((Largura / 2 - 0.01) / 2 - 0.003) - 0.044)*cos(AberturaPortas) - 0.018*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.044)*sin(AberturaPortas) - 0.018*cos(AberturaPortas)"
+              },
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01)) + (((Largura / 2 - 0.01) / 2 - 0.003) - 0.036)*cos(AberturaPortas) - 0.018*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.036)*sin(AberturaPortas) - 0.018*cos(AberturaPortas)"
+              },
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01)) + (((Largura / 2 - 0.01) / 2 - 0.003) - 0.036)*cos(AberturaPortas) - 0.041*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.036)*sin(AberturaPortas) - 0.041*cos(AberturaPortas)"
+              },
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01)) + (((Largura / 2 - 0.01) / 2 - 0.003) - 0.044)*cos(AberturaPortas) - 0.041*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.044)*sin(AberturaPortas) - 0.041*cos(AberturaPortas)"
+              }
+            ],
+            "offset": "Altura - 0.213",
+            "depth": "0.008"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça superior 1",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01)) + 0.004*cos(AberturaPortas) - (-0.012)*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0.004*sin(AberturaPortas) - (-0.012)*cos(AberturaPortas)"
+              },
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01)) + 0.05*cos(AberturaPortas) - (-0.012)*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0.05*sin(AberturaPortas) - (-0.012)*cos(AberturaPortas)"
+              },
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01)) + 0.05*cos(AberturaPortas) - 0*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0.05*sin(AberturaPortas) - 0*cos(AberturaPortas)"
+              },
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01)) + 0.004*cos(AberturaPortas) - 0*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0.004*sin(AberturaPortas) - 0*cos(AberturaPortas)"
+              }
+            ],
+            "offset": "Altura - 0.16",
+            "depth": "0.045"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça inferior 1",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01)) + 0.004*cos(AberturaPortas) - (-0.012)*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0.004*sin(AberturaPortas) - (-0.012)*cos(AberturaPortas)"
+              },
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01)) + 0.05*cos(AberturaPortas) - (-0.012)*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0.05*sin(AberturaPortas) - (-0.012)*cos(AberturaPortas)"
+              },
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01)) + 0.05*cos(AberturaPortas) - 0*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0.05*sin(AberturaPortas) - 0*cos(AberturaPortas)"
+              },
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01)) + 0.004*cos(AberturaPortas) - 0*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0.004*sin(AberturaPortas) - 0*cos(AberturaPortas)"
+              }
+            ],
+            "offset": "0.16",
+            "depth": "0.045"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porta 2",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01) / 2) + 0*cos(AberturaPortas) - 0*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0*sin(AberturaPortas) - 0*cos(AberturaPortas)"
+              },
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01) / 2) + (((Largura / 2 - 0.01) / 2 - 0.003))*cos(AberturaPortas) - 0*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003))*sin(AberturaPortas) - 0*cos(AberturaPortas)"
+              },
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01) / 2) + (((Largura / 2 - 0.01) / 2 - 0.003))*cos(AberturaPortas) - 0.018*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003))*sin(AberturaPortas) - 0.018*cos(AberturaPortas)"
+              },
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01) / 2) + 0*cos(AberturaPortas) - 0.018*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0*sin(AberturaPortas) - 0.018*cos(AberturaPortas)"
+              }
+            ],
+            "offset": "0.102",
+            "depth": "Altura - 0.14"
+          }
+        },
+        "material": "Laminado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Puxador 2",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01) / 2) + (((Largura / 2 - 0.01) / 2 - 0.003) - 0.046)*cos(AberturaPortas) - 0.04*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.046)*sin(AberturaPortas) - 0.04*cos(AberturaPortas)"
+              },
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01) / 2) + (((Largura / 2 - 0.01) / 2 - 0.003) - 0.034)*cos(AberturaPortas) - 0.04*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.034)*sin(AberturaPortas) - 0.04*cos(AberturaPortas)"
+              },
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01) / 2) + (((Largura / 2 - 0.01) / 2 - 0.003) - 0.034)*cos(AberturaPortas) - 0.05*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.034)*sin(AberturaPortas) - 0.05*cos(AberturaPortas)"
+              },
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01) / 2) + (((Largura / 2 - 0.01) / 2 - 0.003) - 0.046)*cos(AberturaPortas) - 0.05*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.046)*sin(AberturaPortas) - 0.05*cos(AberturaPortas)"
+              }
+            ],
+            "offset": "Altura - 0.23",
+            "depth": "0.16"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pé superior do puxador 2",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01) / 2) + (((Largura / 2 - 0.01) / 2 - 0.003) - 0.044)*cos(AberturaPortas) - 0.018*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.044)*sin(AberturaPortas) - 0.018*cos(AberturaPortas)"
+              },
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01) / 2) + (((Largura / 2 - 0.01) / 2 - 0.003) - 0.036)*cos(AberturaPortas) - 0.018*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.036)*sin(AberturaPortas) - 0.018*cos(AberturaPortas)"
+              },
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01) / 2) + (((Largura / 2 - 0.01) / 2 - 0.003) - 0.036)*cos(AberturaPortas) - 0.041*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.036)*sin(AberturaPortas) - 0.041*cos(AberturaPortas)"
+              },
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01) / 2) + (((Largura / 2 - 0.01) / 2 - 0.003) - 0.044)*cos(AberturaPortas) - 0.041*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.044)*sin(AberturaPortas) - 0.041*cos(AberturaPortas)"
+              }
+            ],
+            "offset": "Altura - 0.095",
+            "depth": "0.008"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pé inferior do puxador 2",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01) / 2) + (((Largura / 2 - 0.01) / 2 - 0.003) - 0.044)*cos(AberturaPortas) - 0.018*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.044)*sin(AberturaPortas) - 0.018*cos(AberturaPortas)"
+              },
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01) / 2) + (((Largura / 2 - 0.01) / 2 - 0.003) - 0.036)*cos(AberturaPortas) - 0.018*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.036)*sin(AberturaPortas) - 0.018*cos(AberturaPortas)"
+              },
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01) / 2) + (((Largura / 2 - 0.01) / 2 - 0.003) - 0.036)*cos(AberturaPortas) - 0.041*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.036)*sin(AberturaPortas) - 0.041*cos(AberturaPortas)"
+              },
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01) / 2) + (((Largura / 2 - 0.01) / 2 - 0.003) - 0.044)*cos(AberturaPortas) - 0.041*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.044)*sin(AberturaPortas) - 0.041*cos(AberturaPortas)"
+              }
+            ],
+            "offset": "Altura - 0.213",
+            "depth": "0.008"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça superior 2",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01) / 2) + 0.004*cos(AberturaPortas) - (-0.012)*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0.004*sin(AberturaPortas) - (-0.012)*cos(AberturaPortas)"
+              },
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01) / 2) + 0.05*cos(AberturaPortas) - (-0.012)*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0.05*sin(AberturaPortas) - (-0.012)*cos(AberturaPortas)"
+              },
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01) / 2) + 0.05*cos(AberturaPortas) - 0*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0.05*sin(AberturaPortas) - 0*cos(AberturaPortas)"
+              },
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01) / 2) + 0.004*cos(AberturaPortas) - 0*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0.004*sin(AberturaPortas) - 0*cos(AberturaPortas)"
+              }
+            ],
+            "offset": "Altura - 0.16",
+            "depth": "0.045"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça inferior 2",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01) / 2) + 0.004*cos(AberturaPortas) - (-0.012)*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0.004*sin(AberturaPortas) - (-0.012)*cos(AberturaPortas)"
+              },
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01) / 2) + 0.05*cos(AberturaPortas) - (-0.012)*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0.05*sin(AberturaPortas) - (-0.012)*cos(AberturaPortas)"
+              },
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01) / 2) + 0.05*cos(AberturaPortas) - 0*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0.05*sin(AberturaPortas) - 0*cos(AberturaPortas)"
+              },
+              {
+                "u": "(0.0015 - (Largura / 2 - 0.01) / 2) + 0.004*cos(AberturaPortas) - 0*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0.004*sin(AberturaPortas) - 0*cos(AberturaPortas)"
+              }
+            ],
+            "offset": "0.16",
+            "depth": "0.045"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porta 3",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((Largura / 2 - 0.01) / 2 - 0.0015) - 0*cos(AberturaPortas) + 0*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0*sin(AberturaPortas) - 0*cos(AberturaPortas)"
+              },
+              {
+                "u": "((Largura / 2 - 0.01) / 2 - 0.0015) - (((Largura / 2 - 0.01) / 2 - 0.003))*cos(AberturaPortas) + 0*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003))*sin(AberturaPortas) - 0*cos(AberturaPortas)"
+              },
+              {
+                "u": "((Largura / 2 - 0.01) / 2 - 0.0015) - (((Largura / 2 - 0.01) / 2 - 0.003))*cos(AberturaPortas) + 0.018*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003))*sin(AberturaPortas) - 0.018*cos(AberturaPortas)"
+              },
+              {
+                "u": "((Largura / 2 - 0.01) / 2 - 0.0015) - 0*cos(AberturaPortas) + 0.018*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0*sin(AberturaPortas) - 0.018*cos(AberturaPortas)"
+              }
+            ],
+            "offset": "0.102",
+            "depth": "Altura - 0.14"
+          }
+        },
+        "material": "Laminado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Puxador 3",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((Largura / 2 - 0.01) / 2 - 0.0015) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.046)*cos(AberturaPortas) + 0.04*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.046)*sin(AberturaPortas) - 0.04*cos(AberturaPortas)"
+              },
+              {
+                "u": "((Largura / 2 - 0.01) / 2 - 0.0015) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.034)*cos(AberturaPortas) + 0.04*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.034)*sin(AberturaPortas) - 0.04*cos(AberturaPortas)"
+              },
+              {
+                "u": "((Largura / 2 - 0.01) / 2 - 0.0015) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.034)*cos(AberturaPortas) + 0.05*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.034)*sin(AberturaPortas) - 0.05*cos(AberturaPortas)"
+              },
+              {
+                "u": "((Largura / 2 - 0.01) / 2 - 0.0015) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.046)*cos(AberturaPortas) + 0.05*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.046)*sin(AberturaPortas) - 0.05*cos(AberturaPortas)"
+              }
+            ],
+            "offset": "Altura - 0.23",
+            "depth": "0.16"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pé superior do puxador 3",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((Largura / 2 - 0.01) / 2 - 0.0015) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.044)*cos(AberturaPortas) + 0.018*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.044)*sin(AberturaPortas) - 0.018*cos(AberturaPortas)"
+              },
+              {
+                "u": "((Largura / 2 - 0.01) / 2 - 0.0015) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.036)*cos(AberturaPortas) + 0.018*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.036)*sin(AberturaPortas) - 0.018*cos(AberturaPortas)"
+              },
+              {
+                "u": "((Largura / 2 - 0.01) / 2 - 0.0015) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.036)*cos(AberturaPortas) + 0.041*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.036)*sin(AberturaPortas) - 0.041*cos(AberturaPortas)"
+              },
+              {
+                "u": "((Largura / 2 - 0.01) / 2 - 0.0015) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.044)*cos(AberturaPortas) + 0.041*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.044)*sin(AberturaPortas) - 0.041*cos(AberturaPortas)"
+              }
+            ],
+            "offset": "Altura - 0.095",
+            "depth": "0.008"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pé inferior do puxador 3",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((Largura / 2 - 0.01) / 2 - 0.0015) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.044)*cos(AberturaPortas) + 0.018*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.044)*sin(AberturaPortas) - 0.018*cos(AberturaPortas)"
+              },
+              {
+                "u": "((Largura / 2 - 0.01) / 2 - 0.0015) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.036)*cos(AberturaPortas) + 0.018*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.036)*sin(AberturaPortas) - 0.018*cos(AberturaPortas)"
+              },
+              {
+                "u": "((Largura / 2 - 0.01) / 2 - 0.0015) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.036)*cos(AberturaPortas) + 0.041*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.036)*sin(AberturaPortas) - 0.041*cos(AberturaPortas)"
+              },
+              {
+                "u": "((Largura / 2 - 0.01) / 2 - 0.0015) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.044)*cos(AberturaPortas) + 0.041*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.044)*sin(AberturaPortas) - 0.041*cos(AberturaPortas)"
+              }
+            ],
+            "offset": "Altura - 0.213",
+            "depth": "0.008"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça superior 3",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((Largura / 2 - 0.01) / 2 - 0.0015) - 0.004*cos(AberturaPortas) + (-0.012)*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0.004*sin(AberturaPortas) - (-0.012)*cos(AberturaPortas)"
+              },
+              {
+                "u": "((Largura / 2 - 0.01) / 2 - 0.0015) - 0.05*cos(AberturaPortas) + (-0.012)*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0.05*sin(AberturaPortas) - (-0.012)*cos(AberturaPortas)"
+              },
+              {
+                "u": "((Largura / 2 - 0.01) / 2 - 0.0015) - 0.05*cos(AberturaPortas) + 0*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0.05*sin(AberturaPortas) - 0*cos(AberturaPortas)"
+              },
+              {
+                "u": "((Largura / 2 - 0.01) / 2 - 0.0015) - 0.004*cos(AberturaPortas) + 0*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0.004*sin(AberturaPortas) - 0*cos(AberturaPortas)"
+              }
+            ],
+            "offset": "Altura - 0.16",
+            "depth": "0.045"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça inferior 3",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((Largura / 2 - 0.01) / 2 - 0.0015) - 0.004*cos(AberturaPortas) + (-0.012)*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0.004*sin(AberturaPortas) - (-0.012)*cos(AberturaPortas)"
+              },
+              {
+                "u": "((Largura / 2 - 0.01) / 2 - 0.0015) - 0.05*cos(AberturaPortas) + (-0.012)*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0.05*sin(AberturaPortas) - (-0.012)*cos(AberturaPortas)"
+              },
+              {
+                "u": "((Largura / 2 - 0.01) / 2 - 0.0015) - 0.05*cos(AberturaPortas) + 0*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0.05*sin(AberturaPortas) - 0*cos(AberturaPortas)"
+              },
+              {
+                "u": "((Largura / 2 - 0.01) / 2 - 0.0015) - 0.004*cos(AberturaPortas) + 0*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0.004*sin(AberturaPortas) - 0*cos(AberturaPortas)"
+              }
+            ],
+            "offset": "0.16",
+            "depth": "0.045"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porta 4",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((Largura / 2 - 0.01) - 0.0015) - 0*cos(AberturaPortas) + 0*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0*sin(AberturaPortas) - 0*cos(AberturaPortas)"
+              },
+              {
+                "u": "((Largura / 2 - 0.01) - 0.0015) - (((Largura / 2 - 0.01) / 2 - 0.003))*cos(AberturaPortas) + 0*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003))*sin(AberturaPortas) - 0*cos(AberturaPortas)"
+              },
+              {
+                "u": "((Largura / 2 - 0.01) - 0.0015) - (((Largura / 2 - 0.01) / 2 - 0.003))*cos(AberturaPortas) + 0.018*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003))*sin(AberturaPortas) - 0.018*cos(AberturaPortas)"
+              },
+              {
+                "u": "((Largura / 2 - 0.01) - 0.0015) - 0*cos(AberturaPortas) + 0.018*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0*sin(AberturaPortas) - 0.018*cos(AberturaPortas)"
+              }
+            ],
+            "offset": "0.102",
+            "depth": "Altura - 0.14"
+          }
+        },
+        "material": "Laminado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Puxador 4",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((Largura / 2 - 0.01) - 0.0015) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.046)*cos(AberturaPortas) + 0.04*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.046)*sin(AberturaPortas) - 0.04*cos(AberturaPortas)"
+              },
+              {
+                "u": "((Largura / 2 - 0.01) - 0.0015) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.034)*cos(AberturaPortas) + 0.04*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.034)*sin(AberturaPortas) - 0.04*cos(AberturaPortas)"
+              },
+              {
+                "u": "((Largura / 2 - 0.01) - 0.0015) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.034)*cos(AberturaPortas) + 0.05*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.034)*sin(AberturaPortas) - 0.05*cos(AberturaPortas)"
+              },
+              {
+                "u": "((Largura / 2 - 0.01) - 0.0015) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.046)*cos(AberturaPortas) + 0.05*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.046)*sin(AberturaPortas) - 0.05*cos(AberturaPortas)"
+              }
+            ],
+            "offset": "Altura - 0.23",
+            "depth": "0.16"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pé superior do puxador 4",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((Largura / 2 - 0.01) - 0.0015) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.044)*cos(AberturaPortas) + 0.018*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.044)*sin(AberturaPortas) - 0.018*cos(AberturaPortas)"
+              },
+              {
+                "u": "((Largura / 2 - 0.01) - 0.0015) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.036)*cos(AberturaPortas) + 0.018*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.036)*sin(AberturaPortas) - 0.018*cos(AberturaPortas)"
+              },
+              {
+                "u": "((Largura / 2 - 0.01) - 0.0015) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.036)*cos(AberturaPortas) + 0.041*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.036)*sin(AberturaPortas) - 0.041*cos(AberturaPortas)"
+              },
+              {
+                "u": "((Largura / 2 - 0.01) - 0.0015) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.044)*cos(AberturaPortas) + 0.041*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.044)*sin(AberturaPortas) - 0.041*cos(AberturaPortas)"
+              }
+            ],
+            "offset": "Altura - 0.095",
+            "depth": "0.008"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pé inferior do puxador 4",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((Largura / 2 - 0.01) - 0.0015) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.044)*cos(AberturaPortas) + 0.018*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.044)*sin(AberturaPortas) - 0.018*cos(AberturaPortas)"
+              },
+              {
+                "u": "((Largura / 2 - 0.01) - 0.0015) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.036)*cos(AberturaPortas) + 0.018*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.036)*sin(AberturaPortas) - 0.018*cos(AberturaPortas)"
+              },
+              {
+                "u": "((Largura / 2 - 0.01) - 0.0015) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.036)*cos(AberturaPortas) + 0.041*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.036)*sin(AberturaPortas) - 0.041*cos(AberturaPortas)"
+              },
+              {
+                "u": "((Largura / 2 - 0.01) - 0.0015) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.044)*cos(AberturaPortas) + 0.041*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - (((Largura / 2 - 0.01) / 2 - 0.003) - 0.044)*sin(AberturaPortas) - 0.041*cos(AberturaPortas)"
+              }
+            ],
+            "offset": "Altura - 0.213",
+            "depth": "0.008"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça superior 4",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((Largura / 2 - 0.01) - 0.0015) - 0.004*cos(AberturaPortas) + (-0.012)*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0.004*sin(AberturaPortas) - (-0.012)*cos(AberturaPortas)"
+              },
+              {
+                "u": "((Largura / 2 - 0.01) - 0.0015) - 0.05*cos(AberturaPortas) + (-0.012)*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0.05*sin(AberturaPortas) - (-0.012)*cos(AberturaPortas)"
+              },
+              {
+                "u": "((Largura / 2 - 0.01) - 0.0015) - 0.05*cos(AberturaPortas) + 0*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0.05*sin(AberturaPortas) - 0*cos(AberturaPortas)"
+              },
+              {
+                "u": "((Largura / 2 - 0.01) - 0.0015) - 0.004*cos(AberturaPortas) + 0*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0.004*sin(AberturaPortas) - 0*cos(AberturaPortas)"
+              }
+            ],
+            "offset": "Altura - 0.16",
+            "depth": "0.045"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça inferior 4",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((Largura / 2 - 0.01) - 0.0015) - 0.004*cos(AberturaPortas) + (-0.012)*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0.004*sin(AberturaPortas) - (-0.012)*cos(AberturaPortas)"
+              },
+              {
+                "u": "((Largura / 2 - 0.01) - 0.0015) - 0.05*cos(AberturaPortas) + (-0.012)*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0.05*sin(AberturaPortas) - (-0.012)*cos(AberturaPortas)"
+              },
+              {
+                "u": "((Largura / 2 - 0.01) - 0.0015) - 0.05*cos(AberturaPortas) + 0*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0.05*sin(AberturaPortas) - 0*cos(AberturaPortas)"
+              },
+              {
+                "u": "((Largura / 2 - 0.01) - 0.0015) - 0.004*cos(AberturaPortas) + 0*sin(AberturaPortas)",
+                "v": "(0.048 - Profundidade / 2) - 0.004*sin(AberturaPortas) - 0*cos(AberturaPortas)"
+              }
+            ],
+            "offset": "0.16",
+            "depth": "0.045"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
       }
     ],
     "mep": {
@@ -153,28 +3018,125 @@
   ],
   "materials": [
     {
-      "name": "Aço inox",
+      "name": "Laminado branco",
       "color": [
-        190,
-        195,
-        200
-      ]
+        238,
+        238,
+        234
+      ],
+      "class": "Wood",
+      "finish": "Satin",
+      "transparency": 0
     },
     {
-      "name": "Granito",
+      "name": "Inox escovado",
       "color": [
-        70,
-        70,
-        75
-      ]
+        198,
+        200,
+        203
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
     },
     {
-      "name": "MDF branco",
+      "name": "Granito cinza",
       "color": [
-        240,
-        240,
-        235
-      ]
+        88,
+        88,
+        92
+      ],
+      "class": "Generic",
+      "finish": "Polished",
+      "transparency": 0
+    },
+    {
+      "name": "Cromado",
+      "color": [
+        226,
+        229,
+        233
+      ],
+      "class": "Metal",
+      "finish": "Polished",
+      "transparency": 0
+    },
+    {
+      "name": "Borracha",
+      "color": [
+        30,
+        30,
+        30
+      ],
+      "class": "Plastic",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Branco",
+      "color": [
+        244,
+        244,
+        240
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Latão",
+      "color": [
+        192,
+        160,
+        84
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico cinza",
+      "color": [
+        120,
+        122,
+        126
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico azul",
+      "color": [
+        126,
+        176,
+        222
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico vermelho",
+      "color": [
+        196,
+        56,
+        48
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Aço galvanizado",
+      "color": [
+        160,
+        165,
+        170
+      ],
+      "class": "Metal",
+      "finish": "Matte",
+      "transparency": 0
     }
   ]
 }

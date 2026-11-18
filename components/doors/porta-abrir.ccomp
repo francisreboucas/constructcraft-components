@@ -1,6 +1,6 @@
 (
   format_version: 1,
-  generator: "ConstructCAD 0.6.0",
+  generator: "ConstructCraft 0.12.0",
   component: "Porta de abrir",
   def: (
     kind: Door,
@@ -17,13 +17,19 @@
         kind: Length,
         instance: false,
       ),
+      (
+        name: "AnguloAbertura",
+        value: 0.0,
+        kind: Angle,
+        instance: true,
+      ),
     ],
     items: [
       (
-        name: "Batente",
+        name: "Batente esquerdo simplificado",
         shape: Box(
-          x: "-Largura / 2",
-          y: "-WallThickness / 2",
+          x: "(-Largura/2)",
+          y: "(-WallThickness/2)",
           z: "0",
           width: "0.05",
           depth: "WallThickness",
@@ -31,12 +37,17 @@
         ),
         material: "Madeira",
         in_plan: false,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
       ),
       (
-        name: "Batente",
+        name: "Batente direito simplificado",
         shape: Box(
-          x: "Largura / 2 - 0.05",
-          y: "-WallThickness / 2",
+          x: "(Largura/2) - 0.05",
+          y: "(-WallThickness/2)",
           z: "0",
           width: "0.05",
           depth: "WallThickness",
@@ -44,45 +55,3866 @@
         ),
         material: "Madeira",
         in_plan: false,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
       ),
       (
-        name: "Batente",
+        name: "Batente superior simplificado",
         shape: Box(
-          x: "-Largura / 2 + 0.05",
-          y: "-WallThickness / 2",
+          x: "(-Largura/2) + 0.05",
+          y: "(-WallThickness/2)",
           z: "Altura - 0.05",
-          width: "Largura - 2 * 0.05",
+          width: "Largura - 0.1",
           depth: "WallThickness",
           height: "0.05",
         ),
         material: "Madeira",
         in_plan: false,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
       ),
       (
-        name: "Folha",
+        name: "Batente esquerdo",
         shape: Box(
-          x: "-Largura / 2 + 0.05",
-          y: "WallThickness / 2 - 0.035",
+          x: "(-Largura/2)",
+          y: "(-WallThickness/2)",
           z: "0",
-          width: "Largura - 2 * 0.05",
-          depth: "0.035",
-          height: "Altura - 0.05 - 0.005",
+          width: "0.035",
+          depth: "WallThickness",
+          height: "Altura",
         ),
         material: "Madeira",
         in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
       ),
       (
-        name: "Maçaneta",
+        name: "Batente direito",
         shape: Box(
-          x: "Largura / 2 - 0.05 - 0.16",
-          y: "WallThickness / 2",
-          z: "1.0",
-          width: "0.12",
-          depth: "0.05",
-          height: "0.02",
+          x: "(Largura/2) - 0.035",
+          y: "(-WallThickness/2)",
+          z: "0",
+          width: "0.035",
+          depth: "WallThickness",
+          height: "Altura",
         ),
-        material: "Metal cromado",
+        material: "Madeira",
         in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Batente superior",
+        shape: Box(
+          x: "(-Largura/2) + 0.035",
+          y: "(-WallThickness/2)",
+          z: "Altura - 0.035",
+          width: "Largura - 0.07",
+          depth: "WallThickness",
+          height: "0.035",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Batedor esquerdo",
+        shape: Box(
+          x: "(-Largura/2) + 0.035",
+          y: "(-WallThickness/2)",
+          z: "0",
+          width: "0.013",
+          depth: "(WallThickness - 0.037)",
+          height: "Altura - 0.035",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Batedor direito",
+        shape: Box(
+          x: "(Largura/2) - 0.048",
+          y: "(-WallThickness/2)",
+          z: "0",
+          width: "0.013",
+          depth: "(WallThickness - 0.037)",
+          height: "Altura - 0.035",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Batedor superior",
+        shape: Box(
+          x: "(-Largura/2) + 0.048",
+          y: "(-WallThickness/2)",
+          z: "Altura - 0.048",
+          width: "Largura - 0.096",
+          depth: "(WallThickness - 0.037)",
+          height: "0.013",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Amortecedor esquerdo",
+        shape: Box(
+          x: "(-Largura/2) + 0.038",
+          y: "(WallThickness/2 - 0.037)",
+          z: "0.01",
+          width: "0.006",
+          depth: "0.0015",
+          height: "Altura - 0.047",
+        ),
+        material: "Borracha cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Amortecedor direito",
+        shape: Box(
+          x: "(Largura/2) - 0.044",
+          y: "(WallThickness/2 - 0.037)",
+          z: "0.01",
+          width: "0.006",
+          depth: "0.0015",
+          height: "Altura - 0.047",
+        ),
+        material: "Borracha cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Amortecedor superior",
+        shape: Box(
+          x: "(-Largura/2) + 0.044",
+          y: "(WallThickness/2 - 0.037)",
+          z: "Altura - 0.044",
+          width: "Largura - 0.088",
+          depth: "0.0015",
+          height: "0.006",
+        ),
+        material: "Borracha cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Guarnição esquerda (frente)",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "((-Largura/2) - 0.055)",
+              v: "0",
+            ),
+            (
+              u: "((-Largura/2) + 0.015)",
+              v: "0",
+            ),
+            (
+              u: "((-Largura/2) + 0.015)",
+              v: "(Altura - 0.015)",
+            ),
+            (
+              u: "((-Largura/2) - 0.055)",
+              v: "(Altura + 0.055)",
+            ),
+          ],
+          offset: "(WallThickness/2)",
+          depth: "0.012",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Guarnição direita (frente)",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "((Largura/2) - 0.015)",
+              v: "0",
+            ),
+            (
+              u: "((Largura/2) + 0.055)",
+              v: "0",
+            ),
+            (
+              u: "((Largura/2) + 0.055)",
+              v: "(Altura + 0.055)",
+            ),
+            (
+              u: "((Largura/2) - 0.015)",
+              v: "(Altura - 0.015)",
+            ),
+          ],
+          offset: "(WallThickness/2)",
+          depth: "0.012",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Guarnição superior (frente)",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "((-Largura/2) + 0.015)",
+              v: "(Altura - 0.015)",
+            ),
+            (
+              u: "((Largura/2) - 0.015)",
+              v: "(Altura - 0.015)",
+            ),
+            (
+              u: "((Largura/2) + 0.055)",
+              v: "(Altura + 0.055)",
+            ),
+            (
+              u: "((-Largura/2) - 0.055)",
+              v: "(Altura + 0.055)",
+            ),
+          ],
+          offset: "(WallThickness/2)",
+          depth: "0.012",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Guarnição esquerda - moldura (frente)",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "((-Largura/2) - 0.055)",
+              v: "0",
+            ),
+            (
+              u: "(((-Largura/2) - 0.055) + 0.018)",
+              v: "0",
+            ),
+            (
+              u: "(((-Largura/2) - 0.055) + 0.018)",
+              v: "((Altura + 0.055) - 0.018)",
+            ),
+            (
+              u: "((-Largura/2) - 0.055)",
+              v: "(Altura + 0.055)",
+            ),
+          ],
+          offset: "((WallThickness/2) + 0.012)",
+          depth: "0.005",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Guarnição direita - moldura (frente)",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "(((Largura/2) + 0.055) - 0.018)",
+              v: "0",
+            ),
+            (
+              u: "((Largura/2) + 0.055)",
+              v: "0",
+            ),
+            (
+              u: "((Largura/2) + 0.055)",
+              v: "(Altura + 0.055)",
+            ),
+            (
+              u: "(((Largura/2) + 0.055) - 0.018)",
+              v: "((Altura + 0.055) - 0.018)",
+            ),
+          ],
+          offset: "((WallThickness/2) + 0.012)",
+          depth: "0.005",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Guarnição superior - moldura (frente)",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "(((-Largura/2) - 0.055) + 0.018)",
+              v: "((Altura + 0.055) - 0.018)",
+            ),
+            (
+              u: "(((Largura/2) + 0.055) - 0.018)",
+              v: "((Altura + 0.055) - 0.018)",
+            ),
+            (
+              u: "((Largura/2) + 0.055)",
+              v: "(Altura + 0.055)",
+            ),
+            (
+              u: "((-Largura/2) - 0.055)",
+              v: "(Altura + 0.055)",
+            ),
+          ],
+          offset: "((WallThickness/2) + 0.012)",
+          depth: "0.005",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Guarnição esquerda (fundo)",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "((-Largura/2) - 0.055)",
+              v: "0",
+            ),
+            (
+              u: "((-Largura/2) + 0.015)",
+              v: "0",
+            ),
+            (
+              u: "((-Largura/2) + 0.015)",
+              v: "(Altura - 0.015)",
+            ),
+            (
+              u: "((-Largura/2) - 0.055)",
+              v: "(Altura + 0.055)",
+            ),
+          ],
+          offset: "((-WallThickness/2) - 0.012)",
+          depth: "0.012",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Guarnição direita (fundo)",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "((Largura/2) - 0.015)",
+              v: "0",
+            ),
+            (
+              u: "((Largura/2) + 0.055)",
+              v: "0",
+            ),
+            (
+              u: "((Largura/2) + 0.055)",
+              v: "(Altura + 0.055)",
+            ),
+            (
+              u: "((Largura/2) - 0.015)",
+              v: "(Altura - 0.015)",
+            ),
+          ],
+          offset: "((-WallThickness/2) - 0.012)",
+          depth: "0.012",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Guarnição superior (fundo)",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "((-Largura/2) + 0.015)",
+              v: "(Altura - 0.015)",
+            ),
+            (
+              u: "((Largura/2) - 0.015)",
+              v: "(Altura - 0.015)",
+            ),
+            (
+              u: "((Largura/2) + 0.055)",
+              v: "(Altura + 0.055)",
+            ),
+            (
+              u: "((-Largura/2) - 0.055)",
+              v: "(Altura + 0.055)",
+            ),
+          ],
+          offset: "((-WallThickness/2) - 0.012)",
+          depth: "0.012",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Guarnição esquerda - moldura (fundo)",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "((-Largura/2) - 0.055)",
+              v: "0",
+            ),
+            (
+              u: "(((-Largura/2) - 0.055) + 0.018)",
+              v: "0",
+            ),
+            (
+              u: "(((-Largura/2) - 0.055) + 0.018)",
+              v: "((Altura + 0.055) - 0.018)",
+            ),
+            (
+              u: "((-Largura/2) - 0.055)",
+              v: "(Altura + 0.055)",
+            ),
+          ],
+          offset: "(((-WallThickness/2) - 0.012) - 0.005)",
+          depth: "0.005",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Guarnição direita - moldura (fundo)",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "(((Largura/2) + 0.055) - 0.018)",
+              v: "0",
+            ),
+            (
+              u: "((Largura/2) + 0.055)",
+              v: "0",
+            ),
+            (
+              u: "((Largura/2) + 0.055)",
+              v: "(Altura + 0.055)",
+            ),
+            (
+              u: "(((Largura/2) + 0.055) - 0.018)",
+              v: "((Altura + 0.055) - 0.018)",
+            ),
+          ],
+          offset: "(((-WallThickness/2) - 0.012) - 0.005)",
+          depth: "0.005",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Guarnição superior - moldura (fundo)",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "(((-Largura/2) - 0.055) + 0.018)",
+              v: "((Altura + 0.055) - 0.018)",
+            ),
+            (
+              u: "(((Largura/2) + 0.055) - 0.018)",
+              v: "((Altura + 0.055) - 0.018)",
+            ),
+            (
+              u: "((Largura/2) + 0.055)",
+              v: "(Altura + 0.055)",
+            ),
+            (
+              u: "((-Largura/2) - 0.055)",
+              v: "(Altura + 0.055)",
+            ),
+          ],
+          offset: "(((-WallThickness/2) - 0.012) - 0.005)",
+          depth: "0.005",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha simplificada",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + 0.002*cos(AnguloAbertura) + 0.041*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.002*sin(AnguloAbertura) - 0.041*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((Largura - 0.075))*cos(AnguloAbertura) + 0.041*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((Largura - 0.075))*sin(AnguloAbertura) - 0.041*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((Largura - 0.075))*cos(AnguloAbertura) + 0.006*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((Largura - 0.075))*sin(AnguloAbertura) - 0.006*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.002*cos(AnguloAbertura) + 0.006*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.002*sin(AnguloAbertura) - 0.006*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "0",
+          depth: "Altura - 0.055",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
+      ),
+      (
+        name: "Folha - montante da dobradiça",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + 0.002*cos(AnguloAbertura) + 0.041*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.002*sin(AnguloAbertura) - 0.041*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((0.102))*cos(AnguloAbertura) + 0.041*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((0.102))*sin(AnguloAbertura) - 0.041*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((0.102))*cos(AnguloAbertura) + 0.006*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((0.102))*sin(AnguloAbertura) - 0.006*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.002*cos(AnguloAbertura) + 0.006*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.002*sin(AnguloAbertura) - 0.006*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "0.008",
+          depth: "(((Altura - 0.038)) + (-0.008))",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - montante da fechadura",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) - 0.1))*cos(AnguloAbertura) + 0.041*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) - 0.1))*sin(AnguloAbertura) - 0.041*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((Largura - 0.075))*cos(AnguloAbertura) + 0.041*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((Largura - 0.075))*sin(AnguloAbertura) - 0.041*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((Largura - 0.075))*cos(AnguloAbertura) + 0.006*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((Largura - 0.075))*sin(AnguloAbertura) - 0.006*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) - 0.1))*cos(AnguloAbertura) + 0.006*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) - 0.1))*sin(AnguloAbertura) - 0.006*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "0.008",
+          depth: "(((Altura - 0.038)) + (-0.008))",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - travessa inferior",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((0.102))*cos(AnguloAbertura) + 0.041*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((0.102))*sin(AnguloAbertura) - 0.041*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) - 0.1))*cos(AnguloAbertura) + 0.041*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) - 0.1))*sin(AnguloAbertura) - 0.041*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) - 0.1))*cos(AnguloAbertura) + 0.006*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) - 0.1))*sin(AnguloAbertura) - 0.006*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((0.102))*cos(AnguloAbertura) + 0.006*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((0.102))*sin(AnguloAbertura) - 0.006*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "0.008",
+          depth: "0.19",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - travessa superior",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((0.102))*cos(AnguloAbertura) + 0.041*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((0.102))*sin(AnguloAbertura) - 0.041*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) - 0.1))*cos(AnguloAbertura) + 0.041*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) - 0.1))*sin(AnguloAbertura) - 0.041*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) - 0.1))*cos(AnguloAbertura) + 0.006*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) - 0.1))*sin(AnguloAbertura) - 0.006*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((0.102))*cos(AnguloAbertura) + 0.006*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((0.102))*sin(AnguloAbertura) - 0.006*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((Altura - 0.038)) - 0.11)",
+          depth: "0.11",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - travessa intermediária 1",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((0.102))*cos(AnguloAbertura) + 0.041*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((0.102))*sin(AnguloAbertura) - 0.041*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) - 0.1))*cos(AnguloAbertura) + 0.041*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) - 0.1))*sin(AnguloAbertura) - 0.041*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) - 0.1))*cos(AnguloAbertura) + 0.006*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) - 0.1))*sin(AnguloAbertura) - 0.006*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((0.102))*cos(AnguloAbertura) + 0.006*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((0.102))*sin(AnguloAbertura) - 0.006*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "0.88",
+          depth: "0.14",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - travessa intermediária 2",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((0.102))*cos(AnguloAbertura) + 0.041*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((0.102))*sin(AnguloAbertura) - 0.041*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) - 0.1))*cos(AnguloAbertura) + 0.041*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) - 0.1))*sin(AnguloAbertura) - 0.041*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) - 0.1))*cos(AnguloAbertura) + 0.006*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) - 0.1))*sin(AnguloAbertura) - 0.006*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((0.102))*cos(AnguloAbertura) + 0.006*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((0.102))*sin(AnguloAbertura) - 0.006*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "1.5",
+          depth: "0.09",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - almofada 1",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) - 0.008))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) - 0.008))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) + 0.008))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) + 0.008))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) + 0.008))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) + 0.008))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) - 0.008))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) - 0.008))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.007))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((0.198)) - 0.008)",
+          depth: "((((-((0.198))) + 0.88)) + 0.016)",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - almofada 1 - relevo (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.035))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.035))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.035))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.035))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.035))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.013))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.035))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.013))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.035))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.013))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.035))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.013))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((0.198)) + 0.035)",
+          depth: "((((-((0.198))) + 0.88)) - 0.07)",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - almofada 1 - baguete esquerdo (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((0.102))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((0.102))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.0145))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((0.102))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((0.102))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.0145))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(0.198)",
+          depth: "((-((0.198))) + 0.88)",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - almofada 1 - baguete direito (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) - 0.1))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) - 0.1))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) - 0.1))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) - 0.1))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.0145))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.0145))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(0.198)",
+          depth: "((-((0.198))) + 0.88)",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - almofada 1 - baguete inferior (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.0145))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.0145))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(0.198)",
+          depth: "0.012",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - almofada 1 - baguete superior (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.0145))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.0145))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(0.868)",
+          depth: "0.012",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - almofada 1 - relevo (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.035))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.013))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.035))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.013))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.035))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.013))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.035))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.013))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.035))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.035))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.035))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.035))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.007))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((0.198)) + 0.035)",
+          depth: "((((-((0.198))) + 0.88)) - 0.07)",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - almofada 1 - baguete esquerdo (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((0.102))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((0.102))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.0145))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.0145))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((0.102))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((0.102))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.007))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(0.198)",
+          depth: "((-((0.198))) + 0.88)",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - almofada 1 - baguete direito (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.0145))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) - 0.1))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) - 0.1))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.0145))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) - 0.1))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) - 0.1))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.007))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(0.198)",
+          depth: "((-((0.198))) + 0.88)",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - almofada 1 - baguete inferior (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.0145))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.0145))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.007))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(0.198)",
+          depth: "0.012",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - almofada 1 - baguete superior (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.0145))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.0145))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.007))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(0.868)",
+          depth: "0.012",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - almofada 2",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) - 0.008))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) - 0.008))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) + 0.008))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) + 0.008))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) + 0.008))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) + 0.008))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) - 0.008))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) - 0.008))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.007))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((1.02)) - 0.008)",
+          depth: "((((-((1.02))) + 1.5)) + 0.016)",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - almofada 2 - relevo (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.035))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.035))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.035))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.035))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.035))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.013))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.035))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.013))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.035))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.013))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.035))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.013))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((1.02)) + 0.035)",
+          depth: "((((-((1.02))) + 1.5)) - 0.07)",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - almofada 2 - baguete esquerdo (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((0.102))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((0.102))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.0145))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((0.102))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((0.102))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.0145))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(1.02)",
+          depth: "((-((1.02))) + 1.5)",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - almofada 2 - baguete direito (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) - 0.1))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) - 0.1))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) - 0.1))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) - 0.1))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.0145))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.0145))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(1.02)",
+          depth: "((-((1.02))) + 1.5)",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - almofada 2 - baguete inferior (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.0145))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.0145))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(1.02)",
+          depth: "0.012",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - almofada 2 - baguete superior (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.0145))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.0145))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(1.488)",
+          depth: "0.012",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - almofada 2 - relevo (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.035))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.013))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.035))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.013))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.035))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.013))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.035))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.013))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.035))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.035))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.035))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.035))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.007))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((1.02)) + 0.035)",
+          depth: "((((-((1.02))) + 1.5)) - 0.07)",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - almofada 2 - baguete esquerdo (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((0.102))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((0.102))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.0145))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.0145))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((0.102))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((0.102))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.007))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(1.02)",
+          depth: "((-((1.02))) + 1.5)",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - almofada 2 - baguete direito (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.0145))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) - 0.1))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) - 0.1))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.0145))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) - 0.1))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) - 0.1))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.007))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(1.02)",
+          depth: "((-((1.02))) + 1.5)",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - almofada 2 - baguete inferior (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.0145))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.0145))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.007))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(1.02)",
+          depth: "0.012",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - almofada 2 - baguete superior (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.0145))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.0145))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.007))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(1.488)",
+          depth: "0.012",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - almofada 3",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) - 0.008))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) - 0.008))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) + 0.008))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) + 0.008))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) + 0.008))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) + 0.008))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) - 0.008))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) - 0.008))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.007))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((1.59)) - 0.008)",
+          depth: "(((((((Altura - 0.038)) - 0.11)) + (-((1.59))))) + 0.016)",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - almofada 3 - relevo (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.035))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.035))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.035))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.035))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.035))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.013))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.035))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.013))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.035))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.013))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.035))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.013))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((1.59)) + 0.035)",
+          depth: "(((((((Altura - 0.038)) - 0.11)) + (-((1.59))))) - 0.07)",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - almofada 3 - baguete esquerdo (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((0.102))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((0.102))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.0145))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((0.102))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((0.102))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.0145))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(1.59)",
+          depth: "(((((Altura - 0.038)) - 0.11)) + (-((1.59))))",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - almofada 3 - baguete direito (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) - 0.1))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) - 0.1))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) - 0.1))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) - 0.1))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.0145))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.0145))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(1.59)",
+          depth: "(((((Altura - 0.038)) - 0.11)) + (-((1.59))))",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - almofada 3 - baguete inferior (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.0145))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.0145))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(1.59)",
+          depth: "0.012",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - almofada 3 - baguete superior (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.0145))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) + 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) + 0.0145))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((((Altura - 0.038)) - 0.11)) - 0.012)",
+          depth: "0.012",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - almofada 3 - relevo (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.035))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.013))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.035))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.013))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.035))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.013))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.035))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.013))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.035))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.035))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.035))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.035))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.007))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((1.59)) + 0.035)",
+          depth: "(((((((Altura - 0.038)) - 0.11)) + (-((1.59))))) - 0.07)",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - almofada 3 - baguete esquerdo (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((0.102))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((0.102))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.0145))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.0145))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((0.102))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((0.102))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.007))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(1.59)",
+          depth: "(((((Altura - 0.038)) - 0.11)) + (-((1.59))))",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - almofada 3 - baguete direito (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.0145))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) - 0.1))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) - 0.1))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.0145))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) - 0.1))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) - 0.1))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.007))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(1.59)",
+          depth: "(((((Altura - 0.038)) - 0.11)) + (-((1.59))))",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - almofada 3 - baguete inferior (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.0145))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.0145))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.007))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(1.59)",
+          depth: "0.012",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Folha - almofada 3 - baguete superior (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.0145))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.0145))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.0145))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.1)) - 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.007))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((0.102)) + 0.012))*cos(AnguloAbertura) - (((((-0.047)/2)) - 0.007))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((0.102)) + 0.012))*sin(AnguloAbertura) + (((((-0.047)/2)) - 0.007))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((((Altura - 0.038)) - 0.11)) - 0.012)",
+          depth: "0.012",
+        ),
+        material: "Madeira",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 1 - nó 1",
+        shape: Cylinder(
+          x: "(-Largura/2 + 0.037)",
+          y: "(WallThickness/2 + 0.006)",
+          z: "(0.2203)",
+          radius: "0.0065",
+          height: "0.0174",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 1 - nó 2",
+        shape: Cylinder(
+          x: "(-Largura/2 + 0.037)",
+          y: "(WallThickness/2 + 0.006)",
+          z: "(0.2383)",
+          radius: "0.0065",
+          height: "0.0174",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 1 - nó 3",
+        shape: Cylinder(
+          x: "(-Largura/2 + 0.037)",
+          y: "(WallThickness/2 + 0.006)",
+          z: "(0.2563)",
+          radius: "0.0065",
+          height: "0.0174",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 1 - nó 4",
+        shape: Cylinder(
+          x: "(-Largura/2 + 0.037)",
+          y: "(WallThickness/2 + 0.006)",
+          z: "(0.2743)",
+          radius: "0.0065",
+          height: "0.0174",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 1 - nó 5",
+        shape: Cylinder(
+          x: "(-Largura/2 + 0.037)",
+          y: "(WallThickness/2 + 0.006)",
+          z: "(0.2923)",
+          radius: "0.0065",
+          height: "0.0174",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 1 - pino",
+        shape: Cylinder(
+          x: "(-Largura/2 + 0.037)",
+          y: "(WallThickness/2 + 0.006)",
+          z: "(0.217)",
+          radius: "0.0035",
+          height: "0.096",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 1 - ponteira inferior",
+        shape: Cylinder(
+          x: "(-Largura/2 + 0.037)",
+          y: "(WallThickness/2 + 0.006)",
+          z: "(0.213)",
+          radius: "0.005",
+          height: "0.005",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 1 - ponteira superior",
+        shape: Cylinder(
+          x: "(-Largura/2 + 0.037)",
+          y: "(WallThickness/2 + 0.006)",
+          z: "(0.312)",
+          radius: "0.005",
+          height: "0.005",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 1 - aba do batente",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) - 0.002",
+              v: "(WallThickness/2 + 0.006) - 0.038",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) - 0.0008",
+              v: "(WallThickness/2 + 0.006) - 0.038",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) - 0.0008",
+              v: "(WallThickness/2 + 0.006)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) - 0.002",
+              v: "(WallThickness/2 + 0.006)",
+            ),
+          ],
+          offset: "0.22",
+          depth: "0.09",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 1 - aba da folha",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + 0.0008*cos(AnguloAbertura) + 0.038*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0008*sin(AnguloAbertura) - 0.038*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.002*cos(AnguloAbertura) + 0.038*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.002*sin(AnguloAbertura) - 0.038*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.002*cos(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.002*sin(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.0008*cos(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0008*sin(AnguloAbertura)",
+            ),
+          ],
+          offset: "0.22",
+          depth: "0.09",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 1 - parafuso do batente 1",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) - 0.0008",
+              v: "(WallThickness/2 + 0.006) - 0.028",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) - 0.0002",
+              v: "(WallThickness/2 + 0.006) - 0.028",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) - 0.0002",
+              v: "(WallThickness/2 + 0.006) - 0.02",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) - 0.0008",
+              v: "(WallThickness/2 + 0.006) - 0.02",
+            ),
+          ],
+          offset: "(((0.235)) - 0.004)",
+          depth: "0.008",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 1 - parafuso da folha 1",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + 0.0002*cos(AnguloAbertura) + 0.028*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0002*sin(AnguloAbertura) - 0.028*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.0008*cos(AnguloAbertura) + 0.028*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0008*sin(AnguloAbertura) - 0.028*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.0008*cos(AnguloAbertura) + 0.02*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0008*sin(AnguloAbertura) - 0.02*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.0002*cos(AnguloAbertura) + 0.02*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0002*sin(AnguloAbertura) - 0.02*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((0.235)) - 0.004)",
+          depth: "0.008",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 1 - parafuso do batente 2",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) - 0.0008",
+              v: "(WallThickness/2 + 0.006) - 0.028",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) - 0.0002",
+              v: "(WallThickness/2 + 0.006) - 0.028",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) - 0.0002",
+              v: "(WallThickness/2 + 0.006) - 0.02",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) - 0.0008",
+              v: "(WallThickness/2 + 0.006) - 0.02",
+            ),
+          ],
+          offset: "(((0.265)) - 0.004)",
+          depth: "0.008",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 1 - parafuso da folha 2",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + 0.0002*cos(AnguloAbertura) + 0.028*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0002*sin(AnguloAbertura) - 0.028*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.0008*cos(AnguloAbertura) + 0.028*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0008*sin(AnguloAbertura) - 0.028*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.0008*cos(AnguloAbertura) + 0.02*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0008*sin(AnguloAbertura) - 0.02*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.0002*cos(AnguloAbertura) + 0.02*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0002*sin(AnguloAbertura) - 0.02*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((0.265)) - 0.004)",
+          depth: "0.008",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 1 - parafuso do batente 3",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) - 0.0008",
+              v: "(WallThickness/2 + 0.006) - 0.028",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) - 0.0002",
+              v: "(WallThickness/2 + 0.006) - 0.028",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) - 0.0002",
+              v: "(WallThickness/2 + 0.006) - 0.02",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) - 0.0008",
+              v: "(WallThickness/2 + 0.006) - 0.02",
+            ),
+          ],
+          offset: "(((0.295)) - 0.004)",
+          depth: "0.008",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 1 - parafuso da folha 3",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + 0.0002*cos(AnguloAbertura) + 0.028*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0002*sin(AnguloAbertura) - 0.028*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.0008*cos(AnguloAbertura) + 0.028*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0008*sin(AnguloAbertura) - 0.028*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.0008*cos(AnguloAbertura) + 0.02*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0008*sin(AnguloAbertura) - 0.02*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.0002*cos(AnguloAbertura) + 0.02*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0002*sin(AnguloAbertura) - 0.02*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((0.295)) - 0.004)",
+          depth: "0.008",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 2 - nó 1",
+        shape: Cylinder(
+          x: "(-Largura/2 + 0.037)",
+          y: "(WallThickness/2 + 0.006)",
+          z: "(((Altura/2 - 0.045)) + 0.0003)",
+          radius: "0.0065",
+          height: "0.0174",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 2 - nó 2",
+        shape: Cylinder(
+          x: "(-Largura/2 + 0.037)",
+          y: "(WallThickness/2 + 0.006)",
+          z: "(((Altura/2 - 0.045)) + 0.0183)",
+          radius: "0.0065",
+          height: "0.0174",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 2 - nó 3",
+        shape: Cylinder(
+          x: "(-Largura/2 + 0.037)",
+          y: "(WallThickness/2 + 0.006)",
+          z: "(((Altura/2 - 0.045)) + 0.0363)",
+          radius: "0.0065",
+          height: "0.0174",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 2 - nó 4",
+        shape: Cylinder(
+          x: "(-Largura/2 + 0.037)",
+          y: "(WallThickness/2 + 0.006)",
+          z: "(((Altura/2 - 0.045)) + 0.0543)",
+          radius: "0.0065",
+          height: "0.0174",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 2 - nó 5",
+        shape: Cylinder(
+          x: "(-Largura/2 + 0.037)",
+          y: "(WallThickness/2 + 0.006)",
+          z: "(((Altura/2 - 0.045)) + 0.0723)",
+          radius: "0.0065",
+          height: "0.0174",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 2 - pino",
+        shape: Cylinder(
+          x: "(-Largura/2 + 0.037)",
+          y: "(WallThickness/2 + 0.006)",
+          z: "(((Altura/2 - 0.045)) - 0.003)",
+          radius: "0.0035",
+          height: "0.096",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 2 - ponteira inferior",
+        shape: Cylinder(
+          x: "(-Largura/2 + 0.037)",
+          y: "(WallThickness/2 + 0.006)",
+          z: "(((Altura/2 - 0.045)) - 0.007)",
+          radius: "0.005",
+          height: "0.005",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 2 - ponteira superior",
+        shape: Cylinder(
+          x: "(-Largura/2 + 0.037)",
+          y: "(WallThickness/2 + 0.006)",
+          z: "(((Altura/2 - 0.045)) + 0.092)",
+          radius: "0.005",
+          height: "0.005",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 2 - aba do batente",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) - 0.002",
+              v: "(WallThickness/2 + 0.006) - 0.038",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) - 0.0008",
+              v: "(WallThickness/2 + 0.006) - 0.038",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) - 0.0008",
+              v: "(WallThickness/2 + 0.006)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) - 0.002",
+              v: "(WallThickness/2 + 0.006)",
+            ),
+          ],
+          offset: "(Altura/2 - 0.045)",
+          depth: "0.09",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 2 - aba da folha",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + 0.0008*cos(AnguloAbertura) + 0.038*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0008*sin(AnguloAbertura) - 0.038*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.002*cos(AnguloAbertura) + 0.038*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.002*sin(AnguloAbertura) - 0.038*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.002*cos(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.002*sin(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.0008*cos(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0008*sin(AnguloAbertura)",
+            ),
+          ],
+          offset: "(Altura/2 - 0.045)",
+          depth: "0.09",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 2 - parafuso do batente 1",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) - 0.0008",
+              v: "(WallThickness/2 + 0.006) - 0.028",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) - 0.0002",
+              v: "(WallThickness/2 + 0.006) - 0.028",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) - 0.0002",
+              v: "(WallThickness/2 + 0.006) - 0.02",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) - 0.0008",
+              v: "(WallThickness/2 + 0.006) - 0.02",
+            ),
+          ],
+          offset: "(((((Altura/2 - 0.045)) + 0.015)) - 0.004)",
+          depth: "0.008",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 2 - parafuso da folha 1",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + 0.0002*cos(AnguloAbertura) + 0.028*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0002*sin(AnguloAbertura) - 0.028*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.0008*cos(AnguloAbertura) + 0.028*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0008*sin(AnguloAbertura) - 0.028*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.0008*cos(AnguloAbertura) + 0.02*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0008*sin(AnguloAbertura) - 0.02*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.0002*cos(AnguloAbertura) + 0.02*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0002*sin(AnguloAbertura) - 0.02*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((((Altura/2 - 0.045)) + 0.015)) - 0.004)",
+          depth: "0.008",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 2 - parafuso do batente 2",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) - 0.0008",
+              v: "(WallThickness/2 + 0.006) - 0.028",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) - 0.0002",
+              v: "(WallThickness/2 + 0.006) - 0.028",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) - 0.0002",
+              v: "(WallThickness/2 + 0.006) - 0.02",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) - 0.0008",
+              v: "(WallThickness/2 + 0.006) - 0.02",
+            ),
+          ],
+          offset: "(((((Altura/2 - 0.045)) + 0.045)) - 0.004)",
+          depth: "0.008",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 2 - parafuso da folha 2",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + 0.0002*cos(AnguloAbertura) + 0.028*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0002*sin(AnguloAbertura) - 0.028*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.0008*cos(AnguloAbertura) + 0.028*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0008*sin(AnguloAbertura) - 0.028*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.0008*cos(AnguloAbertura) + 0.02*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0008*sin(AnguloAbertura) - 0.02*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.0002*cos(AnguloAbertura) + 0.02*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0002*sin(AnguloAbertura) - 0.02*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((((Altura/2 - 0.045)) + 0.045)) - 0.004)",
+          depth: "0.008",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 2 - parafuso do batente 3",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) - 0.0008",
+              v: "(WallThickness/2 + 0.006) - 0.028",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) - 0.0002",
+              v: "(WallThickness/2 + 0.006) - 0.028",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) - 0.0002",
+              v: "(WallThickness/2 + 0.006) - 0.02",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) - 0.0008",
+              v: "(WallThickness/2 + 0.006) - 0.02",
+            ),
+          ],
+          offset: "(((((Altura/2 - 0.045)) + 0.075)) - 0.004)",
+          depth: "0.008",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 2 - parafuso da folha 3",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + 0.0002*cos(AnguloAbertura) + 0.028*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0002*sin(AnguloAbertura) - 0.028*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.0008*cos(AnguloAbertura) + 0.028*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0008*sin(AnguloAbertura) - 0.028*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.0008*cos(AnguloAbertura) + 0.02*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0008*sin(AnguloAbertura) - 0.02*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.0002*cos(AnguloAbertura) + 0.02*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0002*sin(AnguloAbertura) - 0.02*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((((Altura/2 - 0.045)) + 0.075)) - 0.004)",
+          depth: "0.008",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 3 - nó 1",
+        shape: Cylinder(
+          x: "(-Largura/2 + 0.037)",
+          y: "(WallThickness/2 + 0.006)",
+          z: "(((Altura - 0.34)) + 0.0003)",
+          radius: "0.0065",
+          height: "0.0174",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 3 - nó 2",
+        shape: Cylinder(
+          x: "(-Largura/2 + 0.037)",
+          y: "(WallThickness/2 + 0.006)",
+          z: "(((Altura - 0.34)) + 0.0183)",
+          radius: "0.0065",
+          height: "0.0174",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 3 - nó 3",
+        shape: Cylinder(
+          x: "(-Largura/2 + 0.037)",
+          y: "(WallThickness/2 + 0.006)",
+          z: "(((Altura - 0.34)) + 0.0363)",
+          radius: "0.0065",
+          height: "0.0174",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 3 - nó 4",
+        shape: Cylinder(
+          x: "(-Largura/2 + 0.037)",
+          y: "(WallThickness/2 + 0.006)",
+          z: "(((Altura - 0.34)) + 0.0543)",
+          radius: "0.0065",
+          height: "0.0174",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 3 - nó 5",
+        shape: Cylinder(
+          x: "(-Largura/2 + 0.037)",
+          y: "(WallThickness/2 + 0.006)",
+          z: "(((Altura - 0.34)) + 0.0723)",
+          radius: "0.0065",
+          height: "0.0174",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 3 - pino",
+        shape: Cylinder(
+          x: "(-Largura/2 + 0.037)",
+          y: "(WallThickness/2 + 0.006)",
+          z: "(((Altura - 0.34)) - 0.003)",
+          radius: "0.0035",
+          height: "0.096",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 3 - ponteira inferior",
+        shape: Cylinder(
+          x: "(-Largura/2 + 0.037)",
+          y: "(WallThickness/2 + 0.006)",
+          z: "(((Altura - 0.34)) - 0.007)",
+          radius: "0.005",
+          height: "0.005",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 3 - ponteira superior",
+        shape: Cylinder(
+          x: "(-Largura/2 + 0.037)",
+          y: "(WallThickness/2 + 0.006)",
+          z: "(((Altura - 0.34)) + 0.092)",
+          radius: "0.005",
+          height: "0.005",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 3 - aba do batente",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) - 0.002",
+              v: "(WallThickness/2 + 0.006) - 0.038",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) - 0.0008",
+              v: "(WallThickness/2 + 0.006) - 0.038",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) - 0.0008",
+              v: "(WallThickness/2 + 0.006)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) - 0.002",
+              v: "(WallThickness/2 + 0.006)",
+            ),
+          ],
+          offset: "(Altura - 0.34)",
+          depth: "0.09",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 3 - aba da folha",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + 0.0008*cos(AnguloAbertura) + 0.038*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0008*sin(AnguloAbertura) - 0.038*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.002*cos(AnguloAbertura) + 0.038*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.002*sin(AnguloAbertura) - 0.038*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.002*cos(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.002*sin(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.0008*cos(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0008*sin(AnguloAbertura)",
+            ),
+          ],
+          offset: "(Altura - 0.34)",
+          depth: "0.09",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 3 - parafuso do batente 1",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) - 0.0008",
+              v: "(WallThickness/2 + 0.006) - 0.028",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) - 0.0002",
+              v: "(WallThickness/2 + 0.006) - 0.028",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) - 0.0002",
+              v: "(WallThickness/2 + 0.006) - 0.02",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) - 0.0008",
+              v: "(WallThickness/2 + 0.006) - 0.02",
+            ),
+          ],
+          offset: "(((((Altura - 0.34)) + 0.015)) - 0.004)",
+          depth: "0.008",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 3 - parafuso da folha 1",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + 0.0002*cos(AnguloAbertura) + 0.028*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0002*sin(AnguloAbertura) - 0.028*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.0008*cos(AnguloAbertura) + 0.028*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0008*sin(AnguloAbertura) - 0.028*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.0008*cos(AnguloAbertura) + 0.02*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0008*sin(AnguloAbertura) - 0.02*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.0002*cos(AnguloAbertura) + 0.02*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0002*sin(AnguloAbertura) - 0.02*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((((Altura - 0.34)) + 0.015)) - 0.004)",
+          depth: "0.008",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 3 - parafuso do batente 2",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) - 0.0008",
+              v: "(WallThickness/2 + 0.006) - 0.028",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) - 0.0002",
+              v: "(WallThickness/2 + 0.006) - 0.028",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) - 0.0002",
+              v: "(WallThickness/2 + 0.006) - 0.02",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) - 0.0008",
+              v: "(WallThickness/2 + 0.006) - 0.02",
+            ),
+          ],
+          offset: "(((((Altura - 0.34)) + 0.045)) - 0.004)",
+          depth: "0.008",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 3 - parafuso da folha 2",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + 0.0002*cos(AnguloAbertura) + 0.028*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0002*sin(AnguloAbertura) - 0.028*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.0008*cos(AnguloAbertura) + 0.028*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0008*sin(AnguloAbertura) - 0.028*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.0008*cos(AnguloAbertura) + 0.02*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0008*sin(AnguloAbertura) - 0.02*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.0002*cos(AnguloAbertura) + 0.02*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0002*sin(AnguloAbertura) - 0.02*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((((Altura - 0.34)) + 0.045)) - 0.004)",
+          depth: "0.008",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 3 - parafuso do batente 3",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) - 0.0008",
+              v: "(WallThickness/2 + 0.006) - 0.028",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) - 0.0002",
+              v: "(WallThickness/2 + 0.006) - 0.028",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) - 0.0002",
+              v: "(WallThickness/2 + 0.006) - 0.02",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) - 0.0008",
+              v: "(WallThickness/2 + 0.006) - 0.02",
+            ),
+          ],
+          offset: "(((((Altura - 0.34)) + 0.075)) - 0.004)",
+          depth: "0.008",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Dobradiça 3 - parafuso da folha 3",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + 0.0002*cos(AnguloAbertura) + 0.028*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0002*sin(AnguloAbertura) - 0.028*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.0008*cos(AnguloAbertura) + 0.028*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0008*sin(AnguloAbertura) - 0.028*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.0008*cos(AnguloAbertura) + 0.02*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0008*sin(AnguloAbertura) - 0.02*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + 0.0002*cos(AnguloAbertura) + 0.02*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + 0.0002*sin(AnguloAbertura) - 0.02*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((((Altura - 0.34)) + 0.075)) - 0.004)",
+          depth: "0.008",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Maçaneta - roseta (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) - 0.026))*cos(AnguloAbertura) - ((-0.006))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) - 0.026))*sin(AnguloAbertura) + ((-0.006))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) + 0.026))*cos(AnguloAbertura) - ((-0.006))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) + 0.026))*sin(AnguloAbertura) + ((-0.006))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) + 0.026))*cos(AnguloAbertura) - ((0.002))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) + 0.026))*sin(AnguloAbertura) + ((0.002))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) - 0.026))*cos(AnguloAbertura) - ((0.002))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) - 0.026))*sin(AnguloAbertura) + ((0.002))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(0.974)",
+          depth: "0.052",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Maçaneta - anel da roseta (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) - 0.017))*cos(AnguloAbertura) - ((0.002))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) - 0.017))*sin(AnguloAbertura) + ((0.002))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) + 0.017))*cos(AnguloAbertura) - ((0.002))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) + 0.017))*sin(AnguloAbertura) + ((0.002))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) + 0.017))*cos(AnguloAbertura) - ((0.0035))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) + 0.017))*sin(AnguloAbertura) + ((0.0035))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) - 0.017))*cos(AnguloAbertura) - ((0.0035))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) - 0.017))*sin(AnguloAbertura) + ((0.0035))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(0.983)",
+          depth: "0.034",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Maçaneta - pescoço (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) - 0.0095))*cos(AnguloAbertura) - ((0.0035))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) - 0.0095))*sin(AnguloAbertura) + ((0.0035))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) + 0.0095))*cos(AnguloAbertura) - ((0.0035))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) + 0.0095))*sin(AnguloAbertura) + ((0.0035))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) + 0.0095))*cos(AnguloAbertura) - ((0.05))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) + 0.0095))*sin(AnguloAbertura) + ((0.05))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) - 0.0095))*cos(AnguloAbertura) - ((0.05))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) - 0.0095))*sin(AnguloAbertura) + ((0.05))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(0.9905)",
+          depth: "0.019",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Maçaneta - alavanca (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) + 0.0095))*cos(AnguloAbertura) - ((0.034))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) + 0.0095))*sin(AnguloAbertura) + ((0.034))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) + 0.0095))*cos(AnguloAbertura) - ((0.05))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) + 0.0095))*sin(AnguloAbertura) + ((0.05))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) - 0.117))*cos(AnguloAbertura) - ((0.05))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) - 0.117))*sin(AnguloAbertura) + ((0.05))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) - 0.125))*cos(AnguloAbertura) - ((0.046))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) - 0.125))*sin(AnguloAbertura) + ((0.046))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) - 0.125))*cos(AnguloAbertura) - ((0.04))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) - 0.125))*sin(AnguloAbertura) + ((0.04))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) - 0.095))*cos(AnguloAbertura) - ((0.034))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) - 0.095))*sin(AnguloAbertura) + ((0.034))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(0.991)",
+          depth: "0.018",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Maçaneta - entrada de chave (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) - 0.026))*cos(AnguloAbertura) - ((-0.006))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) - 0.026))*sin(AnguloAbertura) + ((-0.006))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) + 0.026))*cos(AnguloAbertura) - ((-0.006))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) + 0.026))*sin(AnguloAbertura) + ((-0.006))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) + 0.026))*cos(AnguloAbertura) - ((0.002))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) + 0.026))*sin(AnguloAbertura) + ((0.002))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) - 0.026))*cos(AnguloAbertura) - ((0.002))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) - 0.026))*sin(AnguloAbertura) + ((0.002))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((0.925)) - 0.026)",
+          depth: "0.052",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Maçaneta - cilindro (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) - 0.0085))*cos(AnguloAbertura) - ((0.002))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) - 0.0085))*sin(AnguloAbertura) + ((0.002))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) + 0.0085))*cos(AnguloAbertura) - ((0.002))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) + 0.0085))*sin(AnguloAbertura) + ((0.002))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) + 0.0085))*cos(AnguloAbertura) - ((0.006))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) + 0.0085))*sin(AnguloAbertura) + ((0.006))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) - 0.0085))*cos(AnguloAbertura) - ((0.006))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) - 0.0085))*sin(AnguloAbertura) + ((0.006))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((0.925)) - 0.016)",
+          depth: "0.032",
+        ),
+        material: "Latão",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Maçaneta - fenda da chave (frente)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) - 0.001))*cos(AnguloAbertura) - ((0.006))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) - 0.001))*sin(AnguloAbertura) + ((0.006))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) + 0.001))*cos(AnguloAbertura) - ((0.006))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) + 0.001))*sin(AnguloAbertura) + ((0.006))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) + 0.001))*cos(AnguloAbertura) - ((0.0065))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) + 0.001))*sin(AnguloAbertura) + ((0.0065))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) - 0.001))*cos(AnguloAbertura) - ((0.0065))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) - 0.001))*sin(AnguloAbertura) + ((0.0065))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((0.925)) - 0.007)",
+          depth: "0.012",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Maçaneta - roseta (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) - 0.026))*cos(AnguloAbertura) - ((-0.049))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) - 0.026))*sin(AnguloAbertura) + ((-0.049))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) + 0.026))*cos(AnguloAbertura) - ((-0.049))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) + 0.026))*sin(AnguloAbertura) + ((-0.049))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) + 0.026))*cos(AnguloAbertura) - ((-0.041))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) + 0.026))*sin(AnguloAbertura) + ((-0.041))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) - 0.026))*cos(AnguloAbertura) - ((-0.041))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) - 0.026))*sin(AnguloAbertura) + ((-0.041))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(0.974)",
+          depth: "0.052",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Maçaneta - anel da roseta (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) - 0.017))*cos(AnguloAbertura) - ((-0.0505))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) - 0.017))*sin(AnguloAbertura) + ((-0.0505))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) + 0.017))*cos(AnguloAbertura) - ((-0.0505))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) + 0.017))*sin(AnguloAbertura) + ((-0.0505))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) + 0.017))*cos(AnguloAbertura) - ((-0.049))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) + 0.017))*sin(AnguloAbertura) + ((-0.049))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) - 0.017))*cos(AnguloAbertura) - ((-0.049))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) - 0.017))*sin(AnguloAbertura) + ((-0.049))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(0.983)",
+          depth: "0.034",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Maçaneta - pescoço (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) - 0.0095))*cos(AnguloAbertura) - ((-0.097))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) - 0.0095))*sin(AnguloAbertura) + ((-0.097))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) + 0.0095))*cos(AnguloAbertura) - ((-0.097))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) + 0.0095))*sin(AnguloAbertura) + ((-0.097))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) + 0.0095))*cos(AnguloAbertura) - ((-0.0505))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) + 0.0095))*sin(AnguloAbertura) + ((-0.0505))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) - 0.0095))*cos(AnguloAbertura) - ((-0.0505))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) - 0.0095))*sin(AnguloAbertura) + ((-0.0505))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(0.9905)",
+          depth: "0.019",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Maçaneta - alavanca (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) - 0.095))*cos(AnguloAbertura) - ((-0.081))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) - 0.095))*sin(AnguloAbertura) + ((-0.081))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) - 0.125))*cos(AnguloAbertura) - ((-0.087))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) - 0.125))*sin(AnguloAbertura) + ((-0.087))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) - 0.125))*cos(AnguloAbertura) - ((-0.093))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) - 0.125))*sin(AnguloAbertura) + ((-0.093))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) - 0.117))*cos(AnguloAbertura) - ((-0.097))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) - 0.117))*sin(AnguloAbertura) + ((-0.097))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) + 0.0095))*cos(AnguloAbertura) - ((-0.097))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) + 0.0095))*sin(AnguloAbertura) + ((-0.097))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) + 0.0095))*cos(AnguloAbertura) - ((-0.081))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) + 0.0095))*sin(AnguloAbertura) + ((-0.081))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(0.991)",
+          depth: "0.018",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Maçaneta - entrada de chave (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) - 0.026))*cos(AnguloAbertura) - ((-0.049))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) - 0.026))*sin(AnguloAbertura) + ((-0.049))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) + 0.026))*cos(AnguloAbertura) - ((-0.049))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) + 0.026))*sin(AnguloAbertura) + ((-0.049))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) + 0.026))*cos(AnguloAbertura) - ((-0.041))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) + 0.026))*sin(AnguloAbertura) + ((-0.041))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) - 0.026))*cos(AnguloAbertura) - ((-0.041))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) - 0.026))*sin(AnguloAbertura) + ((-0.041))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((0.925)) - 0.026)",
+          depth: "0.052",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Maçaneta - base da tranqueta (fundo)",
+        shape: Cylinder(
+          x: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) - 0.055))*cos(AnguloAbertura) - ((-0.052))*sin(AnguloAbertura)",
+          y: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) - 0.055))*sin(AnguloAbertura) + ((-0.052))*cos(AnguloAbertura)",
+          z: "(((0.925)) - 0.006)",
+          radius: "0.003",
+          height: "0.012",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Maçaneta - base do trinco (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) - 0.011))*cos(AnguloAbertura) - ((-0.055))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) - 0.011))*sin(AnguloAbertura) + ((-0.055))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) + 0.011))*cos(AnguloAbertura) - ((-0.055))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) + 0.011))*sin(AnguloAbertura) + ((-0.055))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) + 0.011))*cos(AnguloAbertura) - ((-0.049))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) + 0.011))*sin(AnguloAbertura) + ((-0.049))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) - 0.011))*cos(AnguloAbertura) - ((-0.049))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) - 0.011))*sin(AnguloAbertura) + ((-0.049))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((0.925)) - 0.011)",
+          depth: "0.022",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Maçaneta - tranqueta (fundo)",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) - 0.004))*cos(AnguloAbertura) - ((-0.071))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) - 0.004))*sin(AnguloAbertura) + ((-0.071))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) + 0.004))*cos(AnguloAbertura) - ((-0.071))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) + 0.004))*sin(AnguloAbertura) + ((-0.071))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) + 0.004))*cos(AnguloAbertura) - ((-0.055))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) + 0.004))*sin(AnguloAbertura) + ((-0.055))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) - 0.055)) - 0.004))*cos(AnguloAbertura) - ((-0.055))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((((Largura - 0.075)) - 0.055)) - 0.004))*sin(AnguloAbertura) + ((-0.055))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(((0.925)) - 0.016)",
+          depth: "0.032",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fechadura - testa",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) - 0.002))*cos(AnguloAbertura) - ((-0.0345))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) - 0.002))*sin(AnguloAbertura) + ((-0.0345))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) + 0.0006))*cos(AnguloAbertura) - ((-0.0345))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) + 0.0006))*sin(AnguloAbertura) + ((-0.0345))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) + 0.0006))*cos(AnguloAbertura) - ((-0.0125))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) + 0.0006))*sin(AnguloAbertura) + ((-0.0125))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) - 0.002))*cos(AnguloAbertura) - ((-0.0125))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) - 0.002))*sin(AnguloAbertura) + ((-0.0125))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(0.865)",
+          depth: "0.235",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fechadura - lingueta",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((Largura - 0.075))*cos(AnguloAbertura) - ((-0.0295))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((Largura - 0.075))*sin(AnguloAbertura) + ((-0.0295))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) + 0.011))*cos(AnguloAbertura) - ((-0.0295))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) + 0.011))*sin(AnguloAbertura) + ((-0.0295))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) + 0.004))*cos(AnguloAbertura) - ((-0.0175))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) + 0.004))*sin(AnguloAbertura) + ((-0.0175))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((Largura - 0.075))*cos(AnguloAbertura) - ((-0.0175))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((Largura - 0.075))*sin(AnguloAbertura) + ((-0.0175))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(0.988)",
+          depth: "0.024",
+        ),
+        material: "Latão",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fechadura - trinco",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) - 0.004))*cos(AnguloAbertura) - ((-0.0285))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) - 0.004))*sin(AnguloAbertura) + ((-0.0285))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) + 0.0012))*cos(AnguloAbertura) - ((-0.0285))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) + 0.0012))*sin(AnguloAbertura) + ((-0.0285))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) + 0.0012))*cos(AnguloAbertura) - ((-0.0185))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) + 0.0012))*sin(AnguloAbertura) + ((-0.0185))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) - 0.004))*cos(AnguloAbertura) - ((-0.0185))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) - 0.004))*sin(AnguloAbertura) + ((-0.0185))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(0.905)",
+          depth: "0.04",
+        ),
+        material: "Latão",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fechadura - parafuso da testa 1",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) + 0.0006))*cos(AnguloAbertura) - ((-0.0275))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) + 0.0006))*sin(AnguloAbertura) + ((-0.0275))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) + 0.001))*cos(AnguloAbertura) - ((-0.0275))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) + 0.001))*sin(AnguloAbertura) + ((-0.0275))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) + 0.001))*cos(AnguloAbertura) - ((-0.0195))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) + 0.001))*sin(AnguloAbertura) + ((-0.0195))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) + 0.0006))*cos(AnguloAbertura) - ((-0.0195))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) + 0.0006))*sin(AnguloAbertura) + ((-0.0195))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(0.872)",
+          depth: "0.008",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fechadura - parafuso da testa 2",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) + 0.0006))*cos(AnguloAbertura) - ((-0.0275))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) + 0.0006))*sin(AnguloAbertura) + ((-0.0275))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) + 0.001))*cos(AnguloAbertura) - ((-0.0275))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) + 0.001))*sin(AnguloAbertura) + ((-0.0275))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) + 0.001))*cos(AnguloAbertura) - ((-0.0195))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) + 0.001))*sin(AnguloAbertura) + ((-0.0195))*cos(AnguloAbertura)",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) + 0.0006))*cos(AnguloAbertura) - ((-0.0195))*sin(AnguloAbertura)",
+              v: "(WallThickness/2 + 0.006) + ((((Largura - 0.075)) + 0.0006))*sin(AnguloAbertura) + ((-0.0195))*cos(AnguloAbertura)",
+            ),
+          ],
+          offset: "(1.088)",
+          depth: "0.008",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fechadura - contratesta",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) + 0.003)) - 0.0014))",
+              v: "(WallThickness/2 + 0.006) + ((-0.0345))",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) + 0.003))",
+              v: "(WallThickness/2 + 0.006) + ((-0.0345))",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((Largura - 0.075)) + 0.003))",
+              v: "(WallThickness/2 + 0.006) + ((0.0075))",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) + 0.003)) - 0.0014))",
+              v: "(WallThickness/2 + 0.006) + ((0.0075))",
+            ),
+          ],
+          offset: "(0.885)",
+          depth: "0.17",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fechadura - furo da lingueta",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) + 0.003)) - 0.0017))",
+              v: "(WallThickness/2 + 0.006) + ((-0.0305))",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) + 0.003)) - 0.0014))",
+              v: "(WallThickness/2 + 0.006) + ((-0.0305))",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) + 0.003)) - 0.0014))",
+              v: "(WallThickness/2 + 0.006) + ((-0.0165))",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) + 0.003)) - 0.0017))",
+              v: "(WallThickness/2 + 0.006) + ((-0.0165))",
+            ),
+          ],
+          offset: "(0.984)",
+          depth: "0.032",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Fechadura - furo do trinco",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) + 0.003)) - 0.0017))",
+              v: "(WallThickness/2 + 0.006) + ((-0.0295))",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) + 0.003)) - 0.0014))",
+              v: "(WallThickness/2 + 0.006) + ((-0.0295))",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) + 0.003)) - 0.0014))",
+              v: "(WallThickness/2 + 0.006) + ((-0.0175))",
+            ),
+            (
+              u: "(-Largura/2 + 0.037) + ((((((Largura - 0.075)) + 0.003)) - 0.0017))",
+              v: "(WallThickness/2 + 0.006) + ((-0.0175))",
+            ),
+          ],
+          offset: "(0.902)",
+          depth: "0.046",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
       ),
     ],
     opening: Some((
@@ -95,6 +3927,7 @@
       name: "Porta de abrir 60 x 210",
       values: {
         "Altura": 2.1,
+        "AnguloAbertura": 0.0,
         "Largura": 0.6,
       },
       info: (
@@ -114,6 +3947,7 @@
       name: "Porta de abrir 70 x 210",
       values: {
         "Altura": 2.1,
+        "AnguloAbertura": 0.0,
         "Largura": 0.7,
       },
       info: (
@@ -133,6 +3967,7 @@
       name: "Porta de abrir 80 x 210",
       values: {
         "Altura": 2.1,
+        "AnguloAbertura": 0.0,
         "Largura": 0.8,
       },
       info: (
@@ -152,6 +3987,7 @@
       name: "Porta de abrir 90 x 210",
       values: {
         "Altura": 2.1,
+        "AnguloAbertura": 0.0,
         "Largura": 0.9,
       },
       info: (
@@ -218,11 +4054,11 @@
       ),
     ),
     (
-      name: "Metal cromado",
-      color: (205, 205, 210),
+      name: "Borracha cinza",
+      color: (150, 152, 154),
       identity: (
         description: "",
-        class: Generic,
+        class: Plastic,
         comments: "",
         keywords: "",
         manufacturer: "",
@@ -249,8 +4085,200 @@
         ),
       ),
       appearance: (
-        color: (205, 205, 210),
+        color: (150, 152, 154),
         finish: Matte,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Inox escovado",
+      color: (198, 200, 203),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (198, 200, 203),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Cromado",
+      color: (226, 229, 233),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (226, 229, 233),
+        finish: Polished,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Latão",
+      color: (192, 160, 84),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (192, 160, 84),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Plástico preto",
+      color: (34, 34, 37),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (34, 34, 37),
+        finish: Satin,
         description: "",
       ),
       physical: (

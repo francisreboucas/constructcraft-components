@@ -84,11 +84,21 @@ def build_script(src: dict, out: Path, existing_materials: set[str]) -> list[dic
             p["value"] = values.get(p["name"], p["value"])
         return d
 
-    steps = [
-        {"command": "material_create", "args": m}
-        for m in src.get("materials", [])
-        if m["name"] not in existing_materials
-    ]
+    steps = []
+    for m in src.get("materials", []):
+        if m["name"] in existing_materials:
+            continue
+        steps.append({"command": "material_create", "args": {"name": m["name"], "color": m["color"]}})
+        # Optional fields beyond the color: what kind of material it is and how it looks.
+        values: dict = {}
+        if "class" in m:
+            values["identity"] = {"class": m["class"]}
+        if "finish" in m:
+            values["appearance"] = {"finish": m["finish"]}
+        if m.get("transparency"):
+            values["graphics"] = {"transparency": m["transparency"]}
+        if values:
+            steps.append({"command": "material_set", "args": {"material": m["name"], "values": values}})
     first = types[0]
     steps.append({"command": "component_create", "args": {"name": src["component"], "def": def_with(first.get("values", {}))}})
     steps.append({"command": "type_set", "args": {"type": src["component"], "name": first["name"], "info": first.get("info", {})}})
