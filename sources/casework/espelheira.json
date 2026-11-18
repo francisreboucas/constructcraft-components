@@ -1,0 +1,2449 @@
+{
+  "component": "Espelheira",
+  "def": {
+    "kind": "Casework",
+    "params": [
+      {
+        "name": "Largura",
+        "value": 0.6,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Profundidade",
+        "value": 0.13,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Altura",
+        "value": 0.6,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Elevacao",
+        "value": 1.2,
+        "kind": "Length",
+        "instance": true
+      },
+      {
+        "name": "AnguloPortas",
+        "value": 0,
+        "kind": "Angle",
+        "instance": true
+      }
+    ],
+    "items": [
+      {
+        "name": "Espelheira simplificada",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2)",
+            "y": "(-Profundidade)",
+            "z": "Elevacao",
+            "width": "Largura",
+            "depth": "Profundidade",
+            "height": "Altura"
+          }
+        },
+        "material": "Espelho",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Lateral esquerda",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2)",
+            "y": "(((-Profundidade) + 0.019) + 0.001)",
+            "z": "(Elevacao + 0.02)",
+            "width": "0.015",
+            "depth": "(-(((-Profundidade) + 0.019) + 0.001))",
+            "height": "Altura - 0.02"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lateral direita",
+        "shape": {
+          "Box": {
+            "x": "(Largura/2) - 0.015",
+            "y": "(((-Profundidade) + 0.019) + 0.001)",
+            "z": "(Elevacao + 0.02)",
+            "width": "0.015",
+            "depth": "(-(((-Profundidade) + 0.019) + 0.001))",
+            "height": "Altura - 0.02"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampo",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.015)",
+            "y": "(((-Profundidade) + 0.019) + 0.001)",
+            "z": "(Elevacao + Altura) - 0.015",
+            "width": "(Largura - 2*0.015)",
+            "depth": "(-(((-Profundidade) + 0.019) + 0.001))",
+            "height": "0.015"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Base",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.015)",
+            "y": "(((-Profundidade) + 0.019) + 0.001)",
+            "z": "(Elevacao + 0.02)",
+            "width": "(Largura - 2*0.015)",
+            "depth": "(-(((-Profundidade) + 0.019) + 0.001))",
+            "height": "0.015"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Fundo",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.015)",
+            "y": "-0.006",
+            "z": "((Elevacao + 0.02) + 0.015)",
+            "width": "(Largura - 2*0.015)",
+            "depth": "0.003",
+            "height": "(Altura - 0.02 - 2*0.015)"
+          }
+        },
+        "material": "Laminado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travessa de fixação",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.015)",
+            "y": "-0.003",
+            "z": "(Elevacao + Altura) - 0.015 - 0.08",
+            "width": "(Largura - 2*0.015)",
+            "depth": "0.003",
+            "height": "0.08"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso de fixação esquerdo",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.015) + 0.05",
+                "v": "-0.0072"
+              },
+              {
+                "u": "(((-Largura/2) + 0.015) + 0.05) + 0.0045",
+                "v": "-0.0072"
+              },
+              {
+                "u": "(((-Largura/2) + 0.015) + 0.05) + 0.0045",
+                "v": "(-0.0072) + 0.0012"
+              },
+              {
+                "u": "((-Largura/2) + 0.015) + 0.05",
+                "v": "(-0.0072) + 0.0012"
+              }
+            ],
+            "offset": "(Elevacao + Altura) - 0.015 - 0.04",
+            "axis": "((-Largura/2) + 0.015) + 0.05",
+            "angle": "360"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Capa do parafuso esquerdo",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2) + 0.015) + 0.05",
+                "v": "-0.0082"
+              },
+              {
+                "u": "(((-Largura/2) + 0.015) + 0.05) + 0.0065",
+                "v": "-0.0082"
+              },
+              {
+                "u": "(((-Largura/2) + 0.015) + 0.05) + 0.0065",
+                "v": "(-0.0082) + 0.001"
+              },
+              {
+                "u": "((-Largura/2) + 0.015) + 0.05",
+                "v": "(-0.0082) + 0.001"
+              }
+            ],
+            "offset": "(Elevacao + Altura) - 0.015 - 0.04",
+            "axis": "((-Largura/2) + 0.015) + 0.05",
+            "angle": "360"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso de fixação direito",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(Largura/2) - 0.015 - 0.05",
+                "v": "-0.0072"
+              },
+              {
+                "u": "((Largura/2) - 0.015 - 0.05) + 0.0045",
+                "v": "-0.0072"
+              },
+              {
+                "u": "((Largura/2) - 0.015 - 0.05) + 0.0045",
+                "v": "(-0.0072) + 0.0012"
+              },
+              {
+                "u": "(Largura/2) - 0.015 - 0.05",
+                "v": "(-0.0072) + 0.0012"
+              }
+            ],
+            "offset": "(Elevacao + Altura) - 0.015 - 0.04",
+            "axis": "(Largura/2) - 0.015 - 0.05",
+            "angle": "360"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Capa do parafuso direito",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(Largura/2) - 0.015 - 0.05",
+                "v": "-0.0082"
+              },
+              {
+                "u": "((Largura/2) - 0.015 - 0.05) + 0.0065",
+                "v": "-0.0082"
+              },
+              {
+                "u": "((Largura/2) - 0.015 - 0.05) + 0.0065",
+                "v": "(-0.0082) + 0.001"
+              },
+              {
+                "u": "(Largura/2) - 0.015 - 0.05",
+                "v": "(-0.0082) + 0.001"
+              }
+            ],
+            "offset": "(Elevacao + Altura) - 0.015 - 0.04",
+            "axis": "(Largura/2) - 0.015 - 0.05",
+            "angle": "360"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Fita de borda da base",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.015)",
+            "y": "(((-Profundidade) + 0.019) + 0.001) - 0.0005",
+            "z": "(Elevacao + 0.02)",
+            "width": "(Largura - 2*0.015)",
+            "depth": "0.0005",
+            "height": "0.015"
+          }
+        },
+        "material": "Laminado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Fita de borda do tampo",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.015)",
+            "y": "(((-Profundidade) + 0.019) + 0.001) - 0.0005",
+            "z": "(Elevacao + Altura) - 0.015",
+            "width": "(Largura - 2*0.015)",
+            "depth": "0.0005",
+            "height": "0.015"
+          }
+        },
+        "material": "Laminado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Perfil da luz de LED",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.015) + 0.02",
+            "y": "(((-Profundidade) + 0.019) + 0.001) + 0.012",
+            "z": "(Elevacao + 0.02) - 0.008",
+            "width": "(Largura - 2*0.015) - 0.04",
+            "depth": "0.016",
+            "height": "0.008"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Difusor da luz de LED",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.015) + 0.022",
+            "y": "(((-Profundidade) + 0.019) + 0.001) + 0.014",
+            "z": "(Elevacao + 0.02) - 0.0095",
+            "width": "(Largura - 2*0.015) - 0.044",
+            "depth": "0.012",
+            "height": "0.0015"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa do perfil esquerda",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.015) + 0.018",
+            "y": "(((-Profundidade) + 0.019) + 0.001) + 0.012",
+            "z": "(Elevacao + 0.02) - 0.0095",
+            "width": "0.002",
+            "depth": "0.016",
+            "height": "0.0095"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa do perfil direita",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.015) + (Largura - 2*0.015) - 0.02",
+            "y": "(((-Profundidade) + 0.019) + 0.001) + 0.012",
+            "z": "(Elevacao + 0.02) - 0.0095",
+            "width": "0.002",
+            "depth": "0.016",
+            "height": "0.0095"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cabo da luz de LED",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.015) + (Largura - 2*0.015) - 0.03",
+            "y": "(((-Profundidade) + 0.019) + 0.001) + 0.028",
+            "z": "(Elevacao + 0.02) - 0.004",
+            "width": "0.004",
+            "depth": "(-(((-Profundidade) + 0.019) + 0.001)) - 0.034",
+            "height": "0.004"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Prateleira de vidro 1",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.015) + 0.002",
+            "y": "((((-Profundidade) + 0.019) + 0.001) + 0.012)",
+            "z": "(((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.3333 - 0.003)",
+            "width": "(Largura - 2*0.015) - 0.004",
+            "depth": "((-(((-Profundidade) + 0.019) + 0.001)) - 0.022)",
+            "height": "0.006"
+          }
+        },
+        "material": "Vidro temperado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte da prateleira 1 - esquerdo 1",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((((-Profundidade) + 0.019) + 0.001) + 0.012) + 0.02) - 0.003",
+                "v": "(((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.3333 - 0.003) - 0.003",
+                "radius": "0.003"
+              },
+              {
+                "u": "(((((-Profundidade) + 0.019) + 0.001) + 0.012) + 0.02) + 0.003",
+                "v": "(((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.3333 - 0.003) - 0.003",
+                "radius": "0.003"
+              }
+            ],
+            "offset": "((-Largura/2) + 0.015)",
+            "depth": "0.01"
+          }
+        },
+        "material": "Plástico translúcido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte da prateleira 1 - direito 1",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((((-Profundidade) + 0.019) + 0.001) + 0.012) + 0.02) - 0.003",
+                "v": "(((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.3333 - 0.003) - 0.003",
+                "radius": "0.003"
+              },
+              {
+                "u": "(((((-Profundidade) + 0.019) + 0.001) + 0.012) + 0.02) + 0.003",
+                "v": "(((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.3333 - 0.003) - 0.003",
+                "radius": "0.003"
+              }
+            ],
+            "offset": "(Largura/2) - 0.015 - 0.01",
+            "depth": "0.01"
+          }
+        },
+        "material": "Plástico translúcido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte da prateleira 1 - esquerdo 2",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((((-Profundidade) + 0.019) + 0.001) + 0.012) + ((-(((-Profundidade) + 0.019) + 0.001)) - 0.022) - 0.02) - 0.003",
+                "v": "(((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.3333 - 0.003) - 0.003",
+                "radius": "0.003"
+              },
+              {
+                "u": "(((((-Profundidade) + 0.019) + 0.001) + 0.012) + ((-(((-Profundidade) + 0.019) + 0.001)) - 0.022) - 0.02) + 0.003",
+                "v": "(((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.3333 - 0.003) - 0.003",
+                "radius": "0.003"
+              }
+            ],
+            "offset": "((-Largura/2) + 0.015)",
+            "depth": "0.01"
+          }
+        },
+        "material": "Plástico translúcido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte da prateleira 1 - direito 2",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((((-Profundidade) + 0.019) + 0.001) + 0.012) + ((-(((-Profundidade) + 0.019) + 0.001)) - 0.022) - 0.02) - 0.003",
+                "v": "(((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.3333 - 0.003) - 0.003",
+                "radius": "0.003"
+              },
+              {
+                "u": "(((((-Profundidade) + 0.019) + 0.001) + 0.012) + ((-(((-Profundidade) + 0.019) + 0.001)) - 0.022) - 0.02) + 0.003",
+                "v": "(((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.3333 - 0.003) - 0.003",
+                "radius": "0.003"
+              }
+            ],
+            "offset": "(Largura/2) - 0.015 - 0.01",
+            "depth": "0.01"
+          }
+        },
+        "material": "Plástico translúcido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Prateleira de vidro 2",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.015) + 0.002",
+            "y": "((((-Profundidade) + 0.019) + 0.001) + 0.012)",
+            "z": "(((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.6667 - 0.003)",
+            "width": "(Largura - 2*0.015) - 0.004",
+            "depth": "((-(((-Profundidade) + 0.019) + 0.001)) - 0.022)",
+            "height": "0.006"
+          }
+        },
+        "material": "Vidro temperado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte da prateleira 2 - esquerdo 1",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((((-Profundidade) + 0.019) + 0.001) + 0.012) + 0.02) - 0.003",
+                "v": "(((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.6667 - 0.003) - 0.003",
+                "radius": "0.003"
+              },
+              {
+                "u": "(((((-Profundidade) + 0.019) + 0.001) + 0.012) + 0.02) + 0.003",
+                "v": "(((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.6667 - 0.003) - 0.003",
+                "radius": "0.003"
+              }
+            ],
+            "offset": "((-Largura/2) + 0.015)",
+            "depth": "0.01"
+          }
+        },
+        "material": "Plástico translúcido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte da prateleira 2 - direito 1",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((((-Profundidade) + 0.019) + 0.001) + 0.012) + 0.02) - 0.003",
+                "v": "(((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.6667 - 0.003) - 0.003",
+                "radius": "0.003"
+              },
+              {
+                "u": "(((((-Profundidade) + 0.019) + 0.001) + 0.012) + 0.02) + 0.003",
+                "v": "(((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.6667 - 0.003) - 0.003",
+                "radius": "0.003"
+              }
+            ],
+            "offset": "(Largura/2) - 0.015 - 0.01",
+            "depth": "0.01"
+          }
+        },
+        "material": "Plástico translúcido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte da prateleira 2 - esquerdo 2",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((((-Profundidade) + 0.019) + 0.001) + 0.012) + ((-(((-Profundidade) + 0.019) + 0.001)) - 0.022) - 0.02) - 0.003",
+                "v": "(((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.6667 - 0.003) - 0.003",
+                "radius": "0.003"
+              },
+              {
+                "u": "(((((-Profundidade) + 0.019) + 0.001) + 0.012) + ((-(((-Profundidade) + 0.019) + 0.001)) - 0.022) - 0.02) + 0.003",
+                "v": "(((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.6667 - 0.003) - 0.003",
+                "radius": "0.003"
+              }
+            ],
+            "offset": "((-Largura/2) + 0.015)",
+            "depth": "0.01"
+          }
+        },
+        "material": "Plástico translúcido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte da prateleira 2 - direito 2",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(((((-Profundidade) + 0.019) + 0.001) + 0.012) + ((-(((-Profundidade) + 0.019) + 0.001)) - 0.022) - 0.02) - 0.003",
+                "v": "(((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.6667 - 0.003) - 0.003",
+                "radius": "0.003"
+              },
+              {
+                "u": "(((((-Profundidade) + 0.019) + 0.001) + 0.012) + ((-(((-Profundidade) + 0.019) + 0.001)) - 0.022) - 0.02) + 0.003",
+                "v": "(((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.6667 - 0.003) - 0.003",
+                "radius": "0.003"
+              }
+            ],
+            "offset": "(Largura/2) - 0.015 - 0.01",
+            "depth": "0.01"
+          }
+        },
+        "material": "Plástico translúcido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porta 1",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2) + 0.0005)) + 0*cos(AnguloPortas) - 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - 0*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0005)) + ((Largura/2 - 0.0015))*cos(AnguloPortas) - 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - ((Largura/2 - 0.0015))*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0005)) + ((Largura/2 - 0.0015))*cos(AnguloPortas) - 0.015*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - ((Largura/2 - 0.0015))*sin(AnguloPortas) - 0.015*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0005)) + 0*cos(AnguloPortas) - 0.015*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - 0*sin(AnguloPortas) - 0.015*cos(AnguloPortas)"
+              }
+            ],
+            "offset": "Elevacao",
+            "depth": "Altura"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Espelho da porta 1",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2) + 0.0005)) + 0.0015*cos(AnguloPortas) - 0.015*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - 0.0015*sin(AnguloPortas) - 0.015*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0005)) + ((Largura/2 - 0.0015) - 0.0015)*cos(AnguloPortas) - 0.015*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - ((Largura/2 - 0.0015) - 0.0015)*sin(AnguloPortas) - 0.015*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0005)) + ((Largura/2 - 0.0015) - 0.0015)*cos(AnguloPortas) - 0.019*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - ((Largura/2 - 0.0015) - 0.0015)*sin(AnguloPortas) - 0.019*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0005)) + 0.0015*cos(AnguloPortas) - 0.019*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - 0.0015*sin(AnguloPortas) - 0.019*cos(AnguloPortas)"
+              }
+            ],
+            "offset": "Elevacao + 0.0015",
+            "depth": "Altura - 0.003"
+          }
+        },
+        "material": "Espelho",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Fita adesiva do espelho 1",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2) + 0.0005)) + 0.03*cos(AnguloPortas) - 0.0145*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - 0.03*sin(AnguloPortas) - 0.0145*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0005)) + ((Largura/2 - 0.0015) - 0.03)*cos(AnguloPortas) - 0.0145*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - ((Largura/2 - 0.0015) - 0.03)*sin(AnguloPortas) - 0.0145*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0005)) + ((Largura/2 - 0.0015) - 0.03)*cos(AnguloPortas) - 0.015*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - ((Largura/2 - 0.0015) - 0.03)*sin(AnguloPortas) - 0.015*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0005)) + 0.03*cos(AnguloPortas) - 0.015*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - 0.03*sin(AnguloPortas) - 0.015*cos(AnguloPortas)"
+              }
+            ],
+            "offset": "Elevacao + 0.05",
+            "depth": "Altura - 0.1"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça superior da porta 1 - caneca",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2) + 0.0005)) + 0.005*cos(AnguloPortas) - (-0.003)*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - 0.005*sin(AnguloPortas) - (-0.003)*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0005)) + 0.04*cos(AnguloPortas) - (-0.003)*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - 0.04*sin(AnguloPortas) - (-0.003)*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0005)) + 0.04*cos(AnguloPortas) - 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - 0.04*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0005)) + 0.005*cos(AnguloPortas) - 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - 0.005*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              }
+            ],
+            "offset": "(Elevacao + Altura) - 0.09 - 0.025",
+            "depth": "0.05"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça superior da porta 1 - braço",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.015)",
+            "y": "((-Profundidade) + 0.019) + 0.0035",
+            "z": "(Elevacao + Altura) - 0.09 - 0.01",
+            "width": "0.012",
+            "depth": "0.055",
+            "height": "0.02"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça superior da porta 1 - calço",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.015)",
+            "y": "((-Profundidade) + 0.019) + 0.022",
+            "z": "(Elevacao + Altura) - 0.09 - 0.0225",
+            "width": "0.004",
+            "depth": "0.05",
+            "height": "0.045"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça inferior da porta 1 - caneca",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2) + 0.0005)) + 0.005*cos(AnguloPortas) - (-0.003)*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - 0.005*sin(AnguloPortas) - (-0.003)*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0005)) + 0.04*cos(AnguloPortas) - (-0.003)*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - 0.04*sin(AnguloPortas) - (-0.003)*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0005)) + 0.04*cos(AnguloPortas) - 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - 0.04*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0005)) + 0.005*cos(AnguloPortas) - 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - 0.005*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              }
+            ],
+            "offset": "(Elevacao + 0.02) + 0.09 - 0.025",
+            "depth": "0.05"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça inferior da porta 1 - braço",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.015)",
+            "y": "((-Profundidade) + 0.019) + 0.0035",
+            "z": "(Elevacao + 0.02) + 0.09 - 0.01",
+            "width": "0.012",
+            "depth": "0.055",
+            "height": "0.02"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça inferior da porta 1 - calço",
+        "shape": {
+          "Box": {
+            "x": "((-Largura/2) + 0.015)",
+            "y": "((-Profundidade) + 0.019) + 0.022",
+            "z": "(Elevacao + 0.02) + 0.09 - 0.0225",
+            "width": "0.004",
+            "depth": "0.05",
+            "height": "0.045"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Batente inferior da porta 1",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2) + 0.0005)) + ((Largura/2 - 0.0015) - 0.03)*cos(AnguloPortas) - (-0.0012)*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - ((Largura/2 - 0.0015) - 0.03)*sin(AnguloPortas) - (-0.0012)*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0005)) + ((Largura/2 - 0.0015) - 0.022)*cos(AnguloPortas) - (-0.0012)*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - ((Largura/2 - 0.0015) - 0.022)*sin(AnguloPortas) - (-0.0012)*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0005)) + ((Largura/2 - 0.0015) - 0.022)*cos(AnguloPortas) - 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - ((Largura/2 - 0.0015) - 0.022)*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0005)) + ((Largura/2 - 0.0015) - 0.03)*cos(AnguloPortas) - 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - ((Largura/2 - 0.0015) - 0.03)*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              }
+            ],
+            "offset": "(Elevacao + 0.02) + 0.004",
+            "depth": "0.008"
+          }
+        },
+        "material": "Plástico translúcido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Batente superior da porta 1",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((-Largura/2) + 0.0005)) + ((Largura/2 - 0.0015) - 0.03)*cos(AnguloPortas) - (-0.0012)*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - ((Largura/2 - 0.0015) - 0.03)*sin(AnguloPortas) - (-0.0012)*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0005)) + ((Largura/2 - 0.0015) - 0.022)*cos(AnguloPortas) - (-0.0012)*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - ((Largura/2 - 0.0015) - 0.022)*sin(AnguloPortas) - (-0.0012)*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0005)) + ((Largura/2 - 0.0015) - 0.022)*cos(AnguloPortas) - 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - ((Largura/2 - 0.0015) - 0.022)*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((-Largura/2) + 0.0005)) + ((Largura/2 - 0.0015) - 0.03)*cos(AnguloPortas) - 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - ((Largura/2 - 0.0015) - 0.03)*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              }
+            ],
+            "offset": "(Elevacao + Altura) - 0.012",
+            "depth": "0.008"
+          }
+        },
+        "material": "Plástico translúcido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porta 2",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((Largura/2) - 0.0005)) - 0*cos(AnguloPortas) + 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - 0*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.0005)) - ((Largura/2 - 0.0015))*cos(AnguloPortas) + 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - ((Largura/2 - 0.0015))*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.0005)) - ((Largura/2 - 0.0015))*cos(AnguloPortas) + 0.015*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - ((Largura/2 - 0.0015))*sin(AnguloPortas) - 0.015*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.0005)) - 0*cos(AnguloPortas) + 0.015*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - 0*sin(AnguloPortas) - 0.015*cos(AnguloPortas)"
+              }
+            ],
+            "offset": "Elevacao",
+            "depth": "Altura"
+          }
+        },
+        "material": "MDF branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Espelho da porta 2",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((Largura/2) - 0.0005)) - 0.0015*cos(AnguloPortas) + 0.015*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - 0.0015*sin(AnguloPortas) - 0.015*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.0005)) - ((Largura/2 - 0.0015) - 0.0015)*cos(AnguloPortas) + 0.015*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - ((Largura/2 - 0.0015) - 0.0015)*sin(AnguloPortas) - 0.015*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.0005)) - ((Largura/2 - 0.0015) - 0.0015)*cos(AnguloPortas) + 0.019*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - ((Largura/2 - 0.0015) - 0.0015)*sin(AnguloPortas) - 0.019*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.0005)) - 0.0015*cos(AnguloPortas) + 0.019*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - 0.0015*sin(AnguloPortas) - 0.019*cos(AnguloPortas)"
+              }
+            ],
+            "offset": "Elevacao + 0.0015",
+            "depth": "Altura - 0.003"
+          }
+        },
+        "material": "Espelho",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Fita adesiva do espelho 2",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((Largura/2) - 0.0005)) - 0.03*cos(AnguloPortas) + 0.0145*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - 0.03*sin(AnguloPortas) - 0.0145*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.0005)) - ((Largura/2 - 0.0015) - 0.03)*cos(AnguloPortas) + 0.0145*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - ((Largura/2 - 0.0015) - 0.03)*sin(AnguloPortas) - 0.0145*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.0005)) - ((Largura/2 - 0.0015) - 0.03)*cos(AnguloPortas) + 0.015*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - ((Largura/2 - 0.0015) - 0.03)*sin(AnguloPortas) - 0.015*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.0005)) - 0.03*cos(AnguloPortas) + 0.015*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - 0.03*sin(AnguloPortas) - 0.015*cos(AnguloPortas)"
+              }
+            ],
+            "offset": "Elevacao + 0.05",
+            "depth": "Altura - 0.1"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça superior da porta 2 - caneca",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((Largura/2) - 0.0005)) - 0.005*cos(AnguloPortas) + (-0.003)*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - 0.005*sin(AnguloPortas) - (-0.003)*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.0005)) - 0.04*cos(AnguloPortas) + (-0.003)*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - 0.04*sin(AnguloPortas) - (-0.003)*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.0005)) - 0.04*cos(AnguloPortas) + 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - 0.04*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.0005)) - 0.005*cos(AnguloPortas) + 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - 0.005*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              }
+            ],
+            "offset": "(Elevacao + Altura) - 0.09 - 0.025",
+            "depth": "0.05"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça superior da porta 2 - braço",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2) - 0.015) - 0.012",
+            "y": "((-Profundidade) + 0.019) + 0.0035",
+            "z": "(Elevacao + Altura) - 0.09 - 0.01",
+            "width": "0.012",
+            "depth": "0.055",
+            "height": "0.02"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça superior da porta 2 - calço",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2) - 0.015) - 0.004",
+            "y": "((-Profundidade) + 0.019) + 0.022",
+            "z": "(Elevacao + Altura) - 0.09 - 0.0225",
+            "width": "0.004",
+            "depth": "0.05",
+            "height": "0.045"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça inferior da porta 2 - caneca",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((Largura/2) - 0.0005)) - 0.005*cos(AnguloPortas) + (-0.003)*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - 0.005*sin(AnguloPortas) - (-0.003)*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.0005)) - 0.04*cos(AnguloPortas) + (-0.003)*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - 0.04*sin(AnguloPortas) - (-0.003)*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.0005)) - 0.04*cos(AnguloPortas) + 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - 0.04*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.0005)) - 0.005*cos(AnguloPortas) + 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - 0.005*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              }
+            ],
+            "offset": "(Elevacao + 0.02) + 0.09 - 0.025",
+            "depth": "0.05"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça inferior da porta 2 - braço",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2) - 0.015) - 0.012",
+            "y": "((-Profundidade) + 0.019) + 0.0035",
+            "z": "(Elevacao + 0.02) + 0.09 - 0.01",
+            "width": "0.012",
+            "depth": "0.055",
+            "height": "0.02"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Dobradiça inferior da porta 2 - calço",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2) - 0.015) - 0.004",
+            "y": "((-Profundidade) + 0.019) + 0.022",
+            "z": "(Elevacao + 0.02) + 0.09 - 0.0225",
+            "width": "0.004",
+            "depth": "0.05",
+            "height": "0.045"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Batente inferior da porta 2",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((Largura/2) - 0.0005)) - ((Largura/2 - 0.0015) - 0.03)*cos(AnguloPortas) + (-0.0012)*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - ((Largura/2 - 0.0015) - 0.03)*sin(AnguloPortas) - (-0.0012)*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.0005)) - ((Largura/2 - 0.0015) - 0.022)*cos(AnguloPortas) + (-0.0012)*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - ((Largura/2 - 0.0015) - 0.022)*sin(AnguloPortas) - (-0.0012)*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.0005)) - ((Largura/2 - 0.0015) - 0.022)*cos(AnguloPortas) + 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - ((Largura/2 - 0.0015) - 0.022)*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.0005)) - ((Largura/2 - 0.0015) - 0.03)*cos(AnguloPortas) + 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - ((Largura/2 - 0.0015) - 0.03)*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              }
+            ],
+            "offset": "(Elevacao + 0.02) + 0.004",
+            "depth": "0.008"
+          }
+        },
+        "material": "Plástico translúcido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Batente superior da porta 2",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(((Largura/2) - 0.0005)) - ((Largura/2 - 0.0015) - 0.03)*cos(AnguloPortas) + (-0.0012)*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - ((Largura/2 - 0.0015) - 0.03)*sin(AnguloPortas) - (-0.0012)*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.0005)) - ((Largura/2 - 0.0015) - 0.022)*cos(AnguloPortas) + (-0.0012)*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - ((Largura/2 - 0.0015) - 0.022)*sin(AnguloPortas) - (-0.0012)*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.0005)) - ((Largura/2 - 0.0015) - 0.022)*cos(AnguloPortas) + 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - ((Largura/2 - 0.0015) - 0.022)*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              },
+              {
+                "u": "(((Largura/2) - 0.0005)) - ((Largura/2 - 0.0015) - 0.03)*cos(AnguloPortas) + 0*sin(AnguloPortas)",
+                "v": "(((-Profundidade) + 0.019)) - ((Largura/2 - 0.0015) - 0.03)*sin(AnguloPortas) - 0*cos(AnguloPortas)"
+              }
+            ],
+            "offset": "(Elevacao + Altura) - 0.012",
+            "depth": "0.008"
+          }
+        },
+        "material": "Plástico translúcido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Copo de escovas",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.17)",
+                "v": "((Elevacao + 0.02) + 0.015)"
+              },
+              {
+                "u": "((((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.17)) + 0.027",
+                "v": "((Elevacao + 0.02) + 0.015)"
+              },
+              {
+                "u": "((((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.17)) + 0.031",
+                "v": "(((Elevacao + 0.02) + 0.015)) + 0.095"
+              },
+              {
+                "u": "((((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.17)) + 0.028",
+                "v": "(((Elevacao + 0.02) + 0.015)) + 0.095"
+              },
+              {
+                "u": "((((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.17)) + 0.024",
+                "v": "(((Elevacao + 0.02) + 0.015)) + 0.006"
+              },
+              {
+                "u": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.17)",
+                "v": "(((Elevacao + 0.02) + 0.015)) + 0.006"
+              }
+            ],
+            "offset": "((((-Profundidade) + 0.019) + 0.001)/2 - 0.002)",
+            "axis": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.17)",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico translúcido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Escova de dentes 1",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.17)) - 0.014",
+                "v": "(((Elevacao + 0.02) + 0.015)) + 0.008"
+              },
+              {
+                "u": "(((((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.17)) - 0.014) + 0.006",
+                "v": "(((Elevacao + 0.02) + 0.015)) + 0.008"
+              },
+              {
+                "u": "(((((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.17)) - 0.014) - 0.008",
+                "v": "(((Elevacao + 0.02) + 0.015)) + 0.17"
+              },
+              {
+                "u": "(((((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.17)) - 0.014) - 0.014",
+                "v": "(((Elevacao + 0.02) + 0.015)) + 0.17"
+              }
+            ],
+            "offset": "((((-Profundidade) + 0.019) + 0.001)/2 - 0.002) - 0.0040",
+            "depth": "0.005"
+          }
+        },
+        "material": "Plástico azul",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cerdas da escova 1",
+        "shape": {
+          "Box": {
+            "x": "(((((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.17)) - 0.014) - 0.0129",
+            "y": "((((-Profundidade) + 0.019) + 0.001)/2 - 0.002) - 0.0040 - 0.008",
+            "z": "(((Elevacao + 0.02) + 0.015)) + 0.135",
+            "width": "0.008",
+            "depth": "0.008",
+            "height": "0.028"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Escova de dentes 2",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "((((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.17)) + 0.008",
+                "v": "(((Elevacao + 0.02) + 0.015)) + 0.008"
+              },
+              {
+                "u": "(((((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.17)) + 0.008) + 0.006",
+                "v": "(((Elevacao + 0.02) + 0.015)) + 0.008"
+              },
+              {
+                "u": "(((((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.17)) + 0.008) + 0.02",
+                "v": "(((Elevacao + 0.02) + 0.015)) + 0.17"
+              },
+              {
+                "u": "(((((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.17)) + 0.008) + 0.014",
+                "v": "(((Elevacao + 0.02) + 0.015)) + 0.17"
+              }
+            ],
+            "offset": "((((-Profundidade) + 0.019) + 0.001)/2 - 0.002) - -0.0020",
+            "depth": "0.005"
+          }
+        },
+        "material": "Plástico verde",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cerdas da escova 2",
+        "shape": {
+          "Box": {
+            "x": "(((((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.17)) + 0.008) + 0.0109",
+            "y": "((((-Profundidade) + 0.019) + 0.001)/2 - 0.002) - -0.0020 - 0.008",
+            "z": "(((Elevacao + 0.02) + 0.015)) + 0.135",
+            "width": "0.008",
+            "depth": "0.008",
+            "height": "0.028"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Frasco de sabonete líquido",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.48)",
+                "v": "((Elevacao + 0.02) + 0.015)"
+              },
+              {
+                "u": "((((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.48)) + 0.027",
+                "v": "((Elevacao + 0.02) + 0.015)"
+              },
+              {
+                "u": "((((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.48)) + 0.03",
+                "v": "(((Elevacao + 0.02) + 0.015)) + 0.004"
+              },
+              {
+                "u": "((((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.48)) + 0.03",
+                "v": "(((Elevacao + 0.02) + 0.015)) + 0.0858"
+              },
+              {
+                "u": "((((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.48)) + 0.0125",
+                "v": "(((Elevacao + 0.02) + 0.015)) + 0.1045"
+              },
+              {
+                "u": "((((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.48)) + 0.0105",
+                "v": "(((Elevacao + 0.02) + 0.015)) + 0.11"
+              },
+              {
+                "u": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.48)",
+                "v": "(((Elevacao + 0.02) + 0.015)) + 0.11"
+              }
+            ],
+            "offset": "((((-Profundidade) + 0.019) + 0.001)/2 - 0.002)",
+            "axis": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.48)",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico translúcido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Frasco de sabonete líquido - tampa",
+        "shape": {
+          "Cylinder": {
+            "x": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.48)",
+            "y": "((((-Profundidade) + 0.019) + 0.001)/2 - 0.002)",
+            "z": "(((Elevacao + 0.02) + 0.015)) + 0.106",
+            "radius": "0.013",
+            "height": "0.025"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Válvula pump do sabonete",
+        "shape": {
+          "Cylinder": {
+            "x": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.48)",
+            "y": "((((-Profundidade) + 0.019) + 0.001)/2 - 0.002)",
+            "z": "(((Elevacao + 0.02) + 0.015)) + 0.13",
+            "radius": "0.005",
+            "height": "0.03"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cabeça do pump do sabonete",
+        "shape": {
+          "Cylinder": {
+            "x": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.48)",
+            "y": "((((-Profundidade) + 0.019) + 0.001)/2 - 0.002)",
+            "z": "(((Elevacao + 0.02) + 0.015)) + 0.158",
+            "radius": "0.012",
+            "height": "0.014"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Bico do pump do sabonete",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.48)",
+            "y": "((((-Profundidade) + 0.019) + 0.001)/2 - 0.002) - 0.003",
+            "z": "(((Elevacao + 0.02) + 0.015)) + 0.162",
+            "width": "0.032",
+            "depth": "0.006",
+            "height": "0.006"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Sabonete líquido",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.48) - 0.025",
+            "y": "((((-Profundidade) + 0.019) + 0.001)/2 - 0.002) - 0.0302",
+            "z": "(((Elevacao + 0.02) + 0.015)) + 0.025",
+            "width": "0.05",
+            "depth": "0.0005",
+            "height": "0.03"
+          }
+        },
+        "material": "Plástico verde",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pote de algodão",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.8)",
+                "v": "((Elevacao + 0.02) + 0.015)"
+              },
+              {
+                "u": "((((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.8)) + 0.04",
+                "v": "((Elevacao + 0.02) + 0.015)"
+              },
+              {
+                "u": "((((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.8)) + 0.04",
+                "v": "(((Elevacao + 0.02) + 0.015)) + 0.1"
+              },
+              {
+                "u": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.8)",
+                "v": "(((Elevacao + 0.02) + 0.015)) + 0.1"
+              }
+            ],
+            "offset": "((((-Profundidade) + 0.019) + 0.001)/2 - 0.002)",
+            "axis": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.8)",
+            "angle": "360"
+          }
+        },
+        "material": "Vidro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Algodão",
+        "shape": {
+          "Cylinder": {
+            "x": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.8)",
+            "y": "((((-Profundidade) + 0.019) + 0.001)/2 - 0.002)",
+            "z": "(((Elevacao + 0.02) + 0.015)) + 0.004",
+            "radius": "0.036",
+            "height": "0.085"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa do pote de algodão",
+        "shape": {
+          "Cylinder": {
+            "x": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.8)",
+            "y": "((((-Profundidade) + 0.019) + 0.001)/2 - 0.002)",
+            "z": "(((Elevacao + 0.02) + 0.015)) + 0.1",
+            "radius": "0.042",
+            "height": "0.012"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Frasco de perfume",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.16) - 0.025",
+            "y": "((((-Profundidade) + 0.019) + 0.001)/2 - 0.002) - 0.016",
+            "z": "((((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.3333 - 0.003) + 0.006)",
+            "width": "0.05",
+            "depth": "0.032",
+            "height": "0.085"
+          }
+        },
+        "material": "Vidro fumê",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Válvula do perfume",
+        "shape": {
+          "Cylinder": {
+            "x": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.16)",
+            "y": "((((-Profundidade) + 0.019) + 0.001)/2 - 0.002)",
+            "z": "(((((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.3333 - 0.003) + 0.006)) + 0.085",
+            "radius": "0.006",
+            "height": "0.012"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa do perfume",
+        "shape": {
+          "Cylinder": {
+            "x": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.16)",
+            "y": "((((-Profundidade) + 0.019) + 0.001)/2 - 0.002)",
+            "z": "(((((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.3333 - 0.003) + 0.006)) + 0.097",
+            "radius": "0.014",
+            "height": "0.025"
+          }
+        },
+        "material": "Plástico preto brilhante",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Desodorante",
+        "shape": {
+          "Cylinder": {
+            "x": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.38)",
+            "y": "((((-Profundidade) + 0.019) + 0.001)/2 - 0.002)",
+            "z": "((((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.3333 - 0.003) + 0.006)",
+            "radius": "0.024",
+            "height": "0.115"
+          }
+        },
+        "material": "Aço pintado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa do desodorante",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.38)",
+                "v": "(((((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.3333 - 0.003) + 0.006)) + 0.115"
+              },
+              {
+                "u": "((((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.38)) + 0.0245",
+                "v": "(((((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.3333 - 0.003) + 0.006)) + 0.115"
+              },
+              {
+                "u": "((((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.38)) + 0.0245",
+                "v": "(((((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.3333 - 0.003) + 0.006)) + 0.13",
+                "radius": "0.02"
+              },
+              {
+                "u": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.38)",
+                "v": "(((((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.3333 - 0.003) + 0.006)) + 0.14"
+              }
+            ],
+            "offset": "((((-Profundidade) + 0.019) + 0.001)/2 - 0.002)",
+            "axis": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.38)",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico azul",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pote de creme",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.6)",
+                "v": "((((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.3333 - 0.003) + 0.006)"
+              },
+              {
+                "u": "((((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.6)) + 0.03",
+                "v": "((((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.3333 - 0.003) + 0.006)"
+              },
+              {
+                "u": "((((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.6)) + 0.034",
+                "v": "(((((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.3333 - 0.003) + 0.006)) + 0.04"
+              },
+              {
+                "u": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.6)",
+                "v": "(((((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.3333 - 0.003) + 0.006)) + 0.04"
+              }
+            ],
+            "offset": "((((-Profundidade) + 0.019) + 0.001)/2 - 0.002)",
+            "axis": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.6)",
+            "angle": "360"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa do pote de creme",
+        "shape": {
+          "Cylinder": {
+            "x": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.6)",
+            "y": "((((-Profundidade) + 0.019) + 0.001)/2 - 0.002)",
+            "z": "(((((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.3333 - 0.003) + 0.006)) + 0.04",
+            "radius": "0.035",
+            "height": "0.016"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Frasco de loção",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.83)",
+                "v": "((((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.3333 - 0.003) + 0.006)"
+              },
+              {
+                "u": "((((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.83)) + 0.023",
+                "v": "((((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.3333 - 0.003) + 0.006)"
+              },
+              {
+                "u": "((((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.83)) + 0.026",
+                "v": "(((((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.3333 - 0.003) + 0.006)) + 0.004"
+              },
+              {
+                "u": "((((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.83)) + 0.026",
+                "v": "(((((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.3333 - 0.003) + 0.006)) + 0.1014"
+              },
+              {
+                "u": "((((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.83)) + 0.0137",
+                "v": "(((((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.3333 - 0.003) + 0.006)) + 0.1235"
+              },
+              {
+                "u": "((((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.83)) + 0.0117",
+                "v": "(((((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.3333 - 0.003) + 0.006)) + 0.13"
+              },
+              {
+                "u": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.83)",
+                "v": "(((((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.3333 - 0.003) + 0.006)) + 0.13"
+              }
+            ],
+            "offset": "((((-Profundidade) + 0.019) + 0.001)/2 - 0.002)",
+            "axis": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.83)",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico azul",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Frasco de loção - tampa",
+        "shape": {
+          "Cylinder": {
+            "x": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.83)",
+            "y": "((((-Profundidade) + 0.019) + 0.001)/2 - 0.002)",
+            "z": "(((((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.3333 - 0.003) + 0.006)) + 0.126",
+            "radius": "0.0142",
+            "height": "0.03"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Caixa de remédio",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.2) - 0.04",
+            "y": "((((-Profundidade) + 0.019) + 0.001)/2 - 0.002) - 0.02",
+            "z": "((((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.6667 - 0.003) + 0.006)",
+            "width": "0.08",
+            "depth": "0.04",
+            "height": "0.11"
+          }
+        },
+        "material": "Papel",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Faixa da caixa de remédio",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.2) - 0.04",
+            "y": "((((-Profundidade) + 0.019) + 0.001)/2 - 0.002) - 0.0205",
+            "z": "(((((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.6667 - 0.003) + 0.006)) + 0.07",
+            "width": "0.08",
+            "depth": "0.0005",
+            "height": "0.012"
+          }
+        },
+        "material": "Plástico vermelho",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Frasco de remédio",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.45)",
+                "v": "((((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.6667 - 0.003) + 0.006)"
+              },
+              {
+                "u": "((((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.45)) + 0.017",
+                "v": "((((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.6667 - 0.003) + 0.006)"
+              },
+              {
+                "u": "((((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.45)) + 0.02",
+                "v": "(((((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.6667 - 0.003) + 0.006)) + 0.004"
+              },
+              {
+                "u": "((((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.45)) + 0.02",
+                "v": "(((((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.6667 - 0.003) + 0.006)) + 0.0624"
+              },
+              {
+                "u": "((((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.45)) + 0.014",
+                "v": "(((((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.6667 - 0.003) + 0.006)) + 0.076"
+              },
+              {
+                "u": "((((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.45)) + 0.012",
+                "v": "(((((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.6667 - 0.003) + 0.006)) + 0.08"
+              },
+              {
+                "u": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.45)",
+                "v": "(((((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.6667 - 0.003) + 0.006)) + 0.08"
+              }
+            ],
+            "offset": "((((-Profundidade) + 0.019) + 0.001)/2 - 0.002)",
+            "axis": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.45)",
+            "angle": "360"
+          }
+        },
+        "material": "Vidro fumê",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Frasco de remédio - tampa",
+        "shape": {
+          "Cylinder": {
+            "x": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.45)",
+            "y": "((((-Profundidade) + 0.019) + 0.001)/2 - 0.002)",
+            "z": "(((((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.6667 - 0.003) + 0.006)) + 0.076",
+            "radius": "0.0145",
+            "height": "0.018"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Escova de cabelo - cabo",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.73) - 0.06",
+            "y": "((((-Profundidade) + 0.019) + 0.001)/2 - 0.002) - 0.01",
+            "z": "((((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.6667 - 0.003) + 0.006)",
+            "width": "0.13",
+            "depth": "0.02",
+            "height": "0.014"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Escova de cabelo - almofada",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.73) + 0.035",
+            "y": "((((-Profundidade) + 0.019) + 0.001)/2 - 0.002) - 0.03",
+            "z": "((((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.6667 - 0.003) + 0.006)",
+            "width": "0.07",
+            "depth": "0.06",
+            "height": "0.022"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Escova de cabelo - cerdas",
+        "shape": {
+          "Box": {
+            "x": "(((-Largura/2) + 0.015) + (Largura - 2*0.015)*0.73) + 0.04",
+            "y": "((((-Profundidade) + 0.019) + 0.001)/2 - 0.002) - 0.025",
+            "z": "(((((Elevacao + 0.02) + 0.015) + (Altura - 0.02 - 2*0.015)*0.6667 - 0.003) + 0.006)) + 0.022",
+            "width": "0.06",
+            "depth": "0.05",
+            "height": "0.012"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      }
+    ]
+  },
+  "types": [
+    {
+      "name": "Espelheira 60 cm",
+      "values": {
+        "Largura": 0.6,
+        "Altura": 0.6
+      },
+      "info": {
+        "description": "Armário de banheiro de sobrepor com duas portas de espelho, prateleiras de vidro e luz de LED"
+      }
+    },
+    {
+      "name": "Espelheira 80 cm",
+      "values": {
+        "Largura": 0.8,
+        "Altura": 0.65
+      },
+      "info": {
+        "description": "Armário de banheiro de sobrepor com duas portas de espelho, prateleiras de vidro e luz de LED"
+      }
+    },
+    {
+      "name": "Espelheira 100 cm",
+      "values": {
+        "Largura": 1.0,
+        "Altura": 0.7
+      },
+      "info": {
+        "description": "Armário de banheiro de sobrepor com duas portas de espelho, prateleiras de vidro e luz de LED"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "name": "Espelho",
+      "color": [
+        222,
+        228,
+        232
+      ],
+      "class": "Metal",
+      "finish": "Polished",
+      "transparency": 0
+    },
+    {
+      "name": "MDF branco",
+      "color": [
+        240,
+        240,
+        235
+      ],
+      "class": "Wood",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Laminado branco",
+      "color": [
+        238,
+        238,
+        234
+      ],
+      "class": "Wood",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Aço galvanizado",
+      "color": [
+        160,
+        165,
+        170
+      ],
+      "class": "Metal",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Branco",
+      "color": [
+        244,
+        244,
+        240
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Alumínio anodizado",
+      "color": [
+        206,
+        208,
+        210
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Fita de LED",
+      "color": [
+        255,
+        244,
+        214
+      ],
+      "class": "Plastic",
+      "finish": "Glossy",
+      "transparency": 0.3
+    },
+    {
+      "name": "Plástico cinza claro",
+      "color": [
+        196,
+        198,
+        200
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico preto",
+      "color": [
+        34,
+        34,
+        37
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Vidro temperado",
+      "color": [
+        205,
+        228,
+        232
+      ],
+      "class": "Glass",
+      "finish": "Polished",
+      "transparency": 0.7
+    },
+    {
+      "name": "Plástico translúcido",
+      "color": [
+        222,
+        236,
+        240
+      ],
+      "class": "Plastic",
+      "finish": "Glossy",
+      "transparency": 0.6
+    },
+    {
+      "name": "Borracha",
+      "color": [
+        30,
+        30,
+        30
+      ],
+      "class": "Plastic",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico azul",
+      "color": [
+        126,
+        176,
+        222
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico verde",
+      "color": [
+        60,
+        160,
+        90
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Inox escovado",
+      "color": [
+        198,
+        200,
+        203
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Vidro fumê",
+      "color": [
+        38,
+        42,
+        48
+      ],
+      "class": "Glass",
+      "finish": "Polished",
+      "transparency": 0.45
+    },
+    {
+      "name": "Cromado",
+      "color": [
+        226,
+        229,
+        233
+      ],
+      "class": "Metal",
+      "finish": "Polished",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico preto brilhante",
+      "color": [
+        18,
+        18,
+        20
+      ],
+      "class": "Plastic",
+      "finish": "Glossy",
+      "transparency": 0
+    },
+    {
+      "name": "Aço pintado branco",
+      "color": [
+        240,
+        240,
+        236
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Latão",
+      "color": [
+        192,
+        160,
+        84
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Papel",
+      "color": [
+        238,
+        232,
+        214
+      ],
+      "class": "Generic",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico vermelho",
+      "color": [
+        196,
+        56,
+        48
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Madeira clara",
+      "color": [
+        196,
+        160,
+        112
+      ],
+      "class": "Wood",
+      "finish": "Satin",
+      "transparency": 0
+    }
+  ]
+}

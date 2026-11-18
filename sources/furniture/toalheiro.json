@@ -1,0 +1,1602 @@
+{
+  "component": "Toalheiro",
+  "def": {
+    "kind": "Furniture",
+    "params": [
+      {
+        "name": "Largura",
+        "value": 0.6,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Profundidade",
+        "value": 0.075,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Argola",
+        "value": 0,
+        "kind": "Number",
+        "instance": false
+      },
+      {
+        "name": "Elevacao",
+        "value": 1.1,
+        "kind": "Length",
+        "instance": true
+      }
+    ],
+    "items": [
+      {
+        "name": "Barra simplificada",
+        "shape": {
+          "Box": {
+            "x": "0 + (min(1, max(0.01, 1 - Argola)))*(-(Largura/2 - 0.026) - 0.022 - 0)",
+            "y": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) - 0.0135 - (-0.006))",
+            "z": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao - 0.0135 - Elevacao)",
+            "width": "(min(1, max(0.01, 1 - Argola)))*(2*(Largura/2 - 0.026) + 0.044)",
+            "depth": "(min(1, max(0.01, 1 - Argola)))*0.027",
+            "height": "(min(1, max(0.01, 1 - Argola)))*0.027"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Suporte esquerdo simplificado",
+        "shape": {
+          "Box": {
+            "x": "0 + (min(1, max(0.01, 1 - Argola)))*(-(Largura/2 - 0.026) - 0.026 - 0)",
+            "y": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) - (-0.006))",
+            "z": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao - 0.026 - Elevacao)",
+            "width": "(min(1, max(0.01, 1 - Argola)))*0.052",
+            "depth": "(min(1, max(0.01, 1 - Argola)))*(-(0.0135 - Profundidade))",
+            "height": "(min(1, max(0.01, 1 - Argola)))*0.052"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Suporte direito simplificado",
+        "shape": {
+          "Box": {
+            "x": "0 + (min(1, max(0.01, 1 - Argola)))*((Largura/2 - 0.026) - 0.026 - 0)",
+            "y": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) - (-0.006))",
+            "z": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao - 0.026 - Elevacao)",
+            "width": "(min(1, max(0.01, 1 - Argola)))*0.052",
+            "depth": "(min(1, max(0.01, 1 - Argola)))*(-(0.0135 - Profundidade))",
+            "height": "(min(1, max(0.01, 1 - Argola)))*0.052"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Canopla esquerdo",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0 + (min(1, max(0.01, 1 - Argola)))*(-(Largura/2 - 0.026) - 0)",
+                "v": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(-0.011 - (-0.006))"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, 1 - Argola)))*((-(Largura/2 - 0.026)) + 0.019 - 0)",
+                "v": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(-0.011 - (-0.006))",
+                "radius": "(min(1, max(0.01, 1 - Argola)))*0.008"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, 1 - Argola)))*((-(Largura/2 - 0.026)) + 0.026 - 0)",
+                "v": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(-0.004 - (-0.006))"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, 1 - Argola)))*((-(Largura/2 - 0.026)) + 0.026 - 0)",
+                "v": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(0 - (-0.006))"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, 1 - Argola)))*(-(Largura/2 - 0.026) - 0)",
+                "v": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(0 - (-0.006))"
+              }
+            ],
+            "offset": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao - Elevacao)",
+            "axis": "0 + (min(1, max(0.01, 1 - Argola)))*(-(Largura/2 - 0.026) - 0)",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Haste esquerdo",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0 + (min(1, max(0.01, 1 - Argola)))*(-(Largura/2 - 0.026) - 0)",
+                "v": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) - (-0.006))"
+              },
+              {
+                "u": "(0 + (min(1, max(0.01, 1 - Argola)))*(-(Largura/2 - 0.026) - 0)) + ((min(1, max(0.01, 1 - Argola)))*0.0085)",
+                "v": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) - (-0.006))"
+              },
+              {
+                "u": "(0 + (min(1, max(0.01, 1 - Argola)))*(-(Largura/2 - 0.026) - 0)) + ((min(1, max(0.01, 1 - Argola)))*0.0085)",
+                "v": "((-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) - (-0.006))) + ((min(1, max(0.01, 1 - Argola)))*(-0.011 - (0.0135 - Profundidade)))"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, 1 - Argola)))*(-(Largura/2 - 0.026) - 0)",
+                "v": "((-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) - (-0.006))) + ((min(1, max(0.01, 1 - Argola)))*(-0.011 - (0.0135 - Profundidade)))"
+              }
+            ],
+            "offset": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao - Elevacao)",
+            "axis": "0 + (min(1, max(0.01, 1 - Argola)))*(-(Largura/2 - 0.026) - 0)",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Anel da haste esquerdo",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0 + (min(1, max(0.01, 1 - Argola)))*(-(Largura/2 - 0.026) - 0)",
+                "v": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) + 0.012 - (-0.006))"
+              },
+              {
+                "u": "(0 + (min(1, max(0.01, 1 - Argola)))*(-(Largura/2 - 0.026) - 0)) + ((min(1, max(0.01, 1 - Argola)))*0.0105)",
+                "v": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) + 0.012 - (-0.006))"
+              },
+              {
+                "u": "(0 + (min(1, max(0.01, 1 - Argola)))*(-(Largura/2 - 0.026) - 0)) + ((min(1, max(0.01, 1 - Argola)))*0.0105)",
+                "v": "((-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) + 0.012 - (-0.006))) + ((min(1, max(0.01, 1 - Argola)))*0.005)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, 1 - Argola)))*(-(Largura/2 - 0.026) - 0)",
+                "v": "((-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) + 0.012 - (-0.006))) + ((min(1, max(0.01, 1 - Argola)))*0.005)"
+              }
+            ],
+            "offset": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao - Elevacao)",
+            "axis": "0 + (min(1, max(0.01, 1 - Argola)))*(-(Largura/2 - 0.026) - 0)",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cabeça esquerdo",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) - (-0.006))) - ((min(1, max(0.01, 1 - Argola)))*0.0135)",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao - Elevacao)",
+                "radius": "(min(1, max(0.01, 1 - Argola)))*0.0135"
+              },
+              {
+                "u": "((-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) - (-0.006))) + ((min(1, max(0.01, 1 - Argola)))*0.0135)",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao - Elevacao)",
+                "radius": "(min(1, max(0.01, 1 - Argola)))*0.0135"
+              }
+            ],
+            "offset": "0 + (min(1, max(0.01, 1 - Argola)))*(-(Largura/2 - 0.026) - 0.016 - 0)",
+            "depth": "(min(1, max(0.01, 1 - Argola)))*0.032"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa da cabeça esquerdo",
+        "shape": {
+          "Blend": {
+            "plane": "Side",
+            "bottom": [
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + 0.0075 - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + 0.006929 - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + 0.00287 - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + 0.005303 - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + 0.005303 - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + 0.00287 - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + 0.006929 - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + 0.0075 - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + (-0.00287) - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + 0.006929 - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + (-0.005303) - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + 0.005303 - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + (-0.006929) - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + 0.00287 - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + (-0.0075) - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + (-0.006929) - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + (-0.00287) - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + (-0.005303) - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + (-0.005303) - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + (-0.00287) - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + (-0.006929) - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + (-0.0075) - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + 0.00287 - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + (-0.006929) - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + 0.005303 - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + (-0.005303) - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + 0.006929 - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + (-0.00287) - Elevacao)"
+              }
+            ],
+            "top": [
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + 0.0135 - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + 0.012472 - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + 0.005166 - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + 0.009546 - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + 0.009546 - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + 0.005166 - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + 0.012472 - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + 0.0135 - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + (-0.005166) - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + 0.012472 - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + (-0.009546) - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + 0.009546 - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + (-0.012472) - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + 0.005166 - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + (-0.0135) - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + (-0.012472) - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + (-0.005166) - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + (-0.009546) - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + (-0.009546) - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + (-0.005166) - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + (-0.012472) - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + (-0.0135) - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + 0.005166 - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + (-0.012472) - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + 0.009546 - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + (-0.009546) - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + 0.012472 - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + (-0.005166) - Elevacao)"
+              }
+            ],
+            "offset": "0 + (min(1, max(0.01, 1 - Argola)))*(-(Largura/2 - 0.026) - 0.022 - 0)",
+            "depth": "(min(1, max(0.01, 1 - Argola)))*0.006"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso de fixação esquerdo",
+        "shape": {
+          "Cylinder": {
+            "x": "0 + (min(1, max(0.01, 1 - Argola)))*(-(Largura/2 - 0.026) - 0)",
+            "y": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) - (-0.006))",
+            "z": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao - 0.0148 - Elevacao)",
+            "radius": "(min(1, max(0.01, 1 - Argola)))*0.0025",
+            "height": "(min(1, max(0.01, 1 - Argola)))*0.0016"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Sextavado do parafuso esquerdo",
+        "shape": {
+          "Cylinder": {
+            "x": "0 + (min(1, max(0.01, 1 - Argola)))*(-(Largura/2 - 0.026) - 0)",
+            "y": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) - (-0.006))",
+            "z": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao - 0.0152 - Elevacao)",
+            "radius": "(min(1, max(0.01, 1 - Argola)))*0.0011",
+            "height": "(min(1, max(0.01, 1 - Argola)))*0.0005"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Canopla direito",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0 + (min(1, max(0.01, 1 - Argola)))*((Largura/2 - 0.026) - 0)",
+                "v": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(-0.011 - (-0.006))"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, 1 - Argola)))*(((Largura/2 - 0.026)) + 0.019 - 0)",
+                "v": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(-0.011 - (-0.006))",
+                "radius": "(min(1, max(0.01, 1 - Argola)))*0.008"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, 1 - Argola)))*(((Largura/2 - 0.026)) + 0.026 - 0)",
+                "v": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(-0.004 - (-0.006))"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, 1 - Argola)))*(((Largura/2 - 0.026)) + 0.026 - 0)",
+                "v": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(0 - (-0.006))"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, 1 - Argola)))*((Largura/2 - 0.026) - 0)",
+                "v": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(0 - (-0.006))"
+              }
+            ],
+            "offset": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao - Elevacao)",
+            "axis": "0 + (min(1, max(0.01, 1 - Argola)))*((Largura/2 - 0.026) - 0)",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Haste direito",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0 + (min(1, max(0.01, 1 - Argola)))*((Largura/2 - 0.026) - 0)",
+                "v": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) - (-0.006))"
+              },
+              {
+                "u": "(0 + (min(1, max(0.01, 1 - Argola)))*((Largura/2 - 0.026) - 0)) + ((min(1, max(0.01, 1 - Argola)))*0.0085)",
+                "v": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) - (-0.006))"
+              },
+              {
+                "u": "(0 + (min(1, max(0.01, 1 - Argola)))*((Largura/2 - 0.026) - 0)) + ((min(1, max(0.01, 1 - Argola)))*0.0085)",
+                "v": "((-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) - (-0.006))) + ((min(1, max(0.01, 1 - Argola)))*(-0.011 - (0.0135 - Profundidade)))"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, 1 - Argola)))*((Largura/2 - 0.026) - 0)",
+                "v": "((-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) - (-0.006))) + ((min(1, max(0.01, 1 - Argola)))*(-0.011 - (0.0135 - Profundidade)))"
+              }
+            ],
+            "offset": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao - Elevacao)",
+            "axis": "0 + (min(1, max(0.01, 1 - Argola)))*((Largura/2 - 0.026) - 0)",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Anel da haste direito",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0 + (min(1, max(0.01, 1 - Argola)))*((Largura/2 - 0.026) - 0)",
+                "v": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) + 0.012 - (-0.006))"
+              },
+              {
+                "u": "(0 + (min(1, max(0.01, 1 - Argola)))*((Largura/2 - 0.026) - 0)) + ((min(1, max(0.01, 1 - Argola)))*0.0105)",
+                "v": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) + 0.012 - (-0.006))"
+              },
+              {
+                "u": "(0 + (min(1, max(0.01, 1 - Argola)))*((Largura/2 - 0.026) - 0)) + ((min(1, max(0.01, 1 - Argola)))*0.0105)",
+                "v": "((-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) + 0.012 - (-0.006))) + ((min(1, max(0.01, 1 - Argola)))*0.005)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, 1 - Argola)))*((Largura/2 - 0.026) - 0)",
+                "v": "((-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) + 0.012 - (-0.006))) + ((min(1, max(0.01, 1 - Argola)))*0.005)"
+              }
+            ],
+            "offset": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao - Elevacao)",
+            "axis": "0 + (min(1, max(0.01, 1 - Argola)))*((Largura/2 - 0.026) - 0)",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cabeça direito",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) - (-0.006))) - ((min(1, max(0.01, 1 - Argola)))*0.0135)",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao - Elevacao)",
+                "radius": "(min(1, max(0.01, 1 - Argola)))*0.0135"
+              },
+              {
+                "u": "((-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) - (-0.006))) + ((min(1, max(0.01, 1 - Argola)))*0.0135)",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao - Elevacao)",
+                "radius": "(min(1, max(0.01, 1 - Argola)))*0.0135"
+              }
+            ],
+            "offset": "0 + (min(1, max(0.01, 1 - Argola)))*((Largura/2 - 0.026) - 0.016 - 0)",
+            "depth": "(min(1, max(0.01, 1 - Argola)))*0.032"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa da cabeça direito",
+        "shape": {
+          "Blend": {
+            "plane": "Side",
+            "bottom": [
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + 0.0135 - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + 0.012472 - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + 0.005166 - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + 0.009546 - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + 0.009546 - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + 0.005166 - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + 0.012472 - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + 0.0135 - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + (-0.005166) - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + 0.012472 - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + (-0.009546) - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + 0.009546 - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + (-0.012472) - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + 0.005166 - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + (-0.0135) - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + (-0.012472) - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + (-0.005166) - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + (-0.009546) - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + (-0.009546) - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + (-0.005166) - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + (-0.012472) - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + (-0.0135) - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + 0.005166 - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + (-0.012472) - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + 0.009546 - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + (-0.009546) - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + 0.012472 - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + (-0.005166) - Elevacao)"
+              }
+            ],
+            "top": [
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + 0.0075 - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + 0.006929 - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + 0.00287 - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + 0.005303 - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + 0.005303 - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + 0.00287 - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + 0.006929 - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + 0.0075 - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + (-0.00287) - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + 0.006929 - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + (-0.005303) - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + 0.005303 - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + (-0.006929) - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + 0.00287 - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + (-0.0075) - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + (-0.006929) - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + (-0.00287) - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + (-0.005303) - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + (-0.005303) - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + (-0.00287) - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + (-0.006929) - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + (-0.0075) - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + 0.00287 - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + (-0.006929) - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + 0.005303 - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + (-0.005303) - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*(((0.0135 - Profundidade)) + 0.006929 - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao + (-0.00287) - Elevacao)"
+              }
+            ],
+            "offset": "0 + (min(1, max(0.01, 1 - Argola)))*((Largura/2 - 0.026) + 0.016 - 0)",
+            "depth": "(min(1, max(0.01, 1 - Argola)))*0.006"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso de fixação direito",
+        "shape": {
+          "Cylinder": {
+            "x": "0 + (min(1, max(0.01, 1 - Argola)))*((Largura/2 - 0.026) - 0)",
+            "y": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) - (-0.006))",
+            "z": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao - 0.0148 - Elevacao)",
+            "radius": "(min(1, max(0.01, 1 - Argola)))*0.0025",
+            "height": "(min(1, max(0.01, 1 - Argola)))*0.0016"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Sextavado do parafuso direito",
+        "shape": {
+          "Cylinder": {
+            "x": "0 + (min(1, max(0.01, 1 - Argola)))*((Largura/2 - 0.026) - 0)",
+            "y": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) - (-0.006))",
+            "z": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao - 0.0152 - Elevacao)",
+            "radius": "(min(1, max(0.01, 1 - Argola)))*0.0011",
+            "height": "(min(1, max(0.01, 1 - Argola)))*0.0005"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Barra",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) - (-0.006))) - ((min(1, max(0.01, 1 - Argola)))*0.0095)",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao - Elevacao)",
+                "radius": "(min(1, max(0.01, 1 - Argola)))*0.0095"
+              },
+              {
+                "u": "((-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) - (-0.006))) + ((min(1, max(0.01, 1 - Argola)))*0.0095)",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao - Elevacao)",
+                "radius": "(min(1, max(0.01, 1 - Argola)))*0.0095"
+              }
+            ],
+            "offset": "0 + (min(1, max(0.01, 1 - Argola)))*(-(Largura/2 - 0.026) - 0)",
+            "depth": "(min(1, max(0.01, 1 - Argola)))*(2*(Largura/2 - 0.026))"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Toalha",
+        "shape": {
+          "Sweep": {
+            "plane": "Side",
+            "path": [
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) - 0.0225 - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao - 0.46 - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) - 0.0155 - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao - 0.36 - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) - 0.0155 - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao - Elevacao)",
+                "radius": "(min(1, max(0.01, 1 - Argola)))*(-0.0155)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) + 0.0155 - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) + 0.0155 - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao - 0.3 - Elevacao)"
+              },
+              {
+                "u": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) + 0.0195 - (-0.006))",
+                "v": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao - 0.41 - Elevacao)"
+              }
+            ],
+            "offset": "0 + (min(1, max(0.01, 1 - Argola)))*(0 - 0)",
+            "profile": [
+              {
+                "u": "(min(1, max(0.01, 1 - Argola)))*(-0.005)",
+                "v": "(min(1, max(0.01, 1 - Argola)))*(-(0.55*Largura)/2)"
+              },
+              {
+                "u": "(min(1, max(0.01, 1 - Argola)))*0.005",
+                "v": "(min(1, max(0.01, 1 - Argola)))*(-(0.55*Largura)/2)"
+              },
+              {
+                "u": "(min(1, max(0.01, 1 - Argola)))*0.005",
+                "v": "(min(1, max(0.01, 1 - Argola)))*((0.55*Largura)/2)"
+              },
+              {
+                "u": "(min(1, max(0.01, 1 - Argola)))*(-0.005)",
+                "v": "(min(1, max(0.01, 1 - Argola)))*((0.55*Largura)/2)"
+              }
+            ]
+          }
+        },
+        "material": "Toalha de algodão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Barrado da toalha",
+        "shape": {
+          "Box": {
+            "x": "0 + (min(1, max(0.01, 1 - Argola)))*(-(0.55*Largura)/2 - 0)",
+            "y": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) - 0.0217 - (-0.006))",
+            "z": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao - 0.33 - Elevacao)",
+            "width": "(min(1, max(0.01, 1 - Argola)))*((0.55*Largura))",
+            "depth": "(min(1, max(0.01, 1 - Argola)))*0.0013",
+            "height": "(min(1, max(0.01, 1 - Argola)))*0.035"
+          }
+        },
+        "material": "Tecido cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Friso do barrado da toalha",
+        "shape": {
+          "Box": {
+            "x": "0 + (min(1, max(0.01, 1 - Argola)))*(-(0.55*Largura)/2 - 0)",
+            "y": "(-0.006) + (min(1, max(0.01, 1 - Argola)))*((0.0135 - Profundidade) - 0.0217 - (-0.006))",
+            "z": "Elevacao + (min(1, max(0.01, 1 - Argola)))*(Elevacao - 0.286 - Elevacao)",
+            "width": "(min(1, max(0.01, 1 - Argola)))*((0.55*Largura))",
+            "depth": "(min(1, max(0.01, 1 - Argola)))*0.0013",
+            "height": "(min(1, max(0.01, 1 - Argola)))*0.006"
+          }
+        },
+        "material": "Tecido cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte da argola simplificado",
+        "shape": {
+          "Box": {
+            "x": "0 + (min(1, max(0.01, Argola)))*(-0.026 - 0)",
+            "y": "((0.0135 - Profundidade)) + (min(1, max(0.01, Argola)))*((0.0135 - Profundidade) - ((0.0135 - Profundidade)))",
+            "z": "Elevacao + (min(1, max(0.01, Argola)))*(Elevacao - 0.036 - Elevacao)",
+            "width": "(min(1, max(0.01, Argola)))*0.052",
+            "depth": "(min(1, max(0.01, Argola)))*(-(0.0135 - Profundidade))",
+            "height": "(min(1, max(0.01, Argola)))*0.062"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Canopla da argola",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 - 0)",
+                "v": "((0.0135 - Profundidade)) + (min(1, max(0.01, Argola)))*(-0.011 - ((0.0135 - Profundidade)))"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0.019 - 0)",
+                "v": "((0.0135 - Profundidade)) + (min(1, max(0.01, Argola)))*(-0.011 - ((0.0135 - Profundidade)))",
+                "radius": "(min(1, max(0.01, Argola)))*0.008"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0.026 - 0)",
+                "v": "((0.0135 - Profundidade)) + (min(1, max(0.01, Argola)))*(-0.004 - ((0.0135 - Profundidade)))"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0.026 - 0)",
+                "v": "((0.0135 - Profundidade)) + (min(1, max(0.01, Argola)))*(0 - ((0.0135 - Profundidade)))"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 - 0)",
+                "v": "((0.0135 - Profundidade)) + (min(1, max(0.01, Argola)))*(0 - ((0.0135 - Profundidade)))"
+              }
+            ],
+            "offset": "Elevacao + (min(1, max(0.01, Argola)))*(Elevacao - Elevacao)",
+            "axis": "0 + (min(1, max(0.01, Argola)))*(0 - 0)",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Haste da argola",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 - 0)",
+                "v": "((0.0135 - Profundidade)) + (min(1, max(0.01, Argola)))*((0.0135 - Profundidade) - ((0.0135 - Profundidade)))"
+              },
+              {
+                "u": "(0 + (min(1, max(0.01, Argola)))*(0 - 0)) + ((min(1, max(0.01, Argola)))*0.0085)",
+                "v": "((0.0135 - Profundidade)) + (min(1, max(0.01, Argola)))*((0.0135 - Profundidade) - ((0.0135 - Profundidade)))"
+              },
+              {
+                "u": "(0 + (min(1, max(0.01, Argola)))*(0 - 0)) + ((min(1, max(0.01, Argola)))*0.0085)",
+                "v": "(((0.0135 - Profundidade)) + (min(1, max(0.01, Argola)))*((0.0135 - Profundidade) - ((0.0135 - Profundidade)))) + ((min(1, max(0.01, Argola)))*(-0.011 - (0.0135 - Profundidade)))"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 - 0)",
+                "v": "(((0.0135 - Profundidade)) + (min(1, max(0.01, Argola)))*((0.0135 - Profundidade) - ((0.0135 - Profundidade)))) + ((min(1, max(0.01, Argola)))*(-0.011 - (0.0135 - Profundidade)))"
+              }
+            ],
+            "offset": "Elevacao + (min(1, max(0.01, Argola)))*(Elevacao - Elevacao)",
+            "axis": "0 + (min(1, max(0.01, Argola)))*(0 - 0)",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Anel da haste da argola",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 - 0)",
+                "v": "((0.0135 - Profundidade)) + (min(1, max(0.01, Argola)))*((0.0135 - Profundidade) + 0.012 - ((0.0135 - Profundidade)))"
+              },
+              {
+                "u": "(0 + (min(1, max(0.01, Argola)))*(0 - 0)) + ((min(1, max(0.01, Argola)))*0.0105)",
+                "v": "((0.0135 - Profundidade)) + (min(1, max(0.01, Argola)))*((0.0135 - Profundidade) + 0.012 - ((0.0135 - Profundidade)))"
+              },
+              {
+                "u": "(0 + (min(1, max(0.01, Argola)))*(0 - 0)) + ((min(1, max(0.01, Argola)))*0.0105)",
+                "v": "(((0.0135 - Profundidade)) + (min(1, max(0.01, Argola)))*((0.0135 - Profundidade) + 0.012 - ((0.0135 - Profundidade)))) + ((min(1, max(0.01, Argola)))*0.005)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 - 0)",
+                "v": "(((0.0135 - Profundidade)) + (min(1, max(0.01, Argola)))*((0.0135 - Profundidade) + 0.012 - ((0.0135 - Profundidade)))) + ((min(1, max(0.01, Argola)))*0.005)"
+              }
+            ],
+            "offset": "Elevacao + (min(1, max(0.01, Argola)))*(Elevacao - Elevacao)",
+            "axis": "0 + (min(1, max(0.01, Argola)))*(0 - 0)",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cabeça da argola",
+        "shape": {
+          "Cylinder": {
+            "x": "0 + (min(1, max(0.01, Argola)))*(0 - 0)",
+            "y": "((0.0135 - Profundidade)) + (min(1, max(0.01, Argola)))*((0.0135 - Profundidade) - ((0.0135 - Profundidade)))",
+            "z": "Elevacao + (min(1, max(0.01, Argola)))*(Elevacao - 0.03 - Elevacao)",
+            "radius": "(min(1, max(0.01, Argola)))*0.0125",
+            "height": "(min(1, max(0.01, Argola)))*0.042"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Topo da cabeça da argola",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(Elevacao + 0.012 - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0.0125 - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(Elevacao + 0.012 - Elevacao)",
+                "radius": "(min(1, max(0.01, Argola)))*0.01"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0.007 - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(Elevacao + 0.012 + 0.006 - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(Elevacao + 0.012 + 0.007 - Elevacao)"
+              }
+            ],
+            "offset": "((0.0135 - Profundidade)) + (min(1, max(0.01, Argola)))*((0.0135 - Profundidade) - ((0.0135 - Profundidade)))",
+            "axis": "0 + (min(1, max(0.01, Argola)))*(0 - 0)",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pino da argola",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 - 0)",
+                "v": "((0.0135 - Profundidade)) + (min(1, max(0.01, Argola)))*((0.0135 - Profundidade) - 0.0085 - ((0.0135 - Profundidade)))"
+              },
+              {
+                "u": "(0 + (min(1, max(0.01, Argola)))*(0 - 0)) + ((min(1, max(0.01, Argola)))*0.0028)",
+                "v": "((0.0135 - Profundidade)) + (min(1, max(0.01, Argola)))*((0.0135 - Profundidade) - 0.0085 - ((0.0135 - Profundidade)))"
+              },
+              {
+                "u": "(0 + (min(1, max(0.01, Argola)))*(0 - 0)) + ((min(1, max(0.01, Argola)))*0.0028)",
+                "v": "(((0.0135 - Profundidade)) + (min(1, max(0.01, Argola)))*((0.0135 - Profundidade) - 0.0085 - ((0.0135 - Profundidade)))) + ((min(1, max(0.01, Argola)))*0.017)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 - 0)",
+                "v": "(((0.0135 - Profundidade)) + (min(1, max(0.01, Argola)))*((0.0135 - Profundidade) - 0.0085 - ((0.0135 - Profundidade)))) + ((min(1, max(0.01, Argola)))*0.017)"
+              }
+            ],
+            "offset": "Elevacao + (min(1, max(0.01, Argola)))*(Elevacao - 0.036 - Elevacao)",
+            "axis": "0 + (min(1, max(0.01, Argola)))*(0 - 0)",
+            "angle": "360"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cabeça do pino da argola",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 - 0)",
+                "v": "((0.0135 - Profundidade)) + (min(1, max(0.01, Argola)))*((0.0135 - Profundidade) - 0.0095 - ((0.0135 - Profundidade)))"
+              },
+              {
+                "u": "(0 + (min(1, max(0.01, Argola)))*(0 - 0)) + ((min(1, max(0.01, Argola)))*0.0042)",
+                "v": "((0.0135 - Profundidade)) + (min(1, max(0.01, Argola)))*((0.0135 - Profundidade) - 0.0095 - ((0.0135 - Profundidade)))"
+              },
+              {
+                "u": "(0 + (min(1, max(0.01, Argola)))*(0 - 0)) + ((min(1, max(0.01, Argola)))*0.0042)",
+                "v": "(((0.0135 - Profundidade)) + (min(1, max(0.01, Argola)))*((0.0135 - Profundidade) - 0.0095 - ((0.0135 - Profundidade)))) + ((min(1, max(0.01, Argola)))*0.0012)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 - 0)",
+                "v": "(((0.0135 - Profundidade)) + (min(1, max(0.01, Argola)))*((0.0135 - Profundidade) - 0.0095 - ((0.0135 - Profundidade)))) + ((min(1, max(0.01, Argola)))*0.0012)"
+              }
+            ],
+            "offset": "Elevacao + (min(1, max(0.01, Argola)))*(Elevacao - 0.036 - Elevacao)",
+            "axis": "0 + (min(1, max(0.01, Argola)))*(0 - 0)",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Parafuso de fixação da argola",
+        "shape": {
+          "Cylinder": {
+            "x": "0 + (min(1, max(0.01, Argola)))*(0 - 0)",
+            "y": "((0.0135 - Profundidade)) + (min(1, max(0.01, Argola)))*((0.0135 - Profundidade) + 0.004 - ((0.0135 - Profundidade)))",
+            "z": "Elevacao + (min(1, max(0.01, Argola)))*(Elevacao + 0.0068 - Elevacao)",
+            "radius": "(min(1, max(0.01, Argola)))*0.0022",
+            "height": "(min(1, max(0.01, Argola)))*0.012"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Argola",
+        "shape": {
+          "Sweep": {
+            "plane": "Front",
+            "path": [
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0.001 - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(1.00000)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(1.00000)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(-0.13053)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(0.99144)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(-0.25882)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(0.96593)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(-0.38268)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(0.92388)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(-0.50000)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(0.86603)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(-0.60876)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(0.79335)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(-0.70711)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(0.70711)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(-0.79335)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(0.60876)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(-0.86603)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(0.50000)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(-0.92388)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(0.38268)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(-0.96593)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(0.25882)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(-0.99144)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(0.13053)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(-1.00000)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*((Elevacao - 0.036 - (Largura/2 - 0.006)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(-0.99144)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(-0.13053)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(-0.96593)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(-0.25882)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(-0.92388)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(-0.38268)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(-0.86603)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(-0.50000)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(-0.79335)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(-0.60876)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(-0.70711)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(-0.70711)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(-0.60876)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(-0.79335)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(-0.50000)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(-0.86603)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(-0.38268)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(-0.92388)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(-0.25882)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(-0.96593)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(-0.13053)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(-0.99144)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(-1.00000)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(0.13053)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(-0.99144)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(0.25882)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(-0.96593)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(0.38268)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(-0.92388)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(0.50000)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(-0.86603)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(0.60876)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(-0.79335)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(0.70711)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(-0.70711)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(0.79335)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(-0.60876)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(0.86603)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(-0.50000)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(0.92388)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(-0.38268)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(0.96593)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(-0.25882)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(0.99144)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(-0.13053)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(1.00000)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*((Elevacao - 0.036 - (Largura/2 - 0.006)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(0.99144)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(0.13053)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(0.96593)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(0.25882)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(0.92388)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(0.38268)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(0.86603)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(0.50000)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(0.79335)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(0.60876)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(0.70711)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(0.70711)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(0.60876)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(0.79335)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(0.50000)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(0.86603)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(0.38268)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(0.92388)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(0.25882)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(0.96593)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 + (((Largura/2 - 0.006))*(0.13053)) - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(0.99144)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(0 - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(1.00000)) - Elevacao)"
+              },
+              {
+                "u": "0 + (min(1, max(0.01, Argola)))*(-0.001 - 0)",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006))) + (((Largura/2 - 0.006))*(1.00000)) - Elevacao)"
+              }
+            ],
+            "offset": "((0.0135 - Profundidade)) + (min(1, max(0.01, Argola)))*((0.0135 - Profundidade) - ((0.0135 - Profundidade)))",
+            "profile": [
+              {
+                "u": "(min(1, max(0.01, Argola)))*0.006",
+                "v": "(min(1, max(0.01, Argola)))*0"
+              },
+              {
+                "u": "(min(1, max(0.01, Argola)))*0.005196",
+                "v": "(min(1, max(0.01, Argola)))*0.003"
+              },
+              {
+                "u": "(min(1, max(0.01, Argola)))*0.003",
+                "v": "(min(1, max(0.01, Argola)))*0.005196"
+              },
+              {
+                "u": "(min(1, max(0.01, Argola)))*0",
+                "v": "(min(1, max(0.01, Argola)))*0.006"
+              },
+              {
+                "u": "(min(1, max(0.01, Argola)))*(-0.003)",
+                "v": "(min(1, max(0.01, Argola)))*0.005196"
+              },
+              {
+                "u": "(min(1, max(0.01, Argola)))*(-0.005196)",
+                "v": "(min(1, max(0.01, Argola)))*0.003"
+              },
+              {
+                "u": "(min(1, max(0.01, Argola)))*(-0.006)",
+                "v": "(min(1, max(0.01, Argola)))*0"
+              },
+              {
+                "u": "(min(1, max(0.01, Argola)))*(-0.005196)",
+                "v": "(min(1, max(0.01, Argola)))*(-0.003)"
+              },
+              {
+                "u": "(min(1, max(0.01, Argola)))*(-0.003)",
+                "v": "(min(1, max(0.01, Argola)))*(-0.005196)"
+              },
+              {
+                "u": "(min(1, max(0.01, Argola)))*0",
+                "v": "(min(1, max(0.01, Argola)))*(-0.006)"
+              },
+              {
+                "u": "(min(1, max(0.01, Argola)))*0.003",
+                "v": "(min(1, max(0.01, Argola)))*(-0.005196)"
+              },
+              {
+                "u": "(min(1, max(0.01, Argola)))*0.005196",
+                "v": "(min(1, max(0.01, Argola)))*(-0.003)"
+              }
+            ]
+          }
+        },
+        "material": "Cromado",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Toalha de rosto",
+        "shape": {
+          "Sweep": {
+            "plane": "Side",
+            "path": [
+              {
+                "u": "((0.0135 - Profundidade)) + (min(1, max(0.01, Argola)))*((0.0135 - Profundidade) - 0.0165 - ((0.0135 - Profundidade)))",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006)) - (Largura/2 - 0.006)) - 0.3 - Elevacao)"
+              },
+              {
+                "u": "((0.0135 - Profundidade)) + (min(1, max(0.01, Argola)))*((0.0135 - Profundidade) - 0.0115 - ((0.0135 - Profundidade)))",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006)) - (Largura/2 - 0.006)) - 0.2 - Elevacao)"
+              },
+              {
+                "u": "((0.0135 - Profundidade)) + (min(1, max(0.01, Argola)))*((0.0135 - Profundidade) - 0.0115 - ((0.0135 - Profundidade)))",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006)) - (Largura/2 - 0.006)) - Elevacao)",
+                "radius": "(min(1, max(0.01, Argola)))*(-0.0115)"
+              },
+              {
+                "u": "((0.0135 - Profundidade)) + (min(1, max(0.01, Argola)))*((0.0135 - Profundidade) + 0.0115 - ((0.0135 - Profundidade)))",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006)) - (Largura/2 - 0.006)) - Elevacao)"
+              },
+              {
+                "u": "((0.0135 - Profundidade)) + (min(1, max(0.01, Argola)))*((0.0135 - Profundidade) + 0.0115 - ((0.0135 - Profundidade)))",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006)) - (Largura/2 - 0.006)) - 0.2 - Elevacao)"
+              },
+              {
+                "u": "((0.0135 - Profundidade)) + (min(1, max(0.01, Argola)))*((0.0135 - Profundidade) + 0.014499999999999999 - ((0.0135 - Profundidade)))",
+                "v": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006)) - (Largura/2 - 0.006)) - 0.28 - Elevacao)"
+              }
+            ],
+            "offset": "0 + (min(1, max(0.01, Argola)))*(0 - 0)",
+            "profile": [
+              {
+                "u": "(min(1, max(0.01, Argola)))*(-0.004)",
+                "v": "(min(1, max(0.01, Argola)))*(-(1.3*(Largura/2 - 0.006))/2)"
+              },
+              {
+                "u": "(min(1, max(0.01, Argola)))*0.004",
+                "v": "(min(1, max(0.01, Argola)))*(-(1.3*(Largura/2 - 0.006))/2)"
+              },
+              {
+                "u": "(min(1, max(0.01, Argola)))*0.004",
+                "v": "(min(1, max(0.01, Argola)))*((1.3*(Largura/2 - 0.006))/2)"
+              },
+              {
+                "u": "(min(1, max(0.01, Argola)))*(-0.004)",
+                "v": "(min(1, max(0.01, Argola)))*((1.3*(Largura/2 - 0.006))/2)"
+              }
+            ]
+          }
+        },
+        "material": "Toalha de algodão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Barrado da toalha de rosto",
+        "shape": {
+          "Box": {
+            "x": "0 + (min(1, max(0.01, Argola)))*(-(1.3*(Largura/2 - 0.006))/2 - 0)",
+            "y": "((0.0135 - Profundidade)) + (min(1, max(0.01, Argola)))*((0.0135 - Profundidade) - 0.0166 - ((0.0135 - Profundidade)))",
+            "z": "Elevacao + (min(1, max(0.01, Argola)))*(((Elevacao - 0.036 - (Largura/2 - 0.006)) - (Largura/2 - 0.006)) - 0.175 - Elevacao)",
+            "width": "(min(1, max(0.01, Argola)))*((1.3*(Largura/2 - 0.006)))",
+            "depth": "(min(1, max(0.01, Argola)))*0.0012",
+            "height": "(min(1, max(0.01, Argola)))*0.025"
+          }
+        },
+        "material": "Tecido cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      }
+    ]
+  },
+  "types": [
+    {
+      "name": "Toalheiro barra 60 cm",
+      "values": {
+        "Largura": 0.6
+      },
+      "info": {
+        "description": "Toalheiro de barra de parede, latão cromado, fixação oculta"
+      }
+    },
+    {
+      "name": "Toalheiro argola",
+      "values": {
+        "Largura": 0.2,
+        "Argola": 1
+      },
+      "info": {
+        "description": "Toalheiro de argola de parede para toalha de rosto, latão cromado"
+      }
+    },
+    {
+      "name": "Toalheiro barra 40 cm",
+      "values": {
+        "Largura": 0.4
+      },
+      "info": {
+        "description": "Toalheiro de barra de parede, latão cromado, fixação oculta"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "name": "Cromado",
+      "color": [
+        226,
+        229,
+        233
+      ],
+      "class": "Metal",
+      "finish": "Polished",
+      "transparency": 0
+    },
+    {
+      "name": "Inox escovado",
+      "color": [
+        198,
+        200,
+        203
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Aço pintado preto",
+      "color": [
+        30,
+        30,
+        32
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Toalha de algodão",
+      "color": [
+        236,
+        232,
+        222
+      ],
+      "class": "Generic",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Tecido cinza",
+      "color": [
+        150,
+        152,
+        156
+      ],
+      "class": "Generic",
+      "finish": "Matte",
+      "transparency": 0
+    }
+  ]
+}

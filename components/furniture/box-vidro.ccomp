@@ -1,0 +1,2498 @@
+(
+  format_version: 1,
+  generator: "ConstructCraft 0.12.0",
+  component: "Box de vidro",
+  def: (
+    kind: Furniture,
+    params: [
+      (
+        name: "Largura",
+        value: 1.0,
+        kind: Length,
+        instance: false,
+      ),
+      (
+        name: "Altura",
+        value: 1.9,
+        kind: Length,
+        instance: false,
+      ),
+      (
+        name: "Abertura",
+        value: 0.0,
+        kind: Length,
+        instance: true,
+      ),
+    ],
+    items: [
+      (
+        name: "Vidro fixo simplificado",
+        shape: Box(
+          x: "((-Largura/2) + 0.006)",
+          y: "0.041",
+          z: "0",
+          width: "((Largura + 0.05)/2 - 0.01)",
+          depth: "0.008",
+          height: "((Altura - 0.0485) - 0.02)",
+        ),
+        material: "Vidro temperado",
+        in_plan: true,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
+      ),
+      (
+        name: "Vidro de correr simplificado",
+        shape: Box(
+          x: "((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura)",
+          y: "-0.004",
+          z: "0",
+          width: "((Largura + 0.05)/2 - 0.01)",
+          depth: "0.008",
+          height: "((Altura - 0.0485) + 0.01)",
+        ),
+        material: "Vidro temperado",
+        in_plan: true,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
+      ),
+      (
+        name: "Trilho simplificado",
+        shape: Box(
+          x: "(-Largura/2)",
+          y: "0.0115",
+          z: "(Altura - 0.0485) - 0.0125",
+          width: "Largura",
+          depth: "0.025",
+          height: "Altura - (Altura - 0.0485) + 0.0125",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
+      ),
+      (
+        name: "Perfil de piso simplificado",
+        shape: Box(
+          x: "(-Largura/2)",
+          y: "-0.015",
+          z: "0",
+          width: "Largura",
+          depth: "0.075",
+          height: "0.018",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: true,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
+      ),
+      (
+        name: "Perfil de piso - base",
+        shape: Box(
+          x: "(-Largura/2)",
+          y: "-0.015",
+          z: "0",
+          width: "Largura",
+          depth: "0.075",
+          height: "0.003",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Perfil de piso - aba externa",
+        shape: Box(
+          x: "(-Largura/2)",
+          y: "-0.012",
+          z: "0.003",
+          width: "Largura",
+          depth: "0.003",
+          height: "0.015",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Perfil de piso - guia do vidro de correr",
+        shape: Box(
+          x: "(-Largura/2)",
+          y: "0.0095",
+          z: "0.003",
+          width: "Largura",
+          depth: "0.003",
+          height: "0.015",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Perfil de piso - aba do vidro fixo externa",
+        shape: Box(
+          x: "(-Largura/2)",
+          y: "0.0355",
+          z: "0.003",
+          width: "Largura",
+          depth: "0.003",
+          height: "0.015",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Perfil de piso - aba do vidro fixo interna",
+        shape: Box(
+          x: "(-Largura/2)",
+          y: "0.0515",
+          z: "0.003",
+          width: "Largura",
+          depth: "0.003",
+          height: "0.015",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Calço de apoio do vidro fixo 1",
+        shape: Box(
+          x: "((-Largura/2) + 0.006) + 0.08 - 0.02",
+          y: "0.0405",
+          z: "0.003",
+          width: "0.04",
+          depth: "0.009",
+          height: "0.001",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Calço de apoio do vidro fixo 2",
+        shape: Box(
+          x: "((-Largura/2) + 0.006 + ((Largura + 0.05)/2 - 0.01)) - 0.08 - 0.02",
+          y: "0.0405",
+          z: "0.003",
+          width: "0.04",
+          depth: "0.009",
+          height: "0.001",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Perfil U de parede - fundo",
+        shape: Box(
+          x: "(-Largura/2)",
+          y: "0.03",
+          z: "0",
+          width: "0.003",
+          depth: "0.03",
+          height: "(((Altura - 0.0485) - 0.02) + 0.005)",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Perfil U de parede - aba externa",
+        shape: Box(
+          x: "(-Largura/2) + 0.003",
+          y: "0.03",
+          z: "0",
+          width: "0.017",
+          depth: "0.003",
+          height: "(((Altura - 0.0485) - 0.02) + 0.005)",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Perfil U de parede - aba interna",
+        shape: Box(
+          x: "(-Largura/2) + 0.003",
+          y: "0.057",
+          z: "0",
+          width: "0.017",
+          depth: "0.003",
+          height: "(((Altura - 0.0485) - 0.02) + 0.005)",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Perfil batente - fundo",
+        shape: Box(
+          x: "(Largura/2) - 0.003",
+          y: "-0.015",
+          z: "0",
+          width: "0.003",
+          depth: "0.03",
+          height: "((Altura - 0.0485) + 0.01)",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Perfil batente - aba externa",
+        shape: Box(
+          x: "(Largura/2) - 0.02",
+          y: "-0.015",
+          z: "0",
+          width: "0.017",
+          depth: "0.003",
+          height: "((Altura - 0.0485) + 0.01)",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Perfil batente - aba interna",
+        shape: Box(
+          x: "(Largura/2) - 0.02",
+          y: "0.012",
+          z: "0",
+          width: "0.017",
+          depth: "0.003",
+          height: "((Altura - 0.0485) + 0.01)",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Vedação do perfil batente",
+        shape: Box(
+          x: "(Largura/2) - 0.006",
+          y: "-0.006",
+          z: "0.02",
+          width: "0.003",
+          depth: "0.012",
+          height: "((Altura - 0.0485) + 0.01) - 0.04",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Parafuso do perfil U 1",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "0.045 - 0.004",
+              v: "(((Altura - 0.0485) - 0.02) + 0.005)*0.15",
+              radius: "0.004",
+            ),
+            (
+              u: "0.045 + 0.004",
+              v: "(((Altura - 0.0485) - 0.02) + 0.005)*0.15",
+              radius: "0.004",
+            ),
+          ],
+          offset: "(-Largura/2) + 0.003",
+          depth: "0.002",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Parafuso do perfil batente 1",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "0 - 0.004",
+              v: "((Altura - 0.0485) + 0.01)*0.15",
+              radius: "0.004",
+            ),
+            (
+              u: "0 + 0.004",
+              v: "((Altura - 0.0485) + 0.01)*0.15",
+              radius: "0.004",
+            ),
+          ],
+          offset: "(Largura/2) - 0.0045",
+          depth: "0.0015",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Parafuso do perfil U 2",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "0.045 - 0.004",
+              v: "(((Altura - 0.0485) - 0.02) + 0.005)*0.5",
+              radius: "0.004",
+            ),
+            (
+              u: "0.045 + 0.004",
+              v: "(((Altura - 0.0485) - 0.02) + 0.005)*0.5",
+              radius: "0.004",
+            ),
+          ],
+          offset: "(-Largura/2) + 0.003",
+          depth: "0.002",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Parafuso do perfil batente 2",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "0 - 0.004",
+              v: "((Altura - 0.0485) + 0.01)*0.5",
+              radius: "0.004",
+            ),
+            (
+              u: "0 + 0.004",
+              v: "((Altura - 0.0485) + 0.01)*0.5",
+              radius: "0.004",
+            ),
+          ],
+          offset: "(Largura/2) - 0.0045",
+          depth: "0.0015",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Parafuso do perfil U 3",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "0.045 - 0.004",
+              v: "(((Altura - 0.0485) - 0.02) + 0.005)*0.85",
+              radius: "0.004",
+            ),
+            (
+              u: "0.045 + 0.004",
+              v: "(((Altura - 0.0485) - 0.02) + 0.005)*0.85",
+              radius: "0.004",
+            ),
+          ],
+          offset: "(-Largura/2) + 0.003",
+          depth: "0.002",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Parafuso do perfil batente 3",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "0 - 0.004",
+              v: "((Altura - 0.0485) + 0.01)*0.85",
+              radius: "0.004",
+            ),
+            (
+              u: "0 + 0.004",
+              v: "((Altura - 0.0485) + 0.01)*0.85",
+              radius: "0.004",
+            ),
+          ],
+          offset: "(Largura/2) - 0.0045",
+          depth: "0.0015",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Trilho",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "0.024 - 0.0125",
+              v: "(Altura - 0.0485)",
+              radius: "0.0125",
+            ),
+            (
+              u: "0.024 + 0.0125",
+              v: "(Altura - 0.0485)",
+              radius: "0.0125",
+            ),
+          ],
+          offset: "(-Largura/2) + 0.006",
+          depth: "Largura - 0.012",
+        ),
+        material: "Inox escovado",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Suporte de parede do trilho esquerdo",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "0.024 - 0.022",
+              v: "(Altura - 0.0485)",
+              radius: "0.022",
+            ),
+            (
+              u: "0.024 + 0.022",
+              v: "(Altura - 0.0485)",
+              radius: "0.022",
+            ),
+          ],
+          offset: "(-Largura/2)",
+          depth: "0.006",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Luva do suporte do trilho esquerdo",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "0.024 - 0.016",
+              v: "(Altura - 0.0485)",
+              radius: "0.016",
+            ),
+            (
+              u: "0.024 + 0.016",
+              v: "(Altura - 0.0485)",
+              radius: "0.016",
+            ),
+          ],
+          offset: "(-Largura/2) + 0.006",
+          depth: "0.02",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Parafuso da luva esquerdo",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "0.024 - 0.0025",
+              v: "(Altura - 0.0485) + 0.0155",
+              radius: "0.0025",
+            ),
+            (
+              u: "0.024 + 0.0025",
+              v: "(Altura - 0.0485) + 0.0155",
+              radius: "0.0025",
+            ),
+          ],
+          offset: "(-Largura/2) + 0.006 + 0.008",
+          depth: "0.004",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Suporte de parede do trilho direito",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "0.024 - 0.022",
+              v: "(Altura - 0.0485)",
+              radius: "0.022",
+            ),
+            (
+              u: "0.024 + 0.022",
+              v: "(Altura - 0.0485)",
+              radius: "0.022",
+            ),
+          ],
+          offset: "(Largura/2) - 0.006",
+          depth: "0.006",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Luva do suporte do trilho direito",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "0.024 - 0.016",
+              v: "(Altura - 0.0485)",
+              radius: "0.016",
+            ),
+            (
+              u: "0.024 + 0.016",
+              v: "(Altura - 0.0485)",
+              radius: "0.016",
+            ),
+          ],
+          offset: "(Largura/2) - 0.026",
+          depth: "0.02",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Parafuso da luva direito",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "0.024 - 0.0025",
+              v: "(Altura - 0.0485) + 0.0155",
+              radius: "0.0025",
+            ),
+            (
+              u: "0.024 + 0.0025",
+              v: "(Altura - 0.0485) + 0.0155",
+              radius: "0.0025",
+            ),
+          ],
+          offset: "(Largura/2) - 0.026 + 0.008",
+          depth: "0.004",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Batente do trilho esquerdo",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "0.024 - 0.0155",
+              v: "(Altura - 0.0485)",
+              radius: "0.0155",
+            ),
+            (
+              u: "0.024 + 0.0155",
+              v: "(Altura - 0.0485)",
+              radius: "0.0155",
+            ),
+          ],
+          offset: "(-Largura/2) + 0.108",
+          depth: "0.02",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Amortecedor do batente esquerdo",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "0.024 - 0.012",
+              v: "(Altura - 0.0485)",
+              radius: "0.012",
+            ),
+            (
+              u: "0.024 + 0.012",
+              v: "(Altura - 0.0485)",
+              radius: "0.012",
+            ),
+          ],
+          offset: "(-Largura/2) + 0.108 + 0.02",
+          depth: "0.004",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Batente do trilho direito",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "0.024 - 0.0155",
+              v: "(Altura - 0.0485)",
+              radius: "0.0155",
+            ),
+            (
+              u: "0.024 + 0.0155",
+              v: "(Altura - 0.0485)",
+              radius: "0.0155",
+            ),
+          ],
+          offset: "(Largura/2) - 0.006 - 0.12 + 0.02 + 0.002",
+          depth: "0.02",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Amortecedor do batente direito",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "0.024 - 0.012",
+              v: "(Altura - 0.0485)",
+              radius: "0.012",
+            ),
+            (
+              u: "0.024 + 0.012",
+              v: "(Altura - 0.0485)",
+              radius: "0.012",
+            ),
+          ],
+          offset: "(Largura/2) - 0.006 - 0.12 + 0.02 + 0.002 - 0.004",
+          depth: "0.004",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Vidro fixo",
+        shape: Box(
+          x: "((-Largura/2) + 0.006)",
+          y: "0.041",
+          z: "0.004",
+          width: "((Largura + 0.05)/2 - 0.01)",
+          depth: "0.008",
+          height: "((Altura - 0.0485) - 0.02) - 0.004",
+        ),
+        material: "Vidro temperado",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Vedação do vidro fixo",
+        shape: Box(
+          x: "((-Largura/2) + 0.006 + ((Largura + 0.05)/2 - 0.01)) - 0.004",
+          y: "0.0385",
+          z: "0.004",
+          width: "0.007",
+          depth: "0.013",
+          height: "((Altura - 0.0485) - 0.02) - 0.004",
+        ),
+        material: "Plástico translúcido",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Aba de vedação do vidro fixo",
+        shape: Box(
+          x: "((-Largura/2) + 0.006 + ((Largura + 0.05)/2 - 0.01)) - 0.002",
+          y: "0.0135",
+          z: "0.004 + 0.02",
+          width: "0.0015",
+          depth: "0.025",
+          height: "((Altura - 0.0485) - 0.02) - 0.004 - 0.1",
+        ),
+        material: "Plástico translúcido",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Suporte do vidro fixo 1",
+        shape: Box(
+          x: "((-Largura/2) + 0.006) + 0.14 - 0.02",
+          y: "0.031",
+          z: "(Altura - 0.0485) - 0.06",
+          width: "0.04",
+          depth: "0.021",
+          height: "0.054",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Suporte do vidro fixo 1 - garra",
+        shape: Box(
+          x: "((-Largura/2) + 0.006) + 0.14 - 0.012",
+          y: "0.026",
+          z: "(Altura - 0.0485) - 0.0175",
+          width: "0.024",
+          depth: "0.007",
+          height: "0.006",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Parafuso do suporte do vidro fixo 1.1",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "((-Largura/2) + 0.006) + 0.14 + -0.01",
+              v: "0.052",
+            ),
+            (
+              u: "(((-Largura/2) + 0.006) + 0.14 + -0.01) + 0.0035",
+              v: "0.052",
+            ),
+            (
+              u: "(((-Largura/2) + 0.006) + 0.14 + -0.01) + 0.0035",
+              v: "0.052 + 0.0015",
+            ),
+            (
+              u: "((-Largura/2) + 0.006) + 0.14 + -0.01",
+              v: "0.052 + 0.0015",
+            ),
+          ],
+          offset: "(Altura - 0.0485) - 0.04",
+          axis: "((-Largura/2) + 0.006) + 0.14 + -0.01",
+          angle: "360",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Parafuso do suporte do vidro fixo 1.2",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "((-Largura/2) + 0.006) + 0.14 + 0.01",
+              v: "0.052",
+            ),
+            (
+              u: "(((-Largura/2) + 0.006) + 0.14 + 0.01) + 0.0035",
+              v: "0.052",
+            ),
+            (
+              u: "(((-Largura/2) + 0.006) + 0.14 + 0.01) + 0.0035",
+              v: "0.052 + 0.0015",
+            ),
+            (
+              u: "((-Largura/2) + 0.006) + 0.14 + 0.01",
+              v: "0.052 + 0.0015",
+            ),
+          ],
+          offset: "(Altura - 0.0485) - 0.04",
+          axis: "((-Largura/2) + 0.006) + 0.14 + 0.01",
+          angle: "360",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Suporte do vidro fixo 2",
+        shape: Box(
+          x: "((-Largura/2) + 0.006 + ((Largura + 0.05)/2 - 0.01)) - 0.12 - 0.02",
+          y: "0.031",
+          z: "(Altura - 0.0485) - 0.06",
+          width: "0.04",
+          depth: "0.021",
+          height: "0.054",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Suporte do vidro fixo 2 - garra",
+        shape: Box(
+          x: "((-Largura/2) + 0.006 + ((Largura + 0.05)/2 - 0.01)) - 0.12 - 0.012",
+          y: "0.026",
+          z: "(Altura - 0.0485) - 0.0175",
+          width: "0.024",
+          depth: "0.007",
+          height: "0.006",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Parafuso do suporte do vidro fixo 2.1",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "((-Largura/2) + 0.006 + ((Largura + 0.05)/2 - 0.01)) - 0.12 + -0.01",
+              v: "0.052",
+            ),
+            (
+              u: "(((-Largura/2) + 0.006 + ((Largura + 0.05)/2 - 0.01)) - 0.12 + -0.01) + 0.0035",
+              v: "0.052",
+            ),
+            (
+              u: "(((-Largura/2) + 0.006 + ((Largura + 0.05)/2 - 0.01)) - 0.12 + -0.01) + 0.0035",
+              v: "0.052 + 0.0015",
+            ),
+            (
+              u: "((-Largura/2) + 0.006 + ((Largura + 0.05)/2 - 0.01)) - 0.12 + -0.01",
+              v: "0.052 + 0.0015",
+            ),
+          ],
+          offset: "(Altura - 0.0485) - 0.04",
+          axis: "((-Largura/2) + 0.006 + ((Largura + 0.05)/2 - 0.01)) - 0.12 + -0.01",
+          angle: "360",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Parafuso do suporte do vidro fixo 2.2",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "((-Largura/2) + 0.006 + ((Largura + 0.05)/2 - 0.01)) - 0.12 + 0.01",
+              v: "0.052",
+            ),
+            (
+              u: "(((-Largura/2) + 0.006 + ((Largura + 0.05)/2 - 0.01)) - 0.12 + 0.01) + 0.0035",
+              v: "0.052",
+            ),
+            (
+              u: "(((-Largura/2) + 0.006 + ((Largura + 0.05)/2 - 0.01)) - 0.12 + 0.01) + 0.0035",
+              v: "0.052 + 0.0015",
+            ),
+            (
+              u: "((-Largura/2) + 0.006 + ((Largura + 0.05)/2 - 0.01)) - 0.12 + 0.01",
+              v: "0.052 + 0.0015",
+            ),
+          ],
+          offset: "(Altura - 0.0485) - 0.04",
+          axis: "((-Largura/2) + 0.006 + ((Largura + 0.05)/2 - 0.01)) - 0.12 + 0.01",
+          angle: "360",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Vidro de correr",
+        shape: Box(
+          x: "((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura)",
+          y: "-0.004",
+          z: "0.01",
+          width: "((Largura + 0.05)/2 - 0.01)",
+          depth: "0.008",
+          height: "((Altura - 0.0485) + 0.01) - 0.01",
+        ),
+        material: "Vidro temperado",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Vedação vertical do vidro de correr",
+        shape: Box(
+          x: "((Largura/2) - 0.006 - Abertura) - 0.004",
+          y: "-0.0065",
+          z: "0.01",
+          width: "0.007",
+          depth: "0.013",
+          height: "((Altura - 0.0485) + 0.01) - 0.01",
+        ),
+        material: "Plástico translúcido",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Vedação inferior do vidro de correr",
+        shape: Box(
+          x: "((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura)",
+          y: "-0.0055",
+          z: "0.004",
+          width: "((Largura + 0.05)/2 - 0.01)",
+          depth: "0.011",
+          height: "0.016",
+        ),
+        material: "Plástico translúcido",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Placa da roldana 1",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12 - 0.03",
+              v: "((Altura - 0.0485) + 0.01) - 0.07",
+            ),
+            (
+              u: "((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12 + 0.03",
+              v: "((Altura - 0.0485) + 0.01) - 0.07",
+            ),
+            (
+              u: "((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12 + 0.03",
+              v: "((Altura - 0.0485) + 0.029)",
+              radius: "0.03",
+            ),
+            (
+              u: "((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12 - 0.03",
+              v: "((Altura - 0.0485) + 0.029)",
+            ),
+          ],
+          offset: "0.004",
+          depth: "0.004",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Contraplaca da roldana 1",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12 - 0.03) + 0.008",
+              v: "((Altura - 0.0485) + 0.01) - 0.07",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12 + 0.03) - 0.008",
+              v: "((Altura - 0.0485) + 0.01) - 0.07",
+              radius: "0.008",
+            ),
+            (
+              u: "((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12 + 0.03",
+              v: "(((Altura - 0.0485) + 0.01) - 0.07) + 0.008",
+            ),
+            (
+              u: "((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12 + 0.03",
+              v: "(((Altura - 0.0485) + 0.01) - 0.005) - 0.008",
+              radius: "0.008",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12 + 0.03) - 0.008",
+              v: "((Altura - 0.0485) + 0.01) - 0.005",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12 - 0.03) + 0.008",
+              v: "((Altura - 0.0485) + 0.01) - 0.005",
+              radius: "0.008",
+            ),
+            (
+              u: "((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12 - 0.03",
+              v: "(((Altura - 0.0485) + 0.01) - 0.005) - 0.008",
+            ),
+            (
+              u: "((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12 - 0.03",
+              v: "(((Altura - 0.0485) + 0.01) - 0.07) + 0.008",
+              radius: "0.008",
+            ),
+          ],
+          offset: "-0.008",
+          depth: "0.004",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Eixo da roldana 1",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12",
+              v: "0.008",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12) + 0.0045",
+              v: "0.008",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12) + 0.0045",
+              v: "0.008 + 0.027",
+            ),
+            (
+              u: "((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12",
+              v: "0.008 + 0.027",
+            ),
+          ],
+          offset: "((Altura - 0.0485) + 0.029)",
+          axis: "((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12",
+          angle: "360",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Roda da roldana 1",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12",
+              v: "0.018",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12) + 0.02",
+              v: "0.018",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12) + 0.02",
+              v: "0.0205",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12) + 0.0165",
+              v: "0.024",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12) + 0.02",
+              v: "0.0275",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12) + 0.02",
+              v: "0.03",
+            ),
+            (
+              u: "((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12",
+              v: "0.03",
+            ),
+          ],
+          offset: "((Altura - 0.0485) + 0.029)",
+          axis: "((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12",
+          angle: "360",
+        ),
+        material: "Plástico cinza claro",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Rolamento da roldana 1",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12",
+              v: "0.0175",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12) + 0.008",
+              v: "0.0175",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12) + 0.008",
+              v: "0.0175 + 0.013",
+            ),
+            (
+              u: "((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12",
+              v: "0.0175 + 0.013",
+            ),
+          ],
+          offset: "((Altura - 0.0485) + 0.029)",
+          axis: "((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12",
+          angle: "360",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Porca do eixo da roldana 1",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12",
+              v: "0.03",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12) + 0.0065",
+              v: "0.03",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12) + 0.0065",
+              v: "0.03 + 0.004",
+            ),
+            (
+              u: "((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12",
+              v: "0.03 + 0.004",
+            ),
+          ],
+          offset: "((Altura - 0.0485) + 0.029)",
+          axis: "((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12",
+          angle: "360",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Trava antidescarrilamento 1",
+        shape: Box(
+          x: "((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12 - 0.008",
+          y: "0.008",
+          z: "(Altura - 0.0485) - 0.0195",
+          width: "0.016",
+          depth: "0.019",
+          height: "0.005",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Parafuso da roldana 1.1",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12 + -0.016",
+              v: "-0.0095",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12 + -0.016) + 0.004",
+              v: "-0.0095",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12 + -0.016) + 0.004",
+              v: "(-0.0095) + 0.0015",
+            ),
+            (
+              u: "((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12 + -0.016",
+              v: "(-0.0095) + 0.0015",
+            ),
+          ],
+          offset: "((Altura - 0.0485) + 0.01) - 0.035",
+          axis: "((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12 + -0.016",
+          angle: "360",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Parafuso da roldana 1.2",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12 + 0.016",
+              v: "-0.0095",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12 + 0.016) + 0.004",
+              v: "-0.0095",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12 + 0.016) + 0.004",
+              v: "(-0.0095) + 0.0015",
+            ),
+            (
+              u: "((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12 + 0.016",
+              v: "(-0.0095) + 0.0015",
+            ),
+          ],
+          offset: "((Altura - 0.0485) + 0.01) - 0.035",
+          axis: "((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.12 + 0.016",
+          angle: "360",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Placa da roldana 2",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "((Largura/2) - 0.006 - Abertura) - 0.12 - 0.03",
+              v: "((Altura - 0.0485) + 0.01) - 0.07",
+            ),
+            (
+              u: "((Largura/2) - 0.006 - Abertura) - 0.12 + 0.03",
+              v: "((Altura - 0.0485) + 0.01) - 0.07",
+            ),
+            (
+              u: "((Largura/2) - 0.006 - Abertura) - 0.12 + 0.03",
+              v: "((Altura - 0.0485) + 0.029)",
+              radius: "0.03",
+            ),
+            (
+              u: "((Largura/2) - 0.006 - Abertura) - 0.12 - 0.03",
+              v: "((Altura - 0.0485) + 0.029)",
+            ),
+          ],
+          offset: "0.004",
+          depth: "0.004",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Contraplaca da roldana 2",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "(((Largura/2) - 0.006 - Abertura) - 0.12 - 0.03) + 0.008",
+              v: "((Altura - 0.0485) + 0.01) - 0.07",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - Abertura) - 0.12 + 0.03) - 0.008",
+              v: "((Altura - 0.0485) + 0.01) - 0.07",
+              radius: "0.008",
+            ),
+            (
+              u: "((Largura/2) - 0.006 - Abertura) - 0.12 + 0.03",
+              v: "(((Altura - 0.0485) + 0.01) - 0.07) + 0.008",
+            ),
+            (
+              u: "((Largura/2) - 0.006 - Abertura) - 0.12 + 0.03",
+              v: "(((Altura - 0.0485) + 0.01) - 0.005) - 0.008",
+              radius: "0.008",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - Abertura) - 0.12 + 0.03) - 0.008",
+              v: "((Altura - 0.0485) + 0.01) - 0.005",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - Abertura) - 0.12 - 0.03) + 0.008",
+              v: "((Altura - 0.0485) + 0.01) - 0.005",
+              radius: "0.008",
+            ),
+            (
+              u: "((Largura/2) - 0.006 - Abertura) - 0.12 - 0.03",
+              v: "(((Altura - 0.0485) + 0.01) - 0.005) - 0.008",
+            ),
+            (
+              u: "((Largura/2) - 0.006 - Abertura) - 0.12 - 0.03",
+              v: "(((Altura - 0.0485) + 0.01) - 0.07) + 0.008",
+              radius: "0.008",
+            ),
+          ],
+          offset: "-0.008",
+          depth: "0.004",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Eixo da roldana 2",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "((Largura/2) - 0.006 - Abertura) - 0.12",
+              v: "0.008",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - Abertura) - 0.12) + 0.0045",
+              v: "0.008",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - Abertura) - 0.12) + 0.0045",
+              v: "0.008 + 0.027",
+            ),
+            (
+              u: "((Largura/2) - 0.006 - Abertura) - 0.12",
+              v: "0.008 + 0.027",
+            ),
+          ],
+          offset: "((Altura - 0.0485) + 0.029)",
+          axis: "((Largura/2) - 0.006 - Abertura) - 0.12",
+          angle: "360",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Roda da roldana 2",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "((Largura/2) - 0.006 - Abertura) - 0.12",
+              v: "0.018",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - Abertura) - 0.12) + 0.02",
+              v: "0.018",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - Abertura) - 0.12) + 0.02",
+              v: "0.0205",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - Abertura) - 0.12) + 0.0165",
+              v: "0.024",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - Abertura) - 0.12) + 0.02",
+              v: "0.0275",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - Abertura) - 0.12) + 0.02",
+              v: "0.03",
+            ),
+            (
+              u: "((Largura/2) - 0.006 - Abertura) - 0.12",
+              v: "0.03",
+            ),
+          ],
+          offset: "((Altura - 0.0485) + 0.029)",
+          axis: "((Largura/2) - 0.006 - Abertura) - 0.12",
+          angle: "360",
+        ),
+        material: "Plástico cinza claro",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Rolamento da roldana 2",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "((Largura/2) - 0.006 - Abertura) - 0.12",
+              v: "0.0175",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - Abertura) - 0.12) + 0.008",
+              v: "0.0175",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - Abertura) - 0.12) + 0.008",
+              v: "0.0175 + 0.013",
+            ),
+            (
+              u: "((Largura/2) - 0.006 - Abertura) - 0.12",
+              v: "0.0175 + 0.013",
+            ),
+          ],
+          offset: "((Altura - 0.0485) + 0.029)",
+          axis: "((Largura/2) - 0.006 - Abertura) - 0.12",
+          angle: "360",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Porca do eixo da roldana 2",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "((Largura/2) - 0.006 - Abertura) - 0.12",
+              v: "0.03",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - Abertura) - 0.12) + 0.0065",
+              v: "0.03",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - Abertura) - 0.12) + 0.0065",
+              v: "0.03 + 0.004",
+            ),
+            (
+              u: "((Largura/2) - 0.006 - Abertura) - 0.12",
+              v: "0.03 + 0.004",
+            ),
+          ],
+          offset: "((Altura - 0.0485) + 0.029)",
+          axis: "((Largura/2) - 0.006 - Abertura) - 0.12",
+          angle: "360",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Trava antidescarrilamento 2",
+        shape: Box(
+          x: "((Largura/2) - 0.006 - Abertura) - 0.12 - 0.008",
+          y: "0.008",
+          z: "(Altura - 0.0485) - 0.0195",
+          width: "0.016",
+          depth: "0.019",
+          height: "0.005",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Parafuso da roldana 2.1",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "((Largura/2) - 0.006 - Abertura) - 0.12 + -0.016",
+              v: "-0.0095",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - Abertura) - 0.12 + -0.016) + 0.004",
+              v: "-0.0095",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - Abertura) - 0.12 + -0.016) + 0.004",
+              v: "(-0.0095) + 0.0015",
+            ),
+            (
+              u: "((Largura/2) - 0.006 - Abertura) - 0.12 + -0.016",
+              v: "(-0.0095) + 0.0015",
+            ),
+          ],
+          offset: "((Altura - 0.0485) + 0.01) - 0.035",
+          axis: "((Largura/2) - 0.006 - Abertura) - 0.12 + -0.016",
+          angle: "360",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Parafuso da roldana 2.2",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "((Largura/2) - 0.006 - Abertura) - 0.12 + 0.016",
+              v: "-0.0095",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - Abertura) - 0.12 + 0.016) + 0.004",
+              v: "-0.0095",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - Abertura) - 0.12 + 0.016) + 0.004",
+              v: "(-0.0095) + 0.0015",
+            ),
+            (
+              u: "((Largura/2) - 0.006 - Abertura) - 0.12 + 0.016",
+              v: "(-0.0095) + 0.0015",
+            ),
+          ],
+          offset: "((Altura - 0.0485) + 0.01) - 0.035",
+          axis: "((Largura/2) - 0.006 - Abertura) - 0.12 + 0.016",
+          angle: "360",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador tubular",
+        shape: Cylinder(
+          x: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.06)",
+          y: "-0.036",
+          z: "0.85",
+          radius: "0.0095",
+          height: "0.3",
+        ),
+        material: "Cromado",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Haste do puxador 1",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.06)",
+              v: "-0.03",
+            ),
+            (
+              u: "((((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.06)) + 0.0065",
+              v: "-0.03",
+            ),
+            (
+              u: "((((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.06)) + 0.0065",
+              v: "(-0.03) + 0.026",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.06)",
+              v: "(-0.03) + 0.026",
+            ),
+          ],
+          offset: "0.88",
+          axis: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.06)",
+          angle: "360",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Bucha do puxador 1",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.06)",
+              v: "-0.006",
+            ),
+            (
+              u: "((((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.06)) + 0.009",
+              v: "-0.006",
+            ),
+            (
+              u: "((((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.06)) + 0.009",
+              v: "(-0.006) + 0.002",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.06)",
+              v: "(-0.006) + 0.002",
+            ),
+          ],
+          offset: "0.88",
+          axis: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.06)",
+          angle: "360",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Haste do puxador 2",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.06)",
+              v: "-0.03",
+            ),
+            (
+              u: "((((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.06)) + 0.0065",
+              v: "-0.03",
+            ),
+            (
+              u: "((((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.06)) + 0.0065",
+              v: "(-0.03) + 0.026",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.06)",
+              v: "(-0.03) + 0.026",
+            ),
+          ],
+          offset: "1.12",
+          axis: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.06)",
+          angle: "360",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Bucha do puxador 2",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.06)",
+              v: "-0.006",
+            ),
+            (
+              u: "((((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.06)) + 0.009",
+              v: "-0.006",
+            ),
+            (
+              u: "((((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.06)) + 0.009",
+              v: "(-0.006) + 0.002",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.06)",
+              v: "(-0.006) + 0.002",
+            ),
+          ],
+          offset: "1.12",
+          axis: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.06)",
+          angle: "360",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Puxador interno",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.06)",
+              v: "0.004",
+            ),
+            (
+              u: "((((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.06)) + 0.022",
+              v: "0.004",
+            ),
+            (
+              u: "((((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.06)) + 0.022",
+              v: "0.004 + 0.007",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.06)",
+              v: "0.004 + 0.007",
+            ),
+          ],
+          offset: "1",
+          axis: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.06)",
+          angle: "360",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Bucha do puxador interno",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.06)",
+              v: "0.0035",
+            ),
+            (
+              u: "((((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.06)) + 0.024",
+              v: "0.0035",
+            ),
+            (
+              u: "((((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.06)) + 0.024",
+              v: "0.0035 + 0.0015",
+            ),
+            (
+              u: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.06)",
+              v: "0.0035 + 0.0015",
+            ),
+          ],
+          offset: "1",
+          axis: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.06)",
+          angle: "360",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Tampa dos puxadores",
+        shape: Cylinder(
+          x: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.06)",
+          y: "-0.036",
+          z: "1.15",
+          radius: "0.0095",
+          height: "0.004",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Tampa inferior dos puxadores",
+        shape: Cylinder(
+          x: "(((Largura/2) - 0.006 - ((Largura + 0.05)/2 - 0.01) - Abertura) + 0.06)",
+          y: "-0.036",
+          z: "0.846",
+          radius: "0.0095",
+          height: "0.004",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Seta de correr",
+        shape: Extrusion(
+          points: [
+            ("-0.15", "-0.06"),
+            ("-0.1", "-0.075"),
+            ("-0.1", "-0.0635"),
+            ("0.1", "-0.0635"),
+            ("0.1", "-0.0565"),
+            ("-0.1", "-0.0565"),
+            ("-0.1", "-0.045"),
+          ],
+          z: "0",
+          height: "0.001",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: true,
+        plan_only: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+    ],
+  ),
+  types: [
+    (
+      name: "Box frontal 100 cm",
+      values: {
+        "Abertura": 0.0,
+        "Altura": 1.9,
+        "Largura": 1.0,
+      },
+      info: (
+        type_mark: "",
+        description: "Box frontal de correr, vidro temperado incolor 8 mm, roldanas aparentes e perfis de alumínio, entre paredes",
+        manufacturer: "",
+        model: "",
+        url: "",
+        keynote: "",
+        classification: "",
+        fire_rating: "",
+        comments: "",
+        cost: None,
+      ),
+    ),
+    (
+      name: "Box frontal 120 cm",
+      values: {
+        "Abertura": 0.0,
+        "Altura": 1.9,
+        "Largura": 1.2,
+      },
+      info: (
+        type_mark: "",
+        description: "Box frontal de correr, vidro temperado incolor 8 mm, roldanas aparentes e perfis de alumínio, entre paredes",
+        manufacturer: "",
+        model: "",
+        url: "",
+        keynote: "",
+        classification: "",
+        fire_rating: "",
+        comments: "",
+        cost: None,
+      ),
+    ),
+    (
+      name: "Box frontal 150 cm",
+      values: {
+        "Abertura": 0.0,
+        "Altura": 1.9,
+        "Largura": 1.5,
+      },
+      info: (
+        type_mark: "",
+        description: "Box frontal de correr, vidro temperado incolor 8 mm, roldanas aparentes e perfis de alumínio, entre paredes",
+        manufacturer: "",
+        model: "",
+        url: "",
+        keynote: "",
+        classification: "",
+        fire_rating: "",
+        comments: "",
+        cost: None,
+      ),
+    ),
+  ],
+  materials: [
+    (
+      name: "Vidro temperado",
+      color: (205, 228, 232),
+      identity: (
+        description: "",
+        class: Glass,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.7,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (205, 228, 232),
+        finish: Polished,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Inox escovado",
+      color: (198, 200, 203),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (198, 200, 203),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Alumínio anodizado",
+      color: (206, 208, 210),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (206, 208, 210),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Borracha",
+      color: (30, 30, 30),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (30, 30, 30),
+        finish: Matte,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Cromado",
+      color: (226, 229, 233),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (226, 229, 233),
+        finish: Polished,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Plástico translúcido",
+      color: (222, 236, 240),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.6,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (222, 236, 240),
+        finish: Glossy,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Plástico cinza claro",
+      color: (196, 198, 200),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (196, 198, 200),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Plástico preto",
+      color: (34, 34, 37),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (34, 34, 37),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+  ],
+)

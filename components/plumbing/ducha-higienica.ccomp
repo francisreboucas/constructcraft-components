@@ -1,0 +1,1402 @@
+(
+  format_version: 1,
+  generator: "ConstructCraft 0.12.0",
+  component: "Ducha higiênica",
+  def: (
+    kind: Plumbing,
+    params: [
+      (
+        name: "Mangueira",
+        value: 1.2,
+        kind: Length,
+        instance: false,
+      ),
+      (
+        name: "Elevacao",
+        value: 0.6,
+        kind: Length,
+        instance: true,
+      ),
+      (
+        name: "AnguloRegistro",
+        value: 0.0,
+        kind: Angle,
+        instance: true,
+      ),
+      (
+        name: "AnguloGatilho",
+        value: 0.0,
+        kind: Angle,
+        instance: true,
+      ),
+    ],
+    items: [
+      (
+        name: "Registro simplificado",
+        shape: Box(
+          x: "-0.032",
+          y: "-0.066",
+          z: "Elevacao - 0.087",
+          width: "0.064",
+          depth: "0.066",
+          height: "0.119",
+        ),
+        material: "Cromado",
+        in_plan: true,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
+      ),
+      (
+        name: "Suporte simplificado",
+        shape: Box(
+          x: "0.073",
+          y: "-0.058",
+          z: "Elevacao - 0.028",
+          width: "0.044",
+          depth: "0.058",
+          height: "0.04",
+        ),
+        material: "Cromado",
+        in_plan: true,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
+      ),
+      (
+        name: "Ducha simplificada",
+        shape: Cylinder(
+          x: "0.095",
+          y: "-0.04",
+          z: "Elevacao - 0.224",
+          radius: "0.02",
+          height: "0.266",
+        ),
+        material: "Cromado",
+        in_plan: true,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
+      ),
+      (
+        name: "Canopla do registro",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "0",
+              v: "-0.011",
+            ),
+            (
+              u: "0.024",
+              v: "-0.011",
+              radius: "0.009",
+            ),
+            (
+              u: "0.032",
+              v: "-0.004",
+            ),
+            (
+              u: "0.032",
+              v: "0",
+            ),
+            (
+              u: "0",
+              v: "0",
+            ),
+          ],
+          offset: "Elevacao",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "Cromado",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Castelo do registro",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "0",
+              v: "-0.045",
+            ),
+            (
+              u: "0 + 0.0165",
+              v: "-0.045",
+            ),
+            (
+              u: "0 + 0.0165",
+              v: "(-0.045) + 0.035",
+            ),
+            (
+              u: "0",
+              v: "(-0.045) + 0.035",
+            ),
+          ],
+          offset: "Elevacao",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "Cromado",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Anel do castelo",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "0",
+              v: "-0.017",
+            ),
+            (
+              u: "0 + 0.019",
+              v: "-0.017",
+            ),
+            (
+              u: "0 + 0.019",
+              v: "(-0.017) + 0.006",
+            ),
+            (
+              u: "0",
+              v: "(-0.017) + 0.006",
+            ),
+          ],
+          offset: "Elevacao",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Cubo da alavanca",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "0",
+              v: "-0.066",
+            ),
+            (
+              u: "0 + 0.012",
+              v: "-0.066",
+            ),
+            (
+              u: "0 + 0.012",
+              v: "(-0.066) + 0.021",
+            ),
+            (
+              u: "0",
+              v: "(-0.066) + 0.021",
+            ),
+          ],
+          offset: "Elevacao",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "Cromado",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Alavanca do registro",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "0*cos((180 - AnguloRegistro)) - (-0.009)*sin((180 - AnguloRegistro))",
+              v: "Elevacao + 0*sin((180 - AnguloRegistro)) + (-0.009)*cos((180 - AnguloRegistro))",
+            ),
+            (
+              u: "0.058*cos((180 - AnguloRegistro)) - (-0.0062)*sin((180 - AnguloRegistro))",
+              v: "Elevacao + 0.058*sin((180 - AnguloRegistro)) + (-0.0062)*cos((180 - AnguloRegistro))",
+            ),
+            (
+              u: "0.064*cos((180 - AnguloRegistro)) - (-0.0045)*sin((180 - AnguloRegistro))",
+              v: "Elevacao + 0.064*sin((180 - AnguloRegistro)) + (-0.0045)*cos((180 - AnguloRegistro))",
+            ),
+            (
+              u: "0.067*cos((180 - AnguloRegistro)) - 0*sin((180 - AnguloRegistro))",
+              v: "Elevacao + 0.067*sin((180 - AnguloRegistro)) + 0*cos((180 - AnguloRegistro))",
+            ),
+            (
+              u: "0.064*cos((180 - AnguloRegistro)) - 0.0045*sin((180 - AnguloRegistro))",
+              v: "Elevacao + 0.064*sin((180 - AnguloRegistro)) + 0.0045*cos((180 - AnguloRegistro))",
+            ),
+            (
+              u: "0.058*cos((180 - AnguloRegistro)) - 0.0062*sin((180 - AnguloRegistro))",
+              v: "Elevacao + 0.058*sin((180 - AnguloRegistro)) + 0.0062*cos((180 - AnguloRegistro))",
+            ),
+            (
+              u: "0*cos((180 - AnguloRegistro)) - 0.009*sin((180 - AnguloRegistro))",
+              v: "Elevacao + 0*sin((180 - AnguloRegistro)) + 0.009*cos((180 - AnguloRegistro))",
+            ),
+          ],
+          offset: "-0.064",
+          depth: "0.008",
+        ),
+        material: "Cromado",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Indicador de água fria",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "0",
+              v: "-0.0672",
+            ),
+            (
+              u: "0 + 0.0075",
+              v: "-0.0672",
+            ),
+            (
+              u: "0 + 0.0075",
+              v: "(-0.0672) + 0.0012",
+            ),
+            (
+              u: "0",
+              v: "(-0.0672) + 0.0012",
+            ),
+          ],
+          offset: "Elevacao",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "Plástico azul",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Parafuso de fixação da canopla",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "0",
+              v: "-0.0115",
+            ),
+            (
+              u: "0 + 0.0022",
+              v: "-0.0115",
+            ),
+            (
+              u: "0 + 0.0022",
+              v: "(-0.0115) + 0.0006",
+            ),
+            (
+              u: "0",
+              v: "(-0.0115) + 0.0006",
+            ),
+          ],
+          offset: "Elevacao - 0.022",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Bico de saída",
+        shape: Cylinder(
+          x: "0",
+          y: "-0.04",
+          z: "Elevacao - 0.05",
+          radius: "0.0075",
+          height: "0.04",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Porca do flexível no registro",
+        shape: Extrusion(
+          points: [
+            ("0.009959", "-0.03425"),
+            ("0", "-0.0285"),
+            ("-0.009959", "-0.03425"),
+            ("-0.009959", "-0.04575"),
+            ("0", "-0.0515"),
+            ("0.009959", "-0.04575"),
+          ],
+          z: "Elevacao - 0.062",
+          height: "0.014",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Terminal do flexível no registro",
+        shape: Cylinder(
+          x: "0",
+          y: "-0.04",
+          z: "Elevacao - 0.087",
+          radius: "0.0085",
+          height: "0.025",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Anel de crimpagem no registro",
+        shape: Cylinder(
+          x: "0",
+          y: "-0.04",
+          z: "Elevacao - 0.083",
+          radius: "0.0092",
+          height: "0.004",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Flexível",
+        shape: Sweep(
+          plane: Front,
+          path: [
+            (
+              u: "0",
+              v: "Elevacao - 0.087",
+            ),
+            (
+              u: "0.00069 - 0.01421*(0.36275 + 0.76879*(Mangueira - 1.2))",
+              v: "Elevacao - 0.13095",
+            ),
+            (
+              u: "0.00263 - 0.05248*(0.36275 + 0.76879*(Mangueira - 1.2))",
+              v: "Elevacao - 0.17656",
+            ),
+            (
+              u: "0.00561 - 0.10824*(0.36275 + 0.76879*(Mangueira - 1.2))",
+              v: "Elevacao - 0.22305",
+            ),
+            (
+              u: "0.00942 - 0.17493*(0.36275 + 0.76879*(Mangueira - 1.2))",
+              v: "Elevacao - 0.26962",
+            ),
+            (
+              u: "0.01385 - 0.24599*(0.36275 + 0.76879*(Mangueira - 1.2))",
+              v: "Elevacao - 0.3155",
+            ),
+            (
+              u: "0.01870 - 0.31487*(0.36275 + 0.76879*(Mangueira - 1.2))",
+              v: "Elevacao - 0.35989",
+            ),
+            (
+              u: "0.02375 - 0.37500*(0.36275 + 0.76879*(Mangueira - 1.2))",
+              v: "Elevacao - 0.402",
+            ),
+            (
+              u: "0.02880 - 0.41983*(0.36275 + 0.76879*(Mangueira - 1.2))",
+              v: "Elevacao - 0.44105",
+            ),
+            (
+              u: "0.03365 - 0.44278*(0.36275 + 0.76879*(Mangueira - 1.2))",
+              v: "Elevacao - 0.47626",
+            ),
+            (
+              u: "0.03808 - 0.43732*(0.36275 + 0.76879*(Mangueira - 1.2))",
+              v: "Elevacao - 0.50683",
+            ),
+            (
+              u: "0.04189 - 0.39687*(0.36275 + 0.76879*(Mangueira - 1.2))",
+              v: "Elevacao - 0.53197",
+            ),
+            (
+              u: "0.04487 - 0.31487*(0.36275 + 0.76879*(Mangueira - 1.2))",
+              v: "Elevacao - 0.55091",
+            ),
+            (
+              u: "0.04681 - 0.18477*(0.36275 + 0.76879*(Mangueira - 1.2))",
+              v: "Elevacao - 0.56285",
+            ),
+            (
+              u: "0.0475",
+              v: "Elevacao - 0.567",
+            ),
+            (
+              u: "0.04819 + 0.18477*(0.36275 + 0.76879*(Mangueira - 1.2))",
+              v: "Elevacao - 0.56484",
+            ),
+            (
+              u: "0.05013 + 0.31487*(0.36275 + 0.76879*(Mangueira - 1.2))",
+              v: "Elevacao - 0.5585",
+            ),
+            (
+              u: "0.05311 + 0.39687*(0.36275 + 0.76879*(Mangueira - 1.2))",
+              v: "Elevacao - 0.54815",
+            ),
+            (
+              u: "0.05692 + 0.43732*(0.36275 + 0.76879*(Mangueira - 1.2))",
+              v: "Elevacao - 0.53399",
+            ),
+            (
+              u: "0.06135 + 0.44278*(0.36275 + 0.76879*(Mangueira - 1.2))",
+              v: "Elevacao - 0.5162",
+            ),
+            (
+              u: "0.06620 + 0.41983*(0.36275 + 0.76879*(Mangueira - 1.2))",
+              v: "Elevacao - 0.49497",
+            ),
+            (
+              u: "0.07125 + 0.37500*(0.36275 + 0.76879*(Mangueira - 1.2))",
+              v: "Elevacao - 0.4705",
+            ),
+            (
+              u: "0.07630 + 0.31487*(0.36275 + 0.76879*(Mangueira - 1.2))",
+              v: "Elevacao - 0.44297",
+            ),
+            (
+              u: "0.08115 + 0.24599*(0.36275 + 0.76879*(Mangueira - 1.2))",
+              v: "Elevacao - 0.41256",
+            ),
+            (
+              u: "0.08558 + 0.17493*(0.36275 + 0.76879*(Mangueira - 1.2))",
+              v: "Elevacao - 0.37946",
+            ),
+            (
+              u: "0.08939 + 0.10824*(0.36275 + 0.76879*(Mangueira - 1.2))",
+              v: "Elevacao - 0.34387",
+            ),
+            (
+              u: "0.09237 + 0.05248*(0.36275 + 0.76879*(Mangueira - 1.2))",
+              v: "Elevacao - 0.30597",
+            ),
+            (
+              u: "0.09431 + 0.01421*(0.36275 + 0.76879*(Mangueira - 1.2))",
+              v: "Elevacao - 0.26595",
+            ),
+            (
+              u: "0.095",
+              v: "Elevacao - 0.224",
+            ),
+          ],
+          offset: "-0.04",
+          profile: [
+            (
+              u: "0.0065",
+              v: "0",
+            ),
+            (
+              u: "0.005629",
+              v: "0.00325",
+            ),
+            (
+              u: "0.00325",
+              v: "0.005629",
+            ),
+            (
+              u: "0",
+              v: "0.0065",
+            ),
+            (
+              u: "-0.00325",
+              v: "0.005629",
+            ),
+            (
+              u: "-0.005629",
+              v: "0.00325",
+            ),
+            (
+              u: "-0.0065",
+              v: "0",
+            ),
+            (
+              u: "-0.005629",
+              v: "-0.00325",
+            ),
+            (
+              u: "-0.00325",
+              v: "-0.005629",
+            ),
+            (
+              u: "0",
+              v: "-0.0065",
+            ),
+            (
+              u: "0.00325",
+              v: "-0.005629",
+            ),
+            (
+              u: "0.005629",
+              v: "-0.00325",
+            ),
+          ],
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+      ),
+      (
+        name: "Canopla do suporte",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "0.095",
+              v: "-0.009",
+            ),
+            (
+              u: "0.111",
+              v: "-0.009",
+              radius: "0.007",
+            ),
+            (
+              u: "0.117",
+              v: "-0.003",
+            ),
+            (
+              u: "0.117",
+              v: "0",
+            ),
+            (
+              u: "0.095",
+              v: "0",
+            ),
+          ],
+          offset: "Elevacao - 0.006",
+          axis: "0.095",
+          angle: "360",
+        ),
+        material: "Cromado",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Braço do suporte",
+        shape: Box(
+          x: "0.089",
+          y: "-0.024",
+          z: "Elevacao - 0.011",
+          width: "0.012",
+          depth: "0.016",
+          height: "0.01",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Garfo do suporte",
+        shape: Extrusion(
+          points: [
+            ("0.104", "-0.055588"),
+            ("0.108789", "-0.05157"),
+            ("0.111914", "-0.046156"),
+            ("0.113", "-0.04"),
+            ("0.111914", "-0.033844"),
+            ("0.108789", "-0.02843"),
+            ("0.104", "-0.024412"),
+            ("0.098126", "-0.022273"),
+            ("0.091874", "-0.022273"),
+            ("0.086", "-0.024412"),
+            ("0.081211", "-0.02843"),
+            ("0.078086", "-0.033844"),
+            ("0.077", "-0.04"),
+            ("0.078086", "-0.046156"),
+            ("0.081211", "-0.05157"),
+            ("0.086", "-0.055588"),
+            ("0.08925", "-0.049959"),
+            ("0.08619", "-0.047392"),
+            ("0.084194", "-0.043933"),
+            ("0.0835", "-0.04"),
+            ("0.084194", "-0.036067"),
+            ("0.08619", "-0.032608"),
+            ("0.08925", "-0.030041"),
+            ("0.093003", "-0.028675"),
+            ("0.096997", "-0.028675"),
+            ("0.10075", "-0.030041"),
+            ("0.10381", "-0.032608"),
+            ("0.105806", "-0.036067"),
+            ("0.1065", "-0.04"),
+            ("0.105806", "-0.043933"),
+            ("0.10381", "-0.047392"),
+            ("0.10075", "-0.049959"),
+          ],
+          z: "Elevacao - 0.012",
+          height: "0.012",
+        ),
+        material: "Cromado",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Tampa do parafuso do suporte",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "0.095",
+              v: "-0.0095",
+            ),
+            (
+              u: "0.095 + 0.003",
+              v: "-0.0095",
+            ),
+            (
+              u: "0.095 + 0.003",
+              v: "(-0.0095) + 0.0006",
+            ),
+            (
+              u: "0.095",
+              v: "(-0.0095) + 0.0006",
+            ),
+          ],
+          offset: "Elevacao + 0.008",
+          axis: "0.095",
+          angle: "360",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Porca do flexível na ducha",
+        shape: Extrusion(
+          points: [
+            ("0.104959", "-0.03425"),
+            ("0.095", "-0.0285"),
+            ("0.085041", "-0.03425"),
+            ("0.085041", "-0.04575"),
+            ("0.095", "-0.0515"),
+            ("0.104959", "-0.04575"),
+          ],
+          z: "Elevacao - 0.199",
+          height: "0.014",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Terminal do flexível na ducha",
+        shape: Cylinder(
+          x: "0.095",
+          y: "-0.04",
+          z: "Elevacao - 0.224",
+          radius: "0.0085",
+          height: "0.025",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Anel de crimpagem na ducha",
+        shape: Cylinder(
+          x: "0.095",
+          y: "-0.04",
+          z: "Elevacao - 0.205",
+          radius: "0.0092",
+          height: "0.004",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Cabo da ducha",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "0.095",
+              v: "Elevacao - 0.185",
+            ),
+            (
+              u: "0.106",
+              v: "Elevacao - 0.185",
+            ),
+            (
+              u: "0.1078",
+              v: "Elevacao - 0.17",
+              radius: "0.4",
+            ),
+            (
+              u: "0.1088",
+              v: "Elevacao - 0.07",
+            ),
+            (
+              u: "0.1068",
+              v: "Elevacao - 0.03",
+              radius: "0.06",
+            ),
+            (
+              u: "0.1055",
+              v: "Elevacao - 0.012",
+            ),
+            (
+              u: "0.1055",
+              v: "Elevacao + 0.001",
+            ),
+            (
+              u: "0.095",
+              v: "Elevacao + 0.001",
+            ),
+          ],
+          offset: "-0.04",
+          axis: "0.095",
+          angle: "360",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Cabeça da ducha",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "0.095",
+              v: "Elevacao",
+            ),
+            (
+              u: "0.1075",
+              v: "Elevacao",
+            ),
+            (
+              u: "0.1155",
+              v: "Elevacao + 0.008",
+              radius: "0.012",
+            ),
+            (
+              u: "0.1165",
+              v: "Elevacao + 0.03",
+            ),
+            (
+              u: "0.114",
+              v: "Elevacao + 0.04",
+              radius: "0.012",
+            ),
+            (
+              u: "0.1105",
+              v: "Elevacao + 0.042",
+            ),
+            (
+              u: "0.095",
+              v: "Elevacao + 0.042",
+            ),
+          ],
+          offset: "-0.04",
+          axis: "0.095",
+          angle: "360",
+        ),
+        material: "Cromado",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Anel decorativo do cabo",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "0.1055",
+              v: "Elevacao - 0.012",
+            ),
+            (
+              u: "0.1072",
+              v: "Elevacao - 0.012",
+            ),
+            (
+              u: "0.1072",
+              v: "Elevacao - 0.004",
+            ),
+            (
+              u: "0.1055",
+              v: "Elevacao - 0.004",
+            ),
+          ],
+          offset: "-0.04",
+          axis: "0.095",
+          angle: "360",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Espalhador da ducha",
+        shape: Cylinder(
+          x: "0.095",
+          y: "-0.04",
+          z: "Elevacao + 0.0405",
+          radius: "0.0152",
+          height: "0.0025",
+        ),
+        material: "Borracha cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Anel de jatos 1",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "0.0983",
+              v: "Elevacao + 0.042",
+            ),
+            (
+              u: "0.1007",
+              v: "Elevacao + 0.042",
+            ),
+            (
+              u: "0.1007",
+              v: "Elevacao + 0.0432",
+            ),
+            (
+              u: "0.0983",
+              v: "Elevacao + 0.0432",
+            ),
+          ],
+          offset: "-0.04",
+          axis: "0.095",
+          angle: "360",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Anel de jatos 2",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "0.1033",
+              v: "Elevacao + 0.042",
+            ),
+            (
+              u: "0.1057",
+              v: "Elevacao + 0.042",
+            ),
+            (
+              u: "0.1057",
+              v: "Elevacao + 0.0432",
+            ),
+            (
+              u: "0.1033",
+              v: "Elevacao + 0.0432",
+            ),
+          ],
+          offset: "-0.04",
+          axis: "0.095",
+          angle: "360",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Jato central",
+        shape: Cylinder(
+          x: "0.095",
+          y: "-0.04",
+          z: "Elevacao + 0.042",
+          radius: "0.0015",
+          height: "0.0012",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Gatilho",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-0.052 + 0*cos(AnguloGatilho) - 0.006*sin(AnguloGatilho)",
+              v: "Elevacao - 0.025 + 0*sin(AnguloGatilho) + 0.006*cos(AnguloGatilho)",
+            ),
+            (
+              u: "-0.052 + -0.008*cos(AnguloGatilho) - (-0.004)*sin(AnguloGatilho)",
+              v: "Elevacao - 0.025 + -0.008*sin(AnguloGatilho) + (-0.004)*cos(AnguloGatilho)",
+            ),
+            (
+              u: "-0.052 + -0.016*cos(AnguloGatilho) - (-0.04)*sin(AnguloGatilho)",
+              v: "Elevacao - 0.025 + -0.016*sin(AnguloGatilho) + (-0.04)*cos(AnguloGatilho)",
+            ),
+            (
+              u: "-0.052 + -0.019*cos(AnguloGatilho) - (-0.082)*sin(AnguloGatilho)",
+              v: "Elevacao - 0.025 + -0.019*sin(AnguloGatilho) + (-0.082)*cos(AnguloGatilho)",
+            ),
+            (
+              u: "-0.052 + -0.016*cos(AnguloGatilho) - (-0.09)*sin(AnguloGatilho)",
+              v: "Elevacao - 0.025 + -0.016*sin(AnguloGatilho) + (-0.09)*cos(AnguloGatilho)",
+            ),
+            (
+              u: "-0.052 + -0.011*cos(AnguloGatilho) - (-0.088)*sin(AnguloGatilho)",
+              v: "Elevacao - 0.025 + -0.011*sin(AnguloGatilho) + (-0.088)*cos(AnguloGatilho)",
+            ),
+            (
+              u: "-0.052 + -0.009*cos(AnguloGatilho) - (-0.05)*sin(AnguloGatilho)",
+              v: "Elevacao - 0.025 + -0.009*sin(AnguloGatilho) + (-0.05)*cos(AnguloGatilho)",
+            ),
+            (
+              u: "-0.052 + -0.002*cos(AnguloGatilho) - (-0.012)*sin(AnguloGatilho)",
+              v: "Elevacao - 0.025 + -0.002*sin(AnguloGatilho) + (-0.012)*cos(AnguloGatilho)",
+            ),
+          ],
+          offset: "0.0895",
+          depth: "0.011",
+        ),
+        material: "Cromado",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Pino do gatilho",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "(-0.052) - 0.002",
+              v: "Elevacao - 0.025",
+              radius: "0.002",
+            ),
+            (
+              u: "(-0.052) + 0.002",
+              v: "Elevacao - 0.025",
+              radius: "0.002",
+            ),
+          ],
+          offset: "0.0875",
+          depth: "0.015",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+    ],
+    mep: Some(Fixture(
+      drain_units: 0.0,
+      supply_weight: 0.4,
+      hot_water: false,
+    )),
+    connectors: [
+      (
+        name: "Água fria",
+        system: ColdWater,
+        x: "0",
+        y: "0",
+        z: "Elevacao",
+        direction: Back,
+        diameter: "0.02",
+      ),
+    ],
+  ),
+  types: [
+    (
+      name: "Ducha higiênica 1,2 m",
+      values: {
+        "AnguloGatilho": 0.0,
+        "AnguloRegistro": 0.0,
+        "Elevacao": 0.6,
+        "Mangueira": 1.2,
+      },
+      info: (
+        type_mark: "",
+        description: "Ducha higiênica cromada com registro de 1/4 de volta, flexível de aço inox e suporte de parede (flexível de 1,20 m)",
+        manufacturer: "",
+        model: "",
+        url: "",
+        keynote: "",
+        classification: "",
+        fire_rating: "",
+        comments: "",
+        cost: None,
+      ),
+    ),
+    (
+      name: "Ducha higiênica 1,5 m",
+      values: {
+        "AnguloGatilho": 0.0,
+        "AnguloRegistro": 0.0,
+        "Elevacao": 0.6,
+        "Mangueira": 1.5,
+      },
+      info: (
+        type_mark: "",
+        description: "Ducha higiênica cromada com registro de 1/4 de volta, flexível de aço inox e suporte de parede (flexível de 1,50 m)",
+        manufacturer: "",
+        model: "",
+        url: "",
+        keynote: "",
+        classification: "",
+        fire_rating: "",
+        comments: "",
+        cost: None,
+      ),
+    ),
+  ],
+  materials: [
+    (
+      name: "Cromado",
+      color: (226, 229, 233),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (226, 229, 233),
+        finish: Polished,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Plástico azul",
+      color: (126, 176, 222),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (126, 176, 222),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Inox escovado",
+      color: (198, 200, 203),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (198, 200, 203),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Borracha cinza",
+      color: (150, 152, 154),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (150, 152, 154),
+        finish: Matte,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Borracha",
+      color: (30, 30, 30),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (30, 30, 30),
+        finish: Matte,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+  ],
+)
