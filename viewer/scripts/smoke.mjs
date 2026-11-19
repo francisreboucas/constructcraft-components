@@ -17,11 +17,13 @@ const outDir = fileURLToPath(new URL('../.smoke/', import.meta.url));
 const PORT = 4317;
 const ORIGIN = `http://127.0.0.1:${PORT}`;
 const TIMEOUT = 30_000;
-// The gallery shows every catalog entry.
-const TOTAL = JSON.parse(await readFile(new URL('../../catalog.json', import.meta.url), 'utf8')).components.length;
+// The gallery shows every catalog entry, in one section per folder.
+const CATALOG = JSON.parse(await readFile(new URL('../../catalog.json', import.meta.url), 'utf8')).components;
+const TOTAL = CATALOG.length;
+const FOLDER_COUNT = new Set(CATALOG.map((c) => c.file.split('/')[1])).size;
 
 const VIEW_ROUTE = 'plumbing/pia-cozinha';
-const DETAIL_ROUTES = [VIEW_ROUTE, 'electrical/tug-100va', 'planting/ipe-amarelo', 'lighting/pendente'];
+const DETAIL_ROUTES = [VIEW_ROUTE, 'electrical/tug-100va', 'planting/ipe-amarelo', 'lighting/pendente', 'vehicles/moto-custom'];
 const VIEWS = ['iso', 'front', 'top', 'side'];
 
 const DEVICES = {
@@ -260,7 +262,7 @@ async function runDevice(browser, device) {
       const cards = await page.locator('.card').count();
       if (cards !== TOTAL) fail(`${label}: expected ${TOTAL} cards, found ${cards}`);
       const sections = await page.locator('.folder-section').count();
-      if (sections !== 8) fail(`${label}: expected 8 folder sections, found ${sections}`);
+      if (sections !== FOLDER_COUNT) fail(`${label}: expected ${FOLDER_COUNT} folder sections, found ${sections}`);
       const h1 = await page.locator('h1').count();
       if (h1 !== 1) fail(`${label}: expected one h1, found ${h1}`);
       const count = (await page.textContent('.search-count'))?.trim();

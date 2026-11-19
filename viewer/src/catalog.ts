@@ -14,7 +14,8 @@ export type FolderId =
   | 'lighting'
   | 'planting'
   | 'doors'
-  | 'windows';
+  | 'windows'
+  | 'vehicles';
 
 export interface FolderInfo {
   id: FolderId;
@@ -32,6 +33,7 @@ export const FOLDERS: readonly FolderInfo[] = [
   { id: 'planting', label: 'Paisagismo' },
   { id: 'doors', label: 'Portas' },
   { id: 'windows', label: 'Janelas' },
+  { id: 'vehicles', label: 'Veículos' },
 ];
 
 const FOLDER_IDS = new Set<string>(FOLDERS.map((f) => f.id));
