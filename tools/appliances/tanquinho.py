@@ -9,7 +9,7 @@ the back console and lifts with `AnguloTampa`.
 import math
 
 from kit import *
-from _aparelhos import num, ring_rrect_hole, sphere
+from _aparelhos import num, ring_rrect_hole, sphere, tube
 from lavadora_frontal import foot
 
 
@@ -167,11 +167,10 @@ def build() -> Component:
     c.cyl_y("Mangueira de entrada - porca da torneira", WX, VZ, f"{YW} - 0.01", 0.015, 0.01, "Plástico azul")
     CX, CZ = f"({xr} - 0.06)", f"({H} - 0.05)"
     c.cyl_y("Cabo de força - passa-fio", CX, CZ, f"{YB} - 0.001", 0.008, 0.01, "Plástico preto")
-    sphere(c, "Cabo de força - curva", CX, f"{YB} + 0.009", CZ, 0.0045, "Borracha", detail=FINE)
-    c.cyl("Cabo de força", CX, f"{YB} + 0.009", f"{CZ} - 0.4", 0.0045, 0.4, "Borracha", detail=FINE)
-    c.box("Cabo de força - plugue", f"{CX} - 0.018", f"{YB} + 0.001", f"{CZ} - 0.445", 0.036, 0.018, 0.045, "Plástico preto", detail=FINE)
+    tube(c, "Cabo de força", "Side", [(f"{YB} + 0.005", CZ), (f"{YB} + 0.010", CZ, -0.008), (f"{YB} + 0.018", f"{CZ} - 0.008"), (f"{YB} + 0.018", f"{CZ} - 0.4")], CX, 0.0045, "Borracha", FINE)
+    c.box("Cabo de força - plugue", f"{CX} - 0.018", f"{YB} + 0.009", f"{CZ} - 0.445", 0.036, 0.018, 0.045, "Plástico preto", detail=FINE)
     for i, dx in enumerate((-0.0095, 0, 0.0095), 1):
-        c.cyl(f"Cabo de força - pino {i}", f"{CX} + {dx}", f"{YB} + 0.01", f"{CZ} - 0.463", 0.002, 0.018, "Latão", detail=FINE)
+        c.cyl(f"Cabo de força - pino {i}", f"{CX} + {dx}", f"{YB} + 0.018", f"{CZ} - 0.463", 0.002, 0.018, "Latão", detail=FINE)
     c.box("Etiqueta de identificação", f"-{W}*0.12", YB, f"{ZD} - 0.25", f"{W}*0.24", 0.0006, 0.06, "Plástico cinza claro", detail=FINE)
 
     c.mep = {"Fixture": {"drain_units": 3, "supply_weight": 1.0, "hot_water": False}}

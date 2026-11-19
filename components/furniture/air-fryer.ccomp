@@ -1850,47 +1850,41 @@
         ),
       ),
       (
-        name: "Cabo elétrico - saída",
-        shape: Revolution(
-          plane: Plan,
-          points: [
+        name: "Cabo elétrico - descida",
+        shape: Sweep(
+          plane: Side,
+          path: [
             (
-              u: "(Diametro/2)*0.3",
-              v: "((Diametro/2)*0.93) + 0.014",
+              u: "((Diametro/2)*0.93) + 0.014",
+              v: "0.03",
             ),
             (
-              u: "((Diametro/2)*0.3) + 0.003",
-              v: "((Diametro/2)*0.93) + 0.014",
+              u: "((Diametro/2)*0.93) + 0.018",
+              v: "0.03",
+              radius: "-0.008",
             ),
             (
-              u: "((Diametro/2)*0.3) + 0.003",
-              v: "(((Diametro/2)*0.93) + 0.014) + 0.014",
+              u: "((Diametro/2)*0.93) + 0.026",
+              v: "0.03 - 0.008",
             ),
             (
-              u: "(Diametro/2)*0.3",
-              v: "(((Diametro/2)*0.93) + 0.014) + 0.014",
+              u: "((Diametro/2)*0.93) + 0.026",
+              v: "0.011",
             ),
           ],
-          offset: "0.03",
-          axis: "(Diametro/2)*0.3",
-          angle: "360",
-        ),
-        material: "Borracha",
-        in_plan: false,
-        detail: (
-          coarse: false,
-          medium: false,
-          fine: true,
-        ),
-      ),
-      (
-        name: "Cabo elétrico - descida",
-        shape: Cylinder(
-          x: "(Diametro/2)*0.3",
-          y: "((Diametro/2)*0.93) + 0.026",
-          z: "0.003",
-          radius: "0.003",
-          height: "0.03 - 0.003",
+          offset: "(Diametro/2)*0.3",
+          profile: [
+            (
+              u: "0 - 0.003",
+              v: "0",
+              radius: "0.003",
+            ),
+            (
+              u: "0 + 0.003",
+              v: "0",
+              radius: "0.003",
+            ),
+          ],
         ),
         material: "Borracha",
         in_plan: false,
@@ -1902,22 +1896,36 @@
       ),
       (
         name: "Cabo elétrico - trecho na bancada",
-        shape: Profile(
-          plane: Side,
-          points: [
+        shape: Sweep(
+          plane: Front,
+          path: [
             (
-              u: "(((Diametro/2)*0.93) + 0.026) - 0.003",
+              u: "(Diametro/2)*0.3",
+              v: "0.011",
+              radius: "-0.008",
+            ),
+            (
+              u: "((Diametro/2)*0.3) - 0.008",
               v: "0.003",
+            ),
+            (
+              u: "((Diametro/2)*0.3) - 0.14",
+              v: "0.003",
+            ),
+          ],
+          offset: "((Diametro/2)*0.93) + 0.026",
+          profile: [
+            (
+              u: "0 - 0.003",
+              v: "0",
               radius: "0.003",
             ),
             (
-              u: "(((Diametro/2)*0.93) + 0.026) + 0.003",
-              v: "0.003",
+              u: "0 + 0.003",
+              v: "0",
               radius: "0.003",
             ),
           ],
-          offset: "((Diametro/2)*0.3) - 0.14",
-          depth: "0.14",
         ),
         material: "Borracha",
         in_plan: false,

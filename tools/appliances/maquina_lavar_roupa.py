@@ -174,11 +174,10 @@ def build():
     c.connector("Esgoto", "Sanitary", OX, YW, zw, "Back", 0.04)
     CX, CZ = add(x1, -0.06), add(ZD, -0.05)
     c.cyl_y("Cabo de força - passa-fio", CX, CZ, add(YB, -0.001), 0.009, 0.01, "Plástico preto")
-    sphere(c, "Cabo de força - curva", CX, add(YB, 0.009), CZ, 0.0045, "Borracha", detail=FINE)
-    c.cyl("Cabo de força", CX, add(YB, 0.009), add(CZ, -0.4), 0.0045, 0.4, "Borracha", FINE)
-    c.box("Cabo de força - plugue", add(CX, -0.018), add(YB, 0.001), add(CZ, -0.445), 0.036, 0.018, 0.045, "Plástico preto", FINE)
+    tube(c, "Cabo de força", "Side", [(add(YB, 0.005), CZ), (add(YB, 0.010), CZ, -0.008), (add(YB, 0.018), add(CZ, -0.008)), (add(YB, 0.018), add(CZ, -0.4))], CX, 0.0045, "Borracha", FINE)
+    c.box("Cabo de força - plugue", add(CX, -0.018), add(YB, 0.009), add(CZ, -0.445), 0.036, 0.018, 0.045, "Plástico preto", FINE)
     for i, dx in enumerate((-0.0095, 0, 0.0095), 1):
-        c.cyl(f"Cabo de força - pino {i}", add(CX, dx), add(YB, 0.01), add(CZ, -0.463), 0.002, 0.018, "Latão", FINE)
+        c.cyl(f"Cabo de força - pino {i}", add(CX, dx), add(YB, 0.018), add(CZ, -0.463), 0.002, 0.018, "Latão", FINE)
     c.box("Etiqueta de identificação", add(x1, -0.2), add(YB, -0.0005), add(ZD, -0.25), 0.1, 0.001, 0.06, "Plástico cinza claro", FINE)
     for i in range(6):
         c.box(f"Ventilação do motor {i + 1}", -0.1, add(YB, -0.0005), 0.06 + 0.012 * i, 0.2, 0.001, 0.005, "Aço pintado preto", FINE)

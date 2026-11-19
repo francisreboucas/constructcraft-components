@@ -3,15 +3,16 @@
 import math
 
 from kit import *
+from _aparelhos import tube
 
 
 def cabo(c, x, y, z, comprimento=0.14):
     """Passa-cabo na traseira (y), cabo que desce até a bancada e corre ao longo dela, com plugue."""
     r = 0.003
     c.cyl_y("Passa-cabo", x, z, y, 0.006, 0.014, "Borracha", detail=FINE)
-    c.cyl_y("Cabo elétrico - saída", x, z, f"{p(y)} + 0.014", r, 0.014, "Borracha", detail=FINE)
-    c.cyl("Cabo elétrico - descida", x, f"{p(y)} + 0.026", r, r, f"{p(z)} - {r}", "Borracha", detail=FINE)
-    c.cyl_x("Cabo elétrico - trecho na bancada", f"{p(y)} + 0.026", r, f"{p(x)} - {comprimento}", r, comprimento, "Borracha", detail=FINE)
+    yc, rc = f"{p(y)} + 0.026", 0.008  # where the cable comes down, and its bend radius
+    tube(c, "Cabo elétrico - descida", "Side", [(f"{p(y)} + 0.014", z), (f"{p(y)} + 0.018", z, -rc), (yc, f"{p(z)} - {rc}"), (yc, r + rc)], x, r, "Borracha", FINE)
+    tube(c, "Cabo elétrico - trecho na bancada", "Front", [(x, r + rc, -rc), (f"{p(x)} - {rc}", r), (f"{p(x)} - {comprimento}", r)], yc, r, "Borracha", FINE)
     c.box("Plugue - corpo", f"{p(x)} - {comprimento} - 0.034", f"{p(y)} + 0.026 - 0.017", 0, 0.034, 0.034, 0.016, "Plástico preto", detail=FINE)
     for i, dy in enumerate((-0.0095, 0.0095), 1):
         c.cyl_x(f"Plugue - pino {i}", f"{p(y)} + 0.026 + {dy}", 0.008, f"{p(x)} - {comprimento} - 0.052", 0.002, 0.018, "Latão", detail=FINE)

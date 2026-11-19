@@ -4085,67 +4085,49 @@
       {
         "name": "TV - cabo de força",
         "shape": {
-          "Cylinder": {
-            "x": "((0.12*Largura) - 0.008)",
-            "y": "0.041",
-            "z": "Altura + 0.004",
-            "radius": "0.0035",
-            "height": "(Altura + 0.055) + 0.07 - Altura - 0.004"
-          }
-        },
-        "material": "Borracha",
-        "in_plan": false,
-        "detail": {
-          "coarse": false,
-          "medium": false,
-          "fine": true
-        }
-      },
-      {
-        "name": "TV - cabo de força sobre o tampo",
-        "shape": {
-          "Revolution": {
-            "plane": "Plan",
-            "points": [
+          "Sweep": {
+            "plane": "Side",
+            "path": [
               {
-                "u": "((0.12*Largura) - 0.008)",
-                "v": "0.041"
+                "u": "0.041",
+                "v": "(Altura + 0.055) + 0.07"
               },
               {
-                "u": "(((0.12*Largura) - 0.008)) + 0.0035",
-                "v": "0.041"
+                "u": "0.041",
+                "v": "(Altura + 0.004) + 0.012",
+                "radius": "0.012"
               },
               {
-                "u": "(((0.12*Largura) - 0.008)) + 0.0035",
-                "v": "0.041 + (((Profundidade/2) - 0.075) - 0.040999999999999995)"
+                "u": "0.053",
+                "v": "(Altura + 0.004)"
               },
               {
-                "u": "((0.12*Largura) - 0.008)",
-                "v": "0.041 + (((Profundidade/2) - 0.075) - 0.040999999999999995)"
+                "u": "((Profundidade/2) - 0.075) - 0.012",
+                "v": "(Altura + 0.004)",
+                "radius": "-0.012"
+              },
+              {
+                "u": "((Profundidade/2) - 0.075)",
+                "v": "(Altura + 0.004) - 0.012"
+              },
+              {
+                "u": "((Profundidade/2) - 0.075)",
+                "v": "(Altura - 0.025) - 0.05"
               }
             ],
-            "offset": "Altura + 0.004",
-            "axis": "((0.12*Largura) - 0.008)",
-            "angle": "360"
-          }
-        },
-        "material": "Borracha",
-        "in_plan": false,
-        "detail": {
-          "coarse": false,
-          "medium": false,
-          "fine": true
-        }
-      },
-      {
-        "name": "TV - cabo de força no passa-fios",
-        "shape": {
-          "Cylinder": {
-            "x": "((0.12*Largura) - 0.008)",
-            "y": "((Profundidade/2) - 0.075)",
-            "z": "(Altura - 0.025) - 0.05",
-            "radius": "0.0035",
-            "height": "0.025 + 0.054"
+            "offset": "((0.12*Largura) - 0.008)",
+            "profile": [
+              {
+                "u": "0 - 0.0035",
+                "v": "0",
+                "radius": "0.0035"
+              },
+              {
+                "u": "0 + 0.0035",
+                "v": "0",
+                "radius": "0.0035"
+              }
+            ]
           }
         },
         "material": "Borracha",
@@ -4179,67 +4161,49 @@
       {
         "name": "TV - cabo HDMI",
         "shape": {
-          "Cylinder": {
-            "x": "((0.12*Largura) + 0.01)",
-            "y": "0.041",
-            "z": "Altura + 0.004",
-            "radius": "0.003",
-            "height": "(Altura + 0.055) + 0.045 - Altura - 0.004"
-          }
-        },
-        "material": "Plástico preto",
-        "in_plan": false,
-        "detail": {
-          "coarse": false,
-          "medium": false,
-          "fine": true
-        }
-      },
-      {
-        "name": "TV - cabo HDMI sobre o tampo",
-        "shape": {
-          "Revolution": {
-            "plane": "Plan",
-            "points": [
+          "Sweep": {
+            "plane": "Side",
+            "path": [
               {
-                "u": "((0.12*Largura) + 0.01)",
-                "v": "0.041"
+                "u": "0.041",
+                "v": "(Altura + 0.055) + 0.045"
               },
               {
-                "u": "(((0.12*Largura) + 0.01)) + 0.003",
-                "v": "0.041"
+                "u": "0.041",
+                "v": "(Altura + 0.004) + 0.012",
+                "radius": "0.012"
               },
               {
-                "u": "(((0.12*Largura) + 0.01)) + 0.003",
-                "v": "0.041 + (((Profundidade/2) - 0.075) - 0.040999999999999995)"
+                "u": "0.053",
+                "v": "(Altura + 0.004)"
               },
               {
-                "u": "((0.12*Largura) + 0.01)",
-                "v": "0.041 + (((Profundidade/2) - 0.075) - 0.040999999999999995)"
+                "u": "((Profundidade/2) - 0.075) - 0.012",
+                "v": "(Altura + 0.004)",
+                "radius": "-0.012"
+              },
+              {
+                "u": "((Profundidade/2) - 0.075)",
+                "v": "(Altura + 0.004) - 0.012"
+              },
+              {
+                "u": "((Profundidade/2) - 0.075)",
+                "v": "(Altura - 0.025) - 0.05"
               }
             ],
-            "offset": "Altura + 0.004",
-            "axis": "((0.12*Largura) + 0.01)",
-            "angle": "360"
-          }
-        },
-        "material": "Plástico preto",
-        "in_plan": false,
-        "detail": {
-          "coarse": false,
-          "medium": false,
-          "fine": true
-        }
-      },
-      {
-        "name": "TV - cabo HDMI no passa-fios",
-        "shape": {
-          "Cylinder": {
-            "x": "((0.12*Largura) + 0.01)",
-            "y": "((Profundidade/2) - 0.075)",
-            "z": "(Altura - 0.025) - 0.05",
-            "radius": "0.003",
-            "height": "0.025 + 0.054"
+            "offset": "((0.12*Largura) + 0.01)",
+            "profile": [
+              {
+                "u": "0 - 0.003",
+                "v": "0",
+                "radius": "0.003"
+              },
+              {
+                "u": "0 + 0.003",
+                "v": "0",
+                "radius": "0.003"
+              }
+            ]
           }
         },
         "material": "Plástico preto",

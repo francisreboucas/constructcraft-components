@@ -9,6 +9,7 @@ from __future__ import annotations
 import math
 
 from kit import *
+from _aparelhos import tube
 from lavadora_frontal import door_part, drum, foot, num, porthole_door, sphere
 
 # Half-sections of the door, in units of its radius (rho, b), counter-clockwise: a flatter glass than the washer's.
@@ -208,11 +209,10 @@ def build() -> Component:
     # Power cable.
     CX, CZ = f"({W2} - 0.05)", "(Altura - 0.07)"
     c.cyl_y("Cabo de força - passa-fio", CX, CZ, f"{YB} - 0.001", 0.009, 0.01, "Plástico preto")
-    sphere(c, "Cabo de força - curva", CX, f"{YB} + 0.009", CZ, 0.0045, "Borracha")
-    c.cyl("Cabo de força", CX, f"{YB} + 0.009", f"{CZ} - 0.40", 0.0045, 0.40, "Borracha", detail=FINE)
-    c.box("Cabo de força - plugue", f"{CX} - 0.018", f"{YB} + 0.001", f"{CZ} - 0.445", 0.036, 0.018, 0.045, "Plástico preto", detail=FINE)
+    tube(c, "Cabo de força", "Side", [(f"{YB} + 0.005", CZ), (f"{YB} + 0.010", CZ, -0.008), (f"{YB} + 0.018", f"{CZ} - 0.008"), (f"{YB} + 0.018", f"{CZ} - 0.40")], CX, 0.0045, "Borracha", FINE)
+    c.box("Cabo de força - plugue", f"{CX} - 0.018", f"{YB} + 0.009", f"{CZ} - 0.445", 0.036, 0.018, 0.045, "Plástico preto", detail=FINE)
     for i, dx in enumerate((-0.0095, 0, 0.0095), 1):
-        c.cyl(f"Cabo de força - pino {i}", f"{CX} + {num(dx)}", f"{YB} + 0.01", f"{CZ} - 0.463", 0.002, 0.018, "Latão", detail=FINE)
+        c.cyl(f"Cabo de força - pino {i}", f"{CX} + {num(dx)}", f"{YB} + 0.018", f"{CZ} - 0.463", 0.002, 0.018, "Latão", detail=FINE)
 
     c.type("Secadora 10 kg 60 x 65 x 85 cm", "Secadora de roupas de piso por condensação, 10 kg; prever TUE de 2000 VA e ventilação do ambiente")
     c.type("Secadora 8 kg compacta 60 x 56 x 85 cm", "Secadora de roupas de piso compacta, 8 kg; prever TUE de 1600 VA e ventilação do ambiente",

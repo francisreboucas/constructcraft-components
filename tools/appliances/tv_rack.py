@@ -6,6 +6,7 @@ has a hinged door on the left (shelves inside), an open niche in the middle
 """
 
 from kit import *
+from _aparelhos import tube
 
 
 def build() -> Component:
@@ -222,14 +223,17 @@ def build() -> Component:
     cy = ybk + 0.012
     cx = f"({gxp} - 0.008)"
     c.cyl_y("TV - prensa-cabo", cx, f"{z0} + 0.07", ybk, 0.007, 0.012, BLK, detail=FINE)
-    c.cyl("TV - cabo de força", cx, cy, f"{H} + 0.004", 0.0035, f"{z0} + 0.07 - {H} - 0.004", "Borracha", detail=FINE)
-    c.cyl_y("TV - cabo de força sobre o tampo", cx, f"{H} + 0.004", cy, 0.0035, f"{gyp} - {cy}", "Borracha", detail=FINE)
-    c.cyl("TV - cabo de força no passa-fios", cx, gyp, f"{zt} - 0.05", 0.0035, f"{tt} + 0.054", "Borracha", detail=FINE)
+    rc = 0.012  # bend radius of the cables
+    zc = f"({H} + 0.004)"  # the cables lie on the top
+
+    def cable(name, x, z, radius, material):
+        path = [(cy, z), (cy, f"{zc} + {rc}", rc), (cy + rc, zc), (f"{gyp} - {rc}", zc, -rc), (gyp, f"{zc} - {rc}"), (gyp, f"{zt} - 0.05")]
+        tube(c, name, "Side", path, x, radius, material, FINE)
+
+    cable("TV - cabo de força", cx, f"{z0} + 0.07", 0.0035, "Borracha")
     hx = f"({gxp} + 0.01)"
     c.box("TV - plugue HDMI", f"{hx} - 0.009", cy - 0.006, f"{z0} + 0.045", 0.018, 0.012, 0.03, BLK, detail=FINE)
-    c.cyl("TV - cabo HDMI", hx, cy, f"{H} + 0.004", 0.003, f"{z0} + 0.045 - {H} - 0.004", BLK, detail=FINE)
-    c.cyl_y("TV - cabo HDMI sobre o tampo", hx, f"{H} + 0.004", cy, 0.003, f"{gyp} - {cy}", BLK, detail=FINE)
-    c.cyl("TV - cabo HDMI no passa-fios", hx, gyp, f"{zt} - 0.05", 0.003, f"{tt} + 0.054", BLK, detail=FINE)
+    cable("TV - cabo HDMI", hx, f"{z0} + 0.045", 0.003, BLK)
     # two V-shaped feet
     for g, sx in enumerate((-1, 1), 1):
         fx = f"({sx}*0.36*{TW} - 0.011)"

@@ -826,50 +826,42 @@
         }
       },
       {
-        "name": "Cabo elétrico - saída",
-        "shape": {
-          "Revolution": {
-            "plane": "Plan",
-            "points": [
-              {
-                "u": "Largura*0.18",
-                "v": "((Profundidade/2) - 0.004) + 0.014"
-              },
-              {
-                "u": "(Largura*0.18) + 0.003",
-                "v": "((Profundidade/2) - 0.004) + 0.014"
-              },
-              {
-                "u": "(Largura*0.18) + 0.003",
-                "v": "(((Profundidade/2) - 0.004) + 0.014) + 0.014"
-              },
-              {
-                "u": "Largura*0.18",
-                "v": "(((Profundidade/2) - 0.004) + 0.014) + 0.014"
-              }
-            ],
-            "offset": "0.022",
-            "axis": "Largura*0.18",
-            "angle": "360"
-          }
-        },
-        "material": "Borracha",
-        "in_plan": false,
-        "detail": {
-          "coarse": false,
-          "medium": false,
-          "fine": true
-        }
-      },
-      {
         "name": "Cabo elétrico - descida",
         "shape": {
-          "Cylinder": {
-            "x": "Largura*0.18",
-            "y": "((Profundidade/2) - 0.004) + 0.026",
-            "z": "0.003",
-            "radius": "0.003",
-            "height": "0.022 - 0.003"
+          "Sweep": {
+            "plane": "Side",
+            "path": [
+              {
+                "u": "((Profundidade/2) - 0.004) + 0.014",
+                "v": "0.022"
+              },
+              {
+                "u": "((Profundidade/2) - 0.004) + 0.018",
+                "v": "0.022",
+                "radius": "-0.008"
+              },
+              {
+                "u": "((Profundidade/2) - 0.004) + 0.026",
+                "v": "0.022 - 0.008"
+              },
+              {
+                "u": "((Profundidade/2) - 0.004) + 0.026",
+                "v": "0.011"
+              }
+            ],
+            "offset": "Largura*0.18",
+            "profile": [
+              {
+                "u": "0 - 0.003",
+                "v": "0",
+                "radius": "0.003"
+              },
+              {
+                "u": "0 + 0.003",
+                "v": "0",
+                "radius": "0.003"
+              }
+            ]
           }
         },
         "material": "Borracha",
@@ -883,22 +875,36 @@
       {
         "name": "Cabo elétrico - trecho na bancada",
         "shape": {
-          "Profile": {
-            "plane": "Side",
-            "points": [
+          "Sweep": {
+            "plane": "Front",
+            "path": [
               {
-                "u": "(((Profundidade/2) - 0.004) + 0.026) - 0.003",
-                "v": "0.003",
+                "u": "Largura*0.18",
+                "v": "0.011",
+                "radius": "-0.008"
+              },
+              {
+                "u": "(Largura*0.18) - 0.008",
+                "v": "0.003"
+              },
+              {
+                "u": "(Largura*0.18) - 0.14",
+                "v": "0.003"
+              }
+            ],
+            "offset": "((Profundidade/2) - 0.004) + 0.026",
+            "profile": [
+              {
+                "u": "0 - 0.003",
+                "v": "0",
                 "radius": "0.003"
               },
               {
-                "u": "(((Profundidade/2) - 0.004) + 0.026) + 0.003",
-                "v": "0.003",
+                "u": "0 + 0.003",
+                "v": "0",
                 "radius": "0.003"
               }
-            ],
-            "offset": "(Largura*0.18) - 0.14",
-            "depth": "0.14"
+            ]
           }
         },
         "material": "Borracha",

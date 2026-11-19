@@ -18044,43 +18044,42 @@
         }
       },
       {
-        "name": "Cabo de força - curva",
+        "name": "Cabo de força",
         "shape": {
-          "Revolution": {
-            "plane": "Front",
-            "points": [
+          "Sweep": {
+            "plane": "Side",
+            "path": [
               {
-                "u": "(Largura/2 - 0.05)",
-                "v": "((Altura - 0.07)) - 0.0045",
+                "u": "(Profundidade/2 - 0.03) + 0.005",
+                "v": "(Altura - 0.07)"
+              },
+              {
+                "u": "(Profundidade/2 - 0.03) + 0.010",
+                "v": "(Altura - 0.07)",
+                "radius": "-0.008"
+              },
+              {
+                "u": "(Profundidade/2 - 0.03) + 0.018",
+                "v": "(Altura - 0.07) - 0.008"
+              },
+              {
+                "u": "(Profundidade/2 - 0.03) + 0.018",
+                "v": "(Altura - 0.07) - 0.40"
+              }
+            ],
+            "offset": "(Largura/2 - 0.05)",
+            "profile": [
+              {
+                "u": "0 - 0.0045",
+                "v": "0",
                 "radius": "0.0045"
               },
               {
-                "u": "(Largura/2 - 0.05)",
-                "v": "((Altura - 0.07)) + 0.0045"
+                "u": "0 + 0.0045",
+                "v": "0",
+                "radius": "0.0045"
               }
-            ],
-            "offset": "(Profundidade/2 - 0.03) + 0.009",
-            "axis": "(Largura/2 - 0.05)",
-            "angle": "360"
-          }
-        },
-        "material": "Borracha",
-        "in_plan": false,
-        "detail": {
-          "coarse": false,
-          "medium": false,
-          "fine": true
-        }
-      },
-      {
-        "name": "Cabo de força",
-        "shape": {
-          "Cylinder": {
-            "x": "(Largura/2 - 0.05)",
-            "y": "(Profundidade/2 - 0.03) + 0.009",
-            "z": "(Altura - 0.07) - 0.40",
-            "radius": "0.0045",
-            "height": "0.4"
+            ]
           }
         },
         "material": "Borracha",
@@ -18096,7 +18095,7 @@
         "shape": {
           "Box": {
             "x": "(Largura/2 - 0.05) - 0.018",
-            "y": "(Profundidade/2 - 0.03) + 0.001",
+            "y": "(Profundidade/2 - 0.03) + 0.009",
             "z": "(Altura - 0.07) - 0.445",
             "width": "0.036",
             "depth": "0.018",
@@ -18116,7 +18115,7 @@
         "shape": {
           "Cylinder": {
             "x": "(Largura/2 - 0.05) + (-0.0095)",
-            "y": "(Profundidade/2 - 0.03) + 0.01",
+            "y": "(Profundidade/2 - 0.03) + 0.018",
             "z": "(Altura - 0.07) - 0.463",
             "radius": "0.002",
             "height": "0.018"
@@ -18135,7 +18134,7 @@
         "shape": {
           "Cylinder": {
             "x": "(Largura/2 - 0.05) + 0",
-            "y": "(Profundidade/2 - 0.03) + 0.01",
+            "y": "(Profundidade/2 - 0.03) + 0.018",
             "z": "(Altura - 0.07) - 0.463",
             "radius": "0.002",
             "height": "0.018"
@@ -18154,7 +18153,7 @@
         "shape": {
           "Cylinder": {
             "x": "(Largura/2 - 0.05) + 0.0095",
-            "y": "(Profundidade/2 - 0.03) + 0.01",
+            "y": "(Profundidade/2 - 0.03) + 0.018",
             "z": "(Altura - 0.07) - 0.463",
             "radius": "0.002",
             "height": "0.018"

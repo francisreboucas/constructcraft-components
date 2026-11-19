@@ -529,47 +529,41 @@
         ),
       ),
       (
-        name: "Condutor fase 1 - saída",
-        shape: Revolution(
-          plane: Plan,
-          points: [
+        name: "Condutor fase 1",
+        shape: Sweep(
+          plane: Side,
+          path: [
             (
-              u: "-0.0075",
-              v: "-0.0231",
+              u: "-0.008",
+              v: "(Altura/2 + 0.012)",
             ),
             (
-              u: "(-0.0075) + 0.0026",
-              v: "-0.0231",
+              u: "-0.0135",
+              v: "(Altura/2 + 0.012)",
+              radius: "0.007",
             ),
             (
-              u: "(-0.0075) + 0.0026",
-              v: "(-0.0231) + 0.0151",
+              u: "-0.0205",
+              v: "(Altura/2 + 0.012) - 0.007",
             ),
             (
-              u: "-0.0075",
-              v: "(-0.0231) + 0.0151",
+              u: "-0.0205",
+              v: "((Altura/2 + 0.012) - 0.022) - 0.004",
             ),
           ],
-          offset: "(Altura/2 + 0.012)",
-          axis: "-0.0075",
-          angle: "360",
-        ),
-        material: "Plástico preto",
-        in_plan: false,
-        detail: (
-          coarse: false,
-          medium: true,
-          fine: true,
-        ),
-      ),
-      (
-        name: "Condutor fase 1 - descida",
-        shape: Cylinder(
-          x: "-0.0075",
-          y: "-0.0205",
-          z: "((Altura/2 + 0.012) - 0.022) - 0.004",
-          radius: "0.0026",
-          height: "0.026 + 0.0026",
+          offset: "-0.0075",
+          profile: [
+            (
+              u: "0 - 0.0026",
+              v: "0",
+              radius: "0.0026",
+            ),
+            (
+              u: "0 + 0.0026",
+              v: "0",
+              radius: "0.0026",
+            ),
+          ],
         ),
         material: "Plástico preto",
         in_plan: false,
@@ -665,47 +659,41 @@
         ),
       ),
       (
-        name: "Condutor fase 2 - saída",
-        shape: Revolution(
-          plane: Plan,
-          points: [
+        name: "Condutor fase 2",
+        shape: Sweep(
+          plane: Side,
+          path: [
             (
-              u: "0",
-              v: "-0.0231",
+              u: "-0.008",
+              v: "(Altura/2 + 0.012)",
             ),
             (
-              u: "0 + 0.0026",
-              v: "-0.0231",
+              u: "-0.0135",
+              v: "(Altura/2 + 0.012)",
+              radius: "0.007",
             ),
             (
-              u: "0 + 0.0026",
-              v: "(-0.0231) + 0.0151",
+              u: "-0.0205",
+              v: "(Altura/2 + 0.012) - 0.007",
             ),
             (
-              u: "0",
-              v: "(-0.0231) + 0.0151",
+              u: "-0.0205",
+              v: "((Altura/2 + 0.012) - 0.022) - 0.004",
             ),
           ],
-          offset: "(Altura/2 + 0.012)",
-          axis: "0",
-          angle: "360",
-        ),
-        material: "Plástico vermelho",
-        in_plan: false,
-        detail: (
-          coarse: false,
-          medium: true,
-          fine: true,
-        ),
-      ),
-      (
-        name: "Condutor fase 2 - descida",
-        shape: Cylinder(
-          x: "0",
-          y: "-0.0205",
-          z: "((Altura/2 + 0.012) - 0.022) - 0.004",
-          radius: "0.0026",
-          height: "0.026 + 0.0026",
+          offset: "0",
+          profile: [
+            (
+              u: "0 - 0.0026",
+              v: "0",
+              radius: "0.0026",
+            ),
+            (
+              u: "0 + 0.0026",
+              v: "0",
+              radius: "0.0026",
+            ),
+          ],
         ),
         material: "Plástico vermelho",
         in_plan: false,
@@ -801,47 +789,41 @@
         ),
       ),
       (
-        name: "Condutor terra - saída",
-        shape: Revolution(
-          plane: Plan,
-          points: [
+        name: "Condutor terra",
+        shape: Sweep(
+          plane: Side,
+          path: [
             (
-              u: "0.0075",
-              v: "-0.0231",
+              u: "-0.008",
+              v: "(Altura/2 + 0.012)",
             ),
             (
-              u: "0.0075 + 0.0026",
-              v: "-0.0231",
+              u: "-0.0135",
+              v: "(Altura/2 + 0.012)",
+              radius: "0.007",
             ),
             (
-              u: "0.0075 + 0.0026",
-              v: "(-0.0231) + 0.0151",
+              u: "-0.0205",
+              v: "(Altura/2 + 0.012) - 0.007",
             ),
             (
-              u: "0.0075",
-              v: "(-0.0231) + 0.0151",
+              u: "-0.0205",
+              v: "((Altura/2 + 0.012) - 0.022) - 0.004",
             ),
           ],
-          offset: "(Altura/2 + 0.012)",
-          axis: "0.0075",
-          angle: "360",
-        ),
-        material: "Plástico verde",
-        in_plan: false,
-        detail: (
-          coarse: false,
-          medium: true,
-          fine: true,
-        ),
-      ),
-      (
-        name: "Condutor terra - descida",
-        shape: Cylinder(
-          x: "0.0075",
-          y: "-0.0205",
-          z: "((Altura/2 + 0.012) - 0.022) - 0.004",
-          radius: "0.0026",
-          height: "0.026 + 0.0026",
+          offset: "0.0075",
+          profile: [
+            (
+              u: "0 - 0.0026",
+              v: "0",
+              radius: "0.0026",
+            ),
+            (
+              u: "0 + 0.0026",
+              v: "0",
+              radius: "0.0026",
+            ),
+          ],
         ),
         material: "Plástico verde",
         in_plan: false,

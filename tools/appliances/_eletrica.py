@@ -8,6 +8,7 @@ e o corpo dos módulos. Um `Mod` é um módulo (tomada, tecla, conector) com cen
 """
 
 from kit import *
+from _aparelhos import tube
 
 Y0 = -0.004  # miolo da placa: para onde os módulos não usados encolhem
 PASSO_COLUNA = 0.0225  # meio passo entre as duas colunas de uma placa 4x4
@@ -183,10 +184,11 @@ def ponto_chuveiro(nome, arquivo, potencia, descricao, r_fio, h_bloco):
     c.rev("Saída de cabo - bucha", "Plan", [(0.0108, -0.0108), (0.0138, -0.0108), (0.0138, -0.008), (0.0108, -0.008)], zc, 0, SUPORTE)
     c.cyl_y("Saída de cabo - interior", 0, zc, -0.0083, 0.0108, 0.0003, "Plástico preto")
     passo, yv = 0.0075, -0.0205
+    r_curva = 0.007  # raio da curva dos condutores, no eixo do fio
     zb = f"({zc} - 0.022)"  # topo do conector cerâmico
     for rot, dx, mat in (("fase 1", -passo, "Plástico preto"), ("fase 2", 0, "Plástico vermelho"), ("terra", passo, "Plástico verde")):
-        c.cyl_y(f"Condutor {rot} - saída", dx, zc, yv - r_fio, r_fio, 0.0125 + r_fio, mat)
-        c.cyl(f"Condutor {rot} - descida", dx, yv, f"{zb} - 0.004", r_fio, f"0.026 + {r_fio}", mat)
+        # sai da bucha na horizontal, faz a curva e desce até o conector (caminho de lado: y, z)
+        tube(c, f"Condutor {rot}", "Side", [(yv + 0.0125, zc), (yv + r_curva, zc, r_curva), (yv, f"{zc} - {r_curva}"), (yv, f"{zb} - 0.004")], dx, r_fio, mat)
         c.cyl(f"Conector cerâmico - entrada {rot}", dx, yv, f"{zb} - {h_bloco} - 0.0004", r_fio + 0.0005, 0.0004, "Plástico preto", detail=FINE)
         for j, dz in enumerate((0.006, h_bloco - 0.006), 1):
             c.cyl_y(f"Conector cerâmico - parafuso {rot} {j}", dx, f"{zb} - {dz}", -0.0282, 0.0021, 0.0008, "Latão", detail=FINE)
