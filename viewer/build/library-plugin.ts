@@ -1,30 +1,42 @@
-// Serves the component library (catalog.json and components/**/*.ccomp from the
-// repository root) under `library/` in dev, and copies the same files into
-// `dist/library/` on build, so nothing is duplicated in git.
+// Serves the component library (catalog.json, components/**/*.ccomp and the
+// pre-rendered thumbnails/**/*.png from the repository root) under `library/`
+// in dev, and copies the same files into `dist/library/` on build, so nothing
+// is duplicated in git. The thumbnails are optional: thumbnails/ may be absent,
+// and its manifest.json is bookkeeping that is neither served nor copied.
 
-import { readFileSync, readdirSync, statSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { join, posix, resolve } from 'node:path';
 import type { Plugin } from 'vite';
 
 const URL_PREFIX = '/library/';
-const ALLOWED = /^(catalog\.json|components\/[a-z0-9-]+\/[a-z0-9-]+\.ccomp)$/;
+const ALLOWED =
+  /^(catalog\.json|components\/[a-z0-9-]+\/[a-z0-9-]+\.ccomp|thumbnails\/[a-z0-9-]+\/[a-z0-9-]+\.png)$/;
 
 function contentType(path: string): string {
-  return path.endsWith('.json') ? 'application/json; charset=utf-8' : 'text/plain; charset=utf-8';
+  if (path.endsWith('.json')) return 'application/json; charset=utf-8';
+  if (path.endsWith('.png')) return 'image/png';
+  return 'text/plain; charset=utf-8';
+}
+
+/** The allowed files in `<dir>/<folder>/*`, as paths relative to the repository root. */
+function listFolderFiles(repoRoot: string, dir: string): string[] {
+  const files: string[] = [];
+  const dirPath = join(repoRoot, dir);
+  for (const folder of readdirSync(dirPath).sort()) {
+    const folderPath = join(dirPath, folder);
+    if (!statSync(folderPath).isDirectory()) continue;
+    for (const name of readdirSync(folderPath).sort()) {
+      const rel = posix.join(dir, folder, name);
+      if (ALLOWED.test(rel)) files.push(rel);
+    }
+  }
+  return files;
 }
 
 /** Every library file, as paths relative to the repository root with `/` separators. */
 function listLibraryFiles(repoRoot: string): string[] {
-  const files = ['catalog.json'];
-  const componentsDir = join(repoRoot, 'components');
-  for (const folder of readdirSync(componentsDir).sort()) {
-    const folderPath = join(componentsDir, folder);
-    if (!statSync(folderPath).isDirectory()) continue;
-    for (const name of readdirSync(folderPath).sort()) {
-      const rel = posix.join('components', folder, name);
-      if (ALLOWED.test(rel)) files.push(rel);
-    }
-  }
+  const files = ['catalog.json', ...listFolderFiles(repoRoot, 'components')];
+  if (existsSync(join(repoRoot, 'thumbnails'))) files.push(...listFolderFiles(repoRoot, 'thumbnails'));
   return files;
 }
 

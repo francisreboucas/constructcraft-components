@@ -54,6 +54,8 @@ python tools/build.py --ccad caminho/do/ccad --check  # só verifica (CI)
 
 Um `.ccomp` salvo pelo próprio app (`component_save`) também pode ser adicionado direto em `components/`, sem fonte JSON; ele é validado e catalogado do mesmo jeito.
 
+Cada componente tem uma miniatura de 360x240 em [`thumbnails/`](thumbnails), desenhada pelo `ccad` a partir do primeiro tipo, e o `catalog.json` aponta para ela em `thumbnail`. Depois do build, rode `python tools/thumbnails.py --ccad caminho/do/ccad` (ele só desenha os componentes novos e alterados) e inclua no commit o PNG, o `thumbnails/manifest.json` e o catálogo.
+
 As fontes de paisagismo são geradas: [`tools/vegetation.py`](tools/vegetation.py) cria cada espécie como malha (galhos por colonização do espaço, massas de folhas, frondes de palmeira) e escreve `sources/planting/`. Altere o gerador e rode-o antes do `build.py`, não o JSON.
 
 ## Compatibilidade

@@ -33,6 +33,8 @@ Contribuições de componentes são muito bem-vindas. *Component contributions a
 
 Depois rode `python tools/build.py --ccad caminho/do/ccad` e inclua no commit a fonte, o `.ccomp` gerado e o catálogo atualizado.
 
+Em seguida rode `python tools/thumbnails.py --ccad caminho/do/ccad`: ele desenha a miniatura dos componentes novos ou alterados em `thumbnails/<pasta>/<nome>.png` e põe o campo `thumbnail` no `catalog.json`. Inclua no commit o PNG, o `thumbnails/manifest.json` e o catálogo. *After building, run `tools/thumbnails.py` and commit the PNG, the manifest and the catalog.*
+
 **2. Arquivo salvo pelo app.** Modele o componente no editor do ConstructCraft, salve-o como arquivo (`component_save`) em `components/<pasta>/`, rode o build para validar e atualizar o catálogo, e envie. Prefira a fonte JSON quando puder: ela é mais fácil de revisar.
 
 ## Convenções

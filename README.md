@@ -54,6 +54,8 @@ python tools/build.py --ccad path/to/ccad --check  # verify only (CI)
 
 A `.ccomp` saved from the app (`component_save`) can also be added directly under `components/`, without a source; it is validated and cataloged the same way.
 
+Each component has a 360x240 thumbnail in [`thumbnails/`](thumbnails), drawn by `ccad` from its first type, and `catalog.json` points to it in `thumbnail`. After building, run `python tools/thumbnails.py --ccad path/to/ccad` (it draws only the new and changed components) and commit the PNG, `thumbnails/manifest.json` and the catalog.
+
 The planting sources are generated: [`tools/vegetation.py`](tools/vegetation.py) grows each species as a mesh (branches by space colonization, foliage clumps, palm fronds) and writes `sources/planting/`. Edit the generator and run it before `build.py`, not the JSON.
 
 ## Compatibility

@@ -1,7 +1,10 @@
 name: Viewer
 
 # Builds and smoke-tests the web viewer in viewer/ on pull requests, and
-# publishes it to GitHub Pages from main.
+# publishes it to GitHub Pages from main. Before the build it renders the
+# component thumbnails that are missing or stale (tools/thumbnails.py, with the
+# same compiled ccad as the Validate workflow); they only go into this build's
+# dist/library/thumbnails/ and are never committed back.
 
 on:
   pull_request:
@@ -9,6 +12,8 @@ on:
       - "viewer/**"
       - "components/**"
       - "catalog.json"
+      - "thumbnails/**"
+      - "tools/thumbnails.py"
       - ".github/workflows/pages.yml"
   push:
     branches: [main]
@@ -16,11 +21,19 @@ on:
       - "viewer/**"
       - "components/**"
       - "catalog.json"
+      - "thumbnails/**"
+      - "tools/thumbnails.py"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 
 permissions:
   contents: read
+
+env:
+  # ccad (the cc_cli crate) is compiled from this ref of the ConstructCraft
+  # repository, as in validate.yml; both workflows share the cached binary.
+  CONSTRUCTCRAFT_REPO: francisreboucas/constructcraft
+  CONSTRUCTCRAFT_REF: main
 
 jobs:
   build:
@@ -30,6 +43,48 @@ jobs:
         working-directory: viewer
     steps:
       - uses: actions/checkout@v7
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+      - name: Resolve the ConstructCraft commit
+        id: cc
+        working-directory: .
+        run: |
+          sha=$(git ls-remote "https://github.com/$CONSTRUCTCRAFT_REPO" "$CONSTRUCTCRAFT_REF" | head -1 | cut -f1)
+          # Not a branch or tag: take it as a commit hash.
+          echo "sha=${sha:-$CONSTRUCTCRAFT_REF}" >> "$GITHUB_OUTPUT"
+      # Same path and key as validate.yml, so both workflows reuse one compiled ccad.
+      - name: Restore ccad
+        id: ccad-cache
+        uses: actions/cache@v5
+        with:
+          path: ccad-bin
+          key: ccad-${{ runner.os }}-${{ runner.arch }}-${{ steps.cc.outputs.sha }}
+      - name: Check out ConstructCraft
+        if: steps.ccad-cache.outputs.cache-hit != 'true'
+        uses: actions/checkout@v7
+        with:
+          repository: ${{ env.CONSTRUCTCRAFT_REPO }}
+          ref: ${{ steps.cc.outputs.sha }}
+          path: constructcraft
+      - name: Build ccad
+        if: steps.ccad-cache.outputs.cache-hit != 'true'
+        working-directory: constructcraft
+        run: |
+          cargo build --release --locked -p cc_cli
+          mkdir -p ../ccad-bin
+          cp target/release/ccad ../ccad-bin/ccad
+      - name: Use the built ccad
+        working-directory: .
+        run: |
+          echo "CCAD=$PWD/ccad-bin/ccad" >> "$GITHUB_ENV"
+          ccad-bin/ccad --version
+          echo "ConstructCraft commit ${{ steps.cc.outputs.sha }}"
+      # Renders only the new or stale thumbnails and adds them to catalog.json,
+      # for this build only.
+      - name: Render the thumbnails
+        working-directory: .
+        run: python tools/thumbnails.py
       - uses: actions/setup-node@v7
         with:
           node-version: "24"

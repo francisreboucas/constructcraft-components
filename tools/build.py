@@ -26,6 +26,7 @@ COMPONENTS = ROOT / "components"
 CATALOG_JSON = ROOT / "catalog.json"
 CATALOG_MD = ROOT / "CATALOG.md"
 AUTHORS_JSON = ROOT / "authors.json"
+THUMBNAILS = ROOT / "thumbnails"  # rendered by tools/thumbnails.py
 
 # Folder → heading in CATALOG.md, in display order.
 SECTIONS = {
@@ -165,7 +166,7 @@ def describe(exe: str, path: Path, tmp: Path, authors: dict) -> dict:
                stdin="\n".join(json.dumps({"command": "type_get", "args": {"type": i}}) for i in loaded["types"]))
     types = [step["result"] for step in got]
     d = types[0]["params"]["def"]
-    return {
+    return with_thumbnail({
         "file": path.relative_to(ROOT).as_posix(),
         "component": loaded["component"],
         "author": author_of(authors, path),
@@ -180,7 +181,24 @@ def describe(exe: str, path: Path, tmp: Path, authors: dict) -> dict:
             }
             for t in types
         ],
-    }
+    })
+
+
+def with_thumbnail(entry: dict) -> dict:
+    """The catalog entry with `thumbnail` right after `file` when its PNG exists, without it otherwise."""
+    rel = Path(entry["file"]).relative_to("components").with_suffix(".png")
+    out = {}
+    for key, value in entry.items():
+        if key == "thumbnail":
+            continue
+        out[key] = value
+        if key == "file" and (THUMBNAILS / rel).is_file():
+            out["thumbnail"] = (THUMBNAILS / rel).relative_to(ROOT).as_posix()
+    return out
+
+
+def catalog_json_text(entries: list[dict]) -> str:
+    return json.dumps({"format_version": 1, "components": entries}, ensure_ascii=False, indent=2) + "\n"
 
 
 def mep_summary(mep: dict | None) -> str:
@@ -258,7 +276,7 @@ def main() -> int:
             for key in sorted(set(authors["components"]) - known):
                 problems.append(f"authors.json: no component named {key}")
 
-        catalog = json.dumps({"format_version": 1, "components": entries}, ensure_ascii=False, indent=2) + "\n"
+        catalog = catalog_json_text(entries)
         md = catalog_md(entries) + "\n"
         for target, text in ((CATALOG_JSON, catalog), (CATALOG_MD, md)):
             if opts.check:

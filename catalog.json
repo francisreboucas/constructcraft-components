@@ -3,6 +3,7 @@
   "components": [
     {
       "file": "components/casework/armario-aereo.ccomp",
+      "thumbnail": "thumbnails/casework/armario-aereo.png",
       "component": "Armário aéreo",
       "author": "Francis Rebouças",
       "kind": "Casework",
@@ -52,6 +53,7 @@
     },
     {
       "file": "components/casework/balcao-cozinha.ccomp",
+      "thumbnail": "thumbnails/casework/balcao-cozinha.png",
       "component": "Balcão de cozinha",
       "author": "Francis Rebouças",
       "kind": "Casework",
@@ -112,6 +114,7 @@
     },
     {
       "file": "components/casework/comoda.ccomp",
+      "thumbnail": "thumbnails/casework/comoda.png",
       "component": "Cômoda",
       "author": "Francis Rebouças",
       "kind": "Casework",
@@ -177,6 +180,7 @@
     },
     {
       "file": "components/casework/espelheira.ccomp",
+      "thumbnail": "thumbnails/casework/espelheira.png",
       "component": "Espelheira",
       "author": "Francis Rebouças",
       "kind": "Casework",
@@ -226,6 +230,7 @@
     },
     {
       "file": "components/casework/estante.ccomp",
+      "thumbnail": "thumbnails/casework/estante.png",
       "component": "Estante",
       "author": "Francis Rebouças",
       "kind": "Casework",
@@ -258,6 +263,7 @@
     },
     {
       "file": "components/casework/guarda-roupa.ccomp",
+      "thumbnail": "thumbnails/casework/guarda-roupa.png",
       "component": "Guarda-roupa",
       "author": "Francis Rebouças",
       "kind": "Casework",
@@ -328,6 +334,7 @@
     },
     {
       "file": "components/doors/porta-abrir-dupla.ccomp",
+      "thumbnail": "thumbnails/doors/porta-abrir-dupla.png",
       "component": "Porta de abrir dupla",
       "author": "Francis Rebouças",
       "kind": "Door",
@@ -373,6 +380,7 @@
     },
     {
       "file": "components/doors/porta-abrir.ccomp",
+      "thumbnail": "thumbnails/doors/porta-abrir.png",
       "component": "Porta de abrir",
       "author": "Francis Rebouças",
       "kind": "Door",
@@ -423,6 +431,7 @@
     },
     {
       "file": "components/doors/porta-camarao.ccomp",
+      "thumbnail": "thumbnails/doors/porta-camarao.png",
       "component": "Porta camarão",
       "author": "Francis Rebouças",
       "kind": "Door",
@@ -473,6 +482,7 @@
     },
     {
       "file": "components/doors/porta-correr-dupla.ccomp",
+      "thumbnail": "thumbnails/doors/porta-correr-dupla.png",
       "component": "Porta de correr dupla",
       "author": "Francis Rebouças",
       "kind": "Door",
@@ -514,6 +524,7 @@
     },
     {
       "file": "components/doors/porta-correr.ccomp",
+      "thumbnail": "thumbnails/doors/porta-correr.png",
       "component": "Porta de correr",
       "author": "Francis Rebouças",
       "kind": "Door",
@@ -555,6 +566,7 @@
     },
     {
       "file": "components/doors/porta-janela-correr.ccomp",
+      "thumbnail": "thumbnails/doors/porta-janela-correr.png",
       "component": "Porta-janela de correr",
       "author": "Francis Rebouças",
       "kind": "Door",
@@ -600,6 +612,7 @@
     },
     {
       "file": "components/doors/porta-pivotante.ccomp",
+      "thumbnail": "thumbnails/doors/porta-pivotante.png",
       "component": "Porta pivotante",
       "author": "Francis Rebouças",
       "kind": "Door",
@@ -641,6 +654,7 @@
     },
     {
       "file": "components/doors/porta-vidro.ccomp",
+      "thumbnail": "thumbnails/doors/porta-vidro.png",
       "component": "Porta de vidro temperado",
       "author": "Francis Rebouças",
       "kind": "Door",
@@ -682,6 +696,7 @@
     },
     {
       "file": "components/doors/portao-basculante.ccomp",
+      "thumbnail": "thumbnails/doors/portao-basculante.png",
       "component": "Portão basculante",
       "author": "Francis Rebouças",
       "kind": "Door",
@@ -714,6 +729,7 @@
     },
     {
       "file": "components/electrical/interruptor.ccomp",
+      "thumbnail": "thumbnails/electrical/interruptor.png",
       "component": "Interruptor de embutir",
       "author": "Francis Rebouças",
       "kind": "Electrical",
@@ -774,6 +790,7 @@
     },
     {
       "file": "components/electrical/ponto-telecom.ccomp",
+      "thumbnail": "thumbnails/electrical/ponto-telecom.png",
       "component": "Ponto de telecomunicações",
       "author": "Francis Rebouças",
       "kind": "Electrical",
@@ -819,6 +836,7 @@
     },
     {
       "file": "components/electrical/quadro-distribuicao.ccomp",
+      "thumbnail": "thumbnails/electrical/quadro-distribuicao.png",
       "component": "Quadro de distribuição (QDC)",
       "author": "Francis Rebouças",
       "kind": "Electrical",
@@ -877,6 +895,7 @@
     },
     {
       "file": "components/electrical/tue-1500va.ccomp",
+      "thumbnail": "thumbnails/electrical/tue-1500va.png",
       "component": "Tomada de uso específico 1500 VA",
       "author": "Francis Rebouças",
       "kind": "Electrical",
@@ -903,6 +922,7 @@
     },
     {
       "file": "components/electrical/tue-3500va.ccomp",
+      "thumbnail": "thumbnails/electrical/tue-3500va.png",
       "component": "Tomada de uso específico 3500 VA",
       "author": "Francis Rebouças",
       "kind": "Electrical",
@@ -929,6 +949,7 @@
     },
     {
       "file": "components/electrical/tue-chuveiro-5500w.ccomp",
+      "thumbnail": "thumbnails/electrical/tue-chuveiro-5500w.png",
       "component": "Ponto de chuveiro elétrico 5500 W",
       "author": "Francis Rebouças",
       "kind": "Electrical",
@@ -955,6 +976,7 @@
     },
     {
       "file": "components/electrical/tue-chuveiro-7500w.ccomp",
+      "thumbnail": "thumbnails/electrical/tue-chuveiro-7500w.png",
       "component": "Ponto de chuveiro elétrico 7500 W",
       "author": "Francis Rebouças",
       "kind": "Electrical",
@@ -981,6 +1003,7 @@
     },
     {
       "file": "components/electrical/tug-100va.ccomp",
+      "thumbnail": "thumbnails/electrical/tug-100va.png",
       "component": "Tomada de uso geral 100 VA",
       "author": "Francis Rebouças",
       "kind": "Electrical",
@@ -1018,6 +1041,7 @@
     },
     {
       "file": "components/electrical/tug-600va.ccomp",
+      "thumbnail": "thumbnails/electrical/tug-600va.png",
       "component": "Tomada de uso geral 600 VA",
       "author": "Francis Rebouças",
       "kind": "Electrical",
@@ -1055,6 +1079,7 @@
     },
     {
       "file": "components/furniture/air-fryer.ccomp",
+      "thumbnail": "thumbnails/furniture/air-fryer.png",
       "component": "Air fryer",
       "author": "Francis Rebouças",
       "kind": "Furniture",
@@ -1087,6 +1112,7 @@
     },
     {
       "file": "components/furniture/ar-condicionado-split-condensadora.ccomp",
+      "thumbnail": "thumbnails/furniture/ar-condicionado-split-condensadora.png",
       "component": "Ar-condicionado split - condensadora",
       "author": "Francis Rebouças",
       "kind": "Furniture",
@@ -1119,6 +1145,7 @@
     },
     {
       "file": "components/furniture/ar-condicionado-split-evaporadora.ccomp",
+      "thumbnail": "thumbnails/furniture/ar-condicionado-split-evaporadora.png",
       "component": "Ar-condicionado split - evaporadora",
       "author": "Francis Rebouças",
       "kind": "Furniture",
@@ -1154,6 +1181,7 @@
     },
     {
       "file": "components/furniture/beliche.ccomp",
+      "thumbnail": "thumbnails/furniture/beliche.png",
       "component": "Beliche",
       "author": "Francis Rebouças",
       "kind": "Furniture",
@@ -1189,6 +1217,7 @@
     },
     {
       "file": "components/furniture/box-vidro.ccomp",
+      "thumbnail": "thumbnails/furniture/box-vidro.png",
       "component": "Box de vidro",
       "author": "Francis Rebouças",
       "kind": "Furniture",
@@ -1230,6 +1259,7 @@
     },
     {
       "file": "components/furniture/cadeira.ccomp",
+      "thumbnail": "thumbnails/furniture/cadeira.png",
       "component": "Cadeira com encosto",
       "author": "Francis Rebouças",
       "kind": "Furniture",
@@ -1265,6 +1295,7 @@
     },
     {
       "file": "components/furniture/cafeteira.ccomp",
+      "thumbnail": "thumbnails/furniture/cafeteira.png",
       "component": "Cafeteira elétrica",
       "author": "Francis Rebouças",
       "kind": "Furniture",
@@ -1309,6 +1340,7 @@
     },
     {
       "file": "components/furniture/cama.ccomp",
+      "thumbnail": "thumbnails/furniture/cama.png",
       "component": "Cama com cabeceira",
       "author": "Francis Rebouças",
       "kind": "Furniture",
@@ -1368,6 +1400,7 @@
     },
     {
       "file": "components/furniture/coifa-parede.ccomp",
+      "thumbnail": "thumbnails/furniture/coifa-parede.png",
       "component": "Coifa de parede",
       "author": "Francis Rebouças",
       "kind": "Furniture",
@@ -1415,6 +1448,7 @@
     },
     {
       "file": "components/furniture/cooktop-4-bocas.ccomp",
+      "thumbnail": "thumbnails/furniture/cooktop-4-bocas.png",
       "component": "Cooktop a gás",
       "author": "Francis Rebouças",
       "kind": "Furniture",
@@ -1453,6 +1487,7 @@
     },
     {
       "file": "components/furniture/criado-mudo.ccomp",
+      "thumbnail": "thumbnails/furniture/criado-mudo.png",
       "component": "Criado-mudo",
       "author": "Francis Rebouças",
       "kind": "Furniture",
@@ -1494,6 +1529,7 @@
     },
     {
       "file": "components/furniture/depurador-ar.ccomp",
+      "thumbnail": "thumbnails/furniture/depurador-ar.png",
       "component": "Depurador de ar",
       "author": "Francis Rebouças",
       "kind": "Furniture",
@@ -1532,6 +1568,7 @@
     },
     {
       "file": "components/furniture/escrivaninha.ccomp",
+      "thumbnail": "thumbnails/furniture/escrivaninha.png",
       "component": "Escrivaninha",
       "author": "Francis Rebouças",
       "kind": "Furniture",
@@ -1589,6 +1626,7 @@
     },
     {
       "file": "components/furniture/fogao-4-bocas.ccomp",
+      "thumbnail": "thumbnails/furniture/fogao-4-bocas.png",
       "component": "Fogão 4 bocas",
       "author": "Francis Rebouças",
       "kind": "Furniture",
@@ -1654,6 +1692,7 @@
     },
     {
       "file": "components/furniture/forno-eletrico-embutir.ccomp",
+      "thumbnail": "thumbnails/furniture/forno-eletrico-embutir.png",
       "component": "Forno elétrico de embutir",
       "author": "Francis Rebouças",
       "kind": "Furniture",
@@ -1701,6 +1740,7 @@
     },
     {
       "file": "components/furniture/geladeira-duplex.ccomp",
+      "thumbnail": "thumbnails/furniture/geladeira-duplex.png",
       "component": "Geladeira duplex",
       "author": "Francis Rebouças",
       "kind": "Furniture",
@@ -1751,6 +1791,7 @@
     },
     {
       "file": "components/furniture/lava-loucas.ccomp",
+      "thumbnail": "thumbnails/furniture/lava-loucas.png",
       "component": "Lava-louças",
       "author": "Francis Rebouças",
       "kind": "Furniture",
@@ -1804,6 +1845,7 @@
     },
     {
       "file": "components/furniture/liquidificador.ccomp",
+      "thumbnail": "thumbnails/furniture/liquidificador.png",
       "component": "Liquidificador",
       "author": "Francis Rebouças",
       "kind": "Furniture",
@@ -1842,6 +1884,7 @@
     },
     {
       "file": "components/furniture/mesa-centro.ccomp",
+      "thumbnail": "thumbnails/furniture/mesa-centro.png",
       "component": "Mesa de centro",
       "author": "Francis Rebouças",
       "kind": "Furniture",
@@ -1887,6 +1930,7 @@
     },
     {
       "file": "components/furniture/mesa-redonda.ccomp",
+      "thumbnail": "thumbnails/furniture/mesa-redonda.png",
       "component": "Mesa redonda",
       "author": "Francis Rebouças",
       "kind": "Furniture",
@@ -1916,6 +1960,7 @@
     },
     {
       "file": "components/furniture/mesa-retangular.ccomp",
+      "thumbnail": "thumbnails/furniture/mesa-retangular.png",
       "component": "Mesa retangular",
       "author": "Francis Rebouças",
       "kind": "Furniture",
@@ -1971,6 +2016,7 @@
     },
     {
       "file": "components/furniture/micro-ondas.ccomp",
+      "thumbnail": "thumbnails/furniture/micro-ondas.png",
       "component": "Micro-ondas",
       "author": "Francis Rebouças",
       "kind": "Furniture",
@@ -2018,6 +2064,7 @@
     },
     {
       "file": "components/furniture/poltrona.ccomp",
+      "thumbnail": "thumbnails/furniture/poltrona.png",
       "component": "Poltrona de madeira",
       "author": "Francis Rebouças",
       "kind": "Furniture",
@@ -2053,6 +2100,7 @@
     },
     {
       "file": "components/furniture/secadora-roupas.ccomp",
+      "thumbnail": "thumbnails/furniture/secadora-roupas.png",
       "component": "Secadora de roupas",
       "author": "Francis Rebouças",
       "kind": "Furniture",
@@ -2106,6 +2154,7 @@
     },
     {
       "file": "components/furniture/sofa.ccomp",
+      "thumbnail": "thumbnails/furniture/sofa.png",
       "component": "Sofá estofado",
       "author": "Francis Rebouças",
       "kind": "Furniture",
@@ -2166,6 +2215,7 @@
     },
     {
       "file": "components/furniture/toalheiro.ccomp",
+      "thumbnail": "thumbnails/furniture/toalheiro.png",
       "component": "Toalheiro",
       "author": "Francis Rebouças",
       "kind": "Furniture",
@@ -2211,6 +2261,7 @@
     },
     {
       "file": "components/furniture/tv-rack.ccomp",
+      "thumbnail": "thumbnails/furniture/tv-rack.png",
       "component": "TV com rack",
       "author": "Francis Rebouças",
       "kind": "Furniture",
@@ -2255,6 +2306,7 @@
     },
     {
       "file": "components/lighting/arandela-led.ccomp",
+      "thumbnail": "thumbnails/lighting/arandela-led.png",
       "component": "Arandela LED",
       "author": "Francis Rebouças",
       "kind": "Lighting",
@@ -2292,6 +2344,7 @@
     },
     {
       "file": "components/lighting/luminaria-linear.ccomp",
+      "thumbnail": "thumbnails/lighting/luminaria-linear.png",
       "component": "Luminária linear LED",
       "author": "Francis Rebouças",
       "kind": "Lighting",
@@ -2329,6 +2382,7 @@
     },
     {
       "file": "components/lighting/pendente.ccomp",
+      "thumbnail": "thumbnails/lighting/pendente.png",
       "component": "Luminária pendente",
       "author": "Francis Rebouças",
       "kind": "Lighting",
@@ -2363,6 +2417,7 @@
     },
     {
       "file": "components/lighting/plafon.ccomp",
+      "thumbnail": "thumbnails/lighting/plafon.png",
       "component": "Plafon de teto",
       "author": "Francis Rebouças",
       "kind": "Lighting",
@@ -2397,6 +2452,7 @@
     },
     {
       "file": "components/lighting/spot-embutido.ccomp",
+      "thumbnail": "thumbnails/lighting/spot-embutido.png",
       "component": "Spot LED de embutir",
       "author": "Francis Rebouças",
       "kind": "Lighting",
@@ -2428,6 +2484,7 @@
     },
     {
       "file": "components/lighting/ventilador-teto.ccomp",
+      "thumbnail": "thumbnails/lighting/ventilador-teto.png",
       "component": "Ventilador de teto com luminária",
       "author": "Francis Rebouças",
       "kind": "Lighting",
@@ -2468,6 +2525,7 @@
     },
     {
       "file": "components/planting/buxinho.ccomp",
+      "thumbnail": "thumbnails/planting/buxinho.png",
       "component": "Buxinho",
       "author": "Francis Rebouças",
       "kind": "Generic",
@@ -2483,6 +2541,7 @@
     },
     {
       "file": "components/planting/cipreste-italiano.ccomp",
+      "thumbnail": "thumbnails/planting/cipreste-italiano.png",
       "component": "Cipreste-italiano",
       "author": "Francis Rebouças",
       "kind": "Generic",
@@ -2498,6 +2557,7 @@
     },
     {
       "file": "components/planting/hibisco.ccomp",
+      "thumbnail": "thumbnails/planting/hibisco.png",
       "component": "Hibisco",
       "author": "Francis Rebouças",
       "kind": "Generic",
@@ -2513,6 +2573,7 @@
     },
     {
       "file": "components/planting/ipe-amarelo.ccomp",
+      "thumbnail": "thumbnails/planting/ipe-amarelo.png",
       "component": "Ipê-amarelo",
       "author": "Francis Rebouças",
       "kind": "Generic",
@@ -2528,6 +2589,7 @@
     },
     {
       "file": "components/planting/ixora.ccomp",
+      "thumbnail": "thumbnails/planting/ixora.png",
       "component": "Ixora",
       "author": "Francis Rebouças",
       "kind": "Generic",
@@ -2543,6 +2605,7 @@
     },
     {
       "file": "components/planting/jeriva.ccomp",
+      "thumbnail": "thumbnails/planting/jeriva.png",
       "component": "Jerivá",
       "author": "Francis Rebouças",
       "kind": "Generic",
@@ -2558,6 +2621,7 @@
     },
     {
       "file": "components/planting/mangueira.ccomp",
+      "thumbnail": "thumbnails/planting/mangueira.png",
       "component": "Mangueira",
       "author": "Francis Rebouças",
       "kind": "Generic",
@@ -2573,6 +2637,7 @@
     },
     {
       "file": "components/planting/oiti.ccomp",
+      "thumbnail": "thumbnails/planting/oiti.png",
       "component": "Oiti",
       "author": "Francis Rebouças",
       "kind": "Generic",
@@ -2588,6 +2653,7 @@
     },
     {
       "file": "components/planting/palmeira-imperial.ccomp",
+      "thumbnail": "thumbnails/planting/palmeira-imperial.png",
       "component": "Palmeira-imperial",
       "author": "Francis Rebouças",
       "kind": "Generic",
@@ -2603,6 +2669,7 @@
     },
     {
       "file": "components/planting/palmeira-real-australiana.ccomp",
+      "thumbnail": "thumbnails/planting/palmeira-real-australiana.png",
       "component": "Palmeira-real-australiana",
       "author": "Francis Rebouças",
       "kind": "Generic",
@@ -2618,6 +2685,7 @@
     },
     {
       "file": "components/planting/pau-brasil.ccomp",
+      "thumbnail": "thumbnails/planting/pau-brasil.png",
       "component": "Pau-brasil",
       "author": "Francis Rebouças",
       "kind": "Generic",
@@ -2633,6 +2701,7 @@
     },
     {
       "file": "components/planting/pingo-de-ouro.ccomp",
+      "thumbnail": "thumbnails/planting/pingo-de-ouro.png",
       "component": "Pingo-de-ouro",
       "author": "Francis Rebouças",
       "kind": "Generic",
@@ -2648,6 +2717,7 @@
     },
     {
       "file": "components/planting/pinheiro.ccomp",
+      "thumbnail": "thumbnails/planting/pinheiro.png",
       "component": "Pinheiro",
       "author": "Francis Rebouças",
       "kind": "Generic",
@@ -2663,6 +2733,7 @@
     },
     {
       "file": "components/planting/reseda.ccomp",
+      "thumbnail": "thumbnails/planting/reseda.png",
       "component": "Resedá",
       "author": "Francis Rebouças",
       "kind": "Generic",
@@ -2678,6 +2749,7 @@
     },
     {
       "file": "components/planting/sibipiruna.ccomp",
+      "thumbnail": "thumbnails/planting/sibipiruna.png",
       "component": "Sibipiruna",
       "author": "Francis Rebouças",
       "kind": "Generic",
@@ -2693,6 +2765,7 @@
     },
     {
       "file": "components/planting/tuia-holandesa.ccomp",
+      "thumbnail": "thumbnails/planting/tuia-holandesa.png",
       "component": "Tuia-holandesa",
       "author": "Francis Rebouças",
       "kind": "Generic",
@@ -2708,6 +2781,7 @@
     },
     {
       "file": "components/planting/vaso-planta-40.ccomp",
+      "thumbnail": "thumbnails/planting/vaso-planta-40.png",
       "component": "Vaso com planta Ø40",
       "author": "Francis Rebouças",
       "kind": "Generic",
@@ -2723,6 +2797,7 @@
     },
     {
       "file": "components/planting/vaso-planta-60.ccomp",
+      "thumbnail": "thumbnails/planting/vaso-planta-60.png",
       "component": "Vaso com planta Ø60",
       "author": "Francis Rebouças",
       "kind": "Generic",
@@ -2738,6 +2813,7 @@
     },
     {
       "file": "components/planting/vaso-planta-80.ccomp",
+      "thumbnail": "thumbnails/planting/vaso-planta-80.png",
       "component": "Vaso com planta Ø80",
       "author": "Francis Rebouças",
       "kind": "Generic",
@@ -2753,6 +2829,7 @@
     },
     {
       "file": "components/planting/washingtonia.ccomp",
+      "thumbnail": "thumbnails/planting/washingtonia.png",
       "component": "Washingtonia",
       "author": "Francis Rebouças",
       "kind": "Generic",
@@ -2768,6 +2845,7 @@
     },
     {
       "file": "components/plumbing/aquecedor-gas.ccomp",
+      "thumbnail": "thumbnails/plumbing/aquecedor-gas.png",
       "component": "Aquecedor a gás de passagem",
       "author": "Francis Rebouças",
       "kind": "Plumbing",
@@ -2809,6 +2887,7 @@
     },
     {
       "file": "components/plumbing/bacia-caixa-acoplada.ccomp",
+      "thumbnail": "thumbnails/plumbing/bacia-caixa-acoplada.png",
       "component": "Bacia sanitária com caixa acoplada",
       "author": "Francis Rebouças",
       "kind": "Plumbing",
@@ -2856,6 +2935,7 @@
     },
     {
       "file": "components/plumbing/bacia-valvula.ccomp",
+      "thumbnail": "thumbnails/plumbing/bacia-valvula.png",
       "component": "Bacia sanitária com válvula de descarga",
       "author": "Francis Rebouças",
       "kind": "Plumbing",
@@ -2903,6 +2983,7 @@
     },
     {
       "file": "components/plumbing/banheira.ccomp",
+      "thumbnail": "thumbnails/plumbing/banheira.png",
       "component": "Banheira",
       "author": "Francis Rebouças",
       "kind": "Plumbing",
@@ -2959,6 +3040,7 @@
     },
     {
       "file": "components/plumbing/bide.ccomp",
+      "thumbnail": "thumbnails/plumbing/bide.png",
       "component": "Bidê",
       "author": "Francis Rebouças",
       "kind": "Plumbing",
@@ -3000,6 +3082,7 @@
     },
     {
       "file": "components/plumbing/caixa-dagua.ccomp",
+      "thumbnail": "thumbnails/plumbing/caixa-dagua.png",
       "component": "Caixa d'água de polietileno",
       "author": "Francis Rebouças",
       "kind": "Plumbing",
@@ -3055,6 +3138,7 @@
     },
     {
       "file": "components/plumbing/caixa-gordura.ccomp",
+      "thumbnail": "thumbnails/plumbing/caixa-gordura.png",
       "component": "Caixa de gordura",
       "author": "Francis Rebouças",
       "kind": "Plumbing",
@@ -3087,6 +3171,7 @@
     },
     {
       "file": "components/plumbing/caixa-inspecao.ccomp",
+      "thumbnail": "thumbnails/plumbing/caixa-inspecao.png",
       "component": "Caixa de inspeção",
       "author": "Francis Rebouças",
       "kind": "Plumbing",
@@ -3122,6 +3207,7 @@
     },
     {
       "file": "components/plumbing/chuveiro-eletrico.ccomp",
+      "thumbnail": "thumbnails/plumbing/chuveiro-eletrico.png",
       "component": "Chuveiro elétrico",
       "author": "Francis Rebouças",
       "kind": "Plumbing",
@@ -3149,6 +3235,7 @@
     },
     {
       "file": "components/plumbing/ducha-higienica.ccomp",
+      "thumbnail": "thumbnails/plumbing/ducha-higienica.png",
       "component": "Ducha higiênica",
       "author": "Francis Rebouças",
       "kind": "Plumbing",
@@ -3190,6 +3277,7 @@
     },
     {
       "file": "components/plumbing/gabinete-banheiro.ccomp",
+      "thumbnail": "thumbnails/plumbing/gabinete-banheiro.png",
       "component": "Gabinete de banheiro com cuba",
       "author": "Francis Rebouças",
       "kind": "Plumbing",
@@ -3234,6 +3322,7 @@
     },
     {
       "file": "components/plumbing/lavadora-frontal.ccomp",
+      "thumbnail": "thumbnails/plumbing/lavadora-frontal.png",
       "component": "Lava e seca frontal",
       "author": "Francis Rebouças",
       "kind": "Plumbing",
@@ -3293,6 +3382,7 @@
     },
     {
       "file": "components/plumbing/lavatorio-bancada.ccomp",
+      "thumbnail": "thumbnails/plumbing/lavatorio-bancada.png",
       "component": "Lavatório com bancada",
       "author": "Francis Rebouças",
       "kind": "Plumbing",
@@ -3344,6 +3434,7 @@
     },
     {
       "file": "components/plumbing/lavatorio-suspenso.ccomp",
+      "thumbnail": "thumbnails/plumbing/lavatorio-suspenso.png",
       "component": "Lavatório suspenso",
       "author": "Francis Rebouças",
       "kind": "Plumbing",
@@ -3399,6 +3490,7 @@
     },
     {
       "file": "components/plumbing/maquina-lavar-roupa.ccomp",
+      "thumbnail": "thumbnails/plumbing/maquina-lavar-roupa.png",
       "component": "Máquina de lavar roupa",
       "author": "Francis Rebouças",
       "kind": "Plumbing",
@@ -3440,6 +3532,7 @@
     },
     {
       "file": "components/plumbing/mictorio.ccomp",
+      "thumbnail": "thumbnails/plumbing/mictorio.png",
       "component": "Mictório",
       "author": "Francis Rebouças",
       "kind": "Plumbing",
@@ -3481,6 +3574,7 @@
     },
     {
       "file": "components/plumbing/pia-cozinha.ccomp",
+      "thumbnail": "thumbnails/plumbing/pia-cozinha.png",
       "component": "Pia de cozinha com bancada",
       "author": "Francis Rebouças",
       "kind": "Plumbing",
@@ -3532,6 +3626,7 @@
     },
     {
       "file": "components/plumbing/purificador-agua.ccomp",
+      "thumbnail": "thumbnails/plumbing/purificador-agua.png",
       "component": "Purificador de água",
       "author": "Francis Rebouças",
       "kind": "Plumbing",
@@ -3582,6 +3677,7 @@
     },
     {
       "file": "components/plumbing/tanque.ccomp",
+      "thumbnail": "thumbnails/plumbing/tanque.png",
       "component": "Tanque de lavar roupa",
       "author": "Francis Rebouças",
       "kind": "Plumbing",
@@ -3620,6 +3716,7 @@
     },
     {
       "file": "components/plumbing/tanquinho.ccomp",
+      "thumbnail": "thumbnails/plumbing/tanquinho.png",
       "component": "Tanquinho",
       "author": "Francis Rebouças",
       "kind": "Plumbing",
@@ -3670,6 +3767,7 @@
     },
     {
       "file": "components/vehicles/moto-custom.ccomp",
+      "thumbnail": "thumbnails/vehicles/moto-custom.png",
       "component": "Moto custom",
       "author": "Francis Rebouças",
       "kind": "Generic",
@@ -3691,6 +3789,7 @@
     },
     {
       "file": "components/windows/janela-abrir.ccomp",
+      "thumbnail": "thumbnails/windows/janela-abrir.png",
       "component": "Janela de abrir de madeira",
       "author": "Francis Rebouças",
       "kind": "Window",
@@ -3740,6 +3839,7 @@
     },
     {
       "file": "components/windows/janela-basculante.ccomp",
+      "thumbnail": "thumbnails/windows/janela-basculante.png",
       "component": "Janela basculante",
       "author": "Francis Rebouças",
       "kind": "Window",
@@ -3785,6 +3885,7 @@
     },
     {
       "file": "components/windows/janela-correr.ccomp",
+      "thumbnail": "thumbnails/windows/janela-correr.png",
       "component": "Janela de correr de alumínio",
       "author": "Francis Rebouças",
       "kind": "Window",
@@ -3840,6 +3941,7 @@
     },
     {
       "file": "components/windows/janela-fixa.ccomp",
+      "thumbnail": "thumbnails/windows/janela-fixa.png",
       "component": "Janela fixa",
       "author": "Francis Rebouças",
       "kind": "Window",
@@ -3881,6 +3983,7 @@
     },
     {
       "file": "components/windows/janela-maxim-ar.ccomp",
+      "thumbnail": "thumbnails/windows/janela-maxim-ar.png",
       "component": "Janela maxim-ar de alumínio",
       "author": "Francis Rebouças",
       "kind": "Window",
@@ -3926,6 +4029,7 @@
     },
     {
       "file": "components/windows/janela-veneziana.ccomp",
+      "thumbnail": "thumbnails/windows/janela-veneziana.png",
       "component": "Janela de correr com veneziana",
       "author": "Francis Rebouças",
       "kind": "Window",

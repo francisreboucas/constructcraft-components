@@ -26,7 +26,7 @@ The built site uses relative URLs only (`base: './'`), so `dist/` works from any
 
 ## Library files
 
-The viewer reads the library from the repository root, without a copy in git: [`build/library-plugin.ts`](build/library-plugin.ts) serves `catalog.json` and `components/<folder>/<name>.ccomp` under `library/` in the dev server, and copies the same files to `dist/library/` on build. The app fetches them relative to the page (`library/catalog.json`, `library/components/...`), and the download buttons link to those copies. New components show up after the next build, with nothing to change here.
+The viewer reads the library from the repository root, without a copy in git: [`build/library-plugin.ts`](build/library-plugin.ts) serves `catalog.json`, `components/<folder>/<name>.ccomp` and the pre-rendered `thumbnails/<folder>/<name>.png` (when present; not `thumbnails/manifest.json`) under `library/` in the dev server, and copies the same files to `dist/library/` on build. The app fetches them relative to the page (`library/catalog.json`, `library/components/...`), and the download buttons link to those copies. New components show up after the next build, with nothing to change here.
 
 ## The geometry core
 

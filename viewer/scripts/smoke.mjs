@@ -2,7 +2,8 @@
 // headless Chromium at desktop (1280x800) and mobile (390x844) sizes, and fail
 // on console errors, page errors, external requests, a blank 3D view, blank
 // thumbnails, horizontal overflow on mobile or leaked WebGL contexts and
-// listeners. Screenshots go to viewer/.smoke/.
+// listeners. Also checks that the thumbnails listed in catalog.json are served.
+// Screenshots go to viewer/.smoke/.
 //
 //   npm run smoke
 //   npm run smoke -- --no-build   (test the dist/ already built by `npm run build`)
@@ -603,6 +604,26 @@ async function thumbnailStress(browser) {
   await context.close();
 }
 
+/** Every catalog thumbnail is served from library/ as a non-empty PNG (skipped when none is listed). */
+async function libraryThumbnails() {
+  const label = 'library thumbnails';
+  const paths = CATALOG.map((c) => c.thumbnail).filter(Boolean);
+  if (!paths.length) {
+    console.log(`${label}: none in catalog.json, skipped`);
+    return;
+  }
+  console.log(label);
+  for (const path of paths) {
+    const response = await fetch(`${ORIGIN}/library/${path}`);
+    const type = response.headers.get('content-type') ?? '';
+    const size = (await response.arrayBuffer()).byteLength;
+    if (response.status !== 200 || !type.startsWith('image/png') || size === 0) {
+      fail(`${label}: ${path} gave HTTP ${response.status}, ${type || 'no content type'}, ${size} bytes`);
+    }
+  }
+  console.log(`  ${paths.length} served`);
+}
+
 async function main() {
   await rm(outDir, { recursive: true, force: true });
   await mkdir(outDir, { recursive: true });
@@ -617,6 +638,7 @@ async function main() {
   const server = await preview({ root, logLevel: 'warn', preview: { port: PORT, strictPort: true, host: '127.0.0.1' } });
   const browser = await chromium.launch();
   try {
+    await libraryThumbnails();
     await runDevice(browser, 'desktop');
     await runDevice(browser, 'mobile');
     await runEnglish(browser);
