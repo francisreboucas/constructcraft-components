@@ -100,6 +100,10 @@ function check(path) {
       problems.push(`${tag}: bad color ${part.color}`);
     }
     if (!(part.transparency >= 0 && part.transparency <= 1)) problems.push(`${tag}: bad transparency`);
+    const e = part.edges;
+    if (!(e instanceof Float32Array) || e.length % 6 !== 0 || !e.every(Number.isFinite)) {
+      problems.push(`${tag}: edges must be a Float32Array of whole finite segments`);
+    }
     let notUnit = 0;
     let wound = 0;
     for (let i = 0; i < n.length / 3; i++) {

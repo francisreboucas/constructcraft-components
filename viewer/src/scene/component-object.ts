@@ -9,7 +9,6 @@ import {
   BufferGeometry,
   Color,
   DoubleSide,
-  EdgesGeometry,
   FrontSide,
   Group,
   LineBasicMaterial,
@@ -23,15 +22,13 @@ import { EDGE_OPACITY, scenePalette } from './palette';
 
 export interface BuildOptions {
   /**
-   * Draw feature edges (crease angle above ~30 degrees) in the ink colour.
+   * Draw the engine's outline edges (`Part.edges`) in the ink colour.
    * Contract: pass `edgesForFolder(entry.folder)` from catalog.ts, which is
    * false for `planting` (foliage meshes turn into noise). Default true.
    */
   edges?: boolean;
 }
 
-/** Crease angle, in degrees, above which an edge is drawn. */
-const EDGE_THRESHOLD_DEG = 30;
 /** Render order of transparent parts: after the opaque ones and the edges. */
 const TRANSPARENT_ORDER = 2;
 
@@ -107,6 +104,22 @@ function mergeGeometry(parts: readonly Part[]): BufferGeometry {
   return geometry;
 }
 
+/** The outline edges of the parts as one line-segment geometry, or null when they have none. */
+function mergeEdges(parts: readonly Part[]): BufferGeometry | null {
+  let length = 0;
+  for (const p of parts) length += p.edges.length;
+  if (length === 0) return null;
+  const positions = new Float32Array(length);
+  let offset = 0;
+  for (const p of parts) {
+    positions.set(p.edges, offset);
+    offset += p.edges.length;
+  }
+  const geometry = new BufferGeometry();
+  geometry.setAttribute('position', new BufferAttribute(positions, 3));
+  return geometry;
+}
+
 /**
  * Build the meshes for a component: one `MeshStandardMaterial` mesh per
  * (colour, transparency) group, plus optional feature edges.
@@ -148,8 +161,9 @@ export function buildComponentObject(component: Component, options: BuildOptions
     if (transparent) mesh.renderOrder = TRANSPARENT_ORDER;
     root.add(mesh);
 
-    if (edgeMaterial) {
-      const lines = new LineSegments(new EdgesGeometry(geometry, EDGE_THRESHOLD_DEG), edgeMaterial);
+    const edgeGeometry = edgeMaterial ? mergeEdges(group.parts) : null;
+    if (edgeMaterial && edgeGeometry) {
+      const lines = new LineSegments(edgeGeometry, edgeMaterial);
       lines.renderOrder = 1;
       root.add(lines);
     }

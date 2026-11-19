@@ -59,6 +59,12 @@ export interface Part {
     positions: Float32Array;
     /** One unit normal per vertex: smooth across the facets of curved surfaces, flat elsewhere. */
     normals: Float32Array;
+    /**
+     * The piece's outline as line segments, x, y, z per end: the face boundaries the engine's views
+     * draw. The pieces a face was split into read as one face and the facets of a curved surface
+     * have no lines between them.
+     */
+    edges: Float32Array;
 }
 
 /** A component file, resolved with its first type's values. */

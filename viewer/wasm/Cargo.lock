@@ -52,6 +52,7 @@ dependencies = [
 [[package]]
 name = "cc_core"
 version = "0.12.0"
+source = "git+https://github.com/francisreboucas/constructcraft?branch=feat%2Fgeom-without-lua#1a26b8daf75082b01da65c3aef86476a4df26eed"
 dependencies = [
  "glam",
  "ron",
@@ -63,6 +64,7 @@ dependencies = [
 [[package]]
 name = "cc_geom"
 version = "0.12.0"
+source = "git+https://github.com/francisreboucas/constructcraft?branch=feat%2Fgeom-without-lua#1a26b8daf75082b01da65c3aef86476a4df26eed"
 dependencies = [
  "cc_core",
  "earcutr",

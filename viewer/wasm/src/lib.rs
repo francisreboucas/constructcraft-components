@@ -84,6 +84,12 @@ export interface Part {
   positions: Float32Array;
   /** One unit normal per vertex: smooth across the facets of curved surfaces, flat elsewhere. */
   normals: Float32Array;
+  /**
+   * The piece's outline as line segments, x, y, z per end: the face boundaries the engine's views
+   * draw. The pieces a face was split into read as one face and the facets of a curved surface
+   * have no lines between them.
+   */
+  edges: Float32Array;
 }
 
 /** A component file, resolved with its first type's values. */
@@ -143,6 +149,11 @@ pub fn load_component(text: &str) -> Result<ComponentJs, JsError> {
             &item,
             "normals",
             &js_sys::Float32Array::from(&part.normals[..]),
+        )?;
+        set(
+            &item,
+            "edges",
+            &js_sys::Float32Array::from(&part.edges[..]),
         )?;
         list.push(&item);
     }
@@ -231,6 +242,7 @@ struct Mesh {
     transparency: f64,
     positions: Vec<f32>,
     normals: Vec<f32>,
+    edges: Vec<f32>,
 }
 
 /// The component of `file` with its first type's values (the definition
@@ -259,7 +271,7 @@ fn component(file: &ComponentFile) -> (Info<'_>, Vec<Mesh>) {
         .iter()
         .filter(|p| !p.plan_only && !p.void && p.detail.fine)
     {
-        let Some((positions, normals, (a, b))) = tessellate(part) else {
+        let Some((positions, normals, edges, (a, b))) = tessellate(part) else {
             continue;
         };
         lo = lo.min(a);
@@ -275,6 +287,7 @@ fn component(file: &ComponentFile) -> (Info<'_>, Vec<Mesh>) {
                 .map_or(0.0, |t| t.clamp(0.0, 1.0)),
             positions,
             normals,
+            edges,
         });
     }
     let info = Info {
@@ -332,12 +345,12 @@ fn component(file: &ComponentFile) -> (Info<'_>, Vec<Mesh>) {
     (info, meshes)
 }
 
-type Tessellated = (Vec<f32>, Vec<f32>, (DVec3, DVec3));
+type Tessellated = (Vec<f32>, Vec<f32>, Vec<f32>, (DVec3, DVec3));
 
 /// The triangles of a piece as the engine's 3D view draws them (its faces
 /// triangulated, smooth normals on the facets of curved surfaces), each wound
-/// counter-clockwise about its face's outward normal, with their box; `None`
-/// when no triangle is left.
+/// counter-clockwise about its face's outward normal, the outline edges that
+/// view draws, and the triangles' box; `None` when no triangle is left.
 fn tessellate(part: &ComponentPart) -> Option<Tessellated> {
     let mut solid = Solid::new(ElementId(0), Category::Component, NO_MATERIAL);
     solid.add_part(part);
@@ -367,5 +380,12 @@ fn tessellate(part: &ComponentPart) -> Option<Tessellated> {
             }
         }
     }
-    (!positions.is_empty()).then_some((positions, normals, (lo, hi)))
+    let mut edges = Vec::new();
+    for (a, b) in solid.feature_edges().into_iter().flatten() {
+        if a.is_finite() && b.is_finite() {
+            edges.extend(a.as_vec3().to_array());
+            edges.extend(b.as_vec3().to_array());
+        }
+    }
+    (!positions.is_empty()).then_some((positions, normals, edges, (lo, hi)))
 }
