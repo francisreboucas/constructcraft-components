@@ -267,24 +267,40 @@ fn component(file: &ComponentFile) -> (Info<'_>, Vec<Mesh>) {
     let mut meshes = Vec::new();
     // Plan symbols are no solids, voids are cut out already, and the viewer
     // shows the fine detail level.
-    for part in parts
+    let shown: Vec<&ComponentPart> = parts
         .iter()
         .filter(|p| !p.plan_only && !p.void && p.detail.fine)
-    {
-        let Some((positions, normals, edges, (a, b))) = tessellate(part) else {
+        .collect();
+    // One solid per piece, as the engine builds a placed component.
+    let mut solids: Vec<Solid> = shown
+        .iter()
+        .map(|part| {
+            let material = file.materials.iter().find(|m| m.name == part.material);
+            let color = material.map_or(NO_MATERIAL, Material::shading_color);
+            let mut solid = Solid::new(ElementId(0), Category::Component, color);
+            solid.transparency = material
+                .map(|m| m.graphics.transparency)
+                .filter(|t| t.is_finite())
+                .map_or(0.0, |t| t.clamp(0.0, 1.0));
+            solid.material = Some(part.material.clone());
+            solid.detail = part.detail;
+            solid.add_part(part);
+            solid
+        })
+        .collect();
+    // The slices of a curved body read as one: no lines at their seams.
+    cc_geom::join_pieces(&mut solids);
+    for (part, solid) in shown.iter().zip(&solids) {
+        let Some((positions, normals, edges, (a, b))) = tessellate(solid) else {
             continue;
         };
         lo = lo.min(a);
         hi = hi.max(b);
-        let material = file.materials.iter().find(|m| m.name == part.material);
         meshes.push(Mesh {
             name: name_of(part.item).to_string(),
             material: part.material.clone(),
-            color: material.map_or(NO_MATERIAL, Material::shading_color),
-            transparency: material
-                .map(|m| m.graphics.transparency)
-                .filter(|t| t.is_finite())
-                .map_or(0.0, |t| t.clamp(0.0, 1.0)),
+            color: solid.color,
+            transparency: solid.transparency,
             positions,
             normals,
             edges,
@@ -351,14 +367,15 @@ type Tessellated = (Vec<f32>, Vec<f32>, Vec<f32>, (DVec3, DVec3));
 /// triangulated, smooth normals on the facets of curved surfaces), each wound
 /// counter-clockwise about its face's outward normal, the outline edges that
 /// view draws, and the triangles' box; `None` when no triangle is left.
-fn tessellate(part: &ComponentPart) -> Option<Tessellated> {
-    let mut solid = Solid::new(ElementId(0), Category::Component, NO_MATERIAL);
-    solid.add_part(part);
+fn tessellate(solid: &Solid) -> Option<Tessellated> {
     let mut positions = Vec::new();
     let mut normals = Vec::new();
     let mut lo = DVec3::splat(f64::INFINITY);
     let mut hi = DVec3::splat(f64::NEG_INFINITY);
-    for (face, shading) in solid.faces.iter().zip(solid.vertex_normals()) {
+    // Faces between the slices of one body are inside it: nothing to draw.
+    let inner = solid.inner_faces();
+    let faces = solid.faces.iter().zip(solid.vertex_normals()).zip(inner);
+    for ((face, shading), _) in faces.filter(|(_, inner)| !inner) {
         for [a, b, c] in face.triangulate() {
             let corner = |i: usize| Some((*face.verts.get(i)?, *shading.get(i)?));
             let (Some(pa), Some(pb), Some(pc)) = (corner(a), corner(b), corner(c)) else {
