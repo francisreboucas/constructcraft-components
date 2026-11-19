@@ -1,5 +1,6 @@
 // "Page not found", for unknown routes and unknown components.
 
+import { ALL_ROUTE } from '../catalog';
 import type { Shell } from '../shell';
 import { el, setPageState, setTitle, type Page } from './page';
 
@@ -10,7 +11,7 @@ export function showNotFound(shell: Shell): void {
   const h1 = el('h1', 'display', 'Página não encontrada');
   const text = el('p', undefined, 'Este endereço não corresponde a nenhum componente da biblioteca.');
   const link = el('a', 'text-link', '← Ver todos os componentes');
-  link.href = '#/';
+  link.href = ALL_ROUTE;
   box.append(h1, text, link);
   shell.main.replaceChildren(box);
   setTitle('Página não encontrada');

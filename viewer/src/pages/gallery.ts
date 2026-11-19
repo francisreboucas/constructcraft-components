@@ -1,4 +1,4 @@
-// The gallery: `#/` (every folder, grouped) and `#/<folder>` (one folder),
+// The gallery: `#/componentes` (every folder, grouped) and `#/<folder>` (one folder),
 // with the search box at the top of the main column.
 
 import {
@@ -26,6 +26,7 @@ function haystack(entry: CatalogEntry): string {
   let text = haystacks.get(entry.id);
   if (text === undefined) {
     const parts = [entry.component];
+    parts.push(entry.author);
     for (const type of entry.types) parts.push(type.name, type.description);
     text = normalizeText(parts.join('\n'));
     haystacks.set(entry.id, text);
@@ -46,6 +47,7 @@ function card(entry: CatalogEntry): HTMLAnchorElement {
     el('span', 'card-name', entry.component),
     el('span', 'card-meta', typeCount(entry.types.length)),
   );
+  if (entry.author) link.append(el('span', 'card-author', entry.author));
   return link;
 }
 
@@ -56,7 +58,7 @@ function grid(cards: HTMLElement[]): HTMLElement {
 }
 
 export const galleryPage: Page = (shell, route: Route, context) => {
-  if (route.name !== 'home' && route.name !== 'folder') throw new Error('galleryPage needs a gallery route');
+  if (route.name !== 'all' && route.name !== 'folder') throw new Error('galleryPage needs a gallery route');
   const folder = route.name === 'folder' ? route.folder : null;
   const routeKey = folder ?? '';
   let alive = true;

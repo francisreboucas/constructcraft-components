@@ -25,6 +25,7 @@ SOURCES = ROOT / "sources"
 COMPONENTS = ROOT / "components"
 CATALOG_JSON = ROOT / "catalog.json"
 CATALOG_MD = ROOT / "CATALOG.md"
+AUTHORS_JSON = ROOT / "authors.json"
 
 # Folder → heading in CATALOG.md, in display order.
 SECTIONS = {
@@ -137,7 +138,26 @@ def build(exe: str, out_root: Path) -> list[Path]:
     return built
 
 
-def describe(exe: str, path: Path, tmp: Path) -> dict:
+def load_authors() -> dict:
+    """authors.json: the default author and the components credited to someone else."""
+    try:
+        data = json.loads(AUTHORS_JSON.read_text(encoding="utf-8"))
+        default, by_component = data["default"], data.get("components", {})
+    except (OSError, KeyError, json.JSONDecodeError) as e:
+        raise BuildError(f"authors.json: {e}") from None
+    names = [default, *by_component.values()]
+    if not isinstance(by_component, dict) or not all(isinstance(n, str) and n.strip() for n in names):
+        raise BuildError("authors.json: \"default\" and every entry of \"components\" must be a name")
+    return {"default": default, "components": by_component}
+
+
+def author_of(authors: dict, path: Path) -> str:
+    """The author of components/<folder>/<name>.ccomp, keyed as "<folder>/<name>"."""
+    key = path.relative_to(COMPONENTS).with_suffix("").as_posix()
+    return authors["components"].get(key, authors["default"])
+
+
+def describe(exe: str, path: Path, tmp: Path, authors: dict) -> dict:
     """Load a .ccomp into a new project (validating it) and describe its types."""
     project = tmp / "check.ccad"
     loaded = ccad(exe, "--save-as", str(project), "run", "component_load", f"path={path.resolve()}")
@@ -148,6 +168,7 @@ def describe(exe: str, path: Path, tmp: Path) -> dict:
     return {
         "file": path.relative_to(ROOT).as_posix(),
         "component": loaded["component"],
+        "author": author_of(authors, path),
         "kind": d.get("kind", "Generic"),
         "mep": d.get("mep"),
         "parameters": [p["name"] for p in d.get("params", [])],
@@ -189,10 +210,10 @@ def catalog_md(entries: list[dict]) -> str:
     for key in order:
         if key not in by_section:
             continue
-        lines += [f"## {SECTIONS.get(key, key)}", "", "| Componente | Tipos | MEP | Arquivo |", "|---|---|---|---|"]
+        lines += [f"## {SECTIONS.get(key, key)}", "", "| Componente | Tipos | MEP | Autor | Arquivo |", "|---|---|---|---|---|"]
         for e in by_section[key]:
             names = "<br>".join(t["name"] for t in e["types"])
-            lines.append(f"| **{e['component']}** | {names} | {mep_summary(e['mep'])} | [`{Path(e['file']).name}`]({e['file']}) |")
+            lines.append(f"| **{e['component']}** | {names} | {mep_summary(e['mep'])} | {e['author']} | [`{Path(e['file']).name}`]({e['file']}) |")
         lines.append("")
     return "\n".join(lines)
 
@@ -210,6 +231,7 @@ def main() -> int:
         stream.reconfigure(encoding="utf-8")
     try:
         exe = find_ccad(opts.ccad)
+        authors = load_authors()
         problems = []
         with tempfile.TemporaryDirectory() as tmp_name:
             tmp = Path(tmp_name)
@@ -226,11 +248,15 @@ def main() -> int:
                 build(exe, COMPONENTS)
 
             entries = []
-            for path in sorted(COMPONENTS.rglob("*.ccomp")):
+            paths = sorted(COMPONENTS.rglob("*.ccomp"))
+            for path in paths:
                 try:
-                    entries.append(describe(exe, path, tmp))
+                    entries.append(describe(exe, path, tmp, authors))
                 except BuildError as e:
                     problems.append(f"{path.relative_to(ROOT)}: {e}")
+            known = {p.relative_to(COMPONENTS).with_suffix("").as_posix() for p in paths}
+            for key in sorted(set(authors["components"]) - known):
+                problems.append(f"authors.json: no component named {key}")
 
         catalog = json.dumps({"format_version": 1, "components": entries}, ensure_ascii=False, indent=2) + "\n"
         md = catalog_md(entries) + "\n"

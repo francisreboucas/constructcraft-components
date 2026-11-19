@@ -3,6 +3,7 @@
 //
 // An entry's id is `<folder>/<name>`, taken from its file path
 // `components/<folder>/<name>.ccomp`; its route is `#/<folder>/<name>`.
+// `#/` is the home page and `#/componentes` the gallery of every folder.
 
 import { libraryUrl } from './engine';
 
@@ -73,6 +74,8 @@ export interface CatalogEntry {
   file: string;
   /** Display name of the component (pt-BR). */
   component: string;
+  /** Who made the component; empty when the catalog does not say. */
+  author: string;
   /** Engine kind: "Furniture", "Plumbing", "Door"... */
   kind: string;
   mep: Record<string, unknown> | null;
@@ -99,6 +102,7 @@ const FILE_PATTERN = /^components\/([a-z0-9-]+)\/([a-z0-9-]+)\.ccomp$/;
 interface RawEntry {
   file: string;
   component: string;
+  author?: string;
   kind: string;
   mep: Record<string, unknown> | null;
   parameters?: string[];
@@ -123,6 +127,7 @@ function parseCatalog(raw: unknown): Catalog {
       slug,
       file: item.file,
       component: item.component,
+      author: item.author ?? '',
       kind: item.kind,
       mep: item.mep ?? null,
       parameters: item.parameters ?? [],
@@ -183,6 +188,7 @@ export function entriesInFolder(catalog: Catalog, folder: FolderId): CatalogEntr
 
 export type Route =
   | { name: 'home' }
+  | { name: 'all' }
   | { name: 'folder'; folder: FolderId }
   | { name: 'component'; folder: FolderId; slug: string; id: string }
   | { name: 'not-found'; hash: string };
@@ -191,6 +197,9 @@ export type Route =
 export function entryRoute(entry: CatalogEntry | string): string {
   return `#/${typeof entry === 'string' ? entry : entry.id}`;
 }
+
+/** The gallery of every folder. */
+export const ALL_ROUTE = '#/componentes';
 
 /** `#/plumbing` */
 export function folderRoute(folder: FolderId): string {
@@ -201,6 +210,7 @@ export function folderRoute(folder: FolderId): string {
 export function parseRoute(hash: string): Route {
   const path = hash.replace(/^#\/?/, '').replace(/\/+$/, '');
   if (path === '') return { name: 'home' };
+  if (path === 'componentes') return { name: 'all' };
   const segments = path.split('/').map((s) => {
     try {
       return decodeURIComponent(s);

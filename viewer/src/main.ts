@@ -2,9 +2,11 @@ import './styles/fonts';
 import './styles/tokens.css';
 import './styles/base.css';
 import './styles/app.css';
+import './styles/home.css';
 import { parseRoute, type Route } from './catalog';
 import { detailPage } from './pages/detail';
 import { galleryPage } from './pages/gallery';
+import { homePage } from './pages/home';
 import { notFoundPage } from './pages/not-found';
 import type { Page } from './pages/page';
 import { createShell } from './shell';
@@ -21,6 +23,8 @@ let previous: Route | null = null;
 function pageFor(route: Route): Page {
   switch (route.name) {
     case 'home':
+      return homePage;
+    case 'all':
     case 'folder':
       return galleryPage;
     case 'component':

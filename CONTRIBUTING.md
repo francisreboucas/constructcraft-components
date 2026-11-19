@@ -45,6 +45,7 @@ Depois rode `python tools/build.py --ccad caminho/do/ccad` e inclua no commit a 
 - **Nomes únicos**: o componente e os tipos não podem repetir nomes do template do ConstructCraft; o build avisa.
 - **MEP**: louças com `mep.Fixture` (UHC pela NBR 8160, peso pela NBR 5626, `hot_water`); dispositivos com `mep.Device` (`Outlet`, `DedicatedOutlet`, `Switch`, `CeilingLight`, `WallLight`, `Panel`) e a potência em VA. A potência e as UHC valem para todos os tipos do componente: potências diferentes pedem componentes diferentes.
 - **Fabricantes**: componentes genéricos ficam com `manufacturer` vazio. Componentes de um fabricante real só com medidas públicas do catálogo dele, `manufacturer`, `model` e `url` preenchidos, e sem logotipos ou imagens dele.
+- **Autoria**: o catálogo e o visualizador mostram o autor de cada componente. Para assinar o seu, acrescente `"<pasta>/<nome-do-arquivo>": "Seu Nome"` em `components` no [`authors.json`](authors.json); sem isso vale o autor em `default`.
 - **Licença**: ao contribuir, você concorda em licenciar sua contribuição sob [CC BY 4.0](LICENSE) e declara que tem o direito de fazê-lo.
 
 ## Pull requests

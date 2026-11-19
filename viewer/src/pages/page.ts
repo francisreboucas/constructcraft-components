@@ -14,9 +14,9 @@ export function setPageState(state: 'loading' | 'ready' | 'error'): void {
   document.documentElement.dataset.state = state;
 }
 
-export const SITE_TITLE = 'Componentes ConstructCraft';
+export const SITE_TITLE = '3D CraftHouse';
 
-/** Sets `document.title` to "<prefix> · Componentes ConstructCraft", or the site title alone. */
+/** Sets `document.title` to "<prefix> · 3D CraftHouse", or the site title alone. */
 export function setTitle(prefix?: string): void {
   document.title = prefix ? `${prefix} · ${SITE_TITLE}` : SITE_TITLE;
 }

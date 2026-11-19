@@ -2,16 +2,21 @@
 // links) and the <main> element pages mount into. On narrow screens the rail
 // becomes a sticky top bar and the footer links move to the page bottom.
 
-import { FOLDERS, folderRoute, loadCatalog, type FolderId } from './catalog';
+import { ALL_ROUTE, FOLDERS, folderRoute, loadCatalog, type FolderId } from './catalog';
 
 export const REPO_URL = 'https://github.com/francisreboucas/constructcraft-components';
 export const LICENSE_URL = `${REPO_URL}/blob/main/LICENSE`;
+export const VIEWER_LICENSE_URL = `${REPO_URL}/blob/main/viewer/LICENSE`;
+export const CATALOG_URL = `${REPO_URL}/blob/main/CATALOG.md`;
+export const CONTRIBUTING_URL = `${REPO_URL}/blob/main/CONTRIBUTING.md`;
+export const DOWNLOAD_URL = `${REPO_URL}/releases/latest`;
+export const CONSTRUCTCRAFT_URL = 'https://github.com/francisreboucas/constructcraft';
 
-/** Which rail item is current: all components, one folder, or none. */
+/** Which rail item is current: all components, one folder, or none (the home page). */
 export type ActiveNav = 'all' | FolderId | null;
 
 /** Page layout, exposed as `data-layout` on the app root. */
-export type Layout = 'gallery' | 'detail' | 'plain';
+export type Layout = 'home' | 'gallery' | 'detail' | 'plain';
 
 export interface Shell {
   main: HTMLElement;
@@ -50,10 +55,10 @@ export function createShell(root: HTMLElement): Shell {
   const rail = el('header', 'rail');
   const brand = el('a', 'brand');
   brand.href = '#/';
-  brand.append(el('span', 'brand-name display', 'ConstructCraft'), el('span', 'brand-sub', 'Componentes'));
+  brand.append(el('span', 'brand-name display', '3D CraftHouse'), el('span', 'brand-sub', 'Componentes para ConstructCraft'));
 
   const nav = el('nav', 'rail-nav');
-  nav.setAttribute('aria-label', 'Pastas');
+  nav.setAttribute('aria-label', 'Categorias');
   const list = el('ul');
   const items = new Map<ActiveNav, { link: HTMLAnchorElement; count: HTMLElement }>();
   const addItem = (key: ActiveNav, label: string, href: string) => {
@@ -66,7 +71,7 @@ export function createShell(root: HTMLElement): Shell {
     list.append(li);
     items.set(key, { link, count });
   };
-  addItem('all', 'Todos', '#/');
+  addItem('all', 'Todos', ALL_ROUTE);
   for (const folder of FOLDERS) addItem(folder.id, folder.label, folderRoute(folder.id));
   nav.append(list);
 

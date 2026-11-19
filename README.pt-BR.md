@@ -1,9 +1,9 @@
-# ConstructCraft Components
+# 3D CraftHouse
 
 [![Validate](https://github.com/francisreboucas/constructcraft-components/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/francisreboucas/constructcraft-components/actions/workflows/validate.yml)
 [![Licença: CC BY 4.0](https://img.shields.io/badge/licen%C3%A7a-CC_BY_4.0-lightgrey.svg)](LICENSE)
 
-Biblioteca gratuita de componentes paramétricos para o [ConstructCraft](https://github.com/francisreboucas/constructcraft): mobiliário, marcenaria, louças e metais, dispositivos elétricos, iluminação e paisagismo, prontos para carregar em qualquer projeto.
+O 3D CraftHouse é a biblioteca gratuita de componentes paramétricos para o [ConstructCraft](https://github.com/francisreboucas/constructcraft): mobiliário, marcenaria, louças e metais, dispositivos elétricos, iluminação e paisagismo, prontos para carregar em qualquer projeto.
 
 [English](README.md) · [Visualizador](https://3dcrafthouse.constructcraft.net/) · [Catálogo](CATALOG.md) · [Como contribuir](CONTRIBUTING.md)
 
@@ -45,7 +45,7 @@ As louças trazem as unidades Hunter de contribuição (NBR 8160) e os pesos rel
 
 ## Como a biblioteca é gerada
 
-Os componentes são escritos em JSON legível em [`sources/`](sources), no formato do comando `component_create` do motor. O [`tools/build.py`](tools/build.py) usa a própria linha de comando do ConstructCraft (`ccad`) para criar cada componente e salvá-lo como `.ccomp`; depois carrega cada arquivo num projeto novo para validá-lo e escreve o [`catalog.json`](catalog.json) e o [`CATALOG.md`](CATALOG.md). A CI roda a mesma verificação em cada pull request, com a versão fixada do ConstructCraft.
+Os componentes são escritos em JSON legível em [`sources/`](sources), no formato do comando `component_create` do motor. O [`tools/build.py`](tools/build.py) usa a própria linha de comando do ConstructCraft (`ccad`) para criar cada componente e salvá-lo como `.ccomp`; depois carrega cada arquivo num projeto novo para validá-lo e escreve o [`catalog.json`](catalog.json) e o [`CATALOG.md`](CATALOG.md), com o autor de cada componente tirado do [`authors.json`](authors.json). A CI roda a mesma verificação em cada pull request, com a versão fixada do ConstructCraft.
 
 ```sh
 python tools/build.py --ccad caminho/do/ccad          # gera, valida e atualiza o catálogo

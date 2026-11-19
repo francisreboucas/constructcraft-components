@@ -6,150 +6,150 @@
 
 ## Mobiliário · Furniture
 
-| Componente | Tipos | MEP | Arquivo |
-|---|---|---|---|
-| **Air fryer** | Air fryer 4 L<br>Air fryer 7 L |  | [`air-fryer.ccomp`](components/furniture/air-fryer.ccomp) |
-| **Ar-condicionado split - condensadora** | Condensadora split 9.000 a 12.000 BTU<br>Condensadora split 18.000 a 24.000 BTU |  | [`ar-condicionado-split-condensadora.ccomp`](components/furniture/ar-condicionado-split-condensadora.ccomp) |
-| **Ar-condicionado split - evaporadora** | Evaporadora split 9.000 a 12.000 BTU<br>Evaporadora split 18.000 a 24.000 BTU |  | [`ar-condicionado-split-evaporadora.ccomp`](components/furniture/ar-condicionado-split-evaporadora.ccomp) |
-| **Beliche** | Beliche solteiro 88x188<br>Beliche solteiro 78x188 |  | [`beliche.ccomp`](components/furniture/beliche.ccomp) |
-| **Box de vidro** | Box frontal 100 cm<br>Box frontal 120 cm<br>Box frontal 150 cm |  | [`box-vidro.ccomp`](components/furniture/box-vidro.ccomp) |
-| **Cadeira com encosto** | Cadeira de jantar<br>Cadeira de escritório |  | [`cadeira.ccomp`](components/furniture/cadeira.ccomp) |
-| **Cafeteira elétrica** | Cafeteira 15 xícaras (0,6 L)<br>Cafeteira 30 xícaras (1,2 L) |  | [`cafeteira.ccomp`](components/furniture/cafeteira.ccomp) |
-| **Cama com cabeceira** | Cama solteiro 88x188<br>Cama viúvo 128x188<br>Cama casal 138x188<br>Cama queen 158x198<br>Cama king 193x203 |  | [`cama.ccomp`](components/furniture/cama.ccomp) |
-| **Coifa de parede** | Coifa de parede 60 cm<br>Coifa de parede 90 cm |  | [`coifa-parede.ccomp`](components/furniture/coifa-parede.ccomp) |
-| **Cooktop a gás** | Cooktop 4 bocas 60 cm<br>Cooktop 5 bocas 75 cm |  | [`cooktop-4-bocas.ccomp`](components/furniture/cooktop-4-bocas.ccomp) |
-| **Criado-mudo** | Criado-mudo 45 cm<br>Criado-mudo 60 cm |  | [`criado-mudo.ccomp`](components/furniture/criado-mudo.ccomp) |
-| **Depurador de ar** | Depurador de ar 60 cm<br>Depurador de ar 80 cm |  | [`depurador-ar.ccomp`](components/furniture/depurador-ar.ccomp) |
-| **Escrivaninha** | Escrivaninha 100x50<br>Escrivaninha 120x60<br>Escrivaninha 150x70 |  | [`escrivaninha.ccomp`](components/furniture/escrivaninha.ccomp) |
-| **Fogão 4 bocas** | Fogão 4 bocas 50 x 60 cm<br>Fogão 4 bocas 56 x 63 cm |  | [`fogao-4-bocas.ccomp`](components/furniture/fogao-4-bocas.ccomp) |
-| **Forno elétrico de embutir** | Forno elétrico de embutir 60 cm 70 L<br>Forno elétrico de embutir 90 cm 115 L |  | [`forno-eletrico-embutir.ccomp`](components/furniture/forno-eletrico-embutir.ccomp) |
-| **Geladeira duplex** | Geladeira duplex 62 x 70 x 175 cm<br>Geladeira duplex 70 x 73 x 186 cm |  | [`geladeira-duplex.ccomp`](components/furniture/geladeira-duplex.ccomp) |
-| **Lava-louças** | Lava-louças 60 cm 14 serviços<br>Lava-louças 45 cm 10 serviços |  | [`lava-loucas.ccomp`](components/furniture/lava-loucas.ccomp) |
-| **Liquidificador** | Liquidificador 2 L<br>Liquidificador 3 L |  | [`liquidificador.ccomp`](components/furniture/liquidificador.ccomp) |
-| **Mesa de centro** | Mesa de centro 100x60 vidro<br>Mesa de centro 80x80 madeira<br>Mesa de centro 120x70 vidro |  | [`mesa-centro.ccomp`](components/furniture/mesa-centro.ccomp) |
-| **Mesa redonda** | Mesa redonda Ø90<br>Mesa redonda Ø120 |  | [`mesa-redonda.ccomp`](components/furniture/mesa-redonda.ccomp) |
-| **Mesa retangular** | Mesa retangular 120x80<br>Mesa retangular 160x90<br>Mesa retangular 200x100<br>Mesa retangular 240x100 |  | [`mesa-retangular.ccomp`](components/furniture/mesa-retangular.ccomp) |
-| **Micro-ondas** | Micro-ondas 30 L 49 x 38 x 29 cm<br>Micro-ondas 20 L 44 x 34 x 26 cm |  | [`micro-ondas.ccomp`](components/furniture/micro-ondas.ccomp) |
-| **Poltrona de madeira** | Poltrona de madeira 72 cm<br>Poltrona de madeira 82 cm |  | [`poltrona.ccomp`](components/furniture/poltrona.ccomp) |
-| **Secadora de roupas** | Secadora 10 kg 60 x 65 x 85 cm<br>Secadora 8 kg compacta 60 x 56 x 85 cm |  | [`secadora-roupas.ccomp`](components/furniture/secadora-roupas.ccomp) |
-| **Sofá estofado** | Poltrona 85 cm<br>Sofá 2 lugares 160 cm<br>Sofá 3 lugares 210 cm<br>Sofá 4 lugares 260 cm |  | [`sofa.ccomp`](components/furniture/sofa.ccomp) |
-| **Toalheiro** | Toalheiro barra 60 cm<br>Toalheiro argola<br>Toalheiro barra 40 cm |  | [`toalheiro.ccomp`](components/furniture/toalheiro.ccomp) |
-| **TV com rack** | TV 55" com rack 180 cm<br>TV 43" com rack 136 cm |  | [`tv-rack.ccomp`](components/furniture/tv-rack.ccomp) |
+| Componente | Tipos | MEP | Autor | Arquivo |
+|---|---|---|---|---|
+| **Air fryer** | Air fryer 4 L<br>Air fryer 7 L |  | Francis Rebouças | [`air-fryer.ccomp`](components/furniture/air-fryer.ccomp) |
+| **Ar-condicionado split - condensadora** | Condensadora split 9.000 a 12.000 BTU<br>Condensadora split 18.000 a 24.000 BTU |  | Francis Rebouças | [`ar-condicionado-split-condensadora.ccomp`](components/furniture/ar-condicionado-split-condensadora.ccomp) |
+| **Ar-condicionado split - evaporadora** | Evaporadora split 9.000 a 12.000 BTU<br>Evaporadora split 18.000 a 24.000 BTU |  | Francis Rebouças | [`ar-condicionado-split-evaporadora.ccomp`](components/furniture/ar-condicionado-split-evaporadora.ccomp) |
+| **Beliche** | Beliche solteiro 88x188<br>Beliche solteiro 78x188 |  | Francis Rebouças | [`beliche.ccomp`](components/furniture/beliche.ccomp) |
+| **Box de vidro** | Box frontal 100 cm<br>Box frontal 120 cm<br>Box frontal 150 cm |  | Francis Rebouças | [`box-vidro.ccomp`](components/furniture/box-vidro.ccomp) |
+| **Cadeira com encosto** | Cadeira de jantar<br>Cadeira de escritório |  | Francis Rebouças | [`cadeira.ccomp`](components/furniture/cadeira.ccomp) |
+| **Cafeteira elétrica** | Cafeteira 15 xícaras (0,6 L)<br>Cafeteira 30 xícaras (1,2 L) |  | Francis Rebouças | [`cafeteira.ccomp`](components/furniture/cafeteira.ccomp) |
+| **Cama com cabeceira** | Cama solteiro 88x188<br>Cama viúvo 128x188<br>Cama casal 138x188<br>Cama queen 158x198<br>Cama king 193x203 |  | Francis Rebouças | [`cama.ccomp`](components/furniture/cama.ccomp) |
+| **Coifa de parede** | Coifa de parede 60 cm<br>Coifa de parede 90 cm |  | Francis Rebouças | [`coifa-parede.ccomp`](components/furniture/coifa-parede.ccomp) |
+| **Cooktop a gás** | Cooktop 4 bocas 60 cm<br>Cooktop 5 bocas 75 cm |  | Francis Rebouças | [`cooktop-4-bocas.ccomp`](components/furniture/cooktop-4-bocas.ccomp) |
+| **Criado-mudo** | Criado-mudo 45 cm<br>Criado-mudo 60 cm |  | Francis Rebouças | [`criado-mudo.ccomp`](components/furniture/criado-mudo.ccomp) |
+| **Depurador de ar** | Depurador de ar 60 cm<br>Depurador de ar 80 cm |  | Francis Rebouças | [`depurador-ar.ccomp`](components/furniture/depurador-ar.ccomp) |
+| **Escrivaninha** | Escrivaninha 100x50<br>Escrivaninha 120x60<br>Escrivaninha 150x70 |  | Francis Rebouças | [`escrivaninha.ccomp`](components/furniture/escrivaninha.ccomp) |
+| **Fogão 4 bocas** | Fogão 4 bocas 50 x 60 cm<br>Fogão 4 bocas 56 x 63 cm |  | Francis Rebouças | [`fogao-4-bocas.ccomp`](components/furniture/fogao-4-bocas.ccomp) |
+| **Forno elétrico de embutir** | Forno elétrico de embutir 60 cm 70 L<br>Forno elétrico de embutir 90 cm 115 L |  | Francis Rebouças | [`forno-eletrico-embutir.ccomp`](components/furniture/forno-eletrico-embutir.ccomp) |
+| **Geladeira duplex** | Geladeira duplex 62 x 70 x 175 cm<br>Geladeira duplex 70 x 73 x 186 cm |  | Francis Rebouças | [`geladeira-duplex.ccomp`](components/furniture/geladeira-duplex.ccomp) |
+| **Lava-louças** | Lava-louças 60 cm 14 serviços<br>Lava-louças 45 cm 10 serviços |  | Francis Rebouças | [`lava-loucas.ccomp`](components/furniture/lava-loucas.ccomp) |
+| **Liquidificador** | Liquidificador 2 L<br>Liquidificador 3 L |  | Francis Rebouças | [`liquidificador.ccomp`](components/furniture/liquidificador.ccomp) |
+| **Mesa de centro** | Mesa de centro 100x60 vidro<br>Mesa de centro 80x80 madeira<br>Mesa de centro 120x70 vidro |  | Francis Rebouças | [`mesa-centro.ccomp`](components/furniture/mesa-centro.ccomp) |
+| **Mesa redonda** | Mesa redonda Ø90<br>Mesa redonda Ø120 |  | Francis Rebouças | [`mesa-redonda.ccomp`](components/furniture/mesa-redonda.ccomp) |
+| **Mesa retangular** | Mesa retangular 120x80<br>Mesa retangular 160x90<br>Mesa retangular 200x100<br>Mesa retangular 240x100 |  | Francis Rebouças | [`mesa-retangular.ccomp`](components/furniture/mesa-retangular.ccomp) |
+| **Micro-ondas** | Micro-ondas 30 L 49 x 38 x 29 cm<br>Micro-ondas 20 L 44 x 34 x 26 cm |  | Francis Rebouças | [`micro-ondas.ccomp`](components/furniture/micro-ondas.ccomp) |
+| **Poltrona de madeira** | Poltrona de madeira 72 cm<br>Poltrona de madeira 82 cm |  | Francis Rebouças | [`poltrona.ccomp`](components/furniture/poltrona.ccomp) |
+| **Secadora de roupas** | Secadora 10 kg 60 x 65 x 85 cm<br>Secadora 8 kg compacta 60 x 56 x 85 cm |  | Francis Rebouças | [`secadora-roupas.ccomp`](components/furniture/secadora-roupas.ccomp) |
+| **Sofá estofado** | Poltrona 85 cm<br>Sofá 2 lugares 160 cm<br>Sofá 3 lugares 210 cm<br>Sofá 4 lugares 260 cm |  | Francis Rebouças | [`sofa.ccomp`](components/furniture/sofa.ccomp) |
+| **Toalheiro** | Toalheiro barra 60 cm<br>Toalheiro argola<br>Toalheiro barra 40 cm |  | Francis Rebouças | [`toalheiro.ccomp`](components/furniture/toalheiro.ccomp) |
+| **TV com rack** | TV 55" com rack 180 cm<br>TV 43" com rack 136 cm |  | Francis Rebouças | [`tv-rack.ccomp`](components/furniture/tv-rack.ccomp) |
 
 ## Marcenaria · Casework
 
-| Componente | Tipos | MEP | Arquivo |
-|---|---|---|---|
-| **Armário aéreo** | Aéreo 60 cm<br>Aéreo 80 cm<br>Aéreo 120 cm |  | [`armario-aereo.ccomp`](components/casework/armario-aereo.ccomp) |
-| **Balcão de cozinha** | Balcão 40 cm<br>Balcão 60 cm<br>Balcão 80 cm<br>Balcão 120 cm |  | [`balcao-cozinha.ccomp`](components/casework/balcao-cozinha.ccomp) |
-| **Cômoda** | Cômoda 4 gavetas 80 cm<br>Cômoda 5 gavetas 90 cm<br>Cômoda 3 gavetas 120 cm |  | [`comoda.ccomp`](components/casework/comoda.ccomp) |
-| **Espelheira** | Espelheira 60 cm<br>Espelheira 80 cm<br>Espelheira 100 cm |  | [`espelheira.ccomp`](components/casework/espelheira.ccomp) |
-| **Estante** | Estante 80 cm<br>Estante 120 cm |  | [`estante.ccomp`](components/casework/estante.ccomp) |
-| **Guarda-roupa** | Guarda-roupa 2 portas 100 cm<br>Guarda-roupa 3 portas 150 cm<br>Guarda-roupa 4 portas 200 cm<br>Guarda-roupa 6 portas 270 cm |  | [`guarda-roupa.ccomp`](components/casework/guarda-roupa.ccomp) |
+| Componente | Tipos | MEP | Autor | Arquivo |
+|---|---|---|---|---|
+| **Armário aéreo** | Aéreo 60 cm<br>Aéreo 80 cm<br>Aéreo 120 cm |  | Francis Rebouças | [`armario-aereo.ccomp`](components/casework/armario-aereo.ccomp) |
+| **Balcão de cozinha** | Balcão 40 cm<br>Balcão 60 cm<br>Balcão 80 cm<br>Balcão 120 cm |  | Francis Rebouças | [`balcao-cozinha.ccomp`](components/casework/balcao-cozinha.ccomp) |
+| **Cômoda** | Cômoda 4 gavetas 80 cm<br>Cômoda 5 gavetas 90 cm<br>Cômoda 3 gavetas 120 cm |  | Francis Rebouças | [`comoda.ccomp`](components/casework/comoda.ccomp) |
+| **Espelheira** | Espelheira 60 cm<br>Espelheira 80 cm<br>Espelheira 100 cm |  | Francis Rebouças | [`espelheira.ccomp`](components/casework/espelheira.ccomp) |
+| **Estante** | Estante 80 cm<br>Estante 120 cm |  | Francis Rebouças | [`estante.ccomp`](components/casework/estante.ccomp) |
+| **Guarda-roupa** | Guarda-roupa 2 portas 100 cm<br>Guarda-roupa 3 portas 150 cm<br>Guarda-roupa 4 portas 200 cm<br>Guarda-roupa 6 portas 270 cm |  | Francis Rebouças | [`guarda-roupa.ccomp`](components/casework/guarda-roupa.ccomp) |
 
 ## Hidrossanitário · Plumbing
 
-| Componente | Tipos | MEP | Arquivo |
-|---|---|---|---|
-| **Aquecedor a gás de passagem** | Aquecedor a gás 15 L/min<br>Aquecedor a gás 27 L/min |  | [`aquecedor-gas.ccomp`](components/plumbing/aquecedor-gas.ccomp) |
-| **Bacia sanitária com caixa acoplada** | Bacia c/ caixa acoplada<br>Bacia c/ caixa acoplada PNE | UHC 6, peso 0.3 | [`bacia-caixa-acoplada.ccomp`](components/plumbing/bacia-caixa-acoplada.ccomp) |
-| **Bacia sanitária com válvula de descarga** | Bacia c/ válvula de descarga<br>Bacia c/ válvula de descarga PNE | UHC 6, peso 32 | [`bacia-valvula.ccomp`](components/plumbing/bacia-valvula.ccomp) |
-| **Banheira** | Banheira 150x70<br>Banheira 170x75<br>Banheira 160x70<br>Banheira 180x80 | UHC 2, peso 1, água quente | [`banheira.ccomp`](components/plumbing/banheira.ccomp) |
-| **Bidê** | Bidê<br>Bidê compacto | UHC 1, peso 0.1, água quente | [`bide.ccomp`](components/plumbing/bide.ccomp) |
-| **Caixa d'água de polietileno** | Caixa d'água 310 L<br>Caixa d'água 500 L<br>Caixa d'água 1000 L<br>Caixa d'água 2000 L |  | [`caixa-dagua.ccomp`](components/plumbing/caixa-dagua.ccomp) |
-| **Caixa de gordura** | Caixa de gordura simples Ø40<br>Caixa de gordura dupla Ø60 |  | [`caixa-gordura.ccomp`](components/plumbing/caixa-gordura.ccomp) |
-| **Caixa de inspeção** | Caixa de inspeção 60x60<br>Caixa de inspeção 80x80 |  | [`caixa-inspecao.ccomp`](components/plumbing/caixa-inspecao.ccomp) |
-| **Chuveiro elétrico** | Chuveiro elétrico | UHC 2, peso 0.1 | [`chuveiro-eletrico.ccomp`](components/plumbing/chuveiro-eletrico.ccomp) |
-| **Ducha higiênica** | Ducha higiênica 1,2 m<br>Ducha higiênica 1,5 m | UHC 0, peso 0.4 | [`ducha-higienica.ccomp`](components/plumbing/ducha-higienica.ccomp) |
-| **Gabinete de banheiro com cuba** | Gabinete com cuba 60 cm<br>Gabinete com cuba 80 cm | UHC 1, peso 0.3, água quente | [`gabinete-banheiro.ccomp`](components/plumbing/gabinete-banheiro.ccomp) |
-| **Lava e seca frontal** | Lava e seca 11 kg 60 x 60 x 85 cm<br>Lava e seca 13 kg 63 x 67 x 89 cm | UHC 3, peso 1 | [`lavadora-frontal.ccomp`](components/plumbing/lavadora-frontal.ccomp) |
-| **Lavatório com bancada** | Lavatório bancada 80x50<br>Lavatório bancada 100x50<br>Lavatório bancada 120x55 | UHC 1, peso 0.3, água quente | [`lavatorio-bancada.ccomp`](components/plumbing/lavatorio-bancada.ccomp) |
-| **Lavatório suspenso** | Lavatório suspenso 45 cm<br>Lavatório suspenso 55 cm<br>Lavatório suspenso c/ semicoluna 45 cm | UHC 1, peso 0.3, água quente | [`lavatorio-suspenso.ccomp`](components/plumbing/lavatorio-suspenso.ccomp) |
-| **Máquina de lavar roupa** | Máquina de lavar 12 kg<br>Máquina de lavar 17 kg | UHC 3, peso 1 | [`maquina-lavar-roupa.ccomp`](components/plumbing/maquina-lavar-roupa.ccomp) |
-| **Mictório** | Mictório sifonado<br>Mictório sifonado compacto | UHC 2, peso 0.3 | [`mictorio.ccomp`](components/plumbing/mictorio.ccomp) |
-| **Pia de cozinha com bancada** | Pia cozinha 120 cm<br>Pia cozinha 150 cm<br>Pia cozinha 200 cm | UHC 3, peso 0.7, água quente | [`pia-cozinha.ccomp`](components/plumbing/pia-cozinha.ccomp) |
-| **Purificador de água** | Purificador refrigerado 27 x 31 x 40 cm<br>Purificador compacto 22 x 27 x 35 cm | UHC 0, peso 0.1 | [`purificador-agua.ccomp`](components/plumbing/purificador-agua.ccomp) |
-| **Tanque de lavar roupa** | Tanque 40 L<br>Tanque 60 L | UHC 3, peso 0.7 | [`tanque.ccomp`](components/plumbing/tanque.ccomp) |
-| **Tanquinho** | Tanquinho 10 kg<br>Tanquinho 15 kg | UHC 3, peso 1 | [`tanquinho.ccomp`](components/plumbing/tanquinho.ccomp) |
+| Componente | Tipos | MEP | Autor | Arquivo |
+|---|---|---|---|---|
+| **Aquecedor a gás de passagem** | Aquecedor a gás 15 L/min<br>Aquecedor a gás 27 L/min |  | Francis Rebouças | [`aquecedor-gas.ccomp`](components/plumbing/aquecedor-gas.ccomp) |
+| **Bacia sanitária com caixa acoplada** | Bacia c/ caixa acoplada<br>Bacia c/ caixa acoplada PNE | UHC 6, peso 0.3 | Francis Rebouças | [`bacia-caixa-acoplada.ccomp`](components/plumbing/bacia-caixa-acoplada.ccomp) |
+| **Bacia sanitária com válvula de descarga** | Bacia c/ válvula de descarga<br>Bacia c/ válvula de descarga PNE | UHC 6, peso 32 | Francis Rebouças | [`bacia-valvula.ccomp`](components/plumbing/bacia-valvula.ccomp) |
+| **Banheira** | Banheira 150x70<br>Banheira 170x75<br>Banheira 160x70<br>Banheira 180x80 | UHC 2, peso 1, água quente | Francis Rebouças | [`banheira.ccomp`](components/plumbing/banheira.ccomp) |
+| **Bidê** | Bidê<br>Bidê compacto | UHC 1, peso 0.1, água quente | Francis Rebouças | [`bide.ccomp`](components/plumbing/bide.ccomp) |
+| **Caixa d'água de polietileno** | Caixa d'água 310 L<br>Caixa d'água 500 L<br>Caixa d'água 1000 L<br>Caixa d'água 2000 L |  | Francis Rebouças | [`caixa-dagua.ccomp`](components/plumbing/caixa-dagua.ccomp) |
+| **Caixa de gordura** | Caixa de gordura simples Ø40<br>Caixa de gordura dupla Ø60 |  | Francis Rebouças | [`caixa-gordura.ccomp`](components/plumbing/caixa-gordura.ccomp) |
+| **Caixa de inspeção** | Caixa de inspeção 60x60<br>Caixa de inspeção 80x80 |  | Francis Rebouças | [`caixa-inspecao.ccomp`](components/plumbing/caixa-inspecao.ccomp) |
+| **Chuveiro elétrico** | Chuveiro elétrico | UHC 2, peso 0.1 | Francis Rebouças | [`chuveiro-eletrico.ccomp`](components/plumbing/chuveiro-eletrico.ccomp) |
+| **Ducha higiênica** | Ducha higiênica 1,2 m<br>Ducha higiênica 1,5 m | UHC 0, peso 0.4 | Francis Rebouças | [`ducha-higienica.ccomp`](components/plumbing/ducha-higienica.ccomp) |
+| **Gabinete de banheiro com cuba** | Gabinete com cuba 60 cm<br>Gabinete com cuba 80 cm | UHC 1, peso 0.3, água quente | Francis Rebouças | [`gabinete-banheiro.ccomp`](components/plumbing/gabinete-banheiro.ccomp) |
+| **Lava e seca frontal** | Lava e seca 11 kg 60 x 60 x 85 cm<br>Lava e seca 13 kg 63 x 67 x 89 cm | UHC 3, peso 1 | Francis Rebouças | [`lavadora-frontal.ccomp`](components/plumbing/lavadora-frontal.ccomp) |
+| **Lavatório com bancada** | Lavatório bancada 80x50<br>Lavatório bancada 100x50<br>Lavatório bancada 120x55 | UHC 1, peso 0.3, água quente | Francis Rebouças | [`lavatorio-bancada.ccomp`](components/plumbing/lavatorio-bancada.ccomp) |
+| **Lavatório suspenso** | Lavatório suspenso 45 cm<br>Lavatório suspenso 55 cm<br>Lavatório suspenso c/ semicoluna 45 cm | UHC 1, peso 0.3, água quente | Francis Rebouças | [`lavatorio-suspenso.ccomp`](components/plumbing/lavatorio-suspenso.ccomp) |
+| **Máquina de lavar roupa** | Máquina de lavar 12 kg<br>Máquina de lavar 17 kg | UHC 3, peso 1 | Francis Rebouças | [`maquina-lavar-roupa.ccomp`](components/plumbing/maquina-lavar-roupa.ccomp) |
+| **Mictório** | Mictório sifonado<br>Mictório sifonado compacto | UHC 2, peso 0.3 | Francis Rebouças | [`mictorio.ccomp`](components/plumbing/mictorio.ccomp) |
+| **Pia de cozinha com bancada** | Pia cozinha 120 cm<br>Pia cozinha 150 cm<br>Pia cozinha 200 cm | UHC 3, peso 0.7, água quente | Francis Rebouças | [`pia-cozinha.ccomp`](components/plumbing/pia-cozinha.ccomp) |
+| **Purificador de água** | Purificador refrigerado 27 x 31 x 40 cm<br>Purificador compacto 22 x 27 x 35 cm | UHC 0, peso 0.1 | Francis Rebouças | [`purificador-agua.ccomp`](components/plumbing/purificador-agua.ccomp) |
+| **Tanque de lavar roupa** | Tanque 40 L<br>Tanque 60 L | UHC 3, peso 0.7 | Francis Rebouças | [`tanque.ccomp`](components/plumbing/tanque.ccomp) |
+| **Tanquinho** | Tanquinho 10 kg<br>Tanquinho 15 kg | UHC 3, peso 1 | Francis Rebouças | [`tanquinho.ccomp`](components/plumbing/tanquinho.ccomp) |
 
 ## Elétrico · Electrical
 
-| Componente | Tipos | MEP | Arquivo |
-|---|---|---|---|
-| **Interruptor de embutir** | Interruptor simples 1 tecla<br>Interruptor simples 2 teclas<br>Interruptor paralelo 1 tecla<br>Interruptor 3 teclas 4x4 | Switch, 0 VA | [`interruptor.ccomp`](components/electrical/interruptor.ccomp) |
-| **Ponto de telecomunicações** | Ponto de dados RJ45<br>Ponto de TV<br>Ponto dados + TV 4x4 |  | [`ponto-telecom.ccomp`](components/electrical/ponto-telecom.ccomp) |
-| **Quadro de distribuição (QDC)** | QD 12 disjuntores<br>QD 24 disjuntores<br>QD 36 disjuntores | Panel, 0 VA | [`quadro-distribuicao.ccomp`](components/electrical/quadro-distribuicao.ccomp) |
-| **Tomada de uso específico 1500 VA** | TUE 1500 VA | DedicatedOutlet, 1500 VA | [`tue-1500va.ccomp`](components/electrical/tue-1500va.ccomp) |
-| **Tomada de uso específico 3500 VA** | TUE 3500 VA | DedicatedOutlet, 3500 VA | [`tue-3500va.ccomp`](components/electrical/tue-3500va.ccomp) |
-| **Ponto de chuveiro elétrico 5500 W** | TUE chuveiro 5500 W | DedicatedOutlet, 5500 VA | [`tue-chuveiro-5500w.ccomp`](components/electrical/tue-chuveiro-5500w.ccomp) |
-| **Ponto de chuveiro elétrico 7500 W** | TUE chuveiro 7500 W | DedicatedOutlet, 7500 VA | [`tue-chuveiro-7500w.ccomp`](components/electrical/tue-chuveiro-7500w.ccomp) |
-| **Tomada de uso geral 100 VA** | TUG 100 VA 4x2<br>TUG 100 VA 4x4 dupla | Outlet, 100 VA | [`tug-100va.ccomp`](components/electrical/tug-100va.ccomp) |
-| **Tomada de uso geral 600 VA** | TUG 600 VA 4x2<br>TUG 600 VA 4x4 dupla | Outlet, 600 VA | [`tug-600va.ccomp`](components/electrical/tug-600va.ccomp) |
+| Componente | Tipos | MEP | Autor | Arquivo |
+|---|---|---|---|---|
+| **Interruptor de embutir** | Interruptor simples 1 tecla<br>Interruptor simples 2 teclas<br>Interruptor paralelo 1 tecla<br>Interruptor 3 teclas 4x4 | Switch, 0 VA | Francis Rebouças | [`interruptor.ccomp`](components/electrical/interruptor.ccomp) |
+| **Ponto de telecomunicações** | Ponto de dados RJ45<br>Ponto de TV<br>Ponto dados + TV 4x4 |  | Francis Rebouças | [`ponto-telecom.ccomp`](components/electrical/ponto-telecom.ccomp) |
+| **Quadro de distribuição (QDC)** | QD 12 disjuntores<br>QD 24 disjuntores<br>QD 36 disjuntores | Panel, 0 VA | Francis Rebouças | [`quadro-distribuicao.ccomp`](components/electrical/quadro-distribuicao.ccomp) |
+| **Tomada de uso específico 1500 VA** | TUE 1500 VA | DedicatedOutlet, 1500 VA | Francis Rebouças | [`tue-1500va.ccomp`](components/electrical/tue-1500va.ccomp) |
+| **Tomada de uso específico 3500 VA** | TUE 3500 VA | DedicatedOutlet, 3500 VA | Francis Rebouças | [`tue-3500va.ccomp`](components/electrical/tue-3500va.ccomp) |
+| **Ponto de chuveiro elétrico 5500 W** | TUE chuveiro 5500 W | DedicatedOutlet, 5500 VA | Francis Rebouças | [`tue-chuveiro-5500w.ccomp`](components/electrical/tue-chuveiro-5500w.ccomp) |
+| **Ponto de chuveiro elétrico 7500 W** | TUE chuveiro 7500 W | DedicatedOutlet, 7500 VA | Francis Rebouças | [`tue-chuveiro-7500w.ccomp`](components/electrical/tue-chuveiro-7500w.ccomp) |
+| **Tomada de uso geral 100 VA** | TUG 100 VA 4x2<br>TUG 100 VA 4x4 dupla | Outlet, 100 VA | Francis Rebouças | [`tug-100va.ccomp`](components/electrical/tug-100va.ccomp) |
+| **Tomada de uso geral 600 VA** | TUG 600 VA 4x2<br>TUG 600 VA 4x4 dupla | Outlet, 600 VA | Francis Rebouças | [`tug-600va.ccomp`](components/electrical/tug-600va.ccomp) |
 
 ## Iluminação · Lighting
 
-| Componente | Tipos | MEP | Arquivo |
-|---|---|---|---|
-| **Arandela LED** | Arandela LED 20 VA<br>Arandela externa LED 20 VA | WallLight, 20 VA | [`arandela-led.ccomp`](components/lighting/arandela-led.ccomp) |
-| **Luminária linear LED** | Linear LED 60 cm<br>Linear LED 120 cm | CeilingLight, 40 VA | [`luminaria-linear.ccomp`](components/lighting/luminaria-linear.ccomp) |
-| **Luminária pendente** | Pendente Ø35 60 VA<br>Pendente Ø50 60 VA | CeilingLight, 60 VA | [`pendente.ccomp`](components/lighting/pendente.ccomp) |
-| **Plafon de teto** | Plafon Ø30 100 VA<br>Plafon Ø40 100 VA | CeilingLight, 100 VA | [`plafon.ccomp`](components/lighting/plafon.ccomp) |
-| **Spot LED de embutir** | Spot LED Ø10<br>Downlight LED Ø17 | CeilingLight, 18 VA | [`spot-embutido.ccomp`](components/lighting/spot-embutido.ccomp) |
-| **Ventilador de teto com luminária** | Ventilador de teto 4 pás 130 cm<br>Ventilador de teto 3 pás 105 cm | CeilingLight, 150 VA | [`ventilador-teto.ccomp`](components/lighting/ventilador-teto.ccomp) |
+| Componente | Tipos | MEP | Autor | Arquivo |
+|---|---|---|---|---|
+| **Arandela LED** | Arandela LED 20 VA<br>Arandela externa LED 20 VA | WallLight, 20 VA | Francis Rebouças | [`arandela-led.ccomp`](components/lighting/arandela-led.ccomp) |
+| **Luminária linear LED** | Linear LED 60 cm<br>Linear LED 120 cm | CeilingLight, 40 VA | Francis Rebouças | [`luminaria-linear.ccomp`](components/lighting/luminaria-linear.ccomp) |
+| **Luminária pendente** | Pendente Ø35 60 VA<br>Pendente Ø50 60 VA | CeilingLight, 60 VA | Francis Rebouças | [`pendente.ccomp`](components/lighting/pendente.ccomp) |
+| **Plafon de teto** | Plafon Ø30 100 VA<br>Plafon Ø40 100 VA | CeilingLight, 100 VA | Francis Rebouças | [`plafon.ccomp`](components/lighting/plafon.ccomp) |
+| **Spot LED de embutir** | Spot LED Ø10<br>Downlight LED Ø17 | CeilingLight, 18 VA | Francis Rebouças | [`spot-embutido.ccomp`](components/lighting/spot-embutido.ccomp) |
+| **Ventilador de teto com luminária** | Ventilador de teto 4 pás 130 cm<br>Ventilador de teto 3 pás 105 cm | CeilingLight, 150 VA | Francis Rebouças | [`ventilador-teto.ccomp`](components/lighting/ventilador-teto.ccomp) |
 
 ## Paisagismo · Planting
 
-| Componente | Tipos | MEP | Arquivo |
-|---|---|---|---|
-| **Buxinho** | Buxinho Ø50 |  | [`buxinho.ccomp`](components/planting/buxinho.ccomp) |
-| **Cipreste-italiano** | Cipreste-italiano 8 m |  | [`cipreste-italiano.ccomp`](components/planting/cipreste-italiano.ccomp) |
-| **Hibisco** | Hibisco Ø150 |  | [`hibisco.ccomp`](components/planting/hibisco.ccomp) |
-| **Ipê-amarelo** | Ipê-amarelo 8 m |  | [`ipe-amarelo.ccomp`](components/planting/ipe-amarelo.ccomp) |
-| **Ixora** | Ixora Ø80 |  | [`ixora.ccomp`](components/planting/ixora.ccomp) |
-| **Jerivá** | Jerivá 8 m |  | [`jeriva.ccomp`](components/planting/jeriva.ccomp) |
-| **Mangueira** | Mangueira 12 m |  | [`mangueira.ccomp`](components/planting/mangueira.ccomp) |
-| **Oiti** | Oiti 10 m |  | [`oiti.ccomp`](components/planting/oiti.ccomp) |
-| **Palmeira-imperial** | Palmeira-imperial 15 m |  | [`palmeira-imperial.ccomp`](components/planting/palmeira-imperial.ccomp) |
-| **Palmeira-real-australiana** | Palmeira-real-australiana 10 m |  | [`palmeira-real-australiana.ccomp`](components/planting/palmeira-real-australiana.ccomp) |
-| **Pau-brasil** | Pau-brasil 10 m |  | [`pau-brasil.ccomp`](components/planting/pau-brasil.ccomp) |
-| **Pingo-de-ouro** | Pingo-de-ouro Ø100 |  | [`pingo-de-ouro.ccomp`](components/planting/pingo-de-ouro.ccomp) |
-| **Pinheiro** | Pinheiro 12 m |  | [`pinheiro.ccomp`](components/planting/pinheiro.ccomp) |
-| **Resedá** | Resedá 5 m |  | [`reseda.ccomp`](components/planting/reseda.ccomp) |
-| **Sibipiruna** | Sibipiruna 15 m |  | [`sibipiruna.ccomp`](components/planting/sibipiruna.ccomp) |
-| **Tuia-holandesa** | Tuia-holandesa 4 m |  | [`tuia-holandesa.ccomp`](components/planting/tuia-holandesa.ccomp) |
-| **Vaso com planta Ø40** | Vaso Ø40 |  | [`vaso-planta-40.ccomp`](components/planting/vaso-planta-40.ccomp) |
-| **Vaso com planta Ø60** | Vaso Ø60 |  | [`vaso-planta-60.ccomp`](components/planting/vaso-planta-60.ccomp) |
-| **Vaso com planta Ø80** | Vaso Ø80 |  | [`vaso-planta-80.ccomp`](components/planting/vaso-planta-80.ccomp) |
-| **Washingtonia** | Washingtonia 12 m |  | [`washingtonia.ccomp`](components/planting/washingtonia.ccomp) |
+| Componente | Tipos | MEP | Autor | Arquivo |
+|---|---|---|---|---|
+| **Buxinho** | Buxinho Ø50 |  | Francis Rebouças | [`buxinho.ccomp`](components/planting/buxinho.ccomp) |
+| **Cipreste-italiano** | Cipreste-italiano 8 m |  | Francis Rebouças | [`cipreste-italiano.ccomp`](components/planting/cipreste-italiano.ccomp) |
+| **Hibisco** | Hibisco Ø150 |  | Francis Rebouças | [`hibisco.ccomp`](components/planting/hibisco.ccomp) |
+| **Ipê-amarelo** | Ipê-amarelo 8 m |  | Francis Rebouças | [`ipe-amarelo.ccomp`](components/planting/ipe-amarelo.ccomp) |
+| **Ixora** | Ixora Ø80 |  | Francis Rebouças | [`ixora.ccomp`](components/planting/ixora.ccomp) |
+| **Jerivá** | Jerivá 8 m |  | Francis Rebouças | [`jeriva.ccomp`](components/planting/jeriva.ccomp) |
+| **Mangueira** | Mangueira 12 m |  | Francis Rebouças | [`mangueira.ccomp`](components/planting/mangueira.ccomp) |
+| **Oiti** | Oiti 10 m |  | Francis Rebouças | [`oiti.ccomp`](components/planting/oiti.ccomp) |
+| **Palmeira-imperial** | Palmeira-imperial 15 m |  | Francis Rebouças | [`palmeira-imperial.ccomp`](components/planting/palmeira-imperial.ccomp) |
+| **Palmeira-real-australiana** | Palmeira-real-australiana 10 m |  | Francis Rebouças | [`palmeira-real-australiana.ccomp`](components/planting/palmeira-real-australiana.ccomp) |
+| **Pau-brasil** | Pau-brasil 10 m |  | Francis Rebouças | [`pau-brasil.ccomp`](components/planting/pau-brasil.ccomp) |
+| **Pingo-de-ouro** | Pingo-de-ouro Ø100 |  | Francis Rebouças | [`pingo-de-ouro.ccomp`](components/planting/pingo-de-ouro.ccomp) |
+| **Pinheiro** | Pinheiro 12 m |  | Francis Rebouças | [`pinheiro.ccomp`](components/planting/pinheiro.ccomp) |
+| **Resedá** | Resedá 5 m |  | Francis Rebouças | [`reseda.ccomp`](components/planting/reseda.ccomp) |
+| **Sibipiruna** | Sibipiruna 15 m |  | Francis Rebouças | [`sibipiruna.ccomp`](components/planting/sibipiruna.ccomp) |
+| **Tuia-holandesa** | Tuia-holandesa 4 m |  | Francis Rebouças | [`tuia-holandesa.ccomp`](components/planting/tuia-holandesa.ccomp) |
+| **Vaso com planta Ø40** | Vaso Ø40 |  | Francis Rebouças | [`vaso-planta-40.ccomp`](components/planting/vaso-planta-40.ccomp) |
+| **Vaso com planta Ø60** | Vaso Ø60 |  | Francis Rebouças | [`vaso-planta-60.ccomp`](components/planting/vaso-planta-60.ccomp) |
+| **Vaso com planta Ø80** | Vaso Ø80 |  | Francis Rebouças | [`vaso-planta-80.ccomp`](components/planting/vaso-planta-80.ccomp) |
+| **Washingtonia** | Washingtonia 12 m |  | Francis Rebouças | [`washingtonia.ccomp`](components/planting/washingtonia.ccomp) |
 
 ## Portas · Doors
 
-| Componente | Tipos | MEP | Arquivo |
-|---|---|---|---|
-| **Porta de abrir dupla** | Porta de abrir dupla 120 x 210<br>Porta de abrir dupla 140 x 210<br>Porta de abrir dupla 160 x 210 |  | [`porta-abrir-dupla.ccomp`](components/doors/porta-abrir-dupla.ccomp) |
-| **Porta de abrir** | Porta de abrir 60 x 210<br>Porta de abrir 70 x 210<br>Porta de abrir 80 x 210<br>Porta de abrir 90 x 210 |  | [`porta-abrir.ccomp`](components/doors/porta-abrir.ccomp) |
-| **Porta camarão** | Porta camarão 70 x 210<br>Porta camarão 80 x 210<br>Porta camarão 60 x 210<br>Porta camarão 90 x 210 |  | [`porta-camarao.ccomp`](components/doors/porta-camarao.ccomp) |
-| **Porta de correr dupla** | Porta de correr dupla 140 x 210<br>Porta de correr dupla 160 x 210<br>Porta de correr dupla 200 x 210 |  | [`porta-correr-dupla.ccomp`](components/doors/porta-correr-dupla.ccomp) |
-| **Porta de correr** | Porta de correr 70 x 210<br>Porta de correr 80 x 210<br>Porta de correr 90 x 210 |  | [`porta-correr.ccomp`](components/doors/porta-correr.ccomp) |
-| **Porta-janela de correr** | Porta-janela de correr 150 x 210<br>Porta-janela de correr 200 x 210<br>Porta-janela de correr 250 x 210 |  | [`porta-janela-correr.ccomp`](components/doors/porta-janela-correr.ccomp) |
-| **Porta pivotante** | Porta pivotante 100 x 240<br>Porta pivotante 120 x 240<br>Porta pivotante 150 x 240 |  | [`porta-pivotante.ccomp`](components/doors/porta-pivotante.ccomp) |
-| **Porta de vidro temperado** | Porta de vidro temperado 80 x 210<br>Porta de vidro temperado 90 x 210<br>Porta de vidro temperado 100 x 210 |  | [`porta-vidro.ccomp`](components/doors/porta-vidro.ccomp) |
-| **Portão basculante** | Portão basculante 250 x 220<br>Portão basculante 300 x 220 |  | [`portao-basculante.ccomp`](components/doors/portao-basculante.ccomp) |
+| Componente | Tipos | MEP | Autor | Arquivo |
+|---|---|---|---|---|
+| **Porta de abrir dupla** | Porta de abrir dupla 120 x 210<br>Porta de abrir dupla 140 x 210<br>Porta de abrir dupla 160 x 210 |  | Francis Rebouças | [`porta-abrir-dupla.ccomp`](components/doors/porta-abrir-dupla.ccomp) |
+| **Porta de abrir** | Porta de abrir 60 x 210<br>Porta de abrir 70 x 210<br>Porta de abrir 80 x 210<br>Porta de abrir 90 x 210 |  | Francis Rebouças | [`porta-abrir.ccomp`](components/doors/porta-abrir.ccomp) |
+| **Porta camarão** | Porta camarão 70 x 210<br>Porta camarão 80 x 210<br>Porta camarão 60 x 210<br>Porta camarão 90 x 210 |  | Francis Rebouças | [`porta-camarao.ccomp`](components/doors/porta-camarao.ccomp) |
+| **Porta de correr dupla** | Porta de correr dupla 140 x 210<br>Porta de correr dupla 160 x 210<br>Porta de correr dupla 200 x 210 |  | Francis Rebouças | [`porta-correr-dupla.ccomp`](components/doors/porta-correr-dupla.ccomp) |
+| **Porta de correr** | Porta de correr 70 x 210<br>Porta de correr 80 x 210<br>Porta de correr 90 x 210 |  | Francis Rebouças | [`porta-correr.ccomp`](components/doors/porta-correr.ccomp) |
+| **Porta-janela de correr** | Porta-janela de correr 150 x 210<br>Porta-janela de correr 200 x 210<br>Porta-janela de correr 250 x 210 |  | Francis Rebouças | [`porta-janela-correr.ccomp`](components/doors/porta-janela-correr.ccomp) |
+| **Porta pivotante** | Porta pivotante 100 x 240<br>Porta pivotante 120 x 240<br>Porta pivotante 150 x 240 |  | Francis Rebouças | [`porta-pivotante.ccomp`](components/doors/porta-pivotante.ccomp) |
+| **Porta de vidro temperado** | Porta de vidro temperado 80 x 210<br>Porta de vidro temperado 90 x 210<br>Porta de vidro temperado 100 x 210 |  | Francis Rebouças | [`porta-vidro.ccomp`](components/doors/porta-vidro.ccomp) |
+| **Portão basculante** | Portão basculante 250 x 220<br>Portão basculante 300 x 220 |  | Francis Rebouças | [`portao-basculante.ccomp`](components/doors/portao-basculante.ccomp) |
 
 ## Janelas · Windows
 
-| Componente | Tipos | MEP | Arquivo |
-|---|---|---|---|
-| **Janela de abrir de madeira** | Janela de abrir 100 x 100<br>Janela de abrir 120 x 120<br>Janela de abrir 150 x 120 |  | [`janela-abrir.ccomp`](components/windows/janela-abrir.ccomp) |
-| **Janela basculante** | Janela basculante 60 x 40<br>Janela basculante 60 x 60<br>Janela basculante 100 x 40 |  | [`janela-basculante.ccomp`](components/windows/janela-basculante.ccomp) |
-| **Janela de correr de alumínio** | Janela de correr 100 x 100<br>Janela de correr 120 x 120<br>Janela de correr 150 x 120<br>Janela de correr 200 x 120 |  | [`janela-correr.ccomp`](components/windows/janela-correr.ccomp) |
-| **Janela fixa** | Janela fixa 60 x 60<br>Janela fixa 100 x 100<br>Janela fixa 150 x 100 |  | [`janela-fixa.ccomp`](components/windows/janela-fixa.ccomp) |
-| **Janela maxim-ar de alumínio** | Janela maxim-ar 60 x 60<br>Janela maxim-ar 80 x 60<br>Janela maxim-ar 100 x 60 |  | [`janela-maxim-ar.ccomp`](components/windows/janela-maxim-ar.ccomp) |
-| **Janela de correr com veneziana** | Janela de correr com veneziana 120 x 120<br>Janela de correr com veneziana 150 x 120<br>Janela de correr com veneziana 200 x 120 |  | [`janela-veneziana.ccomp`](components/windows/janela-veneziana.ccomp) |
+| Componente | Tipos | MEP | Autor | Arquivo |
+|---|---|---|---|---|
+| **Janela de abrir de madeira** | Janela de abrir 100 x 100<br>Janela de abrir 120 x 120<br>Janela de abrir 150 x 120 |  | Francis Rebouças | [`janela-abrir.ccomp`](components/windows/janela-abrir.ccomp) |
+| **Janela basculante** | Janela basculante 60 x 40<br>Janela basculante 60 x 60<br>Janela basculante 100 x 40 |  | Francis Rebouças | [`janela-basculante.ccomp`](components/windows/janela-basculante.ccomp) |
+| **Janela de correr de alumínio** | Janela de correr 100 x 100<br>Janela de correr 120 x 120<br>Janela de correr 150 x 120<br>Janela de correr 200 x 120 |  | Francis Rebouças | [`janela-correr.ccomp`](components/windows/janela-correr.ccomp) |
+| **Janela fixa** | Janela fixa 60 x 60<br>Janela fixa 100 x 100<br>Janela fixa 150 x 100 |  | Francis Rebouças | [`janela-fixa.ccomp`](components/windows/janela-fixa.ccomp) |
+| **Janela maxim-ar de alumínio** | Janela maxim-ar 60 x 60<br>Janela maxim-ar 80 x 60<br>Janela maxim-ar 100 x 60 |  | Francis Rebouças | [`janela-maxim-ar.ccomp`](components/windows/janela-maxim-ar.ccomp) |
+| **Janela de correr com veneziana** | Janela de correr com veneziana 120 x 120<br>Janela de correr com veneziana 150 x 120<br>Janela de correr com veneziana 200 x 120 |  | Francis Rebouças | [`janela-veneziana.ccomp`](components/windows/janela-veneziana.ccomp) |
 
 ## Veículos · Vehicles
 
-| Componente | Tipos | MEP | Arquivo |
-|---|---|---|---|
-| **Moto custom** | Moto custom 1600 |  | [`moto-custom.ccomp`](components/vehicles/moto-custom.ccomp) |
+| Componente | Tipos | MEP | Autor | Arquivo |
+|---|---|---|---|---|
+| **Moto custom** | Moto custom 1600 |  | Francis Rebouças | [`moto-custom.ccomp`](components/vehicles/moto-custom.ccomp) |
 

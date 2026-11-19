@@ -237,6 +237,11 @@ function buildPanel(entry: CatalogEntry, onPickType: (index: number) => void) {
   const notice = el('div', 'panel-notice-slot');
   const header = el('div', 'panel-header');
   header.append(el('p', 'eyebrow', folderLabel(entry.folder)), el('h1', 'panel-title display', entry.component));
+  if (entry.author) {
+    const author = el('p', 'panel-author');
+    author.append(el('span', 'panel-author-label', 'Autor'), el('span', 'panel-author-name', entry.author));
+    header.append(author);
+  }
   const description = el('p', 'panel-text', entry.types[0]?.description ?? '');
   description.hidden = !description.textContent;
   header.append(description);

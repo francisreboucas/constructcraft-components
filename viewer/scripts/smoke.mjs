@@ -1,4 +1,4 @@
-// Smoke test: build, serve dist locally, drive the gallery and detail pages in
+// Smoke test: build, serve dist locally, drive the home, gallery and detail pages in
 // headless Chromium at desktop (1280x800) and mobile (390x844) sizes, and fail
 // on console errors, page errors, external requests, a blank 3D view, blank
 // thumbnails, horizontal overflow on mobile or leaked WebGL contexts and
@@ -254,10 +254,44 @@ async function runDevice(browser, device) {
     await frames(page, 2);
   };
 
-  // Gallery: every folder, grouped.
+  // Home: hero drawing, one tile per folder, footer.
   {
     const label = step('#/');
     await page.goto(`${ORIGIN}/#/`);
+    if (await waitReady(page, label)) {
+      const h1 = await page.locator('h1').count();
+      if (h1 !== 1) fail(`${label}: expected one h1, found ${h1}`);
+      const title = await page.title();
+      if (title !== '3D CraftHouse') fail(`${label}: title "${title}"`);
+      const tiles = await page.locator('.category').count();
+      if (tiles !== FOLDER_COUNT) fail(`${label}: expected ${FOLDER_COUNT} category tiles, found ${tiles}`);
+      if ((await page.locator('.nav-item[aria-current="page"]').count()) !== 0) fail(`${label}: a nav item is active`);
+      if ((await page.locator('.home-foot a').count()) === 0) fail(`${label}: the footer has no links`);
+      const author = (await page.textContent('.sheet-author dd'))?.trim();
+      if (!author || author === '—') fail(`${label}: the hero shows no author`);
+      await page.waitForSelector('.hero-view[data-rendered="true"]:not([data-moving])', { timeout: TIMEOUT });
+      await frames(page, 2);
+      const png = await page.locator('.hero-view').screenshot();
+      const coverage = await inkCoverage(page, png, [0xe9, 0xee, 0xf2], 60);
+      if (coverage < 0.005) fail(`${label}: the hero drawing looks blank (${(coverage * 100).toFixed(2)}% drawn)`);
+      // Picking a type redraws the model and marks the chip.
+      const chips = page.locator('.chip');
+      if ((await chips.count()) > 1) {
+        await chips.nth(1).click();
+        await page.waitForSelector('.chip:nth-child(2)[aria-pressed="true"]', { timeout: TIMEOUT });
+      }
+      await waitThumbs(page);
+      const failed = await page.locator('.category[data-thumb="failed"]').count();
+      if (failed) fail(`${label}: ${failed} category thumbnails failed`);
+      console.log(`  ${tiles} categories, hero ${(coverage * 100).toFixed(1)}% drawn -> ${await shot(page, device, 'home', { fullPage: true })}`);
+      await afterPage(label);
+    }
+  }
+
+  // Gallery: every folder, grouped.
+  {
+    const label = step('#/componentes');
+    await go(page, '#/componentes');
     if (await waitReady(page, label)) {
       const cards = await page.locator('.card').count();
       if (cards !== TOTAL) fail(`${label}: expected ${TOTAL} cards, found ${cards}`);
@@ -274,14 +308,16 @@ async function runDevice(browser, device) {
       if (failed) fail(`${label}: ${failed} thumbnails failed`);
       const active = await page.textContent('.nav-item[aria-current="page"] .nav-label');
       if (active !== 'Todos') fail(`${label}: active nav item is "${active}"`);
-      console.log(`  ${cards} cards, ${thumbs.length} thumbnails on screen -> ${await shot(page, device, 'home')}`);
+      const authors = await page.locator('.card-author').count();
+      if (authors !== TOTAL) fail(`${label}: ${authors} of ${TOTAL} cards show an author`);
+      console.log(`  ${cards} cards, ${thumbs.length} thumbnails on screen -> ${await shot(page, device, 'gallery')}`);
       await afterPage(label);
     }
   }
 
   // Scroll position and query survive a visit to a component (desktop only: same logic on mobile).
   if (!mobile) {
-    const label = step('#/ scroll restore');
+    const label = step('#/componentes scroll restore');
     await page.evaluate(() => window.scrollTo(0, 1400));
     await frames(page);
     const before = await page.evaluate(() => window.scrollY);
@@ -308,7 +344,7 @@ async function runDevice(browser, device) {
       if (String(cards) !== count || count !== navCount) fail(`${label}: ${cards} cards, count "${count}", nav "${navCount}"`);
       if ((await page.locator('.folder-section').count()) !== 0) fail(`${label}: folder page should be a flat grid`);
       const title = await page.title();
-      if (title !== 'Hidrossanitário · Componentes ConstructCraft') fail(`${label}: title "${title}"`);
+      if (title !== 'Hidrossanitário · 3D CraftHouse') fail(`${label}: title "${title}"`);
       await waitThumbs(page);
       console.log(`  ${cards} cards -> ${await shot(page, device, 'plumbing')}`);
       await afterPage(label);
@@ -317,8 +353,8 @@ async function runDevice(browser, device) {
 
   // Search across every folder.
   {
-    const label = step('#/ search "porta"');
-    await go(page, '#/');
+    const label = step('#/componentes search "porta"');
+    await go(page, '#/componentes');
     await waitReady(page, label);
     await page.fill('#search', 'PORTA');
     const count = (await page.textContent('.search-count'))?.trim();
@@ -348,7 +384,7 @@ async function runDevice(browser, device) {
 
   // Empty search.
   {
-    const label = step('#/ empty search');
+    const label = step('#/componentes empty search');
     await page.fill('#search', 'zzzzqx');
     const text = await page.textContent('.empty p');
     if (text !== 'Nenhum componente encontrado para “zzzzqx”.') fail(`${label}: empty message "${text}"`);
@@ -384,7 +420,9 @@ async function runDevice(browser, device) {
     if (h1 !== 1) fail(`${label}: expected one h1, found ${h1}`);
     const title = await page.title();
     const heading = await page.textContent('.panel-title');
-    if (title !== `${heading} · Componentes ConstructCraft`) fail(`${label}: title "${title}"`);
+    if (title !== `${heading} · 3D CraftHouse`) fail(`${label}: title "${title}"`);
+    const author = (await page.textContent('.panel-author-name'))?.trim();
+    if (!author) fail(`${label}: no author in the panel`);
     const href = await page.getAttribute('.button-primary', 'href');
     if (!href?.endsWith(`library/components/${route}.ccomp`)) fail(`${label}: download link is ${href}`);
     if (mobile) {
@@ -441,10 +479,10 @@ async function runDevice(browser, device) {
     }
   }
 
-  // Leaks: 10 navigations through component pages and the gallery.
+  // Leaks: 10 navigations through component pages, the home page and the gallery.
   if (!mobile) {
     const label = step('leaks across 10 navigations');
-    await go(page, '#/');
+    await go(page, '#/componentes');
     await waitReady(page, label);
     const baseline = await page.evaluate(() => window.__leaks());
     const hashes = ['#/plumbing/pia-cozinha', '#/', '#/lighting/pendente', '#/electrical', '#/doors/porta-abrir'];
@@ -453,7 +491,7 @@ async function runDevice(browser, device) {
       await waitReady(page, label);
       if (hashes[i % hashes.length].split('/').length === 3) await waitStill(page);
     }
-    await go(page, '#/');
+    await go(page, '#/componentes');
     await waitReady(page, label);
     await page.waitForTimeout(300); // context-lost events are dispatched asynchronously
     const end = await page.evaluate(() => window.__leaks());

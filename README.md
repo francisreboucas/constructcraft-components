@@ -1,9 +1,9 @@
-# ConstructCraft Components
+# 3D CraftHouse
 
 [![Validate](https://github.com/francisreboucas/constructcraft-components/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/francisreboucas/constructcraft-components/actions/workflows/validate.yml)
 [![License: CC BY 4.0](https://img.shields.io/badge/license-CC_BY_4.0-lightgrey.svg)](LICENSE)
 
-A free library of parametric components for [ConstructCraft](https://github.com/francisreboucas/constructcraft): furniture, casework, plumbing fixtures, electrical devices, lighting and planting, ready to load into any project.
+3D CraftHouse is the free library of parametric components for [ConstructCraft](https://github.com/francisreboucas/constructcraft): furniture, casework, plumbing fixtures, electrical devices, lighting and planting, ready to load into any project.
 
 [Português (Brasil)](README.pt-BR.md) · [Viewer](https://3dcrafthouse.constructcraft.net/) · [Catalog](CATALOG.md) · [Contributing](CONTRIBUTING.md)
 
@@ -45,7 +45,7 @@ Plumbing fixtures carry their drainage fixture units (NBR 8160) and supply weigh
 
 ## How the library is built
 
-Components are written as readable JSON in [`sources/`](sources), in the shape of the engine's `component_create` command. [`tools/build.py`](tools/build.py) has ConstructCraft's own command line (`ccad`) create each component and save it as `.ccomp`, then loads every file back into a new project to validate it, and writes [`catalog.json`](catalog.json) and [`CATALOG.md`](CATALOG.md). CI runs the same check on every pull request with the pinned ConstructCraft release.
+Components are written as readable JSON in [`sources/`](sources), in the shape of the engine's `component_create` command. [`tools/build.py`](tools/build.py) has ConstructCraft's own command line (`ccad`) create each component and save it as `.ccomp`, then loads every file back into a new project to validate it, and writes [`catalog.json`](catalog.json) and [`CATALOG.md`](CATALOG.md), with each component's author taken from [`authors.json`](authors.json). CI runs the same check on every pull request with the pinned ConstructCraft release.
 
 ```sh
 python tools/build.py --ccad path/to/ccad          # build, validate, update the catalog
