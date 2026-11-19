@@ -3,6 +3,8 @@
 // becomes a sticky top bar and the footer links move to the page bottom.
 
 import { ALL_ROUTE, FOLDERS, folderRoute, loadCatalog, type FolderId } from './catalog';
+import { LANGS, lang, setLang, t } from './i18n';
+import logoUrl from './logo.png';
 
 export const REPO_URL = 'https://github.com/francisreboucas/constructcraft-components';
 export const LICENSE_URL = `${REPO_URL}/blob/main/LICENSE`;
@@ -33,7 +35,7 @@ function el<K extends keyof HTMLElementTagNameMap>(tag: K, className?: string, t
 
 function footerLinks(className: string): HTMLElement {
   const box = el('div', className);
-  const license = el('a', undefined, 'Componentes sob CC BY 4.0');
+  const license = el('a', undefined, t.shell.license);
   license.href = LICENSE_URL;
   const repo = el('a', undefined, 'GitHub');
   repo.href = REPO_URL;
@@ -44,7 +46,7 @@ function footerLinks(className: string): HTMLElement {
 export function createShell(root: HTMLElement): Shell {
   const app = el('div', 'app');
 
-  const skip = el('a', 'skip-link', 'Ir para o conteúdo');
+  const skip = el('a', 'skip-link', t.shell.skip);
   skip.href = '#main';
   skip.addEventListener('click', (event) => {
     // The hash is the router's; move focus without changing it.
@@ -55,10 +57,31 @@ export function createShell(root: HTMLElement): Shell {
   const rail = el('header', 'rail');
   const brand = el('a', 'brand');
   brand.href = '#/';
-  brand.append(el('span', 'brand-name display', '3D CraftHouse'), el('span', 'brand-sub', 'Componentes para ConstructCraft'));
+  const logo = el('img', 'brand-logo');
+  logo.src = logoUrl;
+  logo.alt = '';
+  logo.width = 40;
+  logo.height = 40;
+  const brandText = el('span', 'brand-text');
+  brandText.append(el('span', 'brand-name display', '3D CraftHouse'), el('span', 'brand-sub', t.shell.brandSub));
+  brand.append(logo, brandText);
+
+  const langs = el('div', 'lang-switch');
+  langs.setAttribute('role', 'group');
+  langs.setAttribute('aria-label', t.shell.language);
+  for (const option of LANGS) {
+    const button = el('button', 'lang-option', option.short);
+    button.type = 'button';
+    button.lang = option.id;
+    button.title = option.name;
+    button.setAttribute('aria-label', option.name);
+    button.setAttribute('aria-pressed', String(option.id === lang));
+    button.addEventListener('click', () => setLang(option.id));
+    langs.append(button);
+  }
 
   const nav = el('nav', 'rail-nav');
-  nav.setAttribute('aria-label', 'Categorias');
+  nav.setAttribute('aria-label', t.shell.navLabel);
   const list = el('ul');
   const items = new Map<ActiveNav, { link: HTMLAnchorElement; count: HTMLElement }>();
   const addItem = (key: ActiveNav, label: string, href: string) => {
@@ -71,11 +94,11 @@ export function createShell(root: HTMLElement): Shell {
     list.append(li);
     items.set(key, { link, count });
   };
-  addItem('all', 'Todos', ALL_ROUTE);
+  addItem('all', t.shell.all, ALL_ROUTE);
   for (const folder of FOLDERS) addItem(folder.id, folder.label, folderRoute(folder.id));
   nav.append(list);
 
-  rail.append(brand, nav, footerLinks('rail-foot'));
+  rail.append(brand, langs, nav, footerLinks('rail-foot'));
 
   const main = el('main', 'main');
   main.id = 'main';

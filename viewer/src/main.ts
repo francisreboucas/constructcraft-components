@@ -4,12 +4,15 @@ import './styles/base.css';
 import './styles/app.css';
 import './styles/home.css';
 import { parseRoute, type Route } from './catalog';
+import { applyDocumentLanguage } from './i18n';
 import { detailPage } from './pages/detail';
 import { galleryPage } from './pages/gallery';
 import { homePage } from './pages/home';
 import { notFoundPage } from './pages/not-found';
 import type { Page } from './pages/page';
 import { createShell } from './shell';
+
+applyDocumentLanguage();
 
 const root = document.getElementById('app');
 if (!root) throw new Error('#app is missing');

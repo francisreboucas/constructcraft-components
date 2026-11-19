@@ -15,6 +15,7 @@ import {
 } from '../catalog';
 import { loadComponent } from '../engine';
 import { formatDecimal } from '../format';
+import { LOCALE, t } from '../i18n';
 import { Viewport } from '../scene';
 import { prefersReducedMotion } from '../scene/views';
 import {
@@ -35,17 +36,17 @@ const HERO_IDS = ['furniture/sofa', 'casework/guarda-roupa', 'furniture/cama'];
 /** Time each type stays on screen while the hero cycles on its own, ms. */
 const CYCLE_MS = 3600;
 
-/** What each category holds, and the component that stands for it on its tile. */
-const CATEGORIES: Record<FolderId, { text: string; cover: string }> = {
-  furniture: { text: 'Camas, sofás, mesas, cadeiras e eletrodomésticos.', cover: 'cama' },
-  casework: { text: 'Guarda-roupas, cômodas, balcões, aéreos e estantes.', cover: 'guarda-roupa' },
-  plumbing: { text: 'Louças, tanques e caixas, com os pontos de água e esgoto.', cover: 'lavatorio-bancada' },
-  electrical: { text: 'Tomadas, interruptores e quadros, com a potência de cada ponto.', cover: 'quadro-distribuicao' },
-  lighting: { text: 'Plafons, pendentes, spots, arandelas e ventiladores de teto.', cover: 'pendente' },
-  planting: { text: 'Árvores, palmeiras, arbustos e vasos no porte adulto.', cover: 'ipe-amarelo' },
-  doors: { text: 'De abrir, de correr, pivotante, camarão e portão basculante.', cover: 'porta-abrir' },
-  windows: { text: 'De correr, de abrir, basculante, maxim-ar, veneziana e fixa.', cover: 'janela-veneziana' },
-  vehicles: { text: 'Para compor garagens e fachadas.', cover: 'moto-custom' },
+/** The component that stands for each category on its tile. */
+const COVERS: Record<FolderId, string> = {
+  furniture: 'cama',
+  casework: 'guarda-roupa',
+  plumbing: 'lavatorio-bancada',
+  electrical: 'quadro-distribuicao',
+  lighting: 'pendente',
+  planting: 'ipe-amarelo',
+  doors: 'porta-abrir',
+  windows: 'janela-veneziana',
+  vehicles: 'moto-custom',
 };
 
 function link(className: string, text: string, href: string): HTMLAnchorElement {
@@ -95,31 +96,23 @@ function buildHero(): Hero {
   hero.setAttribute('aria-labelledby', 'hero-title');
 
   const copy = el('div', 'hero-copy');
-  const h1 = el('h1', 'hero-title display', 'Componentes 3D de alta qualidade para o ConstructCraft');
+  const h1 = el('h1', 'hero-title display', t.home.title);
   h1.id = 'hero-title';
   const lead = el('p', 'hero-lead');
-  const counts = el('span', 'hero-counts', 'Móveis, louças, portas, janelas, pontos elétricos e plantas.');
-  lead.append(
-    counts,
-    ' Cada componente é paramétrico, tem três níveis de detalhe e leva os dados que o ConstructCraft usa para dimensionar as instalações.',
-  );
+  const counts = el('span', 'hero-counts', t.home.kinds);
+  lead.append(counts, t.home.lead);
   const actions = el('div', 'hero-actions');
   actions.append(
-    link('button-primary', 'Ver os componentes', ALL_ROUTE),
-    link('button', 'Baixar a biblioteca (ZIP)', DOWNLOAD_URL),
+    link('button-primary', t.home.browse, ALL_ROUTE),
+    link('button', t.home.downloadZip, DOWNLOAD_URL),
   );
-  copy.append(
-    el('p', 'eyebrow', 'Biblioteca aberta · CC BY 4.0'),
-    h1,
-    lead,
-    actions,
-  );
+  copy.append(el('p', 'eyebrow', t.home.eyebrow), h1, lead, actions);
 
   // The sheet: the live drawing and, below it, its title block.
   const sheet = el('div', 'sheet');
   const view = el('div', 'hero-view');
   view.setAttribute('role', 'img');
-  const status = el('p', 'sheet-status', 'Carregando geometria…');
+  const status = el('p', 'sheet-status', t.common.loadingGeometry);
   view.append(status);
 
   const block = el('dl', 'sheet-block');
@@ -130,10 +123,10 @@ function buildHero(): Hero {
     block.append(box);
     return dd;
   };
-  const nameCell = cell('Componente', 'sheet-name');
-  const sizeCell = cell('Medidas', 'sheet-size');
-  const authorCell = cell('Autor', 'sheet-author');
-  const typesCell = cell('Tipo', 'sheet-types');
+  const nameCell = cell(t.home.sheet.component, 'sheet-name');
+  const sizeCell = cell(t.home.sheet.size, 'sheet-size');
+  const authorCell = cell(t.common.author, 'sheet-author');
+  const typesCell = cell(t.home.sheet.type, 'sheet-types');
   sheet.append(view, block);
   hero.append(copy, sheet);
 
@@ -155,22 +148,22 @@ function buildHero(): Hero {
     shown = component.type_index;
     buttons.forEach((button, i) => button.setAttribute('aria-pressed', String(i === shown)));
     sizeCell.textContent = sizeText(component.bounds);
-    view.setAttribute('aria-label', `Modelo 3D: ${entry.types[shown]?.name ?? entry.component}`);
+    view.setAttribute('aria-label', t.home.modelLabel(entry.types[shown]?.name ?? entry.title));
   }
 
   return {
     element: hero,
     setCounts(catalog) {
       const types = catalog.entries.reduce((n, e) => n + e.types.length, 0);
-      counts.textContent = `${catalog.entries.length} componentes e ${types} tipos: móveis, louças, portas, janelas, pontos elétricos e plantas.`;
+      counts.textContent = t.home.counts(catalog.entries.length, types);
     },
     async show(entry) {
-      const open = link('sheet-link', entry.component, entryRoute(entry));
+      const open = link('sheet-link', entry.title, entryRoute(entry));
       nameCell.replaceChildren(open);
       authorCell.textContent = entry.author || '—';
       const group = el('div', 'chips');
       group.setAttribute('role', 'group');
-      group.setAttribute('aria-label', 'Tipo mostrado no modelo 3D');
+      group.setAttribute('aria-label', t.home.typeGroup);
       buttons = entry.types.map((type, index) => {
         const button = el('button', 'chip', type.name);
         button.type = 'button';
@@ -214,20 +207,19 @@ function buildHero(): Hero {
 function categoriesSection(catalog: Catalog, loader: ThumbnailLoader): HTMLElement {
   const section = el('section', 'home-section');
   section.setAttribute('aria-labelledby', 'home-categories');
-  section.append(sectionHead('home-categories', 'Categorias'));
+  section.append(sectionHead('home-categories', t.home.categories));
   const grid = el('div', 'category-grid');
   for (const folder of FOLDERS) {
     const entries = catalog.entries.filter((e) => e.folder === folder.id);
     const first = entries[0];
     if (!first) continue;
-    const info = CATEGORIES[folder.id];
-    const cover = catalog.byId.get(`${folder.id}/${info.cover}`) ?? first;
+    const cover = catalog.byId.get(`${folder.id}/${COVERS[folder.id]}`) ?? first;
     // `.card` so the thumbnail loader and its states apply.
     const tile = link('card category', '', folderRoute(folder.id));
     const text = el('span', 'category-text');
     const name = el('span', 'category-name display', folder.label);
-    const count = el('span', 'category-count', entries.length === 1 ? '1 componente' : `${entries.length} componentes`);
-    text.append(name, count, el('span', 'category-desc', info.text));
+    const count = el('span', 'category-count', t.common.componentCount(entries.length));
+    text.append(name, count, el('span', 'category-desc', t.home.categoryText[folder.id]));
     tile.append(el('span', 'card-thumb'), text);
     loader.observe(tile, cover);
     grid.append(tile);
@@ -239,36 +231,17 @@ function categoriesSection(catalog: Catalog, loader: ThumbnailLoader): HTMLEleme
 function qualitySection(catalog: Catalog): HTMLElement {
   const types = catalog.entries.reduce((n, e) => n + e.types.length, 0);
   const withMep = catalog.entries.filter((e) => e.mep).length;
+  const q = t.home.qualityItems;
   const items: { title: string; text: string; data: string }[] = [
-    {
-      title: 'Paramétrico',
-      text: 'Um arquivo traz o componente e todos os seus tamanhos. Os tipos compartilham a geometria e mudam só os parâmetros, que você ainda ajusta no projeto.',
-      data: `${types} tipos em ${catalog.entries.length} componentes`,
-    },
-    {
-      title: 'Três níveis de detalhe',
-      text: 'Cada peça diz em que nível aparece, baixo, médio ou alto, e se entra na planta. O modelo fica leve de longe e completo de perto.',
-      data: 'baixo · médio · alto',
-    },
-    {
-      title: 'Dados de instalações',
-      text: 'As louças trazem as unidades Hunter e os pesos relativos; os pontos elétricos, o tipo e a potência em VA. O ConstructCraft dimensiona tubulações e circuitos com eles.',
-      data: `${withMep} componentes · NBR 8160, 5626 e 5410`,
-    },
-    {
-      title: 'Conferido pelo próprio app',
-      text: 'A cada alteração, o ConstructCraft abre todos os arquivos num projeto novo. O que ele não carrega não entra na biblioteca.',
-      data: 'verificação automática',
-    },
+    { ...q.parametric, data: q.parametric.data(types, catalog.entries.length) },
+    q.detail,
+    { ...q.mep, data: q.mep.data(withMep) },
+    q.checked,
   ];
   const section = el('section', 'home-section');
   section.setAttribute('aria-labelledby', 'home-quality');
   section.append(
-    sectionHead(
-      'home-quality',
-      'O que todo componente traz',
-      'O que um componente precisa ter para entrar na biblioteca.',
-    ),
+    sectionHead('home-quality', t.home.quality, t.home.qualityNote),
   );
   const list = el('ul', 'quality');
   for (const item of items) {
@@ -283,25 +256,26 @@ function qualitySection(catalog: Catalog): HTMLElement {
 function usageSection(entry: CatalogEntry | null): HTMLElement {
   const section = el('section', 'home-section');
   section.setAttribute('aria-labelledby', 'home-usage');
-  section.append(sectionHead('home-usage', 'Do arquivo ao projeto'));
+  section.append(sectionHead('home-usage', t.home.usage));
   const list = el('ol', 'steps');
 
   const download = el('li', 'step');
-  const downloadText = el('p', 'step-text', 'Abra um componente e baixe o arquivo .ccomp, ou leve a biblioteca inteira no ');
-  downloadText.append(link('text-link', 'ZIP da última versão', DOWNLOAD_URL), '.');
-  download.append(el('h3', 'step-title', 'Baixe'), downloadText);
+  const steps = t.home.steps;
+  const downloadText = el('p', 'step-text', steps.download.before);
+  downloadText.append(link('text-link', steps.download.link, DOWNLOAD_URL), steps.download.after);
+  download.append(el('h3', 'step-title', steps.download.title), downloadText);
 
   const load = el('li', 'step');
   load.append(
-    el('h3', 'step-title', 'Carregue no ConstructCraft'),
-    el('p', 'step-text', 'O componente e todos os seus tipos entram no projeto, com os materiais que faltarem. Pela linha de comando:'),
+    el('h3', 'step-title', steps.load.title),
+    el('p', 'step-text', steps.load.text),
     el('code', 'step-code', `ccad -p casa.ccad --save run component_load path=${entry?.file ?? 'components/furniture/sofa.ccomp'}`),
   );
 
   const place = el('li', 'step');
   place.append(
-    el('h3', 'step-title', 'Insira'),
-    el('p', 'step-text', 'Use a ferramenta de componente e escolha o tipo. Os parâmetros continuam editáveis depois de inserir.'),
+    el('h3', 'step-title', steps.place.title),
+    el('p', 'step-text', steps.place.text),
   );
 
   list.append(download, load, place);
@@ -314,10 +288,11 @@ function footer(catalog: Catalog | null): HTMLElement {
 
   const about = el('div', 'foot-about');
   const authors = catalog ? [...new Set(catalog.entries.map((e) => e.author).filter(Boolean))] : [];
-  const by = authors.length ? `Componentes por ${new Intl.ListFormat('pt-BR').format(authors)}.` : '';
+  const f = t.home.foot;
+  const by = authors.length ? f.by(new Intl.ListFormat(LOCALE).format(authors)) : '';
   about.append(
     el('p', 'foot-brand display', '3D CraftHouse'),
-    el('p', 'foot-text', `Biblioteca aberta de componentes para o ConstructCraft. ${by}`.trim()),
+    el('p', 'foot-text', `${f.about} ${by}`.trim()),
   );
 
   const column = (title: string, links: [string, string][]): HTMLElement => {
@@ -335,19 +310,19 @@ function footer(catalog: Catalog | null): HTMLElement {
 
   foot.append(
     about,
-    column('Biblioteca', [
-      ['Todos os componentes', ALL_ROUTE],
-      ['Catálogo em tabela', CATALOG_URL],
-      ['Baixar em ZIP', DOWNLOAD_URL],
+    column(f.library, [
+      [f.allComponents, ALL_ROUTE],
+      [f.catalogTable, CATALOG_URL],
+      [f.zip, DOWNLOAD_URL],
     ]),
-    column('Projeto', [
+    column(f.project, [
       ['ConstructCraft', CONSTRUCTCRAFT_URL],
-      ['Código no GitHub', REPO_URL],
-      ['Como contribuir', CONTRIBUTING_URL],
+      [f.code, REPO_URL],
+      [f.contribute, CONTRIBUTING_URL],
     ]),
-    column('Licenças', [
-      ['Componentes: CC BY 4.0', LICENSE_URL],
-      ['Visualizador: GPL-3.0-or-later', VIEWER_LICENSE_URL],
+    column(f.licenses, [
+      [f.componentsLicense, LICENSE_URL],
+      [f.viewerLicense, VIEWER_LICENSE_URL],
     ]),
   );
   return foot;

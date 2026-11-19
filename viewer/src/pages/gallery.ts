@@ -11,6 +11,7 @@ import {
   type Route,
 } from '../catalog';
 import { normalizeText, typeCount } from '../format';
+import { t } from '../i18n';
 import { ThumbnailLoader } from '../thumbnails';
 import { describeError, errorElement } from './errors';
 import { el, hasModifier, isTyping, setPageState, setTitle, type Page } from './page';
@@ -25,7 +26,7 @@ const haystacks = new Map<string, string>();
 function haystack(entry: CatalogEntry): string {
   let text = haystacks.get(entry.id);
   if (text === undefined) {
-    const parts = [entry.component];
+    const parts = [entry.title, entry.component];
     parts.push(entry.author);
     for (const type of entry.types) parts.push(type.name, type.description);
     text = normalizeText(parts.join('\n'));
@@ -44,7 +45,7 @@ function card(entry: CatalogEntry): HTMLAnchorElement {
   link.href = entryRoute(entry);
   link.append(
     el('span', 'card-thumb'),
-    el('span', 'card-name', entry.component),
+    el('span', 'card-name', entry.title),
     el('span', 'card-meta', typeCount(entry.types.length)),
   );
   if (entry.author) link.append(el('span', 'card-author', entry.author));
@@ -69,15 +70,15 @@ export const galleryPage: Page = (shell, route: Route, context) => {
   setPageState('loading');
 
   const page = el('div', 'gallery');
-  const h1 = el('h1', 'sr-only', folder ? `${folderLabel(folder)}: componentes` : 'Todos os componentes');
+  const h1 = el('h1', 'sr-only', folder ? t.gallery.headingFolder(folderLabel(folder)) : t.gallery.headingAll);
 
   const bar = el('div', 'searchbar');
-  const label = el('label', 'sr-only', 'Buscar componente');
+  const label = el('label', 'sr-only', t.gallery.searchLabel);
   label.htmlFor = 'search';
   const input = el('input', 'search-input');
   input.id = 'search';
   input.type = 'search';
-  input.placeholder = 'Buscar componente…';
+  input.placeholder = t.gallery.searchPlaceholder;
   input.autocomplete = 'off';
   input.spellcheck = false;
   input.setAttribute('aria-keyshortcuts', '/');
@@ -109,12 +110,12 @@ export const galleryPage: Page = (shell, route: Route, context) => {
     const scope = folder ? catalog.entries.filter((e) => e.folder === folder) : catalog.entries;
     const terms = normalizeText(query).split(/\s+/).filter(Boolean);
     const found = terms.length ? scope.filter((e) => matches(e, terms)) : scope;
-    count.textContent = terms.length ? `${found.length} de ${scope.length}` : String(scope.length);
+    count.textContent = terms.length ? t.gallery.countOf(found.length, scope.length) : String(scope.length);
 
     if (found.length === 0) {
       const empty = el('div', 'empty');
-      empty.append(el('p', undefined, `Nenhum componente encontrado para “${query.trim()}”.`));
-      const clear = el('button', 'button', 'Limpar busca');
+      empty.append(el('p', undefined, t.gallery.empty(query.trim())));
+      const clear = el('button', 'button', t.gallery.clear);
       clear.type = 'button';
       clear.addEventListener('click', () => {
         setQuery('');

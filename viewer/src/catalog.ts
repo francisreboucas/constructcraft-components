@@ -6,6 +6,8 @@
 // `#/` is the home page and `#/componentes` the gallery of every folder.
 
 import { libraryUrl } from './engine';
+import { lang, t } from './i18n';
+import { COMPONENT_NAMES_EN } from './i18n/components-en';
 
 export type FolderId =
   | 'furniture'
@@ -20,22 +22,24 @@ export type FolderId =
 
 export interface FolderInfo {
   id: FolderId;
-  /** pt-BR display label. */
+  /** Display label in the page's language. */
   label: string;
 }
 
 /** Folders in display order. */
-export const FOLDERS: readonly FolderInfo[] = [
-  { id: 'furniture', label: 'Mobiliário' },
-  { id: 'casework', label: 'Marcenaria' },
-  { id: 'plumbing', label: 'Hidrossanitário' },
-  { id: 'electrical', label: 'Elétrico' },
-  { id: 'lighting', label: 'Iluminação' },
-  { id: 'planting', label: 'Paisagismo' },
-  { id: 'doors', label: 'Portas' },
-  { id: 'windows', label: 'Janelas' },
-  { id: 'vehicles', label: 'Veículos' },
+const FOLDER_ORDER: readonly FolderId[] = [
+  'furniture',
+  'casework',
+  'plumbing',
+  'electrical',
+  'lighting',
+  'planting',
+  'doors',
+  'windows',
+  'vehicles',
 ];
+
+export const FOLDERS: readonly FolderInfo[] = FOLDER_ORDER.map((id) => ({ id, label: t.folders[id] }));
 
 const FOLDER_IDS = new Set<string>(FOLDERS.map((f) => f.id));
 
@@ -72,8 +76,10 @@ export interface CatalogEntry {
   slug: string;
   /** Path relative to the library root, e.g. `components/plumbing/pia-cozinha.ccomp`. */
   file: string;
-  /** Display name of the component (pt-BR). */
+  /** Name of the component as written in its file (pt-BR). */
   component: string;
+  /** Display name in the page's language: `component`, or its English name. */
+  title: string;
   /** Who made the component; empty when the catalog does not say. */
   author: string;
   /** Engine kind: "Furniture", "Plumbing", "Door"... */
@@ -127,6 +133,7 @@ function parseCatalog(raw: unknown): Catalog {
       slug,
       file: item.file,
       component: item.component,
+      title: (lang === 'en' && COMPONENT_NAMES_EN[`${folder}/${slug}`]) || item.component,
       author: item.author ?? '',
       kind: item.kind,
       mep: item.mep ?? null,

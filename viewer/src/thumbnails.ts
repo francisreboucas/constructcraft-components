@@ -12,6 +12,7 @@
 
 import { edgesForFolder, type CatalogEntry } from './catalog';
 import { loadComponent } from './engine';
+import { t } from './i18n';
 import { renderThumbnail } from './scene';
 
 type ThumbState = 'pending' | 'ready' | 'failed';
@@ -191,6 +192,6 @@ function fail(card: HTMLElement): void {
   if (!box || box.querySelector('.card-thumb-fail')) return;
   const note = document.createElement('span');
   note.className = 'card-thumb-fail';
-  note.textContent = 'Sem prévia';
+  note.textContent = t.common.noPreview;
   box.append(note);
 }

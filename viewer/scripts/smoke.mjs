@@ -26,9 +26,10 @@ const VIEW_ROUTE = 'plumbing/pia-cozinha';
 const DETAIL_ROUTES = [VIEW_ROUTE, 'electrical/tug-100va', 'planting/ipe-amarelo', 'lighting/pendente', 'vehicles/moto-custom'];
 const VIEWS = ['iso', 'front', 'top', 'side'];
 
+// The pages are checked in Portuguese; `runEnglish` covers the English interface.
 const DEVICES = {
-  desktop: { viewport: { width: 1280, height: 800 }, deviceScaleFactor: 1 },
-  mobile: { viewport: { width: 390, height: 844 }, deviceScaleFactor: 1, isMobile: true, hasTouch: true },
+  desktop: { viewport: { width: 1280, height: 800 }, deviceScaleFactor: 1, locale: 'pt-BR' },
+  mobile: { viewport: { width: 390, height: 844 }, deviceScaleFactor: 1, isMobile: true, hasTouch: true, locale: 'pt-BR' },
 };
 
 const failures = [];
@@ -503,6 +504,81 @@ async function runDevice(browser, device) {
   await context.close();
 }
 
+/** The English interface: picked from the browser's language, switched by hand, and kept after a reload. */
+async function runEnglish(browser) {
+  const context = await browser.newContext({ ...DEVICES.desktop, locale: 'en-US' });
+  const page = await context.newPage();
+  let current = '[english]';
+  watch(page, () => current);
+  const step = (label) => {
+    current = `[english] ${label}`;
+    console.log(current);
+    return current;
+  };
+  const expectText = async (label, selector, expected) => {
+    const text = (await page.textContent(selector))?.trim();
+    if (text !== expected) fail(`${label}: ${selector} reads "${text}", expected "${expected}"`);
+  };
+
+  {
+    const label = step('#/');
+    await page.goto(`${ORIGIN}/#/`);
+    if (await waitReady(page, label)) {
+      const lang = await page.getAttribute('html', 'lang');
+      if (lang !== 'en') fail(`${label}: <html lang> is "${lang}"`);
+      await expectText(label, 'h1', 'High-quality 3D components for ConstructCraft');
+      await expectText(label, '.nav-item .nav-label', 'All');
+      await expectText(label, '.sheet-name dd', 'Upholstered sofa');
+      await expectText(label, '.lang-option[aria-pressed="true"]', 'EN');
+      // Dimensions use a decimal point in English.
+      const cota = await page.textContent('.hero-view .cota-label');
+      if (!/^\d+\.\d{2}$/.test(cota ?? '')) fail(`${label}: dimension label reads "${cota}"`);
+      console.log(`  -> ${await shot(page, 'english', 'home', { fullPage: true })}`);
+    }
+  }
+  {
+    const label = step('#/plumbing/pia-cozinha');
+    await go(page, '#/plumbing/pia-cozinha');
+    if (await waitReady(page, label)) {
+      await waitStill(page);
+      await expectText(label, '.panel-title', 'Kitchen sink with countertop');
+      await expectText(label, '.eyebrow', 'Plumbing');
+      await expectText(label, '.button-primary', 'Download .ccomp');
+      const title = await page.title();
+      if (title !== 'Kitchen sink with countertop · 3D CraftHouse') fail(`${label}: title "${title}"`);
+      console.log(`  -> ${await shot(page, 'english', 'plumbing--pia-cozinha')}`);
+    }
+  }
+  {
+    // English names and the names in the files both find a component.
+    const label = step('#/componentes search');
+    await go(page, '#/componentes');
+    if (await waitReady(page, label)) {
+      await page.fill('#search', 'wardrobe');
+      const english = await page.locator('.card').count();
+      await page.fill('#search', 'guarda-roupa');
+      const original = await page.locator('.card').count();
+      if (english === 0 || original === 0) fail(`${label}: "wardrobe" found ${english}, "guarda-roupa" found ${original}`);
+      await page.fill('#search', '');
+    }
+  }
+  {
+    const label = step('switch to Portuguese');
+    await page.evaluate(() => (document.documentElement.dataset.state = 'navigating'));
+    await page.click('.lang-option[lang="pt"]');
+    await page.waitForFunction(() => document.documentElement.lang === 'pt-BR', null, { timeout: TIMEOUT });
+    if (await waitReady(page, label)) {
+      await expectText(label, '.nav-item .nav-label', 'Todos');
+      // The choice outlives a reload, against the browser's language.
+      await page.reload();
+      await waitReady(page, label);
+      const lang = await page.getAttribute('html', 'lang');
+      if (lang !== 'pt-BR') fail(`${label}: after a reload <html lang> is "${lang}"`);
+    }
+  }
+  await context.close();
+}
+
 async function thumbnailStress(browser) {
   const label = 'thumbnails (all entries)';
   console.log(label);
@@ -543,6 +619,7 @@ async function main() {
   try {
     await runDevice(browser, 'desktop');
     await runDevice(browser, 'mobile');
+    await runEnglish(browser);
     await thumbnailStress(browser);
   } finally {
     await browser.close();

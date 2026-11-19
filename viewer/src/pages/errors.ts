@@ -1,7 +1,8 @@
-// User-facing (pt-BR) error messages.
+// User-facing error messages, in the page's language.
 
 import { CatalogError } from '../catalog';
 import { ComponentLoadError } from '../engine';
+import { t } from '../i18n';
 
 function detail(error: unknown): string {
   const cause = error instanceof Error && error.cause instanceof Error ? error.cause.message : null;
@@ -13,15 +14,15 @@ export function describeError(error: unknown, file: string): string {
   if (error instanceof ComponentLoadError) {
     switch (error.kind) {
       case 'network':
-        return `Não foi possível baixar ${error.file} (${detail(error)}).`;
+        return t.errors.network(error.file, detail(error));
       case 'parse':
-        return `Não foi possível ler ${error.file}: ${detail(error)}`;
+        return t.errors.parse(error.file, detail(error));
       case 'engine':
-        return `O motor geométrico não iniciou ao abrir ${error.file}: ${detail(error)}`;
+        return t.errors.engine(error.file, detail(error));
     }
   }
-  if (error instanceof CatalogError) return `Não foi possível carregar catalog.json: ${detail(error)}`;
-  return `Erro ao abrir ${file}: ${detail(error)}`;
+  if (error instanceof CatalogError) return t.errors.catalog(detail(error));
+  return t.errors.other(file, detail(error));
 }
 
 export function errorElement(message: string): HTMLElement {

@@ -5,18 +5,14 @@
 import { edgesForFolder, folderLabel, folderRoute, loadCatalog, type CatalogEntry, type Route } from '../catalog';
 import { libraryUrl, loadComponent, type Component } from '../engine';
 import { deviceLabel, formatDecimal, formatParamValue, normalizeText, systemLabel } from '../format';
+import { t } from '../i18n';
 import { Viewport, VIEW_NAMES, type ViewName } from '../scene';
 import type { Shell } from '../shell';
 import { describeError } from './errors';
 import { showNotFound } from './not-found';
 import { el, hasModifier, isTyping, setPageState, setTitle, type Page } from './page';
 
-const VIEW_LABELS: Record<ViewName, string> = {
-  iso: 'Isométrica',
-  front: 'Frontal',
-  top: 'Superior',
-  side: 'Lateral',
-};
+const VIEW_LABELS: Record<ViewName, string> = t.detail.views;
 
 function section(title: string, className?: string): HTMLElement {
   const box = el('section', className ? `panel-section ${className}` : 'panel-section');
@@ -46,20 +42,20 @@ function mepSection(mep: Record<string, unknown>): HTMLElement | null {
     if (key === 'Fixture') {
       const uhc = asNumber(data.drain_units);
       const weight = asNumber(data.supply_weight);
-      rows.push(['Unidades Hunter (UHC)', uhc === null ? '—' : formatDecimal(uhc, 2)]);
-      rows.push(['Peso relativo', weight === null ? '—' : formatDecimal(weight, 2)]);
-      rows.push(['Água quente', data.hot_water ? 'sim' : 'não']);
+      rows.push([t.detail.drainUnits, uhc === null ? '—' : formatDecimal(uhc, 2)]);
+      rows.push([t.detail.supplyWeight, weight === null ? '—' : formatDecimal(weight, 2)]);
+      rows.push([t.detail.hotWater, data.hot_water ? t.common.yes : t.common.no]);
     } else if (key === 'Device') {
       const power = asNumber(data.power);
-      rows.push(['Dispositivo', deviceLabel(String(data.device ?? '—'))]);
+      rows.push([t.detail.device, deviceLabel(String(data.device ?? '—'))]);
       // Switches and panels carry power 0: no load to show.
-      if (power !== 0) rows.push(['Potência', power === null ? '—' : `${formatDecimal(power, 1)} VA`]);
+      if (power !== 0) rows.push([t.detail.power, power === null ? '—' : `${formatDecimal(power, 1)} VA`]);
     } else {
       for (const [name, value] of Object.entries(data)) rows.push([`${key} · ${name}`, String(value)]);
     }
   }
   if (!rows.length) return null;
-  const box = section('Instalações');
+  const box = section(t.detail.mep);
   box.append(definitionList(rows));
   return box;
 }
@@ -77,15 +73,15 @@ interface TypesTable {
 
 /** The types of the component; with more than one, picking a row asks for it in the 3D view. */
 function typesSection(entry: CatalogEntry, onPick: (index: number) => void): TypesTable {
-  const box = section('Tipos');
+  const box = section(t.detail.types);
   const scroller = el('div', 'table-scroll');
   scroller.tabIndex = 0;
   scroller.setAttribute('role', 'region');
-  scroller.setAttribute('aria-label', 'Tipos do componente');
+  scroller.setAttribute('aria-label', t.detail.typesRegion);
   const table = el('table', 'types-table');
   const head = el('thead');
   const headRow = el('tr');
-  const nameHead = el('th', 'col-name', 'Tipo');
+  const nameHead = el('th', 'col-name', t.detail.type);
   nameHead.scope = 'col';
   headRow.append(nameHead);
   for (const param of entry.parameters) {
@@ -98,8 +94,8 @@ function typesSection(entry: CatalogEntry, onPick: (index: number) => void): Typ
   const cells: { cell: HTMLElement; param: string; value: number | undefined }[] = [];
   const tbody = el('tbody');
   const pickable = entry.types.length > 1;
-  const tag = el('span', 'tag', 'no 3D');
-  tag.title = 'O modelo 3D mostra este tipo';
+  const tag = el('span', 'tag', t.detail.shownTag);
+  tag.title = t.detail.shownTitle;
   const rows: { row: HTMLElement; name: HTMLElement; pick: HTMLButtonElement | null }[] = [];
   entry.types.forEach((type, index) => {
     const row = el('tr');
@@ -111,7 +107,7 @@ function typesSection(entry: CatalogEntry, onPick: (index: number) => void): Typ
       pick = el('button', 'type-pick type-name', type.name);
       pick.type = 'button';
       pick.disabled = true;
-      pick.title = 'Mostrar este tipo no modelo 3D';
+      pick.title = t.detail.pickTitle;
       name.append(pick);
       row.classList.add('type-row');
       row.addEventListener('click', () => {
@@ -146,7 +142,7 @@ function typesSection(entry: CatalogEntry, onPick: (index: number) => void): Typ
   resizes.observe(scroller);
   resizes.observe(table);
   box.append(frame);
-  if (entry.parameters.length) box.append(el('p', 'panel-note', 'Medidas em metros.'));
+  if (entry.parameters.length) box.append(el('p', 'panel-note', t.detail.metres));
 
   const setShown = (index: number) => {
     rows.forEach(({ row, name, pick }, i) => {
@@ -175,7 +171,7 @@ function typesSection(entry: CatalogEntry, onPick: (index: number) => void): Typ
 
 function connectorsSection(component: Component): HTMLElement | null {
   if (!component.connectors.length) return null;
-  const box = section('Conectores');
+  const box = section(t.detail.connectors);
   const table = el('table', 'connectors-table');
   const tbody = el('tbody');
   for (const connector of component.connectors) {
@@ -210,20 +206,20 @@ function copyText(text: string, fallbackTarget: HTMLElement): Promise<boolean> {
 }
 
 function commandSection(entry: CatalogEntry): { element: HTMLElement; dispose(): void } {
-  const box = section('No ConstructCraft');
-  box.append(el('p', 'panel-text', 'Carregue o arquivo no projeto:'));
+  const box = section(t.detail.inApp);
+  box.append(el('p', 'panel-text', t.detail.loadFile));
   const command = `ccad -p casa.ccad --save run component_load path=${entry.file}`;
   const block = el('div', 'command');
   const code = el('code', 'command-text', command);
-  const button = el('button', 'button button-small', 'Copiar');
+  const button = el('button', 'button button-small', t.detail.copy);
   button.type = 'button';
   let timer = 0;
   button.addEventListener('click', () => {
     void copyText(command, code).then((ok) => {
       if (!ok) return;
-      button.textContent = 'Copiado';
+      button.textContent = t.detail.copied;
       clearTimeout(timer);
-      timer = window.setTimeout(() => (button.textContent = 'Copiar'), 2000);
+      timer = window.setTimeout(() => (button.textContent = t.detail.copy), 2000);
     });
   });
   block.append(code, button);
@@ -233,19 +229,22 @@ function commandSection(entry: CatalogEntry): { element: HTMLElement; dispose():
 
 function buildPanel(entry: CatalogEntry, onPickType: (index: number) => void) {
   const panel = el('aside', 'panel');
-  panel.setAttribute('aria-label', 'Dados do componente');
+  panel.setAttribute('aria-label', t.detail.panelLabel);
   const notice = el('div', 'panel-notice-slot');
   const header = el('div', 'panel-header');
-  header.append(el('p', 'eyebrow', folderLabel(entry.folder)), el('h1', 'panel-title display', entry.component));
-  if (entry.author) {
-    const author = el('p', 'panel-author');
-    author.append(el('span', 'panel-author-label', 'Autor'), el('span', 'panel-author-name', entry.author));
-    header.append(author);
+  header.append(el('p', 'eyebrow', folderLabel(entry.folder)), el('h1', 'panel-title display', entry.title));
+  const facts: [string, string][] = [];
+  if (entry.title !== entry.component) facts.push([t.detail.nameInFile, entry.component]);
+  if (entry.author) facts.push([t.common.author, entry.author]);
+  for (const [label, value] of facts) {
+    const fact = el('p', 'panel-author');
+    fact.append(el('span', 'panel-author-label', label), el('span', 'panel-author-name', value));
+    header.append(fact);
   }
   const description = el('p', 'panel-text', entry.types[0]?.description ?? '');
   description.hidden = !description.textContent;
   header.append(description);
-  const download = el('a', 'button-primary', 'Baixar .ccomp');
+  const download = el('a', 'button-primary', t.detail.download);
   download.href = libraryUrl(entry.file);
   download.setAttribute('download', `${entry.slug}.ccomp`);
   header.append(download);
@@ -286,9 +285,7 @@ function buildPanel(entry: CatalogEntry, onPickType: (index: number) => void) {
         const p = el(
           'p',
           'notice',
-          errors === 1
-            ? '1 peça não pôde ser exibida neste visualizador.'
-            : `${errors} peças não puderam ser exibidas neste visualizador.`,
+          t.detail.piecesNotShown(errors),
         );
         p.setAttribute('role', 'status');
         notice.replaceChildren(p);
@@ -307,12 +304,12 @@ function renderDetail(shell: Shell, entry: CatalogEntry): () => void {
   let viewObserver: MutationObserver | null = null;
   let dimensionsOn = true;
 
-  setTitle(entry.component);
+  setTitle(entry.title);
   const page = el('div', 'detail');
 
   // Stage: back link, viewport, toolbar.
   const stage = el('section', 'stage');
-  stage.setAttribute('aria-label', 'Modelo 3D');
+  stage.setAttribute('aria-label', t.detail.stageLabel);
   const back = el('a', 'back-link', `← ${folderLabel(entry.folder)}`);
   back.href = folderRoute(entry.folder);
   const view = el('div', 'stage-view detail-viewport');
@@ -322,7 +319,7 @@ function renderDetail(shell: Shell, entry: CatalogEntry): () => void {
   const toolbar = el('div', 'toolbar');
   const views = el('div', 'segmented');
   views.setAttribute('role', 'group');
-  views.setAttribute('aria-label', 'Vista');
+  views.setAttribute('aria-label', t.detail.viewGroup);
   const buttons = VIEW_NAMES.map((name, index) => {
     const button = el('button', 'segment', VIEW_LABELS[name]);
     button.type = 'button';
@@ -343,8 +340,8 @@ function renderDetail(shell: Shell, entry: CatalogEntry): () => void {
     dimensionsOn = cotas.checked;
     viewport?.setDimensionsVisible(dimensionsOn);
   });
-  cotasLabel.append(cotas, el('span', undefined, 'Cotas'));
-  const hint = el('span', 'toolbar-hint', 'Arraste para girar · role para aproximar');
+  cotasLabel.append(cotas, el('span', undefined, t.detail.dimensions));
+  const hint = el('span', 'toolbar-hint', t.detail.hint);
   toolbar.append(views, cotasLabel, hint);
   stage.append(back, view, toolbar);
 
@@ -387,7 +384,7 @@ function renderDetail(shell: Shell, entry: CatalogEntry): () => void {
     if (message === null) return;
     status.append(el('p', 'stage-message', message));
     if (retry) {
-      const button = el('button', 'button', 'Tentar de novo');
+      const button = el('button', 'button', t.detail.retry);
       button.type = 'button';
       button.addEventListener('click', () => void load());
       status.append(button);
@@ -396,14 +393,14 @@ function renderDetail(shell: Shell, entry: CatalogEntry): () => void {
 
   const load = async () => {
     setPageState('loading');
-    showStatus('Carregando geometria…');
+    showStatus(t.common.loadingGeometry);
     status.setAttribute('role', 'status');
     try {
       const component = await loadComponent(entry.file);
       if (!alive) return;
       panel.enrich(component);
       if (!component.bounds) {
-        showStatus('Este componente não tem geometria 3D.');
+        showStatus(t.detail.noGeometry);
         setPageState('ready');
         return;
       }
@@ -471,7 +468,7 @@ export const detailPage: Page = (shell, route: Route) => {
       if (!alive) return;
       shell.setLayout('plain');
       const box = el('div', 'not-found');
-      box.append(el('h1', 'display', 'Erro ao abrir o componente'), el('p', 'error', describeError(error, 'catalog.json')));
+      box.append(el('h1', 'display', t.detail.openError), el('p', 'error', describeError(error, 'catalog.json')));
       shell.main.replaceChildren(box);
       setPageState('error');
     },

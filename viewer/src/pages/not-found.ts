@@ -1,6 +1,7 @@
 // "Page not found", for unknown routes and unknown components.
 
 import { ALL_ROUTE } from '../catalog';
+import { t } from '../i18n';
 import type { Shell } from '../shell';
 import { el, setPageState, setTitle, type Page } from './page';
 
@@ -8,13 +9,13 @@ import { el, setPageState, setTitle, type Page } from './page';
 export function showNotFound(shell: Shell): void {
   shell.setLayout('plain');
   const box = el('div', 'not-found');
-  const h1 = el('h1', 'display', 'Página não encontrada');
-  const text = el('p', undefined, 'Este endereço não corresponde a nenhum componente da biblioteca.');
-  const link = el('a', 'text-link', '← Ver todos os componentes');
+  const h1 = el('h1', 'display', t.notFound.title);
+  const text = el('p', undefined, t.notFound.text);
+  const link = el('a', 'text-link', t.notFound.link);
   link.href = ALL_ROUTE;
   box.append(h1, text, link);
   shell.main.replaceChildren(box);
-  setTitle('Página não encontrada');
+  setTitle(t.notFound.title);
   // A finished page, not a failure: tests treat it as ready.
   setPageState('ready');
 }

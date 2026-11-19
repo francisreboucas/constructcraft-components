@@ -15,6 +15,7 @@
 import { BufferAttribute, BufferGeometry, Group, LineBasicMaterial, LineSegments, Vector2, Vector3 } from 'three';
 import type { Box3, Camera } from 'three';
 import { CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
+import { DECIMAL_SEPARATOR } from '../i18n';
 import { groundZ } from './grid';
 import { scenePalette } from './palette';
 
@@ -27,9 +28,9 @@ const LOW_VIEW = 0.3;
 /** Above this |view direction . Z| the view counts as a plan (top) view. */
 const PLAN_VIEW = 0.9;
 
-/** `1,50`: metres with a decimal comma and two decimals. */
+/** `1,50`: metres with two decimals and the language's separator. */
 export function formatMetres(value: number): string {
-  return value.toFixed(2).replace('.', ',');
+  return value.toFixed(2).replace('.', DECIMAL_SEPARATOR);
 }
 
 /** Distance from the box to the dimension lines, metres. */
