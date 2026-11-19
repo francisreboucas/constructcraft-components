@@ -7,7 +7,7 @@
 //   npm run smoke
 //   npm run smoke -- --no-build   (test the dist/ already built by `npm run build`)
 
-import { mkdir, rm, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { chromium } from 'playwright';
 import { build, preview } from 'vite';
@@ -17,7 +17,8 @@ const outDir = fileURLToPath(new URL('../.smoke/', import.meta.url));
 const PORT = 4317;
 const ORIGIN = `http://127.0.0.1:${PORT}`;
 const TIMEOUT = 30_000;
-const TOTAL = 87;
+// The gallery shows every catalog entry.
+const TOTAL = JSON.parse(await readFile(new URL('../../catalog.json', import.meta.url), 'utf8')).components.length;
 
 const VIEW_ROUTE = 'plumbing/pia-cozinha';
 const DETAIL_ROUTES = [VIEW_ROUTE, 'electrical/tug-100va', 'planting/ipe-amarelo', 'lighting/pendente'];

@@ -9,8 +9,12 @@ permissions:
   contents: read
 
 env:
-  # ConstructCraft release whose ccad builds and checks the components.
-  CONSTRUCTCRAFT_VERSION: v0.12.0
+  # The components are built with a ccad newer than the latest ConstructCraft
+  # release, so ccad (the cc_cli crate) is compiled from this ref of the
+  # ConstructCraft repository. Once a release has what the components need,
+  # this can go back to downloading the release archive.
+  CONSTRUCTCRAFT_REPO: francisreboucas/constructcraft
+  CONSTRUCTCRAFT_REF: main
 
 jobs:
   validate:
@@ -20,13 +24,37 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: "3.13"
-      - name: Download ccad
-        env:
-          GH_TOKEN: ${{ github.token }}
+      - name: Resolve the ConstructCraft commit
+        id: cc
         run: |
-          gh release download "$CONSTRUCTCRAFT_VERSION" -R francisreboucas/constructcraft \
-            -p "*-$CONSTRUCTCRAFT_VERSION-x86_64-unknown-linux-gnu.tar.gz" -O ccad.tar.gz
-          mkdir ccad
-          tar -xzf ccad.tar.gz -C ccad
-          echo "CCAD=$(find "$PWD/ccad" -name ccad -type f | head -1)" >> "$GITHUB_ENV"
+          sha=$(git ls-remote "https://github.com/$CONSTRUCTCRAFT_REPO" "$CONSTRUCTCRAFT_REF" | head -1 | cut -f1)
+          # Not a branch or tag: take it as a commit hash.
+          echo "sha=${sha:-$CONSTRUCTCRAFT_REF}" >> "$GITHUB_OUTPUT"
+      # The compiled ccad is kept per ConstructCraft commit, so it is only
+      # rebuilt when that repository changes.
+      - name: Restore ccad
+        id: ccad-cache
+        uses: actions/cache@v5
+        with:
+          path: ccad-bin
+          key: ccad-${{ runner.os }}-${{ runner.arch }}-${{ steps.cc.outputs.sha }}
+      - name: Check out ConstructCraft
+        if: steps.ccad-cache.outputs.cache-hit != 'true'
+        uses: actions/checkout@v5
+        with:
+          repository: ${{ env.CONSTRUCTCRAFT_REPO }}
+          ref: ${{ steps.cc.outputs.sha }}
+          path: constructcraft
+      - name: Build ccad
+        if: steps.ccad-cache.outputs.cache-hit != 'true'
+        working-directory: constructcraft
+        run: |
+          cargo build --release --locked -p cc_cli
+          mkdir -p ../ccad-bin
+          cp target/release/ccad ../ccad-bin/ccad
+      - name: Use the built ccad
+        run: |
+          echo "CCAD=$PWD/ccad-bin/ccad" >> "$GITHUB_ENV"
+          ccad-bin/ccad --version
+          echo "ConstructCraft commit ${{ steps.cc.outputs.sha }}"
       - run: python tools/build.py --check
