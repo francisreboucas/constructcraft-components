@@ -1,6 +1,6 @@
 # ConstructCraft Components viewer
 
-A static web viewer for this component library: a gallery of every component with search, and a page per component with its 3D model (dimensions, four views), its types, MEP data, connectors and a download link. It runs entirely in the browser: the `.ccomp` files are parsed and meshed by the ConstructCraft geometry engine compiled to WebAssembly, and drawn with three.js. It is published to GitHub Pages at <https://francisreboucas.github.io/constructcraft-components/> by the [`Viewer`](../.github/workflows/pages.yml) workflow on every push to `main`.
+A static web viewer for this component library: a gallery of every component with search, and a page per component with its 3D model (dimensions, four views), its types, MEP data, connectors and a download link. It runs entirely in the browser: the `.ccomp` files are parsed and meshed by the ConstructCraft geometry engine compiled to WebAssembly, and drawn with three.js. It is published to GitHub Pages at <https://3dcrafthouse.constructcraft.net/> by the [`Viewer`](../.github/workflows/pages.yml) workflow on every push to `main`.
 
 ## Requirements
 

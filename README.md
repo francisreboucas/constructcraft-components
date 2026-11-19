@@ -5,11 +5,11 @@
 
 A free library of parametric components for [ConstructCraft](https://github.com/francisreboucas/constructcraft): furniture, casework, plumbing fixtures, electrical devices, lighting and planting, ready to load into any project.
 
-[Português (Brasil)](README.pt-BR.md) · [Viewer](https://francisreboucas.github.io/constructcraft-components/) · [Catalog](CATALOG.md) · [Contributing](CONTRIBUTING.md)
+[Português (Brasil)](README.pt-BR.md) · [Viewer](https://3dcrafthouse.constructcraft.net/) · [Catalog](CATALOG.md) · [Contributing](CONTRIBUTING.md)
 
 ## Browse online
 
-The [online viewer](https://francisreboucas.github.io/constructcraft-components/) shows every component in 3D with its dimensions, types and MEP data, and a link to download its `.ccomp` file.
+The [online viewer](https://3dcrafthouse.constructcraft.net/) shows every component in 3D with its dimensions, types and MEP data, and a link to download its `.ccomp` file.
 
 ![The library placed in a project: furniture, casework, plumbing fixtures, electrical devices and lighting](docs/vitrine-3d.png)
 

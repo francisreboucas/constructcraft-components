@@ -5,11 +5,11 @@
 
 Biblioteca gratuita de componentes paramétricos para o [ConstructCraft](https://github.com/francisreboucas/constructcraft): mobiliário, marcenaria, louças e metais, dispositivos elétricos, iluminação e paisagismo, prontos para carregar em qualquer projeto.
 
-[English](README.md) · [Visualizador](https://francisreboucas.github.io/constructcraft-components/) · [Catálogo](CATALOG.md) · [Como contribuir](CONTRIBUTING.md)
+[English](README.md) · [Visualizador](https://3dcrafthouse.constructcraft.net/) · [Catálogo](CATALOG.md) · [Como contribuir](CONTRIBUTING.md)
 
 ## Veja no navegador
 
-O [visualizador online](https://francisreboucas.github.io/constructcraft-components/) mostra cada componente em 3D, com as medidas, os tipos e os dados de instalações, e um link para baixar o arquivo `.ccomp`.
+O [visualizador online](https://3dcrafthouse.constructcraft.net/) mostra cada componente em 3D, com as medidas, os tipos e os dados de instalações, e um link para baixar o arquivo `.ccomp`.
 
 ![A biblioteca inserida num projeto: mobiliário, marcenaria, louças, dispositivos elétricos e luminárias](docs/vitrine-3d.png)
 

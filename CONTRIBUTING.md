@@ -51,4 +51,4 @@ Depois rode `python tools/build.py --ccad caminho/do/ccad` e inclua no commit a 
 
 O CI (`Validate`) gera os componentes a partir das fontes com o ConstructCraft fixado, carrega cada `.ccomp` num projeto novo e confere se o catálogo está atualizado. Um PR só entra com o CI verde.
 
-O [visualizador online](https://francisreboucas.github.io/constructcraft-components/) inclui os componentes novos sozinho, a partir do `catalog.json`, quando o PR entra na `main`: não é preciso mexer em `viewer/`. *The online viewer picks up new components from `catalog.json` on merge; there is nothing to do in `viewer/`.*
+O [visualizador online](https://3dcrafthouse.constructcraft.net/) inclui os componentes novos sozinho, a partir do `catalog.json`, quando o PR entra na `main`: não é preciso mexer em `viewer/`. *The online viewer picks up new components from `catalog.json` on merge; there is nothing to do in `viewer/`.*
