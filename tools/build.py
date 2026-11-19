@@ -36,6 +36,7 @@ SECTIONS = {
     "planting": "Paisagismo · Planting",
     "doors": "Portas · Doors",
     "windows": "Janelas · Windows",
+    "vehicles": "Veículos · Vehicles",
 }
 
 

@@ -39,6 +39,7 @@ Each file holds one component with several types (sizes). Types share the geomet
 | [`planting`](components/planting) | Trees, conifers, palms, shrubs and potted plants for landscaping |
 | [`doors`](components/doors) | Single and double swing, pivot, folding, glass and sliding doors, glazed sliding doors, garage doors |
 | [`windows`](components/windows) | Sliding (also with shutters), casement, awning, hopper and fixed windows |
+| [`vehicles`](components/vehicles) | A custom (cruiser) motorcycle, with the handlebar that steers and the side stand that folds |
 
 Plumbing fixtures carry their drainage fixture units (NBR 8160) and supply weights (NBR 5626), and electrical devices their device kind and load in VA (NBR 5410), so ConstructCraft sizes pipes and circuits with them. Names and descriptions are in Brazilian Portuguese, following the standards they cite.
 
@@ -57,7 +58,7 @@ The planting sources are generated: [`tools/vegetation.py`](tools/vegetation.py)
 
 ## Compatibility
 
-`.ccomp` format version 1, built with ConstructCraft 0.12.0. The detailed components (pieces shown by detail level, Blend and Sweep shapes), which are all but the planting ones, need ConstructCraft 0.12.0; the planting components load in ConstructCraft 0.6.0 and later.
+`.ccomp` format version 1, built with ConstructCraft 0.12.0. The detailed components (pieces shown by detail level, Blend and Sweep shapes), which are all but the planting ones, need ConstructCraft 0.12.0; the planting components load in ConstructCraft 0.6.0 and later. The motorcycle's steered front end and side stand are pieces scripted in Lua, which the web viewer does not render.
 
 ## License
 

@@ -39,6 +39,7 @@ Cada arquivo traz um componente com vários tipos (tamanhos). Os tipos compartil
 | [`planting`](components/planting) | Árvores, coníferas, palmeiras, arbustos e vasos com planta para paisagismo |
 | [`doors`](components/doors) | Portas de abrir de uma e duas folhas, pivotante, camarão, de vidro temperado, de correr simples e dupla, porta-janela de correr e portão basculante |
 | [`windows`](components/windows) | Janelas de correr (também com veneziana), de abrir, maxim-ar, basculante e fixa |
+| [`vehicles`](components/vehicles) | Motocicleta custom (cruiser), com guidão que esterça e descanso lateral que recolhe |
 
 As louças trazem as unidades Hunter de contribuição (NBR 8160) e os pesos relativos (NBR 5626), e os dispositivos elétricos o tipo e a potência em VA (NBR 5410), para o ConstructCraft dimensionar tubulações e circuitos.
 
@@ -57,7 +58,7 @@ As fontes de paisagismo são geradas: [`tools/vegetation.py`](tools/vegetation.p
 
 ## Compatibilidade
 
-Formato `.ccomp` versão 1, gerado com o ConstructCraft 0.12.0. Os componentes detalhados (peças por nível de detalhe, formas Blend e Sweep), que são todos menos os de paisagismo, exigem o ConstructCraft 0.12.0; os de paisagismo abrem no ConstructCraft 0.6.0 ou mais recente.
+Formato `.ccomp` versão 1, gerado com o ConstructCraft 0.12.0. Os componentes detalhados (peças por nível de detalhe, formas Blend e Sweep), que são todos menos os de paisagismo, exigem o ConstructCraft 0.12.0; os de paisagismo abrem no ConstructCraft 0.6.0 ou mais recente. A dianteira esterçável e o descanso lateral da motocicleta são peças em script Lua, que o visualizador web não mostra.
 
 ## Licença
 

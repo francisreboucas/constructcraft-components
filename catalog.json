@@ -3572,6 +3572,26 @@
       ]
     },
     {
+      "file": "components/vehicles/moto-custom.ccomp",
+      "component": "Moto custom",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "AnguloGuidao",
+        "Descanso"
+      ],
+      "types": [
+        {
+          "name": "Moto custom 1600",
+          "values": {
+            "AnguloGuidao": 0.0,
+            "Descanso": 0.0
+          },
+          "description": "Motocicleta custom (cruiser) genérica, motor V2 1600 cm³ arrefecido a ar, transmissão final por correia; 2,39 m de comprimento, 0,85 m de largura nos retrovisores, entre-eixos 1,665 m, rodas raiadas 21\" e 16\", assento a 0,68 m; guidão (AnguloGuidao) e descanso lateral (Descanso) móveis"
+        }
+      ]
+    },
+    {
       "file": "components/windows/janela-abrir.ccomp",
       "component": "Janela de abrir de madeira",
       "kind": "Window",
