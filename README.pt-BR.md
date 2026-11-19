@@ -60,7 +60,7 @@ As fontes de paisagismo são geradas: [`tools/vegetation.py`](tools/vegetation.p
 
 ## Compatibilidade
 
-Formato `.ccomp` versão 1, gerado com o ConstructCraft 0.12.0. Os componentes detalhados (peças por nível de detalhe, formas Blend e Sweep), que são todos menos os de paisagismo, exigem o ConstructCraft 0.12.0; os de paisagismo abrem no ConstructCraft 0.6.0 ou mais recente. A dianteira esterçável e o descanso lateral da motocicleta são peças em script Lua, que o visualizador web não mostra.
+Formato `.ccomp` versão 1, gerado com o ConstructCraft 0.12.0. Os componentes detalhados (peças por nível de detalhe, formas Blend e Sweep), que são todos menos os de paisagismo, exigem o ConstructCraft 0.12.0; os de paisagismo abrem no ConstructCraft 0.6.0 ou mais recente. A dianteira esterçável e o descanso lateral da motocicleta são peças em script Lua; o visualizador web as mostra como o ConstructCraft as gerou ([`tools/scripted.py`](tools/scripted.py)).
 
 ## Licença
 

@@ -1,8 +1,10 @@
-// Serves the component library (catalog.json, components/**/*.ccomp and the
-// pre-rendered thumbnails/**/*.png from the repository root) under `library/`
-// in dev, and copies the same files into `dist/library/` on build, so nothing
-// is duplicated in git. The thumbnails are optional: thumbnails/ may be absent,
-// and its manifest.json is bookkeeping that is neither served nor copied.
+// Serves the component library (catalog.json, components/**/*.ccomp, the
+// pre-rendered thumbnails/**/*.png and the baked script pieces
+// scripted/**/*.bin from the repository root) under `library/` in dev, and
+// copies the same files into `dist/library/` on build, so nothing is
+// duplicated in git. Thumbnails and baked pieces are optional: thumbnails/ and
+// scripted/ (made by tools/scripted.py, not kept in git) may be absent, and
+// thumbnails/manifest.json is bookkeeping that is neither served nor copied.
 
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { join, posix, resolve } from 'node:path';
@@ -10,11 +12,12 @@ import type { Plugin } from 'vite';
 
 const URL_PREFIX = '/library/';
 const ALLOWED =
-  /^(catalog\.json|components\/[a-z0-9-]+\/[a-z0-9-]+\.ccomp|thumbnails\/[a-z0-9-]+\/[a-z0-9-]+\.png)$/;
+  /^(catalog\.json|components\/[a-z0-9-]+\/[a-z0-9-]+\.ccomp|thumbnails\/[a-z0-9-]+\/[a-z0-9-]+\.png|scripted\/[a-z0-9-]+\/[a-z0-9-]+\.bin)$/;
 
 function contentType(path: string): string {
   if (path.endsWith('.json')) return 'application/json; charset=utf-8';
   if (path.endsWith('.png')) return 'image/png';
+  if (path.endsWith('.bin')) return 'application/octet-stream';
   return 'text/plain; charset=utf-8';
 }
 
@@ -36,7 +39,9 @@ function listFolderFiles(repoRoot: string, dir: string): string[] {
 /** Every library file, as paths relative to the repository root with `/` separators. */
 function listLibraryFiles(repoRoot: string): string[] {
   const files = ['catalog.json', ...listFolderFiles(repoRoot, 'components')];
-  if (existsSync(join(repoRoot, 'thumbnails'))) files.push(...listFolderFiles(repoRoot, 'thumbnails'));
+  for (const dir of ['thumbnails', 'scripted']) {
+    if (existsSync(join(repoRoot, dir))) files.push(...listFolderFiles(repoRoot, dir));
+  }
   return files;
 }
 

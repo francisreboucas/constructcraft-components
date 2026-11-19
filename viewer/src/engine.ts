@@ -1,13 +1,15 @@
 // The ConstructCraft geometry engine (WebAssembly) and the component loader.
 //
 // `loadComponent(file)` fetches `library/<file>` relative to the page, parses
-// and tessellates it in the engine with the values of one of its types, and
-// caches the result. The cache is bounded
+// and tessellates it in the engine with the values of one of its types, adds
+// the pieces of its Lua scripts when ConstructCraft baked them (scripted.ts),
+// and caches the result. The cache is bounded
 // both by entry count and by total triangle count, because planting meshes are
 // much heavier than the parametric components.
 
 import initWasm, { load_component } from '../wasm-pkg/ccomp_viewer.js';
 import type { Component } from '../wasm-pkg/ccomp_viewer.js';
+import { withScripted } from './scripted';
 
 export type {
   Component,
@@ -157,12 +159,14 @@ async function fetchAndParse(file: string, type: number, signal?: AbortSignal): 
     throw new EngineInitError(file, `The geometry engine failed to start: ${String(error)}`, { cause: error });
   }
 
+  let component: Component;
   try {
-    return load_component(text, type);
+    component = load_component(text, type);
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
     throw new ComponentParseError(file, `Could not read ${file}: ${message}`, { cause: error });
   }
+  return withScripted(file, component, libraryUrl);
 }
 
 /**

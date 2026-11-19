@@ -1,0 +1,50 @@
+name: Set up ccad
+description: >
+  Download ccad, the ConstructCraft command line, from a release of the
+  ConstructCraft repository (the latest by default, never older than 0.13),
+  check it against the release's SHA256SUMS.txt and set CCAD to its path.
+
+inputs:
+  version:
+    description: A release tag such as v0.13.0, or "latest".
+    default: latest
+  repository:
+    description: The repository the releases are published in.
+    default: francisreboucas/constructcraft
+
+runs:
+  using: composite
+  steps:
+    - name: Download ccad
+      shell: bash
+      env:
+        GH_TOKEN: ${{ github.token }}
+        REPO: ${{ inputs.repository }}
+        VERSION: ${{ inputs.version }}
+        MINIMUM: "0.13.0"
+      run: |
+        set -euo pipefail
+        tag="$VERSION"
+        if [ "$tag" = latest ]; then
+          tag=$(gh release view --repo "$REPO" --json tagName --jq .tagName)
+        fi
+        # The components need the scripted pieces and commands of 0.13.
+        lowest=$(printf '%s\n%s\n' "$MINIMUM" "${tag#v}" | sort -V | head -1)
+        if [ "$lowest" != "$MINIMUM" ]; then
+          echo "::error::ccad $tag is older than $MINIMUM"
+          exit 1
+        fi
+        case "$RUNNER_OS-$RUNNER_ARCH" in
+          Linux-X64) target=x86_64-unknown-linux-gnu ;;
+          Linux-ARM64) target=aarch64-unknown-linux-gnu ;;
+          *) echo "::error::no ccad download for $RUNNER_OS $RUNNER_ARCH"; exit 1 ;;
+        esac
+        name="constructcraft-$tag-$target"
+        dir="$RUNNER_TEMP/ccad"
+        mkdir -p "$dir"
+        gh release download "$tag" --repo "$REPO" --dir "$dir" --clobber \
+          --pattern "$name.tar.gz" --pattern SHA256SUMS.txt
+        (cd "$dir" && grep " $name.tar.gz\$" SHA256SUMS.txt | sha256sum --check --strict)
+        tar -xzf "$dir/$name.tar.gz" -C "$dir"
+        echo "CCAD=$dir/$name/ccad" >> "$GITHUB_ENV"
+        "$dir/$name/ccad" --version

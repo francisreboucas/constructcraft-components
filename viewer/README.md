@@ -26,7 +26,18 @@ The built site uses relative URLs only (`base: './'`), so `dist/` works from any
 
 ## Library files
 
-The viewer reads the library from the repository root, without a copy in git: [`build/library-plugin.ts`](build/library-plugin.ts) serves `catalog.json`, `components/<folder>/<name>.ccomp` and the pre-rendered `thumbnails/<folder>/<name>.png` (when present; not `thumbnails/manifest.json`) under `library/` in the dev server, and copies the same files to `dist/library/` on build. The app fetches them relative to the page (`library/catalog.json`, `library/components/...`), and the download buttons link to those copies. New components show up after the next build, with nothing to change here.
+The viewer reads the library from the repository root, without a copy in git: [`build/library-plugin.ts`](build/library-plugin.ts) serves `catalog.json`, `components/<folder>/<name>.ccomp` and the pre-rendered `thumbnails/<folder>/<name>.png` (when present; not `thumbnails/manifest.json`) and the baked `scripted/<folder>/<name>.bin` (when present) under `library/` in the dev server, and copies the same files to `dist/library/` on build. The app fetches them relative to the page (`library/catalog.json`, `library/components/...`), and the download buttons link to those copies. New components show up after the next build, with nothing to change here.
+
+## Pieces scripted in Lua
+
+The geometry core runs without Lua, so it reports each script piece as an error. [`tools/scripted.py`](../tools/scripted.py) has `ccad` (ConstructCraft 0.13 or later) run the scripts of every type of each component that has one and writes the meshes, one part per material, to `scripted/<folder>/<name>.bin` at the repository root. [`src/scripted.ts`](src/scripted.ts) loads that file when the core reports a script error and adds its parts, with smooth normals and outline edges, in place of the error. The Viewer workflow bakes before every build; `scripted/` is not kept in git, so run the tool once to see those pieces locally:
+
+```sh
+# from the repository root
+python tools/scripted.py --ccad path/to/ccad
+```
+
+Without the file the page shows the component without those pieces and says how many were left out, as before.
 
 ## The geometry core
 
@@ -48,7 +59,7 @@ node viewer/wasm/test/load-all.mjs   # load every component through the new buil
 ## Known limits
 
 - The 3D model shows the first type of each component; the other types are listed with their values.
-- Pieces scripted in Lua are not rendered (the page says how many were left out).
+- Pieces scripted in Lua are shown as baked for each type (see below), so they change only with the types, not with parameters edited in the page.
 - 3D only: no plan or elevation drawings.
 
 ## License

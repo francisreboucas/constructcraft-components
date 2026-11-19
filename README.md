@@ -60,7 +60,7 @@ The planting sources are generated: [`tools/vegetation.py`](tools/vegetation.py)
 
 ## Compatibility
 
-`.ccomp` format version 1, built with ConstructCraft 0.12.0. The detailed components (pieces shown by detail level, Blend and Sweep shapes), which are all but the planting ones, need ConstructCraft 0.12.0; the planting components load in ConstructCraft 0.6.0 and later. The motorcycle's steered front end and side stand are pieces scripted in Lua, which the web viewer does not render.
+`.ccomp` format version 1, built with ConstructCraft 0.12.0. The detailed components (pieces shown by detail level, Blend and Sweep shapes), which are all but the planting ones, need ConstructCraft 0.12.0; the planting components load in ConstructCraft 0.6.0 and later. The motorcycle's steered front end and side stand are pieces scripted in Lua; the web viewer shows them as ConstructCraft baked them ([`tools/scripted.py`](tools/scripted.py)).
 
 ## License
 
