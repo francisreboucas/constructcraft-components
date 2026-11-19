@@ -83,6 +83,19 @@ function check(path) {
   }
   if (c.errors.length) problems.push(`piece errors: ${c.errors.map((e) => `${e.name}: ${e.message}`).join('; ')}`);
   if (!(c.parts.length > 0)) problems.push('no parts');
+  // Every other type resolves too, with as many parts and no more piece errors than the first.
+  for (let t = 1; t < c.types.length; t++) {
+    try {
+      const other = wasm.load_component(readFileSync(path, 'utf8'), t);
+      if (other.type_index !== t) problems.push(`type ${t}: shows type ${other.type_index}`);
+      if (!(other.parts.length > 0)) problems.push(`type ${t} ("${other.types[t].name}"): no parts`);
+      if (other.errors.length > c.errors.length) {
+        problems.push(`type ${t} ("${other.types[t].name}"): ${other.errors.map((e) => `${e.name}: ${e.message}`).join('; ')}`);
+      }
+    } catch (e) {
+      problems.push(`type ${t}: throws: ${e?.message ?? e}`);
+    }
+  }
   let triangles = 0;
   const lo = [Infinity, Infinity, Infinity];
   const hi = [-Infinity, -Infinity, -Infinity];

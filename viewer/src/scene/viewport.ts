@@ -34,6 +34,12 @@ export interface ComponentDisplayOptions {
   dimensions?: boolean;
   /** View to frame the new component in. Default: the current view (`iso` at first). */
   view?: ViewName;
+  /**
+   * Keep looking from where the camera is when the user has orbited away from
+   * the presets (another type of the same component), instead of going back
+   * to a preset view. The distance is fitted to the new component.
+   */
+  keepOrbit?: boolean;
 }
 
 export interface SetViewOptions {
@@ -142,6 +148,7 @@ export class Viewport {
    * in `options.view`. `null` clears the view.
    */
   setComponent(component: Component | null, options: ComponentDisplayOptions = {}): void {
+    const orbit = this.object ? anglesOf(this.camera.position.clone().sub(this.controls.target)) : null;
     this.clearComponent();
     if (!component || !component.bounds) {
       this.requestRender();
@@ -165,8 +172,14 @@ export class Viewport {
     this.lights.aim(center);
     this.controls.target.copy(center);
 
-    const view = options.view ?? (this.currentView === 'free' ? 'iso' : this.currentView);
-    this.setView(view, { animate: false });
+    if (options.keepOrbit && options.view === undefined && this.currentView === 'free' && orbit) {
+      this.transition = null;
+      this.placeCamera(orbit, this.fitDistanceFor(orbit));
+      this.requestRender();
+    } else {
+      const view = options.view ?? (this.currentView === 'free' ? 'iso' : this.currentView);
+      this.setView(view, { animate: false });
+    }
     this.container.dataset.rendered = 'false';
   }
 

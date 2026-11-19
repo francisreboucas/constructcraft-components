@@ -1,7 +1,8 @@
 // The ConstructCraft geometry engine (WebAssembly) and the component loader.
 //
 // `loadComponent(file)` fetches `library/<file>` relative to the page, parses
-// and tessellates it in the engine, and caches the result. The cache is bounded
+// and tessellates it in the engine with the values of one of its types, and
+// caches the result. The cache is bounded
 // both by entry count and by total triangle count, because planting meshes are
 // much heavier than the parametric components.
 
@@ -122,23 +123,33 @@ function evict(keep: string): void {
 
 /** Forget every cached component. */
 export function clearComponentCache(): void {
+  lastText = null;
   cache.clear();
   cachedTriangles = 0;
 }
 
-async function fetchAndParse(file: string, signal?: AbortSignal): Promise<Component> {
-  let text: string;
+/** The text of the file loaded last, so showing another of its types does not fetch it again. */
+let lastText: { file: string; text: string } | null = null;
+
+async function fetchText(file: string, signal?: AbortSignal): Promise<string> {
+  if (lastText?.file === file) return lastText.text;
   try {
     const response = await fetch(libraryUrl(file), signal ? { signal } : undefined);
     if (!response.ok) {
       throw new ComponentNetworkError(file, response.status, `HTTP ${response.status} fetching ${file}`);
     }
-    text = await response.text();
+    const text = await response.text();
+    lastText = { file, text };
+    return text;
   } catch (error) {
     if (error instanceof ComponentLoadError) throw error;
     if (signal?.aborted) throw error;
     throw new ComponentNetworkError(file, 0, `Could not fetch ${file}: ${String(error)}`, { cause: error });
   }
+}
+
+async function fetchAndParse(file: string, type: number, signal?: AbortSignal): Promise<Component> {
+  const text = await fetchText(file, signal);
 
   try {
     await initEngine();
@@ -147,7 +158,7 @@ async function fetchAndParse(file: string, signal?: AbortSignal): Promise<Compon
   }
 
   try {
-    return load_component(text);
+    return load_component(text, type);
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
     throw new ComponentParseError(file, `Could not read ${file}: ${message}`, { cause: error });
@@ -155,32 +166,36 @@ async function fetchAndParse(file: string, signal?: AbortSignal): Promise<Compon
 }
 
 /**
- * Load a component by its catalog path (`components/<folder>/<name>.ccomp`).
- * Results are cached; concurrent calls for the same file share one request.
+ * Load a component by its catalog path (`components/<folder>/<name>.ccomp`),
+ * resolved with the values of its type at index `type` (default 0, the first).
+ * Results are cached; concurrent calls for the same file and type share one request.
  * Rejects with `ComponentNetworkError`, `ComponentParseError` or `EngineInitError`.
  * Aborting `signal` rejects this call only if it started the request.
  *
  * Treat the returned object as read-only: it is shared with other callers.
  */
-export function loadComponent(file: string, options?: { signal?: AbortSignal }): Promise<Component> {
-  const hit = cache.get(file);
+export function loadComponent(file: string, options?: { signal?: AbortSignal; type?: number }): Promise<Component> {
+  const type = options?.type ?? 0;
+  // The first type keeps the plain path as its key.
+  const key = type === 0 ? file : `${file}#${type}`;
+  const hit = cache.get(key);
   if (hit) {
-    touch(file, hit);
+    touch(key, hit);
     return hit.promise;
   }
 
-  const entry: CacheEntry = { promise: fetchAndParse(file, options?.signal), triangles: 0 };
-  cache.set(file, entry);
+  const entry: CacheEntry = { promise: fetchAndParse(file, type, options?.signal), triangles: 0 };
+  cache.set(key, entry);
   entry.promise.then(
     (component) => {
-      if (cache.get(file) !== entry) return;
+      if (cache.get(key) !== entry) return;
       entry.triangles = triangleCount(component);
       cachedTriangles += entry.triangles;
-      evict(file);
+      evict(key);
     },
     () => {
       // Failed loads are not cached, so a later call retries.
-      if (cache.get(file) === entry) cache.delete(file);
+      if (cache.get(key) === entry) cache.delete(key);
     },
   );
   return entry.promise;

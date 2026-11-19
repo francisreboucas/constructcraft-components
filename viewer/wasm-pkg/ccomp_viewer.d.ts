@@ -1,7 +1,7 @@
 /* tslint:disable */
 /* eslint-disable */
 
-/** A parameter of the component with the value it has in the first type. */
+/** A parameter of the component with the value it has in the type shown. */
 export interface ComponentParam {
     name: string;
     /** "Length" (meters), "Angle" (degrees), "Number", "Boolean", "Text", "Choice" or "Material". */
@@ -19,7 +19,7 @@ export interface ComponentType {
     values: Record<string, number>;
 }
 
-/** Where a pipe or conduit connects, in the component's frame (first type's values). */
+/** Where a pipe or conduit connects, in the component's frame (the values of the type shown). */
 export interface ComponentConnector {
     name: string;
     /** The system kind, e.g. "ColdWater", "Sanitary", "Power". */
@@ -67,8 +67,10 @@ export interface Part {
     edges: Float32Array;
 }
 
-/** A component file, resolved with its first type's values. */
+/** A component file, resolved with the values of one of its types. */
 export interface Component {
+    /** Index in `types` of the type shown: the one the parameter values, connectors, bounds and parts are of. */
+    type_index: number;
     /** The component's name. */
     name: string;
     /** Its kind: "Furniture", "Casework", "Plumbing", "Lighting", "Electrical", "Generic", "Door", "Window", "Niche", "TitleBlock" or "Detail". */
@@ -90,16 +92,18 @@ export interface Component {
 
 
 /**
- * Parse the text of a `.ccomp` file and tessellate its 3D pieces. Throws an
- * `Error` with the engine's message when the file does not parse.
+ * Parse the text of a `.ccomp` file and tessellate its 3D pieces with the
+ * values of the type at `type_index` of its types (the first when left out
+ * or out of range). Throws an `Error` with the engine's message when the
+ * file does not parse.
  */
-export function load_component(text: string): Component;
+export function load_component(text: string, type_index?: number | null): Component;
 
 export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembly.Module;
 
 export interface InitOutput {
     readonly memory: WebAssembly.Memory;
-    readonly load_component: (a: number, b: number) => [number, number, number];
+    readonly load_component: (a: number, b: number, c: number) => [number, number, number];
     readonly __wbindgen_malloc: (a: number, b: number) => number;
     readonly __wbindgen_realloc: (a: number, b: number, c: number, d: number) => number;
     readonly __wbindgen_free: (a: number, b: number, c: number) => void;

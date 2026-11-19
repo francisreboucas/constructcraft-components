@@ -68,10 +68,15 @@ interface TypesTable {
   element: HTMLElement;
   /** Re-format the value cells once the parameter kinds are known. */
   applyKinds(kinds: Map<string, string>): void;
+  /** Let the types be picked (once the 3D view is up). */
+  enable(): void;
+  /** Mark the type the 3D model shows. */
+  setShown(index: number): void;
   dispose(): void;
 }
 
-function typesSection(entry: CatalogEntry): TypesTable {
+/** The types of the component; with more than one, picking a row asks for it in the 3D view. */
+function typesSection(entry: CatalogEntry, onPick: (index: number) => void): TypesTable {
   const box = section('Tipos');
   const scroller = el('div', 'table-scroll');
   scroller.tabIndex = 0;
@@ -92,16 +97,30 @@ function typesSection(entry: CatalogEntry): TypesTable {
 
   const cells: { cell: HTMLElement; param: string; value: number | undefined }[] = [];
   const tbody = el('tbody');
+  const pickable = entry.types.length > 1;
+  const tag = el('span', 'tag', 'no 3D');
+  tag.title = 'O modelo 3D mostra este tipo';
+  const rows: { row: HTMLElement; name: HTMLElement; pick: HTMLButtonElement | null }[] = [];
   entry.types.forEach((type, index) => {
     const row = el('tr');
     const name = el('th', 'col-name');
     name.scope = 'row';
-    name.append(el('span', 'type-name', type.name));
-    if (index === 0) {
-      const tag = el('span', 'tag', 'no 3D');
-      tag.title = 'O modelo 3D mostra este tipo';
-      name.append(' ', tag);
+    let pick: HTMLButtonElement | null = null;
+    if (pickable) {
+      // The button carries the action for keyboards and screen readers; a click anywhere on the row picks too.
+      pick = el('button', 'type-pick type-name', type.name);
+      pick.type = 'button';
+      pick.disabled = true;
+      pick.title = 'Mostrar este tipo no modelo 3D';
+      name.append(pick);
+      row.classList.add('type-row');
+      row.addEventListener('click', () => {
+        if (!pick?.disabled) onPick(index);
+      });
+    } else {
+      name.append(el('span', 'type-name', type.name));
     }
+    rows.push({ row, name, pick });
     row.append(name);
     for (const param of entry.parameters) {
       const value = type.values[param];
@@ -129,12 +148,27 @@ function typesSection(entry: CatalogEntry): TypesTable {
   box.append(frame);
   if (entry.parameters.length) box.append(el('p', 'panel-note', 'Medidas em metros.'));
 
+  const setShown = (index: number) => {
+    rows.forEach(({ row, name, pick }, i) => {
+      const shown = i === index;
+      row.classList.toggle('is-shown', shown);
+      pick?.setAttribute('aria-pressed', String(shown));
+      if (shown) name.append(' ', tag);
+    });
+    syncMore();
+  };
+  setShown(0);
+
   return {
     element: box,
     applyKinds(kinds) {
       for (const { cell, param, value } of cells) cell.textContent = formatParamValue(value, kinds.get(param));
       syncMore();
     },
+    enable() {
+      for (const { pick } of rows) if (pick) pick.disabled = false;
+    },
+    setShown,
     dispose: () => resizes.disconnect(),
   };
 }
@@ -197,20 +231,21 @@ function commandSection(entry: CatalogEntry): { element: HTMLElement; dispose():
   return { element: box, dispose: () => clearTimeout(timer) };
 }
 
-function buildPanel(entry: CatalogEntry) {
+function buildPanel(entry: CatalogEntry, onPickType: (index: number) => void) {
   const panel = el('aside', 'panel');
   panel.setAttribute('aria-label', 'Dados do componente');
   const notice = el('div', 'panel-notice-slot');
   const header = el('div', 'panel-header');
   header.append(el('p', 'eyebrow', folderLabel(entry.folder)), el('h1', 'panel-title display', entry.component));
-  const description = entry.types[0]?.description;
-  if (description) header.append(el('p', 'panel-text', description));
+  const description = el('p', 'panel-text', entry.types[0]?.description ?? '');
+  description.hidden = !description.textContent;
+  header.append(description);
   const download = el('a', 'button-primary', 'Baixar .ccomp');
   download.href = libraryUrl(entry.file);
   download.setAttribute('download', `${entry.slug}.ccomp`);
   header.append(download);
 
-  const types = typesSection(entry);
+  const types = typesSection(entry, onPickType);
   const mep = entry.mep ? mepSection(entry.mep) : null;
   const connectorsSlot = el('div', 'panel-slot');
   const command = commandSection(entry);
@@ -220,12 +255,28 @@ function buildPanel(entry: CatalogEntry) {
 
   return {
     element: panel,
+    /** Let the types be picked. */
+    enableTypes: () => types.enable(),
+    /** A message above the header (a type that failed to load); `null` clears it. */
+    setNotice(message: string | null) {
+      if (message === null) {
+        notice.replaceChildren();
+        return;
+      }
+      const p = el('p', 'notice', message);
+      p.setAttribute('role', 'alert');
+      notice.replaceChildren(p);
+    },
     enrich(component: Component) {
       const kinds = new Map(component.params.map((p) => [p.name, p.kind] as const));
       types.applyKinds(kinds);
+      types.setShown(component.type_index);
+      description.textContent = entry.types[component.type_index]?.description ?? '';
+      description.hidden = !description.textContent;
       const connectors = connectorsSection(component);
-      if (connectors) connectorsSlot.replaceChildren(connectors);
+      connectorsSlot.replaceChildren(...(connectors ? [connectors] : []));
       const errors = component.errors.length;
+      notice.replaceChildren();
       if (errors > 0) {
         const p = el(
           'p',
@@ -292,7 +343,31 @@ function renderDetail(shell: Shell, entry: CatalogEntry): () => void {
   toolbar.append(views, cotasLabel, hint);
   stage.append(back, view, toolbar);
 
-  const panel = buildPanel(entry);
+  // Another type of the component in the 3D view: the last one asked for wins.
+  let shownType = 0;
+  let typeRequest = 0;
+  const showType = async (index: number) => {
+    if (!viewport || (index === shownType && typeRequest === 0)) return;
+    const request = ++typeRequest;
+    view.setAttribute('aria-busy', 'true');
+    try {
+      const component = await loadComponent(entry.file, { type: index });
+      if (!alive || request !== typeRequest || !viewport) return;
+      shownType = component.type_index;
+      panel.enrich(component);
+      viewport.setComponent(component, { edges: edgesForFolder(entry.folder), dimensions: dimensionsOn, keepOrbit: true });
+    } catch (error) {
+      if (!alive || request !== typeRequest) return;
+      panel.setNotice(describeError(error, entry.file));
+    } finally {
+      if (request === typeRequest) {
+        typeRequest = 0;
+        view.removeAttribute('aria-busy');
+      }
+    }
+  };
+
+  const panel = buildPanel(entry, (index) => void showType(index));
   page.append(stage, panel.element);
   shell.main.append(page);
 
@@ -335,6 +410,7 @@ function renderDetail(shell: Shell, entry: CatalogEntry): () => void {
       syncButtons();
       for (const button of buttons) button.disabled = false;
       cotas.disabled = false;
+      panel.enableTypes();
       setPageState('ready');
     } catch (error) {
       if (!alive) return;

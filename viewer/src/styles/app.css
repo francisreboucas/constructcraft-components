@@ -709,6 +709,37 @@
   padding-right: 0;
 }
 
+/* A type that can be shown in the 3D view: the name is a button, the whole row takes the click. */
+.type-pick {
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  overflow-wrap: anywhere;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.type-pick:disabled {
+  cursor: default;
+}
+
+.type-pick:not(:disabled):hover,
+.type-row:hover .type-pick:not(:disabled) {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.type-row:has(.type-pick:not(:disabled)) {
+  cursor: pointer;
+}
+
+.type-row.is-shown .col-name {
+  box-shadow: inset 2px 0 0 var(--accent);
+  padding-left: var(--space-2);
+}
+
 .tag {
   display: inline-block;
   padding: 0 4px;

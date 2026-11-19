@@ -1,15 +1,19 @@
 /* @ts-self-types="./ccomp_viewer.d.ts" */
 
 /**
- * Parse the text of a `.ccomp` file and tessellate its 3D pieces. Throws an
- * `Error` with the engine's message when the file does not parse.
+ * Parse the text of a `.ccomp` file and tessellate its 3D pieces with the
+ * values of the type at `type_index` of its types (the first when left out
+ * or out of range). Throws an `Error` with the engine's message when the
+ * file does not parse.
  * @param {string} text
+ * @param {number | null} [type_index]
  * @returns {Component}
  */
-export function load_component(text) {
+export function load_component(text, type_index) {
+    const val2 = +(isLikeNone(type_index) ? Number.MAX_SAFE_INTEGER : (type_index) >>> 0);
     const ptr0 = passStringToWasm0(text, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
     const len0 = WASM_VECTOR_LEN;
-    const ret = wasm.load_component(ptr0, len0);
+    const ret = wasm.load_component(ptr0, len0, val2);
     if (ret[2]) {
         throw takeFromExternrefTable0(ret[1]);
     }
@@ -147,6 +151,10 @@ function handleError(f, args) {
         const idx = addToExternrefTable0(e);
         wasm.__wbindgen_exn_store(idx);
     }
+}
+
+function isLikeNone(x) {
+    return x === undefined || x === null;
 }
 
 function passStringToWasm0(arg, malloc, realloc) {

@@ -1,7 +1,7 @@
 //! The geometry core of the web viewer of `.ccomp` component files: the
 //! ConstructCraft engine (`cc_core` and `cc_geom`, without Lua) built to
 //! WebAssembly. [`load_component`] parses a file, resolves its pieces with the
-//! first type's values and tessellates the 3D ones into triangles.
+//! values of one of its types and tessellates the 3D ones into triangles.
 //!
 //! Coordinates are the component's frame, as in the engine: meters, origin at
 //! the insertion point, X to the right, Y to the back, Z up. Doors and windows
@@ -26,7 +26,7 @@ const NO_MATERIAL: [u8; 3] = [200, 200, 200];
 
 #[wasm_bindgen(typescript_custom_section)]
 const TS_TYPES: &str = r#"
-/** A parameter of the component with the value it has in the first type. */
+/** A parameter of the component with the value it has in the type shown. */
 export interface ComponentParam {
   name: string;
   /** "Length" (meters), "Angle" (degrees), "Number", "Boolean", "Text", "Choice" or "Material". */
@@ -44,7 +44,7 @@ export interface ComponentType {
   values: Record<string, number>;
 }
 
-/** Where a pipe or conduit connects, in the component's frame (first type's values). */
+/** Where a pipe or conduit connects, in the component's frame (the values of the type shown). */
 export interface ComponentConnector {
   name: string;
   /** The system kind, e.g. "ColdWater", "Sanitary", "Power". */
@@ -92,8 +92,10 @@ export interface Part {
   edges: Float32Array;
 }
 
-/** A component file, resolved with its first type's values. */
+/** A component file, resolved with the values of one of its types. */
 export interface Component {
+  /** Index in `types` of the type shown: the one the parameter values, connectors, bounds and parts are of. */
+  type_index: number;
   /** The component's name. */
   name: string;
   /** Its kind: "Furniture", "Casework", "Plumbing", "Lighting", "Electrical", "Generic", "Door", "Window", "Niche", "TitleBlock" or "Detail". */
@@ -119,13 +121,15 @@ extern "C" {
     pub type ComponentJs;
 }
 
-/// Parse the text of a `.ccomp` file and tessellate its 3D pieces. Throws an
-/// `Error` with the engine's message when the file does not parse.
+/// Parse the text of a `.ccomp` file and tessellate its 3D pieces with the
+/// values of the type at `type_index` of its types (the first when left out
+/// or out of range). Throws an `Error` with the engine's message when the
+/// file does not parse.
 #[wasm_bindgen]
-pub fn load_component(text: &str) -> Result<ComponentJs, JsError> {
+pub fn load_component(text: &str, type_index: Option<u32>) -> Result<ComponentJs, JsError> {
     let text = text.strip_prefix('\u{feff}').unwrap_or(text);
     let file = cc_core::component_file::from_ron(text).map_err(|e| JsError::new(&e.to_string()))?;
-    let (info, parts) = component(&file);
+    let (info, parts) = component(&file, type_index.unwrap_or(0) as usize);
     let serializer = serde_wasm_bindgen::Serializer::json_compatible();
     let out = info
         .serialize(&serializer)
@@ -170,6 +174,7 @@ fn set(target: &JsValue, key: &str, value: &JsValue) -> Result<(), JsError> {
 /// Everything of a [`Component`] but its parts.
 #[derive(Serialize)]
 struct Info<'a> {
+    type_index: usize,
     name: &'a str,
     kind: String,
     generator: &'a str,
@@ -245,11 +250,26 @@ struct Mesh {
     edges: Vec<f32>,
 }
 
-/// The component of `file` with its first type's values (the definition
-/// carries them), no instance values, and its tessellated 3D pieces.
-fn component(file: &ComponentFile) -> (Info<'_>, Vec<Mesh>) {
+/// The component of `file` with the values of the type at `type_index` (the
+/// first when out of range), no instance values, and its tessellated 3D pieces.
+fn component(file: &ComponentFile, type_index: usize) -> (Info<'_>, Vec<Mesh>) {
+    static NONE: BTreeMap<String, f64> = BTreeMap::new();
     let def = &file.def;
-    let none = BTreeMap::new();
+    // The definition carries the first type's values; those of the type shown replace them.
+    let type_index = if type_index < file.types.len() {
+        type_index
+    } else {
+        0
+    };
+    let values = file.types.get(type_index).map_or(&NONE, |t| &t.values);
+    // A type is the definition with its own values (overrides reach instance parameters only).
+    let mut typed = def.clone();
+    for p in &mut typed.params {
+        if let Some(v) = values.get(&p.name).filter(|v| v.is_finite()) {
+            p.value = *v;
+        }
+    }
+    let typed = &typed;
     // As the engine's component library resolves a file (`cc_app::library`):
     // doors and windows read the wall's thickness; others may ignore it.
     let extra = [(WALL_THICKNESS, PREVIEW_WALL)];
@@ -257,8 +277,8 @@ fn component(file: &ComponentFile) -> (Info<'_>, Vec<Mesh>) {
         (Vec::new(), Vec::new())
     } else {
         (
-            cc_geom::resolve_component_in(def, &none, &extra),
-            cc_geom::resolve_pieces(def, &none, &extra).1,
+            cc_geom::resolve_component_in(typed, &NONE, &extra),
+            cc_geom::resolve_pieces(typed, &NONE, &extra).1,
         )
     };
     let name_of = |item: usize| def.items.get(item).map_or("", |i| i.name.as_str());
@@ -307,6 +327,7 @@ fn component(file: &ComponentFile) -> (Info<'_>, Vec<Mesh>) {
         });
     }
     let info = Info {
+        type_index,
         name: &file.component,
         kind: format!("{:?}", def.kind),
         generator: &file.generator,
@@ -319,7 +340,7 @@ fn component(file: &ComponentFile) -> (Info<'_>, Vec<Mesh>) {
                 value: if p.kind.is_text() {
                     Value::Text(&p.text)
                 } else {
-                    Value::Number(p.value)
+                    Value::Number(typed.params.iter().find(|t| t.name == p.name).map_or(p.value, |t| t.value))
                 },
                 instance: p.instance,
             })
@@ -334,8 +355,8 @@ fn component(file: &ComponentFile) -> (Info<'_>, Vec<Mesh>) {
             })
             .collect(),
         mep: def.mep,
-        connectors: def
-            .resolve_connectors(&none)
+        connectors: typed
+            .resolve_connectors(&NONE)
             .into_iter()
             .map(|c| Connector {
                 name: c.name,
