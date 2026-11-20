@@ -1,0 +1,418 @@
+(
+  format_version: 1,
+  generator: "ConstructCraft 0.12.0",
+  component: "Papeleira",
+  def: (
+    kind: Furniture,
+    params: [
+      (
+        name: "Elevacao",
+        value: 0.6,
+        kind: Length,
+        instance: true,
+      ),
+    ],
+    items: [
+      (
+        name: "Papeleira simplificada",
+        shape: Box(
+          x: "-0.02",
+          y: "-0.13",
+          z: "Elevacao - 0.06",
+          width: "0.16",
+          depth: "0.13",
+          height: "0.12",
+        ),
+        material: "Papel higiênico",
+        in_plan: true,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
+      ),
+      (
+        name: "Canopla",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "-0.01",
+              v: "-0.014",
+            ),
+            (
+              u: "0.011",
+              v: "-0.014",
+              radius: "0.005",
+            ),
+            (
+              u: "0.016",
+              v: "-0.009",
+            ),
+            (
+              u: "0.016",
+              v: "0",
+            ),
+            (
+              u: "-0.01",
+              v: "0",
+            ),
+          ],
+          offset: "Elevacao",
+          axis: "-0.01",
+          angle: "360",
+        ),
+        material: "Cromado",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Braço",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "-0.01",
+              v: "-0.075",
+            ),
+            (
+              u: "(-0.01) + 0.009",
+              v: "-0.075",
+            ),
+            (
+              u: "(-0.01) + 0.009",
+              v: "(-0.075) + 0.062",
+            ),
+            (
+              u: "-0.01",
+              v: "(-0.075) + 0.062",
+            ),
+          ],
+          offset: "Elevacao",
+          axis: "-0.01",
+          angle: "360",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Cotovelo",
+        shape: Cylinder(
+          x: "-0.01",
+          y: "-0.075",
+          z: "Elevacao - 0.0095",
+          radius: "0.0095",
+          height: "0.019",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Haste",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "(-0.075) - 0.0085",
+              v: "Elevacao",
+              radius: "0.0085",
+            ),
+            (
+              u: "(-0.075) + 0.0085",
+              v: "Elevacao",
+              radius: "0.0085",
+            ),
+          ],
+          offset: "-0.01",
+          depth: "0.15",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Ponteira",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "(-0.075) - 0.0105",
+              v: "Elevacao",
+              radius: "0.0105",
+            ),
+            (
+              u: "(-0.075) + 0.0105",
+              v: "Elevacao",
+              radius: "0.0105",
+            ),
+          ],
+          offset: "0.14",
+          depth: "0.008",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Rolo de papel",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "(-0.075) - 0.055",
+              v: "Elevacao",
+              radius: "0.055",
+            ),
+            (
+              u: "(-0.075) + 0.055",
+              v: "Elevacao",
+              radius: "0.055",
+            ),
+          ],
+          offset: "0.015",
+          depth: "0.1",
+        ),
+        material: "Papel higiênico",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Tubete do rolo",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "(-0.075) - 0.022",
+              v: "Elevacao",
+              radius: "0.022",
+            ),
+            (
+              u: "(-0.075) + 0.022",
+              v: "Elevacao",
+              radius: "0.022",
+            ),
+          ],
+          offset: "0.0145",
+          depth: "0.101",
+        ),
+        material: "Papel kraft",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Ponta solta do papel",
+        shape: Box(
+          x: "0.015",
+          y: "-0.13",
+          z: "Elevacao - 0.12",
+          width: "0.1",
+          depth: "0.0008",
+          height: "0.12",
+        ),
+        material: "Papel higiênico",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+    ],
+  ),
+  types: [
+    (
+      name: "Papeleira de parede",
+      values: {
+        "Elevacao": 0.6,
+      },
+      info: (
+        type_mark: "",
+        description: "Papeleira de parede de braço aberto, latão cromado, com rolo de papel higiênico; Elevacao é a altura do eixo do rolo (NBR 9050: entre 0,50 m e 0,60 m, ao alcance da bacia)",
+        manufacturer: "",
+        model: "",
+        url: "",
+        keynote: "",
+        classification: "",
+        fire_rating: "",
+        comments: "",
+        cost: None,
+      ),
+    ),
+  ],
+  materials: [
+    (
+      name: "Papel higiênico",
+      color: (246, 246, 242),
+      identity: (
+        description: "",
+        class: Generic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (246, 246, 242),
+        finish: Matte,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Cromado",
+      color: (226, 229, 233),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (226, 229, 233),
+        finish: Polished,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Papel kraft",
+      color: (176, 140, 92),
+      identity: (
+        description: "",
+        class: Generic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (176, 140, 92),
+        finish: Matte,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+  ],
+)

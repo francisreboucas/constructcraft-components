@@ -1856,6 +1856,26 @@
       ]
     },
     {
+      "file": "components/furniture/cabide.ccomp",
+      "thumbnail": "thumbnails/furniture/cabide.png",
+      "component": "Cabide",
+      "author": "Francis Rebouças",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Elevacao"
+      ],
+      "types": [
+        {
+          "name": "Cabide duplo de parede",
+          "values": {
+            "Elevacao": 1.7
+          },
+          "description": "Cabide duplo de parede para toalhas e roupões, latão cromado, fixação oculta; Elevacao é a altura da canopla"
+        }
+      ]
+    },
+    {
       "file": "components/furniture/cadeira-escritorio.ccomp",
       "thumbnail": "thumbnails/furniture/cadeira-escritorio.png",
       "component": "Cadeira de escritório giratória",
@@ -2177,6 +2197,26 @@
             "AlturaColar": 0.035
           },
           "description": "Depurador de ar slim sob armário, 80 x 47,5 x 12 cm, 3 velocidades, filtros metálicos laváveis, iluminação LED, saída Ø 12 cm (exaustão ou recirculação)"
+        }
+      ]
+    },
+    {
+      "file": "components/furniture/dispenser-sabonete.ccomp",
+      "thumbnail": "thumbnails/furniture/dispenser-sabonete.png",
+      "component": "Dispenser de sabonete líquido",
+      "author": "Francis Rebouças",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Elevacao"
+      ],
+      "types": [
+        {
+          "name": "Dispenser de sabonete 800 ml",
+          "values": {
+            "Elevacao": 1.0
+          },
+          "description": "Dispenser de parede para sabonete líquido ou álcool em gel, 800 ml, de plástico ABS branco com visor fumê e botão de pressão; Elevacao é a altura da base (NBR 9050: comando entre 0,80 m e 1,20 m)"
         }
       ]
     },
@@ -2853,6 +2893,26 @@
       ]
     },
     {
+      "file": "components/furniture/papeleira.ccomp",
+      "thumbnail": "thumbnails/furniture/papeleira.png",
+      "component": "Papeleira",
+      "author": "Francis Rebouças",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Elevacao"
+      ],
+      "types": [
+        {
+          "name": "Papeleira de parede",
+          "values": {
+            "Elevacao": 0.6
+          },
+          "description": "Papeleira de parede de braço aberto, latão cromado, com rolo de papel higiênico; Elevacao é a altura do eixo do rolo (NBR 9050: entre 0,50 m e 0,60 m, ao alcance da bacia)"
+        }
+      ]
+    },
+    {
       "file": "components/furniture/poltrona.ccomp",
       "thumbnail": "thumbnails/furniture/poltrona.png",
       "component": "Poltrona de madeira",
@@ -2885,6 +2945,48 @@
             "AlturaAssento": 0.42
           },
           "description": "Poltrona larga com estrutura de madeira aparente"
+        }
+      ]
+    },
+    {
+      "file": "components/furniture/prateleira-vidro.ccomp",
+      "thumbnail": "thumbnails/furniture/prateleira-vidro.png",
+      "component": "Prateleira de vidro",
+      "author": "Francis Rebouças",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Profundidade",
+        "Elevacao"
+      ],
+      "types": [
+        {
+          "name": "Prateleira de vidro 60 cm",
+          "values": {
+            "Largura": 0.6,
+            "Profundidade": 0.12,
+            "Elevacao": 1.2
+          },
+          "description": "Prateleira de banheiro de vidro temperado de 8 mm com bordas lapidadas, suportes e grade frontal de latão cromado"
+        },
+        {
+          "name": "Prateleira de vidro 40 cm",
+          "values": {
+            "Largura": 0.4,
+            "Profundidade": 0.12,
+            "Elevacao": 1.2
+          },
+          "description": "Prateleira de banheiro de vidro temperado de 8 mm com bordas lapidadas, suportes e grade frontal de latão cromado"
+        },
+        {
+          "name": "Prateleira de vidro 80 cm",
+          "values": {
+            "Largura": 0.8,
+            "Profundidade": 0.14,
+            "Elevacao": 1.2
+          },
+          "description": "Prateleira de banheiro de vidro temperado de 8 mm com bordas lapidadas, suportes e grade frontal de latão cromado"
         }
       ]
     },
@@ -4024,6 +4126,48 @@
       ]
     },
     {
+      "file": "components/plumbing/conjunto-chuveiro.ccomp",
+      "thumbnail": "thumbnails/plumbing/conjunto-chuveiro.png",
+      "component": "Conjunto de chuveiro",
+      "author": "Francis Rebouças",
+      "kind": "Plumbing",
+      "mep": {
+        "Fixture": {
+          "drain_units": 2.0,
+          "hot_water": true,
+          "supply_weight": 0.4
+        }
+      },
+      "parameters": [
+        "AlturaChuveiro",
+        "AlturaRegistro",
+        "Braco",
+        "DiametroDucha"
+      ],
+      "types": [
+        {
+          "name": "Conjunto de chuveiro ducha Ø25",
+          "values": {
+            "AlturaChuveiro": 2.2,
+            "AlturaRegistro": 1.1,
+            "Braco": 0.4,
+            "DiametroDucha": 0.25
+          },
+          "description": "Conjunto de chuveiro de parede: misturador monocomando de embutir com desviador, braço de parede com ducha de teto redonda e ducha manual em barra deslizante com flexível, metais cromados; para aquecimento a gás ou solar"
+        },
+        {
+          "name": "Conjunto de chuveiro ducha Ø30",
+          "values": {
+            "AlturaChuveiro": 2.2,
+            "AlturaRegistro": 1.1,
+            "Braco": 0.45,
+            "DiametroDucha": 0.3
+          },
+          "description": "Conjunto de chuveiro de parede: misturador monocomando de embutir com desviador, braço de parede com ducha de teto redonda e ducha manual em barra deslizante com flexível, metais cromados; para aquecimento a gás ou solar"
+        }
+      ]
+    },
+    {
       "file": "components/plumbing/ducha-higienica.ccomp",
       "thumbnail": "thumbnails/plumbing/ducha-higienica.png",
       "component": "Ducha higiênica",
@@ -4223,6 +4367,54 @@
       ]
     },
     {
+      "file": "components/plumbing/lavatorio-cuba-apoio.ccomp",
+      "thumbnail": "thumbnails/plumbing/lavatorio-cuba-apoio.png",
+      "component": "Lavatório com cuba de apoio",
+      "author": "Francis Rebouças",
+      "kind": "Plumbing",
+      "mep": {
+        "Fixture": {
+          "drain_units": 1.0,
+          "hot_water": true,
+          "supply_weight": 0.3
+        }
+      },
+      "parameters": [
+        "Largura",
+        "Profundidade",
+        "Altura"
+      ],
+      "types": [
+        {
+          "name": "Lavatório cuba de apoio 80x55",
+          "values": {
+            "Largura": 0.8,
+            "Profundidade": 0.55,
+            "Altura": 0.78
+          },
+          "description": "Bancada suspensa de quartzo branco com cuba de apoio redonda de louça (Ø 38 cm), misturador monocomando de bica alta, válvula click e sifão de copo cromado; a borda da cuba fica a 92 cm do piso"
+        },
+        {
+          "name": "Lavatório cuba de apoio 100x55",
+          "values": {
+            "Largura": 1.0,
+            "Profundidade": 0.55,
+            "Altura": 0.78
+          },
+          "description": "Bancada suspensa de quartzo branco com cuba de apoio redonda de louça (Ø 38 cm), misturador monocomando de bica alta, válvula click e sifão de copo cromado; a borda da cuba fica a 92 cm do piso"
+        },
+        {
+          "name": "Lavatório cuba de apoio 120x55",
+          "values": {
+            "Largura": 1.2,
+            "Profundidade": 0.55,
+            "Altura": 0.78
+          },
+          "description": "Bancada suspensa de quartzo branco com cuba de apoio redonda de louça (Ø 38 cm), misturador monocomando de bica alta, válvula click e sifão de copo cromado; a borda da cuba fica a 92 cm do piso"
+        }
+      ]
+    },
+    {
       "file": "components/plumbing/lavatorio-suspenso.ccomp",
       "thumbnail": "thumbnails/plumbing/lavatorio-suspenso.png",
       "component": "Lavatório suspenso",
@@ -4359,6 +4551,32 @@
             "Elevacao": 0.6
           },
           "description": "Mictório de louça sifonado de dimensões reduzidas"
+        }
+      ]
+    },
+    {
+      "file": "components/plumbing/misturador-cozinha.ccomp",
+      "thumbnail": "thumbnails/plumbing/misturador-cozinha.png",
+      "component": "Misturador gourmet de cozinha",
+      "author": "Francis Rebouças",
+      "kind": "Plumbing",
+      "mep": {
+        "Fixture": {
+          "drain_units": 0.0,
+          "hot_water": true,
+          "supply_weight": 0.7
+        }
+      },
+      "parameters": [
+        "Elevacao"
+      ],
+      "types": [
+        {
+          "name": "Misturador gourmet bica alta",
+          "values": {
+            "Elevacao": 0.9
+          },
+          "description": "Misturador monocomando de cozinha, de mesa, com bica alta em arco e ducha extraível de dois jatos, latão cromado; Elevacao é a altura da bancada"
         }
       ]
     },

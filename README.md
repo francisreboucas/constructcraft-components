@@ -31,9 +31,9 @@ Each file holds one component with several types (sizes). Types share the geomet
 
 | Folder | Contents |
 |---|---|
-| [`furniture`](components/furniture) | Tables (dining and coffee), chairs, armchairs, beds, bunk beds, sofas, desks, nightstands, office furniture (workstations with privacy screens, meeting tables, swivel chairs, mobile pedestals, steel filing cabinets and cupboards, partition panels), TV racks, split air conditioners, kitchen and laundry appliances (refrigerator, range, cooktop, oven, microwave, dishwasher, range hoods, small appliances, dryer), shower enclosures, towel rails |
+| [`furniture`](components/furniture) | Tables (dining and coffee), chairs, armchairs, beds, bunk beds, sofas, desks, nightstands, office furniture (workstations with privacy screens, meeting tables, swivel chairs, mobile pedestals, steel filing cabinets and cupboards, partition panels), TV racks, split air conditioners, kitchen and laundry appliances (refrigerator, range, cooktop, oven, microwave, dishwasher, range hoods, small appliances, dryer), shower enclosures, towel rails, bathroom accessories (toilet roll holder, hooks, soap dispenser, glass shelf) |
 | [`casework`](components/casework) | Wardrobes, chests of drawers, kitchen base and wall cabinets, shelving, mirror cabinets |
-| [`plumbing`](components/plumbing) | Toilets, basins, sinks, showers, laundry tubs, washing machines, bathtubs, urinals, bidets, vanity units, bidet sprayers, gas water heaters, water purifiers, water tanks, inspection and grease boxes |
+| [`plumbing`](components/plumbing) | Toilets, basins (also a vessel basin on a floating countertop), sinks, kitchen mixers with a pull-out spray, shower sets with a rain head and a hand shower, showers, laundry tubs, washing machines, bathtubs, urinals, bidets, vanity units, bidet sprayers, gas water heaters, water purifiers, water tanks, inspection and grease boxes |
 | [`electrical`](components/electrical) | General and dedicated outlets, shower points, switches, distribution boards, data/TV points |
 | [`lighting`](components/lighting) | Ceiling, pendant, recessed, linear and wall lights, ceiling fans with light |
 | [`planting`](components/planting) | Trees, conifers, palms, shrubs and potted plants for landscaping |

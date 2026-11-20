@@ -1,0 +1,2059 @@
+{
+  "component": "Lavatório com cuba de apoio",
+  "def": {
+    "kind": "Plumbing",
+    "params": [
+      {
+        "name": "Largura",
+        "value": 0.8,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Profundidade",
+        "value": 0.55,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Altura",
+        "value": 0.78,
+        "kind": "Length",
+        "instance": false
+      }
+    ],
+    "items": [
+      {
+        "name": "Bancada simplificada",
+        "shape": {
+          "Box": {
+            "x": "-0.5*Largura",
+            "y": "-0.5*Profundidade",
+            "z": "Altura - 0.03",
+            "width": "Largura",
+            "depth": "Profundidade",
+            "height": "0.03"
+          }
+        },
+        "material": "Quartzo branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Cuba simplificada",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "Altura"
+              },
+              {
+                "u": "0.19",
+                "v": "Altura"
+              },
+              {
+                "u": "0.19",
+                "v": "Altura + 0.14"
+              },
+              {
+                "u": "0",
+                "v": "Altura + 0.14"
+              }
+            ],
+            "offset": "0.5*Profundidade - 0.27",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Louça",
+        "in_plan": false,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Bancada",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-0.5*Profundidade + 0.004",
+                "v": "Altura - 0.03"
+              },
+              {
+                "u": "0.5*Profundidade",
+                "v": "Altura - 0.03"
+              },
+              {
+                "u": "0.5*Profundidade",
+                "v": "Altura"
+              },
+              {
+                "u": "-0.5*Profundidade + 0.004",
+                "v": "Altura",
+                "radius": "0.004"
+              },
+              {
+                "u": "-0.5*Profundidade",
+                "v": "Altura - 0.004"
+              },
+              {
+                "u": "-0.5*Profundidade",
+                "v": "Altura - 0.026",
+                "radius": "0.004"
+              }
+            ],
+            "offset": "-0.5*Largura",
+            "depth": "Largura"
+          }
+        },
+        "material": "Quartzo branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte oculto esquerda",
+        "shape": {
+          "Box": {
+            "x": "-0.5*Largura + 0.13",
+            "y": "0.5*Profundidade - 0.4",
+            "z": "Altura - 0.036",
+            "width": "0.04",
+            "depth": "0.4",
+            "height": "0.006"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte oculto direita",
+        "shape": {
+          "Box": {
+            "x": "0.5*Largura - 0.17",
+            "y": "0.5*Profundidade - 0.4",
+            "z": "Altura - 0.036",
+            "width": "0.04",
+            "depth": "0.4",
+            "height": "0.006"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cuba de apoio",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "Altura + 0.016"
+              },
+              {
+                "u": "0",
+                "v": "Altura"
+              },
+              {
+                "u": "0.075",
+                "v": "Altura"
+              },
+              {
+                "u": "0.08",
+                "v": "Altura + 0.006"
+              },
+              {
+                "u": "0.097208",
+                "v": "Altura + 0.009975"
+              },
+              {
+                "u": "0.113992",
+                "v": "Altura + 0.017991"
+              },
+              {
+                "u": "0.129939",
+                "v": "Altura + 0.028752"
+              },
+              {
+                "u": "0.144656",
+                "v": "Altura + 0.041637"
+              },
+              {
+                "u": "0.157782",
+                "v": "Altura + 0.056173"
+              },
+              {
+                "u": "0.168992",
+                "v": "Altura + 0.071948"
+              },
+              {
+                "u": "0.178011",
+                "v": "Altura + 0.088578"
+              },
+              {
+                "u": "0.184616",
+                "v": "Altura + 0.105696"
+              },
+              {
+                "u": "0.188646",
+                "v": "Altura + 0.12295"
+              },
+              {
+                "u": "0.19",
+                "v": "Altura + 0.14"
+              },
+              {
+                "u": "0.186",
+                "v": "Altura + 0.143"
+              },
+              {
+                "u": "0.182",
+                "v": "Altura + 0.14"
+              },
+              {
+                "u": "0.18019",
+                "v": "Altura + 0.125147"
+              },
+              {
+                "u": "0.174805",
+                "v": "Altura + 0.109977"
+              },
+              {
+                "u": "0.165978",
+                "v": "Altura + 0.094763"
+              },
+              {
+                "u": "0.153925",
+                "v": "Altura + 0.079792"
+              },
+              {
+                "u": "0.138945",
+                "v": "Altura + 0.065369"
+              },
+              {
+                "u": "0.121404",
+                "v": "Altura + 0.051823"
+              },
+              {
+                "u": "0.101737",
+                "v": "Altura + 0.039522"
+              },
+              {
+                "u": "0.080425",
+                "v": "Altura + 0.028903"
+              },
+              {
+                "u": "0.057996",
+                "v": "Altura + 0.020583"
+              },
+              {
+                "u": "0.035",
+                "v": "Altura + 0.016"
+              }
+            ],
+            "offset": "0.5*Profundidade - 0.27",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Louça",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Válvula click",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "Altura + 0.016"
+              },
+              {
+                "u": "0.032",
+                "v": "Altura + 0.016"
+              },
+              {
+                "u": "0.032",
+                "v": "(Altura + 0.016) + 0.002"
+              },
+              {
+                "u": "0.026",
+                "v": "(Altura + 0.016) + 0.004"
+              },
+              {
+                "u": "0",
+                "v": "(Altura + 0.016) + 0.004"
+              }
+            ],
+            "offset": "0.5*Profundidade - 0.27",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampão click",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "(Altura + 0.016) + 0.004"
+              },
+              {
+                "u": "0.022",
+                "v": "(Altura + 0.016) + 0.004"
+              },
+              {
+                "u": "0.022",
+                "v": "(Altura + 0.016) + 0.006",
+                "radius": "0.05"
+              },
+              {
+                "u": "0",
+                "v": "(Altura + 0.016) + 0.0095"
+              }
+            ],
+            "offset": "0.5*Profundidade - 0.27",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Base do misturador",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "Altura"
+              },
+              {
+                "u": "0.03",
+                "v": "Altura"
+              },
+              {
+                "u": "0.03",
+                "v": "Altura + 0.004"
+              },
+              {
+                "u": "0.025",
+                "v": "Altura + 0.01"
+              },
+              {
+                "u": "0",
+                "v": "Altura + 0.01"
+              }
+            ],
+            "offset": "0.5*Profundidade - 0.045",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Coluna do misturador",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "Altura + 0.01"
+              },
+              {
+                "u": "0.021",
+                "v": "Altura + 0.01"
+              },
+              {
+                "u": "0.019",
+                "v": "Altura + 0.296"
+              },
+              {
+                "u": "0.015",
+                "v": "Altura + 0.3"
+              },
+              {
+                "u": "0",
+                "v": "Altura + 0.3"
+              }
+            ],
+            "offset": "0.5*Profundidade - 0.045",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Bica do misturador",
+        "shape": {
+          "Sweep": {
+            "plane": "Side",
+            "path": [
+              {
+                "u": "0.5*Profundidade - 0.045",
+                "v": "Altura + 0.275"
+              },
+              {
+                "u": "(0.5*Profundidade - 0.045) - 0.06",
+                "v": "Altura + 0.278"
+              },
+              {
+                "u": "(0.5*Profundidade - 0.045) - 0.16",
+                "v": "Altura + 0.27"
+              }
+            ],
+            "offset": "0",
+            "profile": [
+              {
+                "u": "0.011",
+                "v": "0"
+              },
+              {
+                "u": "0.010163",
+                "v": "0.00421"
+              },
+              {
+                "u": "0.007778",
+                "v": "0.007778"
+              },
+              {
+                "u": "0.00421",
+                "v": "0.010163"
+              },
+              {
+                "u": "0",
+                "v": "0.011"
+              },
+              {
+                "u": "-0.00421",
+                "v": "0.010163"
+              },
+              {
+                "u": "-0.007778",
+                "v": "0.007778"
+              },
+              {
+                "u": "-0.010163",
+                "v": "0.00421"
+              },
+              {
+                "u": "-0.011",
+                "v": "0"
+              },
+              {
+                "u": "-0.010163",
+                "v": "-0.00421"
+              },
+              {
+                "u": "-0.007778",
+                "v": "-0.007778"
+              },
+              {
+                "u": "-0.00421",
+                "v": "-0.010163"
+              },
+              {
+                "u": "0",
+                "v": "-0.011"
+              },
+              {
+                "u": "0.00421",
+                "v": "-0.010163"
+              },
+              {
+                "u": "0.007778",
+                "v": "-0.007778"
+              },
+              {
+                "u": "0.010163",
+                "v": "-0.00421"
+              }
+            ]
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ponteira da bica",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "(0.5*Profundidade - 0.045) - 0.17",
+            "z": "Altura + 0.24",
+            "radius": "0.012",
+            "height": "0.035"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Arejador",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "(0.5*Profundidade - 0.045) - 0.17",
+            "z": "Altura + 0.238",
+            "radius": "0.009",
+            "height": "0.002"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Alavanca - eixo",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(0.5*Profundidade - 0.045) - 0.009",
+                "v": "Altura + 0.2",
+                "radius": "0.009"
+              },
+              {
+                "u": "(0.5*Profundidade - 0.045) + 0.009",
+                "v": "Altura + 0.2",
+                "radius": "0.009"
+              }
+            ],
+            "offset": "0.018",
+            "depth": "0.02"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Alavanca - haste",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(0.5*Profundidade - 0.045) - 0.0045",
+                "v": "Altura + 0.2",
+                "radius": "0.0045"
+              },
+              {
+                "u": "(0.5*Profundidade - 0.045) + 0.0045",
+                "v": "Altura + 0.2",
+                "radius": "0.0045"
+              }
+            ],
+            "offset": "0.036",
+            "depth": "0.06"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Haste roscada do misturador",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0.5*Profundidade - 0.045",
+            "z": "Altura - 0.08",
+            "radius": "0.016",
+            "height": "0.05"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porca do misturador",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0.5*Profundidade - 0.045",
+            "z": "Altura - 0.044",
+            "radius": "0.026",
+            "height": "0.012"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Corpo da válvula",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0.5*Profundidade - 0.27",
+            "z": "Altura - 0.08",
+            "radius": "0.017",
+            "height": "0.096"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porca da válvula",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0.5*Profundidade - 0.27",
+            "z": "Altura - 0.046",
+            "radius": "0.03",
+            "height": "0.013"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tubo do sifão",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0.5*Profundidade - 0.27",
+            "z": "Altura - 0.189",
+            "radius": "0.016",
+            "height": "0.109"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porca do tubo do sifão",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0.5*Profundidade - 0.27",
+            "z": "Altura - 0.193",
+            "radius": "0.022",
+            "height": "0.018"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Copo do sifão",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "Altura - 0.296"
+              },
+              {
+                "u": "0.026",
+                "v": "Altura - 0.296"
+              },
+              {
+                "u": "0.032",
+                "v": "Altura - 0.288"
+              },
+              {
+                "u": "0.032",
+                "v": "Altura - 0.197"
+              },
+              {
+                "u": "0.024",
+                "v": "Altura - 0.185"
+              },
+              {
+                "u": "0",
+                "v": "Altura - 0.185"
+              }
+            ],
+            "offset": "0.5*Profundidade - 0.27",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa do copo",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "Altura - 0.3"
+              },
+              {
+                "u": "0.028",
+                "v": "Altura - 0.3"
+              },
+              {
+                "u": "0.03",
+                "v": "Altura - 0.294"
+              },
+              {
+                "u": "0",
+                "v": "Altura - 0.294"
+              }
+            ],
+            "offset": "0.5*Profundidade - 0.27",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Anel do copo",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "Altura - 0.201"
+              },
+              {
+                "u": "0.0335",
+                "v": "Altura - 0.201"
+              },
+              {
+                "u": "0.0335",
+                "v": "Altura - 0.195"
+              },
+              {
+                "u": "0",
+                "v": "Altura - 0.195"
+              }
+            ],
+            "offset": "0.5*Profundidade - 0.27",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Braço do sifão",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0",
+                "v": "0.5*Profundidade - 0.242"
+              },
+              {
+                "u": "0 + 0.016",
+                "v": "0.5*Profundidade - 0.242"
+              },
+              {
+                "u": "0 + 0.016",
+                "v": "(0.5*Profundidade - 0.242) + 0.24"
+              },
+              {
+                "u": "0",
+                "v": "(0.5*Profundidade - 0.242) + 0.24"
+              }
+            ],
+            "offset": "Altura - 0.23",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porca do braço do sifão",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0",
+                "v": "0.5*Profundidade - 0.24"
+              },
+              {
+                "u": "0 + 0.021",
+                "v": "0.5*Profundidade - 0.24"
+              },
+              {
+                "u": "0 + 0.021",
+                "v": "(0.5*Profundidade - 0.24) + 0.016"
+              },
+              {
+                "u": "0",
+                "v": "(0.5*Profundidade - 0.24) + 0.016"
+              }
+            ],
+            "offset": "Altura - 0.23",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Canopla do sifão",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0",
+                "v": "0.5*Profundidade - 0.008"
+              },
+              {
+                "u": "0 + 0.036",
+                "v": "0.5*Profundidade - 0.008"
+              },
+              {
+                "u": "0 + 0.036",
+                "v": "(0.5*Profundidade - 0.008) + 0.008"
+              },
+              {
+                "u": "0",
+                "v": "(0.5*Profundidade - 0.008) + 0.008"
+              }
+            ],
+            "offset": "Altura - 0.23",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Canopla do registro fria",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-0.1",
+                "v": "0.5*Profundidade - 0.007"
+              },
+              {
+                "u": "(-0.1) + 0.026",
+                "v": "0.5*Profundidade - 0.007"
+              },
+              {
+                "u": "(-0.1) + 0.026",
+                "v": "(0.5*Profundidade - 0.007) + 0.007"
+              },
+              {
+                "u": "-0.1",
+                "v": "(0.5*Profundidade - 0.007) + 0.007"
+              }
+            ],
+            "offset": "0.6",
+            "axis": "-0.1",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Niple do registro fria",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-0.1",
+                "v": "0.5*Profundidade - 0.035"
+              },
+              {
+                "u": "(-0.1) + 0.0085",
+                "v": "0.5*Profundidade - 0.035"
+              },
+              {
+                "u": "(-0.1) + 0.0085",
+                "v": "(0.5*Profundidade - 0.035) + 0.028"
+              },
+              {
+                "u": "-0.1",
+                "v": "(0.5*Profundidade - 0.035) + 0.028"
+              }
+            ],
+            "offset": "0.6",
+            "axis": "-0.1",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Corpo do registro fria",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-0.1",
+                "v": "0.5*Profundidade - 0.058"
+              },
+              {
+                "u": "(-0.1) + 0.0115",
+                "v": "0.5*Profundidade - 0.058"
+              },
+              {
+                "u": "(-0.1) + 0.0115",
+                "v": "(0.5*Profundidade - 0.058) + 0.026"
+              },
+              {
+                "u": "-0.1",
+                "v": "(0.5*Profundidade - 0.058) + 0.026"
+              }
+            ],
+            "offset": "0.6",
+            "axis": "-0.1",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Haste do registro fria",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-0.1",
+                "v": "0.5*Profundidade - 0.075"
+              },
+              {
+                "u": "(-0.1) + 0.006",
+                "v": "0.5*Profundidade - 0.075"
+              },
+              {
+                "u": "(-0.1) + 0.006",
+                "v": "(0.5*Profundidade - 0.075) + 0.018"
+              },
+              {
+                "u": "-0.1",
+                "v": "(0.5*Profundidade - 0.075) + 0.018"
+              }
+            ],
+            "offset": "0.6",
+            "axis": "-0.1",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Volante do registro fria",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-0.1",
+                "v": "0.5*Profundidade - 0.087"
+              },
+              {
+                "u": "(-0.1) + 0.015",
+                "v": "0.5*Profundidade - 0.087"
+              },
+              {
+                "u": "(-0.1) + 0.015",
+                "v": "(0.5*Profundidade - 0.087) + 0.014"
+              },
+              {
+                "u": "-0.1",
+                "v": "(0.5*Profundidade - 0.087) + 0.014"
+              }
+            ],
+            "offset": "0.6",
+            "axis": "-0.1",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Borboleta do registro fria",
+        "shape": {
+          "Box": {
+            "x": "-0.104",
+            "y": "0.5*Profundidade - 0.095",
+            "z": "0.581",
+            "width": "0.008",
+            "depth": "0.01",
+            "height": "0.038"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída do registro fria",
+        "shape": {
+          "Cylinder": {
+            "x": "-0.1",
+            "y": "0.5*Profundidade - 0.045",
+            "z": "0.608",
+            "radius": "0.008",
+            "height": "0.022"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porca do registro fria",
+        "shape": {
+          "Cylinder": {
+            "x": "-0.1",
+            "y": "0.5*Profundidade - 0.045",
+            "z": "0.626",
+            "radius": "0.0115",
+            "height": "0.012"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Flexível fria",
+        "shape": {
+          "Sweep": {
+            "plane": "Front",
+            "path": [
+              {
+                "u": "-0.1",
+                "v": "0.638"
+              },
+              {
+                "u": "-0.1",
+                "v": "0.3*Altura + 0.4226"
+              },
+              {
+                "u": "-0.097396",
+                "v": "0.3652*Altura + 0.375786"
+              },
+              {
+                "u": "-0.090328",
+                "v": "0.4136*Altura + 0.341035"
+              },
+              {
+                "u": "-0.079912",
+                "v": "0.4494*Altura + 0.315331"
+              },
+              {
+                "u": "-0.067264",
+                "v": "0.4768*Altura + 0.295658"
+              },
+              {
+                "u": "-0.0535",
+                "v": "0.5*Altura + 0.279"
+              },
+              {
+                "u": "-0.039736",
+                "v": "0.5232*Altura + 0.262342"
+              },
+              {
+                "u": "-0.027088",
+                "v": "0.5506*Altura + 0.242669"
+              },
+              {
+                "u": "-0.016672",
+                "v": "0.5864*Altura + 0.216965"
+              },
+              {
+                "u": "-0.009604",
+                "v": "0.6348*Altura + 0.182214"
+              },
+              {
+                "u": "-0.007",
+                "v": "0.7*Altura + 0.1354"
+              },
+              {
+                "u": "-0.007",
+                "v": "Altura - 0.08"
+              }
+            ],
+            "offset": "0.5*Profundidade - 0.045",
+            "profile": [
+              {
+                "u": "0.005",
+                "v": "0"
+              },
+              {
+                "u": "0.004045",
+                "v": "0.002939"
+              },
+              {
+                "u": "0.001545",
+                "v": "0.004755"
+              },
+              {
+                "u": "-0.001545",
+                "v": "0.004755"
+              },
+              {
+                "u": "-0.004045",
+                "v": "0.002939"
+              },
+              {
+                "u": "-0.005",
+                "v": "0"
+              },
+              {
+                "u": "-0.004045",
+                "v": "-0.002939"
+              },
+              {
+                "u": "-0.001545",
+                "v": "-0.004755"
+              },
+              {
+                "u": "0.001545",
+                "v": "-0.004755"
+              },
+              {
+                "u": "0.004045",
+                "v": "-0.002939"
+              }
+            ]
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Canopla do registro quente",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.1",
+                "v": "0.5*Profundidade - 0.007"
+              },
+              {
+                "u": "0.1 + 0.026",
+                "v": "0.5*Profundidade - 0.007"
+              },
+              {
+                "u": "0.1 + 0.026",
+                "v": "(0.5*Profundidade - 0.007) + 0.007"
+              },
+              {
+                "u": "0.1",
+                "v": "(0.5*Profundidade - 0.007) + 0.007"
+              }
+            ],
+            "offset": "0.6",
+            "axis": "0.1",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Niple do registro quente",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.1",
+                "v": "0.5*Profundidade - 0.035"
+              },
+              {
+                "u": "0.1 + 0.0085",
+                "v": "0.5*Profundidade - 0.035"
+              },
+              {
+                "u": "0.1 + 0.0085",
+                "v": "(0.5*Profundidade - 0.035) + 0.028"
+              },
+              {
+                "u": "0.1",
+                "v": "(0.5*Profundidade - 0.035) + 0.028"
+              }
+            ],
+            "offset": "0.6",
+            "axis": "0.1",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Corpo do registro quente",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.1",
+                "v": "0.5*Profundidade - 0.058"
+              },
+              {
+                "u": "0.1 + 0.0115",
+                "v": "0.5*Profundidade - 0.058"
+              },
+              {
+                "u": "0.1 + 0.0115",
+                "v": "(0.5*Profundidade - 0.058) + 0.026"
+              },
+              {
+                "u": "0.1",
+                "v": "(0.5*Profundidade - 0.058) + 0.026"
+              }
+            ],
+            "offset": "0.6",
+            "axis": "0.1",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Haste do registro quente",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.1",
+                "v": "0.5*Profundidade - 0.075"
+              },
+              {
+                "u": "0.1 + 0.006",
+                "v": "0.5*Profundidade - 0.075"
+              },
+              {
+                "u": "0.1 + 0.006",
+                "v": "(0.5*Profundidade - 0.075) + 0.018"
+              },
+              {
+                "u": "0.1",
+                "v": "(0.5*Profundidade - 0.075) + 0.018"
+              }
+            ],
+            "offset": "0.6",
+            "axis": "0.1",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Volante do registro quente",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.1",
+                "v": "0.5*Profundidade - 0.087"
+              },
+              {
+                "u": "0.1 + 0.015",
+                "v": "0.5*Profundidade - 0.087"
+              },
+              {
+                "u": "0.1 + 0.015",
+                "v": "(0.5*Profundidade - 0.087) + 0.014"
+              },
+              {
+                "u": "0.1",
+                "v": "(0.5*Profundidade - 0.087) + 0.014"
+              }
+            ],
+            "offset": "0.6",
+            "axis": "0.1",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Borboleta do registro quente",
+        "shape": {
+          "Box": {
+            "x": "0.096",
+            "y": "0.5*Profundidade - 0.095",
+            "z": "0.581",
+            "width": "0.008",
+            "depth": "0.01",
+            "height": "0.038"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída do registro quente",
+        "shape": {
+          "Cylinder": {
+            "x": "0.1",
+            "y": "0.5*Profundidade - 0.045",
+            "z": "0.608",
+            "radius": "0.008",
+            "height": "0.022"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porca do registro quente",
+        "shape": {
+          "Cylinder": {
+            "x": "0.1",
+            "y": "0.5*Profundidade - 0.045",
+            "z": "0.626",
+            "radius": "0.0115",
+            "height": "0.012"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Flexível quente",
+        "shape": {
+          "Sweep": {
+            "plane": "Front",
+            "path": [
+              {
+                "u": "0.1",
+                "v": "0.638"
+              },
+              {
+                "u": "0.1",
+                "v": "0.3*Altura + 0.4226"
+              },
+              {
+                "u": "0.097396",
+                "v": "0.3652*Altura + 0.375786"
+              },
+              {
+                "u": "0.090328",
+                "v": "0.4136*Altura + 0.341035"
+              },
+              {
+                "u": "0.079912",
+                "v": "0.4494*Altura + 0.315331"
+              },
+              {
+                "u": "0.067264",
+                "v": "0.4768*Altura + 0.295658"
+              },
+              {
+                "u": "0.0535",
+                "v": "0.5*Altura + 0.279"
+              },
+              {
+                "u": "0.039736",
+                "v": "0.5232*Altura + 0.262342"
+              },
+              {
+                "u": "0.027088",
+                "v": "0.5506*Altura + 0.242669"
+              },
+              {
+                "u": "0.016672",
+                "v": "0.5864*Altura + 0.216965"
+              },
+              {
+                "u": "0.009604",
+                "v": "0.6348*Altura + 0.182214"
+              },
+              {
+                "u": "0.007",
+                "v": "0.7*Altura + 0.1354"
+              },
+              {
+                "u": "0.007",
+                "v": "Altura - 0.08"
+              }
+            ],
+            "offset": "0.5*Profundidade - 0.045",
+            "profile": [
+              {
+                "u": "0.005",
+                "v": "0"
+              },
+              {
+                "u": "0.004045",
+                "v": "0.002939"
+              },
+              {
+                "u": "0.001545",
+                "v": "0.004755"
+              },
+              {
+                "u": "-0.001545",
+                "v": "0.004755"
+              },
+              {
+                "u": "-0.004045",
+                "v": "0.002939"
+              },
+              {
+                "u": "-0.005",
+                "v": "0"
+              },
+              {
+                "u": "-0.004045",
+                "v": "-0.002939"
+              },
+              {
+                "u": "-0.001545",
+                "v": "-0.004755"
+              },
+              {
+                "u": "0.001545",
+                "v": "-0.004755"
+              },
+              {
+                "u": "0.004045",
+                "v": "-0.002939"
+              }
+            ]
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Planta – cuba",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0 + 0.19",
+                "v": "0.5*Profundidade - 0.27"
+              },
+              {
+                "u": "0 + 0.188375",
+                "v": "(0.5*Profundidade - 0.27) + 0.0248"
+              },
+              {
+                "u": "0 + 0.183526",
+                "v": "(0.5*Profundidade - 0.27) + 0.049176"
+              },
+              {
+                "u": "0 + 0.175537",
+                "v": "(0.5*Profundidade - 0.27) + 0.07271"
+              },
+              {
+                "u": "0 + 0.164545",
+                "v": "(0.5*Profundidade - 0.27) + 0.095"
+              },
+              {
+                "u": "0 + 0.150737",
+                "v": "(0.5*Profundidade - 0.27) + 0.115665"
+              },
+              {
+                "u": "0 + 0.13435",
+                "v": "(0.5*Profundidade - 0.27) + 0.13435"
+              },
+              {
+                "u": "0 + 0.115665",
+                "v": "(0.5*Profundidade - 0.27) + 0.150737"
+              },
+              {
+                "u": "0 + 0.095",
+                "v": "(0.5*Profundidade - 0.27) + 0.164545"
+              },
+              {
+                "u": "0 + 0.07271",
+                "v": "(0.5*Profundidade - 0.27) + 0.175537"
+              },
+              {
+                "u": "0 + 0.049176",
+                "v": "(0.5*Profundidade - 0.27) + 0.183526"
+              },
+              {
+                "u": "0 + 0.0248",
+                "v": "(0.5*Profundidade - 0.27) + 0.188375"
+              },
+              {
+                "u": "0",
+                "v": "(0.5*Profundidade - 0.27) + 0.19"
+              },
+              {
+                "u": "0 + (-0.0248)",
+                "v": "(0.5*Profundidade - 0.27) + 0.188375"
+              },
+              {
+                "u": "0 + (-0.049176)",
+                "v": "(0.5*Profundidade - 0.27) + 0.183526"
+              },
+              {
+                "u": "0 + (-0.07271)",
+                "v": "(0.5*Profundidade - 0.27) + 0.175537"
+              },
+              {
+                "u": "0 + (-0.095)",
+                "v": "(0.5*Profundidade - 0.27) + 0.164545"
+              },
+              {
+                "u": "0 + (-0.115665)",
+                "v": "(0.5*Profundidade - 0.27) + 0.150737"
+              },
+              {
+                "u": "0 + (-0.13435)",
+                "v": "(0.5*Profundidade - 0.27) + 0.13435"
+              },
+              {
+                "u": "0 + (-0.150737)",
+                "v": "(0.5*Profundidade - 0.27) + 0.115665"
+              },
+              {
+                "u": "0 + (-0.164545)",
+                "v": "(0.5*Profundidade - 0.27) + 0.095"
+              },
+              {
+                "u": "0 + (-0.175537)",
+                "v": "(0.5*Profundidade - 0.27) + 0.07271"
+              },
+              {
+                "u": "0 + (-0.183526)",
+                "v": "(0.5*Profundidade - 0.27) + 0.049176"
+              },
+              {
+                "u": "0 + (-0.188375)",
+                "v": "(0.5*Profundidade - 0.27) + 0.0248"
+              },
+              {
+                "u": "0 + (-0.19)",
+                "v": "0.5*Profundidade - 0.27"
+              },
+              {
+                "u": "0 + (-0.188375)",
+                "v": "(0.5*Profundidade - 0.27) + (-0.0248)"
+              },
+              {
+                "u": "0 + (-0.183526)",
+                "v": "(0.5*Profundidade - 0.27) + (-0.049176)"
+              },
+              {
+                "u": "0 + (-0.175537)",
+                "v": "(0.5*Profundidade - 0.27) + (-0.07271)"
+              },
+              {
+                "u": "0 + (-0.164545)",
+                "v": "(0.5*Profundidade - 0.27) + (-0.095)"
+              },
+              {
+                "u": "0 + (-0.150737)",
+                "v": "(0.5*Profundidade - 0.27) + (-0.115665)"
+              },
+              {
+                "u": "0 + (-0.13435)",
+                "v": "(0.5*Profundidade - 0.27) + (-0.13435)"
+              },
+              {
+                "u": "0 + (-0.115665)",
+                "v": "(0.5*Profundidade - 0.27) + (-0.150737)"
+              },
+              {
+                "u": "0 + (-0.095)",
+                "v": "(0.5*Profundidade - 0.27) + (-0.164545)"
+              },
+              {
+                "u": "0 + (-0.07271)",
+                "v": "(0.5*Profundidade - 0.27) + (-0.175537)"
+              },
+              {
+                "u": "0 + (-0.049176)",
+                "v": "(0.5*Profundidade - 0.27) + (-0.183526)"
+              },
+              {
+                "u": "0 + (-0.0248)",
+                "v": "(0.5*Profundidade - 0.27) + (-0.188375)"
+              },
+              {
+                "u": "0",
+                "v": "(0.5*Profundidade - 0.27) + (-0.19)"
+              },
+              {
+                "u": "0 + 0.0248",
+                "v": "(0.5*Profundidade - 0.27) + (-0.188375)"
+              },
+              {
+                "u": "0 + 0.049176",
+                "v": "(0.5*Profundidade - 0.27) + (-0.183526)"
+              },
+              {
+                "u": "0 + 0.07271",
+                "v": "(0.5*Profundidade - 0.27) + (-0.175537)"
+              },
+              {
+                "u": "0 + 0.095",
+                "v": "(0.5*Profundidade - 0.27) + (-0.164545)"
+              },
+              {
+                "u": "0 + 0.115665",
+                "v": "(0.5*Profundidade - 0.27) + (-0.150737)"
+              },
+              {
+                "u": "0 + 0.13435",
+                "v": "(0.5*Profundidade - 0.27) + (-0.13435)"
+              },
+              {
+                "u": "0 + 0.150737",
+                "v": "(0.5*Profundidade - 0.27) + (-0.115665)"
+              },
+              {
+                "u": "0 + 0.164545",
+                "v": "(0.5*Profundidade - 0.27) + (-0.095)"
+              },
+              {
+                "u": "0 + 0.175537",
+                "v": "(0.5*Profundidade - 0.27) + (-0.07271)"
+              },
+              {
+                "u": "0 + 0.183526",
+                "v": "(0.5*Profundidade - 0.27) + (-0.049176)"
+              },
+              {
+                "u": "0 + 0.188375",
+                "v": "(0.5*Profundidade - 0.27) + (-0.0248)"
+              }
+            ],
+            "offset": "Altura + 0.14",
+            "depth": "0.002"
+          }
+        },
+        "material": "Louça",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        },
+        "plan_only": true
+      },
+      {
+        "name": "Planta – bancada",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-0.5*Largura",
+                "v": "-0.5*Profundidade"
+              },
+              {
+                "u": "0.5*Largura",
+                "v": "-0.5*Profundidade"
+              },
+              {
+                "u": "0.5*Largura",
+                "v": "0.5*Profundidade"
+              },
+              {
+                "u": "-0.5*Largura",
+                "v": "0.5*Profundidade"
+              }
+            ],
+            "offset": "Altura",
+            "depth": "0.002"
+          }
+        },
+        "material": "Quartzo branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        },
+        "plan_only": true
+      }
+    ],
+    "mep": {
+      "Fixture": {
+        "drain_units": 1,
+        "supply_weight": 0.3,
+        "hot_water": true
+      }
+    },
+    "connectors": [
+      {
+        "name": "Esgoto",
+        "system": "Sanitary",
+        "x": "0",
+        "y": "0.5*Profundidade",
+        "z": "0.5",
+        "direction": "Back",
+        "diameter": "0.04"
+      },
+      {
+        "name": "Água fria",
+        "system": "ColdWater",
+        "x": "-0.1",
+        "y": "0.5*Profundidade",
+        "z": "0.6",
+        "direction": "Back",
+        "diameter": "0.02"
+      },
+      {
+        "name": "Água quente",
+        "system": "HotWater",
+        "x": "0.1",
+        "y": "0.5*Profundidade",
+        "z": "0.6",
+        "direction": "Back",
+        "diameter": "0.02"
+      }
+    ]
+  },
+  "types": [
+    {
+      "name": "Lavatório cuba de apoio 80x55",
+      "values": {},
+      "info": {
+        "description": "Bancada suspensa de quartzo branco com cuba de apoio redonda de louça (Ø 38 cm), misturador monocomando de bica alta, válvula click e sifão de copo cromado; a borda da cuba fica a 92 cm do piso"
+      }
+    },
+    {
+      "name": "Lavatório cuba de apoio 100x55",
+      "values": {
+        "Largura": 1.0
+      },
+      "info": {
+        "description": "Bancada suspensa de quartzo branco com cuba de apoio redonda de louça (Ø 38 cm), misturador monocomando de bica alta, válvula click e sifão de copo cromado; a borda da cuba fica a 92 cm do piso"
+      }
+    },
+    {
+      "name": "Lavatório cuba de apoio 120x55",
+      "values": {
+        "Largura": 1.2
+      },
+      "info": {
+        "description": "Bancada suspensa de quartzo branco com cuba de apoio redonda de louça (Ø 38 cm), misturador monocomando de bica alta, válvula click e sifão de copo cromado; a borda da cuba fica a 92 cm do piso"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "name": "Quartzo branco",
+      "color": [
+        238,
+        237,
+        232
+      ],
+      "class": "Generic",
+      "finish": "Polished",
+      "transparency": 0
+    },
+    {
+      "name": "Aço galvanizado",
+      "color": [
+        160,
+        165,
+        170
+      ],
+      "class": "Metal",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Cromado",
+      "color": [
+        226,
+        229,
+        233
+      ],
+      "class": "Metal",
+      "finish": "Polished",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico cinza",
+      "color": [
+        120,
+        122,
+        126
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Latão",
+      "color": [
+        192,
+        160,
+        84
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Inox escovado",
+      "color": [
+        198,
+        200,
+        203
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    }
+  ]
+}

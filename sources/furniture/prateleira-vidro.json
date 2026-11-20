@@ -1,0 +1,384 @@
+{
+  "component": "Prateleira de vidro",
+  "def": {
+    "kind": "Furniture",
+    "params": [
+      {
+        "name": "Largura",
+        "value": 0.6,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Profundidade",
+        "value": 0.12,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Elevacao",
+        "value": 1.2,
+        "kind": "Length",
+        "instance": true
+      }
+    ],
+    "items": [
+      {
+        "name": "Prateleira simplificada",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2",
+            "y": "-Profundidade",
+            "z": "Elevacao",
+            "width": "Largura",
+            "depth": "Profundidade",
+            "height": "0.008"
+          }
+        },
+        "material": "Vidro temperado",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Vidro",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-Largura/2) + 0.01",
+                "v": "-Profundidade"
+              },
+              {
+                "u": "(Largura/2) - 0.01",
+                "v": "-Profundidade",
+                "radius": "0.01"
+              },
+              {
+                "u": "Largura/2",
+                "v": "(-Profundidade) + 0.01"
+              },
+              {
+                "u": "Largura/2",
+                "v": "(-0.004) - 0.01",
+                "radius": "0.01"
+              },
+              {
+                "u": "(Largura/2) - 0.01",
+                "v": "-0.004"
+              },
+              {
+                "u": "(-Largura/2) + 0.01",
+                "v": "-0.004",
+                "radius": "0.01"
+              },
+              {
+                "u": "-Largura/2",
+                "v": "(-0.004) - 0.01"
+              },
+              {
+                "u": "-Largura/2",
+                "v": "(-Profundidade) + 0.01",
+                "radius": "0.01"
+              }
+            ],
+            "offset": "Elevacao",
+            "depth": "0.008"
+          }
+        },
+        "material": "Vidro temperado",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Canopla do suporte esquerdo",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "-(Largura/2 - 0.06)",
+                "v": "-0.01"
+              },
+              {
+                "u": "(-(Largura/2 - 0.06)) + 0.015",
+                "v": "-0.01",
+                "radius": "0.005"
+              },
+              {
+                "u": "(-(Largura/2 - 0.06)) + 0.02",
+                "v": "-0.005"
+              },
+              {
+                "u": "(-(Largura/2 - 0.06)) + 0.02",
+                "v": "0"
+              },
+              {
+                "u": "-(Largura/2 - 0.06)",
+                "v": "0"
+              }
+            ],
+            "offset": "Elevacao - 0.012",
+            "axis": "-(Largura/2 - 0.06)",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte esquerdo",
+        "shape": {
+          "Box": {
+            "x": "-(Largura/2 - 0.06) - 0.008",
+            "y": "-Profundidade + 0.03",
+            "z": "Elevacao - 0.022",
+            "width": "0.016",
+            "depth": "Profundidade - 0.04",
+            "height": "0.02"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Presilha esquerdo",
+        "shape": {
+          "Box": {
+            "x": "-(Largura/2 - 0.06) - 0.012",
+            "y": "-Profundidade + 0.032",
+            "z": "Elevacao - 0.004",
+            "width": "0.024",
+            "depth": "0.03",
+            "height": "0.016"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Haste da grade esquerdo",
+        "shape": {
+          "Cylinder": {
+            "x": "-(Largura/2 - 0.06)",
+            "y": "-Profundidade + 0.012",
+            "z": "Elevacao + 0.008",
+            "radius": "0.004",
+            "height": "0.04"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Canopla do suporte direito",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(Largura/2 - 0.06)",
+                "v": "-0.01"
+              },
+              {
+                "u": "((Largura/2 - 0.06)) + 0.015",
+                "v": "-0.01",
+                "radius": "0.005"
+              },
+              {
+                "u": "((Largura/2 - 0.06)) + 0.02",
+                "v": "-0.005"
+              },
+              {
+                "u": "((Largura/2 - 0.06)) + 0.02",
+                "v": "0"
+              },
+              {
+                "u": "(Largura/2 - 0.06)",
+                "v": "0"
+              }
+            ],
+            "offset": "Elevacao - 0.012",
+            "axis": "(Largura/2 - 0.06)",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte direito",
+        "shape": {
+          "Box": {
+            "x": "(Largura/2 - 0.06) - 0.008",
+            "y": "-Profundidade + 0.03",
+            "z": "Elevacao - 0.022",
+            "width": "0.016",
+            "depth": "Profundidade - 0.04",
+            "height": "0.02"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Presilha direito",
+        "shape": {
+          "Box": {
+            "x": "(Largura/2 - 0.06) - 0.012",
+            "y": "-Profundidade + 0.032",
+            "z": "Elevacao - 0.004",
+            "width": "0.024",
+            "depth": "0.03",
+            "height": "0.016"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Haste da grade direito",
+        "shape": {
+          "Cylinder": {
+            "x": "(Largura/2 - 0.06)",
+            "y": "-Profundidade + 0.012",
+            "z": "Elevacao + 0.008",
+            "radius": "0.004",
+            "height": "0.04"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade frontal",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(-Profundidade + 0.012) - 0.005",
+                "v": "Elevacao + 0.048",
+                "radius": "0.005"
+              },
+              {
+                "u": "(-Profundidade + 0.012) + 0.005",
+                "v": "Elevacao + 0.048",
+                "radius": "0.005"
+              }
+            ],
+            "offset": "-(Largura/2 - 0.06) - 0.02",
+            "depth": "2*(Largura/2 - 0.06) + 0.04"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      }
+    ]
+  },
+  "types": [
+    {
+      "name": "Prateleira de vidro 60 cm",
+      "values": {},
+      "info": {
+        "description": "Prateleira de banheiro de vidro temperado de 8 mm com bordas lapidadas, suportes e grade frontal de latão cromado"
+      }
+    },
+    {
+      "name": "Prateleira de vidro 40 cm",
+      "values": {
+        "Largura": 0.4
+      },
+      "info": {
+        "description": "Prateleira de banheiro de vidro temperado de 8 mm com bordas lapidadas, suportes e grade frontal de latão cromado"
+      }
+    },
+    {
+      "name": "Prateleira de vidro 80 cm",
+      "values": {
+        "Largura": 0.8,
+        "Profundidade": 0.14
+      },
+      "info": {
+        "description": "Prateleira de banheiro de vidro temperado de 8 mm com bordas lapidadas, suportes e grade frontal de latão cromado"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "name": "Vidro temperado",
+      "color": [
+        205,
+        228,
+        232
+      ],
+      "class": "Glass",
+      "finish": "Polished",
+      "transparency": 0.7
+    },
+    {
+      "name": "Cromado",
+      "color": [
+        226,
+        229,
+        233
+      ],
+      "class": "Metal",
+      "finish": "Polished",
+      "transparency": 0
+    }
+  ]
+}

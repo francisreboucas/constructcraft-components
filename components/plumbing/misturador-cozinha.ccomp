@@ -1,0 +1,696 @@
+(
+  format_version: 1,
+  generator: "ConstructCraft 0.12.0",
+  component: "Misturador gourmet de cozinha",
+  def: (
+    kind: Plumbing,
+    params: [
+      (
+        name: "Elevacao",
+        value: 0.9,
+        kind: Length,
+        instance: true,
+      ),
+    ],
+    items: [
+      (
+        name: "Misturador simplificado",
+        shape: Cylinder(
+          x: "0",
+          y: "0",
+          z: "Elevacao",
+          radius: "0.03",
+          height: "0.45",
+        ),
+        material: "Cromado",
+        in_plan: true,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
+      ),
+      (
+        name: "Base",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "0",
+              v: "Elevacao",
+            ),
+            (
+              u: "0.032",
+              v: "Elevacao",
+            ),
+            (
+              u: "0.032",
+              v: "Elevacao + 0.004",
+            ),
+            (
+              u: "0.028",
+              v: "Elevacao + 0.012",
+            ),
+            (
+              u: "0",
+              v: "Elevacao + 0.012",
+            ),
+          ],
+          offset: "0",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "Cromado",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Corpo",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "0",
+              v: "Elevacao + 0.012",
+            ),
+            (
+              u: "0.026",
+              v: "Elevacao + 0.012",
+            ),
+            (
+              u: "0.026",
+              v: "Elevacao + 0.14",
+            ),
+            (
+              u: "0.022",
+              v: "Elevacao + 0.15",
+            ),
+            (
+              u: "0",
+              v: "Elevacao + 0.15",
+            ),
+          ],
+          offset: "0",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Anel giratório",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "0",
+              v: "Elevacao + 0.15",
+            ),
+            (
+              u: "0.019",
+              v: "Elevacao + 0.15",
+            ),
+            (
+              u: "0.019",
+              v: "Elevacao + 0.17",
+            ),
+            (
+              u: "0",
+              v: "Elevacao + 0.17",
+            ),
+          ],
+          offset: "0",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Alavanca - cubo",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "0 - 0.014",
+              v: "Elevacao + 0.1",
+              radius: "0.014",
+            ),
+            (
+              u: "0 + 0.014",
+              v: "Elevacao + 0.1",
+              radius: "0.014",
+            ),
+          ],
+          offset: "0.024",
+          depth: "0.016",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Alavanca",
+        shape: Box(
+          x: "0.036",
+          y: "-0.006",
+          z: "Elevacao + 0.094",
+          width: "0.075",
+          depth: "0.012",
+          height: "0.012",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Bica",
+        shape: Sweep(
+          plane: Side,
+          path: [
+            (
+              u: "0",
+              v: "Elevacao + 0.17",
+            ),
+            (
+              u: "0",
+              v: "Elevacao + 0.315",
+            ),
+            (
+              u: "-0.007993",
+              v: "Elevacao + 0.355182",
+            ),
+            (
+              u: "-0.030754",
+              v: "Elevacao + 0.389246",
+            ),
+            (
+              u: "-0.064818",
+              v: "Elevacao + 0.412007",
+            ),
+            (
+              u: "-0.105",
+              v: "Elevacao + 0.42",
+            ),
+            (
+              u: "-0.145182",
+              v: "Elevacao + 0.412007",
+            ),
+            (
+              u: "-0.179246",
+              v: "Elevacao + 0.389246",
+            ),
+            (
+              u: "-0.202007",
+              v: "Elevacao + 0.355182",
+            ),
+            (
+              u: "-0.21",
+              v: "Elevacao + 0.315",
+            ),
+            (
+              u: "-0.21",
+              v: "Elevacao + 0.275",
+            ),
+          ],
+          offset: "0",
+          profile: [
+            (
+              u: "0.013",
+              v: "0",
+            ),
+            (
+              u: "0.01201",
+              v: "0.004975",
+            ),
+            (
+              u: "0.009192",
+              v: "0.009192",
+            ),
+            (
+              u: "0.004975",
+              v: "0.01201",
+            ),
+            (
+              u: "0",
+              v: "0.013",
+            ),
+            (
+              u: "-0.004975",
+              v: "0.01201",
+            ),
+            (
+              u: "-0.009192",
+              v: "0.009192",
+            ),
+            (
+              u: "-0.01201",
+              v: "0.004975",
+            ),
+            (
+              u: "-0.013",
+              v: "0",
+            ),
+            (
+              u: "-0.01201",
+              v: "-0.004975",
+            ),
+            (
+              u: "-0.009192",
+              v: "-0.009192",
+            ),
+            (
+              u: "-0.004975",
+              v: "-0.01201",
+            ),
+            (
+              u: "0",
+              v: "-0.013",
+            ),
+            (
+              u: "0.004975",
+              v: "-0.01201",
+            ),
+            (
+              u: "0.009192",
+              v: "-0.009192",
+            ),
+            (
+              u: "0.01201",
+              v: "-0.004975",
+            ),
+          ],
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Ducha extraível",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "0",
+              v: "Elevacao + 0.275",
+            ),
+            (
+              u: "0.016",
+              v: "Elevacao + 0.275",
+            ),
+            (
+              u: "0.022",
+              v: "Elevacao + 0.215",
+            ),
+            (
+              u: "0.024",
+              v: "Elevacao + 0.185",
+            ),
+            (
+              u: "0",
+              v: "Elevacao + 0.185",
+            ),
+          ],
+          offset: "-0.21",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "Cromado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Face da ducha",
+        shape: Cylinder(
+          x: "0",
+          y: "-0.21",
+          z: "Elevacao + 0.183",
+          radius: "0.02",
+          height: "0.002",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Botão de jato",
+        shape: Box(
+          x: "-0.006",
+          y: "-0.234",
+          z: "Elevacao + 0.24",
+          width: "0.012",
+          depth: "0.004",
+          height: "0.018",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Haste de fixação",
+        shape: Cylinder(
+          x: "0",
+          y: "0",
+          z: "Elevacao - 0.07",
+          radius: "0.017",
+          height: "0.07",
+        ),
+        material: "Latão",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Porca de fixação",
+        shape: Cylinder(
+          x: "0",
+          y: "0",
+          z: "Elevacao - 0.045",
+          radius: "0.028",
+          height: "0.014",
+        ),
+        material: "Latão",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Flexível fria",
+        shape: Cylinder(
+          x: "-0.01",
+          y: "0",
+          z: "Elevacao - 0.3",
+          radius: "0.005",
+          height: "0.23",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Flexível quente",
+        shape: Cylinder(
+          x: "0.01",
+          y: "0",
+          z: "Elevacao - 0.3",
+          radius: "0.005",
+          height: "0.23",
+        ),
+        material: "Inox escovado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+    ],
+    mep: Some(Fixture(
+      drain_units: 0.0,
+      supply_weight: 0.7,
+      hot_water: true,
+    )),
+    connectors: [
+      (
+        name: "Água fria",
+        system: ColdWater,
+        x: "-0.01",
+        y: "0",
+        z: "Elevacao - 0.3",
+        direction: Down,
+        diameter: "0.0125",
+      ),
+      (
+        name: "Água quente",
+        system: HotWater,
+        x: "0.01",
+        y: "0",
+        z: "Elevacao - 0.3",
+        direction: Down,
+        diameter: "0.0125",
+      ),
+    ],
+  ),
+  types: [
+    (
+      name: "Misturador gourmet bica alta",
+      values: {
+        "Elevacao": 0.9,
+      },
+      info: (
+        type_mark: "",
+        description: "Misturador monocomando de cozinha, de mesa, com bica alta em arco e ducha extraível de dois jatos, latão cromado; Elevacao é a altura da bancada",
+        manufacturer: "",
+        model: "",
+        url: "",
+        keynote: "",
+        classification: "",
+        fire_rating: "",
+        comments: "",
+        cost: None,
+      ),
+    ),
+  ],
+  materials: [
+    (
+      name: "Cromado",
+      color: (226, 229, 233),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (226, 229, 233),
+        finish: Polished,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Inox escovado",
+      color: (198, 200, 203),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (198, 200, 203),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Plástico preto",
+      color: (34, 34, 37),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (34, 34, 37),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Latão",
+      color: (192, 160, 84),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (192, 160, 84),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+  ],
+)
