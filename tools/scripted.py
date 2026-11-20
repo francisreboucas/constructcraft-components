@@ -311,6 +311,67 @@ class Part:
                 self.indices.extend(base + i for i in face)
 
 
+def triangulate(poly: list[tuple[float, float]]) -> list[list[int]]:
+    """Ear clipping of a simple counter-clockwise polygon: triangles as index triples."""
+    def cross2(o, a, b):
+        return (a[0] - o[0]) * (b[1] - o[1]) - (a[1] - o[1]) * (b[0] - o[0])
+
+    def inside(p, a, b, c):
+        return cross2(a, b, p) >= -1e-12 and cross2(b, c, p) >= -1e-12 and cross2(c, a, p) >= -1e-12
+
+    idx = list(range(len(poly)))
+    tris = []
+    guard = 0
+    while len(idx) > 3 and guard < 10000:
+        guard += 1
+        for k in range(len(idx)):
+            i0, i1, i2 = idx[k - 1], idx[k], idx[(k + 1) % len(idx)]
+            a, b, c = poly[i0], poly[i1], poly[i2]
+            if cross2(a, b, c) <= 1e-12:
+                continue
+            if any(inside(poly[j], a, b, c) for j in idx if j not in (i0, i1, i2)):
+                continue
+            tris.append([i0, i1, i2])
+            idx.pop(k)
+            break
+        else:
+            break  # degenerate: fan the rest
+    for k in range(1, len(idx) - 1):
+        tris.append([idx[0], idx[k], idx[k + 1]])
+    return tris
+
+
+def extruded(ifc: Ifc, a: list) -> tuple[list, list[list[int]]]:
+    """An IfcExtrudedAreaSolid of a polyline profile as a closed mesh, in its item's frame."""
+    pk, pa = ifc.get(a[0])
+    if pk != "IFCARBITRARYCLOSEDPROFILEDEF":
+        raise build.BuildError(f"IFC: extrusions of {pk} are not supported")
+    ck, ca = ifc.get(pa[2])
+    if ck != "IFCPOLYLINE":
+        raise build.BuildError(f"IFC: profiles drawn with {ck} are not supported")
+    poly = [tuple(float(v) for v in ifc.get(p)[1][0][:2]) for p in ca[0]]
+    if len(poly) > 1 and poly[0] == poly[-1]:
+        poly.pop()
+    area = sum(poly[i][0] * poly[i - 1][1] - poly[i - 1][0] * poly[i][1] for i in range(len(poly)))
+    if area > 0:  # clockwise (the sum above is minus twice the area)
+        poly.reverse()
+    position = ifc.axis2(a[1]) if a[1] else IDENTITY
+    direction = norm(ifc.get(a[2])[1][0])
+    depth = float(a[3])
+    n = len(poly)
+    shift = scale(direction, depth)
+    bottom = [apply(position, (x, y, 0.0)) for x, y in poly]
+    top = [apply(position, (x + shift[0], y + shift[1], shift[2])) for x, y in poly]
+    faces = []
+    for t in triangulate(poly):
+        faces.append([t[0], t[2], t[1]])
+        faces.append([n + i for i in t])
+    for i in range(n):
+        j = (i + 1) % n
+        faces.append([i, j, n + j, n + i])
+    return bottom + top, faces
+
+
 def type_parts(ifc: Ifc, product: int, names: dict[str, str], styles: dict) -> list[Part]:
     """The meshes of a placed product, one part per material, in the component's frame."""
     _, args = ifc.get(product)
@@ -331,6 +392,14 @@ def type_parts(ifc: Ifc, product: int, names: dict[str, str], styles: dict) -> l
                     face_lists.append(fa[0])
             elif kind == "IFCTRIANGULATEDFACESET":
                 coords, face_lists, index_map = a[0], a[3], a[4] if len(a) > 4 else None
+            elif kind == "IFCEXTRUDEDAREASOLID":
+                points, faces = extruded(ifc, a)
+                material, color, transparency = styles.get(item[1], ("", [200, 200, 200], 0.0))
+                part = parts.get(material)
+                if part is None:
+                    part = parts[material] = Part(names.get(material, names[""]), material, color, transparency)
+                part.add([apply(frame, p) for p in points], faces)
+                continue
             else:
                 raise build.BuildError(f"IFC: {kind} is not supported")
             points = [apply(frame, p) for p in ifc.get(coords)[1][0]]
