@@ -1,0 +1,234 @@
+{
+ "component": "Poste de iluminação",
+ "def": {
+  "kind": "Generic",
+  "params": [
+   {
+    "name": "Altura",
+    "value": 6.0,
+    "kind": "Length",
+    "instance": false
+   },
+   {
+    "name": "Braco",
+    "value": 1.5,
+    "kind": "Length",
+    "instance": false
+   },
+   {
+    "name": "RaioBase",
+    "value": 0.075,
+    "kind": "Length",
+    "instance": false
+   },
+   {
+    "name": "RaioTopo",
+    "value": 0.035,
+    "kind": "Length",
+    "instance": false
+   }
+  ],
+  "items": [
+   {
+    "name": "Poste cônico",
+    "material": "Aço galvanizado",
+    "in_plan": true,
+    "shape": {
+     "Revolution": {
+      "plane": "Front",
+      "points": [
+       {
+        "u": "0",
+        "v": "0.02"
+       },
+       {
+        "u": "RaioBase",
+        "v": "0.02"
+       },
+       {
+        "u": "RaioTopo",
+        "v": "Altura"
+       },
+       {
+        "u": "0",
+        "v": "Altura"
+       }
+      ],
+      "offset": "0",
+      "axis": "0",
+      "angle": "360"
+     }
+    }
+   },
+   {
+    "name": "Placa de base",
+    "material": "Aço galvanizado",
+    "in_plan": true,
+    "shape": {
+     "Revolution": {
+      "plane": "Front",
+      "points": [
+       {
+        "u": "0",
+        "v": "0"
+       },
+       {
+        "u": "RaioBase + 0.08",
+        "v": "0"
+       },
+       {
+        "u": "RaioBase + 0.08",
+        "v": "0.02"
+       },
+       {
+        "u": "0",
+        "v": "0.02"
+       }
+      ],
+      "offset": "0",
+      "axis": "0",
+      "angle": "360"
+     }
+    }
+   },
+   {
+    "name": "Braço",
+    "material": "Aço galvanizado",
+    "in_plan": true,
+    "shape": {
+     "Sweep": {
+      "plane": "Side",
+      "path": [
+       {
+        "u": "0",
+        "v": "Altura - 0.6"
+       },
+       {
+        "u": "0",
+        "v": "Altura - 0.1",
+        "radius": "0.5"
+       },
+       {
+        "u": "-0.5",
+        "v": "Altura + 0.4"
+       },
+       {
+        "u": "-Braco",
+        "v": "Altura + 0.45"
+       }
+      ],
+      "offset": "0",
+      "profile": [
+       {
+        "u": "-0.03",
+        "v": "0",
+        "radius": "0.03"
+       },
+       {
+        "u": "0.03",
+        "v": "0",
+        "radius": "0.03"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "name": "Luminária LED",
+    "material": "Alumínio pintado cinza",
+    "in_plan": true,
+    "shape": {
+     "Box": {
+      "x": "-0.16",
+      "y": "-Braco - 0.62",
+      "z": "Altura + 0.36",
+      "width": "0.32",
+      "depth": "0.65",
+      "height": "0.09"
+     }
+    }
+   },
+   {
+    "name": "Difusor",
+    "material": "Policarbonato leitoso",
+    "in_plan": true,
+    "shape": {
+     "Box": {
+      "x": "-0.13",
+      "y": "-Braco - 0.58",
+      "z": "Altura + 0.35",
+      "width": "0.26",
+      "depth": "0.5",
+      "height": "0.012"
+     }
+    }
+   }
+  ]
+ },
+ "types": [
+  {
+   "name": "Poste de iluminação 6 m",
+   "values": {},
+   "info": {
+    "description": "Poste de iluminação pública cônico de aço galvanizado de 6 m, braço curvo de 1,50 m e luminária LED, sobre placa de base; a luminária avança para -Y (sobre a via)"
+   }
+  },
+  {
+   "name": "Poste de iluminação 9 m",
+   "values": {
+    "Altura": 9.0,
+    "Braco": 2.0,
+    "RaioBase": 0.09,
+    "RaioTopo": 0.04
+   },
+   "info": {
+    "description": "Poste cônico de 9 m com braço de 2,00 m, para vias coletoras"
+   }
+  },
+  {
+   "name": "Poste de iluminação 4 m",
+   "values": {
+    "Altura": 4.0,
+    "Braco": 0.8,
+    "RaioBase": 0.06,
+    "RaioTopo": 0.03
+   },
+   "info": {
+    "description": "Poste de 4 m com braço de 0,80 m, para praças, condomínios e estacionamentos"
+   }
+  }
+ ],
+ "materials": [
+  {
+   "name": "Aço galvanizado",
+   "color": [
+    176,
+    180,
+    184
+   ],
+   "class": "Metal",
+   "finish": "Satin"
+  },
+  {
+   "name": "Alumínio pintado cinza",
+   "color": [
+    92,
+    96,
+    100
+   ],
+   "class": "Metal",
+   "finish": "Satin"
+  },
+  {
+   "name": "Policarbonato leitoso",
+   "color": [
+    238,
+    240,
+    236
+   ],
+   "class": "Plastic",
+   "finish": "Satin",
+   "transparency": 0.2
+  }
+ ]
+}

@@ -1180,6 +1180,85 @@
       ]
     },
     {
+      "file": "components/furniture/barra-apoio-l.ccomp",
+      "thumbnail": "thumbnails/furniture/barra-apoio-l.png",
+      "component": "Barra de apoio em L",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Comprimento",
+        "AlturaVertical",
+        "Elevacao"
+      ],
+      "types": [
+        {
+          "name": "Barra de apoio em L 70 x 70 cm",
+          "values": {
+            "Comprimento": 0.7,
+            "AlturaVertical": 0.7,
+            "Elevacao": 0.75
+          },
+          "description": "Barra de apoio em L de aço inox de 35 mm, 70 cm na horizontal e 70 cm na vertical, a 4 cm da parede (ABNT NBR 9050), para boxes de chuveiro; a parte horizontal a 75 cm do piso"
+        },
+        {
+          "name": "Barra de apoio em L 60 x 60 cm",
+          "values": {
+            "Comprimento": 0.6,
+            "AlturaVertical": 0.6,
+            "Elevacao": 0.75
+          },
+          "description": "Barra de apoio em L de 60 x 60 cm"
+        }
+      ]
+    },
+    {
+      "file": "components/furniture/barra-apoio-reta.ccomp",
+      "thumbnail": "thumbnails/furniture/barra-apoio-reta.png",
+      "component": "Barra de apoio reta",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Comprimento",
+        "Elevacao"
+      ],
+      "types": [
+        {
+          "name": "Barra de apoio reta 80 cm",
+          "values": {
+            "Comprimento": 0.8,
+            "Elevacao": 0.75
+          },
+          "description": "Barra de apoio reta de aço inox de 35 mm, 80 cm, a 4 cm da parede, fixada por canoplas nas pontas (ABNT NBR 9050), com o eixo a 75 cm do piso"
+        },
+        {
+          "name": "Barra de apoio reta 40 cm",
+          "values": {
+            "Comprimento": 0.4,
+            "Elevacao": 0.75
+          },
+          "description": "Barra de apoio reta de 40 cm, para lavatórios e portas"
+        },
+        {
+          "name": "Barra de apoio reta 60 cm",
+          "values": {
+            "Comprimento": 0.6,
+            "Elevacao": 0.75
+          },
+          "description": "Barra de apoio reta de 60 cm"
+        },
+        {
+          "name": "Barra de apoio reta 90 cm",
+          "values": {
+            "Comprimento": 0.9,
+            "Elevacao": 0.75
+          },
+          "description": "Barra de apoio reta de 90 cm, para a parede lateral da bacia"
+        }
+      ]
+    },
+    {
       "file": "components/furniture/beliche.ccomp",
       "thumbnail": "thumbnails/furniture/beliche.png",
       "component": "Beliche",
@@ -3766,6 +3845,603 @@
       ]
     },
     {
+      "file": "components/signage/numero-predial.ccomp",
+      "thumbnail": "thumbnails/signage/numero-predial.png",
+      "component": "Número predial",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Altura",
+        "Elevacao",
+        "Numero",
+        "Logradouro"
+      ],
+      "types": [
+        {
+          "name": "Número predial 25 x 15 cm",
+          "values": {
+            "Largura": 0.25,
+            "Altura": 0.15,
+            "Elevacao": 1.8,
+            "Numero": "123",
+            "Logradouro": "RUA DAS FLORES"
+          },
+          "description": "Placa de numeração predial em acrílico preto de 4 mm, 25 x 15 cm, com o número e o logradouro em relevo branco de 2 mm, fixada na fachada a 1,80 m; número e logradouro editáveis em cada placa"
+        },
+        {
+          "name": "Número predial 40 x 25 cm",
+          "values": {
+            "Largura": 0.4,
+            "Altura": 0.25,
+            "Elevacao": 1.8,
+            "Numero": "123",
+            "Logradouro": "RUA DAS FLORES"
+          },
+          "description": "Placa de numeração predial de 40 x 25 cm, para fachadas recuadas"
+        }
+      ]
+    },
+    {
+      "file": "components/signage/placa-advertencia.ccomp",
+      "thumbnail": "thumbnails/signage/placa-advertencia.png",
+      "component": "Placa de advertência",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Lado",
+        "AlturaLivre",
+        "Sinal",
+        "Linha1",
+        "Linha2"
+      ],
+      "types": [
+        {
+          "name": "Placa de advertência 60 cm",
+          "values": {
+            "Lado": 0.6,
+            "AlturaLivre": 2.1,
+            "Sinal": "texto",
+            "Linha1": "ESCOLA",
+            "Linha2": ""
+          },
+          "description": "Placa de advertência quadrada de 60 cm de lado, com uma diagonal na vertical, fundo amarelo e orla preta em película refletiva, em poste de aço galvanizado com altura livre de 2,10 m; o sinal (texto, lombada, curva, cruzamento, sentido duplo) e as duas linhas de texto são editáveis em cada placa"
+        },
+        {
+          "name": "Placa de advertência 45 cm",
+          "values": {
+            "Lado": 0.45,
+            "AlturaLivre": 2.1,
+            "Sinal": "texto",
+            "Linha1": "ESCOLA",
+            "Linha2": ""
+          },
+          "description": "Placa de advertência de 45 cm de lado, para vias locais e condomínios"
+        },
+        {
+          "name": "Placa de advertência 75 cm",
+          "values": {
+            "Lado": 0.75,
+            "AlturaLivre": 2.1,
+            "Sinal": "texto",
+            "Linha1": "ESCOLA",
+            "Linha2": ""
+          },
+          "description": "Placa de advertência de 75 cm de lado, para vias arteriais"
+        },
+        {
+          "name": "Placa de advertência 90 cm",
+          "values": {
+            "Lado": 0.9,
+            "AlturaLivre": 2.3,
+            "Sinal": "texto",
+            "Linha1": "ESCOLA",
+            "Linha2": ""
+          },
+          "description": "Placa de advertência de 90 cm de lado, para rodovias"
+        }
+      ]
+    },
+    {
+      "file": "components/signage/placa-de-a-preferencia.ccomp",
+      "thumbnail": "thumbnails/signage/placa-de-a-preferencia.png",
+      "component": "Placa Dê a preferência",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Lado",
+        "AlturaLivre"
+      ],
+      "types": [
+        {
+          "name": "Placa Dê a preferência 75 cm",
+          "values": {
+            "Lado": 0.75,
+            "AlturaLivre": 2.1
+          },
+          "description": "Placa R-2 Dê a preferência: triângulo com o vértice para baixo, 75 cm de lado, orla vermelha e fundo branco em película refletiva, em poste de aço galvanizado com altura livre de 2,10 m"
+        },
+        {
+          "name": "Placa Dê a preferência 90 cm",
+          "values": {
+            "Lado": 0.9,
+            "AlturaLivre": 2.1
+          },
+          "description": "Placa R-2 triangular de 90 cm de lado"
+        },
+        {
+          "name": "Placa Dê a preferência 1,00 m",
+          "values": {
+            "Lado": 1.0,
+            "AlturaLivre": 2.3
+          },
+          "description": "Placa R-2 triangular de 1,00 m de lado, para rodovias"
+        }
+      ]
+    },
+    {
+      "file": "components/signage/placa-equipamento-incendio.ccomp",
+      "thumbnail": "thumbnails/signage/placa-equipamento-incendio.png",
+      "component": "Placa de equipamento de incêndio",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Altura",
+        "Elevacao",
+        "Linha1",
+        "Linha2",
+        "Seta"
+      ],
+      "types": [
+        {
+          "name": "Placa de equipamento de incêndio 32 x 16 cm",
+          "values": {
+            "Largura": 0.32,
+            "Altura": 0.16,
+            "Elevacao": 2.1,
+            "Linha1": "EXTINTOR",
+            "Linha2": "PÓ ABC",
+            "Seta": "nenhuma"
+          },
+          "description": "Placa de equipamento de combate a incêndio (ABNT NBR 13434) em PVC vermelho, 32 x 16 cm, com texto branco, fixada na parede acima do equipamento; as duas linhas (EXTINTOR, HIDRANTE, ALARME, PÓ ABC, CO2...) e a seta são editáveis em cada placa"
+        },
+        {
+          "name": "Placa de equipamento de incêndio 24 x 12 cm",
+          "values": {
+            "Largura": 0.24,
+            "Altura": 0.12,
+            "Elevacao": 2.1,
+            "Linha1": "EXTINTOR",
+            "Linha2": "PÓ ABC",
+            "Seta": "nenhuma"
+          },
+          "description": "Placa de equipamento de incêndio de 24 x 12 cm"
+        },
+        {
+          "name": "Placa de equipamento de incêndio 48 x 24 cm",
+          "values": {
+            "Largura": 0.48,
+            "Altura": 0.24,
+            "Elevacao": 2.1,
+            "Linha1": "EXTINTOR",
+            "Linha2": "PÓ ABC",
+            "Seta": "nenhuma"
+          },
+          "description": "Placa de equipamento de incêndio de 48 x 24 cm"
+        }
+      ]
+    },
+    {
+      "file": "components/signage/placa-estacionamento.ccomp",
+      "thumbnail": "thumbnails/signage/placa-estacionamento.png",
+      "component": "Placa de estacionamento regulamentado",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Diametro",
+        "LarguraInfo",
+        "AlturaInfo",
+        "AlturaLivre",
+        "Simbolo",
+        "Linha1",
+        "Linha2",
+        "Linha3"
+      ],
+      "types": [
+        {
+          "name": "Placa estacionamento 50 cm com informação",
+          "values": {
+            "Diametro": 0.5,
+            "LarguraInfo": 0.5,
+            "AlturaInfo": 0.4,
+            "AlturaLivre": 2.1,
+            "Simbolo": "nenhum",
+            "Linha1": "VAGA EXCLUSIVA",
+            "Linha2": "IDOSO",
+            "Linha3": "CREDENCIAL OBRIGATÓRIA"
+          },
+          "description": "Placa R-6b Estacionamento regulamentado de 50 cm com informação complementar de 50 x 40 cm abaixo (Resolução CONTRAN 965/2022), em poste de aço galvanizado; as três linhas da informação (VAGA EXCLUSIVA, IDOSO, PcD, CARGA E DESCARGA, horários...) e o símbolo de acesso são editáveis em cada placa"
+        },
+        {
+          "name": "Placa estacionamento 60 cm com informação",
+          "values": {
+            "Diametro": 0.6,
+            "LarguraInfo": 0.6,
+            "AlturaInfo": 0.45,
+            "AlturaLivre": 2.1,
+            "Simbolo": "nenhum",
+            "Linha1": "VAGA EXCLUSIVA",
+            "Linha2": "IDOSO",
+            "Linha3": "CREDENCIAL OBRIGATÓRIA"
+          },
+          "description": "Placa R-6b de 60 cm com informação complementar de 60 x 45 cm"
+        }
+      ]
+    },
+    {
+      "file": "components/signage/placa-identificacao.ccomp",
+      "thumbnail": "thumbnails/signage/placa-identificacao.png",
+      "component": "Placa de identificação tátil",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Altura",
+        "Elevacao",
+        "Linha1",
+        "Linha2",
+        "AlturaTexto",
+        "Braille"
+      ],
+      "types": [
+        {
+          "name": "Placa de identificação 30 x 15 cm",
+          "values": {
+            "Largura": 0.3,
+            "Altura": 0.15,
+            "Elevacao": 1.3,
+            "Linha1": "SALA 101",
+            "Linha2": "REUNIÕES",
+            "AlturaTexto": 0.025,
+            "Braille": true
+          },
+          "description": "Placa de identificação de ambiente em acrílico branco de 3 mm, 30 x 15 cm, com texto em relevo de 1 mm e a transcrição em braille (ABNT NBR 9050), fixada na parede a 1,30 m do piso; as duas linhas de texto são editáveis em cada placa e o braille acompanha o texto"
+        },
+        {
+          "name": "Placa de identificação 20 x 10 cm",
+          "values": {
+            "Largura": 0.2,
+            "Altura": 0.1,
+            "Elevacao": 1.3,
+            "Linha1": "SALA 101",
+            "Linha2": "REUNIÕES",
+            "AlturaTexto": 0.02,
+            "Braille": true
+          },
+          "description": "Placa de identificação tátil de 20 x 10 cm, letras de 2 cm, para portas"
+        },
+        {
+          "name": "Placa de identificação 40 x 20 cm",
+          "values": {
+            "Largura": 0.4,
+            "Altura": 0.2,
+            "Elevacao": 1.3,
+            "Linha1": "SALA 101",
+            "Linha2": "REUNIÕES",
+            "AlturaTexto": 0.035,
+            "Braille": true
+          },
+          "description": "Placa de identificação tátil de 40 x 20 cm, letras de 3,5 cm"
+        }
+      ]
+    },
+    {
+      "file": "components/signage/placa-orientacao.ccomp",
+      "thumbnail": "thumbnails/signage/placa-orientacao.png",
+      "component": "Placa de orientação",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Altura",
+        "AlturaLivre",
+        "Linha1",
+        "Linha2",
+        "Linha3",
+        "Seta"
+      ],
+      "types": [
+        {
+          "name": "Placa de orientação 1,00 x 0,50",
+          "values": {
+            "Largura": 1.0,
+            "Altura": 0.5,
+            "AlturaLivre": 2.1,
+            "Linha1": "CENTRO",
+            "Linha2": "AEROPORTO",
+            "Linha3": "",
+            "Seta": "direita"
+          },
+          "description": "Placa de orientação de destino (verde) de 1,00 x 0,50 m com orla branca e cantos arredondados, em película refletiva sobre chapa galvanizada com trilhos de fixação, num poste (dois a partir de 1,30 m de largura) com altura livre de 2,10 m; até três linhas de texto e a seta são editáveis em cada placa"
+        },
+        {
+          "name": "Placa de orientação 0,60 x 0,30",
+          "values": {
+            "Largura": 0.6,
+            "Altura": 0.3,
+            "AlturaLivre": 2.1,
+            "Linha1": "CENTRO",
+            "Linha2": "AEROPORTO",
+            "Linha3": "",
+            "Seta": "direita"
+          },
+          "description": "Placa de orientação de destino (verde) de 0,60 x 0,30 m, para condomínios, estacionamentos e vias internas"
+        },
+        {
+          "name": "Placa de orientação 2,00 x 1,00",
+          "values": {
+            "Largura": 2.0,
+            "Altura": 1.0,
+            "AlturaLivre": 2.3,
+            "Linha1": "CENTRO",
+            "Linha2": "AEROPORTO",
+            "Linha3": "",
+            "Seta": "direita"
+          },
+          "description": "Placa de orientação de destino (verde) de 2,00 x 1,00 m em dois postes"
+        },
+        {
+          "name": "Placa de orientação 3,00 x 1,50",
+          "values": {
+            "Largura": 3.0,
+            "Altura": 1.5,
+            "AlturaLivre": 2.5,
+            "Linha1": "CENTRO",
+            "Linha2": "AEROPORTO",
+            "Linha3": "",
+            "Seta": "direita"
+          },
+          "description": "Placa de orientação de destino (verde) de 3,00 x 1,50 m em dois postes, para vias arteriais"
+        }
+      ]
+    },
+    {
+      "file": "components/signage/placa-pare.ccomp",
+      "thumbnail": "thumbnails/signage/placa-pare.png",
+      "component": "Placa PARE",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "AlturaLivre",
+        "Texto"
+      ],
+      "types": [
+        {
+          "name": "Placa PARE 60 cm",
+          "values": {
+            "Largura": 0.6,
+            "AlturaLivre": 2.1,
+            "Texto": "PARE"
+          },
+          "description": "Placa R-1 Parada obrigatória: octógono vermelho de 60 cm entre lados, orla e legenda brancas em película refletiva, em poste de aço galvanizado com altura livre de 2,10 m; a legenda é editável (PARE, STOP...)"
+        },
+        {
+          "name": "Placa PARE 80 cm",
+          "values": {
+            "Largura": 0.8,
+            "AlturaLivre": 2.1,
+            "Texto": "PARE"
+          },
+          "description": "Placa R-1 octogonal de 80 cm entre lados"
+        },
+        {
+          "name": "Placa PARE 1,00 m",
+          "values": {
+            "Largura": 1.0,
+            "AlturaLivre": 2.3,
+            "Texto": "PARE"
+          },
+          "description": "Placa R-1 octogonal de 1,00 m entre lados, para rodovias"
+        }
+      ]
+    },
+    {
+      "file": "components/signage/placa-regulamentacao.ccomp",
+      "thumbnail": "thumbnails/signage/placa-regulamentacao.png",
+      "component": "Placa de regulamentação",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Diametro",
+        "AlturaLivre",
+        "Sinal",
+        "Valor",
+        "Unidade"
+      ],
+      "types": [
+        {
+          "name": "Placa circular 50 cm",
+          "values": {
+            "Diametro": 0.5,
+            "AlturaLivre": 2.1,
+            "Sinal": "texto",
+            "Valor": "40",
+            "Unidade": "km/h"
+          },
+          "description": "Placa de regulamentação circular de 50 cm em chapa galvanizada com película refletiva, orla vermelha e fundo branco, em poste de aço galvanizado com altura livre de 2,10 m; o sinal (velocidade máxima, proibido estacionar, proibido parar, proibido virar, sentido proibido...) e o valor e a unidade (40 km/h, 10 t, 3,5 m...) são editáveis em cada placa"
+        },
+        {
+          "name": "Placa circular 60 cm",
+          "values": {
+            "Diametro": 0.6,
+            "AlturaLivre": 2.1,
+            "Sinal": "texto",
+            "Valor": "40",
+            "Unidade": "km/h"
+          },
+          "description": "Placa de regulamentação circular de 60 cm, altura livre de 2,10 m"
+        },
+        {
+          "name": "Placa circular 75 cm",
+          "values": {
+            "Diametro": 0.75,
+            "AlturaLivre": 2.1,
+            "Sinal": "texto",
+            "Valor": "40",
+            "Unidade": "km/h"
+          },
+          "description": "Placa de regulamentação circular de 75 cm, para vias arteriais e rodovias"
+        },
+        {
+          "name": "Placa circular 1,00 m",
+          "values": {
+            "Diametro": 1.0,
+            "AlturaLivre": 2.3,
+            "Sinal": "texto",
+            "Valor": "40",
+            "Unidade": "km/h"
+          },
+          "description": "Placa de regulamentação circular de 1,00 m, para vias de trânsito rápido"
+        }
+      ]
+    },
+    {
+      "file": "components/signage/placa-saida-emergencia.ccomp",
+      "thumbnail": "thumbnails/signage/placa-saida-emergencia.png",
+      "component": "Placa de saída de emergência",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Altura",
+        "Elevacao",
+        "Linha1",
+        "Linha2",
+        "Seta"
+      ],
+      "types": [
+        {
+          "name": "Placa de saída de emergência 32 x 16 cm",
+          "values": {
+            "Largura": 0.32,
+            "Altura": 0.16,
+            "Elevacao": 2.1,
+            "Linha1": "SAÍDA",
+            "Linha2": "",
+            "Seta": "direita"
+          },
+          "description": "Placa de saída de emergência (ABNT NBR 13434) em PVC fotoluminescente verde, 32 x 16 cm, com texto e seta brancos, fixada na parede a 2,10 m; o texto (SAÍDA, SAÍDA DE EMERGÊNCIA, ROTA DE FUGA...) e a seta são editáveis em cada placa"
+        },
+        {
+          "name": "Placa de saída de emergência 24 x 12 cm",
+          "values": {
+            "Largura": 0.24,
+            "Altura": 0.12,
+            "Elevacao": 2.1,
+            "Linha1": "SAÍDA",
+            "Linha2": "",
+            "Seta": "direita"
+          },
+          "description": "Placa de saída de emergência de 24 x 12 cm"
+        },
+        {
+          "name": "Placa de saída de emergência 48 x 24 cm",
+          "values": {
+            "Largura": 0.48,
+            "Altura": 0.24,
+            "Elevacao": 2.1,
+            "Linha1": "SAÍDA",
+            "Linha2": "",
+            "Seta": "direita"
+          },
+          "description": "Placa de saída de emergência de 48 x 24 cm"
+        }
+      ]
+    },
+    {
+      "file": "components/signage/placa-servicos.ccomp",
+      "thumbnail": "thumbnails/signage/placa-servicos.png",
+      "component": "Placa de serviços",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Altura",
+        "AlturaLivre",
+        "Linha1",
+        "Linha2",
+        "Linha3",
+        "Seta"
+      ],
+      "types": [
+        {
+          "name": "Placa de serviços 1,00 x 0,50",
+          "values": {
+            "Largura": 1.0,
+            "Altura": 0.5,
+            "AlturaLivre": 2.1,
+            "Linha1": "ESTACIONAMENTO",
+            "Linha2": "",
+            "Linha3": "",
+            "Seta": "frente"
+          },
+          "description": "Placa indicativa de serviços auxiliares e atrativos (azul) de 1,00 x 0,50 m com orla branca e cantos arredondados, em película refletiva sobre chapa galvanizada com trilhos de fixação, num poste (dois a partir de 1,30 m de largura) com altura livre de 2,10 m; até três linhas de texto e a seta são editáveis em cada placa"
+        },
+        {
+          "name": "Placa de serviços 0,60 x 0,30",
+          "values": {
+            "Largura": 0.6,
+            "Altura": 0.3,
+            "AlturaLivre": 2.1,
+            "Linha1": "ESTACIONAMENTO",
+            "Linha2": "",
+            "Linha3": "",
+            "Seta": "frente"
+          },
+          "description": "Placa indicativa de serviços auxiliares e atrativos (azul) de 0,60 x 0,30 m, para condomínios, estacionamentos e vias internas"
+        },
+        {
+          "name": "Placa de serviços 2,00 x 1,00",
+          "values": {
+            "Largura": 2.0,
+            "Altura": 1.0,
+            "AlturaLivre": 2.3,
+            "Linha1": "ESTACIONAMENTO",
+            "Linha2": "",
+            "Linha3": "",
+            "Seta": "frente"
+          },
+          "description": "Placa indicativa de serviços auxiliares e atrativos (azul) de 2,00 x 1,00 m em dois postes"
+        },
+        {
+          "name": "Placa de serviços 3,00 x 1,50",
+          "values": {
+            "Largura": 3.0,
+            "Altura": 1.5,
+            "AlturaLivre": 2.5,
+            "Linha1": "ESTACIONAMENTO",
+            "Linha2": "",
+            "Linha3": "",
+            "Seta": "frente"
+          },
+          "description": "Placa indicativa de serviços auxiliares e atrativos (azul) de 3,00 x 1,50 m em dois postes, para vias arteriais"
+        }
+      ]
+    },
+    {
       "file": "components/site/area-zebrada.ccomp",
       "thumbnail": "thumbnails/site/area-zebrada.png",
       "component": "Área zebrada",
@@ -3820,6 +4496,112 @@
       ]
     },
     {
+      "file": "components/site/balanco.ccomp",
+      "thumbnail": "thumbnails/site/balanco.png",
+      "component": "Balanço",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Altura"
+      ],
+      "types": [
+        {
+          "name": "Balanço 2 lugares",
+          "values": {
+            "Largura": 2.4,
+            "Altura": 2.2
+          },
+          "description": "Balanço de dois lugares em tubo de aço pintado com pernas em A, travessa a 2,20 m, correntes de aço e assentos de borracha a 45 cm do piso"
+        },
+        {
+          "name": "Balanço 2 lugares infantil",
+          "values": {
+            "Largura": 2.0,
+            "Altura": 1.9
+          },
+          "description": "Balanço infantil de dois lugares com travessa a 1,90 m"
+        }
+      ]
+    },
+    {
+      "file": "components/site/balizador-aco.ccomp",
+      "thumbnail": "thumbnails/site/balizador-aco.png",
+      "component": "Balizador de aço",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Raio",
+        "Altura"
+      ],
+      "types": [
+        {
+          "name": "Balizador de aço 90 cm",
+          "values": {
+            "Raio": 0.057,
+            "Altura": 0.9
+          },
+          "description": "Balizador (frade) de tubo de aço galvanizado de 114 mm, 90 cm de altura, topo abaulado, flange de fixação e duas faixas refletivas amarelas"
+        },
+        {
+          "name": "Balizador de aço 1,10 m",
+          "values": {
+            "Raio": 0.057,
+            "Altura": 1.1
+          },
+          "description": "Balizador de aço de 1,10 m, para áreas de manobra"
+        },
+        {
+          "name": "Balizador de aço 75 cm",
+          "values": {
+            "Raio": 0.038,
+            "Altura": 0.75
+          },
+          "description": "Balizador de aço de 76 mm e 75 cm, para calçadas"
+        }
+      ]
+    },
+    {
+      "file": "components/site/banco-praca.ccomp",
+      "thumbnail": "thumbnails/site/banco-praca.png",
+      "component": "Banco de praça",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Comprimento",
+        "Encosto"
+      ],
+      "types": [
+        {
+          "name": "Banco de praça 1,80 m",
+          "values": {
+            "Comprimento": 1.8,
+            "Encosto": true
+          },
+          "description": "Banco de praça com apoios de concreto e assento de cinco ripas de madeira tratada a 45 cm do piso, 1,80 m; o encosto inclinado (três ripas em montantes de concreto) pode ser tirado em cada banco"
+        },
+        {
+          "name": "Banco de praça 2,40 m",
+          "values": {
+            "Comprimento": 2.4,
+            "Encosto": true
+          },
+          "description": "Banco de praça de 2,40 m, com um apoio intermediário"
+        },
+        {
+          "name": "Banco de praça 1,20 m",
+          "values": {
+            "Comprimento": 1.2,
+            "Encosto": true
+          },
+          "description": "Banco de praça curto, de 1,20 m"
+        }
+      ]
+    },
+    {
       "file": "components/site/batente-estacionamento.ccomp",
       "thumbnail": "thumbnails/site/batente-estacionamento.png",
       "component": "Batente de estacionamento",
@@ -3867,6 +4649,78 @@
             "Altura": 0.12
           },
           "description": "Batente contínuo de borracha de 1,80 m x 18 x 12 cm, para as duas rodas do carro"
+        }
+      ]
+    },
+    {
+      "file": "components/site/bicicletario.ccomp",
+      "thumbnail": "thumbnails/site/bicicletario.png",
+      "component": "Bicicletário",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Suportes",
+        "Espacamento",
+        "Largura",
+        "Altura"
+      ],
+      "types": [
+        {
+          "name": "Bicicletário 3 suportes",
+          "values": {
+            "Suportes": 3.0,
+            "Espacamento": 0.8,
+            "Largura": 0.7,
+            "Altura": 0.75
+          },
+          "description": "Bicicletário de suportes em U invertido de tubo de aço galvanizado de 50 mm, 75 cm de altura e 70 cm de largura, chumbados no piso a cada 80 cm; cada suporte prende duas bicicletas (6 vagas)"
+        },
+        {
+          "name": "Bicicletário 5 suportes",
+          "values": {
+            "Suportes": 5.0,
+            "Espacamento": 0.8,
+            "Largura": 0.7,
+            "Altura": 0.75
+          },
+          "description": "Bicicletário de cinco suportes em U invertido (10 vagas)"
+        },
+        {
+          "name": "Bicicletário 1 suporte",
+          "values": {
+            "Suportes": 1.0,
+            "Espacamento": 0.8,
+            "Largura": 0.7,
+            "Altura": 0.75
+          },
+          "description": "Um suporte em U invertido (2 vagas)"
+        }
+      ]
+    },
+    {
+      "file": "components/site/coletores-reciclaveis.ccomp",
+      "thumbnail": "thumbnails/site/coletores-reciclaveis.png",
+      "component": "Coletores de recicláveis",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Rotulo1",
+        "Rotulo2",
+        "Rotulo3",
+        "Rotulo4"
+      ],
+      "types": [
+        {
+          "name": "Coletores de recicláveis 4 x 50 L",
+          "values": {
+            "Rotulo1": "PAPEL",
+            "Rotulo2": "PLÁSTICO",
+            "Rotulo3": "VIDRO",
+            "Rotulo4": "METAL"
+          },
+          "description": "Conjunto de quatro coletores de 50 L em polietileno nas cores da Resolução CONAMA 275/2001 (azul papel, vermelho plástico, verde vidro, amarelo metal) numa estrutura de aço galvanizado; os rótulos são editáveis em cada conjunto"
         }
       ]
     },
@@ -4014,6 +4868,44 @@
       ]
     },
     {
+      "file": "components/site/frade-concreto.ccomp",
+      "thumbnail": "thumbnails/site/frade-concreto.png",
+      "component": "Frade de concreto",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Raio",
+        "Altura"
+      ],
+      "types": [
+        {
+          "name": "Frade de concreto 60 cm",
+          "values": {
+            "Raio": 0.13,
+            "Altura": 0.6
+          },
+          "description": "Frade (balizador) cilíndrico de concreto de 26 cm de diâmetro e 60 cm de altura, topo abaulado e faixa amarela, para proteger calçadas e áreas de pedestres"
+        },
+        {
+          "name": "Frade de concreto 80 cm",
+          "values": {
+            "Raio": 0.15,
+            "Altura": 0.8
+          },
+          "description": "Frade de concreto de 30 cm de diâmetro e 80 cm de altura"
+        },
+        {
+          "name": "Frade de concreto 45 cm",
+          "values": {
+            "Raio": 0.12,
+            "Altura": 0.45
+          },
+          "description": "Frade baixo de concreto, 24 cm de diâmetro e 45 cm de altura"
+        }
+      ]
+    },
+    {
       "file": "components/site/legenda-pare.ccomp",
       "thumbnail": "thumbnails/site/legenda-pare.png",
       "component": "Legenda PARE com linha de retenção",
@@ -4146,6 +5038,44 @@
       ]
     },
     {
+      "file": "components/site/lixeira.ccomp",
+      "thumbnail": "thumbnails/site/lixeira.png",
+      "component": "Lixeira de praça",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Raio",
+        "AlturaCesto"
+      ],
+      "types": [
+        {
+          "name": "Lixeira de praça 60 L",
+          "values": {
+            "Raio": 0.2,
+            "AlturaCesto": 0.5
+          },
+          "description": "Lixeira de praça em aço pintado, cesto cilíndrico de 40 cm de diâmetro (60 L) com a boca a 85 cm do piso, presa a um poste de aço galvanizado"
+        },
+        {
+          "name": "Lixeira de praça 100 L",
+          "values": {
+            "Raio": 0.23,
+            "AlturaCesto": 0.6
+          },
+          "description": "Lixeira de praça de 100 L, cesto de 46 cm de diâmetro"
+        },
+        {
+          "name": "Lixeira de praça 40 L",
+          "values": {
+            "Raio": 0.17,
+            "AlturaCesto": 0.45
+          },
+          "description": "Lixeira de praça de 40 L, cesto de 34 cm, para calçadas estreitas"
+        }
+      ]
+    },
+    {
       "file": "components/site/lombada.ccomp",
       "thumbnail": "thumbnails/site/lombada.png",
       "component": "Lombada",
@@ -4196,6 +5126,217 @@
             "AnguloFaixas": 45.0
           },
           "description": "Redutor de velocidade de 0,90 m e 5 cm para estacionamentos e condomínios, faixa de 3,00 m"
+        }
+      ]
+    },
+    {
+      "file": "components/site/mesa-piquenique.ccomp",
+      "thumbnail": "thumbnails/site/mesa-piquenique.png",
+      "component": "Mesa de piquenique",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Comprimento"
+      ],
+      "types": [
+        {
+          "name": "Mesa de piquenique 1,80 m",
+          "values": {
+            "Comprimento": 1.8
+          },
+          "description": "Mesa de piquenique de madeira tratada com bancos fixos dos dois lados: tampo de 1,80 x 0,70 m a 75 cm e bancos a 45 cm, pernas em A; para 6 pessoas"
+        },
+        {
+          "name": "Mesa de piquenique 2,40 m",
+          "values": {
+            "Comprimento": 2.4
+          },
+          "description": "Mesa de piquenique de 2,40 m, para 8 pessoas"
+        }
+      ]
+    },
+    {
+      "file": "components/site/pergolado.ccomp",
+      "thumbnail": "thumbnails/site/pergolado.png",
+      "component": "Pergolado",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Profundidade",
+        "Altura",
+        "Espacamento",
+        "LarguraCaibro",
+        "AlturaCaibro"
+      ],
+      "types": [
+        {
+          "name": "Pergolado 3,00 x 3,00",
+          "values": {
+            "Largura": 3.0,
+            "Profundidade": 3.0,
+            "Altura": 2.6,
+            "Espacamento": 0.4,
+            "LarguraCaibro": 0.05,
+            "AlturaCaibro": 0.15
+          },
+          "description": "Pergolado de madeira tratada de 3,00 x 3,00 m: pilares de 15 x 15 cm, vigas duplas de 6 x 20 cm em balanço e caibros de 5 x 15 cm a cada 40 cm, com 2,60 m de altura livre até as vigas"
+        },
+        {
+          "name": "Pergolado 4,00 x 3,00",
+          "values": {
+            "Largura": 4.0,
+            "Profundidade": 3.0,
+            "Altura": 2.6,
+            "Espacamento": 0.4,
+            "LarguraCaibro": 0.05,
+            "AlturaCaibro": 0.15
+          },
+          "description": "Pergolado de 4,00 x 3,00 m"
+        },
+        {
+          "name": "Pergolado 6,00 x 3,50",
+          "values": {
+            "Largura": 6.0,
+            "Profundidade": 3.5,
+            "Altura": 2.6,
+            "Espacamento": 0.4,
+            "LarguraCaibro": 0.05,
+            "AlturaCaibro": 0.15
+          },
+          "description": "Pergolado de 6,00 x 3,50 m com pilares intermediários"
+        }
+      ]
+    },
+    {
+      "file": "components/site/piso-tatil-alerta.ccomp",
+      "thumbnail": "thumbnails/site/piso-tatil-alerta.png",
+      "component": "Piso tátil de alerta",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Comprimento",
+        "Tipo"
+      ],
+      "types": [
+        {
+          "name": "Piso tátil de alerta 1,00 x 0,25",
+          "values": {
+            "Largura": 1.0,
+            "Comprimento": 0.25,
+            "Tipo": "alerta"
+          },
+          "description": "Piso tátil de alerta (ABNT NBR 16537) em placas de concreto amarelo de 25 x 25 cm assentadas rente ao piso, com o relevo de 4 mm acima dele; faixa de 1,00 x 0,25 m (o comprimento corre ao longo de Y, o sentido da caminhada); o relevo pode ser trocado em cada faixa"
+        },
+        {
+          "name": "Piso tátil de alerta 1,00 x 1,00",
+          "values": {
+            "Largura": 1.0,
+            "Comprimento": 1.0,
+            "Tipo": "alerta"
+          },
+          "description": "Piso tátil de alerta em área de 1,00 x 1,00 m"
+        },
+        {
+          "name": "Piso tátil de alerta 0,25 x 1,00",
+          "values": {
+            "Largura": 0.25,
+            "Comprimento": 1.0,
+            "Tipo": "alerta"
+          },
+          "description": "Piso tátil de alerta em faixa de 0,25 x 1,00 m ao longo de Y"
+        }
+      ]
+    },
+    {
+      "file": "components/site/piso-tatil-direcional.ccomp",
+      "thumbnail": "thumbnails/site/piso-tatil-direcional.png",
+      "component": "Piso tátil direcional",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Comprimento",
+        "Tipo"
+      ],
+      "types": [
+        {
+          "name": "Piso tátil direcional 1,00 x 0,25",
+          "values": {
+            "Largura": 1.0,
+            "Comprimento": 0.25,
+            "Tipo": "direcional"
+          },
+          "description": "Piso tátil direcional (ABNT NBR 16537) em placas de concreto amarelo de 25 x 25 cm assentadas rente ao piso, com o relevo de 4 mm acima dele; faixa de 1,00 x 0,25 m (o comprimento corre ao longo de Y, o sentido da caminhada); o relevo pode ser trocado em cada faixa"
+        },
+        {
+          "name": "Piso tátil direcional 1,00 x 1,00",
+          "values": {
+            "Largura": 1.0,
+            "Comprimento": 1.0,
+            "Tipo": "direcional"
+          },
+          "description": "Piso tátil direcional em área de 1,00 x 1,00 m"
+        },
+        {
+          "name": "Piso tátil direcional 0,25 x 1,00",
+          "values": {
+            "Largura": 0.25,
+            "Comprimento": 1.0,
+            "Tipo": "direcional"
+          },
+          "description": "Piso tátil direcional em faixa de 0,25 x 1,00 m ao longo de Y"
+        }
+      ]
+    },
+    {
+      "file": "components/site/poste-iluminacao.ccomp",
+      "thumbnail": "thumbnails/site/poste-iluminacao.png",
+      "component": "Poste de iluminação",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Altura",
+        "Braco",
+        "RaioBase",
+        "RaioTopo"
+      ],
+      "types": [
+        {
+          "name": "Poste de iluminação 6 m",
+          "values": {
+            "Altura": 6.0,
+            "Braco": 1.5,
+            "RaioBase": 0.075,
+            "RaioTopo": 0.035
+          },
+          "description": "Poste de iluminação pública cônico de aço galvanizado de 6 m, braço curvo de 1,50 m e luminária LED, sobre placa de base; a luminária avança para -Y (sobre a via)"
+        },
+        {
+          "name": "Poste de iluminação 9 m",
+          "values": {
+            "Altura": 9.0,
+            "Braco": 2.0,
+            "RaioBase": 0.09,
+            "RaioTopo": 0.04
+          },
+          "description": "Poste cônico de 9 m com braço de 2,00 m, para vias coletoras"
+        },
+        {
+          "name": "Poste de iluminação 4 m",
+          "values": {
+            "Altura": 4.0,
+            "Braco": 0.8,
+            "RaioBase": 0.06,
+            "RaioTopo": 0.03
+          },
+          "description": "Poste de 4 m com braço de 0,80 m, para praças, condomínios e estacionamentos"
         }
       ]
     },

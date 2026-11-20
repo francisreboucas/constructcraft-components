@@ -1,0 +1,302 @@
+(
+  format_version: 1,
+  generator: "ConstructCraft 0.12.0",
+  component: "Balizador de aço",
+  def: (
+    kind: Generic,
+    params: [
+      (
+        name: "Raio",
+        value: 0.057,
+        kind: Length,
+        instance: false,
+      ),
+      (
+        name: "Altura",
+        value: 0.9,
+        kind: Length,
+        instance: false,
+      ),
+    ],
+    items: [
+      (
+        name: "Tubo",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "0",
+              v: "0.01",
+            ),
+            (
+              u: "Raio",
+              v: "0.01",
+            ),
+            (
+              u: "Raio",
+              v: "Altura - Raio*0.6",
+            ),
+            (
+              u: "Raio*0.4",
+              v: "Altura",
+              radius: "Raio*0.8",
+            ),
+            (
+              u: "0",
+              v: "Altura",
+            ),
+          ],
+          offset: "0",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "Aço galvanizado",
+        in_plan: true,
+      ),
+      (
+        name: "Flange",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "0",
+              v: "0",
+            ),
+            (
+              u: "Raio + 0.05",
+              v: "0",
+            ),
+            (
+              u: "Raio + 0.05",
+              v: "0.01",
+            ),
+            (
+              u: "0",
+              v: "0.01",
+            ),
+          ],
+          offset: "0",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "Aço galvanizado",
+        in_plan: true,
+      ),
+      (
+        name: "Faixa refletiva 1",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "Raio - 0.001",
+              v: "Altura - 0.22",
+            ),
+            (
+              u: "Raio + 0.001",
+              v: "Altura - 0.22",
+            ),
+            (
+              u: "Raio + 0.001",
+              v: "Altura - 0.22 + 0.05",
+            ),
+            (
+              u: "Raio - 0.001",
+              v: "Altura - 0.22 + 0.05",
+            ),
+          ],
+          offset: "0",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "Película refletiva amarela",
+        in_plan: true,
+      ),
+      (
+        name: "Faixa refletiva 2",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "Raio - 0.001",
+              v: "Altura - 0.12",
+            ),
+            (
+              u: "Raio + 0.001",
+              v: "Altura - 0.12",
+            ),
+            (
+              u: "Raio + 0.001",
+              v: "Altura - 0.12 + 0.05",
+            ),
+            (
+              u: "Raio - 0.001",
+              v: "Altura - 0.12 + 0.05",
+            ),
+          ],
+          offset: "0",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "Película refletiva amarela",
+        in_plan: true,
+      ),
+    ],
+  ),
+  types: [
+    (
+      name: "Balizador de aço 90 cm",
+      values: {
+        "Altura": 0.9,
+        "Raio": 0.057,
+      },
+      info: (
+        type_mark: "",
+        description: "Balizador (frade) de tubo de aço galvanizado de 114 mm, 90 cm de altura, topo abaulado, flange de fixação e duas faixas refletivas amarelas",
+        manufacturer: "",
+        model: "",
+        url: "",
+        keynote: "",
+        classification: "",
+        fire_rating: "",
+        comments: "",
+        cost: None,
+      ),
+    ),
+    (
+      name: "Balizador de aço 1,10 m",
+      values: {
+        "Altura": 1.1,
+        "Raio": 0.057,
+      },
+      info: (
+        type_mark: "",
+        description: "Balizador de aço de 1,10 m, para áreas de manobra",
+        manufacturer: "",
+        model: "",
+        url: "",
+        keynote: "",
+        classification: "",
+        fire_rating: "",
+        comments: "",
+        cost: None,
+      ),
+    ),
+    (
+      name: "Balizador de aço 75 cm",
+      values: {
+        "Altura": 0.75,
+        "Raio": 0.038,
+      },
+      info: (
+        type_mark: "",
+        description: "Balizador de aço de 76 mm e 75 cm, para calçadas",
+        manufacturer: "",
+        model: "",
+        url: "",
+        keynote: "",
+        classification: "",
+        fire_rating: "",
+        comments: "",
+        cost: None,
+      ),
+    ),
+  ],
+  materials: [
+    (
+      name: "Película refletiva amarela",
+      color: (250, 196, 0),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (250, 196, 0),
+        finish: Glossy,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Aço galvanizado",
+      color: (176, 180, 184),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (176, 180, 184),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+  ],
+)

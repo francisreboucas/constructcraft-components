@@ -1,0 +1,400 @@
+{
+ "component": "Balanço",
+ "def": {
+  "kind": "Generic",
+  "params": [
+   {
+    "name": "Largura",
+    "value": 2.4,
+    "kind": "Length",
+    "instance": false
+   },
+   {
+    "name": "Altura",
+    "value": 2.2,
+    "kind": "Length",
+    "instance": false
+   }
+  ],
+  "items": [
+   {
+    "name": "Perna 1a",
+    "material": "Aço pintado verde",
+    "in_plan": true,
+    "shape": {
+     "Sweep": {
+      "plane": "Side",
+      "path": [
+       {
+        "u": "-Altura*0.32",
+        "v": "0"
+       },
+       {
+        "u": "0",
+        "v": "Altura"
+       }
+      ],
+      "offset": "-Largura/2",
+      "profile": [
+       {
+        "u": "-0.03",
+        "v": "0",
+        "radius": "0.03"
+       },
+       {
+        "u": "0.03",
+        "v": "0",
+        "radius": "0.03"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "name": "Perna 1b",
+    "material": "Aço pintado verde",
+    "in_plan": true,
+    "shape": {
+     "Sweep": {
+      "plane": "Side",
+      "path": [
+       {
+        "u": "Altura*0.32",
+        "v": "0"
+       },
+       {
+        "u": "0",
+        "v": "Altura"
+       }
+      ],
+      "offset": "-Largura/2",
+      "profile": [
+       {
+        "u": "-0.03",
+        "v": "0",
+        "radius": "0.03"
+       },
+       {
+        "u": "0.03",
+        "v": "0",
+        "radius": "0.03"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "name": "Perna 2a",
+    "material": "Aço pintado verde",
+    "in_plan": true,
+    "shape": {
+     "Sweep": {
+      "plane": "Side",
+      "path": [
+       {
+        "u": "-Altura*0.32",
+        "v": "0"
+       },
+       {
+        "u": "0",
+        "v": "Altura"
+       }
+      ],
+      "offset": "Largura/2",
+      "profile": [
+       {
+        "u": "-0.03",
+        "v": "0",
+        "radius": "0.03"
+       },
+       {
+        "u": "0.03",
+        "v": "0",
+        "radius": "0.03"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "name": "Perna 2b",
+    "material": "Aço pintado verde",
+    "in_plan": true,
+    "shape": {
+     "Sweep": {
+      "plane": "Side",
+      "path": [
+       {
+        "u": "Altura*0.32",
+        "v": "0"
+       },
+       {
+        "u": "0",
+        "v": "Altura"
+       }
+      ],
+      "offset": "Largura/2",
+      "profile": [
+       {
+        "u": "-0.03",
+        "v": "0",
+        "radius": "0.03"
+       },
+       {
+        "u": "0.03",
+        "v": "0",
+        "radius": "0.03"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "name": "Travessa superior",
+    "material": "Aço pintado verde",
+    "in_plan": true,
+    "shape": {
+     "Sweep": {
+      "plane": "Front",
+      "path": [
+       {
+        "u": "-Largura/2 - 0.05",
+        "v": "Altura - 0.03"
+       },
+       {
+        "u": "Largura/2 + 0.05",
+        "v": "Altura - 0.03"
+       }
+      ],
+      "offset": "0",
+      "profile": [
+       {
+        "u": "-0.04",
+        "v": "0",
+        "radius": "0.04"
+       },
+       {
+        "u": "0.04",
+        "v": "0",
+        "radius": "0.04"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "name": "Corrente 1a",
+    "material": "Aço galvanizado",
+    "in_plan": false,
+    "shape": {
+     "Sweep": {
+      "plane": "Front",
+      "path": [
+       {
+        "u": "-Largura/4 + (-0.2)",
+        "v": "0.45"
+       },
+       {
+        "u": "-Largura/4 + (-0.2)",
+        "v": "Altura - 0.07"
+       }
+      ],
+      "offset": "0",
+      "profile": [
+       {
+        "u": "-0.005",
+        "v": "0",
+        "radius": "0.005"
+       },
+       {
+        "u": "0.005",
+        "v": "0",
+        "radius": "0.005"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "name": "Corrente 1b",
+    "material": "Aço galvanizado",
+    "in_plan": false,
+    "shape": {
+     "Sweep": {
+      "plane": "Front",
+      "path": [
+       {
+        "u": "-Largura/4 + (0.2)",
+        "v": "0.45"
+       },
+       {
+        "u": "-Largura/4 + (0.2)",
+        "v": "Altura - 0.07"
+       }
+      ],
+      "offset": "0",
+      "profile": [
+       {
+        "u": "-0.005",
+        "v": "0",
+        "radius": "0.005"
+       },
+       {
+        "u": "0.005",
+        "v": "0",
+        "radius": "0.005"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "name": "Assento 1",
+    "material": "Borracha preta",
+    "in_plan": true,
+    "shape": {
+     "Box": {
+      "x": "-Largura/4 - 0.23",
+      "y": "-0.08",
+      "z": "0.42",
+      "width": "0.46",
+      "depth": "0.16",
+      "height": "0.03"
+     }
+    }
+   },
+   {
+    "name": "Corrente 2a",
+    "material": "Aço galvanizado",
+    "in_plan": false,
+    "shape": {
+     "Sweep": {
+      "plane": "Front",
+      "path": [
+       {
+        "u": "Largura/4 + (-0.2)",
+        "v": "0.45"
+       },
+       {
+        "u": "Largura/4 + (-0.2)",
+        "v": "Altura - 0.07"
+       }
+      ],
+      "offset": "0",
+      "profile": [
+       {
+        "u": "-0.005",
+        "v": "0",
+        "radius": "0.005"
+       },
+       {
+        "u": "0.005",
+        "v": "0",
+        "radius": "0.005"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "name": "Corrente 2b",
+    "material": "Aço galvanizado",
+    "in_plan": false,
+    "shape": {
+     "Sweep": {
+      "plane": "Front",
+      "path": [
+       {
+        "u": "Largura/4 + (0.2)",
+        "v": "0.45"
+       },
+       {
+        "u": "Largura/4 + (0.2)",
+        "v": "Altura - 0.07"
+       }
+      ],
+      "offset": "0",
+      "profile": [
+       {
+        "u": "-0.005",
+        "v": "0",
+        "radius": "0.005"
+       },
+       {
+        "u": "0.005",
+        "v": "0",
+        "radius": "0.005"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "name": "Assento 2",
+    "material": "Borracha preta",
+    "in_plan": true,
+    "shape": {
+     "Box": {
+      "x": "Largura/4 - 0.23",
+      "y": "-0.08",
+      "z": "0.42",
+      "width": "0.46",
+      "depth": "0.16",
+      "height": "0.03"
+     }
+    }
+   }
+  ]
+ },
+ "types": [
+  {
+   "name": "Balanço 2 lugares",
+   "values": {},
+   "info": {
+    "description": "Balanço de dois lugares em tubo de aço pintado com pernas em A, travessa a 2,20 m, correntes de aço e assentos de borracha a 45 cm do piso"
+   }
+  },
+  {
+   "name": "Balanço 2 lugares infantil",
+   "values": {
+    "Largura": 2.0,
+    "Altura": 1.9
+   },
+   "info": {
+    "description": "Balanço infantil de dois lugares com travessa a 1,90 m"
+   }
+  }
+ ],
+ "materials": [
+  {
+   "name": "Borracha preta",
+   "color": [
+    34,
+    34,
+    36
+   ],
+   "class": "Plastic",
+   "finish": "Matte"
+  },
+  {
+   "name": "Aço galvanizado",
+   "color": [
+    176,
+    180,
+    184
+   ],
+   "class": "Metal",
+   "finish": "Satin"
+  },
+  {
+   "name": "Aço pintado verde",
+   "color": [
+    38,
+    78,
+    58
+   ],
+   "class": "Metal",
+   "finish": "Satin"
+  }
+ ]
+}

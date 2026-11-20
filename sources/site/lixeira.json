@@ -1,0 +1,187 @@
+{
+ "component": "Lixeira de praça",
+ "def": {
+  "kind": "Generic",
+  "params": [
+   {
+    "name": "Raio",
+    "value": 0.2,
+    "kind": "Length",
+    "instance": false
+   },
+   {
+    "name": "AlturaCesto",
+    "value": 0.5,
+    "kind": "Length",
+    "instance": false
+   }
+  ],
+  "items": [
+   {
+    "name": "Cesto",
+    "material": "Aço pintado verde",
+    "in_plan": true,
+    "shape": {
+     "Revolution": {
+      "plane": "Front",
+      "points": [
+       {
+        "u": "0",
+        "v": "0.85 - AlturaCesto"
+       },
+       {
+        "u": "Raio",
+        "v": "0.85 - AlturaCesto"
+       },
+       {
+        "u": "Raio",
+        "v": "0.85 - AlturaCesto + AlturaCesto"
+       },
+       {
+        "u": "Raio - 0.003",
+        "v": "0.85 - AlturaCesto + AlturaCesto"
+       },
+       {
+        "u": "Raio - 0.003",
+        "v": "0.85 - AlturaCesto + 0.003"
+       },
+       {
+        "u": "0",
+        "v": "0.85 - AlturaCesto + 0.003"
+       }
+      ],
+      "offset": "0",
+      "axis": "0",
+      "angle": "360"
+     }
+    }
+   },
+   {
+    "name": "Aro",
+    "material": "Aço pintado verde",
+    "in_plan": true,
+    "shape": {
+     "Revolution": {
+      "plane": "Front",
+      "points": [
+       {
+        "u": "Raio - 0.004",
+        "v": "0.85 - AlturaCesto + AlturaCesto - 0.012"
+       },
+       {
+        "u": "Raio + 0.008",
+        "v": "0.85 - AlturaCesto + AlturaCesto - 0.012"
+       },
+       {
+        "u": "Raio + 0.008",
+        "v": "0.85 - AlturaCesto + AlturaCesto"
+       },
+       {
+        "u": "Raio - 0.004",
+        "v": "0.85 - AlturaCesto + AlturaCesto"
+       }
+      ],
+      "offset": "0",
+      "axis": "0",
+      "angle": "360"
+     }
+    }
+   },
+   {
+    "name": "Poste",
+    "material": "Aço galvanizado",
+    "in_plan": true,
+    "shape": {
+     "Cylinder": {
+      "x": "0",
+      "y": "Raio + 0.05",
+      "z": "0",
+      "radius": "0.03",
+      "height": "1.0"
+     }
+    }
+   },
+   {
+    "name": "Braçadeira superior",
+    "material": "Aço galvanizado",
+    "in_plan": true,
+    "shape": {
+     "Box": {
+      "x": "-0.03",
+      "y": "Raio - 0.01",
+      "z": "0.85 - 0.05",
+      "width": "0.06",
+      "depth": "0.06",
+      "height": "0.03"
+     }
+    }
+   },
+   {
+    "name": "Braçadeira inferior",
+    "material": "Aço galvanizado",
+    "in_plan": true,
+    "shape": {
+     "Box": {
+      "x": "-0.03",
+      "y": "Raio - 0.01",
+      "z": "0.85 - AlturaCesto + 0.06",
+      "width": "0.06",
+      "depth": "0.06",
+      "height": "0.03"
+     }
+    }
+   }
+  ]
+ },
+ "types": [
+  {
+   "name": "Lixeira de praça 60 L",
+   "values": {},
+   "info": {
+    "description": "Lixeira de praça em aço pintado, cesto cilíndrico de 40 cm de diâmetro (60 L) com a boca a 85 cm do piso, presa a um poste de aço galvanizado"
+   }
+  },
+  {
+   "name": "Lixeira de praça 100 L",
+   "values": {
+    "Raio": 0.23,
+    "AlturaCesto": 0.6
+   },
+   "info": {
+    "description": "Lixeira de praça de 100 L, cesto de 46 cm de diâmetro"
+   }
+  },
+  {
+   "name": "Lixeira de praça 40 L",
+   "values": {
+    "Raio": 0.17,
+    "AlturaCesto": 0.45
+   },
+   "info": {
+    "description": "Lixeira de praça de 40 L, cesto de 34 cm, para calçadas estreitas"
+   }
+  }
+ ],
+ "materials": [
+  {
+   "name": "Aço galvanizado",
+   "color": [
+    176,
+    180,
+    184
+   ],
+   "class": "Metal",
+   "finish": "Satin"
+  },
+  {
+   "name": "Aço pintado verde",
+   "color": [
+    38,
+    78,
+    58
+   ],
+   "class": "Metal",
+   "finish": "Satin"
+  }
+ ]
+}

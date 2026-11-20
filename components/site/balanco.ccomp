@@ -1,0 +1,515 @@
+(
+  format_version: 1,
+  generator: "ConstructCraft 0.12.0",
+  component: "Balanço",
+  def: (
+    kind: Generic,
+    params: [
+      (
+        name: "Largura",
+        value: 2.4,
+        kind: Length,
+        instance: false,
+      ),
+      (
+        name: "Altura",
+        value: 2.2,
+        kind: Length,
+        instance: false,
+      ),
+    ],
+    items: [
+      (
+        name: "Perna 1a",
+        shape: Sweep(
+          plane: Side,
+          path: [
+            (
+              u: "-Altura*0.32",
+              v: "0",
+            ),
+            (
+              u: "0",
+              v: "Altura",
+            ),
+          ],
+          offset: "-Largura/2",
+          profile: [
+            (
+              u: "-0.03",
+              v: "0",
+              radius: "0.03",
+            ),
+            (
+              u: "0.03",
+              v: "0",
+              radius: "0.03",
+            ),
+          ],
+        ),
+        material: "Aço pintado verde",
+        in_plan: true,
+      ),
+      (
+        name: "Perna 1b",
+        shape: Sweep(
+          plane: Side,
+          path: [
+            (
+              u: "Altura*0.32",
+              v: "0",
+            ),
+            (
+              u: "0",
+              v: "Altura",
+            ),
+          ],
+          offset: "-Largura/2",
+          profile: [
+            (
+              u: "-0.03",
+              v: "0",
+              radius: "0.03",
+            ),
+            (
+              u: "0.03",
+              v: "0",
+              radius: "0.03",
+            ),
+          ],
+        ),
+        material: "Aço pintado verde",
+        in_plan: true,
+      ),
+      (
+        name: "Perna 2a",
+        shape: Sweep(
+          plane: Side,
+          path: [
+            (
+              u: "-Altura*0.32",
+              v: "0",
+            ),
+            (
+              u: "0",
+              v: "Altura",
+            ),
+          ],
+          offset: "Largura/2",
+          profile: [
+            (
+              u: "-0.03",
+              v: "0",
+              radius: "0.03",
+            ),
+            (
+              u: "0.03",
+              v: "0",
+              radius: "0.03",
+            ),
+          ],
+        ),
+        material: "Aço pintado verde",
+        in_plan: true,
+      ),
+      (
+        name: "Perna 2b",
+        shape: Sweep(
+          plane: Side,
+          path: [
+            (
+              u: "Altura*0.32",
+              v: "0",
+            ),
+            (
+              u: "0",
+              v: "Altura",
+            ),
+          ],
+          offset: "Largura/2",
+          profile: [
+            (
+              u: "-0.03",
+              v: "0",
+              radius: "0.03",
+            ),
+            (
+              u: "0.03",
+              v: "0",
+              radius: "0.03",
+            ),
+          ],
+        ),
+        material: "Aço pintado verde",
+        in_plan: true,
+      ),
+      (
+        name: "Travessa superior",
+        shape: Sweep(
+          plane: Front,
+          path: [
+            (
+              u: "-Largura/2 - 0.05",
+              v: "Altura - 0.03",
+            ),
+            (
+              u: "Largura/2 + 0.05",
+              v: "Altura - 0.03",
+            ),
+          ],
+          offset: "0",
+          profile: [
+            (
+              u: "-0.04",
+              v: "0",
+              radius: "0.04",
+            ),
+            (
+              u: "0.04",
+              v: "0",
+              radius: "0.04",
+            ),
+          ],
+        ),
+        material: "Aço pintado verde",
+        in_plan: true,
+      ),
+      (
+        name: "Corrente 1a",
+        shape: Sweep(
+          plane: Front,
+          path: [
+            (
+              u: "-Largura/4 + (-0.2)",
+              v: "0.45",
+            ),
+            (
+              u: "-Largura/4 + (-0.2)",
+              v: "Altura - 0.07",
+            ),
+          ],
+          offset: "0",
+          profile: [
+            (
+              u: "-0.005",
+              v: "0",
+              radius: "0.005",
+            ),
+            (
+              u: "0.005",
+              v: "0",
+              radius: "0.005",
+            ),
+          ],
+        ),
+        material: "Aço galvanizado",
+        in_plan: false,
+      ),
+      (
+        name: "Corrente 1b",
+        shape: Sweep(
+          plane: Front,
+          path: [
+            (
+              u: "-Largura/4 + (0.2)",
+              v: "0.45",
+            ),
+            (
+              u: "-Largura/4 + (0.2)",
+              v: "Altura - 0.07",
+            ),
+          ],
+          offset: "0",
+          profile: [
+            (
+              u: "-0.005",
+              v: "0",
+              radius: "0.005",
+            ),
+            (
+              u: "0.005",
+              v: "0",
+              radius: "0.005",
+            ),
+          ],
+        ),
+        material: "Aço galvanizado",
+        in_plan: false,
+      ),
+      (
+        name: "Assento 1",
+        shape: Box(
+          x: "-Largura/4 - 0.23",
+          y: "-0.08",
+          z: "0.42",
+          width: "0.46",
+          depth: "0.16",
+          height: "0.03",
+        ),
+        material: "Borracha preta",
+        in_plan: true,
+      ),
+      (
+        name: "Corrente 2a",
+        shape: Sweep(
+          plane: Front,
+          path: [
+            (
+              u: "Largura/4 + (-0.2)",
+              v: "0.45",
+            ),
+            (
+              u: "Largura/4 + (-0.2)",
+              v: "Altura - 0.07",
+            ),
+          ],
+          offset: "0",
+          profile: [
+            (
+              u: "-0.005",
+              v: "0",
+              radius: "0.005",
+            ),
+            (
+              u: "0.005",
+              v: "0",
+              radius: "0.005",
+            ),
+          ],
+        ),
+        material: "Aço galvanizado",
+        in_plan: false,
+      ),
+      (
+        name: "Corrente 2b",
+        shape: Sweep(
+          plane: Front,
+          path: [
+            (
+              u: "Largura/4 + (0.2)",
+              v: "0.45",
+            ),
+            (
+              u: "Largura/4 + (0.2)",
+              v: "Altura - 0.07",
+            ),
+          ],
+          offset: "0",
+          profile: [
+            (
+              u: "-0.005",
+              v: "0",
+              radius: "0.005",
+            ),
+            (
+              u: "0.005",
+              v: "0",
+              radius: "0.005",
+            ),
+          ],
+        ),
+        material: "Aço galvanizado",
+        in_plan: false,
+      ),
+      (
+        name: "Assento 2",
+        shape: Box(
+          x: "Largura/4 - 0.23",
+          y: "-0.08",
+          z: "0.42",
+          width: "0.46",
+          depth: "0.16",
+          height: "0.03",
+        ),
+        material: "Borracha preta",
+        in_plan: true,
+      ),
+    ],
+  ),
+  types: [
+    (
+      name: "Balanço 2 lugares",
+      values: {
+        "Altura": 2.2,
+        "Largura": 2.4,
+      },
+      info: (
+        type_mark: "",
+        description: "Balanço de dois lugares em tubo de aço pintado com pernas em A, travessa a 2,20 m, correntes de aço e assentos de borracha a 45 cm do piso",
+        manufacturer: "",
+        model: "",
+        url: "",
+        keynote: "",
+        classification: "",
+        fire_rating: "",
+        comments: "",
+        cost: None,
+      ),
+    ),
+    (
+      name: "Balanço 2 lugares infantil",
+      values: {
+        "Altura": 1.9,
+        "Largura": 2.0,
+      },
+      info: (
+        type_mark: "",
+        description: "Balanço infantil de dois lugares com travessa a 1,90 m",
+        manufacturer: "",
+        model: "",
+        url: "",
+        keynote: "",
+        classification: "",
+        fire_rating: "",
+        comments: "",
+        cost: None,
+      ),
+    ),
+  ],
+  materials: [
+    (
+      name: "Borracha preta",
+      color: (34, 34, 36),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (34, 34, 36),
+        finish: Matte,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Aço galvanizado",
+      color: (176, 180, 184),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (176, 180, 184),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Aço pintado verde",
+      color: (38, 78, 58),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (38, 78, 58),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+  ],
+)

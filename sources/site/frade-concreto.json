@@ -1,0 +1,130 @@
+{
+ "component": "Frade de concreto",
+ "def": {
+  "kind": "Generic",
+  "params": [
+   {
+    "name": "Raio",
+    "value": 0.13,
+    "kind": "Length",
+    "instance": false
+   },
+   {
+    "name": "Altura",
+    "value": 0.6,
+    "kind": "Length",
+    "instance": false
+   }
+  ],
+  "items": [
+   {
+    "name": "Corpo",
+    "material": "Concreto",
+    "in_plan": true,
+    "shape": {
+     "Revolution": {
+      "plane": "Front",
+      "points": [
+       {
+        "u": "0",
+        "v": "0"
+       },
+       {
+        "u": "Raio",
+        "v": "0"
+       },
+       {
+        "u": "Raio",
+        "v": "Altura - Raio*0.5"
+       },
+       {
+        "u": "Raio*0.5",
+        "v": "Altura",
+        "radius": "Raio*0.6"
+       },
+       {
+        "u": "0",
+        "v": "Altura"
+       }
+      ],
+      "offset": "0",
+      "axis": "0",
+      "angle": "360"
+     }
+    }
+   },
+   {
+    "name": "Faixa amarela",
+    "material": "Tinta viária amarela",
+    "in_plan": true,
+    "shape": {
+     "Revolution": {
+      "plane": "Front",
+      "points": [
+       {
+        "u": "Raio - 0.001",
+        "v": "Altura*0.6"
+       },
+       {
+        "u": "Raio + 0.002",
+        "v": "Altura*0.6"
+       },
+       {
+        "u": "Raio + 0.002",
+        "v": "Altura*0.6 + 0.08"
+       },
+       {
+        "u": "Raio - 0.001",
+        "v": "Altura*0.6 + 0.08"
+       }
+      ],
+      "offset": "0",
+      "axis": "0",
+      "angle": "360"
+     }
+    }
+   }
+  ]
+ },
+ "types": [
+  {
+   "name": "Frade de concreto 60 cm",
+   "values": {},
+   "info": {
+    "description": "Frade (balizador) cilíndrico de concreto de 26 cm de diâmetro e 60 cm de altura, topo abaulado e faixa amarela, para proteger calçadas e áreas de pedestres"
+   }
+  },
+  {
+   "name": "Frade de concreto 80 cm",
+   "values": {
+    "Raio": 0.15,
+    "Altura": 0.8
+   },
+   "info": {
+    "description": "Frade de concreto de 30 cm de diâmetro e 80 cm de altura"
+   }
+  },
+  {
+   "name": "Frade de concreto 45 cm",
+   "values": {
+    "Raio": 0.12,
+    "Altura": 0.45
+   },
+   "info": {
+    "description": "Frade baixo de concreto, 24 cm de diâmetro e 45 cm de altura"
+   }
+  }
+ ],
+ "materials": [
+  {
+   "name": "Tinta viária amarela",
+   "color": [
+    246,
+    186,
+    18
+   ],
+   "class": "Paint",
+   "finish": "Matte"
+  }
+ ]
+}

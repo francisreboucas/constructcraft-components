@@ -1,0 +1,214 @@
+{
+ "component": "Placa Dê a preferência",
+ "def": {
+  "kind": "Generic",
+  "params": [
+   {
+    "name": "Lado",
+    "value": 0.75,
+    "kind": "Length",
+    "instance": false
+   },
+   {
+    "name": "AlturaLivre",
+    "value": 2.1,
+    "kind": "Length",
+    "instance": true
+   }
+  ],
+  "items": [
+   {
+    "name": "Chapa",
+    "material": "Chapa galvanizada",
+    "in_plan": true,
+    "shape": {
+     "Profile": {
+      "plane": "Front",
+      "points": [
+       {
+        "u": "0",
+        "v": "AlturaLivre"
+       },
+       {
+        "u": "Lado/2",
+        "v": "AlturaLivre + Lado*0.866025"
+       },
+       {
+        "u": "-Lado/2",
+        "v": "AlturaLivre + Lado*0.866025"
+       }
+      ],
+      "offset": "0",
+      "depth": "0.002"
+     }
+    }
+   },
+   {
+    "name": "Orla vermelha",
+    "material": "Película refletiva vermelha",
+    "in_plan": false,
+    "shape": {
+     "Profile": {
+      "plane": "Front",
+      "points": [
+       {
+        "u": "0",
+        "v": "AlturaLivre"
+       },
+       {
+        "u": "Lado/2",
+        "v": "AlturaLivre + Lado*0.866025"
+       },
+       {
+        "u": "-Lado/2",
+        "v": "AlturaLivre + Lado*0.866025"
+       }
+      ],
+      "offset": "-0.0005",
+      "depth": "0.0005"
+     }
+    }
+   },
+   {
+    "name": "Fundo branco",
+    "material": "Película refletiva branca",
+    "in_plan": false,
+    "shape": {
+     "Profile": {
+      "plane": "Front",
+      "points": [
+       {
+        "u": "0",
+        "v": "AlturaLivre + Lado*0.866025*0.666667 + (AlturaLivre - (AlturaLivre + Lado*0.866025*0.666667))*0.62"
+       },
+       {
+        "u": "Lado/2*0.62",
+        "v": "AlturaLivre + Lado*0.866025*0.666667 + (AlturaLivre + Lado*0.866025 - (AlturaLivre + Lado*0.866025*0.666667))*0.62"
+       },
+       {
+        "u": "-Lado/2*0.62",
+        "v": "AlturaLivre + Lado*0.866025*0.666667 + (AlturaLivre + Lado*0.866025 - (AlturaLivre + Lado*0.866025*0.666667))*0.62"
+       }
+      ],
+      "offset": "-0.0010",
+      "depth": "0.0005"
+     }
+    }
+   },
+   {
+    "name": "Poste",
+    "material": "Aço galvanizado",
+    "in_plan": true,
+    "shape": {
+     "Cylinder": {
+      "x": "0",
+      "y": "0.014 + 0.0302",
+      "z": "0",
+      "radius": "0.0302",
+      "height": "AlturaLivre + Lado*0.866025 - 0.03"
+     }
+    }
+   },
+   {
+    "name": "Abraçadeira 1",
+    "material": "Aço galvanizado",
+    "in_plan": true,
+    "shape": {
+     "Box": {
+      "x": "-0.035",
+      "y": "0.002",
+      "z": "AlturaLivre + Lado*0.866025*0.35 - 0.02",
+      "width": "0.07",
+      "depth": "0.012 + 0.0302",
+      "height": "0.04"
+     }
+    }
+   },
+   {
+    "name": "Abraçadeira 2",
+    "material": "Aço galvanizado",
+    "in_plan": true,
+    "shape": {
+     "Box": {
+      "x": "-0.035",
+      "y": "0.002",
+      "z": "AlturaLivre + Lado*0.866025*0.85 - 0.02",
+      "width": "0.07",
+      "depth": "0.012 + 0.0302",
+      "height": "0.04"
+     }
+    }
+   }
+  ]
+ },
+ "types": [
+  {
+   "name": "Placa Dê a preferência 75 cm",
+   "values": {},
+   "info": {
+    "description": "Placa R-2 Dê a preferência: triângulo com o vértice para baixo, 75 cm de lado, orla vermelha e fundo branco em película refletiva, em poste de aço galvanizado com altura livre de 2,10 m"
+   }
+  },
+  {
+   "name": "Placa Dê a preferência 90 cm",
+   "values": {
+    "Lado": 0.9
+   },
+   "info": {
+    "description": "Placa R-2 triangular de 90 cm de lado"
+   }
+  },
+  {
+   "name": "Placa Dê a preferência 1,00 m",
+   "values": {
+    "Lado": 1.0,
+    "AlturaLivre": 2.3
+   },
+   "info": {
+    "description": "Placa R-2 triangular de 1,00 m de lado, para rodovias"
+   }
+  }
+ ],
+ "materials": [
+  {
+   "name": "Película refletiva branca",
+   "color": [
+    244,
+    244,
+    240
+   ],
+   "class": "Plastic",
+   "finish": "Glossy"
+  },
+  {
+   "name": "Película refletiva vermelha",
+   "color": [
+    196,
+    30,
+    38
+   ],
+   "class": "Plastic",
+   "finish": "Glossy"
+  },
+  {
+   "name": "Chapa galvanizada",
+   "color": [
+    150,
+    154,
+    158
+   ],
+   "class": "Metal",
+   "finish": "Satin"
+  },
+  {
+   "name": "Aço galvanizado",
+   "color": [
+    176,
+    180,
+    184
+   ],
+   "class": "Metal",
+   "finish": "Satin"
+  }
+ ]
+}

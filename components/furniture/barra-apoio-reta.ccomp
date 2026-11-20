@@ -1,0 +1,303 @@
+(
+  format_version: 1,
+  generator: "ConstructCraft 0.12.0",
+  component: "Barra de apoio reta",
+  def: (
+    kind: Generic,
+    params: [
+      (
+        name: "Comprimento",
+        value: 0.8,
+        kind: Length,
+        instance: false,
+      ),
+      (
+        name: "Elevacao",
+        value: 0.75,
+        kind: Length,
+        instance: true,
+      ),
+    ],
+    items: [
+      (
+        name: "Barra",
+        shape: Sweep(
+          plane: Front,
+          path: [
+            (
+              u: "-Comprimento/2",
+              v: "Elevacao",
+            ),
+            (
+              u: "Comprimento/2",
+              v: "Elevacao",
+            ),
+          ],
+          offset: "-(0.04 + 0.0175)",
+          profile: [
+            (
+              u: "-0.0175",
+              v: "0",
+              radius: "0.0175",
+            ),
+            (
+              u: "0.0175",
+              v: "0",
+              radius: "0.0175",
+            ),
+          ],
+        ),
+        material: "Aço inox escovado",
+        in_plan: true,
+      ),
+      (
+        name: "Canopla esquerda",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "-Comprimento/2 + 0.0175",
+              v: "-0.008",
+            ),
+            (
+              u: "-Comprimento/2 + 0.0175 + 0.035",
+              v: "-0.008",
+            ),
+            (
+              u: "-Comprimento/2 + 0.0175 + 0.035",
+              v: "0",
+            ),
+            (
+              u: "-Comprimento/2 + 0.0175",
+              v: "0",
+            ),
+          ],
+          offset: "Elevacao",
+          axis: "-Comprimento/2 + 0.0175",
+          angle: "360",
+        ),
+        material: "Aço inox escovado",
+        in_plan: true,
+      ),
+      (
+        name: "Haste esquerda",
+        shape: Sweep(
+          plane: Side,
+          path: [
+            (
+              u: "-0.008",
+              v: "Elevacao",
+            ),
+            (
+              u: "-(0.04 + 0.0175)",
+              v: "Elevacao",
+            ),
+          ],
+          offset: "-Comprimento/2 + 0.0175",
+          profile: [
+            (
+              u: "-0.011",
+              v: "0",
+              radius: "0.011",
+            ),
+            (
+              u: "0.011",
+              v: "0",
+              radius: "0.011",
+            ),
+          ],
+        ),
+        material: "Aço inox escovado",
+        in_plan: false,
+      ),
+      (
+        name: "Canopla direita",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "Comprimento/2 - 0.0175",
+              v: "-0.008",
+            ),
+            (
+              u: "Comprimento/2 - 0.0175 + 0.035",
+              v: "-0.008",
+            ),
+            (
+              u: "Comprimento/2 - 0.0175 + 0.035",
+              v: "0",
+            ),
+            (
+              u: "Comprimento/2 - 0.0175",
+              v: "0",
+            ),
+          ],
+          offset: "Elevacao",
+          axis: "Comprimento/2 - 0.0175",
+          angle: "360",
+        ),
+        material: "Aço inox escovado",
+        in_plan: true,
+      ),
+      (
+        name: "Haste direita",
+        shape: Sweep(
+          plane: Side,
+          path: [
+            (
+              u: "-0.008",
+              v: "Elevacao",
+            ),
+            (
+              u: "-(0.04 + 0.0175)",
+              v: "Elevacao",
+            ),
+          ],
+          offset: "Comprimento/2 - 0.0175",
+          profile: [
+            (
+              u: "-0.011",
+              v: "0",
+              radius: "0.011",
+            ),
+            (
+              u: "0.011",
+              v: "0",
+              radius: "0.011",
+            ),
+          ],
+        ),
+        material: "Aço inox escovado",
+        in_plan: false,
+      ),
+    ],
+  ),
+  types: [
+    (
+      name: "Barra de apoio reta 80 cm",
+      values: {
+        "Comprimento": 0.8,
+        "Elevacao": 0.75,
+      },
+      info: (
+        type_mark: "",
+        description: "Barra de apoio reta de aço inox de 35 mm, 80 cm, a 4 cm da parede, fixada por canoplas nas pontas (ABNT NBR 9050), com o eixo a 75 cm do piso",
+        manufacturer: "",
+        model: "",
+        url: "",
+        keynote: "",
+        classification: "",
+        fire_rating: "",
+        comments: "",
+        cost: None,
+      ),
+    ),
+    (
+      name: "Barra de apoio reta 40 cm",
+      values: {
+        "Comprimento": 0.4,
+        "Elevacao": 0.75,
+      },
+      info: (
+        type_mark: "",
+        description: "Barra de apoio reta de 40 cm, para lavatórios e portas",
+        manufacturer: "",
+        model: "",
+        url: "",
+        keynote: "",
+        classification: "",
+        fire_rating: "",
+        comments: "",
+        cost: None,
+      ),
+    ),
+    (
+      name: "Barra de apoio reta 60 cm",
+      values: {
+        "Comprimento": 0.6,
+        "Elevacao": 0.75,
+      },
+      info: (
+        type_mark: "",
+        description: "Barra de apoio reta de 60 cm",
+        manufacturer: "",
+        model: "",
+        url: "",
+        keynote: "",
+        classification: "",
+        fire_rating: "",
+        comments: "",
+        cost: None,
+      ),
+    ),
+    (
+      name: "Barra de apoio reta 90 cm",
+      values: {
+        "Comprimento": 0.9,
+        "Elevacao": 0.75,
+      },
+      info: (
+        type_mark: "",
+        description: "Barra de apoio reta de 90 cm, para a parede lateral da bacia",
+        manufacturer: "",
+        model: "",
+        url: "",
+        keynote: "",
+        classification: "",
+        fire_rating: "",
+        comments: "",
+        cost: None,
+      ),
+    ),
+  ],
+  materials: [
+    (
+      name: "Aço inox escovado",
+      color: (196, 198, 200),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (196, 198, 200),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+  ],
+)

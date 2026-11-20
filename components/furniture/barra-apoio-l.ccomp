@@ -1,0 +1,342 @@
+(
+  format_version: 1,
+  generator: "ConstructCraft 0.12.0",
+  component: "Barra de apoio em L",
+  def: (
+    kind: Generic,
+    params: [
+      (
+        name: "Comprimento",
+        value: 0.7,
+        kind: Length,
+        instance: false,
+      ),
+      (
+        name: "AlturaVertical",
+        value: 0.7,
+        kind: Length,
+        instance: false,
+      ),
+      (
+        name: "Elevacao",
+        value: 0.75,
+        kind: Length,
+        instance: true,
+      ),
+    ],
+    items: [
+      (
+        name: "Barra",
+        shape: Sweep(
+          plane: Front,
+          path: [
+            (
+              u: "-Comprimento/2",
+              v: "Elevacao",
+            ),
+            (
+              u: "Comprimento/2 - 0.05",
+              v: "Elevacao",
+              radius: "0.05",
+            ),
+            (
+              u: "Comprimento/2",
+              v: "Elevacao + 0.05",
+            ),
+            (
+              u: "Comprimento/2",
+              v: "Elevacao + AlturaVertical",
+            ),
+          ],
+          offset: "-(0.04 + 0.0175)",
+          profile: [
+            (
+              u: "-0.0175",
+              v: "0",
+              radius: "0.0175",
+            ),
+            (
+              u: "0.0175",
+              v: "0",
+              radius: "0.0175",
+            ),
+          ],
+        ),
+        material: "Aço inox escovado",
+        in_plan: true,
+      ),
+      (
+        name: "Canopla horizontal",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "-Comprimento/2 + 0.0175",
+              v: "-0.008",
+            ),
+            (
+              u: "-Comprimento/2 + 0.0175 + 0.035",
+              v: "-0.008",
+            ),
+            (
+              u: "-Comprimento/2 + 0.0175 + 0.035",
+              v: "0",
+            ),
+            (
+              u: "-Comprimento/2 + 0.0175",
+              v: "0",
+            ),
+          ],
+          offset: "Elevacao",
+          axis: "-Comprimento/2 + 0.0175",
+          angle: "360",
+        ),
+        material: "Aço inox escovado",
+        in_plan: true,
+      ),
+      (
+        name: "Haste horizontal",
+        shape: Sweep(
+          plane: Side,
+          path: [
+            (
+              u: "-0.008",
+              v: "Elevacao",
+            ),
+            (
+              u: "-(0.04 + 0.0175)",
+              v: "Elevacao",
+            ),
+          ],
+          offset: "-Comprimento/2 + 0.0175",
+          profile: [
+            (
+              u: "-0.011",
+              v: "0",
+              radius: "0.011",
+            ),
+            (
+              u: "0.011",
+              v: "0",
+              radius: "0.011",
+            ),
+          ],
+        ),
+        material: "Aço inox escovado",
+        in_plan: false,
+      ),
+      (
+        name: "Canopla do canto",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "Comprimento/2 - 0.04",
+              v: "-0.008",
+            ),
+            (
+              u: "Comprimento/2 - 0.04 + 0.035",
+              v: "-0.008",
+            ),
+            (
+              u: "Comprimento/2 - 0.04 + 0.035",
+              v: "0",
+            ),
+            (
+              u: "Comprimento/2 - 0.04",
+              v: "0",
+            ),
+          ],
+          offset: "Elevacao + 0.04",
+          axis: "Comprimento/2 - 0.04",
+          angle: "360",
+        ),
+        material: "Aço inox escovado",
+        in_plan: true,
+      ),
+      (
+        name: "Haste do canto",
+        shape: Sweep(
+          plane: Side,
+          path: [
+            (
+              u: "-0.008",
+              v: "Elevacao + 0.04",
+            ),
+            (
+              u: "-(0.04 + 0.0175)",
+              v: "Elevacao + 0.04",
+            ),
+          ],
+          offset: "Comprimento/2 - 0.04",
+          profile: [
+            (
+              u: "-0.011",
+              v: "0",
+              radius: "0.011",
+            ),
+            (
+              u: "0.011",
+              v: "0",
+              radius: "0.011",
+            ),
+          ],
+        ),
+        material: "Aço inox escovado",
+        in_plan: false,
+      ),
+      (
+        name: "Canopla vertical",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "Comprimento/2 - 0.0175",
+              v: "-0.008",
+            ),
+            (
+              u: "Comprimento/2 - 0.0175 + 0.035",
+              v: "-0.008",
+            ),
+            (
+              u: "Comprimento/2 - 0.0175 + 0.035",
+              v: "0",
+            ),
+            (
+              u: "Comprimento/2 - 0.0175",
+              v: "0",
+            ),
+          ],
+          offset: "Elevacao + AlturaVertical - 0.0175",
+          axis: "Comprimento/2 - 0.0175",
+          angle: "360",
+        ),
+        material: "Aço inox escovado",
+        in_plan: true,
+      ),
+      (
+        name: "Haste vertical",
+        shape: Sweep(
+          plane: Side,
+          path: [
+            (
+              u: "-0.008",
+              v: "Elevacao + AlturaVertical - 0.0175",
+            ),
+            (
+              u: "-(0.04 + 0.0175)",
+              v: "Elevacao + AlturaVertical - 0.0175",
+            ),
+          ],
+          offset: "Comprimento/2 - 0.0175",
+          profile: [
+            (
+              u: "-0.011",
+              v: "0",
+              radius: "0.011",
+            ),
+            (
+              u: "0.011",
+              v: "0",
+              radius: "0.011",
+            ),
+          ],
+        ),
+        material: "Aço inox escovado",
+        in_plan: false,
+      ),
+    ],
+  ),
+  types: [
+    (
+      name: "Barra de apoio em L 70 x 70 cm",
+      values: {
+        "AlturaVertical": 0.7,
+        "Comprimento": 0.7,
+        "Elevacao": 0.75,
+      },
+      info: (
+        type_mark: "",
+        description: "Barra de apoio em L de aço inox de 35 mm, 70 cm na horizontal e 70 cm na vertical, a 4 cm da parede (ABNT NBR 9050), para boxes de chuveiro; a parte horizontal a 75 cm do piso",
+        manufacturer: "",
+        model: "",
+        url: "",
+        keynote: "",
+        classification: "",
+        fire_rating: "",
+        comments: "",
+        cost: None,
+      ),
+    ),
+    (
+      name: "Barra de apoio em L 60 x 60 cm",
+      values: {
+        "AlturaVertical": 0.6,
+        "Comprimento": 0.6,
+        "Elevacao": 0.75,
+      },
+      info: (
+        type_mark: "",
+        description: "Barra de apoio em L de 60 x 60 cm",
+        manufacturer: "",
+        model: "",
+        url: "",
+        keynote: "",
+        classification: "",
+        fire_rating: "",
+        comments: "",
+        cost: None,
+      ),
+    ),
+  ],
+  materials: [
+    (
+      name: "Aço inox escovado",
+      color: (196, 198, 200),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (196, 198, 200),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+  ],
+)

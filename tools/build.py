@@ -40,6 +40,7 @@ SECTIONS = {
     "windows": "Janelas · Windows",
     "vehicles": "Veículos · Vehicles",
     "site": "Área externa · Site",
+    "signage": "Sinalização · Signage",
 }
 
 

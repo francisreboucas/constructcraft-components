@@ -12,6 +12,7 @@ const folders = {
   windows: 'Janelas',
   vehicles: 'Veículos',
   site: 'Área externa',
+  signage: 'Sinalização',
 };
 
 export const pt = {
@@ -127,7 +128,8 @@ export const pt = {
       doors: 'De abrir, de correr, pivotante, camarão e portão basculante.',
       windows: 'De correr, de abrir, basculante, maxim-ar, veneziana e fixa.',
       vehicles: 'Para compor garagens e fachadas.',
-      site: 'Vagas, legendas, setas, faixas e lombadas, com os textos editáveis.',
+      site: 'Vagas, legendas e setas no piso, lombadas, bancos, lixeiras, bicicletários, postes, playground e piso tátil.',
+      signage: 'Placas de trânsito, de orientação, de emergência e de identificação tátil, com os textos editáveis.',
     } as Record<keyof typeof folders, string>,
     quality: 'O que todo componente traz',
     qualityNote: 'O que um componente precisa ter para entrar na biblioteca.',

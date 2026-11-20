@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Generate the outdoor floor sources (sources/site/*.json).
+"""Generate the outdoor sources: sources/site/ (floor markings, site furniture, tactile
+paving), sources/signage/ (signs) and the grab bars of sources/furniture/.
 
     python tools/site.py      then  python tools/build.py
 
@@ -26,6 +27,7 @@ Edit this file, lib.lua, componentes.lua or figuras.py, not the JSON.
 from __future__ import annotations
 
 import json
+import math
 import re
 import sys
 from pathlib import Path
@@ -460,19 +462,667 @@ def road_stud() -> dict:
 
 COMPONENTS += [wheel_stop(), road_stud()]
 
+# --- signs (sources/signage/) ------------------------------------------------------------
+#
+# Signs face -y. The plate (galvanized sheet, y 0 to 2 mm) and its retroreflective films
+# (0.5 mm layers in front of it, towards -y) are plain pieces; the script draws the symbols
+# and text over the films. The post stands behind the plate, from the floor.
+
+FILM_W, FILM_R, FILM_Y, FILM_K = "Película refletiva branca", "Película refletiva vermelha", "Película refletiva amarela", "Película preta"
+FILM_G, FILM_B = "Película refletiva verde", "Película refletiva azul"
+SHEET, STEEL = "Chapa galvanizada", "Aço galvanizado"
+PVC_G, PVC_R = "PVC fotoluminescente verde", "PVC vermelho"
+ACR_W, ACR_K = "Acrílico branco", "Acrílico preto"
+MATERIALS.update({
+    FILM_W: {"color": [244, 244, 240], "class": "Plastic", "finish": "Glossy"},
+    FILM_R: {"color": [196, 30, 38], "class": "Plastic", "finish": "Glossy"},
+    FILM_Y: {"color": [250, 196, 0], "class": "Plastic", "finish": "Glossy"},
+    FILM_K: {"color": [24, 24, 26], "class": "Plastic", "finish": "Matte"},
+    FILM_G: {"color": [0, 112, 70], "class": "Plastic", "finish": "Glossy"},
+    FILM_B: {"color": [0, 72, 150], "class": "Plastic", "finish": "Glossy"},
+    SHEET: {"color": [150, 154, 158], "class": "Metal", "finish": "Satin"},
+    STEEL: {"color": [176, 180, 184], "class": "Metal", "finish": "Satin"},
+    PVC_G: {"color": [0, 136, 76], "class": "Plastic", "finish": "Satin"},
+    PVC_R: {"color": [200, 28, 36], "class": "Plastic", "finish": "Satin"},
+    ACR_W: {"color": [246, 246, 244], "class": "Plastic", "finish": "Glossy"},
+    ACR_K: {"color": [28, 28, 30], "class": "Plastic", "finish": "Glossy"},
+})
+
+# The materials the scripts name (MAT.<key> in Lua); each is on a plain piece of the
+# components that use it.
+MAT_KEYS = {"branca": FILM_W, "vermelha": FILM_R, "amarela": FILM_Y, "preta": FILM_K, "aco": STEEL}
+
+
+def front(name, points, y0, depth, material, in_plan=False):
+    """A plain piece drawn on the front plane (u = x, v = z), from y = y0 to y0 + depth."""
+    pts = []
+    for p in points:
+        q = {"u": p[0], "v": p[1]}
+        if len(p) > 2:
+            q["radius"] = p[2]
+        pts.append(q)
+    return {"name": name, "material": material, "in_plan": in_plan,
+            "shape": {"Profile": {"plane": "Front", "points": pts, "offset": str(y0), "depth": str(depth)}}}
+
+
+def circle(cz, r):
+    return [[f"-({r})", cz, r], [f"{r}", cz, r]]
+
+
+def ngon(cz, radius, n, start_deg):
+    out = []
+    for i in range(n):
+        a = math.radians(start_deg + 360 * i / n)
+        out.append([f"({radius})*{math.cos(a):.6f}", f"{cz} + ({radius})*{math.sin(a):.6f}"])
+    return out
+
+
+def rounded_rect(x0, z0, x1, z1, r):
+    """A rectangle with round corners of radius r (counter-clockwise, arcs bulging out)."""
+    return [
+        [f"{x0} + {r}", z0], [f"{x1} - {r}", z0, r], [x1, f"{z0} + {r}"], [x1, f"{z1} - {r}", r],
+        [f"{x1} - {r}", z1], [f"{x0} + {r}", z1, r], [x0, f"{z1} - {r}"], [x0, f"{z0} + {r}", r],
+    ]
+
+
+def post_and_clamps(top: str, zs: list[str], r="0.0302"):
+    y = f"0.014 + {r}"
+    items = [{"name": "Poste", "material": STEEL, "in_plan": True,
+              "shape": {"Cylinder": {"x": "0", "y": y, "z": "0", "radius": r, "height": top}}}]
+    for i, z in enumerate(zs):
+        items.append(box(f"Abraçadeira {i + 1}", "-0.035", "0.002", f"{z} - 0.02", "0.07", f"0.012 + {r}", "0.04", STEEL))
+    return items
+
+
+def layered(shapes: list, names: list[str], materials: list[str]):
+    """The plate (sheet) and its films, one per shape from the back: each 0.5 mm further out."""
+    items = [front("Chapa", shapes[0], 0, 0.002, SHEET, in_plan=True)]
+    for i, (pts, name, mat) in enumerate(zip(shapes, names, materials)):
+        items.append(front(name, pts, f"{-0.0005 * (i + 1):.4f}", 0.0005, mat))
+    return items
+
+
+def sign_regulation() -> dict:
+    cz, r = "AlturaLivre + Diametro/2", "Diametro/2"
+    items = layered([circle(cz, r), circle(cz, f"{r} - Diametro*0.1")], ["Orla vermelha", "Fundo branco"], [FILM_R, FILM_W])
+    items += post_and_clamps("AlturaLivre + Diametro - 0.03", [f"{cz} - Diametro*0.28", f"{cz} + Diametro*0.28"])
+    return {
+        "folder": "signage", "file": "placa-regulamentacao", "component": "Placa de regulamentação",
+        "material": FILM_K, "font": True, "in_plan": False,
+        "figures": ["seta_frente", "seta_direita", "seta_esquerda", "seta_retorno"],
+        "params": [
+            plain("Diametro", 0.5), Param("length", "AlturaLivre", 2.1, "AlturaLivre", instance=True, script=False),
+            Param("choice", "Sinal", "texto", "Sinal", instance=True, choices=[
+                ("texto", "Valor e unidade (velocidade, peso, altura...)"), ("proibido_estacionar", "Proibido estacionar (R-6a)"),
+                ("proibido_parar", "Proibido parar e estacionar (R-6c)"), ("estacionamento", "Estacionamento regulamentado (R-6b)"),
+                ("proibido_esquerda", "Proibido virar à esquerda (R-4a)"), ("proibido_direita", "Proibido virar à direita (R-4b)"),
+                ("proibido_retorno", "Proibido retornar (R-5a)"), ("sentido_proibido", "Sentido proibido (R-3)"),
+                ("sentido_frente", "Siga em frente"), ("sentido_direita", "Vire à direita"), ("sentido_esquerda", "Vire à esquerda"),
+            ]),
+            text("Valor", "40", "Valor"),
+            text("Unidade", "km/h", "Unidade"),
+        ],
+        "items": items,
+        "types": [
+            t("Placa circular 50 cm", "Placa de regulamentação circular de 50 cm em chapa galvanizada com película refletiva, orla vermelha e fundo branco, em poste de aço galvanizado com altura livre de 2,10 m; o sinal (velocidade máxima, proibido estacionar, proibido parar, proibido virar, sentido proibido...) e o valor e a unidade (40 km/h, 10 t, 3,5 m...) são editáveis em cada placa"),
+            t("Placa circular 60 cm", "Placa de regulamentação circular de 60 cm, altura livre de 2,10 m", Diametro=0.6),
+            t("Placa circular 75 cm", "Placa de regulamentação circular de 75 cm, para vias arteriais e rodovias", Diametro=0.75),
+            t("Placa circular 1,00 m", "Placa de regulamentação circular de 1,00 m, para vias de trânsito rápido", Diametro=1.0, AlturaLivre=2.3),
+        ],
+    }
+
+
+def sign_stop() -> dict:
+    cz, rr = "AlturaLivre + Largura/2", "Largura*0.541196"
+    items = layered([ngon(cz, rr, 8, 22.5), ngon(cz, f"{rr} - Largura*0.037", 8, 22.5)], ["Orla branca", "Fundo vermelho"], [FILM_W, FILM_R])
+    items += post_and_clamps("AlturaLivre + Largura - 0.03", [f"{cz} - Largura*0.28", f"{cz} + Largura*0.28"])
+    return {
+        "folder": "signage", "file": "placa-pare", "component": "Placa PARE",
+        "material": FILM_W, "font": True, "in_plan": False,
+        "params": [plain("Largura", 0.6), Param("length", "AlturaLivre", 2.1, "AlturaLivre", instance=True, script=False),
+                   text("Texto", "PARE", "Texto")],
+        "items": items,
+        "types": [
+            t("Placa PARE 60 cm", "Placa R-1 Parada obrigatória: octógono vermelho de 60 cm entre lados, orla e legenda brancas em película refletiva, em poste de aço galvanizado com altura livre de 2,10 m; a legenda é editável (PARE, STOP...)"),
+            t("Placa PARE 80 cm", "Placa R-1 octogonal de 80 cm entre lados", Largura=0.8),
+            t("Placa PARE 1,00 m", "Placa R-1 octogonal de 1,00 m entre lados, para rodovias", Largura=1.0, AlturaLivre=2.3),
+        ],
+    }
+
+
+def sign_give_way() -> dict:
+    h = "Lado*0.866025"
+    top, bot = f"AlturaLivre + {h}", "AlturaLivre"
+    gz = f"AlturaLivre + {h}*0.666667"  # the centroid's height
+    outer = [["0", bot], ["Lado/2", top], ["-Lado/2", top]]
+    k = 0.62
+    inner = [["0", f"{gz} + ({bot} - ({gz}))*{k}"], [f"Lado/2*{k}", f"{gz} + ({top} - ({gz}))*{k}"], [f"-Lado/2*{k}", f"{gz} + ({top} - ({gz}))*{k}"]]
+    items = layered([outer, inner], ["Orla vermelha", "Fundo branco"], [FILM_R, FILM_W])
+    items += post_and_clamps(f"AlturaLivre + {h} - 0.03", [f"AlturaLivre + {h}*0.35", f"AlturaLivre + {h}*0.85"])
+    return {
+        "folder": "signage", "file": "placa-de-a-preferencia", "component": "Placa Dê a preferência",
+        "params": [plain("Lado", 0.75), Param("length", "AlturaLivre", 2.1, "AlturaLivre", instance=True, script=False)],
+        "items": items,
+        "types": [
+            t("Placa Dê a preferência 75 cm", "Placa R-2 Dê a preferência: triângulo com o vértice para baixo, 75 cm de lado, orla vermelha e fundo branco em película refletiva, em poste de aço galvanizado com altura livre de 2,10 m"),
+            t("Placa Dê a preferência 90 cm", "Placa R-2 triangular de 90 cm de lado", Lado=0.9),
+            t("Placa Dê a preferência 1,00 m", "Placa R-2 triangular de 1,00 m de lado, para rodovias", Lado=1.0, AlturaLivre=2.3),
+        ],
+    }
+
+
+def sign_warning() -> dict:
+    a = "Lado*0.707107"  # half the diagonal
+    cz = f"AlturaLivre + {a}"
+    shapes = [ngon(cz, a, 4, 90), ngon(cz, f"{a} - Lado*0.03", 4, 90), ngon(cz, f"{a} - Lado*0.065", 4, 90)]
+    items = layered(shapes, ["Orla externa amarela", "Orla interna preta", "Fundo amarelo"], [FILM_Y, FILM_K, FILM_Y])
+    items += post_and_clamps(f"AlturaLivre + 2*{a} - 0.03", [f"{cz} - {a}*0.5", f"{cz} + {a}*0.5"])
+    return {
+        "folder": "signage", "file": "placa-advertencia", "component": "Placa de advertência",
+        "material": FILM_K, "font": True, "in_plan": False,
+        "figures": ["seta_frente", "seta_direita", "seta_esquerda"],
+        "params": [
+            plain("Lado", 0.6), Param("length", "AlturaLivre", 2.1, "AlturaLivre", instance=True, script=False),
+            Param("choice", "Sinal", "texto", "Sinal", instance=True, choices=[
+                ("texto", "Texto (até duas linhas)"), ("lombada", "Saliência ou lombada (A-18)"), ("curva_direita", "Curva à direita"),
+                ("curva_esquerda", "Curva à esquerda"), ("cruzamento", "Cruzamento de vias (A-7a)"), ("duplo_sentido", "Sentido duplo de circulação"),
+            ]),
+            text("Linha1", "ESCOLA", "Linha 1"),
+            text("Linha2", "", "Linha 2"),
+        ],
+        "items": items,
+        "types": [
+            t("Placa de advertência 60 cm", "Placa de advertência quadrada de 60 cm de lado, com uma diagonal na vertical, fundo amarelo e orla preta em película refletiva, em poste de aço galvanizado com altura livre de 2,10 m; o sinal (texto, lombada, curva, cruzamento, sentido duplo) e as duas linhas de texto são editáveis em cada placa"),
+            t("Placa de advertência 45 cm", "Placa de advertência de 45 cm de lado, para vias locais e condomínios", Lado=0.45),
+            t("Placa de advertência 75 cm", "Placa de advertência de 75 cm de lado, para vias arteriais", Lado=0.75),
+            t("Placa de advertência 90 cm", "Placa de advertência de 90 cm de lado, para rodovias", Lado=0.9, AlturaLivre=2.3),
+        ],
+    }
+
+
+def sign_parking() -> dict:
+    cz = "AlturaLivre + AlturaInfo + 0.05 + Diametro/2"
+    rect = rounded_rect("-LarguraInfo/2", "AlturaLivre", "LarguraInfo/2", "AlturaLivre + AlturaInfo", "0.02")
+    inner = rounded_rect("-LarguraInfo/2 + 0.012", "AlturaLivre + 0.012", "LarguraInfo/2 - 0.012", "AlturaLivre + AlturaInfo - 0.012", "0.012")
+    items = layered([circle(cz, "Diametro/2"), circle(cz, "Diametro/2 - Diametro*0.1")], ["Orla vermelha", "Fundo branco"], [FILM_R, FILM_W])
+    items += [front("Chapa da informação", rect, 0, 0.002, SHEET, in_plan=True),
+              front("Orla da informação", rect, -0.0005, 0.0005, FILM_K),
+              front("Fundo da informação", inner, -0.001, 0.0005, FILM_W)]
+    items += post_and_clamps("AlturaLivre + AlturaInfo + 0.05 + Diametro - 0.03",
+                             ["AlturaLivre + AlturaInfo/2", f"{cz}"])
+    return {
+        "folder": "signage", "file": "placa-estacionamento", "component": "Placa de estacionamento regulamentado",
+        "material": FILM_K, "font": True, "in_plan": False, "figures": ["cadeirante"],
+        "params": [
+            plain("Diametro", 0.5), plain("LarguraInfo", 0.5), plain("AlturaInfo", 0.4),
+            Param("length", "AlturaLivre", 2.1, "AlturaLivre", instance=True, script=False),
+            Param("choice", "Simbolo", "nenhum", "Símbolo na informação", instance=True,
+                  choices=[("nenhum", "Nenhum"), ("cadeirante", "Símbolo internacional de acesso")]),
+            text("Linha1", "VAGA EXCLUSIVA", "Linha 1"),
+            text("Linha2", "IDOSO", "Linha 2"),
+            text("Linha3", "CREDENCIAL OBRIGATÓRIA", "Linha 3"),
+        ],
+        "items": items,
+        "types": [
+            t("Placa estacionamento 50 cm com informação", "Placa R-6b Estacionamento regulamentado de 50 cm com informação complementar de 50 x 40 cm abaixo (Resolução CONTRAN 965/2022), em poste de aço galvanizado; as três linhas da informação (VAGA EXCLUSIVA, IDOSO, PcD, CARGA E DESCARGA, horários...) e o símbolo de acesso são editáveis em cada placa"),
+            t("Placa estacionamento 60 cm com informação", "Placa R-6b de 60 cm com informação complementar de 60 x 45 cm", Diametro=0.6, LarguraInfo=0.6, AlturaInfo=0.45),
+        ],
+    }
+
+
+def sign_guide(file, component, color, default_lines, arrow, what) -> dict:
+    W, Hp = "Largura", "Altura"
+    r = "min(Largura, Altura)*0.05"
+    outer = rounded_rect(f"-{W}/2", "AlturaLivre", f"{W}/2", f"AlturaLivre + {Hp}", "0.03")
+    e = "0.012"
+    inner = rounded_rect(f"-{W}/2 + {e}", f"AlturaLivre + {e}", f"{W}/2 - {e}", f"AlturaLivre + {Hp} - {e}", "0.02")
+    items = layered([outer, inner], ["Orla branca", "Fundo"], [FILM_W, color])
+    for i, z in enumerate((f"AlturaLivre + {Hp}*0.25", f"AlturaLivre + {Hp}*0.75")):
+        items.append(box(f"Trilho de fixação {i + 1}", f"-{W}/2 + 0.04", "0.002", f"{z} - 0.02", f"{W} - 0.08", "0.022", "0.04", STEEL))
+    del r
+    return {
+        "folder": "signage", "file": file, "component": component,
+        "material": FILM_W, "font": True, "figures": ["seta_frente"],
+        "params": [
+            plain("Largura", 1.0), plain("Altura", 0.5), Param("length", "AlturaLivre", 2.1, "AlturaLivre", instance=True, script=False),
+            text("Linha1", default_lines[0], "Linha 1"),
+            text("Linha2", default_lines[1], "Linha 2"),
+            text("Linha3", default_lines[2], "Linha 3"),
+            Param("choice", "Seta", arrow, "Seta", instance=True, choices=[
+                ("nenhuma", "Nenhuma"), ("esquerda", "Para a esquerda"), ("direita", "Para a direita"), ("frente", "Em frente"),
+                ("frente_esquerda", "Em frente, à esquerda"), ("frente_direita", "Em frente, à direita"),
+            ]),
+        ],
+        "items": items,
+        "script_body": "placa-orientacao",
+        "types": [
+            t(f"{component} 1,00 x 0,50", f"{what} de 1,00 x 0,50 m com orla branca e cantos arredondados, em película refletiva sobre chapa galvanizada com trilhos de fixação, num poste (dois a partir de 1,30 m de largura) com altura livre de 2,10 m; até três linhas de texto e a seta são editáveis em cada placa"),
+            t(f"{component} 0,60 x 0,30", f"{what} de 0,60 x 0,30 m, para condomínios, estacionamentos e vias internas", Largura=0.6, Altura=0.3),
+            t(f"{component} 2,00 x 1,00", f"{what} de 2,00 x 1,00 m em dois postes", Largura=2.0, Altura=1.0, AlturaLivre=2.3),
+            t(f"{component} 3,00 x 1,50", f"{what} de 3,00 x 1,50 m em dois postes, para vias arteriais", Largura=3.0, Altura=1.5, AlturaLivre=2.5),
+        ],
+    }
+
+
+def sign_wall(file, component, plate_mat, defaults, arrow, choices_down, what, sizes) -> dict:
+    pts = rounded_rect("-Largura/2", "Elevacao", "Largura/2", "Elevacao + Altura", "Altura*0.04")
+    return {
+        "folder": "signage", "file": file, "component": component,
+        "material": FILM_W, "font": True, "figures": ["seta_frente"],
+        "params": [
+            plain("Largura", sizes[0][0]), plain("Altura", sizes[0][1]),
+            Param("length", "Elevacao", 2.1, "Elevacao", instance=True, script=False),
+            text("Linha1", defaults[0], "Linha 1"),
+            text("Linha2", defaults[1], "Linha 2"),
+            Param("choice", "Seta", arrow, "Seta", instance=True, choices=[
+                ("nenhuma", "Nenhuma"), ("esquerda", "Para a esquerda"), ("direita", "Para a direita"), ("frente", "Para cima (em frente)"),
+                ("baixo", "Para baixo"), ("frente_esquerda", "Diagonal à esquerda"), ("frente_direita", "Diagonal à direita"),
+            ]),
+        ],
+        "items": [front("Placa", pts, -0.002, 0.002, plate_mat, in_plan=True)],
+        "script_body": "placa-emergencia",
+        "types": [
+            t(f"{component} {w * 100:.0f} x {h * 100:.0f} cm".replace(".", ","),
+              (what if i == 0 else f"{component} de {w * 100:.0f} x {h * 100:.0f} cm") , **({} if i == 0 else {"Largura": w, "Altura": h}))
+            for i, (w, h) in enumerate(sizes)
+        ],
+    }
+
+
+def sign_room() -> dict:
+    pts = rounded_rect("-Largura/2", "Elevacao", "Largura/2", "Elevacao + Altura", "0.008")
+    return {
+        "folder": "signage", "file": "placa-identificacao", "component": "Placa de identificação tátil",
+        "material": ACR_K, "font": True,
+        "params": [
+            plain("Largura", 0.3), plain("Altura", 0.15), Param("length", "Elevacao", 1.3, "Elevacao", instance=True, script=False),
+            text("Linha1", "SALA 101", "Linha 1"),
+            text("Linha2", "REUNIÕES", "Linha 2"),
+            length("AlturaTexto", 0.025, "Altura das letras"),
+            Param("boolean", "Braille", True, "Braille", instance=True),
+        ],
+        "items": [front("Placa", pts, -0.003, 0.003, ACR_W, in_plan=True)],
+        "script_body": "placa-identificacao",
+        "types": [
+            t("Placa de identificação 30 x 15 cm", "Placa de identificação de ambiente em acrílico branco de 3 mm, 30 x 15 cm, com texto em relevo de 1 mm e a transcrição em braille (ABNT NBR 9050), fixada na parede a 1,30 m do piso; as duas linhas de texto são editáveis em cada placa e o braille acompanha o texto"),
+            t("Placa de identificação 20 x 10 cm", "Placa de identificação tátil de 20 x 10 cm, letras de 2 cm, para portas", Largura=0.2, Altura=0.1, AlturaTexto=0.02),
+            t("Placa de identificação 40 x 20 cm", "Placa de identificação tátil de 40 x 20 cm, letras de 3,5 cm", Largura=0.4, Altura=0.2, AlturaTexto=0.035),
+        ],
+    }
+
+
+def house_number() -> dict:
+    pts = rounded_rect("-Largura/2", "Elevacao", "Largura/2", "Elevacao + Altura", "0.012")
+    return {
+        "folder": "signage", "file": "numero-predial", "component": "Número predial",
+        "material": ACR_W, "font": True,
+        "params": [
+            plain("Largura", 0.25), plain("Altura", 0.15), Param("length", "Elevacao", 1.8, "Elevacao", instance=True, script=False),
+            text("Numero", "123", "Número"),
+            text("Logradouro", "RUA DAS FLORES", "Logradouro"),
+        ],
+        "items": [front("Placa", pts, -0.004, 0.004, ACR_K, in_plan=True)],
+        "script_body": "numero-predial",
+        "types": [
+            t("Número predial 25 x 15 cm", "Placa de numeração predial em acrílico preto de 4 mm, 25 x 15 cm, com o número e o logradouro em relevo branco de 2 mm, fixada na fachada a 1,80 m; número e logradouro editáveis em cada placa"),
+            t("Número predial 40 x 25 cm", "Placa de numeração predial de 40 x 25 cm, para fachadas recuadas", Largura=0.4, Altura=0.25),
+        ],
+    }
+
+
+COMPONENTS += [
+    sign_regulation(), sign_stop(), sign_give_way(), sign_warning(), sign_parking(),
+    sign_guide("placa-orientacao", "Placa de orientação", FILM_G, ("CENTRO", "AEROPORTO", ""), "direita",
+               "Placa de orientação de destino (verde)"),
+    sign_guide("placa-servicos", "Placa de serviços", FILM_B, ("ESTACIONAMENTO", "", ""), "frente",
+               "Placa indicativa de serviços auxiliares e atrativos (azul)"),
+    sign_wall("placa-saida-emergencia", "Placa de saída de emergência", PVC_G, ("SAÍDA", ""), "direita", True,
+              "Placa de saída de emergência (ABNT NBR 13434) em PVC fotoluminescente verde, 32 x 16 cm, com texto e seta brancos, fixada na parede a 2,10 m; o texto (SAÍDA, SAÍDA DE EMERGÊNCIA, ROTA DE FUGA...) e a seta são editáveis em cada placa",
+              [(0.32, 0.16), (0.24, 0.12), (0.48, 0.24)]),
+    sign_wall("placa-equipamento-incendio", "Placa de equipamento de incêndio", PVC_R, ("EXTINTOR", "PÓ ABC"), "nenhuma", True,
+              "Placa de equipamento de combate a incêndio (ABNT NBR 13434) em PVC vermelho, 32 x 16 cm, com texto branco, fixada na parede acima do equipamento; as duas linhas (EXTINTOR, HIDRANTE, ALARME, PÓ ABC, CO2...) e a seta são editáveis em cada placa",
+              [(0.32, 0.16), (0.24, 0.12), (0.48, 0.24)]),
+    sign_room(), house_number(),
+]
+
+# --- site furniture and accessibility ------------------------------------------------------
+
+WOOD, CONCRETE, PAINTED = "Madeira tratada", "Concreto", "Aço pintado verde"
+INOX, RUBBER_SEAT = "Aço inox escovado", "Borracha preta"
+PE = {"azul": "Polietileno azul", "vermelho": "Polietileno vermelho", "verde": "Polietileno verde", "amarelo": "Polietileno amarelo"}
+TACTILE = "Concreto amarelo (piso tátil)"
+LUMINAIRE, LENS = "Alumínio pintado cinza", "Policarbonato leitoso"
+MATERIALS.update({
+    WOOD: {"color": [150, 104, 62], "class": "Wood", "finish": "Satin"},
+    PAINTED: {"color": [38, 78, 58], "class": "Metal", "finish": "Satin"},
+    INOX: {"color": [196, 198, 200], "class": "Metal", "finish": "Satin"},
+    PE["azul"]: {"color": [0, 92, 178], "class": "Plastic", "finish": "Satin"},
+    PE["vermelho"]: {"color": [206, 32, 40], "class": "Plastic", "finish": "Satin"},
+    PE["verde"]: {"color": [0, 138, 72], "class": "Plastic", "finish": "Satin"},
+    PE["amarelo"]: {"color": [250, 200, 0], "class": "Plastic", "finish": "Satin"},
+    TACTILE: {"color": [236, 188, 32], "class": "Concrete", "finish": "Matte"},
+    LUMINAIRE: {"color": [92, 96, 100], "class": "Metal", "finish": "Satin"},
+    LENS: {"color": [238, 240, 236], "class": "Plastic", "finish": "Satin", "transparency": 0.2},
+})
+MAT_KEYS.update({"concreto": CONCRETE, "madeira": WOOD})
+
+
+def number(name, default):
+    return Param("number", name, default, name, script=False)
+
+
+def side(name, points, x0, depth, material, in_plan=True):
+    """A plain piece drawn on the side plane (u = y, v = z), from x = x0 to x0 + depth."""
+    return profile_side(name, points, x0, depth, material, in_plan=in_plan)
+
+
+def revolution_front(name, points, material, in_plan=True):
+    """A plain body of revolution about the vertical line x = 0, y = 0 (profile on the front plane, u >= 0)."""
+    pts = []
+    for p in points:
+        q = {"u": p[0], "v": p[1]}
+        if len(p) > 2:
+            q["radius"] = p[2]
+        pts.append(q)
+    return {"name": name, "material": material, "in_plan": in_plan,
+            "shape": {"Revolution": {"plane": "Front", "points": pts, "offset": "0", "axis": "0", "angle": "360"}}}
+
+
+def sweep_item(name, plane, path, radius, offset, material, in_plan=True):
+    pts = []
+    for p in path:
+        q = {"u": p[0], "v": p[1]}
+        if len(p) > 2:
+            q["radius"] = p[2]
+        pts.append(q)
+    return {"name": name, "material": material, "in_plan": in_plan,
+            "shape": {"Sweep": {"plane": plane, "path": pts, "offset": offset,
+                                "profile": [{"u": f"-{radius}", "v": "0", "radius": radius}, {"u": radius, "v": "0", "radius": radius}]}}}
+
+
+def bench() -> dict:
+    sec = [["-0.24", "0"], ["0.24", "0"], ["0.2", "0.42"], ["-0.2", "0.42"]]
+    items = [side(f"Apoio de concreto {i + 1}", sec, f"{s}(Comprimento/2 - 0.25) - 0.06", "0.12", CONCRETE) for i, s in enumerate(("-", ""))]
+    for k in range(5):
+        y = -0.224 + k * 0.092
+        items.append(box(f"Ripa do assento {k + 1}", "-Comprimento/2", f"{y:.3f}", "0.42", "Comprimento", "0.08", "0.035", WOOD))
+    return {
+        "file": "banco-praca", "component": "Banco de praça", "material": WOOD,
+        "params": [plain("Comprimento", 1.8), Param("boolean", "Encosto", True, "Encosto", instance=True)],
+        "items": items, "script_body": "banco-praca",
+        "types": [
+            t("Banco de praça 1,80 m", "Banco de praça com apoios de concreto e assento de cinco ripas de madeira tratada a 45 cm do piso, 1,80 m; o encosto inclinado (três ripas em montantes de concreto) pode ser tirado em cada banco"),
+            t("Banco de praça 2,40 m", "Banco de praça de 2,40 m, com um apoio intermediário", Comprimento=2.4),
+            t("Banco de praça 1,20 m", "Banco de praça curto, de 1,20 m", Comprimento=1.2),
+        ],
+    }
+
+
+def litter_bin() -> dict:
+    r, h, z0 = "Raio", "AlturaCesto", "0.85 - AlturaCesto"
+    cup = [["0", z0], [r, z0], [r, f"{z0} + {h}"], [f"{r} - 0.003", f"{z0} + {h}"], [f"{r} - 0.003", f"{z0} + 0.003"], ["0", f"{z0} + 0.003"]]
+    rim = [[f"{r} - 0.004", f"{z0} + {h} - 0.012"], [f"{r} + 0.008", f"{z0} + {h} - 0.012"], [f"{r} + 0.008", f"{z0} + {h}"], [f"{r} - 0.004", f"{z0} + {h}"]]
+    post_y = f"{r} + 0.05"
+    return {
+        "file": "lixeira", "component": "Lixeira de praça",
+        "params": [plain("Raio", 0.2), plain("AlturaCesto", 0.5)],
+        "items": [
+            revolution_front("Cesto", cup, PAINTED), revolution_front("Aro", rim, PAINTED),
+            {"name": "Poste", "material": STEEL, "in_plan": True, "shape": {"Cylinder": {"x": "0", "y": post_y, "z": "0", "radius": "0.03", "height": "1.0"}}},
+            box("Braçadeira superior", "-0.03", "Raio - 0.01", "0.85 - 0.05", "0.06", "0.06", "0.03", STEEL),
+            box("Braçadeira inferior", "-0.03", "Raio - 0.01", f"{z0} + 0.06", "0.06", "0.06", "0.03", STEEL),
+        ],
+        "types": [
+            t("Lixeira de praça 60 L", "Lixeira de praça em aço pintado, cesto cilíndrico de 40 cm de diâmetro (60 L) com a boca a 85 cm do piso, presa a um poste de aço galvanizado"),
+            t("Lixeira de praça 100 L", "Lixeira de praça de 100 L, cesto de 46 cm de diâmetro", Raio=0.23, AlturaCesto=0.6),
+            t("Lixeira de praça 40 L", "Lixeira de praça de 40 L, cesto de 34 cm, para calçadas estreitas", Raio=0.17, AlturaCesto=0.45),
+        ],
+    }
+
+
+def recycling() -> dict:
+    items = []
+    w, gap, d = 0.4, 0.03, 0.3
+    colors = ["azul", "vermelho", "verde", "amarelo"]
+    for i, c in enumerate(colors):
+        x = -1.5 * (w + gap) + i * (w + gap)
+        items.append(box(f"Coletor {c}", f"{x - w / 2 + 0.01:.3f}", "-0.15", "0.35", f"{w - 0.02:.3f}", f"{d:.3f}", "0.52", PE[c]))
+        items.append(box(f"Tampa {c}", f"{x - w / 2:.3f}", "-0.16", "0.87", f"{w:.3f}", f"{d + 0.02:.3f}", "0.04", PE[c]))
+        items.append({"name": f"Boca {c}", "material": RUBBER_SEAT, "in_plan": False,
+                      "shape": {"Box": {"x": f"{x - 0.12:.3f}", "y": "-0.1615", "z": "0.88", "width": "0.24", "depth": "0.002", "height": "0.022"}}})
+    span = 4 * w + 3 * gap
+    for i, s in enumerate((-1, 1)):
+        items.append({"name": f"Poste {i + 1}", "material": STEEL, "in_plan": True,
+                      "shape": {"Cylinder": {"x": f"{s * (span / 2 + 0.04):.3f}", "y": "0.02", "z": "0", "radius": "0.03", "height": "1.0"}}})
+    items.append(box("Travessa", f"{-span / 2 - 0.04:.3f}", "0.15", "0.55", f"{span + 0.08:.3f}", "0.03", "0.05", STEEL))
+    return {
+        "file": "coletores-reciclaveis", "component": "Coletores de recicláveis", "material": ACR_W, "font": True,
+        "params": [text("Rotulo1", "PAPEL", "Rótulo do coletor azul"), text("Rotulo2", "PLÁSTICO", "Rótulo do coletor vermelho"),
+                   text("Rotulo3", "VIDRO", "Rótulo do coletor verde"), text("Rotulo4", "METAL", "Rótulo do coletor amarelo")],
+        "items": items, "script_body": "coletores-reciclaveis",
+        "types": [t("Coletores de recicláveis 4 x 50 L", "Conjunto de quatro coletores de 50 L em polietileno nas cores da Resolução CONAMA 275/2001 (azul papel, vermelho plástico, verde vidro, amarelo metal) numa estrutura de aço galvanizado; os rótulos são editáveis em cada conjunto")],
+    }
+
+
+def bike_rack() -> dict:
+    x = "-(Suportes - 1)*Espacamento/2"
+    items = [{"name": f"Flange {i + 1}", "material": STEEL, "in_plan": True,
+              "shape": {"Cylinder": {"x": x, "y": y, "z": "0", "radius": "0.06", "height": "0.006"}}}
+             for i, y in enumerate(("-Largura/2", "Largura/2"))]
+    return {
+        "file": "bicicletario", "component": "Bicicletário", "material": STEEL,
+        "params": [number("Suportes", 3), plain("Espacamento", 0.8), plain("Largura", 0.7), plain("Altura", 0.75)],
+        "items": items, "script_body": "bicicletario",
+        "types": [
+            t("Bicicletário 3 suportes", "Bicicletário de suportes em U invertido de tubo de aço galvanizado de 50 mm, 75 cm de altura e 70 cm de largura, chumbados no piso a cada 80 cm; cada suporte prende duas bicicletas (6 vagas)"),
+            t("Bicicletário 5 suportes", "Bicicletário de cinco suportes em U invertido (10 vagas)", Suportes=5),
+            t("Bicicletário 1 suporte", "Um suporte em U invertido (2 vagas)", Suportes=1),
+        ],
+    }
+
+
+def bollard_concrete() -> dict:
+    prof = [["0", "0"], ["Raio", "0"], ["Raio", "Altura - Raio*0.5"], ["Raio*0.5", "Altura", "Raio*0.6"], ["0", "Altura"]]
+    band = [["Raio - 0.001", "Altura*0.6"], ["Raio + 0.002", "Altura*0.6"], ["Raio + 0.002", "Altura*0.6 + 0.08"], ["Raio - 0.001", "Altura*0.6 + 0.08"]]
+    return {
+        "file": "frade-concreto", "component": "Frade de concreto",
+        "params": [plain("Raio", 0.13), plain("Altura", 0.6)],
+        "items": [revolution_front("Corpo", prof, CONCRETE), revolution_front("Faixa amarela", band, YELLOW)],
+        "types": [
+            t("Frade de concreto 60 cm", "Frade (balizador) cilíndrico de concreto de 26 cm de diâmetro e 60 cm de altura, topo abaulado e faixa amarela, para proteger calçadas e áreas de pedestres"),
+            t("Frade de concreto 80 cm", "Frade de concreto de 30 cm de diâmetro e 80 cm de altura", Raio=0.15, Altura=0.8),
+            t("Frade de concreto 45 cm", "Frade baixo de concreto, 24 cm de diâmetro e 45 cm de altura", Raio=0.12, Altura=0.45),
+        ],
+    }
+
+
+def bollard_steel() -> dict:
+    r, h = "Raio", "Altura"
+    body = [["0", "0.01"], [r, "0.01"], [r, f"{h} - {r}*0.6"], [f"{r}*0.4", h, f"{r}*0.8"], ["0", h]]
+    flange = [["0", "0"], [f"{r} + 0.05", "0"], [f"{r} + 0.05", "0.01"], ["0", "0.01"]]
+    items = [revolution_front("Tubo", body, STEEL), revolution_front("Flange", flange, STEEL)]
+    for i, z in enumerate((f"{h} - 0.22", f"{h} - 0.12")):
+        items.append(revolution_front(f"Faixa refletiva {i + 1}", [[f"{r} - 0.001", z], [f"{r} + 0.001", z], [f"{r} + 0.001", f"{z} + 0.05"], [f"{r} - 0.001", f"{z} + 0.05"]], FILM_Y))
+    return {
+        "file": "balizador-aco", "component": "Balizador de aço",
+        "params": [plain("Raio", 0.057), plain("Altura", 0.9)],
+        "items": items,
+        "types": [
+            t("Balizador de aço 90 cm", "Balizador (frade) de tubo de aço galvanizado de 114 mm, 90 cm de altura, topo abaulado, flange de fixação e duas faixas refletivas amarelas"),
+            t("Balizador de aço 1,10 m", "Balizador de aço de 1,10 m, para áreas de manobra", Altura=1.1),
+            t("Balizador de aço 75 cm", "Balizador de aço de 76 mm e 75 cm, para calçadas", Raio=0.038, Altura=0.75),
+        ],
+    }
+
+
+def picnic_table() -> dict:
+    items = []
+    for k in range(5):
+        y = -0.35 + k * 0.142
+        items.append(box(f"Ripa do tampo {k + 1}", "-Comprimento/2", f"{y:.3f}", "0.72", "Comprimento", "0.13", "0.035", WOOD))
+    for n, ys in (("frente", (-0.87, -0.735)), ("trás", (0.605, 0.74))):
+        for k, y in enumerate(ys):
+            items.append(box(f"Ripa do banco da {n} {k + 1}", "-Comprimento/2 + 0.05", f"{y:.3f}", "0.42", "Comprimento - 0.1", "0.13", "0.035", WOOD))
+    for i, sx in enumerate(("-", "")):
+        x0 = f"{sx}(Comprimento/2 - 0.3) - 0.025"
+        items.append(side(f"Perna do tampo {i + 1}a", [["-0.62", "0"], ["-0.52", "0"], ["-0.05", "0.72"], ["-0.15", "0.72"]], x0, "0.05", WOOD))
+        items.append(side(f"Perna do tampo {i + 1}b", [["0.52", "0"], ["0.62", "0"], ["0.15", "0.72"], ["0.05", "0.72"]], x0, "0.05", WOOD))
+        items.append(box(f"Travessa do banco {i + 1}", x0, "-0.9", "0.33", "0.05", "1.8", "0.09", WOOD))
+        items.append(box(f"Travessa do tampo {i + 1}", x0, "-0.33", "0.63", "0.05", "0.66", "0.09", WOOD))
+    return {
+        "file": "mesa-piquenique", "component": "Mesa de piquenique",
+        "params": [plain("Comprimento", 1.8)],
+        "items": items,
+        "types": [
+            t("Mesa de piquenique 1,80 m", "Mesa de piquenique de madeira tratada com bancos fixos dos dois lados: tampo de 1,80 x 0,70 m a 75 cm e bancos a 45 cm, pernas em A; para 6 pessoas"),
+            t("Mesa de piquenique 2,40 m", "Mesa de piquenique de 2,40 m, para 8 pessoas", Comprimento=2.4),
+        ],
+    }
+
+
+def street_light() -> dict:
+    pole = [["0", "0.02"], ["RaioBase", "0.02"], ["RaioTopo", "Altura"], ["0", "Altura"]]
+    base = [["0", "0"], ["RaioBase + 0.08", "0"], ["RaioBase + 0.08", "0.02"], ["0", "0.02"]]
+    tip = "-Braco"
+    return {
+        "file": "poste-iluminacao", "component": "Poste de iluminação",
+        "params": [plain("Altura", 6.0), plain("Braco", 1.5), plain("RaioBase", 0.075), plain("RaioTopo", 0.035)],
+        "items": [
+            revolution_front("Poste cônico", pole, STEEL), revolution_front("Placa de base", base, STEEL),
+            sweep_item("Braço", "Side", [["0", "Altura - 0.6"], ["0", "Altura - 0.1", "0.5"], ["-0.5", "Altura + 0.4"], [tip, "Altura + 0.45"]], "0.03", "0", STEEL),
+            box("Luminária LED", "-0.16", f"{tip} - 0.62", "Altura + 0.36", "0.32", "0.65", "0.09", LUMINAIRE),
+            box("Difusor", "-0.13", f"{tip} - 0.58", "Altura + 0.35", "0.26", "0.5", "0.012", LENS),
+        ],
+        "types": [
+            t("Poste de iluminação 6 m", "Poste de iluminação pública cônico de aço galvanizado de 6 m, braço curvo de 1,50 m e luminária LED, sobre placa de base; a luminária avança para -Y (sobre a via)"),
+            t("Poste de iluminação 9 m", "Poste cônico de 9 m com braço de 2,00 m, para vias coletoras", Altura=9.0, Braco=2.0, RaioBase=0.09, RaioTopo=0.04),
+            t("Poste de iluminação 4 m", "Poste de 4 m com braço de 0,80 m, para praças, condomínios e estacionamentos", Altura=4.0, Braco=0.8, RaioBase=0.06, RaioTopo=0.03),
+        ],
+    }
+
+
+def swing() -> dict:
+    W, Hh = "Largura", "Altura"
+    items = []
+    for i, sx in enumerate(("-", "")):
+        x = f"{sx}{W}/2"
+        for j, sy in enumerate(("-", "")):
+            items.append(sweep_item(f"Perna {i + 1}{'ab'[j]}", "Side", [[f"{sy}{Hh}*0.32", "0"], ["0", Hh]], "0.03", x, PAINTED))
+    items.append(sweep_item("Travessa superior", "Front", [[f"-{W}/2 - 0.05", f"{Hh} - 0.03"], [f"{W}/2 + 0.05", f"{Hh} - 0.03"]], "0.04", "0", PAINTED))
+    for k, cx in enumerate((f"-{W}/4", f"{W}/4")):
+        for j, dx in enumerate(("-0.2", "0.2")):
+            items.append(sweep_item(f"Corrente {k + 1}{'ab'[j]}", "Front", [[f"{cx} + ({dx})", "0.45"], [f"{cx} + ({dx})", f"{Hh} - 0.07"]], "0.005", "0", STEEL, in_plan=False))
+        items.append(box(f"Assento {k + 1}", f"{cx} - 0.23", "-0.08", "0.42", "0.46", "0.16", "0.03", RUBBER_SEAT))
+    return {
+        "file": "balanco", "component": "Balanço",
+        "params": [plain("Largura", 2.4), plain("Altura", 2.2)],
+        "items": items,
+        "types": [
+            t("Balanço 2 lugares", "Balanço de dois lugares em tubo de aço pintado com pernas em A, travessa a 2,20 m, correntes de aço e assentos de borracha a 45 cm do piso"),
+            t("Balanço 2 lugares infantil", "Balanço infantil de dois lugares com travessa a 1,90 m", Largura=2.0, Altura=1.9),
+        ],
+    }
+
+
+def pergola() -> dict:
+    W, D, Hh = "Largura", "Profundidade", "Altura"
+    items = []
+    for i, (sx, sy) in enumerate((("-", "-"), ("", "-"), ("-", ""), ("", ""))):
+        x = f"{sx}({W}/2 - 0.075) - 0.075"
+        y = f"{sy}({D}/2 - 0.075) - 0.075"
+        items.append(box(f"Pilar {i + 1}", x, y, "0", "0.15", "0.15", f"{Hh} - 0.2", WOOD))
+    for i, sy in enumerate(("-", "")):
+        items.append(box(f"Viga {i + 1}", f"-{W}/2 - 0.3", f"{sy}({D}/2 - 0.075) - 0.03", f"{Hh} - 0.2", f"{W} + 0.6", "0.06", "0.2", WOOD))
+    return {
+        "file": "pergolado", "component": "Pergolado", "material": WOOD,
+        "params": [plain("Largura", 3.0), plain("Profundidade", 3.0), plain("Altura", 2.6),
+                   length("Espacamento", 0.4, "Espaçamento dos caibros"), length("LarguraCaibro", 0.05, "Largura dos caibros"),
+                   length("AlturaCaibro", 0.15, "Altura dos caibros")],
+        "items": items, "script_body": "pergolado",
+        "types": [
+            t("Pergolado 3,00 x 3,00", "Pergolado de madeira tratada de 3,00 x 3,00 m: pilares de 15 x 15 cm, vigas duplas de 6 x 20 cm em balanço e caibros de 5 x 15 cm a cada 40 cm, com 2,60 m de altura livre até as vigas"),
+            t("Pergolado 4,00 x 3,00", "Pergolado de 4,00 x 3,00 m", Largura=4.0),
+            t("Pergolado 6,00 x 3,50", "Pergolado de 6,00 x 3,50 m com pilares intermediários", Largura=6.0, Profundidade=3.5),
+        ],
+    }
+
+
+def tactile(file, component, default) -> dict:
+    return {
+        "file": file, "component": component, "material": TACTILE,
+        "params": [plain("Largura", 1.0), plain("Comprimento", 0.25),
+                   Param("choice", "Tipo", default, "Relevo", instance=True, choices=[("alerta", "Alerta"), ("direcional", "Direcional")])],
+        "items": [box("Placas", "-Largura/2", "-Comprimento/2", "-0.025", "Largura", "Comprimento", "0.025", TACTILE)],
+        "script_body": "piso-tatil",
+        "types": [
+            t(f"{component} 1,00 x 0,25", f"{component} (ABNT NBR 16537) em placas de concreto amarelo de 25 x 25 cm assentadas rente ao piso, com o relevo de 4 mm acima dele; faixa de 1,00 x 0,25 m (o comprimento corre ao longo de Y, o sentido da caminhada); o relevo pode ser trocado em cada faixa"),
+            t(f"{component} 1,00 x 1,00", f"{component} em área de 1,00 x 1,00 m", Comprimento=1.0),
+            t(f"{component} 0,25 x 1,00", f"{component} em faixa de 0,25 x 1,00 m ao longo de Y", Largura=0.25, Comprimento=1.0),
+        ],
+    }
+
+
+def grab_bar(file, component, l_shape) -> dict:
+    r = "0.0175"
+    yb = f"-(0.04 + {r})"  # the bar's axis: 4 cm clear of the wall
+    items = []
+
+    def flange_post(name, x, z):
+        disc = [[x, "-0.008"], [f"{x} + 0.035", "-0.008"], [f"{x} + 0.035", "0"], [x, "0"]]
+        items.append({"name": f"Canopla {name}", "material": INOX, "in_plan": True,
+                      "shape": {"Revolution": {"plane": "Plan", "points": [{"u": u, "v": v} for u, v in disc], "offset": z, "axis": x, "angle": "360"}}})
+        items.append(sweep_item(f"Haste {name}", "Side", [["-0.008", z], [yb, z]], "0.011", x, INOX, in_plan=False))
+
+    if not l_shape:
+        items.append(sweep_item("Barra", "Front", [["-Comprimento/2", "Elevacao"], ["Comprimento/2", "Elevacao"]], r, yb, INOX))
+        flange_post("esquerda", "-Comprimento/2 + 0.0175", "Elevacao")
+        flange_post("direita", "Comprimento/2 - 0.0175", "Elevacao")
+        params = [plain("Comprimento", 0.8), Param("length", "Elevacao", 0.75, "Elevacao", instance=True, script=False)]
+        types = [
+            t("Barra de apoio reta 80 cm", "Barra de apoio reta de aço inox de 35 mm, 80 cm, a 4 cm da parede, fixada por canoplas nas pontas (ABNT NBR 9050), com o eixo a 75 cm do piso"),
+            t("Barra de apoio reta 40 cm", "Barra de apoio reta de 40 cm, para lavatórios e portas", Comprimento=0.4),
+            t("Barra de apoio reta 60 cm", "Barra de apoio reta de 60 cm", Comprimento=0.6),
+            t("Barra de apoio reta 90 cm", "Barra de apoio reta de 90 cm, para a parede lateral da bacia", Comprimento=0.9),
+        ]
+    else:
+        path = [["-Comprimento/2", "Elevacao"], ["Comprimento/2 - 0.05", "Elevacao", "0.05"], ["Comprimento/2", "Elevacao + 0.05"], ["Comprimento/2", "Elevacao + AlturaVertical"]]
+        items.append(sweep_item("Barra", "Front", path, r, yb, INOX))
+        flange_post("horizontal", "-Comprimento/2 + 0.0175", "Elevacao")
+        flange_post("do canto", "Comprimento/2 - 0.04", "Elevacao + 0.04")
+        flange_post("vertical", "Comprimento/2 - 0.0175", "Elevacao + AlturaVertical - 0.0175")
+        params = [plain("Comprimento", 0.7), plain("AlturaVertical", 0.7), Param("length", "Elevacao", 0.75, "Elevacao", instance=True, script=False)]
+        types = [
+            t("Barra de apoio em L 70 x 70 cm", "Barra de apoio em L de aço inox de 35 mm, 70 cm na horizontal e 70 cm na vertical, a 4 cm da parede (ABNT NBR 9050), para boxes de chuveiro; a parte horizontal a 75 cm do piso"),
+            t("Barra de apoio em L 60 x 60 cm", "Barra de apoio em L de 60 x 60 cm", Comprimento=0.6, AlturaVertical=0.6),
+        ]
+    return {"folder": "furniture", "file": file, "component": component, "params": params, "items": items, "types": types}
+
+
+COMPONENTS += [
+    bench(), litter_bin(), recycling(), bike_rack(), bollard_concrete(), bollard_steel(), picnic_table(),
+    street_light(), swing(), pergola(),
+    tactile("piso-tatil-alerta", "Piso tátil de alerta", "alerta"),
+    tactile("piso-tatil-direcional", "Piso tátil direcional", "direcional"),
+    grab_bar("barra-apoio-reta", "Barra de apoio reta", False),
+    grab_bar("barra-apoio-l", "Barra de apoio em L", True),
+]
+
 
 # --- scripts ---------------------------------------------------------------------------
 
 def sections() -> dict[str, str]:
-    text_ = (HERE / "componentes.lua").read_text(encoding="utf-8")
-    parts = re.split(r"^--- ([a-z0-9-]+)\n", text_, flags=re.M)
-    return {parts[i]: parts[i + 1].strip() + "\n" for i in range(1, len(parts), 2)}
+    out = {}
+    for name in ("componentes.lua", "sinalizacao.lua", "mobiliario.lua"):
+        text_ = (HERE / name).read_text(encoding="utf-8")
+        parts = re.split(r"^--- ([a-z0-9-]+)\n", text_, flags=re.M)
+        out.update({parts[i]: parts[i + 1].strip() + "\n" for i in range(1, len(parts), 2)})
+    return out
 
 
 def script_source(c: dict, body: str, figures: dict) -> str:
     out = [
-        f"-- {c['component']}: floor marking scripted by tools/site.py from tools/site/lib.lua and",
-        "-- tools/site/componentes.lua; edit those, not this text.",
+        f"-- {c['component']}: scripted by tools/site.py from tools/site/lib.lua, componentes.lua",
+        "-- and sinalizacao.lua; edit those, not this text.",
     ]
     if c.get("font"):
         out.append((HERE / "fonte.lua").read_text(encoding="utf-8").rstrip())
@@ -480,6 +1130,7 @@ def script_source(c: dict, body: str, figures: dict) -> str:
         out.append("local FIGURAS = {")
         out += [f"  {name} = {lua_str(figures[name])}," for name in c["figures"]]
         out.append("}")
+    out.append("local MAT = { " + ", ".join(f"{k} = {lua_str(v)}" for k, v in MAT_KEYS.items()) + " }")
     out.append((HERE / "lib.lua").read_text(encoding="utf-8").rstrip())
     out.append("")
     out += [p.lua() for p in c["params"] if p.script]
@@ -490,12 +1141,13 @@ def script_source(c: dict, body: str, figures: dict) -> str:
 
 def source(c: dict, bodies: dict, figures: dict) -> dict:
     items = list(c.get("items", []))
-    if c["file"] in bodies:
+    body = c.get("script_body", c["file"])
+    if body in bodies:
         items.append({
-            "name": "Pintura (script)",
+            "name": "Script" if c.get("folder") == "signage" else "Pintura (script)",
             "material": c["material"],
-            "in_plan": True,
-            "shape": {"Script": {"source": script_source(c, bodies[c["file"]], figures)}},
+            "in_plan": c.get("in_plan", True),
+            "shape": {"Script": {"source": script_source(c, bodies[body], figures)}},
         })
     used = {i["material"] for i in items if i.get("material")}
     return {
@@ -509,9 +1161,10 @@ def source(c: dict, bodies: dict, figures: dict) -> dict:
 def main() -> None:
     bodies = sections()
     figures = all_figures()
-    OUT.mkdir(parents=True, exist_ok=True)
     for c in COMPONENTS:
-        path = OUT / f"{c['file']}.json"
+        out = ROOT / "sources" / c.get("folder", "site")
+        out.mkdir(parents=True, exist_ok=True)
+        path = out / f"{c['file']}.json"
         path.write_text(json.dumps(source(c, bodies, figures), ensure_ascii=False, indent=1) + "\n", encoding="utf-8", newline="\n")
         print(f"{path.relative_to(ROOT).as_posix()}: {path.stat().st_size / 1024:.0f} KiB")
 

@@ -1,0 +1,361 @@
+{
+ "component": "Mesa de piquenique",
+ "def": {
+  "kind": "Generic",
+  "params": [
+   {
+    "name": "Comprimento",
+    "value": 1.8,
+    "kind": "Length",
+    "instance": false
+   }
+  ],
+  "items": [
+   {
+    "name": "Ripa do tampo 1",
+    "material": "Madeira tratada",
+    "in_plan": true,
+    "shape": {
+     "Box": {
+      "x": "-Comprimento/2",
+      "y": "-0.350",
+      "z": "0.72",
+      "width": "Comprimento",
+      "depth": "0.13",
+      "height": "0.035"
+     }
+    }
+   },
+   {
+    "name": "Ripa do tampo 2",
+    "material": "Madeira tratada",
+    "in_plan": true,
+    "shape": {
+     "Box": {
+      "x": "-Comprimento/2",
+      "y": "-0.208",
+      "z": "0.72",
+      "width": "Comprimento",
+      "depth": "0.13",
+      "height": "0.035"
+     }
+    }
+   },
+   {
+    "name": "Ripa do tampo 3",
+    "material": "Madeira tratada",
+    "in_plan": true,
+    "shape": {
+     "Box": {
+      "x": "-Comprimento/2",
+      "y": "-0.066",
+      "z": "0.72",
+      "width": "Comprimento",
+      "depth": "0.13",
+      "height": "0.035"
+     }
+    }
+   },
+   {
+    "name": "Ripa do tampo 4",
+    "material": "Madeira tratada",
+    "in_plan": true,
+    "shape": {
+     "Box": {
+      "x": "-Comprimento/2",
+      "y": "0.076",
+      "z": "0.72",
+      "width": "Comprimento",
+      "depth": "0.13",
+      "height": "0.035"
+     }
+    }
+   },
+   {
+    "name": "Ripa do tampo 5",
+    "material": "Madeira tratada",
+    "in_plan": true,
+    "shape": {
+     "Box": {
+      "x": "-Comprimento/2",
+      "y": "0.218",
+      "z": "0.72",
+      "width": "Comprimento",
+      "depth": "0.13",
+      "height": "0.035"
+     }
+    }
+   },
+   {
+    "name": "Ripa do banco da frente 1",
+    "material": "Madeira tratada",
+    "in_plan": true,
+    "shape": {
+     "Box": {
+      "x": "-Comprimento/2 + 0.05",
+      "y": "-0.870",
+      "z": "0.42",
+      "width": "Comprimento - 0.1",
+      "depth": "0.13",
+      "height": "0.035"
+     }
+    }
+   },
+   {
+    "name": "Ripa do banco da frente 2",
+    "material": "Madeira tratada",
+    "in_plan": true,
+    "shape": {
+     "Box": {
+      "x": "-Comprimento/2 + 0.05",
+      "y": "-0.735",
+      "z": "0.42",
+      "width": "Comprimento - 0.1",
+      "depth": "0.13",
+      "height": "0.035"
+     }
+    }
+   },
+   {
+    "name": "Ripa do banco da trás 1",
+    "material": "Madeira tratada",
+    "in_plan": true,
+    "shape": {
+     "Box": {
+      "x": "-Comprimento/2 + 0.05",
+      "y": "0.605",
+      "z": "0.42",
+      "width": "Comprimento - 0.1",
+      "depth": "0.13",
+      "height": "0.035"
+     }
+    }
+   },
+   {
+    "name": "Ripa do banco da trás 2",
+    "material": "Madeira tratada",
+    "in_plan": true,
+    "shape": {
+     "Box": {
+      "x": "-Comprimento/2 + 0.05",
+      "y": "0.740",
+      "z": "0.42",
+      "width": "Comprimento - 0.1",
+      "depth": "0.13",
+      "height": "0.035"
+     }
+    }
+   },
+   {
+    "name": "Perna do tampo 1a",
+    "material": "Madeira tratada",
+    "in_plan": true,
+    "shape": {
+     "Profile": {
+      "plane": "Side",
+      "points": [
+       {
+        "u": "-0.62",
+        "v": "0"
+       },
+       {
+        "u": "-0.52",
+        "v": "0"
+       },
+       {
+        "u": "-0.05",
+        "v": "0.72"
+       },
+       {
+        "u": "-0.15",
+        "v": "0.72"
+       }
+      ],
+      "offset": "-(Comprimento/2 - 0.3) - 0.025",
+      "depth": "0.05"
+     }
+    }
+   },
+   {
+    "name": "Perna do tampo 1b",
+    "material": "Madeira tratada",
+    "in_plan": true,
+    "shape": {
+     "Profile": {
+      "plane": "Side",
+      "points": [
+       {
+        "u": "0.52",
+        "v": "0"
+       },
+       {
+        "u": "0.62",
+        "v": "0"
+       },
+       {
+        "u": "0.15",
+        "v": "0.72"
+       },
+       {
+        "u": "0.05",
+        "v": "0.72"
+       }
+      ],
+      "offset": "-(Comprimento/2 - 0.3) - 0.025",
+      "depth": "0.05"
+     }
+    }
+   },
+   {
+    "name": "Travessa do banco 1",
+    "material": "Madeira tratada",
+    "in_plan": true,
+    "shape": {
+     "Box": {
+      "x": "-(Comprimento/2 - 0.3) - 0.025",
+      "y": "-0.9",
+      "z": "0.33",
+      "width": "0.05",
+      "depth": "1.8",
+      "height": "0.09"
+     }
+    }
+   },
+   {
+    "name": "Travessa do tampo 1",
+    "material": "Madeira tratada",
+    "in_plan": true,
+    "shape": {
+     "Box": {
+      "x": "-(Comprimento/2 - 0.3) - 0.025",
+      "y": "-0.33",
+      "z": "0.63",
+      "width": "0.05",
+      "depth": "0.66",
+      "height": "0.09"
+     }
+    }
+   },
+   {
+    "name": "Perna do tampo 2a",
+    "material": "Madeira tratada",
+    "in_plan": true,
+    "shape": {
+     "Profile": {
+      "plane": "Side",
+      "points": [
+       {
+        "u": "-0.62",
+        "v": "0"
+       },
+       {
+        "u": "-0.52",
+        "v": "0"
+       },
+       {
+        "u": "-0.05",
+        "v": "0.72"
+       },
+       {
+        "u": "-0.15",
+        "v": "0.72"
+       }
+      ],
+      "offset": "(Comprimento/2 - 0.3) - 0.025",
+      "depth": "0.05"
+     }
+    }
+   },
+   {
+    "name": "Perna do tampo 2b",
+    "material": "Madeira tratada",
+    "in_plan": true,
+    "shape": {
+     "Profile": {
+      "plane": "Side",
+      "points": [
+       {
+        "u": "0.52",
+        "v": "0"
+       },
+       {
+        "u": "0.62",
+        "v": "0"
+       },
+       {
+        "u": "0.15",
+        "v": "0.72"
+       },
+       {
+        "u": "0.05",
+        "v": "0.72"
+       }
+      ],
+      "offset": "(Comprimento/2 - 0.3) - 0.025",
+      "depth": "0.05"
+     }
+    }
+   },
+   {
+    "name": "Travessa do banco 2",
+    "material": "Madeira tratada",
+    "in_plan": true,
+    "shape": {
+     "Box": {
+      "x": "(Comprimento/2 - 0.3) - 0.025",
+      "y": "-0.9",
+      "z": "0.33",
+      "width": "0.05",
+      "depth": "1.8",
+      "height": "0.09"
+     }
+    }
+   },
+   {
+    "name": "Travessa do tampo 2",
+    "material": "Madeira tratada",
+    "in_plan": true,
+    "shape": {
+     "Box": {
+      "x": "(Comprimento/2 - 0.3) - 0.025",
+      "y": "-0.33",
+      "z": "0.63",
+      "width": "0.05",
+      "depth": "0.66",
+      "height": "0.09"
+     }
+    }
+   }
+  ]
+ },
+ "types": [
+  {
+   "name": "Mesa de piquenique 1,80 m",
+   "values": {},
+   "info": {
+    "description": "Mesa de piquenique de madeira tratada com bancos fixos dos dois lados: tampo de 1,80 x 0,70 m a 75 cm e bancos a 45 cm, pernas em A; para 6 pessoas"
+   }
+  },
+  {
+   "name": "Mesa de piquenique 2,40 m",
+   "values": {
+    "Comprimento": 2.4
+   },
+   "info": {
+    "description": "Mesa de piquenique de 2,40 m, para 8 pessoas"
+   }
+  }
+ ],
+ "materials": [
+  {
+   "name": "Madeira tratada",
+   "color": [
+    150,
+    104,
+    62
+   ],
+   "class": "Wood",
+   "finish": "Satin"
+  }
+ ]
+}

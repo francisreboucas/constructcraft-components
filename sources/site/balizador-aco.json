@@ -1,0 +1,201 @@
+{
+ "component": "Balizador de aço",
+ "def": {
+  "kind": "Generic",
+  "params": [
+   {
+    "name": "Raio",
+    "value": 0.057,
+    "kind": "Length",
+    "instance": false
+   },
+   {
+    "name": "Altura",
+    "value": 0.9,
+    "kind": "Length",
+    "instance": false
+   }
+  ],
+  "items": [
+   {
+    "name": "Tubo",
+    "material": "Aço galvanizado",
+    "in_plan": true,
+    "shape": {
+     "Revolution": {
+      "plane": "Front",
+      "points": [
+       {
+        "u": "0",
+        "v": "0.01"
+       },
+       {
+        "u": "Raio",
+        "v": "0.01"
+       },
+       {
+        "u": "Raio",
+        "v": "Altura - Raio*0.6"
+       },
+       {
+        "u": "Raio*0.4",
+        "v": "Altura",
+        "radius": "Raio*0.8"
+       },
+       {
+        "u": "0",
+        "v": "Altura"
+       }
+      ],
+      "offset": "0",
+      "axis": "0",
+      "angle": "360"
+     }
+    }
+   },
+   {
+    "name": "Flange",
+    "material": "Aço galvanizado",
+    "in_plan": true,
+    "shape": {
+     "Revolution": {
+      "plane": "Front",
+      "points": [
+       {
+        "u": "0",
+        "v": "0"
+       },
+       {
+        "u": "Raio + 0.05",
+        "v": "0"
+       },
+       {
+        "u": "Raio + 0.05",
+        "v": "0.01"
+       },
+       {
+        "u": "0",
+        "v": "0.01"
+       }
+      ],
+      "offset": "0",
+      "axis": "0",
+      "angle": "360"
+     }
+    }
+   },
+   {
+    "name": "Faixa refletiva 1",
+    "material": "Película refletiva amarela",
+    "in_plan": true,
+    "shape": {
+     "Revolution": {
+      "plane": "Front",
+      "points": [
+       {
+        "u": "Raio - 0.001",
+        "v": "Altura - 0.22"
+       },
+       {
+        "u": "Raio + 0.001",
+        "v": "Altura - 0.22"
+       },
+       {
+        "u": "Raio + 0.001",
+        "v": "Altura - 0.22 + 0.05"
+       },
+       {
+        "u": "Raio - 0.001",
+        "v": "Altura - 0.22 + 0.05"
+       }
+      ],
+      "offset": "0",
+      "axis": "0",
+      "angle": "360"
+     }
+    }
+   },
+   {
+    "name": "Faixa refletiva 2",
+    "material": "Película refletiva amarela",
+    "in_plan": true,
+    "shape": {
+     "Revolution": {
+      "plane": "Front",
+      "points": [
+       {
+        "u": "Raio - 0.001",
+        "v": "Altura - 0.12"
+       },
+       {
+        "u": "Raio + 0.001",
+        "v": "Altura - 0.12"
+       },
+       {
+        "u": "Raio + 0.001",
+        "v": "Altura - 0.12 + 0.05"
+       },
+       {
+        "u": "Raio - 0.001",
+        "v": "Altura - 0.12 + 0.05"
+       }
+      ],
+      "offset": "0",
+      "axis": "0",
+      "angle": "360"
+     }
+    }
+   }
+  ]
+ },
+ "types": [
+  {
+   "name": "Balizador de aço 90 cm",
+   "values": {},
+   "info": {
+    "description": "Balizador (frade) de tubo de aço galvanizado de 114 mm, 90 cm de altura, topo abaulado, flange de fixação e duas faixas refletivas amarelas"
+   }
+  },
+  {
+   "name": "Balizador de aço 1,10 m",
+   "values": {
+    "Altura": 1.1
+   },
+   "info": {
+    "description": "Balizador de aço de 1,10 m, para áreas de manobra"
+   }
+  },
+  {
+   "name": "Balizador de aço 75 cm",
+   "values": {
+    "Raio": 0.038,
+    "Altura": 0.75
+   },
+   "info": {
+    "description": "Balizador de aço de 76 mm e 75 cm, para calçadas"
+   }
+  }
+ ],
+ "materials": [
+  {
+   "name": "Película refletiva amarela",
+   "color": [
+    250,
+    196,
+    0
+   ],
+   "class": "Plastic",
+   "finish": "Glossy"
+  },
+  {
+   "name": "Aço galvanizado",
+   "color": [
+    176,
+    180,
+    184
+   ],
+   "class": "Metal",
+   "finish": "Satin"
+  }
+ ]
+}

@@ -41,8 +41,12 @@ local function decode(s)
 end
 
 -- A mesh that figures are added to; `piece` returns it as one mesh piece.
-local function new_mesh()
+-- On the "plan" (default) a figure's (x, y) lie on the floor and it rises from z to z + h;
+-- on the "front" plane (a sign facing -y) its (x, y) are (x, z) and it stands from
+-- y = -z to y = -(z + h), towards the viewer.
+local function new_mesh(plane)
   local m = { v = {}, f = {}, empty = true }
+  local front = plane == "front"
   -- Adds `fig` as a prism from z to z + h, its points (x, y) going to T(x, y).
   function m.figure(fig, T, z, h, flip)
     if #fig.rings == 0 then return end
@@ -86,8 +90,45 @@ local function new_mesh()
     if opts then for k, val in pairs(opts) do p[k] = val end end
     return p
   end
+  if front then
+    -- (u, v, w) of the plan frame to (u, -w, v): a rotation, so the faces keep their winding.
+    local plain_figure = m.figure
+    function m.figure(fig, T, z, h, flip)
+      local first = #m.v
+      plain_figure(fig, T, z, h, flip)
+      for i = first + 1, #m.v do
+        local q = m.v[i]
+        q[1], q[2], q[3] = q[1], -q[3], q[2]
+      end
+    end
+  end
   return m
 end
+
+-- A regular polygon of n sides and radius r as a figure (for dots, discs and rings).
+local function disc_figure(r, n)
+  local ring, tris = {}, {}
+  for i = 0, n - 1 do
+    local a = 2 * math.pi * i / n
+    ring[#ring + 1] = r * cos(a); ring[#ring + 1] = r * sin(a)
+  end
+  for i = 1, n - 2 do tris[#tris + 1] = 0; tris[#tris + 1] = i; tris[#tris + 1] = i + 1 end
+  return { advance = 0, rings = { ring }, tris = tris, xmin = -r, xmax = r, ymin = -r, ymax = r }
+end
+
+-- A convex polygon ({{x, y}, ...}, counter-clockwise) as a figure.
+local function poly_figure(poly)
+  local ring, tris = {}, {}
+  local xmin, xmax, ymin, ymax = 1e9, -1e9, 1e9, -1e9
+  for _, q in ipairs(poly) do
+    ring[#ring + 1] = q[1]; ring[#ring + 1] = q[2]
+    xmin, xmax, ymin, ymax = min(xmin, q[1]), max(xmax, q[1]), min(ymin, q[2]), max(ymax, q[2])
+  end
+  for i = 1, #poly - 2 do tris[#tris + 1] = 0; tris[#tris + 1] = i; tris[#tris + 1] = i + 1 end
+  return { advance = 0, rings = { ring }, tris = tris, xmin = xmin, xmax = xmax, ymin = ymin, ymax = ymax }
+end
+
+local function identity(x, y) return x, y end
 
 -- An affine map of figure units: scale (sx, sy), turn by `ang` degrees, move to (x0, y0).
 local function transform(x0, y0, sx, sy, ang, ox, oy)
