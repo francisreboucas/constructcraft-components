@@ -4,23 +4,19 @@
     python tools/vegetation.py      then  python tools/build.py
 
 Plants are fixed meshes, one per type, sized to the species (height and crown
-width of a mature plant), at two detail levels: the coarse level is a light
-low-poly silhouette (the functions below), the medium and fine levels the
-detailed plant of tools/vegetation_detail.py (branches down to twigs, sprays of
-single leaves, flowers, palm leaflets and fans, needle tufts, grass blades),
-with the number and size of the leaves worked out from the crown's area.
-Lawns, planting beds and planters with walls are parametric pieces.
+width of a mature plant), at two detail levels:
 
-- Trees grow their branches by space colonization (Runions, Lane and
-  Prusinkiewicz, "Modeling trees with a space colonization algorithm", 2007):
-  attraction points fill the crown envelope and the branch tips grow towards
-  them. Branch thickness follows the pipe model (the cross-section below a
-  fork matches those above it, r^n = sum of the children's r^n), and the
-  branch tips gather into foliage clumps, jittered icospheres.
-- Palms have a leaning, tapering stem and arching fronds lofted along a
-  curved spine with a V-folded section.
-- Conifers stack drooping tiers with a jagged rim; columnar ones and shrubs
-  are clusters of clumps.
+- coarse (plans, site plans, distant views): tools/vegetation_coarse.py, a light
+  silhouette that still reads as a plant: a trunk forking into its limbs, a crown
+  of leaf clusters in two tones spread over the crown's envelope, serrated palm
+  fronds and notched fans, conifer whorls of pads, shrubs with a few flowers;
+- medium and fine: tools/vegetation_detail.py, the detailed plant: branches by
+  space colonization (Runions, Lane and Prusinkiewicz, 2007) with pipe-model
+  thickness, sprays of single leaves whose number and size come from the
+  crown's area, flowers, palm leaflets and fans, needle tufts, grass blades.
+
+Lawns, planting beds and planters with walls are parametric pieces. This module
+holds the shared mesh primitives, the materials and the species.
 
 Every plant comes from a fixed seed, so running this again gives the same files.
 """
@@ -41,6 +37,7 @@ MATERIALS = {
     "Folhagem": [78, 122, 58],
     "Folhagem escura": [46, 92, 56],
     "Folhagem clara": [118, 158, 70],
+    "Folhagem sombra": [30, 66, 42],
     "Floração amarela": [232, 190, 40],
     "Casca de árvore": [102, 78, 58],
     "Estipe de palmeira": [150, 140, 122],
@@ -139,43 +136,6 @@ class Mesh:
         return {"Mesh": {"vertices": [[round(c, 3) + 0.0 for c in p] for p in self.vertices], "faces": self.faces}}
 
 
-def _icosphere():
-    t = (1 + math.sqrt(5)) / 2
-    verts = [unit(v) for v in [(-1, t, 0), (1, t, 0), (-1, -t, 0), (1, -t, 0), (0, -1, t), (0, 1, t),
-                               (0, -1, -t), (0, 1, -t), (t, 0, -1), (t, 0, 1), (-t, 0, -1), (-t, 0, 1)]]
-    faces = [(0, 11, 5), (0, 5, 1), (0, 1, 7), (0, 7, 10), (0, 10, 11), (1, 5, 9), (5, 11, 4), (11, 10, 2),
-             (10, 7, 6), (7, 1, 8), (3, 9, 4), (3, 4, 2), (3, 2, 6), (3, 6, 8), (3, 8, 9), (4, 9, 5),
-             (2, 4, 11), (6, 2, 10), (8, 6, 7), (9, 8, 1)]
-    mids: dict = {}
-
-    def mid(a, b):
-        key = (min(a, b), max(a, b))
-        if key not in mids:
-            verts.append(unit(mul(add(verts[a], verts[b]), 0.5)))
-            mids[key] = len(verts) - 1
-        return mids[key]
-
-    out = []
-    for a, b, c in faces:
-        ab, bc, ca = mid(a, b), mid(b, c), mid(c, a)
-        out += [(a, ab, ca), (b, bc, ab), (c, ca, bc), (ab, bc, ca)]
-    return verts, out
-
-
-ICO_VERTS, ICO_FACES = _icosphere()  # 42 vertices, 80 faces
-
-
-def clump(mesh: Mesh, center, radii, rnd: random.Random, jitter=0.12):
-    """A foliage clump: an icosphere stretched to `radii`, its vertices jittered."""
-    base = len(mesh.vertices)
-    for v in ICO_VERTS:
-        k = 1 + rnd.uniform(-jitter, jitter)
-        mesh.vertex(add(center, (v[0] * radii[0] * k, v[1] * radii[1] * k, v[2] * radii[2] * k)))
-    for f in ICO_FACES:
-        idx = [base + i for i in f]
-        mesh.face(idx, sub(mesh.centroid(idx), center))
-
-
 def tube(mesh: Mesh, path, radii, sides=6):
     """A closed tube along `path` (points) with a radius at each point."""
     rings = []
@@ -226,16 +186,6 @@ def loft(mesh: Mesh, sections):
 def bounds(meshes):
     pts = [p for m in meshes for p in m.vertices]
     return [min(p[i] for p in pts) for i in range(3)], [max(p[i] for p in pts) for i in range(3)]
-
-
-def fit(meshes, width, height, z0=0.0):
-    """Scale and move `meshes` to `width` (largest plan side) by `height`, centered, from `z0` up."""
-    lo, hi = bounds(meshes)
-    kxy = width / max(hi[0] - lo[0], hi[1] - lo[1])
-    kz = height / (hi[2] - lo[2])
-    cx, cy = (lo[0] + hi[0]) / 2, (lo[1] + hi[1]) / 2
-    for m in meshes:
-        m.transform(lambda p: ((p[0] - cx) * kxy, (p[1] - cy) * kxy, z0 + (p[2] - lo[2]) * kz))
 
 
 # --- trees: space colonization -------------------------------------------------------
@@ -296,197 +246,6 @@ def pipe_radii(parents, trunk_radius, tip=1.0, exponent=2.5):
     return [x * k for x in r], children
 
 
-def chains(children, radii, min_radius):
-    """Paths of nodes to draw as tubes: each fork continues along its thickest
-    child and starts new paths at the others; thin twigs are left out."""
-    out, stack = [], [[0]]
-    while stack:
-        chain = stack.pop()
-        node = chain[-1]
-        while True:
-            kids = sorted((c for c in children[node] if radii[c] >= min_radius), key=lambda c: -radii[c])
-            if not kids:
-                break
-            for c in kids[1:]:
-                stack.append([node, c])
-            chain.append(kids[0])
-            node = kids[0]
-        if len(chain) > 1:
-            out.append(chain)
-    return out
-
-
-def kmeans(points, k, rnd, rounds=12):
-    """Cluster `points` into `k` groups (farthest-point start); returns the groups."""
-    centers = [points[rnd.randrange(len(points))]]
-    while len(centers) < min(k, len(points)):
-        centers.append(max(points, key=lambda p: min(length(sub(p, c)) for c in centers)))
-    for _ in range(rounds):
-        groups = [[] for _ in centers]
-        for p in points:
-            groups[min(range(len(centers)), key=lambda i: length(sub(p, centers[i])))].append(p)
-        centers = [mul(tuple(map(sum, zip(*g))), 1 / len(g)) if g else c for g, c in zip(groups, centers)]
-    return [(c, g) for c, g in zip(centers, groups) if g]
-
-
-def tree(seed, height, crown, clear, trunk, *, flowers=0.0, clumps=None, flat=1.0, jitter=0.14):
-    """A broadleaf tree: `height` and `crown` width, `clear` trunk height, `trunk` diameter."""
-    rnd = random.Random(seed)
-    R, Hc = crown / 2, height - clear
-    center = (0.0, 0.0, clear + Hc * 0.55)
-    radii = (R * 0.8, R * 0.8, Hc / 2 * 0.8 * flat)
-    nodes, parents = colonize(rnd, clear + Hc * 0.1, center, radii)
-    radii_n, children = pipe_radii(parents, trunk / 2)
-    wood = Mesh()
-    for chain in chains(children, radii_n, max(0.015, trunk * 0.09)):
-        rs = [radii_n[i] for i in chain]
-        tube(wood, [nodes[i] for i in chain], rs, 7 if rs[0] > trunk * 0.3 else 5)
-    tips = [nodes[i] for i in range(len(nodes)) if not children[i]]
-    k = clumps or max(7, min(16, round(5 + R * 1.4)))
-    leaves, bloom = Mesh(), Mesh()
-    groups = kmeans(tips, k, rnd)
-    for n, (c, g) in enumerate(groups):
-        spread = math.sqrt(sum(dot(sub(p, c), sub(p, c)) for p in g) / len(g))
-        r = max(R * 0.3, min(R * 0.5, spread * 1.2 + R * 0.12))
-        target = bloom if n < round(len(groups) * flowers) else leaves
-        clump(target, c, (r, r, r * 0.85 * flat), rnd, jitter)
-    clump(leaves, (center[0], center[1], center[2]), (R * 0.55, R * 0.55, Hc * 0.35 * flat), rnd, jitter)
-    # Center the crown on the trunk base and size it to the species: the crown
-    # moves whole, the trunk bends towards it from the ground.
-    crown_meshes = [m for m in (leaves, bloom) if m.vertices]
-    lo, hi = bounds(crown_meshes)
-    cx, cy = (lo[0] + hi[0]) / 2, (lo[1] + hi[1]) / 2
-    kxy = crown / max(hi[0] - lo[0], hi[1] - lo[1])
-    kz = height / hi[2]
-
-    def place(p, bend=True):
-        w = min(1.0, max(0.0, p[2] / clear)) ** 2 if bend else 1.0
-        return ((p[0] - cx * w) * kxy, (p[1] - cy * w) * kxy, p[2] * kz)
-
-    wood.transform(place)
-    for m in crown_meshes:
-        m.transform(lambda p: place(p, False))
-    return wood, leaves, bloom
-
-
-def conifer(seed, height, crown, clear, trunk, *, tiers=6, points=9, droop=0.35):
-    """A conifer of drooping tiers, each a cone with a jagged rim."""
-    rnd = random.Random(seed)
-    R, Hc = crown / 2, height - clear
-    wood, leaves = Mesh(), Mesh()
-    tube(wood, [(0, 0, 0), (0, 0, clear + Hc * 0.4)], [trunk / 2, trunk * 0.35], 7)
-    for i in range(tiers):
-        t = i / (tiers - 1)
-        base = clear + Hc * 0.78 * t
-        top = height if i == tiers - 1 else base + Hc * 0.34
-        r = R * (1 - 0.78 * t)
-        spin = rnd.uniform(0, 2 * math.pi)
-        rim = []
-        for k in range(points * 2):
-            a = spin + math.pi * k / points
-            rr = r * (1.0 if k % 2 == 0 else 0.72) * rnd.uniform(0.92, 1.05)
-            z = base - (droop * rr * 0.35 if k % 2 == 0 else 0) + rnd.uniform(-0.03, 0.03) * r
-            rim.append(leaves.vertex((math.cos(a) * rr, math.sin(a) * rr, z)))
-        apex = leaves.vertex((0, 0, top))
-        under = leaves.vertex((0, 0, base + (top - base) * 0.12))
-        n = len(rim)
-        for k in range(n):
-            a, b = rim[k], rim[(k + 1) % n]
-            side = [a, b, apex]
-            mid = leaves.centroid(side)
-            leaves.face(side, (mid[0], mid[1], 0.3 * r))
-            leaves.face([a, b, under], (0, 0, -1))
-    fit([wood, leaves], crown, height)
-    return wood, leaves
-
-
-def column(seed, height, crown, clear, trunk, *, clumps=6, jitter=0.1):
-    """A columnar conifer (cypress, thuja): stacked clumps narrowing to the top."""
-    rnd = random.Random(seed)
-    R, Hc = crown / 2, height - clear
-    wood, leaves = Mesh(), Mesh()
-    tube(wood, [(0, 0, 0), (0, 0, clear + Hc * 0.3)], [trunk / 2, trunk * 0.4], 6)
-    for i in range(clumps):
-        t = i / (clumps - 1)
-        r = R * (1 - 0.6 * t ** 1.5)
-        z = clear + Hc * (0.12 + 0.76 * t)
-        off = (rnd.uniform(-0.08, 0.08) * R, rnd.uniform(-0.08, 0.08) * R, 0)
-        clump(leaves, add((0, 0, z), off), (r, r, Hc / clumps * 0.95), rnd, jitter)
-    fit([wood, leaves], crown, height)
-    return wood, leaves
-
-
-def shrub(seed, height, width, *, clumps=5, jitter=0.12, z0=0.0):
-    """A shrub: a core clump with others around and above it, from `z0` up."""
-    rnd = random.Random(seed)
-    R = width / 2
-    leaves = Mesh()
-    clump(leaves, (0, 0, height * 0.5), (R * 0.75, R * 0.75, height * 0.45), rnd, jitter)
-    for k in range(clumps - 1):
-        a = 2 * math.pi * k / (clumps - 1) + rnd.uniform(-0.3, 0.3)
-        d = R * rnd.uniform(0.4, 0.5)
-        r = R * rnd.uniform(0.45, 0.55)
-        clump(leaves, (math.cos(a) * d, math.sin(a) * d, height * rnd.uniform(0.35, 0.6)), (r, r, r * 0.9), rnd, jitter)
-    fit([leaves], width, height, z0)
-    return leaves
-
-
-# --- palms -------------------------------------------------------------------------
-
-def palm(seed, height, crown, stem, *, fronds=16, droop=0.7, lean=0.0, shaft=False, frond_w=0.12, rise=(60, -10)):
-    rnd = random.Random(seed)
-    R = crown / 2
-    L = R * 1.05  # frond length
-    h = height - L * 0.35
-    wood, leaves, green = Mesh(), Mesh(), Mesh()
-    ts = [i / 7 for i in range(8)]
-    path = [(lean * h * t ** 1.6, 0.0, h * t) for t in ts]
-    tube(wood, path, [stem / 2 * ((1.35 if t == 0 else 1.15) - 0.25 * t) for t in ts], 9)
-    top = path[-1]
-    if shaft:  # the green crownshaft of royal palms
-        tube(green, [add(top, (0, 0, -h * 0.02)), add(top, (0, 0, h * 0.1))], [stem / 2 * 1.08, stem / 2 * 0.9], 9)
-        top = add(top, (0, 0, h * 0.1))
-    for k in range(fronds):
-        az = 2 * math.pi * k / fronds * 2.0 + rnd.uniform(-0.15, 0.15)  # two turns around the stem
-        frac = k / max(fronds - 1, 1)
-        el = math.radians(rise[0] + (rise[1] - rise[0]) * (rnd.random() * 0.5 + frac * 0.5))
-        d = (math.cos(az), math.sin(az), 0.0)
-        side = (-math.sin(az), math.cos(az), 0.0)
-        Lk = L * rnd.uniform(0.85, 1.05)
-        sections = []
-        steps = 9
-        for i in range(steps + 1):
-            t = i / steps
-            s = add(top, mul(add(mul(d, math.cos(el) * t), mul(UP, math.sin(el) * t - droop * t * t)), Lk))
-            if i == steps:
-                sections.append([s])
-                continue
-            tang = unit(add(mul(d, math.cos(el)), mul(UP, math.sin(el) - 2 * droop * t)))
-            nrm = unit(cross(side, tang))
-            nrm = nrm if nrm[2] >= 0 else mul(nrm, -1)
-            w = Lk * frond_w * (0.15 + 0.85 * math.sin(math.pi * min(1.0, t * 1.15)) ** 0.6)
-            th = max(0.01, w * 0.05)
-            fold = w * 0.35  # leaflets hang below the rachis: a V section
-            sections.append([
-                add(s, mul(nrm, th)),
-                add(add(s, mul(side, w)), mul(nrm, -fold)),
-                add(s, mul(nrm, -th)),
-                add(add(s, mul(side, -w)), mul(nrm, -fold)),
-            ])
-        loft(leaves, sections)
-    # Size the crown to the species about the top of the stem, then the whole
-    # palm to its height; the stem's base stays at the origin.
-    lo, hi = bounds([leaves])
-    k = crown / max(hi[0] - lo[0], hi[1] - lo[1])
-    cx, cy = (lo[0] + hi[0]) / 2, (lo[1] + hi[1]) / 2
-    leaves.transform(lambda p: (top[0] + (p[0] - cx) * k, top[1] + (p[1] - cy) * k, top[2] + (p[2] - top[2]) * k))
-    meshes = [m for m in (wood, leaves, green) if m.vertices]
-    kz = height / bounds(meshes)[1][2]
-    for m in meshes:
-        m.transform(lambda p: (p[0], p[1], p[2] * kz))
-    return wood, leaves, green
-
-
 # --- sources -------------------------------------------------------------------------
 # The engine keeps one definition per component and its types differ only in
 # parameter values, so each species, with its own mesh, is its own component.
@@ -531,6 +290,25 @@ def merged(meshes):
     return out
 
 
+SHADE = {"Folhagem": "Folhagem escura", "Folhagem escura": "Folhagem sombra", "Folhagem clara": "Folhagem",
+         "Folhagem arroxeada": "Folhagem arroxeada"}
+
+
+def coarse(parts, leaf_mat="Folhagem", bloom_mat="Floração amarela", *, wood_mat="Casca de árvore", wood_name="Tronco",
+           leaf_name="Copa", green_mat="Palmito", offset=None):
+    """The coarse pieces of a plant from vegetation_coarse's dict of meshes: light and shade tones, blooms, wood."""
+    out = []
+    for key, name, mat, plan in (("wood", wood_name, wood_mat, False), ("green", "Palmito", green_mat, False),
+                                 ("light", leaf_name, leaf_mat, True), ("shade", f"{leaf_name} - sombra", SHADE[leaf_mat], True),
+                                 ("bloom", "Floração", bloom_mat, True)):
+        m = parts.get(key)
+        if m is not None and m.vertices:
+            if offset:
+                moved(m, offset)
+            out.append(item(name, mat, m, plan, COARSE))
+    return out
+
+
 def detailed(items, wood=None, leaves=None, blooms=None, *, wood_mat="Casca de árvore", leaf_mat="Folhagem",
              bloom_mat="Floração amarela", wood_name="Galhos", leaf_name="Folhas", bloom_name="Flores"):
     """Append the medium/fine pieces of a plant to `items`."""
@@ -541,11 +319,14 @@ def detailed(items, wood=None, leaves=None, blooms=None, *, wood_mat="Casca de �
     return items
 
 
+import vegetation_coarse as VC  # noqa: E402  (it imports this module's primitives)
+
+
 def trees():
     import vegetation_detail as D
     # file, species, height, crown, clear trunk, trunk diameter, foliage, share of flowering clumps, detailed look
     for file, name, H, C, F, T, mat, fl, look in [
-        ("ipe-amarelo", "Ipê-amarelo", 8.0, 6.0, 2.2, 0.3, "Folhagem", 0.75,
+        ("ipe-amarelo", "Ipê-amarelo", 8.0, 6.0, 2.2, 0.3, "Folhagem", 0.55,
          dict(flowers=0.85, leaf_len=0.12, leaf_w=0.05, bloom_size=0.14, bloom="Floração amarela")),
         ("reseda", "Resedá", 5.0, 4.0, 1.8, 0.2, "Folhagem", 0.0,
          dict(flowers=0.4, leaf_len=0.1, leaf_w=0.05, bloom_size=0.09, bloom="Floração rosa")),
@@ -557,12 +338,11 @@ def trees():
         ("sibipiruna", "Sibipiruna", 15.0, 12.0, 3.0, 0.5, "Folhagem", 0.0,
          dict(leaf_len=0.12, leaf_w=0.05, per=10, flowers=0.12, bloom_size=0.06, bloom="Floração amarela", flat=0.8)),
     ]:
-        wood, leaves, bloom = tree(seed(name), H, C, F, T, flowers=fl)
-        items = [item("Tronco", "Casca de árvore", wood, False, COARSE), item("Copa", mat, leaves, True, COARSE)]
-        if bloom.vertices:
-            items.append(item("Floração", "Floração amarela", bloom, True, COARSE))
         look = dict(look)
         bmat = look.pop("bloom", "Floração amarela")
+        shape = {"ipe-amarelo": "vase", "oiti": "dome", "mangueira": "dome", "sibipiruna": "umbrella"}.get(file, "round")
+        bloom_share = fl or (0.25 if look.get("flowers") else 0.0)
+        items = coarse(VC.tree(seed(name), H, C, F, T, shape=shape, flowers=bloom_share), mat, bmat)
         fw, fl_, fb = D.fine_tree(seed(name), H, C, F, T, **look)
         detailed(items, fw, fl_, fb, leaf_mat=mat, bloom_mat=bmat)
         yield file, source(name, f"{name} {H:g} m", f"Árvore de copa arredondada, {H:g} m de altura, copa Ø{C:g} m", items)
@@ -571,16 +351,15 @@ def trees():
 def conifers():
     import vegetation_detail as D
     for file, name, H, C, F, T, make, fine in [
-        ("tuia-holandesa", "Tuia-holandesa", 4.0, 1.2, 0.15, 0.1, column,
+        ("tuia-holandesa", "Tuia-holandesa", 4.0, 1.2, 0.15, 0.1, VC.column,
          lambda s: D.fine_column(s, 4.0, 1.2, 0.15, 0.1, leaf_len=0.09)),
-        ("cipreste-italiano", "Cipreste-italiano", 8.0, 1.6, 0.3, 0.2, column,
+        ("cipreste-italiano", "Cipreste-italiano", 8.0, 1.6, 0.3, 0.2, VC.column,
          lambda s: D.fine_column(s, 8.0, 1.6, 0.3, 0.2, leaf_len=0.12)),
-        ("pinheiro", "Pinheiro", 12.0, 5.0, 1.8, 0.4, conifer, lambda s: D.fine_pine(s, 12.0, 5.0, 1.8, 0.4)),
+        ("pinheiro", "Pinheiro", 12.0, 5.0, 1.8, 0.4, VC.pine, lambda s: D.fine_pine(s, 12.0, 5.0, 1.8, 0.4)),
     ]:
-        wood, leaves = make(seed(name), H, C, F, T)
-        items = [item("Tronco", "Casca de árvore", wood, False, COARSE), item("Copa", "Folhagem escura", leaves, True, COARSE)]
-        fw, fl = fine(seed(name))
         leaf_mat = "Folhagem clara" if file == "tuia-holandesa" else "Folhagem escura"
+        items = coarse(make(seed(name), H, C, F, T), leaf_mat)
+        fw, fl = fine(seed(name))
         detailed(items, fw, fl, leaf_mat=leaf_mat, leaf_name="Folhagem")
         yield file, source(name, f"{name} {H:g} m", f"Conífera, {H:g} m de altura, copa Ø{C:g} m", items)
 
@@ -588,20 +367,17 @@ def conifers():
 def palms():
     import vegetation_detail as D
     for file, name, H, C, Dm, kw, fine in [
-        ("palmeira-imperial", "Palmeira-imperial", 15.0, 6.0, 0.45, {"fronds": 16, "shaft": True, "droop": 0.6},
+        ("palmeira-imperial", "Palmeira-imperial", 15.0, 6.0, 0.45, {"fronds": 18, "shaft": True, "droop": 0.6},
          {"fronds": 16, "shaft": True, "droop": 0.6, "leaflets": 34}),
         ("jeriva", "Jerivá", 8.0, 5.0, 0.3, {"fronds": 14, "droop": 0.8, "lean": 0.03},
          {"fronds": 15, "droop": 0.85, "lean": 0.03, "leaflets": 32, "plumose": True}),
         ("palmeira-real-australiana", "Palmeira-real-australiana", 10.0, 4.0, 0.25,
          {"fronds": 12, "shaft": True, "droop": 0.55}, {"fronds": 12, "shaft": True, "droop": 0.55, "leaflets": 30}),
-        ("washingtonia", "Washingtonia", 12.0, 4.0, 0.6, {"fronds": 22, "droop": 0.35, "frond_w": 0.3, "rise": (55, -35)},
+        ("washingtonia", "Washingtonia", 12.0, 4.0, 0.6, {"fronds": 18, "droop": 0.35, "rise": (35, -45), "fan": True},
          {"fronds": 18, "droop": 0.3, "rise": (55, -35), "fan": True}),
     ]:
-        wood, leaves, green = palm(seed(name), H, C, Dm, **kw)
-        items = [item("Estipe", "Estipe de palmeira", wood, False, COARSE)]
-        if green.vertices:
-            items.append(item("Palmito", "Palmito", green, False, COARSE))
-        items.append(item("Folhas", "Folhagem", leaves, True, COARSE))
+        items = coarse(VC.palm(seed(name), H, C, Dm, **kw), "Folhagem", wood_mat="Estipe de palmeira", wood_name="Estipe",
+                       leaf_name="Folhas")
         fw, fl, fg = D.fine_palm(seed(name), H, C, Dm, **fine)
         detailed(items, fw, fl, None, wood_mat="Estipe de palmeira", wood_name="Estipe detalhado", leaf_name="Folíolos")
         if fg.vertices:
@@ -611,18 +387,19 @@ def palms():
 
 def shrubs():
     import vegetation_detail as D
-    for file, name, H, C, n, j, mat, fine in [
-        ("buxinho", "Buxinho", 0.5, 0.5, 3, 0.04, "Folhagem escura",
+    for file, name, H, C, n, j, mat, fine in [  # n: coarse clusters, j: coarse flowers
+        ("buxinho", "Buxinho", 0.5, 0.5, 0, 0, "Folhagem escura",
          dict(leaf_len=0.03, leaf_w=0.018, topiary=True, stems=4, cover=2.6)),
-        ("ixora", "Ixora", 0.8, 0.8, 5, 0.1, "Folhagem",
+        ("ixora", "Ixora", 0.8, 0.8, 11, 14, "Folhagem",
          dict(leaf_len=0.07, leaf_w=0.03, umbels=16, flower_size=0.012, bloom="Floração vermelha")),
-        ("pingo-de-ouro", "Pingo-de-ouro", 1.0, 1.0, 6, 0.12, "Folhagem clara", dict(leaf_len=0.045, leaf_w=0.025)),
-        ("hibisco", "Hibisco", 1.8, 1.5, 7, 0.15, "Folhagem",
+        ("pingo-de-ouro", "Pingo-de-ouro", 1.0, 1.0, 13, 0, "Folhagem clara", dict(leaf_len=0.045, leaf_w=0.025)),
+        ("hibisco", "Hibisco", 1.8, 1.5, 16, 12, "Folhagem",
          dict(leaf_len=0.1, leaf_w=0.07, flowers=26, flower_size=0.065, bloom="Floração vermelha", stems=9)),
     ]:
-        items = [item("Folhagem", mat, shrub(seed(name), H, C, clumps=n, jitter=j), True, COARSE)]
         fine = dict(fine)
         bmat = fine.pop("bloom", "Floração vermelha")
+        parts = VC.shrub(seed(name), H, C, clusters=n or 12, flowers=j, topiary=file == "buxinho", stems=0 if file == "buxinho" else 4)
+        items = coarse(parts, mat, bmat, wood_name="Caules simplificados", leaf_name="Folhagem")
         fw, fl, fb = D.fine_shrub(seed(name), H, C, **fine)
         detailed(items, fw, fl, fb, leaf_mat=mat, bloom_mat=bmat, wood_name="Caules", leaf_name="Folhas")
         yield file, source(name, f"{name} Ø{C * 100:g}", f"Arbusto de canteiro ou cerca viva, {H:g} m de altura, Ø{C:g} m",
@@ -637,12 +414,10 @@ def pots():
             {"u": "0", "v": "0", "radius": ""}, {"u": f"{DV * 0.38:g}", "v": "0", "radius": ""},
             {"u": f"{DV / 2:g}", "v": f"{HV:g}", "radius": ""}, {"u": "0", "v": f"{HV:g}", "radius": ""}]}}
         soil = {"Cylinder": {"x": "0", "y": "0", "z": f"{HV:g}", "radius": f"{DV / 2 - 0.02:g}", "height": "0.01"}}
-        plant = shrub(seed(f"Vaso {size}"), HP, DP, clumps=5, jitter=0.12, z0=HV * 0.9)
         items = [
             {"name": "Vaso", "material": "Terracota", "in_plan": True, "shape": pot},
             {"name": "Terra", "material": "Terra vegetal", "in_plan": False, "shape": soil},
-            item("Planta", "Folhagem", plant, True, COARSE),
-        ]
+        ] + coarse(VC.shrub(seed(f"Vaso {size}"), HP - HV * 0.9, DP, z0=HV * 0.9, clusters=10), "Folhagem", leaf_name="Planta")
         fw, fl, _ = D.fine_shrub(seed(f"Vaso {size}"), HP - HV * 0.9, DP, z0=HV, leaf_len=0.11, leaf_w=0.05,
                                  stems=6)
         detailed(items, fw, fl, None, wood_name="Caules")
@@ -843,7 +618,7 @@ def planters():
         box("Terra", "Terra vegetal", -a / 2 + w, -a / 2 + w, 0, a - 2 * w, a - 2 * w, h - 0.05),
     ]
     name = "Vaso de concreto com arbusto"
-    items.append(item("Planta", "Folhagem clara", shrub(seed(name), 1.0, 1.0, clumps=6, jitter=0.12, z0=h - 0.06), True, COARSE))
+    items += coarse(VC.shrub(seed(name), 1.0, 1.0, z0=h - 0.14, clusters=12), "Folhagem clara", leaf_name="Planta")
     fw, fl, _ = D.fine_shrub(seed(name), 1.0, 1.0, z0=h - 0.05, leaf_len=0.045, leaf_w=0.024)
     detailed(items, fw, fl, None, leaf_mat="Folhagem clara", wood_name="Caules")
     yield "vaso-concreto-quadrado", source(name, "Vaso de concreto 80x80", "Vaso quadrado de concreto aparente 80 x 80 x 80 cm com "
@@ -859,9 +634,7 @@ def planters():
     items = [{"name": "Vaso", "material": "Fibra de vidro grafite", "in_plan": True, "shape": pot},
              {"name": "Terra", "material": "Terra vegetal", "in_plan": False, "shape": soil}]
     zt = Hv - 0.05
-    wood, leaves, _ = tree(seed(name), 2.4, 1.6, 0.9, 0.08)
-    items += [item("Tronco", "Casca de árvore", moved(wood, (0, 0, zt)), False, COARSE),
-              item("Copa", "Folhagem", moved(leaves, (0, 0, zt)), True, COARSE)]
+    items += coarse(VC.tree(seed(name), 2.4, 1.6, 0.9, 0.08, clusters=18, limbs=4), "Folhagem", offset=(0, 0, zt))
     fw, fl, _ = D.fine_tree(seed(name), 2.4, 1.6, 0.9, 0.08, points=380, leaf_len=0.07, leaf_w=0.03, per=9)
     detailed(items, moved(fw, (0, 0, zt)), moved(fl, (0, 0, zt)), None, leaf_mat="Folhagem")
     yield "vaso-fibra-arvore", source(name, "Vaso de fibra Ø100 com árvore", "Vaso redondo de fibra de vidro grafite Ø1,0 m x 0,9 m "
@@ -876,15 +649,19 @@ def planters():
         box("Terra", "Terra vegetal", -L / 2 + w, -B / 2 + w, 0, L - 2 * w, B - 2 * w, Hh - 0.04),
     ]
     name = "Jardineira com flores"
-    coarse, fine_w, fine_l, fine_b = [], [], [], []
+    c_light, c_shade, c_bloom, fine_w, fine_l, fine_b = [], [], [], [], [], []
     for k, x in enumerate((-0.37, 0.0, 0.37)):
-        coarse.append(moved(shrub(seed(name) + k, 0.45, 0.4, clumps=4, jitter=0.1, z0=Hh - 0.05), (x, 0, 0)))
+        parts = VC.shrub(seed(name) + k, 0.45, 0.4, z0=Hh - 0.05, clusters=8, flowers=6)
+        c_light.append(moved(parts["light"], (x, 0, 0)))
+        c_shade.append(moved(parts["shade"], (x, 0, 0)))
+        c_bloom.append(moved(parts["bloom"], (x, 0, 0)))
         fw, fl, fb = D.fine_shrub(seed(name) + k, 0.4, 0.38, z0=Hh - 0.04, leaf_len=0.045, leaf_w=0.022, stems=4, cap=900, umbels=7,
                                   flower_size=0.01)
         fine_w.append(moved(fw, (x, 0, 0)))
         fine_l.append(moved(fl, (x, 0, 0)))
         fine_b.append(moved(fb, (x, 0, 0)))
-    items.append(item("Plantas", "Folhagem", merged(coarse), True, COARSE))
+    items += coarse({"light": merged(c_light), "shade": merged(c_shade), "bloom": merged(c_bloom)}, "Folhagem", "Floração laranja",
+                    leaf_name="Plantas")
     detailed(items, merged(fine_w), merged(fine_l), merged(fine_b), bloom_mat="Floração laranja", wood_name="Caules")
     yield "jardineira-flores", source(name, "Jardineira 120x40", "Jardineira retangular de fibra de vidro grafite 120 x 40 x 40 cm "
                                       "com três ixoras floridas", items)
