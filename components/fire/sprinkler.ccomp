@@ -1,0 +1,371 @@
+(
+  format_version: 1,
+  generator: "ConstructCraft 0.12.0",
+  component: "Chuveiro automático (sprinkler)",
+  def: (
+    kind: Plumbing,
+    params: [
+      (
+        name: "Rosca",
+        value: 0.0105,
+        kind: Length,
+        instance: false,
+      ),
+    ],
+    items: [
+      (
+        name: "Canopla",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "0",
+              v: "0",
+            ),
+            (
+              u: "0.036",
+              v: "0",
+            ),
+            (
+              u: "0.036",
+              v: "-0.003",
+            ),
+            (
+              u: "0.014",
+              v: "-0.012",
+            ),
+            (
+              u: "0",
+              v: "-0.012",
+            ),
+          ],
+          offset: "0",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "Cromado",
+        in_plan: true,
+      ),
+      (
+        name: "Corpo roscado",
+        shape: Cylinder(
+          x: "0",
+          y: "0",
+          z: "-0.032",
+          radius: "Rosca",
+          height: "0.06",
+        ),
+        material: "Latão",
+        in_plan: true,
+      ),
+      (
+        name: "Braço esquerdo",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "-0.013",
+              v: "-0.03",
+            ),
+            (
+              u: "-0.008",
+              v: "-0.03",
+            ),
+            (
+              u: "-0.002",
+              v: "-0.058",
+            ),
+            (
+              u: "-0.006",
+              v: "-0.058",
+            ),
+          ],
+          offset: "-0.0025",
+          depth: "0.005",
+        ),
+        material: "Latão",
+        in_plan: false,
+      ),
+      (
+        name: "Braço direito",
+        shape: Profile(
+          plane: Front,
+          points: [
+            (
+              u: "0.008",
+              v: "-0.03",
+            ),
+            (
+              u: "0.013",
+              v: "-0.03",
+            ),
+            (
+              u: "0.006",
+              v: "-0.058",
+            ),
+            (
+              u: "0.002",
+              v: "-0.058",
+            ),
+          ],
+          offset: "-0.0025",
+          depth: "0.005",
+        ),
+        material: "Latão",
+        in_plan: false,
+      ),
+      (
+        name: "Botão",
+        shape: Cylinder(
+          x: "0",
+          y: "0",
+          z: "-0.061",
+          radius: "0.004",
+          height: "0.007",
+        ),
+        material: "Latão",
+        in_plan: true,
+      ),
+      (
+        name: "Bulbo",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "0",
+              v: "-0.054",
+            ),
+            (
+              u: "0.0018",
+              v: "-0.053",
+            ),
+            (
+              u: "0.0028",
+              v: "-0.044",
+            ),
+            (
+              u: "0.0018",
+              v: "-0.034",
+            ),
+            (
+              u: "0",
+              v: "-0.033",
+            ),
+          ],
+          offset: "0",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "Vidro vermelho (bulbo)",
+        in_plan: false,
+      ),
+      (
+        name: "Defletor",
+        shape: Cylinder(
+          x: "0",
+          y: "0",
+          z: "-0.064",
+          radius: "0.0125",
+          height: "0.0015",
+        ),
+        material: "Latão",
+        in_plan: true,
+      ),
+    ],
+    connectors: [
+      (
+        name: "Ramal",
+        system: ColdWater,
+        x: "0",
+        y: "0",
+        z: "0.028",
+        direction: Up,
+        diameter: "2*Rosca",
+      ),
+    ],
+  ),
+  types: [
+    (
+      name: "Sprinkler pendente 1/2\" K 80 68 °C",
+      values: {
+        "Rosca": 0.0105,
+      },
+      info: (
+        type_mark: "",
+        description: "Chuveiro automático pendente de resposta padrão, rosca de 1/2\", fator K 80, bulbo de vidro vermelho de 68 °C, com canopla cromada (ABNT NBR 10897); pendurado no forro (z = 0), o ramal acima",
+        manufacturer: "",
+        model: "",
+        url: "",
+        keynote: "",
+        classification: "",
+        fire_rating: "",
+        comments: "",
+        cost: None,
+      ),
+    ),
+    (
+      name: "Sprinkler pendente 3/4\" K 115 68 °C",
+      values: {
+        "Rosca": 0.0133,
+      },
+      info: (
+        type_mark: "",
+        description: "Chuveiro automático pendente de rosca de 3/4\", fator K 115",
+        manufacturer: "",
+        model: "",
+        url: "",
+        keynote: "",
+        classification: "",
+        fire_rating: "",
+        comments: "",
+        cost: None,
+      ),
+    ),
+  ],
+  materials: [
+    (
+      name: "Latão",
+      color: (192, 160, 84),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (192, 160, 84),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Cromado",
+      color: (226, 229, 233),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (226, 229, 233),
+        finish: Polished,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Vidro vermelho (bulbo)",
+      color: (214, 30, 30),
+      identity: (
+        description: "",
+        class: Glass,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.3,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (214, 30, 30),
+        finish: Glossy,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+  ],
+)

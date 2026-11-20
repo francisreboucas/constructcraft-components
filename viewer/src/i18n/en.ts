@@ -18,6 +18,7 @@ export const en: Strings = {
     vehicles: 'Vehicles',
     site: 'Site',
     signage: 'Signage',
+    fire: 'Fire protection',
   },
   shell: {
     skip: 'Skip to content',
@@ -129,6 +130,7 @@ export const en: Strings = {
       vehicles: 'To furnish garages and street fronts.',
       site: 'Floor markings, speed humps, benches, bins, bike racks, street lights, playground and tactile paving.',
       signage: 'Traffic, guide, emergency and tactile room signs, with editable text.',
+      fire: 'Extinguishers, hose cabinets, hydrants, sprinklers, detectors, alarm devices and emergency lighting.',
     },
     quality: 'What every component brings',
     qualityNote: 'What a component needs to have to enter the library.',

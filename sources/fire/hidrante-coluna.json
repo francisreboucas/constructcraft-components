@@ -1,0 +1,393 @@
+{
+ "component": "Hidrante de coluna",
+ "def": {
+  "kind": "Plumbing",
+  "params": [
+   {
+    "name": "Altura",
+    "value": 0.8,
+    "kind": "Length",
+    "instance": false
+   }
+  ],
+  "items": [
+   {
+    "name": "Corpo",
+    "material": "Vermelho segurança",
+    "in_plan": true,
+    "shape": {
+     "Revolution": {
+      "plane": "Front",
+      "points": [
+       {
+        "u": "0",
+        "v": "0"
+       },
+       {
+        "u": "0.16",
+        "v": "0"
+       },
+       {
+        "u": "0.16",
+        "v": "0.03"
+       },
+       {
+        "u": "0.105",
+        "v": "0.04"
+       },
+       {
+        "u": "0.095",
+        "v": "0.065"
+       },
+       {
+        "u": "0.095",
+        "v": "Altura - 0.16"
+       },
+       {
+        "u": "0.115",
+        "v": "Altura - 0.16"
+       },
+       {
+        "u": "0.115",
+        "v": "Altura - 0.125"
+       },
+       {
+        "u": "0.1",
+        "v": "Altura - 0.125",
+        "radius": "0.11"
+       },
+       {
+        "u": "0.03",
+        "v": "Altura - 0.03"
+       },
+       {
+        "u": "0",
+        "v": "Altura - 0.03"
+       }
+      ],
+      "offset": "0",
+      "axis": "0",
+      "angle": "360"
+     }
+    }
+   },
+   {
+    "name": "Porca de manobra",
+    "material": "Ferro fundido",
+    "in_plan": true,
+    "shape": {
+     "Cylinder": {
+      "x": "0",
+      "y": "0",
+      "z": "Altura - 0.04",
+      "radius": "0.025",
+      "height": "0.04"
+     }
+    }
+   },
+   {
+    "name": "Saída esquerda",
+    "material": "Vermelho segurança",
+    "in_plan": true,
+    "shape": {
+     "Profile": {
+      "plane": "Side",
+      "points": [
+       {
+        "u": "0 - 0.042",
+        "v": "Altura - 0.3",
+        "radius": "0.042"
+       },
+       {
+        "u": "0 + 0.042",
+        "v": "Altura - 0.3",
+        "radius": "0.042"
+       }
+      ],
+      "offset": "-0.17",
+      "depth": "0.09"
+     }
+    }
+   },
+   {
+    "name": "Tampão esquerda",
+    "material": "Latão",
+    "in_plan": true,
+    "shape": {
+     "Profile": {
+      "plane": "Side",
+      "points": [
+       {
+        "u": "0 - 0.05",
+        "v": "Altura - 0.3",
+        "radius": "0.05"
+       },
+       {
+        "u": "0 + 0.05",
+        "v": "Altura - 0.3",
+        "radius": "0.05"
+       }
+      ],
+      "offset": "-0.205",
+      "depth": "0.035"
+     }
+    }
+   },
+   {
+    "name": "Saída direita",
+    "material": "Vermelho segurança",
+    "in_plan": true,
+    "shape": {
+     "Profile": {
+      "plane": "Side",
+      "points": [
+       {
+        "u": "0 - 0.042",
+        "v": "Altura - 0.3",
+        "radius": "0.042"
+       },
+       {
+        "u": "0 + 0.042",
+        "v": "Altura - 0.3",
+        "radius": "0.042"
+       }
+      ],
+      "offset": "0.08",
+      "depth": "0.09"
+     }
+    }
+   },
+   {
+    "name": "Tampão direita",
+    "material": "Latão",
+    "in_plan": true,
+    "shape": {
+     "Profile": {
+      "plane": "Side",
+      "points": [
+       {
+        "u": "0 - 0.05",
+        "v": "Altura - 0.3",
+        "radius": "0.05"
+       },
+       {
+        "u": "0 + 0.05",
+        "v": "Altura - 0.3",
+        "radius": "0.05"
+       }
+      ],
+      "offset": "0.17",
+      "depth": "0.035"
+     }
+    }
+   },
+   {
+    "name": "Saída frontal",
+    "material": "Vermelho segurança",
+    "in_plan": true,
+    "shape": {
+     "Revolution": {
+      "plane": "Plan",
+      "points": [
+       {
+        "u": "0",
+        "v": "-0.2"
+       },
+       {
+        "u": "0 + 0.062",
+        "v": "-0.2"
+       },
+       {
+        "u": "0 + 0.062",
+        "v": "-0.2 + 0.12"
+       },
+       {
+        "u": "0",
+        "v": "-0.2 + 0.12"
+       }
+      ],
+      "offset": "Altura - 0.42",
+      "axis": "0",
+      "angle": "360"
+     }
+    }
+   },
+   {
+    "name": "Tampão frontal",
+    "material": "Latão",
+    "in_plan": true,
+    "shape": {
+     "Revolution": {
+      "plane": "Plan",
+      "points": [
+       {
+        "u": "0",
+        "v": "-0.235"
+       },
+       {
+        "u": "0 + 0.072",
+        "v": "-0.235"
+       },
+       {
+        "u": "0 + 0.072",
+        "v": "-0.235 + 0.035"
+       },
+       {
+        "u": "0",
+        "v": "-0.235 + 0.035"
+       }
+      ],
+      "offset": "Altura - 0.42",
+      "axis": "0",
+      "angle": "360"
+     }
+    }
+   },
+   {
+    "name": "Parafuso da base 1",
+    "material": "Ferro fundido",
+    "in_plan": true,
+    "shape": {
+     "Cylinder": {
+      "x": "0.1169",
+      "y": "0.0675",
+      "z": "0.03",
+      "radius": "0.009",
+      "height": "0.012"
+     }
+    }
+   },
+   {
+    "name": "Parafuso da base 2",
+    "material": "Ferro fundido",
+    "in_plan": true,
+    "shape": {
+     "Cylinder": {
+      "x": "0.0000",
+      "y": "0.1350",
+      "z": "0.03",
+      "radius": "0.009",
+      "height": "0.012"
+     }
+    }
+   },
+   {
+    "name": "Parafuso da base 3",
+    "material": "Ferro fundido",
+    "in_plan": true,
+    "shape": {
+     "Cylinder": {
+      "x": "-0.1169",
+      "y": "0.0675",
+      "z": "0.03",
+      "radius": "0.009",
+      "height": "0.012"
+     }
+    }
+   },
+   {
+    "name": "Parafuso da base 4",
+    "material": "Ferro fundido",
+    "in_plan": true,
+    "shape": {
+     "Cylinder": {
+      "x": "-0.1169",
+      "y": "-0.0675",
+      "z": "0.03",
+      "radius": "0.009",
+      "height": "0.012"
+     }
+    }
+   },
+   {
+    "name": "Parafuso da base 5",
+    "material": "Ferro fundido",
+    "in_plan": true,
+    "shape": {
+     "Cylinder": {
+      "x": "-0.0000",
+      "y": "-0.1350",
+      "z": "0.03",
+      "radius": "0.009",
+      "height": "0.012"
+     }
+    }
+   },
+   {
+    "name": "Parafuso da base 6",
+    "material": "Ferro fundido",
+    "in_plan": true,
+    "shape": {
+     "Cylinder": {
+      "x": "0.1169",
+      "y": "-0.0675",
+      "z": "0.03",
+      "radius": "0.009",
+      "height": "0.012"
+     }
+    }
+   }
+  ],
+  "connectors": [
+   {
+    "name": "Rede",
+    "system": "ColdWater",
+    "x": "0",
+    "y": "0",
+    "z": "0",
+    "direction": "Down",
+    "diameter": "0.1"
+   }
+  ]
+ },
+ "types": [
+  {
+   "name": "Hidrante de coluna 80 cm",
+   "values": {},
+   "info": {
+    "description": "Hidrante urbano de coluna de ferro fundido pintado de vermelho, 80 cm acima do passeio, com duas saídas laterais de 2 1/2\" e uma frontal de 4\" (para -Y, voltada para a via) com tampões, flange e parafusos na base"
+   }
+  },
+  {
+   "name": "Hidrante de coluna 1,00 m",
+   "values": {
+    "Altura": 1.0
+   },
+   "info": {
+    "description": "Hidrante de coluna de 1,00 m"
+   }
+  }
+ ],
+ "materials": [
+  {
+   "name": "Vermelho segurança",
+   "color": [
+    190,
+    26,
+    32
+   ],
+   "class": "Paint",
+   "finish": "Glossy"
+  },
+  {
+   "name": "Latão",
+   "color": [
+    192,
+    160,
+    84
+   ],
+   "class": "Metal",
+   "finish": "Satin"
+  },
+  {
+   "name": "Ferro fundido",
+   "color": [
+    44,
+    44,
+    47
+   ],
+   "class": "Metal",
+   "finish": "Matte"
+  }
+ ]
+}

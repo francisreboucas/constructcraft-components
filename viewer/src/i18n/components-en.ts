@@ -108,6 +108,18 @@ export const COMPONENT_NAMES_EN: Readonly<Record<string, string>> = {
   'plumbing/tanque': 'Laundry sink',
   'plumbing/tanquinho': 'Semi-automatic washer',
 
+  'fire/abrigo-hidrante': 'Fire hose cabinet',
+  'fire/acionador-manual': 'Manual call point',
+  'fire/bloco-autonomo-farois': 'Twin-spot emergency light',
+  'fire/central-alarme': 'Fire alarm control panel',
+  'fire/detector-incendio': 'Fire detector',
+  'fire/extintor': 'Portable fire extinguisher',
+  'fire/hidrante-coluna': 'Pillar fire hydrant',
+  'fire/hidrante-recalque': 'Fire department connection',
+  'fire/luminaria-emergencia': 'Emergency light',
+  'fire/sirene-audiovisual': 'Fire alarm sounder beacon',
+  'fire/sprinkler': 'Fire sprinkler',
+
   'signage/numero-predial': 'House number plate',
   'signage/placa-advertencia': 'Warning sign',
   'signage/placa-de-a-preferencia': 'Give way sign',

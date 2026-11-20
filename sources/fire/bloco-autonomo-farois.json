@@ -1,0 +1,499 @@
+{
+ "component": "Bloco autônomo de emergência com faróis",
+ "def": {
+  "kind": "Lighting",
+  "params": [
+   {
+    "name": "Largura",
+    "value": 0.3,
+    "kind": "Length",
+    "instance": false
+   },
+   {
+    "name": "Altura",
+    "value": 0.09,
+    "kind": "Length",
+    "instance": false
+   },
+   {
+    "name": "Profundidade",
+    "value": 0.07,
+    "kind": "Length",
+    "instance": false
+   },
+   {
+    "name": "Elevacao",
+    "value": 2.3,
+    "kind": "Length",
+    "instance": true
+   }
+  ],
+  "items": [
+   {
+    "name": "Corpo",
+    "material": "Branco",
+    "in_plan": true,
+    "shape": {
+     "Profile": {
+      "plane": "Front",
+      "points": [
+       {
+        "u": "-Largura/2 + 0.012",
+        "v": "Elevacao"
+       },
+       {
+        "u": "Largura/2 - 0.012",
+        "v": "Elevacao",
+        "radius": "0.012"
+       },
+       {
+        "u": "Largura/2",
+        "v": "Elevacao + 0.012"
+       },
+       {
+        "u": "Largura/2",
+        "v": "Elevacao + Altura - 0.012",
+        "radius": "0.012"
+       },
+       {
+        "u": "Largura/2 - 0.012",
+        "v": "Elevacao + Altura"
+       },
+       {
+        "u": "-Largura/2 + 0.012",
+        "v": "Elevacao + Altura",
+        "radius": "0.012"
+       },
+       {
+        "u": "-Largura/2",
+        "v": "Elevacao + Altura - 0.012"
+       },
+       {
+        "u": "-Largura/2",
+        "v": "Elevacao + 0.012",
+        "radius": "0.012"
+       }
+      ],
+      "offset": "-Profundidade",
+      "depth": "Profundidade"
+     }
+    }
+   },
+   {
+    "name": "Grade frontal",
+    "material": "Plástico cinza",
+    "in_plan": false,
+    "shape": {
+     "Profile": {
+      "plane": "Front",
+      "points": [
+       {
+        "u": "-Largura/2 + 0.02 + 0.005",
+        "v": "Elevacao + 0.015"
+       },
+       {
+        "u": "Largura/2 - 0.06 - 0.005",
+        "v": "Elevacao + 0.015",
+        "radius": "0.005"
+       },
+       {
+        "u": "Largura/2 - 0.06",
+        "v": "Elevacao + 0.015 + 0.005"
+       },
+       {
+        "u": "Largura/2 - 0.06",
+        "v": "Elevacao + Altura - 0.015 - 0.005",
+        "radius": "0.005"
+       },
+       {
+        "u": "Largura/2 - 0.06 - 0.005",
+        "v": "Elevacao + Altura - 0.015"
+       },
+       {
+        "u": "-Largura/2 + 0.02 + 0.005",
+        "v": "Elevacao + Altura - 0.015",
+        "radius": "0.005"
+       },
+       {
+        "u": "-Largura/2 + 0.02",
+        "v": "Elevacao + Altura - 0.015 - 0.005"
+       },
+       {
+        "u": "-Largura/2 + 0.02",
+        "v": "Elevacao + 0.015 + 0.005",
+        "radius": "0.005"
+       }
+      ],
+      "offset": "-Profundidade - 0.001",
+      "depth": "0.001"
+     }
+    }
+   },
+   {
+    "name": "LED de carga",
+    "material": "LED verde",
+    "in_plan": false,
+    "shape": {
+     "Revolution": {
+      "plane": "Plan",
+      "points": [
+       {
+        "u": "Largura/2 - 0.035",
+        "v": "-Profundidade - 0.002"
+       },
+       {
+        "u": "Largura/2 - 0.035 + 0.003",
+        "v": "-Profundidade - 0.002"
+       },
+       {
+        "u": "Largura/2 - 0.035 + 0.003",
+        "v": "-Profundidade - 0.002 + 0.002"
+       },
+       {
+        "u": "Largura/2 - 0.035",
+        "v": "-Profundidade - 0.002 + 0.002"
+       }
+      ],
+      "offset": "Elevacao + Altura/2 + 0.012",
+      "axis": "Largura/2 - 0.035",
+      "angle": "360"
+     }
+    }
+   },
+   {
+    "name": "LED de bateria",
+    "material": "LED amarelo",
+    "in_plan": false,
+    "shape": {
+     "Revolution": {
+      "plane": "Plan",
+      "points": [
+       {
+        "u": "Largura/2 - 0.035",
+        "v": "-Profundidade - 0.002"
+       },
+       {
+        "u": "Largura/2 - 0.035 + 0.003",
+        "v": "-Profundidade - 0.002"
+       },
+       {
+        "u": "Largura/2 - 0.035 + 0.003",
+        "v": "-Profundidade - 0.002 + 0.002"
+       },
+       {
+        "u": "Largura/2 - 0.035",
+        "v": "-Profundidade - 0.002 + 0.002"
+       }
+      ],
+      "offset": "Elevacao + Altura/2 - 0.012",
+      "axis": "Largura/2 - 0.035",
+      "angle": "360"
+     }
+    }
+   },
+   {
+    "name": "Farol esquerdo",
+    "material": "Branco",
+    "in_plan": true,
+    "shape": {
+     "Revolution": {
+      "plane": "Plan",
+      "points": [
+       {
+        "u": "(-Largura*0.3)",
+        "v": "-Profundidade - 0.03"
+       },
+       {
+        "u": "(-Largura*0.3) + 0.035",
+        "v": "-Profundidade - 0.03"
+       },
+       {
+        "u": "(-Largura*0.3) + 0.035",
+        "v": "-Profundidade - 0.03 + 0.08"
+       },
+       {
+        "u": "(-Largura*0.3)",
+        "v": "-Profundidade - 0.03 + 0.08"
+       }
+      ],
+      "offset": "(Elevacao + Altura + 0.045)",
+      "axis": "(-Largura*0.3)",
+      "angle": "360"
+     }
+    }
+   },
+   {
+    "name": "Lente do farol esquerdo",
+    "material": "Plástico translúcido",
+    "in_plan": true,
+    "shape": {
+     "Revolution": {
+      "plane": "Plan",
+      "points": [
+       {
+        "u": "(-Largura*0.3)",
+        "v": "-Profundidade - 0.033"
+       },
+       {
+        "u": "(-Largura*0.3) + 0.03",
+        "v": "-Profundidade - 0.033"
+       },
+       {
+        "u": "(-Largura*0.3) + 0.03",
+        "v": "-Profundidade - 0.033 + 0.003"
+       },
+       {
+        "u": "(-Largura*0.3)",
+        "v": "-Profundidade - 0.033 + 0.003"
+       }
+      ],
+      "offset": "(Elevacao + Altura + 0.045)",
+      "axis": "(-Largura*0.3)",
+      "angle": "360"
+     }
+    }
+   },
+   {
+    "name": "Garfo esquerdo 1",
+    "material": "Plástico cinza",
+    "in_plan": true,
+    "shape": {
+     "Box": {
+      "x": "(-Largura*0.3) - 0.042",
+      "y": "-Profundidade/2 - 0.008",
+      "z": "Elevacao + Altura",
+      "width": "0.006",
+      "depth": "0.016",
+      "height": "0.05"
+     }
+    }
+   },
+   {
+    "name": "Garfo esquerdo 2",
+    "material": "Plástico cinza",
+    "in_plan": true,
+    "shape": {
+     "Box": {
+      "x": "(-Largura*0.3) + 0.036",
+      "y": "-Profundidade/2 - 0.008",
+      "z": "Elevacao + Altura",
+      "width": "0.006",
+      "depth": "0.016",
+      "height": "0.05"
+     }
+    }
+   },
+   {
+    "name": "Base do garfo esquerdo",
+    "material": "Plástico cinza",
+    "in_plan": true,
+    "shape": {
+     "Box": {
+      "x": "(-Largura*0.3) - 0.042",
+      "y": "-Profundidade/2 - 0.008",
+      "z": "Elevacao + Altura",
+      "width": "0.084",
+      "depth": "0.016",
+      "height": "0.004"
+     }
+    }
+   },
+   {
+    "name": "Farol direito",
+    "material": "Branco",
+    "in_plan": true,
+    "shape": {
+     "Revolution": {
+      "plane": "Plan",
+      "points": [
+       {
+        "u": "(Largura*0.3)",
+        "v": "-Profundidade - 0.03"
+       },
+       {
+        "u": "(Largura*0.3) + 0.035",
+        "v": "-Profundidade - 0.03"
+       },
+       {
+        "u": "(Largura*0.3) + 0.035",
+        "v": "-Profundidade - 0.03 + 0.08"
+       },
+       {
+        "u": "(Largura*0.3)",
+        "v": "-Profundidade - 0.03 + 0.08"
+       }
+      ],
+      "offset": "(Elevacao + Altura + 0.045)",
+      "axis": "(Largura*0.3)",
+      "angle": "360"
+     }
+    }
+   },
+   {
+    "name": "Lente do farol direito",
+    "material": "Plástico translúcido",
+    "in_plan": true,
+    "shape": {
+     "Revolution": {
+      "plane": "Plan",
+      "points": [
+       {
+        "u": "(Largura*0.3)",
+        "v": "-Profundidade - 0.033"
+       },
+       {
+        "u": "(Largura*0.3) + 0.03",
+        "v": "-Profundidade - 0.033"
+       },
+       {
+        "u": "(Largura*0.3) + 0.03",
+        "v": "-Profundidade - 0.033 + 0.003"
+       },
+       {
+        "u": "(Largura*0.3)",
+        "v": "-Profundidade - 0.033 + 0.003"
+       }
+      ],
+      "offset": "(Elevacao + Altura + 0.045)",
+      "axis": "(Largura*0.3)",
+      "angle": "360"
+     }
+    }
+   },
+   {
+    "name": "Garfo direito 1",
+    "material": "Plástico cinza",
+    "in_plan": true,
+    "shape": {
+     "Box": {
+      "x": "(Largura*0.3) - 0.042",
+      "y": "-Profundidade/2 - 0.008",
+      "z": "Elevacao + Altura",
+      "width": "0.006",
+      "depth": "0.016",
+      "height": "0.05"
+     }
+    }
+   },
+   {
+    "name": "Garfo direito 2",
+    "material": "Plástico cinza",
+    "in_plan": true,
+    "shape": {
+     "Box": {
+      "x": "(Largura*0.3) + 0.036",
+      "y": "-Profundidade/2 - 0.008",
+      "z": "Elevacao + Altura",
+      "width": "0.006",
+      "depth": "0.016",
+      "height": "0.05"
+     }
+    }
+   },
+   {
+    "name": "Base do garfo direito",
+    "material": "Plástico cinza",
+    "in_plan": true,
+    "shape": {
+     "Box": {
+      "x": "(Largura*0.3) - 0.042",
+      "y": "-Profundidade/2 - 0.008",
+      "z": "Elevacao + Altura",
+      "width": "0.084",
+      "depth": "0.016",
+      "height": "0.004"
+     }
+    }
+   }
+  ],
+  "mep": {
+   "Device": {
+    "device": "WallLight",
+    "power": 15
+   }
+  },
+  "connectors": [
+   {
+    "name": "Alimentação",
+    "system": "Power",
+    "x": "0",
+    "y": "0",
+    "z": "Elevacao + Altura/2",
+    "direction": "Back"
+   }
+  ]
+ },
+ "types": [
+  {
+   "name": "Bloco autônomo 2 faróis 1200 lm",
+   "values": {},
+   "info": {
+    "description": "Bloco autônomo de iluminação de emergência com dois faróis de LED, 1200 lm, bateria interna, LEDs de carga e de bateria (ABNT NBR 10898), para garagens, galpões e áreas de circulação, a 2,30 m do piso"
+   }
+  },
+  {
+   "name": "Bloco autônomo 2 faróis 3000 lm",
+   "values": {
+    "Largura": 0.38,
+    "Altura": 0.11,
+    "Profundidade": 0.08
+   },
+   "info": {
+    "description": "Bloco autônomo de 3000 lm, maior"
+   }
+  }
+ ],
+ "materials": [
+  {
+   "name": "Branco",
+   "color": [
+    244,
+    244,
+    240
+   ],
+   "class": "Plastic",
+   "finish": "Satin"
+  },
+  {
+   "name": "Plástico translúcido",
+   "color": [
+    222,
+    236,
+    240
+   ],
+   "class": "Plastic",
+   "finish": "Glossy",
+   "transparency": 0.6
+  },
+  {
+   "name": "Plástico cinza",
+   "color": [
+    120,
+    122,
+    126
+   ],
+   "class": "Plastic",
+   "finish": "Satin"
+  },
+  {
+   "name": "LED verde",
+   "color": [
+    40,
+    200,
+    80
+   ],
+   "class": "Plastic",
+   "finish": "Glossy"
+  },
+  {
+   "name": "LED amarelo",
+   "color": [
+    250,
+    190,
+    20
+   ],
+   "class": "Plastic",
+   "finish": "Glossy"
+  }
+ ]
+}

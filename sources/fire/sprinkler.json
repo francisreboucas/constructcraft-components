@@ -1,0 +1,250 @@
+{
+ "component": "Chuveiro automático (sprinkler)",
+ "def": {
+  "kind": "Plumbing",
+  "params": [
+   {
+    "name": "Rosca",
+    "value": 0.0105,
+    "kind": "Length",
+    "instance": false
+   }
+  ],
+  "items": [
+   {
+    "name": "Canopla",
+    "material": "Cromado",
+    "in_plan": true,
+    "shape": {
+     "Revolution": {
+      "plane": "Front",
+      "points": [
+       {
+        "u": "0",
+        "v": "0"
+       },
+       {
+        "u": "0.036",
+        "v": "0"
+       },
+       {
+        "u": "0.036",
+        "v": "-0.003"
+       },
+       {
+        "u": "0.014",
+        "v": "-0.012"
+       },
+       {
+        "u": "0",
+        "v": "-0.012"
+       }
+      ],
+      "offset": "0",
+      "axis": "0",
+      "angle": "360"
+     }
+    }
+   },
+   {
+    "name": "Corpo roscado",
+    "material": "Latão",
+    "in_plan": true,
+    "shape": {
+     "Cylinder": {
+      "x": "0",
+      "y": "0",
+      "z": "-0.032",
+      "radius": "Rosca",
+      "height": "0.06"
+     }
+    }
+   },
+   {
+    "name": "Braço esquerdo",
+    "material": "Latão",
+    "in_plan": false,
+    "shape": {
+     "Profile": {
+      "plane": "Front",
+      "points": [
+       {
+        "u": "-0.013",
+        "v": "-0.03"
+       },
+       {
+        "u": "-0.008",
+        "v": "-0.03"
+       },
+       {
+        "u": "-0.002",
+        "v": "-0.058"
+       },
+       {
+        "u": "-0.006",
+        "v": "-0.058"
+       }
+      ],
+      "offset": "-0.0025",
+      "depth": "0.005"
+     }
+    }
+   },
+   {
+    "name": "Braço direito",
+    "material": "Latão",
+    "in_plan": false,
+    "shape": {
+     "Profile": {
+      "plane": "Front",
+      "points": [
+       {
+        "u": "0.008",
+        "v": "-0.03"
+       },
+       {
+        "u": "0.013",
+        "v": "-0.03"
+       },
+       {
+        "u": "0.006",
+        "v": "-0.058"
+       },
+       {
+        "u": "0.002",
+        "v": "-0.058"
+       }
+      ],
+      "offset": "-0.0025",
+      "depth": "0.005"
+     }
+    }
+   },
+   {
+    "name": "Botão",
+    "material": "Latão",
+    "in_plan": true,
+    "shape": {
+     "Cylinder": {
+      "x": "0",
+      "y": "0",
+      "z": "-0.061",
+      "radius": "0.004",
+      "height": "0.007"
+     }
+    }
+   },
+   {
+    "name": "Bulbo",
+    "material": "Vidro vermelho (bulbo)",
+    "in_plan": false,
+    "shape": {
+     "Revolution": {
+      "plane": "Front",
+      "points": [
+       {
+        "u": "0",
+        "v": "-0.054"
+       },
+       {
+        "u": "0.0018",
+        "v": "-0.053"
+       },
+       {
+        "u": "0.0028",
+        "v": "-0.044"
+       },
+       {
+        "u": "0.0018",
+        "v": "-0.034"
+       },
+       {
+        "u": "0",
+        "v": "-0.033"
+       }
+      ],
+      "offset": "0",
+      "axis": "0",
+      "angle": "360"
+     }
+    }
+   },
+   {
+    "name": "Defletor",
+    "material": "Latão",
+    "in_plan": true,
+    "shape": {
+     "Cylinder": {
+      "x": "0",
+      "y": "0",
+      "z": "-0.064",
+      "radius": "0.0125",
+      "height": "0.0015"
+     }
+    }
+   }
+  ],
+  "connectors": [
+   {
+    "name": "Ramal",
+    "system": "ColdWater",
+    "x": "0",
+    "y": "0",
+    "z": "0.028",
+    "direction": "Up",
+    "diameter": "2*Rosca"
+   }
+  ]
+ },
+ "types": [
+  {
+   "name": "Sprinkler pendente 1/2\" K 80 68 °C",
+   "values": {},
+   "info": {
+    "description": "Chuveiro automático pendente de resposta padrão, rosca de 1/2\", fator K 80, bulbo de vidro vermelho de 68 °C, com canopla cromada (ABNT NBR 10897); pendurado no forro (z = 0), o ramal acima"
+   }
+  },
+  {
+   "name": "Sprinkler pendente 3/4\" K 115 68 °C",
+   "values": {
+    "Rosca": 0.0133
+   },
+   "info": {
+    "description": "Chuveiro automático pendente de rosca de 3/4\", fator K 115"
+   }
+  }
+ ],
+ "materials": [
+  {
+   "name": "Latão",
+   "color": [
+    192,
+    160,
+    84
+   ],
+   "class": "Metal",
+   "finish": "Satin"
+  },
+  {
+   "name": "Cromado",
+   "color": [
+    226,
+    229,
+    233
+   ],
+   "class": "Metal",
+   "finish": "Polished"
+  },
+  {
+   "name": "Vidro vermelho (bulbo)",
+   "color": [
+    214,
+    30,
+    30
+   ],
+   "class": "Glass",
+   "finish": "Glossy",
+   "transparency": 0.3
+  }
+ ]
+}

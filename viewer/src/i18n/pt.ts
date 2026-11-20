@@ -13,6 +13,7 @@ const folders = {
   vehicles: 'Veículos',
   site: 'Área externa',
   signage: 'Sinalização',
+  fire: 'Incêndio',
 };
 
 export const pt = {
@@ -130,6 +131,7 @@ export const pt = {
       vehicles: 'Para compor garagens e fachadas.',
       site: 'Vagas, legendas e setas no piso, lombadas, bancos, lixeiras, bicicletários, postes, playground e piso tátil.',
       signage: 'Placas de trânsito, de orientação, de emergência e de identificação tátil, com os textos editáveis.',
+      fire: 'Extintores, abrigos de mangueira, hidrantes, sprinklers, detectores, alarme e iluminação de emergência.',
     } as Record<keyof typeof folders, string>,
     quality: 'O que todo componente traz',
     qualityNote: 'O que um componente precisa ter para entrar na biblioteca.',

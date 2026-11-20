@@ -1,0 +1,501 @@
+(
+  format_version: 1,
+  generator: "ConstructCraft 0.12.0",
+  component: "Hidrante de coluna",
+  def: (
+    kind: Plumbing,
+    params: [
+      (
+        name: "Altura",
+        value: 0.8,
+        kind: Length,
+        instance: false,
+      ),
+    ],
+    items: [
+      (
+        name: "Corpo",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "0",
+              v: "0",
+            ),
+            (
+              u: "0.16",
+              v: "0",
+            ),
+            (
+              u: "0.16",
+              v: "0.03",
+            ),
+            (
+              u: "0.105",
+              v: "0.04",
+            ),
+            (
+              u: "0.095",
+              v: "0.065",
+            ),
+            (
+              u: "0.095",
+              v: "Altura - 0.16",
+            ),
+            (
+              u: "0.115",
+              v: "Altura - 0.16",
+            ),
+            (
+              u: "0.115",
+              v: "Altura - 0.125",
+            ),
+            (
+              u: "0.1",
+              v: "Altura - 0.125",
+              radius: "0.11",
+            ),
+            (
+              u: "0.03",
+              v: "Altura - 0.03",
+            ),
+            (
+              u: "0",
+              v: "Altura - 0.03",
+            ),
+          ],
+          offset: "0",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "Vermelho segurança",
+        in_plan: true,
+      ),
+      (
+        name: "Porca de manobra",
+        shape: Cylinder(
+          x: "0",
+          y: "0",
+          z: "Altura - 0.04",
+          radius: "0.025",
+          height: "0.04",
+        ),
+        material: "Ferro fundido",
+        in_plan: true,
+      ),
+      (
+        name: "Saída esquerda",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "0 - 0.042",
+              v: "Altura - 0.3",
+              radius: "0.042",
+            ),
+            (
+              u: "0 + 0.042",
+              v: "Altura - 0.3",
+              radius: "0.042",
+            ),
+          ],
+          offset: "-0.17",
+          depth: "0.09",
+        ),
+        material: "Vermelho segurança",
+        in_plan: true,
+      ),
+      (
+        name: "Tampão esquerda",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "0 - 0.05",
+              v: "Altura - 0.3",
+              radius: "0.05",
+            ),
+            (
+              u: "0 + 0.05",
+              v: "Altura - 0.3",
+              radius: "0.05",
+            ),
+          ],
+          offset: "-0.205",
+          depth: "0.035",
+        ),
+        material: "Latão",
+        in_plan: true,
+      ),
+      (
+        name: "Saída direita",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "0 - 0.042",
+              v: "Altura - 0.3",
+              radius: "0.042",
+            ),
+            (
+              u: "0 + 0.042",
+              v: "Altura - 0.3",
+              radius: "0.042",
+            ),
+          ],
+          offset: "0.08",
+          depth: "0.09",
+        ),
+        material: "Vermelho segurança",
+        in_plan: true,
+      ),
+      (
+        name: "Tampão direita",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "0 - 0.05",
+              v: "Altura - 0.3",
+              radius: "0.05",
+            ),
+            (
+              u: "0 + 0.05",
+              v: "Altura - 0.3",
+              radius: "0.05",
+            ),
+          ],
+          offset: "0.17",
+          depth: "0.035",
+        ),
+        material: "Latão",
+        in_plan: true,
+      ),
+      (
+        name: "Saída frontal",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "0",
+              v: "-0.2",
+            ),
+            (
+              u: "0 + 0.062",
+              v: "-0.2",
+            ),
+            (
+              u: "0 + 0.062",
+              v: "-0.2 + 0.12",
+            ),
+            (
+              u: "0",
+              v: "-0.2 + 0.12",
+            ),
+          ],
+          offset: "Altura - 0.42",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "Vermelho segurança",
+        in_plan: true,
+      ),
+      (
+        name: "Tampão frontal",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "0",
+              v: "-0.235",
+            ),
+            (
+              u: "0 + 0.072",
+              v: "-0.235",
+            ),
+            (
+              u: "0 + 0.072",
+              v: "-0.235 + 0.035",
+            ),
+            (
+              u: "0",
+              v: "-0.235 + 0.035",
+            ),
+          ],
+          offset: "Altura - 0.42",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "Latão",
+        in_plan: true,
+      ),
+      (
+        name: "Parafuso da base 1",
+        shape: Cylinder(
+          x: "0.1169",
+          y: "0.0675",
+          z: "0.03",
+          radius: "0.009",
+          height: "0.012",
+        ),
+        material: "Ferro fundido",
+        in_plan: true,
+      ),
+      (
+        name: "Parafuso da base 2",
+        shape: Cylinder(
+          x: "0.0000",
+          y: "0.1350",
+          z: "0.03",
+          radius: "0.009",
+          height: "0.012",
+        ),
+        material: "Ferro fundido",
+        in_plan: true,
+      ),
+      (
+        name: "Parafuso da base 3",
+        shape: Cylinder(
+          x: "-0.1169",
+          y: "0.0675",
+          z: "0.03",
+          radius: "0.009",
+          height: "0.012",
+        ),
+        material: "Ferro fundido",
+        in_plan: true,
+      ),
+      (
+        name: "Parafuso da base 4",
+        shape: Cylinder(
+          x: "-0.1169",
+          y: "-0.0675",
+          z: "0.03",
+          radius: "0.009",
+          height: "0.012",
+        ),
+        material: "Ferro fundido",
+        in_plan: true,
+      ),
+      (
+        name: "Parafuso da base 5",
+        shape: Cylinder(
+          x: "-0.0000",
+          y: "-0.1350",
+          z: "0.03",
+          radius: "0.009",
+          height: "0.012",
+        ),
+        material: "Ferro fundido",
+        in_plan: true,
+      ),
+      (
+        name: "Parafuso da base 6",
+        shape: Cylinder(
+          x: "0.1169",
+          y: "-0.0675",
+          z: "0.03",
+          radius: "0.009",
+          height: "0.012",
+        ),
+        material: "Ferro fundido",
+        in_plan: true,
+      ),
+    ],
+    connectors: [
+      (
+        name: "Rede",
+        system: ColdWater,
+        x: "0",
+        y: "0",
+        z: "0",
+        direction: Down,
+        diameter: "0.1",
+      ),
+    ],
+  ),
+  types: [
+    (
+      name: "Hidrante de coluna 80 cm",
+      values: {
+        "Altura": 0.8,
+      },
+      info: (
+        type_mark: "",
+        description: "Hidrante urbano de coluna de ferro fundido pintado de vermelho, 80 cm acima do passeio, com duas saídas laterais de 2 1/2\" e uma frontal de 4\" (para -Y, voltada para a via) com tampões, flange e parafusos na base",
+        manufacturer: "",
+        model: "",
+        url: "",
+        keynote: "",
+        classification: "",
+        fire_rating: "",
+        comments: "",
+        cost: None,
+      ),
+    ),
+    (
+      name: "Hidrante de coluna 1,00 m",
+      values: {
+        "Altura": 1.0,
+      },
+      info: (
+        type_mark: "",
+        description: "Hidrante de coluna de 1,00 m",
+        manufacturer: "",
+        model: "",
+        url: "",
+        keynote: "",
+        classification: "",
+        fire_rating: "",
+        comments: "",
+        cost: None,
+      ),
+    ),
+  ],
+  materials: [
+    (
+      name: "Vermelho segurança",
+      color: (190, 26, 32),
+      identity: (
+        description: "",
+        class: Paint,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (190, 26, 32),
+        finish: Glossy,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Latão",
+      color: (192, 160, 84),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (192, 160, 84),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Ferro fundido",
+      color: (44, 44, 47),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (44, 44, 47),
+        finish: Matte,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+  ],
+)

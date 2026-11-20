@@ -1078,6 +1078,434 @@
       ]
     },
     {
+      "file": "components/fire/abrigo-hidrante.ccomp",
+      "thumbnail": "thumbnails/fire/abrigo-hidrante.png",
+      "component": "Abrigo de mangueira (hidrante)",
+      "author": "Francis Rebouças",
+      "kind": "Plumbing",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Altura",
+        "Profundidade",
+        "Elevacao",
+        "Linha1",
+        "Linha2"
+      ],
+      "types": [
+        {
+          "name": "Abrigo de hidrante 90 x 60 x 17 cm",
+          "values": {
+            "Largura": 0.6,
+            "Altura": 0.9,
+            "Profundidade": 0.17,
+            "Elevacao": 0.6,
+            "Linha1": "INCÊNDIO",
+            "Linha2": ""
+          },
+          "description": "Abrigo de sobrepor de chapa de aço pintada de vermelho, 90 x 60 x 17 cm, porta com visor de vidro e a inscrição INCÊNDIO em vermelho, com registro globo angular de 2 1/2\" e adaptador storz, mangueira de 1 1/2\" aduchada e esguicho (ABNT NBR 13714); o registro fica a cerca de 1,30 m do piso; as duas linhas do vidro são editáveis em cada abrigo"
+        },
+        {
+          "name": "Abrigo de hidrante 90 x 60 x 25 cm",
+          "values": {
+            "Largura": 0.6,
+            "Altura": 0.9,
+            "Profundidade": 0.25,
+            "Elevacao": 0.6,
+            "Linha1": "INCÊNDIO",
+            "Linha2": ""
+          },
+          "description": "Abrigo de hidrante mais fundo, para duas mangueiras"
+        },
+        {
+          "name": "Abrigo de hidrante 75 x 45 x 17 cm",
+          "values": {
+            "Largura": 0.45,
+            "Altura": 0.75,
+            "Profundidade": 0.17,
+            "Elevacao": 0.6,
+            "Linha1": "INCÊNDIO",
+            "Linha2": ""
+          },
+          "description": "Abrigo de mangotinho ou hidrante compacto, 75 x 45 x 17 cm"
+        }
+      ]
+    },
+    {
+      "file": "components/fire/acionador-manual.ccomp",
+      "thumbnail": "thumbnails/fire/acionador-manual.png",
+      "component": "Acionador manual de alarme",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Altura",
+        "Elevacao",
+        "Linha1",
+        "Linha2"
+      ],
+      "types": [
+        {
+          "name": "Acionador manual 88 x 88 mm",
+          "values": {
+            "Largura": 0.088,
+            "Altura": 0.088,
+            "Elevacao": 1.15,
+            "Linha1": "ALARME DE INCÊNDIO",
+            "Linha2": "PRESSIONE"
+          },
+          "description": "Acionador manual de alarme de incêndio (botoeira) de sobrepor, vermelho, 88 x 88 mm, com visor frangível branco (ABNT NBR 17240), a 1,15 m do piso (entre 0,90 e 1,35 m); os textos do corpo e do visor são editáveis em cada acionador"
+        },
+        {
+          "name": "Acionador manual 125 x 125 mm",
+          "values": {
+            "Largura": 0.125,
+            "Altura": 0.125,
+            "Elevacao": 1.15,
+            "Linha1": "ALARME DE INCÊNDIO",
+            "Linha2": "PRESSIONE"
+          },
+          "description": "Acionador manual de 125 x 125 mm"
+        }
+      ]
+    },
+    {
+      "file": "components/fire/bloco-autonomo-farois.ccomp",
+      "thumbnail": "thumbnails/fire/bloco-autonomo-farois.png",
+      "component": "Bloco autônomo de emergência com faróis",
+      "author": "Francis Rebouças",
+      "kind": "Lighting",
+      "mep": {
+        "Device": {
+          "device": "WallLight",
+          "power": 15.0
+        }
+      },
+      "parameters": [
+        "Largura",
+        "Altura",
+        "Profundidade",
+        "Elevacao"
+      ],
+      "types": [
+        {
+          "name": "Bloco autônomo 2 faróis 1200 lm",
+          "values": {
+            "Largura": 0.3,
+            "Altura": 0.09,
+            "Profundidade": 0.07,
+            "Elevacao": 2.3
+          },
+          "description": "Bloco autônomo de iluminação de emergência com dois faróis de LED, 1200 lm, bateria interna, LEDs de carga e de bateria (ABNT NBR 10898), para garagens, galpões e áreas de circulação, a 2,30 m do piso"
+        },
+        {
+          "name": "Bloco autônomo 2 faróis 3000 lm",
+          "values": {
+            "Largura": 0.38,
+            "Altura": 0.11,
+            "Profundidade": 0.08,
+            "Elevacao": 2.3
+          },
+          "description": "Bloco autônomo de 3000 lm, maior"
+        }
+      ]
+    },
+    {
+      "file": "components/fire/central-alarme.ccomp",
+      "thumbnail": "thumbnails/fire/central-alarme.png",
+      "component": "Central de alarme de incêndio",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Altura",
+        "Profundidade",
+        "Elevacao",
+        "Linha1",
+        "Linha2"
+      ],
+      "types": [
+        {
+          "name": "Central de alarme 12 laços",
+          "values": {
+            "Largura": 0.36,
+            "Altura": 0.3,
+            "Profundidade": 0.09,
+            "Elevacao": 1.3,
+            "Linha1": "CENTRAL DE ALARME",
+            "Linha2": ""
+          },
+          "description": "Central de alarme de incêndio convencional de 12 laços, caixa metálica vermelha de 36 x 30 x 9 cm, visor, LEDs de estado e teclado (ABNT NBR 17240), a 1,30 m do piso; as duas linhas de texto da tampa são editáveis em cada central"
+        },
+        {
+          "name": "Central de alarme endereçável",
+          "values": {
+            "Largura": 0.48,
+            "Altura": 0.4,
+            "Profundidade": 0.12,
+            "Elevacao": 1.3,
+            "Linha1": "CENTRAL DE ALARME",
+            "Linha2": ""
+          },
+          "description": "Central de alarme endereçável, maior, 48 x 40 x 12 cm"
+        }
+      ]
+    },
+    {
+      "file": "components/fire/detector-incendio.ccomp",
+      "thumbnail": "thumbnails/fire/detector-incendio.png",
+      "component": "Detector de incêndio",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Termico"
+      ],
+      "types": [
+        {
+          "name": "Detector de fumaça óptico",
+          "values": {
+            "Termico": false
+          },
+          "description": "Detector pontual de fumaça óptico (fotoelétrico), Ø 10 cm, na base de sobrepor presa no forro (z = 0), com LED indicador (ABNT NBR 17240)"
+        },
+        {
+          "name": "Detector de temperatura",
+          "values": {
+            "Termico": true
+          },
+          "description": "Detector pontual de temperatura termovelocimétrico, com o termistor protegido no centro, para cozinhas e garagens"
+        }
+      ]
+    },
+    {
+      "file": "components/fire/extintor.ccomp",
+      "thumbnail": "thumbnails/fire/extintor.png",
+      "component": "Extintor portátil",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Diametro",
+        "AlturaCorpo",
+        "Elevacao",
+        "Difusor",
+        "SinalizacaoPiso"
+      ],
+      "types": [
+        {
+          "name": "Extintor PQS ABC 6 kg",
+          "values": {
+            "Diametro": 0.15,
+            "AlturaCorpo": 0.48,
+            "Elevacao": 0.9,
+            "Difusor": false,
+            "SinalizacaoPiso": false
+          },
+          "description": "Extintor portátil de pó químico seco ABC, 6 kg (ABNT NBR 15808), com manômetro e mangueira, pendurado na parede pelo suporte com o fundo a 90 cm do piso (o topo a no máximo 1,60 m, ABNT NBR 12693); com Elevacao abaixo de 30 cm fica num suporte de piso; a sinalização de piso (quadrado vermelho com borda amarela) pode ser ligada em cada extintor"
+        },
+        {
+          "name": "Extintor PQS ABC 4 kg",
+          "values": {
+            "Diametro": 0.135,
+            "AlturaCorpo": 0.42,
+            "Elevacao": 0.9,
+            "Difusor": false,
+            "SinalizacaoPiso": false
+          },
+          "description": "Extintor portátil de pó químico seco ABC, 4 kg"
+        },
+        {
+          "name": "Extintor PQS ABC 12 kg",
+          "values": {
+            "Diametro": 0.19,
+            "AlturaCorpo": 0.56,
+            "Elevacao": 0.9,
+            "Difusor": false,
+            "SinalizacaoPiso": false
+          },
+          "description": "Extintor portátil de pó químico seco ABC, 12 kg"
+        },
+        {
+          "name": "Extintor CO2 6 kg",
+          "values": {
+            "Diametro": 0.14,
+            "AlturaCorpo": 0.6,
+            "Elevacao": 0.9,
+            "Difusor": true,
+            "SinalizacaoPiso": false
+          },
+          "description": "Extintor portátil de dióxido de carbono (classes B e C), 6 kg, com mangueira e difusor, sem manômetro"
+        },
+        {
+          "name": "Extintor água pressurizada 10 L",
+          "values": {
+            "Diametro": 0.18,
+            "AlturaCorpo": 0.56,
+            "Elevacao": 0.9,
+            "Difusor": false,
+            "SinalizacaoPiso": false
+          },
+          "description": "Extintor portátil de água pressurizada (classe A), 10 L"
+        }
+      ]
+    },
+    {
+      "file": "components/fire/hidrante-coluna.ccomp",
+      "thumbnail": "thumbnails/fire/hidrante-coluna.png",
+      "component": "Hidrante de coluna",
+      "author": "Francis Rebouças",
+      "kind": "Plumbing",
+      "mep": null,
+      "parameters": [
+        "Altura"
+      ],
+      "types": [
+        {
+          "name": "Hidrante de coluna 80 cm",
+          "values": {
+            "Altura": 0.8
+          },
+          "description": "Hidrante urbano de coluna de ferro fundido pintado de vermelho, 80 cm acima do passeio, com duas saídas laterais de 2 1/2\" e uma frontal de 4\" (para -Y, voltada para a via) com tampões, flange e parafusos na base"
+        },
+        {
+          "name": "Hidrante de coluna 1,00 m",
+          "values": {
+            "Altura": 1.0
+          },
+          "description": "Hidrante de coluna de 1,00 m"
+        }
+      ]
+    },
+    {
+      "file": "components/fire/hidrante-recalque.ccomp",
+      "thumbnail": "thumbnails/fire/hidrante-recalque.png",
+      "component": "Registro de recalque de passeio",
+      "author": "Francis Rebouças",
+      "kind": "Plumbing",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Comprimento",
+        "Profundidade",
+        "Inscricao"
+      ],
+      "types": [
+        {
+          "name": "Recalque de passeio 40 x 60 cm",
+          "values": {
+            "Largura": 0.4,
+            "Comprimento": 0.6,
+            "Profundidade": 0.45,
+            "Inscricao": "INCÊNDIO"
+          },
+          "description": "Registro de recalque no passeio (ABNT NBR 13714): caixa de alvenaria de 40 x 60 cm, 45 cm de fundo, com lastro de brita, registro globo de 2 1/2\" e adaptador storz com tampão, tampa metálica vermelha com a inscrição INCÊNDIO, editável em cada recalque; o tubo segue para +Y, para o edifício; a tampa fica no nível do piso (z = 0)"
+        },
+        {
+          "name": "Recalque de passeio 50 x 70 cm",
+          "values": {
+            "Largura": 0.5,
+            "Comprimento": 0.7,
+            "Profundidade": 0.5,
+            "Inscricao": "INCÊNDIO"
+          },
+          "description": "Registro de recalque com caixa de 50 x 70 cm"
+        }
+      ]
+    },
+    {
+      "file": "components/fire/luminaria-emergencia.ccomp",
+      "thumbnail": "thumbnails/fire/luminaria-emergencia.png",
+      "component": "Luminária de emergência",
+      "author": "Francis Rebouças",
+      "kind": "Lighting",
+      "mep": {
+        "Device": {
+          "device": "WallLight",
+          "power": 3.0
+        }
+      },
+      "parameters": [
+        "Largura",
+        "Altura",
+        "Profundidade",
+        "Elevacao"
+      ],
+      "types": [
+        {
+          "name": "Luminária de emergência 30 LEDs",
+          "values": {
+            "Largura": 0.2,
+            "Altura": 0.055,
+            "Profundidade": 0.035,
+            "Elevacao": 2.2
+          },
+          "description": "Luminária de emergência autônoma de sobrepor, 30 LEDs, 2 W, 100 lm, com bateria, LED de carga e botão de teste (ABNT NBR 10898), a 2,20 m do piso"
+        },
+        {
+          "name": "Luminária de emergência 60 LEDs",
+          "values": {
+            "Largura": 0.33,
+            "Altura": 0.06,
+            "Profundidade": 0.04,
+            "Elevacao": 2.2
+          },
+          "description": "Luminária de emergência autônoma de 60 LEDs, 4 W, 200 lm"
+        }
+      ]
+    },
+    {
+      "file": "components/fire/sirene-audiovisual.ccomp",
+      "thumbnail": "thumbnails/fire/sirene-audiovisual.png",
+      "component": "Sirene audiovisual",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Elevacao",
+        "Texto"
+      ],
+      "types": [
+        {
+          "name": "Sirene audiovisual",
+          "values": {
+            "Elevacao": 2.3,
+            "Texto": "FOGO"
+          },
+          "description": "Avisador audiovisual de alarme de incêndio de parede: sirene vermelha e sinalizador estroboscópico com lente vermelha, a 2,30 m do piso (ABNT NBR 17240); o texto da lente (FOGO, FIRE, ALARME...) é editável em cada sirene"
+        }
+      ]
+    },
+    {
+      "file": "components/fire/sprinkler.ccomp",
+      "thumbnail": "thumbnails/fire/sprinkler.png",
+      "component": "Chuveiro automático (sprinkler)",
+      "author": "Francis Rebouças",
+      "kind": "Plumbing",
+      "mep": null,
+      "parameters": [
+        "Rosca"
+      ],
+      "types": [
+        {
+          "name": "Sprinkler pendente 1/2\" K 80 68 °C",
+          "values": {
+            "Rosca": 0.0105
+          },
+          "description": "Chuveiro automático pendente de resposta padrão, rosca de 1/2\", fator K 80, bulbo de vidro vermelho de 68 °C, com canopla cromada (ABNT NBR 10897); pendurado no forro (z = 0), o ramal acima"
+        },
+        {
+          "name": "Sprinkler pendente 3/4\" K 115 68 °C",
+          "values": {
+            "Rosca": 0.0133
+          },
+          "description": "Chuveiro automático pendente de rosca de 3/4\", fator K 115"
+        }
+      ]
+    },
+    {
       "file": "components/furniture/air-fryer.ccomp",
       "thumbnail": "thumbnails/furniture/air-fryer.png",
       "component": "Air fryer",

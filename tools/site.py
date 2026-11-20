@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Generate the outdoor sources: sources/site/ (floor markings, site furniture, tactile
-paving), sources/signage/ (signs) and the grab bars of sources/furniture/.
+paving), sources/signage/ (signs), sources/fire/ (fire protection, tools/site/incendio.lua)
+and the grab bars of sources/furniture/.
 
     python tools/site.py      then  python tools/build.py
 
@@ -1108,11 +1109,421 @@ COMPONENTS += [
 ]
 
 
+# --- fire protection -----------------------------------------------------------------------
+# After ABNT NBR 12693 (extinguishers), NBR 13714 (hose systems), NBR 10897 (sprinklers),
+# NBR 17240 (fire alarm), NBR 10898 (emergency lighting) and NBR 13434 (signs). Wall
+# devices hang on the wall at y = 0 and stand out towards -Y, their bottom at the instance
+# parameter Elevacao; ceiling devices hang from the ceiling at z = 0 (their pieces below it).
+
+RED = "Vermelho segurança"
+BRASS, CHROME, BLACK, WHITE_P = "Latão", "Cromado", "Plástico preto", "Branco"
+BLACK_STEEL, CAST_IRON = "Aço pintado preto", "Ferro fundido"
+HOSE, BULB, RED_LENS, CLEAR = "Lona de mangueira", "Vidro vermelho (bulbo)", "Policarbonato vermelho", "Plástico translúcido"
+LCD, GREY_P, GRAVEL, RED_P = "Visor LCD", "Plástico cinza", "Brita", "Plástico vermelho"
+LED_G, LED_Y = "LED verde", "LED amarelo"
+MATERIALS.update({
+    RED: {"color": [190, 26, 32], "class": "Paint", "finish": "Glossy"},
+    # The same as tools/appliances/kit.py's PALETTE: one name, one material in the library.
+    BRASS: {"color": [192, 160, 84], "class": "Metal", "finish": "Satin"},
+    CHROME: {"color": [226, 229, 233], "class": "Metal", "finish": "Polished"},
+    BLACK: {"color": [34, 34, 37], "class": "Plastic", "finish": "Satin"},
+    WHITE_P: {"color": [244, 244, 240], "class": "Plastic", "finish": "Satin"},
+    BLACK_STEEL: {"color": [30, 30, 32], "class": "Metal", "finish": "Satin"},
+    CAST_IRON: {"color": [44, 44, 47], "class": "Metal", "finish": "Matte"},
+    CLEAR: {"color": [222, 236, 240], "class": "Plastic", "finish": "Glossy", "transparency": 0.6},
+    LCD: {"color": [70, 112, 92], "class": "Glass", "finish": "Glossy"},
+    GREY_P: {"color": [120, 122, 126], "class": "Plastic", "finish": "Satin"},
+    RED_P: {"color": [196, 56, 48], "class": "Plastic", "finish": "Satin"},
+    HOSE: {"color": [236, 230, 212], "class": "Plastic", "finish": "Matte"},
+    BULB: {"color": [214, 30, 30], "class": "Glass", "finish": "Glossy", "transparency": 0.3},
+    RED_LENS: {"color": [210, 36, 36], "class": "Plastic", "finish": "Glossy", "transparency": 0.25},
+    GRAVEL: {"color": [150, 146, 138], "class": "Concrete", "finish": "Matte"},
+    LED_G: {"color": [40, 200, 80], "class": "Plastic", "finish": "Glossy"},
+    LED_Y: {"color": [250, 190, 20], "class": "Plastic", "finish": "Glossy"},
+})
+MAT_KEYS.update({"vermelho": RED, "latao": BRASS, "branco": WHITE_P, "preto": BLACK, "pintado_preto": BLACK_STEEL,
+                 "galvanizado": STEEL, "amarelo": YELLOW})
+
+
+def _pts(points):
+    out = []
+    for p in points:
+        q = {"u": str(p[0]), "v": str(p[1])}
+        if len(p) > 2 and p[2] not in (None, "", 0):
+            q["radius"] = str(p[2])
+        out.append(q)
+    return out
+
+
+def rev(name, plane, points, offset, axis, material, in_plan=True):
+    """A body of revolution: Front or Side plane about the vertical line u = axis, the Plan
+    plane about the line along Y at x = axis, height `offset`."""
+    return {"name": name, "material": material, "in_plan": in_plan,
+            "shape": {"Revolution": {"plane": plane, "points": _pts(points), "offset": str(offset), "axis": str(axis), "angle": "360"}}}
+
+
+def cyl_y(name, x, z, y0, length, r, material, in_plan=True):
+    """A cylinder lying along Y: axis at (x, z), from y0 to y0 + length."""
+    pts = [[x, y0], [f"{x} + {r}", y0], [f"{x} + {r}", f"{y0} + {length}"], [x, f"{y0} + {length}"]]
+    return rev(name, "Plan", pts, z, x, material, in_plan)
+
+
+def disc(cu, cv, r):
+    return [[f"{cu} - {r}", cv, r], [f"{cu} + {r}", cv, r]]
+
+
+def cyl_x(name, y, z, x0, length, r, material, in_plan=True):
+    """A cylinder lying along X: axis at (y, z), from x0 to x0 + length."""
+    return side(name, disc(y, z, r), x0, length, material, in_plan)
+
+
+def elevation(default):
+    return Param("length", "Elevacao", default, "Elevacao", instance=True, script=False)
+
+
+def fire(c: dict) -> dict:
+    c.setdefault("folder", "fire")
+    return c
+
+
+def extinguisher() -> dict:
+    R, H, E = "(Diametro/2)", "AlturaCorpo", "Elevacao"
+    cy = f"(-0.035 - {R})"  # the body's axis, 3.5 cm clear of the wall
+    top = f"({E} + {H})"
+    body = [["0", E], [f"{R} - 0.012", E, "0.012"], [R, f"{E} + 0.012"], [R, f"{top} - 0.6*{R}", R], [f"0.3*{R}", top], ["0", top]]
+    foot = [[f"{R} - 0.004", f"{E} - 0.004"], [f"{R} + 0.003", f"{E} - 0.004"], [f"{R} + 0.003", f"{E} + 0.03"], [f"{R} - 0.004", f"{E} + 0.03"]]
+    label = [[f"{R} - 0.002", f"{E} + 0.3*{H}"], [f"{R} + 0.0006", f"{E} + 0.3*{H}"], [f"{R} + 0.0006", f"{E} + 0.72*{H}"], [f"{R} - 0.002", f"{E} + 0.72*{H}"]]
+    lever = [[f"{cy} - 0.035", f"{top} + 0.068"], [f"{cy} + 0.105", f"{top} + 0.088"], [f"{cy} + 0.105", f"{top} + 0.1"], [f"{cy} - 0.035", f"{top} + 0.08"]]
+    return fire({
+        "file": "extintor", "component": "Extintor portátil", "material": RED,
+        "params": [
+            plain("Diametro", 0.15), plain("AlturaCorpo", 0.48), elevation(0.9),
+            Param("boolean", "Difusor", False, "Difusor de CO2"),
+            Param("boolean", "SinalizacaoPiso", False, "Sinalização de piso", instance=True),
+        ],
+        "items": [
+            rev("Cilindro", "Front", body, cy, "0", RED),
+            rev("Anel de base", "Front", foot, cy, "0", BLACK, in_plan=False),
+            rev("Rótulo", "Front", label, cy, "0", WHITE_P, in_plan=False),
+            cylinder("Gargalo", "0", cy, f"{top} - 0.006", "0.022", "0.03", BRASS),
+            box("Válvula", "-0.02", f"{cy} - 0.02", f"{top} + 0.022", "0.04", "0.04", "0.05", BRASS),
+            box("Alça", "-0.014", f"{cy} - 0.035", f"{top} + 0.05", "0.028", "0.135", "0.012", BLACK_STEEL),
+            side("Gatilho", lever, "-0.013", "0.026", BLACK_STEEL, in_plan=False),
+            box("Trava e lacre", "0.02", f"{cy} - 0.004", f"{top} + 0.06", "0.012", "0.008", "0.02", YELLOW),
+            cyl_x("Pino de trava", cy, f"{top} + 0.06", "-0.026", "0.046", "0.002", STEEL, in_plan=False),
+        ],
+        "script_body": "extintor",
+        "types": [
+            t("Extintor PQS ABC 6 kg", "Extintor portátil de pó químico seco ABC, 6 kg (ABNT NBR 15808), com manômetro e mangueira, pendurado na parede pelo suporte com o fundo a 90 cm do piso (o topo a no máximo 1,60 m, ABNT NBR 12693); com Elevacao abaixo de 30 cm fica num suporte de piso; a sinalização de piso (quadrado vermelho com borda amarela) pode ser ligada em cada extintor"),
+            t("Extintor PQS ABC 4 kg", "Extintor portátil de pó químico seco ABC, 4 kg", Diametro=0.135, AlturaCorpo=0.42),
+            t("Extintor PQS ABC 12 kg", "Extintor portátil de pó químico seco ABC, 12 kg", Diametro=0.19, AlturaCorpo=0.56),
+            t("Extintor CO2 6 kg", "Extintor portátil de dióxido de carbono (classes B e C), 6 kg, com mangueira e difusor, sem manômetro", Diametro=0.14, AlturaCorpo=0.6, Difusor=1),
+            t("Extintor água pressurizada 10 L", "Extintor portátil de água pressurizada (classe A), 10 L", Diametro=0.18, AlturaCorpo=0.56),
+        ],
+    })
+
+
+def hose_cabinet() -> dict:
+    L, A, P, E = "Largura", "Altura", "Profundidade", "Elevacao"
+    s = "0.0015"  # the sheet
+    vx, vz = f"(-{L}/2 + 0.11)", f"({E} + {A} - 0.26)"  # the valve
+    ro = f"min(0.22, ({L} - 0.16)/2, ({A} - 0.36)/2)"  # the hose coil
+    cx, cz = f"({L}/2 - 0.03 - {ro})", f"({E} + 0.04 + {ro})"
+    fw, fd = "0.035", "0.02"  # the door's frame
+    nx, nz = f"(-{L}/2 + 0.07)", f"({E} + 0.03)"  # the nozzle
+    nozzle = [[nx, nz], [f"{nx} + 0.042", nz], [f"{nx} + 0.042", f"{nz} + 0.05"], [f"{nx} + 0.02", f"{nz} + 0.07"], [f"{nx} + 0.011", f"{nz} + 0.3"], [nx, f"{nz} + 0.3"]]
+    items = [
+        box("Fundo", f"-{L}/2", f"-{s}", E, L, s, A, RED),
+        box("Lateral esquerda", f"-{L}/2", f"-{P}", E, s, f"{P} - {s}", A, RED),
+        box("Lateral direita", f"{L}/2 - {s}", f"-{P}", E, s, f"{P} - {s}", A, RED),
+        box("Base", f"-{L}/2 + {s}", f"-{P}", E, f"{L} - 2*{s}", f"{P} - {s}", s, RED),
+        box("Topo", f"-{L}/2 + {s}", f"-{P}", f"{E} + {A} - {s}", f"{L} - 2*{s}", f"{P} - {s}", s, RED),
+        box("Porta - montante esquerdo", f"-{L}/2", f"-{P} - {fd}", E, fw, fd, A, RED),
+        box("Porta - montante direito", f"{L}/2 - {fw}", f"-{P} - {fd}", E, fw, fd, A, RED),
+        box("Porta - travessa inferior", f"-{L}/2 + {fw}", f"-{P} - {fd}", E, f"{L} - 2*{fw}", fd, fw, RED),
+        box("Porta - travessa superior", f"-{L}/2 + {fw}", f"-{P} - {fd}", f"{E} + {A} - {fw}", f"{L} - 2*{fw}", fd, fw, RED),
+        box("Vidro", f"-{L}/2 + {fw}", f"-{P} - 0.012", f"{E} + {fw}", f"{L} - 2*{fw}", "0.003", f"{A} - 2*{fw}", "Vidro"),
+        box("Fecho", f"{L}/2 - 0.03", f"-{P} - {fd} - 0.012", f"{E} + {A}/2 - 0.04", "0.016", "0.012", "0.08", BLACK),
+        # The angle valve (registro globo angular de 2 1/2"), fed through the back.
+        cyl_y("Tubulação", vx, vz, "-0.09", "0.21", "0.038", STEEL),
+        cylinder("Registro - corpo", vx, "-0.09", f"{vz} - 0.05", "0.045", "0.1", BRASS),
+        cylinder("Registro - castelo", vx, "-0.09", f"{vz} + 0.05", "0.022", "0.05", BRASS),
+        cylinder("Registro - volante", vx, "-0.09", f"{vz} + 0.1", "0.07", "0.014", RED),
+        cylinder("Adaptador storz", vx, "-0.09", f"{vz} - 0.1", "0.042", "0.05", BRASS),
+        cylinder("Tampão storz", vx, "-0.09", f"{vz} - 0.125", "0.046", "0.025", BRASS),
+        # The hose, rolled up ("aduchada") and standing in its rack.
+        rev("Mangueira aduchada", "Plan", [[f"{cx} + 0.07", "-0.13"], [f"{cx} + {ro}", "-0.13"], [f"{cx} + {ro}", "-0.055"], [f"{cx} + 0.07", "-0.055"]], cz, cx, HOSE),
+        box("Suporte da mangueira", f"{cx} - 0.05", "-0.14", f"{E} + {s}", "0.1", "0.13", "0.04", STEEL),
+        cylinder("Junta storz da mangueira", f"{cx} - 0.03", "-0.09", f"{cz} + {ro} - 0.01", "0.04", "0.05", BRASS),
+        # The nozzle (esguicho) standing in the bottom left corner, under the valve.
+        rev("Esguicho", "Front", nozzle, "-0.06", nx, BRASS),
+    ]
+    return fire({
+        "file": "abrigo-hidrante", "component": "Abrigo de mangueira (hidrante)", "material": RED, "font": True, "kind": "Plumbing",
+        "params": [
+            plain("Largura", 0.6), plain("Altura", 0.9), plain("Profundidade", 0.17), elevation(0.6),
+            text("Linha1", "INCÊNDIO", "Linha 1"), text("Linha2", "", "Linha 2"),
+        ],
+        "items": items,
+        "connectors": [{"name": "Hidrante", "system": "ColdWater", "x": vx, "y": "0.12", "z": vz, "direction": "Back", "diameter": "0.065"}],
+        "script_body": "abrigo-hidrante",
+        "types": [
+            t("Abrigo de hidrante 90 x 60 x 17 cm", "Abrigo de sobrepor de chapa de aço pintada de vermelho, 90 x 60 x 17 cm, porta com visor de vidro e a inscrição INCÊNDIO em vermelho, com registro globo angular de 2 1/2\" e adaptador storz, mangueira de 1 1/2\" aduchada e esguicho (ABNT NBR 13714); o registro fica a cerca de 1,30 m do piso; as duas linhas do vidro são editáveis em cada abrigo"),
+            t("Abrigo de hidrante 90 x 60 x 25 cm", "Abrigo de hidrante mais fundo, para duas mangueiras", Profundidade=0.25),
+            t("Abrigo de hidrante 75 x 45 x 17 cm", "Abrigo de mangotinho ou hidrante compacto, 75 x 45 x 17 cm", Largura=0.45, Altura=0.75),
+        ],
+    })
+
+
+def fire_department_connection() -> dict:
+    L, C, P = "Largura", "Comprimento", "Profundidade"
+    w = "0.08"  # concrete walls
+    items = [
+        box("Parede frontal", f"-{L}/2 - {w}", f"-{C}/2 - {w}", f"-{P}", f"{L} + 2*{w}", w, f"{P} - 0.02", CONCRETE),
+        box("Parede posterior", f"-{L}/2 - {w}", f"{C}/2", f"-{P}", f"{L} + 2*{w}", w, f"{P} - 0.02", CONCRETE),
+        box("Parede esquerda", f"-{L}/2 - {w}", f"-{C}/2", f"-{P}", w, C, f"{P} - 0.02", CONCRETE),
+        box("Parede direita", f"{L}/2", f"-{C}/2", f"-{P}", w, C, f"{P} - 0.02", CONCRETE),
+        box("Lastro de brita", f"-{L}/2", f"-{C}/2", f"-{P}", L, C, "0.08", GRAVEL),
+        box("Caixilho frontal", f"-{L}/2 - 0.03", f"-{C}/2 - 0.03", "-0.02", f"{L} + 0.06", "0.03", "0.02", CAST_IRON),
+        box("Caixilho posterior", f"-{L}/2 - 0.03", f"{C}/2", "-0.02", f"{L} + 0.06", "0.03", "0.02", CAST_IRON),
+        box("Caixilho esquerdo", f"-{L}/2 - 0.03", f"-{C}/2", "-0.02", "0.03", C, "0.02", CAST_IRON),
+        box("Caixilho direito", f"{L}/2", f"-{C}/2", "-0.02", "0.03", C, "0.02", CAST_IRON),
+        box("Tampa", f"-{L}/2 + 0.003", f"-{C}/2 + 0.003", "-0.012", f"{L} - 0.006", f"{C} - 0.006", "0.012", RED),
+        # The pipe comes from the building (+y), turns up and ends in the valve and the storz inlet.
+        cyl_y("Tubulação", "0", f"-{P} + 0.15", "0", f"{C}/2 + {w} + 0.2", "0.038", STEEL),
+        cylinder("Curva", "0", "0", f"-{P} + 0.112", "0.038", "0.09", STEEL),
+        cylinder("Registro - corpo", "0", "0", f"-{P} + 0.2", "0.05", "0.09", BRASS),
+        cyl_x("Registro - haste", "0", f"-{P} + 0.245", "0.05", "0.06", "0.009", BRASS, in_plan=False),
+        cyl_x("Registro - volante", "0", f"-{P} + 0.245", "0.11", "0.014", "0.06", RED),
+        cylinder("Adaptador storz", "0", "0", f"-{P} + 0.29", "0.045", "0.05", BRASS),
+        cylinder("Tampão storz", "0", "0", f"-{P} + 0.34", "0.049", "0.03", BRASS),
+    ]
+    return fire({
+        "file": "hidrante-recalque", "component": "Registro de recalque de passeio", "material": WHITE, "font": True, "kind": "Plumbing",
+        "params": [plain("Largura", 0.4), plain("Comprimento", 0.6), plain("Profundidade", 0.45), text("Inscricao", "INCÊNDIO", "Inscrição")],
+        "items": items,
+        "connectors": [{"name": "Rede de hidrantes", "system": "ColdWater", "x": "0", "y": f"{C}/2 + {w} + 0.2", "z": f"-{P} + 0.15", "direction": "Back", "diameter": "0.065"}],
+        "script_body": "hidrante-recalque",
+        "types": [
+            t("Recalque de passeio 40 x 60 cm", "Registro de recalque no passeio (ABNT NBR 13714): caixa de alvenaria de 40 x 60 cm, 45 cm de fundo, com lastro de brita, registro globo de 2 1/2\" e adaptador storz com tampão, tampa metálica vermelha com a inscrição INCÊNDIO, editável em cada recalque; o tubo segue para +Y, para o edifício; a tampa fica no nível do piso (z = 0)"),
+            t("Recalque de passeio 50 x 70 cm", "Registro de recalque com caixa de 50 x 70 cm", Largura=0.5, Comprimento=0.7, Profundidade=0.5),
+        ],
+    })
+
+
+def column_hydrant() -> dict:
+    body = [["0", "0"], ["0.16", "0"], ["0.16", "0.03"], ["0.105", "0.04"], ["0.095", "0.065"], ["0.095", "Altura - 0.16"],
+            ["0.115", "Altura - 0.16"], ["0.115", "Altura - 0.125"], ["0.1", "Altura - 0.125", "0.11"], ["0.03", "Altura - 0.03"], ["0", "Altura - 0.03"]]
+    zs, zf = "Altura - 0.3", "Altura - 0.42"
+    items = [
+        rev("Corpo", "Front", body, "0", "0", RED),
+        cylinder("Porca de manobra", "0", "0", "Altura - 0.04", "0.025", "0.04", CAST_IRON),
+    ]
+    for left, name in ((True, "esquerda"), (False, "direita")):
+        items.append(cyl_x(f"Saída {name}", "0", zs, "-0.17" if left else "0.08", "0.09", "0.042", RED))
+        items.append(cyl_x(f"Tampão {name}", "0", zs, "-0.205" if left else "0.17", "0.035", "0.05", BRASS))
+    items.append(cyl_y("Saída frontal", "0", zf, "-0.2", "0.12", "0.062", RED))
+    items.append(cyl_y("Tampão frontal", "0", zf, "-0.235", "0.035", "0.072", BRASS))
+    for i in range(6):
+        a = math.radians(30 + 60 * i)
+        items.append(cylinder(f"Parafuso da base {i + 1}", f"{0.135 * math.cos(a):.4f}", f"{0.135 * math.sin(a):.4f}", "0.03", "0.009", "0.012", CAST_IRON))
+    return fire({
+        "file": "hidrante-coluna", "component": "Hidrante de coluna", "kind": "Plumbing",
+        "params": [plain("Altura", 0.8)],
+        "items": items,
+        "connectors": [{"name": "Rede", "system": "ColdWater", "x": "0", "y": "0", "z": "0", "direction": "Down", "diameter": "0.1"}],
+        "types": [
+            t("Hidrante de coluna 80 cm", "Hidrante urbano de coluna de ferro fundido pintado de vermelho, 80 cm acima do passeio, com duas saídas laterais de 2 1/2\" e uma frontal de 4\" (para -Y, voltada para a via) com tampões, flange e parafusos na base"),
+            t("Hidrante de coluna 1,00 m", "Hidrante de coluna de 1,00 m", Altura=1.0),
+        ],
+    })
+
+
+def sprinkler() -> dict:
+    r = "Rosca"
+    canopy = [["0", "0"], ["0.036", "0"], ["0.036", "-0.003"], ["0.014", "-0.012"], ["0", "-0.012"]]
+    left = [["-0.013", "-0.03"], ["-0.008", "-0.03"], ["-0.002", "-0.058"], ["-0.006", "-0.058"]]
+    right = [["0.008", "-0.03"], ["0.013", "-0.03"], ["0.006", "-0.058"], ["0.002", "-0.058"]]
+    return fire({
+        "file": "sprinkler", "component": "Chuveiro automático (sprinkler)", "kind": "Plumbing",
+        "params": [plain("Rosca", 0.0105)],
+        "items": [
+            rev("Canopla", "Front", canopy, "0", "0", CHROME),
+            cylinder("Corpo roscado", "0", "0", "-0.032", r, "0.06", BRASS),
+            front("Braço esquerdo", left, -0.0025, 0.005, BRASS),
+            front("Braço direito", right, -0.0025, 0.005, BRASS),
+            cylinder("Botão", "0", "0", "-0.061", "0.004", "0.007", BRASS),
+            rev("Bulbo", "Front", [["0", "-0.054"], ["0.0018", "-0.053"], ["0.0028", "-0.044"], ["0.0018", "-0.034"], ["0", "-0.033"]], "0", "0", BULB, in_plan=False),
+            cylinder("Defletor", "0", "0", "-0.064", "0.0125", "0.0015", BRASS),
+        ],
+        "connectors": [{"name": "Ramal", "system": "ColdWater", "x": "0", "y": "0", "z": "0.028", "direction": "Up", "diameter": f"2*{r}"}],
+        "types": [
+            t("Sprinkler pendente 1/2\" K 80 68 °C", "Chuveiro automático pendente de resposta padrão, rosca de 1/2\", fator K 80, bulbo de vidro vermelho de 68 °C, com canopla cromada (ABNT NBR 10897); pendurado no forro (z = 0), o ramal acima"),
+            t("Sprinkler pendente 3/4\" K 115 68 °C", "Chuveiro automático pendente de rosca de 3/4\", fator K 115", Rosca=0.0133),
+        ],
+    })
+
+
+def detector() -> dict:
+    head = [["0", "-0.008"], ["0.05", "-0.008"], ["0.05", "-0.02"], ["0.044", "-0.021"], ["0.044", "-0.036"], ["0.048", "-0.037"],
+            ["0.046", "-0.044", "0.03"], ["0.024", "-0.05"], ["0", "-0.05"]]
+    base = [["0", "0"], ["0.052", "0"], ["0.052", "-0.008"], ["0", "-0.008"]]
+    vents = [["0.04", "-0.0215"], ["0.0446", "-0.0215"], ["0.0446", "-0.0355"], ["0.04", "-0.0355"]]
+    return fire({
+        "file": "detector-incendio", "component": "Detector de incêndio", "material": RED_P,
+        "params": [Param("boolean", "Termico", False, "Detector de temperatura")],
+        "items": [
+            rev("Base", "Front", base, "0", "0", WHITE_P),
+            rev("Corpo", "Front", head, "0", "0", WHITE_P),
+            rev("Entrada de fumaça", "Front", vents, "0", "0", BLACK, in_plan=False),
+        ],
+        "script_body": "detector-incendio",
+        "types": [
+            t("Detector de fumaça óptico", "Detector pontual de fumaça óptico (fotoelétrico), Ø 10 cm, na base de sobrepor presa no forro (z = 0), com LED indicador (ABNT NBR 17240)"),
+            t("Detector de temperatura", "Detector pontual de temperatura termovelocimétrico, com o termistor protegido no centro, para cozinhas e garagens", Termico=1),
+        ],
+    })
+
+
+def call_point() -> dict:
+    L, A, E = "Largura", "Altura", "Elevacao"
+    D = "0.052"
+    win = rounded_rect(f"-{L}*0.36", f"{E} + {A}*0.16", f"{L}*0.36", f"{E} + {A}*0.68", "0.004")
+    return fire({
+        "file": "acionador-manual", "component": "Acionador manual de alarme", "material": WHITE_P, "font": True,
+        "params": [
+            plain("Largura", 0.088), plain("Altura", 0.088), elevation(1.15),
+            text("Linha1", "ALARME DE INCÊNDIO", "Texto do corpo"),
+            text("Linha2", "PRESSIONE", "Texto do visor"),
+        ],
+        "items": [
+            box("Caixa", f"-{L}/2", "-0.014", E, L, "0.014", A, RED),
+            front("Tampa", rounded_rect(f"-{L}/2", E, f"{L}/2", f"{E} + {A}", "0.006"), f"-{D}", f"{D} - 0.014", RED, in_plan=True),
+            front("Visor frangível", win, f"-{D} - 0.0015", "0.0015", WHITE_P),
+            box("Chave de teste", "-0.005", f"-{D} - 0.001", f"{E} + {A}*0.05", "0.01", "0.001", "0.004", BLACK),
+        ],
+        "script_body": "acionador-manual",
+        "types": [
+            t("Acionador manual 88 x 88 mm", "Acionador manual de alarme de incêndio (botoeira) de sobrepor, vermelho, 88 x 88 mm, com visor frangível branco (ABNT NBR 17240), a 1,15 m do piso (entre 0,90 e 1,35 m); os textos do corpo e do visor são editáveis em cada acionador"),
+            t("Acionador manual 125 x 125 mm", "Acionador manual de 125 x 125 mm", Largura=0.125, Altura=0.125),
+        ],
+    })
+
+
+def sounder() -> dict:
+    E = "Elevacao"
+    zc = f"({E} + 0.065)"
+    dome = [["0", "-0.004"], ["0.052", "-0.004"], ["0.052", "-0.03", "0.04"], ["0.03", "-0.05"], ["0", "-0.05"]]
+    items = [
+        front("Base", rounded_rect("-0.06", E, "0.06", f"{E} + 0.17", "0.012"), "-0.005", "0.005", RED, in_plan=True),
+        rev("Sirene", "Plan", dome, zc, "0", RED),
+        box("Lente do sinalizador", "-0.04", "-0.034", f"{E} + 0.127", "0.08", "0.029", "0.033", RED_LENS),
+    ]
+    for i, (a, b) in enumerate((("0.004", "0.007"), ("0.012", "0.015"), ("0.02", "0.023"))):
+        pts = [[a, "-0.0505"], [b, "-0.0505"], [b, "-0.045"], [a, "-0.045"]]
+        items.append(rev(f"Grade {i + 1}", "Plan", pts, zc, "0", BLACK, in_plan=False))
+    return fire({
+        "file": "sirene-audiovisual", "component": "Sirene audiovisual", "material": WHITE_P, "font": True,
+        "params": [elevation(2.3), text("Texto", "FOGO", "Texto do sinalizador")],
+        "items": items,
+        "script_body": "sirene-audiovisual",
+        "types": [
+            t("Sirene audiovisual", "Avisador audiovisual de alarme de incêndio de parede: sirene vermelha e sinalizador estroboscópico com lente vermelha, a 2,30 m do piso (ABNT NBR 17240); o texto da lente (FOGO, FIRE, ALARME...) é editável em cada sirene"),
+        ],
+    })
+
+
+def emergency_light() -> dict:
+    L, A, P, E = "Largura", "Altura", "Profundidade", "Elevacao"
+    return fire({
+        "file": "luminaria-emergencia", "component": "Luminária de emergência", "kind": "Lighting",
+        "mep": {"Device": {"device": "WallLight", "power": 3}},
+        "params": [plain("Largura", 0.2), plain("Altura", 0.055), plain("Profundidade", 0.035), elevation(2.2)],
+        "items": [
+            front("Corpo", rounded_rect(f"-{L}/2", E, f"{L}/2", f"{E} + {A}", "0.01"), f"-{P}", P, WHITE_P, in_plan=True),
+            front("Difusor", rounded_rect(f"-{L}/2 + 0.012", f"{E} + 0.008", f"{L}/2 - 0.012", f"{E} + {A} - 0.008", "0.006"), f"-{P} - 0.002", "0.002", LENS),
+            cylinder("LED de carga", f"{L}/2 - 0.007", f"-{P} + 0.004", f"{E} - 0.001", "0.0018", "0.001", LED_G),
+            box("Botão de teste", f"-{L}/2 + 0.004", f"-{P} + 0.01", f"{E} - 0.0015", "0.006", "0.006", "0.0015", GREY_P),
+        ],
+        "connectors": [{"name": "Alimentação", "system": "Power", "x": "0", "y": "0", "z": f"{E} + {A}/2", "direction": "Back"}],
+        "types": [
+            t("Luminária de emergência 30 LEDs", "Luminária de emergência autônoma de sobrepor, 30 LEDs, 2 W, 100 lm, com bateria, LED de carga e botão de teste (ABNT NBR 10898), a 2,20 m do piso"),
+            t("Luminária de emergência 60 LEDs", "Luminária de emergência autônoma de 60 LEDs, 4 W, 200 lm", Largura=0.33, Altura=0.06, Profundidade=0.04),
+        ],
+    })
+
+
+def emergency_spots() -> dict:
+    L, A, P, E = "Largura", "Altura", "Profundidade", "Elevacao"
+    items = [
+        front("Corpo", rounded_rect(f"-{L}/2", E, f"{L}/2", f"{E} + {A}", "0.012"), f"-{P}", P, WHITE_P, in_plan=True),
+        front("Grade frontal", rounded_rect(f"-{L}/2 + 0.02", f"{E} + 0.015", f"{L}/2 - 0.06", f"{E} + {A} - 0.015", "0.005"), f"-{P} - 0.001", "0.001", GREY_P),
+        cyl_y("LED de carga", f"{L}/2 - 0.035", f"{E} + {A}/2 + 0.012", f"-{P} - 0.002", "0.002", "0.003", LED_G, in_plan=False),
+        cyl_y("LED de bateria", f"{L}/2 - 0.035", f"{E} + {A}/2 - 0.012", f"-{P} - 0.002", "0.002", "0.003", LED_Y, in_plan=False),
+    ]
+    zh = f"({E} + {A} + 0.045)"
+    for sgn, name in (("-", "esquerdo"), ("", "direito")):
+        x = f"({sgn}{L}*0.3)"
+        items += [
+            cyl_y(f"Farol {name}", x, zh, f"-{P} - 0.03", "0.08", "0.035", WHITE_P),
+            cyl_y(f"Lente do farol {name}", x, zh, f"-{P} - 0.033", "0.003", "0.03", CLEAR),
+            box(f"Garfo {name} 1", f"{x} - 0.042", f"-{P}/2 - 0.008", f"{E} + {A}", "0.006", "0.016", "0.05", GREY_P),
+            box(f"Garfo {name} 2", f"{x} + 0.036", f"-{P}/2 - 0.008", f"{E} + {A}", "0.006", "0.016", "0.05", GREY_P),
+            box(f"Base do garfo {name}", f"{x} - 0.042", f"-{P}/2 - 0.008", f"{E} + {A}", "0.084", "0.016", "0.004", GREY_P),
+        ]
+    return fire({
+        "file": "bloco-autonomo-farois", "component": "Bloco autônomo de emergência com faróis", "kind": "Lighting",
+        "mep": {"Device": {"device": "WallLight", "power": 15}},
+        "params": [plain("Largura", 0.3), plain("Altura", 0.09), plain("Profundidade", 0.07), elevation(2.3)],
+        "items": items,
+        "connectors": [{"name": "Alimentação", "system": "Power", "x": "0", "y": "0", "z": f"{E} + {A}/2", "direction": "Back"}],
+        "types": [
+            t("Bloco autônomo 2 faróis 1200 lm", "Bloco autônomo de iluminação de emergência com dois faróis de LED, 1200 lm, bateria interna, LEDs de carga e de bateria (ABNT NBR 10898), para garagens, galpões e áreas de circulação, a 2,30 m do piso"),
+            t("Bloco autônomo 2 faróis 3000 lm", "Bloco autônomo de 3000 lm, maior", Largura=0.38, Altura=0.11, Profundidade=0.08),
+        ],
+    })
+
+
+def alarm_panel() -> dict:
+    L, A, P, E = "Largura", "Altura", "Profundidade", "Elevacao"
+    items = [
+        box("Caixa", f"-{L}/2", f"-{P}", E, L, P, A, RED),
+        box("Visor", f"-{L}*0.3", f"-{P} - 0.002", f"{E} + {A}*0.5", f"{L}*0.6", "0.002", f"{A}*0.17", LCD),
+        box("Painel de comando", f"-{L}*0.42", f"-{P} - 0.0015", f"{E} + {A}*0.08", f"{L}*0.84", "0.0015", f"{A}*0.36", GREY_P),
+        cyl_y("Fechadura", f"{L}/2 - 0.025", f"{E} + {A}*0.5", f"-{P} - 0.004", "0.004", "0.007", CHROME, in_plan=False),
+    ]
+    for r in range(3):
+        for k in range(4):
+            x = f"-{L}*0.36 + {k}*{L}*0.12"
+            z = f"{E} + {A}*(0.11 + {r}*0.1)"
+            items.append(box(f"Tecla {r * 4 + k + 1}", x, f"-{P} - 0.006", z, f"{L}*0.09", "0.0045", f"{A}*0.07", WHITE_P))
+    for k, mat in enumerate((LED_G, LED_Y, LED_Y, RED_P, RED_P)):
+        items.append(cyl_y(f"LED {k + 1}", f"{L}*0.12 + {k}*{L}*0.06", f"{E} + {A}*0.46", f"-{P} - 0.003", "0.003", "0.0035", mat, in_plan=False))
+    return fire({
+        "file": "central-alarme", "component": "Central de alarme de incêndio", "material": WHITE_P, "font": True,
+        "params": [plain("Largura", 0.36), plain("Altura", 0.3), plain("Profundidade", 0.09), elevation(1.3),
+                   text("Linha1", "CENTRAL DE ALARME", "Linha 1"), text("Linha2", "", "Linha 2")],
+        "items": items,
+        "connectors": [{"name": "Alimentação", "system": "Power", "x": "0", "y": "0", "z": f"{E} + {A} - 0.03", "direction": "Back"}],
+        "script_body": "central-alarme",
+        "types": [
+            t("Central de alarme 12 laços", "Central de alarme de incêndio convencional de 12 laços, caixa metálica vermelha de 36 x 30 x 9 cm, visor, LEDs de estado e teclado (ABNT NBR 17240), a 1,30 m do piso; as duas linhas de texto da tampa são editáveis em cada central"),
+            t("Central de alarme endereçável", "Central de alarme endereçável, maior, 48 x 40 x 12 cm", Largura=0.48, Altura=0.4, Profundidade=0.12),
+        ],
+    })
+
+
+COMPONENTS += [
+    extinguisher(), hose_cabinet(), fire_department_connection(), column_hydrant(), sprinkler(), detector(),
+    call_point(), sounder(), emergency_light(), emergency_spots(), alarm_panel(),
+]
+
+
 # --- scripts ---------------------------------------------------------------------------
 
 def sections() -> dict[str, str]:
     out = {}
-    for name in ("componentes.lua", "sinalizacao.lua", "mobiliario.lua"):
+    for name in ("componentes.lua", "sinalizacao.lua", "mobiliario.lua", "incendio.lua"):
         text_ = (HERE / name).read_text(encoding="utf-8")
         parts = re.split(r"^--- ([a-z0-9-]+)\n", text_, flags=re.M)
         out.update({parts[i]: parts[i + 1].strip() + "\n" for i in range(1, len(parts), 2)})
@@ -1144,15 +1555,19 @@ def source(c: dict, bodies: dict, figures: dict) -> dict:
     body = c.get("script_body", c["file"])
     if body in bodies:
         items.append({
-            "name": "Script" if c.get("folder") == "signage" else "Pintura (script)",
+            "name": "Pintura (script)" if c.get("folder", "site") == "site" else "Script",
             "material": c["material"],
             "in_plan": c.get("in_plan", True),
             "shape": {"Script": {"source": script_source(c, bodies[body], figures)}},
         })
     used = {i["material"] for i in items if i.get("material")}
+    d = {"kind": c.get("kind", "Generic"), "params": [p.definition() for p in c["params"]], "items": items}
+    for key in ("mep", "connectors"):
+        if key in c:
+            d[key] = c[key]
     return {
         "component": c["component"],
-        "def": {"kind": "Generic", "params": [p.definition() for p in c["params"]], "items": items},
+        "def": d,
         "types": c["types"],
         "materials": [{"name": n, **m} for n, m in MATERIALS.items() if n in used],
     }

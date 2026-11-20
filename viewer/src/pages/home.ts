@@ -49,6 +49,7 @@ const COVERS: Record<FolderId, string> = {
   vehicles: 'moto-custom',
   site: 'vaga-pcd',
   signage: 'placa-pare',
+  fire: 'abrigo-hidrante',
 };
 
 function link(className: string, text: string, href: string): HTMLAnchorElement {

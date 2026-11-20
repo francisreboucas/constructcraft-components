@@ -41,6 +41,7 @@ SECTIONS = {
     "vehicles": "Veículos · Vehicles",
     "site": "Área externa · Site",
     "signage": "Sinalização · Signage",
+    "fire": "Incêndio · Fire protection",
 }
 
 
