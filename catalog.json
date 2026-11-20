@@ -6128,6 +6128,86 @@
       ]
     },
     {
+      "file": "components/vehicles/bicicleta.ccomp",
+      "thumbnail": "thumbnails/vehicles/bicicleta.png",
+      "component": "Bicicleta",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [],
+      "types": [
+        {
+          "name": "Bicicleta urbana aro 26",
+          "values": {},
+          "description": "Bicicleta urbana de desenho genérico, aro 26, quadro diamante de aço, garfo rígido, guidão reto, coroa única e descanso lateral: 1,78 m de comprimento, 0,62 m de largura no guidão, 1,05 m de altura; para bicicletários, garagens e estudos de vagas (a frente para -Y, a origem no chão no meio do entre-eixos)"
+        }
+      ]
+    },
+    {
+      "file": "components/vehicles/caminhonete.ccomp",
+      "thumbnail": "thumbnails/vehicles/caminhonete.png",
+      "component": "Caminhonete cabine dupla",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [],
+      "types": [
+        {
+          "name": "Caminhonete média cabine dupla",
+          "values": {},
+          "description": "Picape média de cabine dupla, de desenho genérico: 5,30 m de comprimento, 1,86 m de largura (2,06 m nos retrovisores), 1,82 m de altura, entre-eixos de 3,10 m, pneus 245/70 R16, caçamba com capota marítima; a frente para -Y, a origem no chão no meio do entre-eixos"
+        }
+      ]
+    },
+    {
+      "file": "components/vehicles/carro-hatch.ccomp",
+      "thumbnail": "thumbnails/vehicles/carro-hatch.png",
+      "component": "Carro hatch",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [],
+      "types": [
+        {
+          "name": "Carro hatch compacto",
+          "values": {},
+          "description": "Automóvel hatch compacto de cinco portas, de desenho genérico: 3,90 m de comprimento, 1,72 m de largura (1,92 m nos retrovisores), 1,48 m de altura, entre-eixos de 2,50 m, pneus 185/65 R15; a frente para -Y, a origem no chão no meio do entre-eixos; para estudos de vagas, garagens e fachadas"
+        }
+      ]
+    },
+    {
+      "file": "components/vehicles/carro-sedan.ccomp",
+      "thumbnail": "thumbnails/vehicles/carro-sedan.png",
+      "component": "Carro sedã",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [],
+      "types": [
+        {
+          "name": "Carro sedã médio",
+          "values": {},
+          "description": "Automóvel sedã médio de quatro portas, de desenho genérico: 4,60 m de comprimento, 1,78 m de largura (1,98 m nos retrovisores), 1,46 m de altura, entre-eixos de 2,70 m, pneus 205/55 R16, porta-malas separado; a frente para -Y, a origem no chão no meio do entre-eixos"
+        }
+      ]
+    },
+    {
+      "file": "components/vehicles/carro-suv.ccomp",
+      "thumbnail": "thumbnails/vehicles/carro-suv.png",
+      "component": "Carro SUV",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [],
+      "types": [
+        {
+          "name": "Carro SUV compacto",
+          "values": {},
+          "description": "Utilitário esportivo (SUV) compacto, de desenho genérico: 4,45 m de comprimento, 1,84 m de largura (2,04 m nos retrovisores), 1,72 m de altura com o rack de teto, entre-eixos de 2,66 m, pneus 215/60 R17, vão livre maior; a frente para -Y, a origem no chão no meio do entre-eixos"
+        }
+      ]
+    },
+    {
       "file": "components/vehicles/moto-custom.ccomp",
       "thumbnail": "thumbnails/vehicles/moto-custom.png",
       "component": "Moto custom",

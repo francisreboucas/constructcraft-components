@@ -158,6 +158,11 @@ export const COMPONENT_NAMES_EN: Readonly<Record<string, string>> = {
   'site/vaga-pcd': 'Accessible parking space',
   'site/velocidade-piso': 'Speed limit floor marking',
 
+  'vehicles/bicicleta': 'Urban bicycle',
+  'vehicles/caminhonete': 'Double-cab pickup',
+  'vehicles/carro-hatch': 'Hatchback car',
+  'vehicles/carro-sedan': 'Sedan car',
+  'vehicles/carro-suv': 'Compact SUV',
   'vehicles/moto-custom': 'Cruiser motorcycle',
 
   'windows/janela-abrir': 'Wooden casement window',
