@@ -1608,6 +1608,97 @@
       ]
     },
     {
+      "file": "components/furniture/armario-aco.ccomp",
+      "thumbnail": "thumbnails/furniture/armario-aco.png",
+      "component": "Armário de aço",
+      "author": "Francis Rebouças",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Profundidade",
+        "Altura",
+        "AnguloPorta"
+      ],
+      "types": [
+        {
+          "name": "Armário de aço alto 90x40x198",
+          "values": {
+            "Largura": 0.9,
+            "Profundidade": 0.4,
+            "Altura": 1.98,
+            "AnguloPorta": 0.0
+          },
+          "description": "Armário de aço de duas portas com prateleiras reguláveis, venezianas de ventilação nas portas e puxador com fechadura"
+        },
+        {
+          "name": "Armário de aço baixo 90x40x105",
+          "values": {
+            "Largura": 0.9,
+            "Profundidade": 0.4,
+            "Altura": 1.05,
+            "AnguloPorta": 0.0
+          },
+          "description": "Armário de aço de duas portas com prateleiras reguláveis, venezianas de ventilação nas portas e puxador com fechadura"
+        },
+        {
+          "name": "Armário de aço alto 120x45x198",
+          "values": {
+            "Largura": 1.2,
+            "Profundidade": 0.45,
+            "Altura": 1.98,
+            "AnguloPorta": 0.0
+          },
+          "description": "Armário de aço de duas portas com prateleiras reguláveis, venezianas de ventilação nas portas e puxador com fechadura"
+        }
+      ]
+    },
+    {
+      "file": "components/furniture/arquivo-aco.ccomp",
+      "thumbnail": "thumbnails/furniture/arquivo-aco.png",
+      "component": "Arquivo de aço",
+      "author": "Francis Rebouças",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Profundidade",
+        "Altura",
+        "AberturaGaveta1",
+        "AberturaGaveta2",
+        "AberturaGaveta3",
+        "AberturaGaveta4"
+      ],
+      "types": [
+        {
+          "name": "Arquivo de aço 4 gavetas",
+          "values": {
+            "Largura": 0.47,
+            "Profundidade": 0.71,
+            "Altura": 1.33,
+            "AberturaGaveta1": 0.0,
+            "AberturaGaveta2": 0.0,
+            "AberturaGaveta3": 0.0,
+            "AberturaGaveta4": 0.0
+          },
+          "description": "Arquivo de aço com quatro gavetas para pastas suspensas em corrediças telescópicas, porta-etiquetas, puxadores e fechadura central que trava todas as gavetas"
+        },
+        {
+          "name": "Arquivo de aço 4 gavetas ofício",
+          "values": {
+            "Largura": 0.5,
+            "Profundidade": 0.71,
+            "Altura": 1.33,
+            "AberturaGaveta1": 0.0,
+            "AberturaGaveta2": 0.0,
+            "AberturaGaveta3": 0.0,
+            "AberturaGaveta4": 0.0
+          },
+          "description": "Arquivo de aço com quatro gavetas para pastas suspensas em corrediças telescópicas, porta-etiquetas, puxadores e fechadura central que trava todas as gavetas; para pastas tamanho ofício"
+        }
+      ]
+    },
+    {
       "file": "components/furniture/barra-apoio-l.ccomp",
       "thumbnail": "thumbnails/furniture/barra-apoio-l.png",
       "component": "Barra de apoio em L",
@@ -1761,6 +1852,22 @@
             "Abertura": 0.0
           },
           "description": "Box frontal de correr, vidro temperado incolor 8 mm, roldanas aparentes e perfis de alumínio, entre paredes"
+        }
+      ]
+    },
+    {
+      "file": "components/furniture/cadeira-escritorio.ccomp",
+      "thumbnail": "thumbnails/furniture/cadeira-escritorio.png",
+      "component": "Cadeira de escritório giratória",
+      "author": "Francis Rebouças",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [],
+      "types": [
+        {
+          "name": "Cadeira giratória operativa",
+          "values": {},
+          "description": "Cadeira de escritório giratória de desenho genérico: base de cinco pás de náilon com rodízios duplos, pistão a gás, mecanismo sincronizado, assento e encosto estofados com apoio lombar e braços em T; 0,66 m de diâmetro na base, assento a 0,48 m, 1,05 m de altura (a frente para -Y)"
         }
       ]
     },
@@ -2074,6 +2181,52 @@
       ]
     },
     {
+      "file": "components/furniture/divisoria-escritorio.ccomp",
+      "thumbnail": "thumbnails/furniture/divisoria-escritorio.png",
+      "component": "Divisória de escritório",
+      "author": "Francis Rebouças",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Altura"
+      ],
+      "types": [
+        {
+          "name": "Divisória de escritório 120x150",
+          "values": {
+            "Largura": 1.2,
+            "Altura": 1.5
+          },
+          "description": "Painel divisório de escritório autoportante: quadro de alumínio, painel acústico revestido de tecido, faixa de vidro no alto (nos painéis com mais de 1,25 m) e dois pés de aço com sapatas niveladoras"
+        },
+        {
+          "name": "Divisória de escritório 160x150",
+          "values": {
+            "Largura": 1.6,
+            "Altura": 1.5
+          },
+          "description": "Painel divisório de escritório autoportante: quadro de alumínio, painel acústico revestido de tecido, faixa de vidro no alto (nos painéis com mais de 1,25 m) e dois pés de aço com sapatas niveladoras"
+        },
+        {
+          "name": "Divisória de escritório 120x120",
+          "values": {
+            "Largura": 1.2,
+            "Altura": 1.2
+          },
+          "description": "Painel divisório de escritório autoportante: quadro de alumínio, painel acústico revestido de tecido, faixa de vidro no alto (nos painéis com mais de 1,25 m) e dois pés de aço com sapatas niveladoras"
+        },
+        {
+          "name": "Divisória de escritório 80x150",
+          "values": {
+            "Largura": 0.8,
+            "Altura": 1.5
+          },
+          "description": "Painel divisório de escritório autoportante: quadro de alumínio, painel acústico revestido de tecido, faixa de vidro no alto (nos painéis com mais de 1,25 m) e dois pés de aço com sapatas niveladoras"
+        }
+      ]
+    },
+    {
       "file": "components/furniture/escrivaninha.ccomp",
       "thumbnail": "thumbnails/furniture/escrivaninha.png",
       "component": "Escrivaninha",
@@ -2128,6 +2281,52 @@
             "AberturaGaveta3": 0.0
           },
           "description": "Escrivaninha com gaveteiro"
+        }
+      ]
+    },
+    {
+      "file": "components/furniture/estacao-trabalho.ccomp",
+      "thumbnail": "thumbnails/furniture/estacao-trabalho.png",
+      "component": "Estação de trabalho",
+      "author": "Francis Rebouças",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Profundidade",
+        "Altura",
+        "AlturaDivisoria"
+      ],
+      "types": [
+        {
+          "name": "Estação de trabalho 120x60",
+          "values": {
+            "Largura": 1.2,
+            "Profundidade": 0.6,
+            "Altura": 0.74,
+            "AlturaDivisoria": 0.35
+          },
+          "description": "Estação de trabalho de escritório: tampo de melamina com borda frontal arredondada, pés de aço em T com sapatas niveladoras, calha para cabos, painel frontal de chapa perfurada e divisória de tecido sobre o tampo"
+        },
+        {
+          "name": "Estação de trabalho 140x70",
+          "values": {
+            "Largura": 1.4,
+            "Profundidade": 0.7,
+            "Altura": 0.74,
+            "AlturaDivisoria": 0.35
+          },
+          "description": "Estação de trabalho de escritório: tampo de melamina com borda frontal arredondada, pés de aço em T com sapatas niveladoras, calha para cabos, painel frontal de chapa perfurada e divisória de tecido sobre o tampo"
+        },
+        {
+          "name": "Estação de trabalho 160x70",
+          "values": {
+            "Largura": 1.6,
+            "Profundidade": 0.7,
+            "Altura": 0.74,
+            "AlturaDivisoria": 0.35
+          },
+          "description": "Estação de trabalho de escritório: tampo de melamina com borda frontal arredondada, pés de aço em T com sapatas niveladoras, calha para cabos, painel frontal de chapa perfurada e divisória de tecido sobre o tampo"
         }
       ]
     },
@@ -2242,6 +2441,48 @@
             "ExtensaoGrade": 0.0
           },
           "description": "Forno elétrico de embutir multifunção, frente 89,5 x 59,5 cm, 57 cm de profundidade, 115 L, para nicho de 86 cm"
+        }
+      ]
+    },
+    {
+      "file": "components/furniture/gaveteiro-volante.ccomp",
+      "thumbnail": "thumbnails/furniture/gaveteiro-volante.png",
+      "component": "Gaveteiro volante",
+      "author": "Francis Rebouças",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Profundidade",
+        "Altura",
+        "AberturaGaveta1",
+        "AberturaGaveta2",
+        "AberturaGaveta3"
+      ],
+      "types": [
+        {
+          "name": "Gaveteiro volante 40x50",
+          "values": {
+            "Largura": 0.4,
+            "Profundidade": 0.5,
+            "Altura": 0.6,
+            "AberturaGaveta1": 0.0,
+            "AberturaGaveta2": 0.0,
+            "AberturaGaveta3": 0.0
+          },
+          "description": "Gaveteiro volante de escritório: duas gavetas e um gavetão para pastas suspensas, fechadura com trava das três gavetas, puxadores de alumínio e quatro rodízios duplos; cabe sob a estação de trabalho"
+        },
+        {
+          "name": "Gaveteiro volante 45x55",
+          "values": {
+            "Largura": 0.45,
+            "Profundidade": 0.55,
+            "Altura": 0.62,
+            "AberturaGaveta1": 0.0,
+            "AberturaGaveta2": 0.0,
+            "AberturaGaveta3": 0.0
+          },
+          "description": "Gaveteiro volante de escritório: duas gavetas e um gavetão para pastas suspensas, fechadura com trava das três gavetas, puxadores de alumínio e quatro rodízios duplos; cabe sob a estação de trabalho"
         }
       ]
     },
@@ -2518,6 +2759,48 @@
             "Tampo": 0.03
           },
           "description": "Mesa de jantar, 10 lugares"
+        }
+      ]
+    },
+    {
+      "file": "components/furniture/mesa-reuniao.ccomp",
+      "thumbnail": "thumbnails/furniture/mesa-reuniao.png",
+      "component": "Mesa de reunião",
+      "author": "Francis Rebouças",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Profundidade",
+        "Altura"
+      ],
+      "types": [
+        {
+          "name": "Mesa de reunião 180x90 (6 lugares)",
+          "values": {
+            "Largura": 1.8,
+            "Profundidade": 0.9,
+            "Altura": 0.74
+          },
+          "description": "Mesa de reunião de escritório: tampo de melamina com cantos arredondados e fita de borda, dois pés de aço em T ligados por viga, calha para cabos e caixa de tomadas com tampa basculante no centro do tampo"
+        },
+        {
+          "name": "Mesa de reunião 240x110 (8 lugares)",
+          "values": {
+            "Largura": 2.4,
+            "Profundidade": 1.1,
+            "Altura": 0.74
+          },
+          "description": "Mesa de reunião de escritório: tampo de melamina com cantos arredondados e fita de borda, dois pés de aço em T ligados por viga, calha para cabos e caixa de tomadas com tampa basculante no centro do tampo"
+        },
+        {
+          "name": "Mesa de reunião 300x120 (10 lugares)",
+          "values": {
+            "Largura": 3.0,
+            "Profundidade": 1.2,
+            "Altura": 0.74
+          },
+          "description": "Mesa de reunião de escritório: tampo de melamina com cantos arredondados e fita de borda, dois pés de aço em T ligados por viga, calha para cabos e caixa de tomadas com tampa basculante no centro do tampo"
         }
       ]
     },

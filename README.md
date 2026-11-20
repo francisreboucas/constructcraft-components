@@ -31,7 +31,7 @@ Each file holds one component with several types (sizes). Types share the geomet
 
 | Folder | Contents |
 |---|---|
-| [`furniture`](components/furniture) | Tables (dining and coffee), chairs, armchairs, beds, bunk beds, sofas, desks, nightstands, TV racks, split air conditioners, kitchen and laundry appliances (refrigerator, range, cooktop, oven, microwave, dishwasher, range hoods, small appliances, dryer), shower enclosures, towel rails |
+| [`furniture`](components/furniture) | Tables (dining and coffee), chairs, armchairs, beds, bunk beds, sofas, desks, nightstands, office furniture (workstations with privacy screens, meeting tables, swivel chairs, mobile pedestals, steel filing cabinets and cupboards, partition panels), TV racks, split air conditioners, kitchen and laundry appliances (refrigerator, range, cooktop, oven, microwave, dishwasher, range hoods, small appliances, dryer), shower enclosures, towel rails |
 | [`casework`](components/casework) | Wardrobes, chests of drawers, kitchen base and wall cabinets, shelving, mirror cabinets |
 | [`plumbing`](components/plumbing) | Toilets, basins, sinks, showers, laundry tubs, washing machines, bathtubs, urinals, bidets, vanity units, bidet sprayers, gas water heaters, water purifiers, water tanks, inspection and grease boxes |
 | [`electrical`](components/electrical) | General and dedicated outlets, shower points, switches, distribution boards, data/TV points |

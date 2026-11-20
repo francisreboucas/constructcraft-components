@@ -1,0 +1,2397 @@
+{
+  "component": "Gaveteiro volante",
+  "def": {
+    "kind": "Furniture",
+    "params": [
+      {
+        "name": "Largura",
+        "value": 0.4,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Profundidade",
+        "value": 0.5,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Altura",
+        "value": 0.6,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "AberturaGaveta1",
+        "value": 0,
+        "kind": "Length",
+        "instance": true
+      },
+      {
+        "name": "AberturaGaveta2",
+        "value": 0,
+        "kind": "Length",
+        "instance": true
+      },
+      {
+        "name": "AberturaGaveta3",
+        "value": 0,
+        "kind": "Length",
+        "instance": true
+      }
+    ],
+    "items": [
+      {
+        "name": "Gaveteiro simplificado",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2",
+            "y": "-Profundidade/2",
+            "z": "0.055",
+            "width": "Largura",
+            "depth": "Profundidade",
+            "height": "Altura - 0.055"
+          }
+        },
+        "material": "Melamina carvalho",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Rodízio simplificado 1",
+        "shape": {
+          "Cylinder": {
+            "x": "-1*(Largura/2 - 0.05)",
+            "y": "-1*(Profundidade/2 - 0.05)",
+            "z": "0",
+            "radius": "0.025",
+            "height": "0.055"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Rodízio simplificado 2",
+        "shape": {
+          "Cylinder": {
+            "x": "1*(Largura/2 - 0.05)",
+            "y": "-1*(Profundidade/2 - 0.05)",
+            "z": "0",
+            "radius": "0.025",
+            "height": "0.055"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Rodízio simplificado 3",
+        "shape": {
+          "Cylinder": {
+            "x": "-1*(Largura/2 - 0.05)",
+            "y": "1*(Profundidade/2 - 0.05)",
+            "z": "0",
+            "radius": "0.025",
+            "height": "0.055"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Rodízio simplificado 4",
+        "shape": {
+          "Cylinder": {
+            "x": "1*(Largura/2 - 0.05)",
+            "y": "1*(Profundidade/2 - 0.05)",
+            "z": "0",
+            "radius": "0.025",
+            "height": "0.055"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Tampo",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2",
+            "y": "-Profundidade/2",
+            "z": "Altura - 0.025",
+            "width": "Largura",
+            "depth": "Profundidade",
+            "height": "0.025"
+          }
+        },
+        "material": "Melamina grafite",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Base",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2",
+            "y": "-Profundidade/2 + 0.02",
+            "z": "0.055",
+            "width": "Largura",
+            "depth": "Profundidade - 0.02",
+            "height": "0.018"
+          }
+        },
+        "material": "Melamina grafite",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lateral esquerda",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2",
+            "y": "-Profundidade/2 + 0.02",
+            "z": "0.055 + 0.018",
+            "width": "0.018",
+            "depth": "Profundidade - 0.02",
+            "height": "Altura - 0.025 - 0.055 - 0.018"
+          }
+        },
+        "material": "Melamina grafite",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lateral direita",
+        "shape": {
+          "Box": {
+            "x": "Largura/2 - 0.018",
+            "y": "-Profundidade/2 + 0.02",
+            "z": "0.055 + 0.018",
+            "width": "0.018",
+            "depth": "Profundidade - 0.02",
+            "height": "Altura - 0.025 - 0.055 - 0.018"
+          }
+        },
+        "material": "Melamina grafite",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Fundo",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.018",
+            "y": "Profundidade/2 - 0.015",
+            "z": "0.055 + 0.018",
+            "width": "Largura - 0.036",
+            "depth": "0.006",
+            "height": "Altura - 0.025 - 0.055 - 0.018"
+          }
+        },
+        "material": "Melamina grafite",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - frente",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.018) + 0.0025",
+            "y": "(-Profundidade/2 + 0.02) - AberturaGaveta1",
+            "z": "(0.055 + 0.018 + 0.76*(Altura - 0.025 - 0.055 + 0.018)) + 0.0025",
+            "width": "(Largura/2 - 0.018) - (-Largura/2 + 0.018) - 0.005",
+            "depth": "0.018",
+            "height": "(Altura - 0.025) - (0.055 + 0.018 + 0.76*(Altura - 0.025 - 0.055 + 0.018)) - 0.005"
+          }
+        },
+        "material": "Melamina carvalho",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - lateral esquerda",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.018) + 0.0125",
+            "y": "(-Profundidade/2 + 0.02) - AberturaGaveta1 + 0.018",
+            "z": "(0.055 + 0.018 + 0.76*(Altura - 0.025 - 0.055 + 0.018)) + 0.018",
+            "width": "0.012",
+            "depth": "(Profundidade - 0.06) - 0.018",
+            "height": "(Altura - 0.025) - 0.03 - ((0.055 + 0.018 + 0.76*(Altura - 0.025 - 0.055 + 0.018)) + 0.018)"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - lateral direita",
+        "shape": {
+          "Box": {
+            "x": "(Largura/2 - 0.018) - 0.0125 - 0.012",
+            "y": "(-Profundidade/2 + 0.02) - AberturaGaveta1 + 0.018",
+            "z": "(0.055 + 0.018 + 0.76*(Altura - 0.025 - 0.055 + 0.018)) + 0.018",
+            "width": "0.012",
+            "depth": "(Profundidade - 0.06) - 0.018",
+            "height": "(Altura - 0.025) - 0.03 - ((0.055 + 0.018 + 0.76*(Altura - 0.025 - 0.055 + 0.018)) + 0.018)"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - fundo traseiro",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.018) + 0.0125 + 0.012",
+            "y": "(-Profundidade/2 + 0.02) - AberturaGaveta1 + (Profundidade - 0.06) - 0.012",
+            "z": "(0.055 + 0.018 + 0.76*(Altura - 0.025 - 0.055 + 0.018)) + 0.018",
+            "width": "(Largura/2 - 0.018) - 0.0125 - ((-Largura/2 + 0.018) + 0.0125) - 0.024",
+            "depth": "0.012",
+            "height": "(Altura - 0.025) - 0.03 - ((0.055 + 0.018 + 0.76*(Altura - 0.025 - 0.055 + 0.018)) + 0.018) - 0.01"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - base",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.018) + 0.0125 + 0.012",
+            "y": "(-Profundidade/2 + 0.02) - AberturaGaveta1 + 0.018",
+            "z": "(0.055 + 0.018 + 0.76*(Altura - 0.025 - 0.055 + 0.018)) + 0.018 + 0.008",
+            "width": "(Largura/2 - 0.018) - 0.0125 - ((-Largura/2 + 0.018) + 0.0125) - 0.024",
+            "depth": "(Profundidade - 0.06) - 0.018 - 0.012",
+            "height": "0.005"
+          }
+        },
+        "material": "Laminado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - corrediça fixa esquerda",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.018) + 0.0",
+            "y": "(-Profundidade/2 + 0.02) + 0.03",
+            "z": "((0.055 + 0.018 + 0.76*(Altura - 0.025 - 0.055 + 0.018)) + (Altura - 0.025))/2 - 0.022",
+            "width": "0.0045",
+            "depth": "(Profundidade - 0.06) - 0.05",
+            "height": "0.044"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - corrediça intermediária esquerda",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.018) + 0.0042",
+            "y": "(-Profundidade/2 + 0.02) - AberturaGaveta1/2 + 0.03",
+            "z": "((0.055 + 0.018 + 0.76*(Altura - 0.025 - 0.055 + 0.018)) + (Altura - 0.025))/2 - 0.022 + 0.004",
+            "width": "0.004",
+            "depth": "(Profundidade - 0.06) - 0.05",
+            "height": "0.036"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - corrediça móvel esquerda",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.018) + 0.008",
+            "y": "(-Profundidade/2 + 0.02) - AberturaGaveta1 + 0.03",
+            "z": "((0.055 + 0.018 + 0.76*(Altura - 0.025 - 0.055 + 0.018)) + (Altura - 0.025))/2 - 0.022 + 0.008",
+            "width": "0.0045",
+            "depth": "(Profundidade - 0.06) - 0.05",
+            "height": "0.028"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - corrediça fixa direita",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2 - 0.018) - 0.0125) + 0.008",
+            "y": "(-Profundidade/2 + 0.02) + 0.03",
+            "z": "((0.055 + 0.018 + 0.76*(Altura - 0.025 - 0.055 + 0.018)) + (Altura - 0.025))/2 - 0.022",
+            "width": "0.0045",
+            "depth": "(Profundidade - 0.06) - 0.05",
+            "height": "0.044"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - corrediça intermediária direita",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2 - 0.018) - 0.0125) + 0.0042",
+            "y": "(-Profundidade/2 + 0.02) - AberturaGaveta1/2 + 0.03",
+            "z": "((0.055 + 0.018 + 0.76*(Altura - 0.025 - 0.055 + 0.018)) + (Altura - 0.025))/2 - 0.022 + 0.004",
+            "width": "0.004",
+            "depth": "(Profundidade - 0.06) - 0.05",
+            "height": "0.036"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - corrediça móvel direita",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2 - 0.018) - 0.0125) + 0.0",
+            "y": "(-Profundidade/2 + 0.02) - AberturaGaveta1 + 0.03",
+            "z": "((0.055 + 0.018 + 0.76*(Altura - 0.025 - 0.055 + 0.018)) + (Altura - 0.025))/2 - 0.022 + 0.008",
+            "width": "0.0045",
+            "depth": "(Profundidade - 0.06) - 0.05",
+            "height": "0.028"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - puxador",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((-Profundidade/2 + 0.02) - AberturaGaveta1 - 0.026) - 0.005",
+                "v": "((0.055 + 0.018 + 0.76*(Altura - 0.025 - 0.055 + 0.018)) + (Altura - 0.025))/2",
+                "radius": "0.005"
+              },
+              {
+                "u": "((-Profundidade/2 + 0.02) - AberturaGaveta1 - 0.026) + 0.005",
+                "v": "((0.055 + 0.018 + 0.76*(Altura - 0.025 - 0.055 + 0.018)) + (Altura - 0.025))/2",
+                "radius": "0.005"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 - (0.5*Largura)/2",
+            "depth": "0.5*Largura"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - pino do puxador esquerdo",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 - ((0.5*Largura)/2 - 0.015)",
+                "v": "(-Profundidade/2 + 0.02) - AberturaGaveta1 - 0.026"
+              },
+              {
+                "u": "(((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 - ((0.5*Largura)/2 - 0.015)) + 0.0035",
+                "v": "(-Profundidade/2 + 0.02) - AberturaGaveta1 - 0.026"
+              },
+              {
+                "u": "(((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 - ((0.5*Largura)/2 - 0.015)) + 0.0035",
+                "v": "((-Profundidade/2 + 0.02) - AberturaGaveta1 - 0.026) + 0.026"
+              },
+              {
+                "u": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 - ((0.5*Largura)/2 - 0.015)",
+                "v": "((-Profundidade/2 + 0.02) - AberturaGaveta1 - 0.026) + 0.026"
+              }
+            ],
+            "offset": "((0.055 + 0.018 + 0.76*(Altura - 0.025 - 0.055 + 0.018)) + (Altura - 0.025))/2",
+            "axis": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 - ((0.5*Largura)/2 - 0.015)",
+            "angle": "360"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - roseta do puxador esquerdo",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 - ((0.5*Largura)/2 - 0.015)",
+                "v": "(-Profundidade/2 + 0.02) - AberturaGaveta1 - 0.003"
+              },
+              {
+                "u": "(((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 - ((0.5*Largura)/2 - 0.015)) + 0.008",
+                "v": "(-Profundidade/2 + 0.02) - AberturaGaveta1 - 0.003"
+              },
+              {
+                "u": "(((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 - ((0.5*Largura)/2 - 0.015)) + 0.008",
+                "v": "((-Profundidade/2 + 0.02) - AberturaGaveta1 - 0.003) + 0.003"
+              },
+              {
+                "u": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 - ((0.5*Largura)/2 - 0.015)",
+                "v": "((-Profundidade/2 + 0.02) - AberturaGaveta1 - 0.003) + 0.003"
+              }
+            ],
+            "offset": "((0.055 + 0.018 + 0.76*(Altura - 0.025 - 0.055 + 0.018)) + (Altura - 0.025))/2",
+            "axis": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 - ((0.5*Largura)/2 - 0.015)",
+            "angle": "360"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - pino do puxador direito",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 + ((0.5*Largura)/2 - 0.015)",
+                "v": "(-Profundidade/2 + 0.02) - AberturaGaveta1 - 0.026"
+              },
+              {
+                "u": "(((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 + ((0.5*Largura)/2 - 0.015)) + 0.0035",
+                "v": "(-Profundidade/2 + 0.02) - AberturaGaveta1 - 0.026"
+              },
+              {
+                "u": "(((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 + ((0.5*Largura)/2 - 0.015)) + 0.0035",
+                "v": "((-Profundidade/2 + 0.02) - AberturaGaveta1 - 0.026) + 0.026"
+              },
+              {
+                "u": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 + ((0.5*Largura)/2 - 0.015)",
+                "v": "((-Profundidade/2 + 0.02) - AberturaGaveta1 - 0.026) + 0.026"
+              }
+            ],
+            "offset": "((0.055 + 0.018 + 0.76*(Altura - 0.025 - 0.055 + 0.018)) + (Altura - 0.025))/2",
+            "axis": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 + ((0.5*Largura)/2 - 0.015)",
+            "angle": "360"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 1 - roseta do puxador direito",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 + ((0.5*Largura)/2 - 0.015)",
+                "v": "(-Profundidade/2 + 0.02) - AberturaGaveta1 - 0.003"
+              },
+              {
+                "u": "(((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 + ((0.5*Largura)/2 - 0.015)) + 0.008",
+                "v": "(-Profundidade/2 + 0.02) - AberturaGaveta1 - 0.003"
+              },
+              {
+                "u": "(((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 + ((0.5*Largura)/2 - 0.015)) + 0.008",
+                "v": "((-Profundidade/2 + 0.02) - AberturaGaveta1 - 0.003) + 0.003"
+              },
+              {
+                "u": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 + ((0.5*Largura)/2 - 0.015)",
+                "v": "((-Profundidade/2 + 0.02) - AberturaGaveta1 - 0.003) + 0.003"
+              }
+            ],
+            "offset": "((0.055 + 0.018 + 0.76*(Altura - 0.025 - 0.055 + 0.018)) + (Altura - 0.025))/2",
+            "axis": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 + ((0.5*Largura)/2 - 0.015)",
+            "angle": "360"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - frente",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.018) + 0.0025",
+            "y": "(-Profundidade/2 + 0.02) - AberturaGaveta2",
+            "z": "(0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018)) + 0.0025",
+            "width": "(Largura/2 - 0.018) - (-Largura/2 + 0.018) - 0.005",
+            "depth": "0.018",
+            "height": "(0.055 + 0.018 + 0.76*(Altura - 0.025 - 0.055 + 0.018)) - (0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018)) - 0.005"
+          }
+        },
+        "material": "Melamina carvalho",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - lateral esquerda",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.018) + 0.0125",
+            "y": "(-Profundidade/2 + 0.02) - AberturaGaveta2 + 0.018",
+            "z": "(0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018)) + 0.018",
+            "width": "0.012",
+            "depth": "(Profundidade - 0.06) - 0.018",
+            "height": "(0.055 + 0.018 + 0.76*(Altura - 0.025 - 0.055 + 0.018)) - 0.03 - ((0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018)) + 0.018)"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - lateral direita",
+        "shape": {
+          "Box": {
+            "x": "(Largura/2 - 0.018) - 0.0125 - 0.012",
+            "y": "(-Profundidade/2 + 0.02) - AberturaGaveta2 + 0.018",
+            "z": "(0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018)) + 0.018",
+            "width": "0.012",
+            "depth": "(Profundidade - 0.06) - 0.018",
+            "height": "(0.055 + 0.018 + 0.76*(Altura - 0.025 - 0.055 + 0.018)) - 0.03 - ((0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018)) + 0.018)"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - fundo traseiro",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.018) + 0.0125 + 0.012",
+            "y": "(-Profundidade/2 + 0.02) - AberturaGaveta2 + (Profundidade - 0.06) - 0.012",
+            "z": "(0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018)) + 0.018",
+            "width": "(Largura/2 - 0.018) - 0.0125 - ((-Largura/2 + 0.018) + 0.0125) - 0.024",
+            "depth": "0.012",
+            "height": "(0.055 + 0.018 + 0.76*(Altura - 0.025 - 0.055 + 0.018)) - 0.03 - ((0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018)) + 0.018) - 0.01"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - base",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.018) + 0.0125 + 0.012",
+            "y": "(-Profundidade/2 + 0.02) - AberturaGaveta2 + 0.018",
+            "z": "(0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018)) + 0.018 + 0.008",
+            "width": "(Largura/2 - 0.018) - 0.0125 - ((-Largura/2 + 0.018) + 0.0125) - 0.024",
+            "depth": "(Profundidade - 0.06) - 0.018 - 0.012",
+            "height": "0.005"
+          }
+        },
+        "material": "Laminado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - corrediça fixa esquerda",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.018) + 0.0",
+            "y": "(-Profundidade/2 + 0.02) + 0.03",
+            "z": "((0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018)) + (0.055 + 0.018 + 0.76*(Altura - 0.025 - 0.055 + 0.018)))/2 - 0.022",
+            "width": "0.0045",
+            "depth": "(Profundidade - 0.06) - 0.05",
+            "height": "0.044"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - corrediça intermediária esquerda",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.018) + 0.0042",
+            "y": "(-Profundidade/2 + 0.02) - AberturaGaveta2/2 + 0.03",
+            "z": "((0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018)) + (0.055 + 0.018 + 0.76*(Altura - 0.025 - 0.055 + 0.018)))/2 - 0.022 + 0.004",
+            "width": "0.004",
+            "depth": "(Profundidade - 0.06) - 0.05",
+            "height": "0.036"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - corrediça móvel esquerda",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.018) + 0.008",
+            "y": "(-Profundidade/2 + 0.02) - AberturaGaveta2 + 0.03",
+            "z": "((0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018)) + (0.055 + 0.018 + 0.76*(Altura - 0.025 - 0.055 + 0.018)))/2 - 0.022 + 0.008",
+            "width": "0.0045",
+            "depth": "(Profundidade - 0.06) - 0.05",
+            "height": "0.028"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - corrediça fixa direita",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2 - 0.018) - 0.0125) + 0.008",
+            "y": "(-Profundidade/2 + 0.02) + 0.03",
+            "z": "((0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018)) + (0.055 + 0.018 + 0.76*(Altura - 0.025 - 0.055 + 0.018)))/2 - 0.022",
+            "width": "0.0045",
+            "depth": "(Profundidade - 0.06) - 0.05",
+            "height": "0.044"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - corrediça intermediária direita",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2 - 0.018) - 0.0125) + 0.0042",
+            "y": "(-Profundidade/2 + 0.02) - AberturaGaveta2/2 + 0.03",
+            "z": "((0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018)) + (0.055 + 0.018 + 0.76*(Altura - 0.025 - 0.055 + 0.018)))/2 - 0.022 + 0.004",
+            "width": "0.004",
+            "depth": "(Profundidade - 0.06) - 0.05",
+            "height": "0.036"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - corrediça móvel direita",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2 - 0.018) - 0.0125) + 0.0",
+            "y": "(-Profundidade/2 + 0.02) - AberturaGaveta2 + 0.03",
+            "z": "((0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018)) + (0.055 + 0.018 + 0.76*(Altura - 0.025 - 0.055 + 0.018)))/2 - 0.022 + 0.008",
+            "width": "0.0045",
+            "depth": "(Profundidade - 0.06) - 0.05",
+            "height": "0.028"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - puxador",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((-Profundidade/2 + 0.02) - AberturaGaveta2 - 0.026) - 0.005",
+                "v": "((0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018)) + (0.055 + 0.018 + 0.76*(Altura - 0.025 - 0.055 + 0.018)))/2",
+                "radius": "0.005"
+              },
+              {
+                "u": "((-Profundidade/2 + 0.02) - AberturaGaveta2 - 0.026) + 0.005",
+                "v": "((0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018)) + (0.055 + 0.018 + 0.76*(Altura - 0.025 - 0.055 + 0.018)))/2",
+                "radius": "0.005"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 - (0.5*Largura)/2",
+            "depth": "0.5*Largura"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - pino do puxador esquerdo",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 - ((0.5*Largura)/2 - 0.015)",
+                "v": "(-Profundidade/2 + 0.02) - AberturaGaveta2 - 0.026"
+              },
+              {
+                "u": "(((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 - ((0.5*Largura)/2 - 0.015)) + 0.0035",
+                "v": "(-Profundidade/2 + 0.02) - AberturaGaveta2 - 0.026"
+              },
+              {
+                "u": "(((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 - ((0.5*Largura)/2 - 0.015)) + 0.0035",
+                "v": "((-Profundidade/2 + 0.02) - AberturaGaveta2 - 0.026) + 0.026"
+              },
+              {
+                "u": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 - ((0.5*Largura)/2 - 0.015)",
+                "v": "((-Profundidade/2 + 0.02) - AberturaGaveta2 - 0.026) + 0.026"
+              }
+            ],
+            "offset": "((0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018)) + (0.055 + 0.018 + 0.76*(Altura - 0.025 - 0.055 + 0.018)))/2",
+            "axis": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 - ((0.5*Largura)/2 - 0.015)",
+            "angle": "360"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - roseta do puxador esquerdo",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 - ((0.5*Largura)/2 - 0.015)",
+                "v": "(-Profundidade/2 + 0.02) - AberturaGaveta2 - 0.003"
+              },
+              {
+                "u": "(((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 - ((0.5*Largura)/2 - 0.015)) + 0.008",
+                "v": "(-Profundidade/2 + 0.02) - AberturaGaveta2 - 0.003"
+              },
+              {
+                "u": "(((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 - ((0.5*Largura)/2 - 0.015)) + 0.008",
+                "v": "((-Profundidade/2 + 0.02) - AberturaGaveta2 - 0.003) + 0.003"
+              },
+              {
+                "u": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 - ((0.5*Largura)/2 - 0.015)",
+                "v": "((-Profundidade/2 + 0.02) - AberturaGaveta2 - 0.003) + 0.003"
+              }
+            ],
+            "offset": "((0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018)) + (0.055 + 0.018 + 0.76*(Altura - 0.025 - 0.055 + 0.018)))/2",
+            "axis": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 - ((0.5*Largura)/2 - 0.015)",
+            "angle": "360"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - pino do puxador direito",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 + ((0.5*Largura)/2 - 0.015)",
+                "v": "(-Profundidade/2 + 0.02) - AberturaGaveta2 - 0.026"
+              },
+              {
+                "u": "(((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 + ((0.5*Largura)/2 - 0.015)) + 0.0035",
+                "v": "(-Profundidade/2 + 0.02) - AberturaGaveta2 - 0.026"
+              },
+              {
+                "u": "(((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 + ((0.5*Largura)/2 - 0.015)) + 0.0035",
+                "v": "((-Profundidade/2 + 0.02) - AberturaGaveta2 - 0.026) + 0.026"
+              },
+              {
+                "u": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 + ((0.5*Largura)/2 - 0.015)",
+                "v": "((-Profundidade/2 + 0.02) - AberturaGaveta2 - 0.026) + 0.026"
+              }
+            ],
+            "offset": "((0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018)) + (0.055 + 0.018 + 0.76*(Altura - 0.025 - 0.055 + 0.018)))/2",
+            "axis": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 + ((0.5*Largura)/2 - 0.015)",
+            "angle": "360"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 2 - roseta do puxador direito",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 + ((0.5*Largura)/2 - 0.015)",
+                "v": "(-Profundidade/2 + 0.02) - AberturaGaveta2 - 0.003"
+              },
+              {
+                "u": "(((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 + ((0.5*Largura)/2 - 0.015)) + 0.008",
+                "v": "(-Profundidade/2 + 0.02) - AberturaGaveta2 - 0.003"
+              },
+              {
+                "u": "(((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 + ((0.5*Largura)/2 - 0.015)) + 0.008",
+                "v": "((-Profundidade/2 + 0.02) - AberturaGaveta2 - 0.003) + 0.003"
+              },
+              {
+                "u": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 + ((0.5*Largura)/2 - 0.015)",
+                "v": "((-Profundidade/2 + 0.02) - AberturaGaveta2 - 0.003) + 0.003"
+              }
+            ],
+            "offset": "((0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018)) + (0.055 + 0.018 + 0.76*(Altura - 0.025 - 0.055 + 0.018)))/2",
+            "axis": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 + ((0.5*Largura)/2 - 0.015)",
+            "angle": "360"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 3 - frente",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.018) + 0.0025",
+            "y": "(-Profundidade/2 + 0.02) - AberturaGaveta3",
+            "z": "(0.055 + 0.018) + 0.0025",
+            "width": "(Largura/2 - 0.018) - (-Largura/2 + 0.018) - 0.005",
+            "depth": "0.018",
+            "height": "(0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018)) - (0.055 + 0.018) - 0.005"
+          }
+        },
+        "material": "Melamina carvalho",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 3 - lateral esquerda",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.018) + 0.0125",
+            "y": "(-Profundidade/2 + 0.02) - AberturaGaveta3 + 0.018",
+            "z": "(0.055 + 0.018) + 0.018",
+            "width": "0.012",
+            "depth": "(Profundidade - 0.06) - 0.018",
+            "height": "(0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018)) - 0.03 - ((0.055 + 0.018) + 0.018)"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 3 - lateral direita",
+        "shape": {
+          "Box": {
+            "x": "(Largura/2 - 0.018) - 0.0125 - 0.012",
+            "y": "(-Profundidade/2 + 0.02) - AberturaGaveta3 + 0.018",
+            "z": "(0.055 + 0.018) + 0.018",
+            "width": "0.012",
+            "depth": "(Profundidade - 0.06) - 0.018",
+            "height": "(0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018)) - 0.03 - ((0.055 + 0.018) + 0.018)"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 3 - fundo traseiro",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.018) + 0.0125 + 0.012",
+            "y": "(-Profundidade/2 + 0.02) - AberturaGaveta3 + (Profundidade - 0.06) - 0.012",
+            "z": "(0.055 + 0.018) + 0.018",
+            "width": "(Largura/2 - 0.018) - 0.0125 - ((-Largura/2 + 0.018) + 0.0125) - 0.024",
+            "depth": "0.012",
+            "height": "(0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018)) - 0.03 - ((0.055 + 0.018) + 0.018) - 0.01"
+          }
+        },
+        "material": "Madeira clara",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 3 - base",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.018) + 0.0125 + 0.012",
+            "y": "(-Profundidade/2 + 0.02) - AberturaGaveta3 + 0.018",
+            "z": "(0.055 + 0.018) + 0.018 + 0.008",
+            "width": "(Largura/2 - 0.018) - 0.0125 - ((-Largura/2 + 0.018) + 0.0125) - 0.024",
+            "depth": "(Profundidade - 0.06) - 0.018 - 0.012",
+            "height": "0.005"
+          }
+        },
+        "material": "Laminado branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 3 - corrediça fixa esquerda",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.018) + 0.0",
+            "y": "(-Profundidade/2 + 0.02) + 0.03",
+            "z": "((0.055 + 0.018) + (0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018)))/2 - 0.022",
+            "width": "0.0045",
+            "depth": "(Profundidade - 0.06) - 0.05",
+            "height": "0.044"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 3 - corrediça intermediária esquerda",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.018) + 0.0042",
+            "y": "(-Profundidade/2 + 0.02) - AberturaGaveta3/2 + 0.03",
+            "z": "((0.055 + 0.018) + (0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018)))/2 - 0.022 + 0.004",
+            "width": "0.004",
+            "depth": "(Profundidade - 0.06) - 0.05",
+            "height": "0.036"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 3 - corrediça móvel esquerda",
+        "shape": {
+          "Box": {
+            "x": "(-Largura/2 + 0.018) + 0.008",
+            "y": "(-Profundidade/2 + 0.02) - AberturaGaveta3 + 0.03",
+            "z": "((0.055 + 0.018) + (0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018)))/2 - 0.022 + 0.008",
+            "width": "0.0045",
+            "depth": "(Profundidade - 0.06) - 0.05",
+            "height": "0.028"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 3 - corrediça fixa direita",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2 - 0.018) - 0.0125) + 0.008",
+            "y": "(-Profundidade/2 + 0.02) + 0.03",
+            "z": "((0.055 + 0.018) + (0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018)))/2 - 0.022",
+            "width": "0.0045",
+            "depth": "(Profundidade - 0.06) - 0.05",
+            "height": "0.044"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 3 - corrediça intermediária direita",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2 - 0.018) - 0.0125) + 0.0042",
+            "y": "(-Profundidade/2 + 0.02) - AberturaGaveta3/2 + 0.03",
+            "z": "((0.055 + 0.018) + (0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018)))/2 - 0.022 + 0.004",
+            "width": "0.004",
+            "depth": "(Profundidade - 0.06) - 0.05",
+            "height": "0.036"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 3 - corrediça móvel direita",
+        "shape": {
+          "Box": {
+            "x": "((Largura/2 - 0.018) - 0.0125) + 0.0",
+            "y": "(-Profundidade/2 + 0.02) - AberturaGaveta3 + 0.03",
+            "z": "((0.055 + 0.018) + (0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018)))/2 - 0.022 + 0.008",
+            "width": "0.0045",
+            "depth": "(Profundidade - 0.06) - 0.05",
+            "height": "0.028"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 3 - puxador",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((-Profundidade/2 + 0.02) - AberturaGaveta3 - 0.026) - 0.005",
+                "v": "((0.055 + 0.018) + (0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018)))/2",
+                "radius": "0.005"
+              },
+              {
+                "u": "((-Profundidade/2 + 0.02) - AberturaGaveta3 - 0.026) + 0.005",
+                "v": "((0.055 + 0.018) + (0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018)))/2",
+                "radius": "0.005"
+              }
+            ],
+            "offset": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 - (0.5*Largura)/2",
+            "depth": "0.5*Largura"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 3 - pino do puxador esquerdo",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 - ((0.5*Largura)/2 - 0.015)",
+                "v": "(-Profundidade/2 + 0.02) - AberturaGaveta3 - 0.026"
+              },
+              {
+                "u": "(((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 - ((0.5*Largura)/2 - 0.015)) + 0.0035",
+                "v": "(-Profundidade/2 + 0.02) - AberturaGaveta3 - 0.026"
+              },
+              {
+                "u": "(((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 - ((0.5*Largura)/2 - 0.015)) + 0.0035",
+                "v": "((-Profundidade/2 + 0.02) - AberturaGaveta3 - 0.026) + 0.026"
+              },
+              {
+                "u": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 - ((0.5*Largura)/2 - 0.015)",
+                "v": "((-Profundidade/2 + 0.02) - AberturaGaveta3 - 0.026) + 0.026"
+              }
+            ],
+            "offset": "((0.055 + 0.018) + (0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018)))/2",
+            "axis": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 - ((0.5*Largura)/2 - 0.015)",
+            "angle": "360"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 3 - roseta do puxador esquerdo",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 - ((0.5*Largura)/2 - 0.015)",
+                "v": "(-Profundidade/2 + 0.02) - AberturaGaveta3 - 0.003"
+              },
+              {
+                "u": "(((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 - ((0.5*Largura)/2 - 0.015)) + 0.008",
+                "v": "(-Profundidade/2 + 0.02) - AberturaGaveta3 - 0.003"
+              },
+              {
+                "u": "(((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 - ((0.5*Largura)/2 - 0.015)) + 0.008",
+                "v": "((-Profundidade/2 + 0.02) - AberturaGaveta3 - 0.003) + 0.003"
+              },
+              {
+                "u": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 - ((0.5*Largura)/2 - 0.015)",
+                "v": "((-Profundidade/2 + 0.02) - AberturaGaveta3 - 0.003) + 0.003"
+              }
+            ],
+            "offset": "((0.055 + 0.018) + (0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018)))/2",
+            "axis": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 - ((0.5*Largura)/2 - 0.015)",
+            "angle": "360"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 3 - pino do puxador direito",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 + ((0.5*Largura)/2 - 0.015)",
+                "v": "(-Profundidade/2 + 0.02) - AberturaGaveta3 - 0.026"
+              },
+              {
+                "u": "(((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 + ((0.5*Largura)/2 - 0.015)) + 0.0035",
+                "v": "(-Profundidade/2 + 0.02) - AberturaGaveta3 - 0.026"
+              },
+              {
+                "u": "(((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 + ((0.5*Largura)/2 - 0.015)) + 0.0035",
+                "v": "((-Profundidade/2 + 0.02) - AberturaGaveta3 - 0.026) + 0.026"
+              },
+              {
+                "u": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 + ((0.5*Largura)/2 - 0.015)",
+                "v": "((-Profundidade/2 + 0.02) - AberturaGaveta3 - 0.026) + 0.026"
+              }
+            ],
+            "offset": "((0.055 + 0.018) + (0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018)))/2",
+            "axis": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 + ((0.5*Largura)/2 - 0.015)",
+            "angle": "360"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 3 - roseta do puxador direito",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 + ((0.5*Largura)/2 - 0.015)",
+                "v": "(-Profundidade/2 + 0.02) - AberturaGaveta3 - 0.003"
+              },
+              {
+                "u": "(((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 + ((0.5*Largura)/2 - 0.015)) + 0.008",
+                "v": "(-Profundidade/2 + 0.02) - AberturaGaveta3 - 0.003"
+              },
+              {
+                "u": "(((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 + ((0.5*Largura)/2 - 0.015)) + 0.008",
+                "v": "((-Profundidade/2 + 0.02) - AberturaGaveta3 - 0.003) + 0.003"
+              },
+              {
+                "u": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 + ((0.5*Largura)/2 - 0.015)",
+                "v": "((-Profundidade/2 + 0.02) - AberturaGaveta3 - 0.003) + 0.003"
+              }
+            ],
+            "offset": "((0.055 + 0.018) + (0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018)))/2",
+            "axis": "((-Largura/2 + 0.018) + (Largura/2 - 0.018))/2 + ((0.5*Largura)/2 - 0.015)",
+            "angle": "360"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 3 - trilho de pastas esquerdo",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.018 + 0.026",
+            "y": "-Profundidade/2 + 0.02 - AberturaGaveta3 + 0.03",
+            "z": "0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018) - 0.04",
+            "width": "0.01",
+            "depth": "Profundidade - 0.06 - 0.06",
+            "height": "0.012"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gaveta 3 - trilho de pastas direito",
+        "shape": {
+          "Box": {
+            "x": "Largura/2 - 0.018 - 0.036",
+            "y": "-Profundidade/2 + 0.02 - AberturaGaveta3 + 0.03",
+            "z": "0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018) - 0.04",
+            "width": "0.01",
+            "depth": "Profundidade - 0.06 - 0.06",
+            "height": "0.012"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pasta suspensa 1",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.018 + 0.04",
+            "y": "-Profundidade/2 + 0.02 - AberturaGaveta3 + 0.03 + 0.04 + 0*(Profundidade - 0.06 - 0.14)/4",
+            "z": "0.055 + 0.018 + 0.03",
+            "width": "Largura - 0.036 - 0.08",
+            "depth": "0.004",
+            "height": "0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018) - (0.055 + 0.018) - 0.08"
+          }
+        },
+        "material": "Papel kraft",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pasta suspensa 1 - haste",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.018 + 0.03",
+            "y": "-Profundidade/2 + 0.02 - AberturaGaveta3 + 0.03 + 0.04 + 0*(Profundidade - 0.06 - 0.14)/4",
+            "z": "0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018) - 0.04 + 0.006",
+            "width": "Largura - 0.036 - 0.06",
+            "depth": "0.006",
+            "height": "0.006"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pasta suspensa 2",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.018 + 0.04",
+            "y": "-Profundidade/2 + 0.02 - AberturaGaveta3 + 0.03 + 0.04 + 1*(Profundidade - 0.06 - 0.14)/4",
+            "z": "0.055 + 0.018 + 0.03",
+            "width": "Largura - 0.036 - 0.08",
+            "depth": "0.004",
+            "height": "0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018) - (0.055 + 0.018) - 0.08"
+          }
+        },
+        "material": "Papel kraft",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pasta suspensa 2 - haste",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.018 + 0.03",
+            "y": "-Profundidade/2 + 0.02 - AberturaGaveta3 + 0.03 + 0.04 + 1*(Profundidade - 0.06 - 0.14)/4",
+            "z": "0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018) - 0.04 + 0.006",
+            "width": "Largura - 0.036 - 0.06",
+            "depth": "0.006",
+            "height": "0.006"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pasta suspensa 3",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.018 + 0.04",
+            "y": "-Profundidade/2 + 0.02 - AberturaGaveta3 + 0.03 + 0.04 + 2*(Profundidade - 0.06 - 0.14)/4",
+            "z": "0.055 + 0.018 + 0.03",
+            "width": "Largura - 0.036 - 0.08",
+            "depth": "0.004",
+            "height": "0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018) - (0.055 + 0.018) - 0.08"
+          }
+        },
+        "material": "Papel kraft",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pasta suspensa 3 - haste",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.018 + 0.03",
+            "y": "-Profundidade/2 + 0.02 - AberturaGaveta3 + 0.03 + 0.04 + 2*(Profundidade - 0.06 - 0.14)/4",
+            "z": "0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018) - 0.04 + 0.006",
+            "width": "Largura - 0.036 - 0.06",
+            "depth": "0.006",
+            "height": "0.006"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pasta suspensa 4",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.018 + 0.04",
+            "y": "-Profundidade/2 + 0.02 - AberturaGaveta3 + 0.03 + 0.04 + 3*(Profundidade - 0.06 - 0.14)/4",
+            "z": "0.055 + 0.018 + 0.03",
+            "width": "Largura - 0.036 - 0.08",
+            "depth": "0.004",
+            "height": "0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018) - (0.055 + 0.018) - 0.08"
+          }
+        },
+        "material": "Papel kraft",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pasta suspensa 4 - haste",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.018 + 0.03",
+            "y": "-Profundidade/2 + 0.02 - AberturaGaveta3 + 0.03 + 0.04 + 3*(Profundidade - 0.06 - 0.14)/4",
+            "z": "0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018) - 0.04 + 0.006",
+            "width": "Largura - 0.036 - 0.06",
+            "depth": "0.006",
+            "height": "0.006"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pasta suspensa 5",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.018 + 0.04",
+            "y": "-Profundidade/2 + 0.02 - AberturaGaveta3 + 0.03 + 0.04 + 4*(Profundidade - 0.06 - 0.14)/4",
+            "z": "0.055 + 0.018 + 0.03",
+            "width": "Largura - 0.036 - 0.08",
+            "depth": "0.004",
+            "height": "0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018) - (0.055 + 0.018) - 0.08"
+          }
+        },
+        "material": "Papel kraft",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pasta suspensa 5 - haste",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.018 + 0.03",
+            "y": "-Profundidade/2 + 0.02 - AberturaGaveta3 + 0.03 + 0.04 + 4*(Profundidade - 0.06 - 0.14)/4",
+            "z": "0.055 + 0.018 + 0.52*(Altura - 0.025 - 0.055 + 0.018) - 0.04 + 0.006",
+            "width": "Largura - 0.036 - 0.06",
+            "depth": "0.006",
+            "height": "0.006"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Fechadura - cilindro",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "Largura/2 - 0.04",
+                "v": "-Profundidade/2 + 0.02 - AberturaGaveta1 - 0.004"
+              },
+              {
+                "u": "(Largura/2 - 0.04) + 0.01",
+                "v": "-Profundidade/2 + 0.02 - AberturaGaveta1 - 0.004"
+              },
+              {
+                "u": "(Largura/2 - 0.04) + 0.01",
+                "v": "(-Profundidade/2 + 0.02 - AberturaGaveta1 - 0.004) + 0.004"
+              },
+              {
+                "u": "Largura/2 - 0.04",
+                "v": "(-Profundidade/2 + 0.02 - AberturaGaveta1 - 0.004) + 0.004"
+              }
+            ],
+            "offset": "Altura - 0.025 - 0.03",
+            "axis": "Largura/2 - 0.04",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Fechadura - fenda",
+        "shape": {
+          "Box": {
+            "x": "Largura/2 - 0.041",
+            "y": "-Profundidade/2 + 0.02 - AberturaGaveta1 - 0.0045",
+            "z": "Altura - 0.025 - 0.036",
+            "width": "0.002",
+            "depth": "0.001",
+            "height": "0.012"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Rodízio 1 - placa",
+        "shape": {
+          "Box": {
+            "x": "(-1*(Largura/2 - 0.05)) - 0.025",
+            "y": "(-1*(Profundidade/2 - 0.05)) - 0.025",
+            "z": "0.052",
+            "width": "0.05",
+            "depth": "0.05",
+            "height": "0.003"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Rodízio 1 - pino",
+        "shape": {
+          "Cylinder": {
+            "x": "-1*(Largura/2 - 0.05)",
+            "y": "-1*(Profundidade/2 - 0.05)",
+            "z": "0.044",
+            "radius": "0.008",
+            "height": "0.009"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Rodízio 1 - carenagem",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(-1*(Profundidade/2 - 0.05)) - 0.012",
+                "v": "0.044"
+              },
+              {
+                "u": "(-1*(Profundidade/2 - 0.05)) + 0.012",
+                "v": "0.044"
+              },
+              {
+                "u": "(-1*(Profundidade/2 - 0.05)) + 0.03",
+                "v": "0.03",
+                "radius": "0.02"
+              },
+              {
+                "u": "(-1*(Profundidade/2 - 0.05)) + 0.006",
+                "v": "0.006"
+              },
+              {
+                "u": "(-1*(Profundidade/2 - 0.05)) - 0.012",
+                "v": "0.03"
+              }
+            ],
+            "offset": "(-1*(Largura/2 - 0.05)) - 0.012",
+            "depth": "0.024"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Rodízio 1 - roda esquerda",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((-1*(Profundidade/2 - 0.05)) + 0.012) - 0.024",
+                "v": "0.024",
+                "radius": "0.024"
+              },
+              {
+                "u": "((-1*(Profundidade/2 - 0.05)) + 0.012) + 0.024",
+                "v": "0.024",
+                "radius": "0.024"
+              }
+            ],
+            "offset": "(-1*(Largura/2 - 0.05)) - 0.032",
+            "depth": "0.02"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Rodízio 1 - roda direita",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((-1*(Profundidade/2 - 0.05)) + 0.012) - 0.024",
+                "v": "0.024",
+                "radius": "0.024"
+              },
+              {
+                "u": "((-1*(Profundidade/2 - 0.05)) + 0.012) + 0.024",
+                "v": "0.024",
+                "radius": "0.024"
+              }
+            ],
+            "offset": "(-1*(Largura/2 - 0.05)) + 0.012",
+            "depth": "0.02"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Rodízio 2 - placa",
+        "shape": {
+          "Box": {
+            "x": "(1*(Largura/2 - 0.05)) - 0.025",
+            "y": "(-1*(Profundidade/2 - 0.05)) - 0.025",
+            "z": "0.052",
+            "width": "0.05",
+            "depth": "0.05",
+            "height": "0.003"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Rodízio 2 - pino",
+        "shape": {
+          "Cylinder": {
+            "x": "1*(Largura/2 - 0.05)",
+            "y": "-1*(Profundidade/2 - 0.05)",
+            "z": "0.044",
+            "radius": "0.008",
+            "height": "0.009"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Rodízio 2 - carenagem",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(-1*(Profundidade/2 - 0.05)) - 0.012",
+                "v": "0.044"
+              },
+              {
+                "u": "(-1*(Profundidade/2 - 0.05)) + 0.012",
+                "v": "0.044"
+              },
+              {
+                "u": "(-1*(Profundidade/2 - 0.05)) + 0.03",
+                "v": "0.03",
+                "radius": "0.02"
+              },
+              {
+                "u": "(-1*(Profundidade/2 - 0.05)) + 0.006",
+                "v": "0.006"
+              },
+              {
+                "u": "(-1*(Profundidade/2 - 0.05)) - 0.012",
+                "v": "0.03"
+              }
+            ],
+            "offset": "(1*(Largura/2 - 0.05)) - 0.012",
+            "depth": "0.024"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Rodízio 2 - roda esquerda",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((-1*(Profundidade/2 - 0.05)) + 0.012) - 0.024",
+                "v": "0.024",
+                "radius": "0.024"
+              },
+              {
+                "u": "((-1*(Profundidade/2 - 0.05)) + 0.012) + 0.024",
+                "v": "0.024",
+                "radius": "0.024"
+              }
+            ],
+            "offset": "(1*(Largura/2 - 0.05)) - 0.032",
+            "depth": "0.02"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Rodízio 2 - roda direita",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((-1*(Profundidade/2 - 0.05)) + 0.012) - 0.024",
+                "v": "0.024",
+                "radius": "0.024"
+              },
+              {
+                "u": "((-1*(Profundidade/2 - 0.05)) + 0.012) + 0.024",
+                "v": "0.024",
+                "radius": "0.024"
+              }
+            ],
+            "offset": "(1*(Largura/2 - 0.05)) + 0.012",
+            "depth": "0.02"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Rodízio 3 - placa",
+        "shape": {
+          "Box": {
+            "x": "(-1*(Largura/2 - 0.05)) - 0.025",
+            "y": "(1*(Profundidade/2 - 0.05)) - 0.025",
+            "z": "0.052",
+            "width": "0.05",
+            "depth": "0.05",
+            "height": "0.003"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Rodízio 3 - pino",
+        "shape": {
+          "Cylinder": {
+            "x": "-1*(Largura/2 - 0.05)",
+            "y": "1*(Profundidade/2 - 0.05)",
+            "z": "0.044",
+            "radius": "0.008",
+            "height": "0.009"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Rodízio 3 - carenagem",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(1*(Profundidade/2 - 0.05)) - 0.012",
+                "v": "0.044"
+              },
+              {
+                "u": "(1*(Profundidade/2 - 0.05)) + 0.012",
+                "v": "0.044"
+              },
+              {
+                "u": "(1*(Profundidade/2 - 0.05)) + 0.03",
+                "v": "0.03",
+                "radius": "0.02"
+              },
+              {
+                "u": "(1*(Profundidade/2 - 0.05)) + 0.006",
+                "v": "0.006"
+              },
+              {
+                "u": "(1*(Profundidade/2 - 0.05)) - 0.012",
+                "v": "0.03"
+              }
+            ],
+            "offset": "(-1*(Largura/2 - 0.05)) - 0.012",
+            "depth": "0.024"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Rodízio 3 - roda esquerda",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((1*(Profundidade/2 - 0.05)) + 0.012) - 0.024",
+                "v": "0.024",
+                "radius": "0.024"
+              },
+              {
+                "u": "((1*(Profundidade/2 - 0.05)) + 0.012) + 0.024",
+                "v": "0.024",
+                "radius": "0.024"
+              }
+            ],
+            "offset": "(-1*(Largura/2 - 0.05)) - 0.032",
+            "depth": "0.02"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Rodízio 3 - roda direita",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((1*(Profundidade/2 - 0.05)) + 0.012) - 0.024",
+                "v": "0.024",
+                "radius": "0.024"
+              },
+              {
+                "u": "((1*(Profundidade/2 - 0.05)) + 0.012) + 0.024",
+                "v": "0.024",
+                "radius": "0.024"
+              }
+            ],
+            "offset": "(-1*(Largura/2 - 0.05)) + 0.012",
+            "depth": "0.02"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Rodízio 4 - placa",
+        "shape": {
+          "Box": {
+            "x": "(1*(Largura/2 - 0.05)) - 0.025",
+            "y": "(1*(Profundidade/2 - 0.05)) - 0.025",
+            "z": "0.052",
+            "width": "0.05",
+            "depth": "0.05",
+            "height": "0.003"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Rodízio 4 - pino",
+        "shape": {
+          "Cylinder": {
+            "x": "1*(Largura/2 - 0.05)",
+            "y": "1*(Profundidade/2 - 0.05)",
+            "z": "0.044",
+            "radius": "0.008",
+            "height": "0.009"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Rodízio 4 - carenagem",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(1*(Profundidade/2 - 0.05)) - 0.012",
+                "v": "0.044"
+              },
+              {
+                "u": "(1*(Profundidade/2 - 0.05)) + 0.012",
+                "v": "0.044"
+              },
+              {
+                "u": "(1*(Profundidade/2 - 0.05)) + 0.03",
+                "v": "0.03",
+                "radius": "0.02"
+              },
+              {
+                "u": "(1*(Profundidade/2 - 0.05)) + 0.006",
+                "v": "0.006"
+              },
+              {
+                "u": "(1*(Profundidade/2 - 0.05)) - 0.012",
+                "v": "0.03"
+              }
+            ],
+            "offset": "(1*(Largura/2 - 0.05)) - 0.012",
+            "depth": "0.024"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Rodízio 4 - roda esquerda",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((1*(Profundidade/2 - 0.05)) + 0.012) - 0.024",
+                "v": "0.024",
+                "radius": "0.024"
+              },
+              {
+                "u": "((1*(Profundidade/2 - 0.05)) + 0.012) + 0.024",
+                "v": "0.024",
+                "radius": "0.024"
+              }
+            ],
+            "offset": "(1*(Largura/2 - 0.05)) - 0.032",
+            "depth": "0.02"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Rodízio 4 - roda direita",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "((1*(Profundidade/2 - 0.05)) + 0.012) - 0.024",
+                "v": "0.024",
+                "radius": "0.024"
+              },
+              {
+                "u": "((1*(Profundidade/2 - 0.05)) + 0.012) + 0.024",
+                "v": "0.024",
+                "radius": "0.024"
+              }
+            ],
+            "offset": "(1*(Largura/2 - 0.05)) + 0.012",
+            "depth": "0.02"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      }
+    ]
+  },
+  "types": [
+    {
+      "name": "Gaveteiro volante 40x50",
+      "values": {},
+      "info": {
+        "description": "Gaveteiro volante de escritório: duas gavetas e um gavetão para pastas suspensas, fechadura com trava das três gavetas, puxadores de alumínio e quatro rodízios duplos; cabe sob a estação de trabalho"
+      }
+    },
+    {
+      "name": "Gaveteiro volante 45x55",
+      "values": {
+        "Largura": 0.45,
+        "Profundidade": 0.55,
+        "Altura": 0.62
+      },
+      "info": {
+        "description": "Gaveteiro volante de escritório: duas gavetas e um gavetão para pastas suspensas, fechadura com trava das três gavetas, puxadores de alumínio e quatro rodízios duplos; cabe sob a estação de trabalho"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "name": "Melamina carvalho",
+      "color": [
+        184,
+        150,
+        110
+      ],
+      "class": "Wood",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico preto",
+      "color": [
+        34,
+        34,
+        37
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Melamina grafite",
+      "color": [
+        72,
+        74,
+        78
+      ],
+      "class": "Wood",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Madeira clara",
+      "color": [
+        196,
+        160,
+        112
+      ],
+      "class": "Wood",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Laminado branco",
+      "color": [
+        238,
+        238,
+        234
+      ],
+      "class": "Wood",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Aço galvanizado",
+      "color": [
+        160,
+        165,
+        170
+      ],
+      "class": "Metal",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Alumínio anodizado",
+      "color": [
+        206,
+        208,
+        210
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Papel kraft",
+      "color": [
+        176,
+        140,
+        92
+      ],
+      "class": "Generic",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Cromado",
+      "color": [
+        226,
+        229,
+        233
+      ],
+      "class": "Metal",
+      "finish": "Polished",
+      "transparency": 0
+    },
+    {
+      "name": "Borracha",
+      "color": [
+        30,
+        30,
+        30
+      ],
+      "class": "Plastic",
+      "finish": "Matte",
+      "transparency": 0
+    }
+  ]
+}

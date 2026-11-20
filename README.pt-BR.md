@@ -31,7 +31,7 @@ Cada arquivo traz um componente com vários tipos (tamanhos). Os tipos compartil
 
 | Pasta | Conteúdo |
 |---|---|
-| [`furniture`](components/furniture) | Mesas (de jantar e de centro), cadeiras, poltronas, camas, beliches, sofás, escrivaninhas, criados-mudos, racks de TV, ar-condicionado split, eletrodomésticos de cozinha e lavanderia (geladeira, fogão, cooktop, forno, micro-ondas, lava-louças, coifa e depurador, eletroportáteis, secadora), box de vidro, toalheiros |
+| [`furniture`](components/furniture) | Mesas (de jantar e de centro), cadeiras, poltronas, camas, beliches, sofás, escrivaninhas, criados-mudos, mobiliário de escritório (estações de trabalho com divisória, mesas de reunião, cadeiras giratórias, gaveteiros volantes, arquivos e armários de aço, painéis divisórios), racks de TV, ar-condicionado split, eletrodomésticos de cozinha e lavanderia (geladeira, fogão, cooktop, forno, micro-ondas, lava-louças, coifa e depurador, eletroportáteis, secadora), box de vidro, toalheiros |
 | [`casework`](components/casework) | Guarda-roupas, cômodas, balcões e aéreos de cozinha, estantes, espelheiras |
 | [`plumbing`](components/plumbing) | Bacias, lavatórios, pias, chuveiros, tanques, máquinas de lavar, banheiras, mictórios, bidês, gabinetes com cuba, duchas higiênicas, aquecedores a gás, purificadores de água, caixas d'água, caixas de inspeção e de gordura |
 | [`electrical`](components/electrical) | TUGs, TUEs, pontos de chuveiro, interruptores, quadros de distribuição, pontos de dados e TV |
