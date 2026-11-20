@@ -126,7 +126,7 @@ def build():
     c._add("Encosto - estofado", back.shape(), FABRIC, ALL, False, False)
 
     # The steel bar from the mechanism to the back of the shell.
-    bar = mb.sweep(mb.catmull([(0, 0.1, 0.405), (0, 0.24, 0.41), (0, 0.29, 0.5), (0, 0.29, 0.62), (0, 0.27, 0.74)], 4),
+    bar = mb.sweep(mb.catmull([(0, 0.1, 0.405), (0, 0.235, 0.41), (0, 0.255, 0.5), (0, 0.212, 0.62), (0, 0.205, 0.7), (0, 0.22, 0.78)], 4),
                    [(-0.03, -0.007), (0.03, -0.007), (0.03, 0.007), (-0.03, 0.007)], up=(1, 0, 0))
     c._add("Lâmina do encosto", shapes_mesh(bar).shape(), "Aço pintado preto", FULL, False, False)
 

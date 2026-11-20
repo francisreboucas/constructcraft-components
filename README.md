@@ -36,7 +36,7 @@ Each file holds one component with several types (sizes). Types share the geomet
 | [`plumbing`](components/plumbing) | Toilets, basins (also a vessel basin on a floating countertop), sinks, kitchen mixers with a pull-out spray, shower sets with a rain head and a hand shower, showers, laundry tubs, washing machines, bathtubs, urinals, bidets, vanity units, bidet sprayers, gas water heaters, water purifiers, water tanks, inspection and grease boxes |
 | [`electrical`](components/electrical) | General and dedicated outlets, shower points, switches, distribution boards, data/TV points |
 | [`lighting`](components/lighting) | Ceiling, pendant, recessed, linear and wall lights, ceiling fans with light |
-| [`planting`](components/planting) | Trees, conifers, palms, shrubs and potted plants for landscaping |
+| [`planting`](components/planting) | Trees, conifers, palms, shrubs, ornamental grasses (purple fountain grass, Dietes, agapanthus), ground covers, lawns, planting beds (with a curb, raised, round) and potted plants and planters, drawn as light silhouettes at coarse detail and as detailed plants (branches, single leaves, flowers, palm leaflets) at medium and fine detail |
 | [`doors`](components/doors) | Single and double swing, pivot, folding, glass and sliding doors, glazed sliding doors, garage doors |
 | [`windows`](components/windows) | Sliding (also with shutters), casement, awning, hopper and fixed windows |
 | [`vehicles`](components/vehicles) | A compact hatchback, a mid-size sedan, a compact SUV with roof rails and a double-cab pickup with a tonneau cover, of generic design and real sizes, for parking and garage studies (lofted bodies with wheel arches, glass, lamps, mirrors, alloy wheels and an interior); an urban bicycle; a custom (cruiser) motorcycle, with the handlebar that steers and the side stand that folds |
@@ -59,13 +59,13 @@ A `.ccomp` saved from the app (`component_save`) can also be added directly unde
 
 Each component has a 360x240 thumbnail in [`thumbnails/`](thumbnails), drawn by `ccad` from its first type, and `catalog.json` points to it in `thumbnail`. After building, run `python tools/thumbnails.py --ccad path/to/ccad` (it draws only the new and changed components) and commit the PNG, `thumbnails/manifest.json` and the catalog.
 
-The planting sources are generated: [`tools/vegetation.py`](tools/vegetation.py) grows each species as a mesh (branches by space colonization, foliage clumps, palm fronds) and writes `sources/planting/`. Edit the generator and run it before `build.py`, not the JSON.
+The planting sources are generated: [`tools/vegetation.py`](tools/vegetation.py) grows each species as a mesh and writes `sources/planting/`. The coarse level is a low-poly silhouette; [`tools/vegetation_detail.py`](tools/vegetation_detail.py) draws the detailed plant (branches by space colonization, leaf sprays, flowers, palm leaflets, needle tufts, grass blades). Edit the generator and run it before `build.py`, not the JSON.
 
 The outdoor floor sources are generated too: [`tools/site.py`](tools/site.py) writes `sources/site/` from the Lua scripts in [`tools/site/`](tools/site). Painted text is drawn from a glyph table of IBM Plex Sans Condensed Bold (SIL OFL 1.1), triangulated by `tools/site/fonte.py`, so the text stays editable in ConstructCraft. A `.ccomp` keeps only numbers per type: texts and choices belong to the component and are changed per placed element.
 
 ## Compatibility
 
-`.ccomp` format version 1, built with ConstructCraft 0.12.0. The detailed components (pieces shown by detail level, Blend and Sweep shapes), which are all but the planting ones, need ConstructCraft 0.12.0; the planting components load in ConstructCraft 0.6.0 and later. The motorcycle's steered front end and side stand, and the outdoor floor markings, are pieces scripted in Lua; the web viewer shows them as ConstructCraft baked them ([`tools/scripted.py`](tools/scripted.py)).
+`.ccomp` format version 1, built with ConstructCraft 0.12.0. Every component needs ConstructCraft 0.12.0 or later: they show different pieces at each detail level and use Blend and Sweep shapes. The motorcycle's steered front end and side stand, and the outdoor floor markings, are pieces scripted in Lua; the web viewer shows them as ConstructCraft baked them ([`tools/scripted.py`](tools/scripted.py)).
 
 ## License
 

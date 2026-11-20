@@ -36,7 +36,7 @@ Cada arquivo traz um componente com vários tipos (tamanhos). Os tipos compartil
 | [`plumbing`](components/plumbing) | Bacias, lavatórios (também com cuba de apoio em bancada suspensa), pias, misturadores gourmet de cozinha, conjuntos de chuveiro com ducha de teto e ducha manual, chuveiros, tanques, máquinas de lavar, banheiras, mictórios, bidês, gabinetes com cuba, duchas higiênicas, aquecedores a gás, purificadores de água, caixas d'água, caixas de inspeção e de gordura |
 | [`electrical`](components/electrical) | TUGs, TUEs, pontos de chuveiro, interruptores, quadros de distribuição, pontos de dados e TV |
 | [`lighting`](components/lighting) | Plafons, pendentes, spots, luminárias lineares, arandelas e ventiladores de teto com luminária |
-| [`planting`](components/planting) | Árvores, coníferas, palmeiras, arbustos e vasos com planta para paisagismo |
+| [`planting`](components/planting) | Árvores, coníferas, palmeiras, arbustos, gramíneas ornamentais (capim-do-texas, moreia, agapanto), forrações, gramado, canteiros (com meio-fio, elevado, redondo), vasos e jardineiras com plantas, desenhados como silhuetas leves no nível grosseiro e como plantas detalhadas (galhos, folhas, flores, folíolos de palmeira) nos níveis médio e fino |
 | [`doors`](components/doors) | Portas de abrir de uma e duas folhas, pivotante, camarão, de vidro temperado, de correr simples e dupla, porta-janela de correr e portão basculante |
 | [`windows`](components/windows) | Janelas de correr (também com veneziana), de abrir, maxim-ar, basculante e fixa |
 | [`vehicles`](components/vehicles) | Carro hatch compacto, sedã médio, SUV compacto com rack de teto e caminhonete cabine dupla com capota marítima, de desenho genérico e medidas reais, para estudos de vagas e garagens (carroceria contínua com caixas de roda, vidros, faróis, retrovisores, rodas de liga e interior); bicicleta urbana; motocicleta custom (cruiser), com guidão que esterça e descanso lateral que recolhe |
@@ -59,13 +59,13 @@ Um `.ccomp` salvo pelo próprio app (`component_save`) também pode ser adiciona
 
 Cada componente tem uma miniatura de 360x240 em [`thumbnails/`](thumbnails), desenhada pelo `ccad` a partir do primeiro tipo, e o `catalog.json` aponta para ela em `thumbnail`. Depois do build, rode `python tools/thumbnails.py --ccad caminho/do/ccad` (ele só desenha os componentes novos e alterados) e inclua no commit o PNG, o `thumbnails/manifest.json` e o catálogo.
 
-As fontes de paisagismo são geradas: [`tools/vegetation.py`](tools/vegetation.py) cria cada espécie como malha (galhos por colonização do espaço, massas de folhas, frondes de palmeira) e escreve `sources/planting/`. Altere o gerador e rode-o antes do `build.py`, não o JSON.
+As fontes de paisagismo são geradas: [`tools/vegetation.py`](tools/vegetation.py) cria cada espécie como malha e escreve `sources/planting/`. O nível grosseiro é uma silhueta low-poly; o [`tools/vegetation_detail.py`](tools/vegetation_detail.py) desenha a planta detalhada (galhos por colonização do espaço, ramos de folhas, flores, folíolos de palmeira, tufos de acículas, lâminas de capim). Altere o gerador e rode-o antes do `build.py`, não o JSON.
 
 As fontes de área externa também são geradas: [`tools/site.py`](tools/site.py) escreve `sources/site/` a partir dos scripts Lua de [`tools/site/`](tools/site). O texto pintado vem de uma tabela de glifos da IBM Plex Sans Condensed Bold (SIL OFL 1.1), triangulada por `tools/site/fonte.py`, e por isso continua editável no ConstructCraft. O `.ccomp` guarda só números por tipo: textos e escolhas são do componente e mudam em cada elemento posicionado.
 
 ## Compatibilidade
 
-Formato `.ccomp` versão 1, gerado com o ConstructCraft 0.12.0. Os componentes detalhados (peças por nível de detalhe, formas Blend e Sweep), que são todos menos os de paisagismo, exigem o ConstructCraft 0.12.0; os de paisagismo abrem no ConstructCraft 0.6.0 ou mais recente. A dianteira esterçável e o descanso lateral da motocicleta, e as marcações de piso externo, são peças em script Lua; o visualizador web as mostra como o ConstructCraft as gerou ([`tools/scripted.py`](tools/scripted.py)).
+Formato `.ccomp` versão 1, gerado com o ConstructCraft 0.12.0. Todos os componentes exigem o ConstructCraft 0.12.0 ou mais recente: eles mostram peças diferentes em cada nível de detalhe e usam formas Blend e Sweep. A dianteira esterçável e o descanso lateral da motocicleta, e as marcações de piso externo, são peças em script Lua; o visualizador web as mostra como o ConstructCraft as gerou ([`tools/scripted.py`](tools/scripted.py)).
 
 ## Licença
 

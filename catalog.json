@@ -3416,6 +3416,22 @@
       ]
     },
     {
+      "file": "components/planting/agapanto.ccomp",
+      "thumbnail": "thumbnails/planting/agapanto.png",
+      "component": "Agapanto",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [],
+      "types": [
+        {
+          "name": "Agapanto Ø60",
+          "values": {},
+          "description": "Agapanto, touceira de folhas em fita com umbelas azuis, 0,9 m de altura, Ø0,6 m"
+        }
+      ]
+    },
+    {
       "file": "components/planting/buxinho.ccomp",
       "thumbnail": "thumbnails/planting/buxinho.png",
       "component": "Buxinho",
@@ -3432,6 +3448,136 @@
       ]
     },
     {
+      "file": "components/planting/canteiro-elevado.ccomp",
+      "thumbnail": "thumbnails/planting/canteiro-elevado.png",
+      "component": "Canteiro elevado",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Profundidade",
+        "Altura"
+      ],
+      "types": [
+        {
+          "name": "Canteiro elevado 2,0x0,8 m",
+          "values": {
+            "Largura": 2.0,
+            "Profundidade": 0.8,
+            "Altura": 0.45
+          },
+          "description": "Canteiro elevado de alvenaria rebocada e pintada com pingadeira de concreto, cheio de terra vegetal"
+        },
+        {
+          "name": "Canteiro elevado 3,0x1,0 m",
+          "values": {
+            "Largura": 3.0,
+            "Profundidade": 1.0,
+            "Altura": 0.6
+          },
+          "description": "Canteiro elevado de alvenaria rebocada e pintada com pingadeira de concreto, cheio de terra vegetal"
+        },
+        {
+          "name": "Canteiro elevado 1,2x1,2 m",
+          "values": {
+            "Largura": 1.2,
+            "Profundidade": 1.2,
+            "Altura": 0.45
+          },
+          "description": "Canteiro elevado de alvenaria rebocada e pintada com pingadeira de concreto, cheio de terra vegetal"
+        }
+      ]
+    },
+    {
+      "file": "components/planting/canteiro-meio-fio.ccomp",
+      "thumbnail": "thumbnails/planting/canteiro-meio-fio.png",
+      "component": "Canteiro com meio-fio",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Profundidade"
+      ],
+      "types": [
+        {
+          "name": "Canteiro com meio-fio 2,0x1,0 m",
+          "values": {
+            "Largura": 2.0,
+            "Profundidade": 1.0
+          },
+          "description": "Canteiro no nível do terreno com meio-fio de concreto pré-moldado e cobertura de casca de pinus, para receber plantas"
+        },
+        {
+          "name": "Canteiro com meio-fio 3,0x1,2 m",
+          "values": {
+            "Largura": 3.0,
+            "Profundidade": 1.2
+          },
+          "description": "Canteiro no nível do terreno com meio-fio de concreto pré-moldado e cobertura de casca de pinus, para receber plantas"
+        },
+        {
+          "name": "Canteiro com meio-fio 1,0x1,0 m",
+          "values": {
+            "Largura": 1.0,
+            "Profundidade": 1.0
+          },
+          "description": "Canteiro no nível do terreno com meio-fio de concreto pré-moldado e cobertura de casca de pinus, para receber plantas"
+        }
+      ]
+    },
+    {
+      "file": "components/planting/canteiro-redondo.ccomp",
+      "thumbnail": "thumbnails/planting/canteiro-redondo.png",
+      "component": "Canteiro redondo",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Diametro"
+      ],
+      "types": [
+        {
+          "name": "Canteiro redondo Ø1,5 m",
+          "values": {
+            "Diametro": 1.5
+          },
+          "description": "Canteiro redondo com borda de concreto e cobertura de seixo branco, para uma árvore ou um grupo de plantas"
+        },
+        {
+          "name": "Canteiro redondo Ø1,0 m",
+          "values": {
+            "Diametro": 1.0
+          },
+          "description": "Canteiro redondo com borda de concreto e cobertura de seixo branco, para uma árvore ou um grupo de plantas"
+        },
+        {
+          "name": "Canteiro redondo Ø2,0 m",
+          "values": {
+            "Diametro": 2.0
+          },
+          "description": "Canteiro redondo com borda de concreto e cobertura de seixo branco, para uma árvore ou um grupo de plantas"
+        }
+      ]
+    },
+    {
+      "file": "components/planting/capim-do-texas.ccomp",
+      "thumbnail": "thumbnails/planting/capim-do-texas.png",
+      "component": "Capim-do-texas",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [],
+      "types": [
+        {
+          "name": "Capim-do-texas Ø90",
+          "values": {},
+          "description": "Gramínea ornamental de folhas arroxeadas e plumas, 1 m de altura, touceira Ø0,9 m"
+        }
+      ]
+    },
+    {
       "file": "components/planting/cipreste-italiano.ccomp",
       "thumbnail": "thumbnails/planting/cipreste-italiano.png",
       "component": "Cipreste-italiano",
@@ -3444,6 +3590,76 @@
           "name": "Cipreste-italiano 8 m",
           "values": {},
           "description": "Conífera, 8 m de altura, copa Ø1.6 m"
+        }
+      ]
+    },
+    {
+      "file": "components/planting/forracao-grama-amendoim.ccomp",
+      "thumbnail": "thumbnails/planting/forracao-grama-amendoim.png",
+      "component": "Forração de grama-amendoim",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [],
+      "types": [
+        {
+          "name": "Grama-amendoim 1x1 m",
+          "values": {},
+          "description": "Forração de grama-amendoim (Arachis repens) com flores amarelas, 12 cm de altura, em placa de 1 x 1 m (repita para cobrir o canteiro)"
+        }
+      ]
+    },
+    {
+      "file": "components/planting/forracao-grama-preta.ccomp",
+      "thumbnail": "thumbnails/planting/forracao-grama-preta.png",
+      "component": "Forração de grama-preta",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [],
+      "types": [
+        {
+          "name": "Grama-preta 1x1 m",
+          "values": {},
+          "description": "Forração de grama-preta (Ophiopogon) em touceiras, 20 cm de altura, em placa de 1 x 1 m (repita para cobrir o canteiro)"
+        }
+      ]
+    },
+    {
+      "file": "components/planting/gramado.ccomp",
+      "thumbnail": "thumbnails/planting/gramado.png",
+      "component": "Gramado",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Profundidade"
+      ],
+      "types": [
+        {
+          "name": "Gramado 5x5 m",
+          "values": {
+            "Largura": 5.0,
+            "Profundidade": 5.0
+          },
+          "description": "Gramado em placas (grama-esmeralda) sobre o terreno, 3 cm de espessura"
+        },
+        {
+          "name": "Gramado 10x10 m",
+          "values": {
+            "Largura": 10.0,
+            "Profundidade": 10.0
+          },
+          "description": "Gramado em placas (grama-esmeralda) sobre o terreno, 3 cm de espessura"
+        },
+        {
+          "name": "Gramado 2x2 m",
+          "values": {
+            "Largura": 2.0,
+            "Profundidade": 2.0
+          },
+          "description": "Gramado em placas (grama-esmeralda) sobre o terreno, 3 cm de espessura"
         }
       ]
     },
@@ -3496,6 +3712,22 @@
       ]
     },
     {
+      "file": "components/planting/jardineira-flores.ccomp",
+      "thumbnail": "thumbnails/planting/jardineira-flores.png",
+      "component": "Jardineira com flores",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [],
+      "types": [
+        {
+          "name": "Jardineira 120x40",
+          "values": {},
+          "description": "Jardineira retangular de fibra de vidro grafite 120 x 40 x 40 cm com três ixoras floridas"
+        }
+      ]
+    },
+    {
       "file": "components/planting/jeriva.ccomp",
       "thumbnail": "thumbnails/planting/jeriva.png",
       "component": "Jerivá",
@@ -3524,6 +3756,22 @@
           "name": "Mangueira 12 m",
           "values": {},
           "description": "Árvore de copa arredondada, 12 m de altura, copa Ø12 m"
+        }
+      ]
+    },
+    {
+      "file": "components/planting/moreia.ccomp",
+      "thumbnail": "thumbnails/planting/moreia.png",
+      "component": "Moreia",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [],
+      "types": [
+        {
+          "name": "Moreia Ø60",
+          "values": {},
+          "description": "Moreia (Dietes), touceira de folhas eretas com flores brancas, 0,75 m de altura, Ø0,6 m"
         }
       ]
     },
@@ -3668,6 +3916,38 @@
           "name": "Tuia-holandesa 4 m",
           "values": {},
           "description": "Conífera, 4 m de altura, copa Ø1.2 m"
+        }
+      ]
+    },
+    {
+      "file": "components/planting/vaso-concreto-quadrado.ccomp",
+      "thumbnail": "thumbnails/planting/vaso-concreto-quadrado.png",
+      "component": "Vaso de concreto com arbusto",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [],
+      "types": [
+        {
+          "name": "Vaso de concreto 80x80",
+          "values": {},
+          "description": "Vaso quadrado de concreto aparente 80 x 80 x 80 cm com arbusto de pingo-de-ouro"
+        }
+      ]
+    },
+    {
+      "file": "components/planting/vaso-fibra-arvore.ccomp",
+      "thumbnail": "thumbnails/planting/vaso-fibra-arvore.png",
+      "component": "Vaso de fibra com árvore",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [],
+      "types": [
+        {
+          "name": "Vaso de fibra Ø100 com árvore",
+          "values": {},
+          "description": "Vaso redondo de fibra de vidro grafite Ø1,0 m x 0,9 m com árvore ornamental de pequeno porte (3,3 m de altura total)"
         }
       ]
     },

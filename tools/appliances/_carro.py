@@ -288,7 +288,7 @@ def slab(top, bot) -> Mesh:
            [(a, nc - 1) for a in range(nr - 2, -1, -1)] + [(0, b) for b in range(nc - 2, 0, -1)]
     for k in range(len(edge)):
         (a1, b1), (a2, b2) = edge[k], edge[(k + 1) % len(edge)]
-        m.poly([T[a1][b1], T[a2][b2], B[a2][b2], B[a1][b1]])
+        m.poly([T[a2][b2], T[a1][b1], B[a1][b1], B[a2][b2]])  # walks each edge against the top and bottom faces
     m.orient(0)
     return m
 

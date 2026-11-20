@@ -1,0 +1,136 @@
+{
+  "component": "Canteiro com meio-fio",
+  "def": {
+    "kind": "Generic",
+    "params": [
+      {
+        "name": "Largura",
+        "value": 2.0,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Profundidade",
+        "value": 1.0,
+        "kind": "Length",
+        "instance": false
+      }
+    ],
+    "items": [
+      {
+        "name": "Meio-fio frontal",
+        "material": "Concreto aparente",
+        "in_plan": true,
+        "shape": {
+          "Box": {
+            "x": "-Largura/2",
+            "y": "-Profundidade/2",
+            "z": "0",
+            "width": "Largura",
+            "depth": "0.08",
+            "height": "0.06"
+          }
+        }
+      },
+      {
+        "name": "Meio-fio traseiro",
+        "material": "Concreto aparente",
+        "in_plan": true,
+        "shape": {
+          "Box": {
+            "x": "-Largura/2",
+            "y": "Profundidade/2 - 0.08",
+            "z": "0",
+            "width": "Largura",
+            "depth": "0.08",
+            "height": "0.06"
+          }
+        }
+      },
+      {
+        "name": "Meio-fio esquerdo",
+        "material": "Concreto aparente",
+        "in_plan": true,
+        "shape": {
+          "Box": {
+            "x": "-Largura/2",
+            "y": "-Profundidade/2 + 0.08",
+            "z": "0",
+            "width": "0.08",
+            "depth": "Profundidade - 0.16",
+            "height": "0.06"
+          }
+        }
+      },
+      {
+        "name": "Meio-fio direito",
+        "material": "Concreto aparente",
+        "in_plan": true,
+        "shape": {
+          "Box": {
+            "x": "Largura/2 - 0.08",
+            "y": "-Profundidade/2 + 0.08",
+            "z": "0",
+            "width": "0.08",
+            "depth": "Profundidade - 0.16",
+            "height": "0.06"
+          }
+        }
+      },
+      {
+        "name": "Cobertura de casca de pinus",
+        "material": "Casca de pinus",
+        "in_plan": false,
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.08",
+            "y": "-Profundidade/2 + 0.08",
+            "z": "0",
+            "width": "Largura - 0.16",
+            "depth": "Profundidade - 0.16",
+            "height": "0.035"
+          }
+        }
+      }
+    ]
+  },
+  "types": [
+    {
+      "name": "Canteiro com meio-fio 2,0x1,0 m",
+      "values": {},
+      "info": {
+        "description": "Canteiro no nível do terreno com meio-fio de concreto pré-moldado e cobertura de casca de pinus, para receber plantas"
+      }
+    },
+    {
+      "name": "Canteiro com meio-fio 3,0x1,2 m",
+      "values": {
+        "Largura": 3.0,
+        "Profundidade": 1.2
+      },
+      "info": {
+        "description": "Canteiro no nível do terreno com meio-fio de concreto pré-moldado e cobertura de casca de pinus, para receber plantas"
+      }
+    },
+    {
+      "name": "Canteiro com meio-fio 1,0x1,0 m",
+      "values": {
+        "Largura": 1.0,
+        "Profundidade": 1.0
+      },
+      "info": {
+        "description": "Canteiro no nível do terreno com meio-fio de concreto pré-moldado e cobertura de casca de pinus, para receber plantas"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "name": "Concreto aparente",
+      "color": [172, 170, 164]
+    },
+    {
+      "name": "Casca de pinus",
+      "color": [124, 82, 52]
+    }
+  ]
+}

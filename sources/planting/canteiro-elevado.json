@@ -1,0 +1,207 @@
+{
+  "component": "Canteiro elevado",
+  "def": {
+    "kind": "Generic",
+    "params": [
+      {
+        "name": "Largura",
+        "value": 2.0,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Profundidade",
+        "value": 0.8,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Altura",
+        "value": 0.45,
+        "kind": "Length",
+        "instance": false
+      }
+    ],
+    "items": [
+      {
+        "name": "Parede frontal",
+        "material": "Reboco pintado",
+        "in_plan": true,
+        "shape": {
+          "Box": {
+            "x": "-Largura/2",
+            "y": "-Profundidade/2",
+            "z": "0",
+            "width": "Largura",
+            "depth": "0.14",
+            "height": "Altura - 0.03"
+          }
+        }
+      },
+      {
+        "name": "Parede traseira",
+        "material": "Reboco pintado",
+        "in_plan": true,
+        "shape": {
+          "Box": {
+            "x": "-Largura/2",
+            "y": "Profundidade/2 - 0.14",
+            "z": "0",
+            "width": "Largura",
+            "depth": "0.14",
+            "height": "Altura - 0.03"
+          }
+        }
+      },
+      {
+        "name": "Parede esquerda",
+        "material": "Reboco pintado",
+        "in_plan": true,
+        "shape": {
+          "Box": {
+            "x": "-Largura/2",
+            "y": "-Profundidade/2 + 0.14",
+            "z": "0",
+            "width": "0.14",
+            "depth": "Profundidade - 0.28",
+            "height": "Altura - 0.03"
+          }
+        }
+      },
+      {
+        "name": "Parede direita",
+        "material": "Reboco pintado",
+        "in_plan": true,
+        "shape": {
+          "Box": {
+            "x": "Largura/2 - 0.14",
+            "y": "-Profundidade/2 + 0.14",
+            "z": "0",
+            "width": "0.14",
+            "depth": "Profundidade - 0.28",
+            "height": "Altura - 0.03"
+          }
+        }
+      },
+      {
+        "name": "Pingadeira frontal",
+        "material": "Concreto aparente",
+        "in_plan": false,
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 - 0.02",
+            "y": "-Profundidade/2 - 0.02",
+            "z": "Altura - 0.03",
+            "width": "Largura + 0.04",
+            "depth": "0.16",
+            "height": "0.03"
+          }
+        }
+      },
+      {
+        "name": "Pingadeira traseira",
+        "material": "Concreto aparente",
+        "in_plan": false,
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 - 0.02",
+            "y": "Profundidade/2 - 0.14",
+            "z": "Altura - 0.03",
+            "width": "Largura + 0.04",
+            "depth": "0.16",
+            "height": "0.03"
+          }
+        }
+      },
+      {
+        "name": "Pingadeira esquerda",
+        "material": "Concreto aparente",
+        "in_plan": false,
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 - 0.02",
+            "y": "-Profundidade/2 + 0.14",
+            "z": "Altura - 0.03",
+            "width": "0.16",
+            "depth": "Profundidade - 0.28",
+            "height": "0.03"
+          }
+        }
+      },
+      {
+        "name": "Pingadeira direita",
+        "material": "Concreto aparente",
+        "in_plan": false,
+        "shape": {
+          "Box": {
+            "x": "Largura/2 - 0.14",
+            "y": "-Profundidade/2 + 0.14",
+            "z": "Altura - 0.03",
+            "width": "0.16",
+            "depth": "Profundidade - 0.28",
+            "height": "0.03"
+          }
+        }
+      },
+      {
+        "name": "Terra",
+        "material": "Terra vegetal",
+        "in_plan": false,
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.14",
+            "y": "-Profundidade/2 + 0.14",
+            "z": "0",
+            "width": "Largura - 0.28",
+            "depth": "Profundidade - 0.28",
+            "height": "Altura - 0.06"
+          }
+        }
+      }
+    ]
+  },
+  "types": [
+    {
+      "name": "Canteiro elevado 2,0x0,8 m",
+      "values": {},
+      "info": {
+        "description": "Canteiro elevado de alvenaria rebocada e pintada com pingadeira de concreto, cheio de terra vegetal"
+      }
+    },
+    {
+      "name": "Canteiro elevado 3,0x1,0 m",
+      "values": {
+        "Largura": 3.0,
+        "Profundidade": 1.0,
+        "Altura": 0.6
+      },
+      "info": {
+        "description": "Canteiro elevado de alvenaria rebocada e pintada com pingadeira de concreto, cheio de terra vegetal"
+      }
+    },
+    {
+      "name": "Canteiro elevado 1,2x1,2 m",
+      "values": {
+        "Largura": 1.2,
+        "Profundidade": 1.2
+      },
+      "info": {
+        "description": "Canteiro elevado de alvenaria rebocada e pintada com pingadeira de concreto, cheio de terra vegetal"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "name": "Reboco pintado",
+      "color": [228, 224, 214]
+    },
+    {
+      "name": "Concreto aparente",
+      "color": [172, 170, 164]
+    },
+    {
+      "name": "Terra vegetal",
+      "color": [74, 56, 42]
+    }
+  ]
+}

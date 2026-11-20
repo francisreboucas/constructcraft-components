@@ -1,0 +1,106 @@
+{
+  "component": "Canteiro redondo",
+  "def": {
+    "kind": "Generic",
+    "params": [
+      {
+        "name": "Diametro",
+        "value": 1.5,
+        "kind": "Length",
+        "instance": false
+      }
+    ],
+    "items": [
+      {
+        "name": "Borda de concreto",
+        "material": "Concreto aparente",
+        "in_plan": true,
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "offset": "0",
+            "axis": "0",
+            "angle": "360",
+            "points": [
+              {
+                "u": "Diametro/2 - 0.08",
+                "v": "0"
+              },
+              {
+                "u": "Diametro/2",
+                "v": "0"
+              },
+              {
+                "u": "Diametro/2",
+                "v": "0.05"
+              },
+              {
+                "u": "Diametro/2 - 0.01",
+                "v": "0.06"
+              },
+              {
+                "u": "Diametro/2 - 0.07",
+                "v": "0.06"
+              },
+              {
+                "u": "Diametro/2 - 0.08",
+                "v": "0.05"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Seixo",
+        "material": "Seixo branco",
+        "in_plan": false,
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0",
+            "z": "0",
+            "radius": "Diametro/2 - 0.08",
+            "height": "0.035"
+          }
+        }
+      }
+    ]
+  },
+  "types": [
+    {
+      "name": "Canteiro redondo Ø1,5 m",
+      "values": {},
+      "info": {
+        "description": "Canteiro redondo com borda de concreto e cobertura de seixo branco, para uma árvore ou um grupo de plantas"
+      }
+    },
+    {
+      "name": "Canteiro redondo Ø1,0 m",
+      "values": {
+        "Diametro": 1.0
+      },
+      "info": {
+        "description": "Canteiro redondo com borda de concreto e cobertura de seixo branco, para uma árvore ou um grupo de plantas"
+      }
+    },
+    {
+      "name": "Canteiro redondo Ø2,0 m",
+      "values": {
+        "Diametro": 2.0
+      },
+      "info": {
+        "description": "Canteiro redondo com borda de concreto e cobertura de seixo branco, para uma árvore ou um grupo de plantas"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "name": "Concreto aparente",
+      "color": [172, 170, 164]
+    },
+    {
+      "name": "Seixo branco",
+      "color": [224, 222, 214]
+    }
+  ]
+}
