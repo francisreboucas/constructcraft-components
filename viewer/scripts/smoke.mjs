@@ -571,6 +571,18 @@ async function runEnglish(browser) {
     if (await waitReady(page, label)) {
       await expectText(label, '.nav-item .nav-label', 'Todos');
       // The choice outlives a reload, against the browser's language.
+       // Let the gallery finish the thumbnails it is rendering (cards within the
+      // queue's 300px margin), or the reload aborts their fetches.
+      await page.waitForFunction(
+        () =>
+          [...document.querySelectorAll('.card')].every((card) => {
+            const r = card.getBoundingClientRect();
+            const near = r.bottom > -300 && r.top < innerHeight + 300;
+            return !near || card.dataset.thumb !== 'pending';
+          }),
+        null,
+        { timeout: 90_000 },
+      );
       await page.reload();
       await waitReady(page, label);
       const lang = await page.getAttribute('html', 'lang');
