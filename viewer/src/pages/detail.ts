@@ -91,7 +91,7 @@ function typesSection(entry: CatalogEntry, onPick: (index: number) => void): Typ
   }
   head.append(headRow);
 
-  const cells: { cell: HTMLElement; param: string; value: number | undefined }[] = [];
+  const cells: { cell: HTMLElement; param: string; value: number | string | boolean | undefined }[] = [];
   const tbody = el('tbody');
   const pickable = entry.types.length > 1;
   const tag = el('span', 'tag', t.detail.shownTag);

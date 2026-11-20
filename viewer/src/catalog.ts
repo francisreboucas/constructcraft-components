@@ -18,7 +18,8 @@ export type FolderId =
   | 'planting'
   | 'doors'
   | 'windows'
-  | 'vehicles';
+  | 'vehicles'
+  | 'site';
 
 export interface FolderInfo {
   id: FolderId;
@@ -37,6 +38,7 @@ const FOLDER_ORDER: readonly FolderId[] = [
   'doors',
   'windows',
   'vehicles',
+  'site',
 ];
 
 export const FOLDERS: readonly FolderInfo[] = FOLDER_ORDER.map((id) => ({ id, label: t.folders[id] }));
@@ -63,7 +65,8 @@ export function edgesForFolder(id: FolderId): boolean {
 
 export interface CatalogType {
   name: string;
-  values: Record<string, number>;
+  /** Numbers for lengths, angles and numbers; texts for texts, choices and materials; booleans for yes/no. */
+  values: Record<string, number | string | boolean>;
   description: string;
 }
 

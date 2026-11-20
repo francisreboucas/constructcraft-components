@@ -39,8 +39,9 @@ Em seguida rode `python tools/thumbnails.py --ccad caminho/do/ccad`: ele desenha
 
 ## Convenções
 
-- **Pastas**: `furniture`, `casework`, `plumbing`, `electrical`, `lighting`, `planting`, `doors`, `windows`, `vehicles`. Arquivos em minúsculas com hífens, sem acentos: `pia-cozinha.json`.
+- **Pastas**: `furniture`, `casework`, `plumbing`, `electrical`, `lighting`, `planting`, `doors`, `windows`, `vehicles`, `site`. Arquivos em minúsculas com hífens, sem acentos: `pia-cozinha.json`.
 - **Origem e eixos**: metros; origem no ponto de inserção, X para a direita, Y para o fundo (a parede), Z para cima. Móveis e louças centrados na origem, com o lado encostado à parede em +Y. Dispositivos de parede ocupam `y` de `-Profundidade` a `0` e começam em `z = 0` (o ConstructCraft aplica a altura de montagem). Luminárias de teto ficam abaixo de `z = 0`. Vegetação fica com o tronco na origem e a base no chão (`z = 0`). Veículos ficam com as rodas no chão (`z = 0`), a frente para -Y e a origem no meio do entre-eixos.
+- **Área externa**: as fontes de `sources/site/` saem de `tools/site.py` (scripts em `tools/site/`); altere o gerador, não o JSON. Elementos de piso ficam com a base em `z = 0`, o trânsito correndo ao longo de Y (o condutor chega por -Y) e a pintura com 3 mm. Textos, escolhas e materiais de um script valem para todos os tipos (o `.ccomp` guarda só números por tipo); deixe-os editáveis por elemento com `instance = true`. Um material usado só pelo script não vai no `.ccomp`: ele precisa ser o material da peça de script ou de uma peça comum.
 - **Paisagismo**: as fontes de `sources/planting/` saem de `tools/vegetation.py`; altere o gerador, não o JSON. Cada espécie é uma malha fixa no porte adulto, por isso é um componente próprio com um tipo (o ConstructCraft guarda uma definição por componente).
 - **Parâmetros**: nomes em português, sem acentos nem espaços (`Largura`, `Profundidade`, `Altura`, `Elevacao`). Marque `instance: true` só no que muda por elemento (altura de instalação, queda de pendente).
 - **Tipos**: um componente com vários tamanhos é melhor que vários componentes. O nome do tipo diz o tamanho (`Balcão 80 cm`).

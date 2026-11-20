@@ -39,7 +39,21 @@ SECTIONS = {
     "doors": "Portas · Doors",
     "windows": "Janelas · Windows",
     "vehicles": "Veículos · Vehicles",
+    "site": "Área externa · Site",
 }
+
+
+# Parameter kinds whose value is the `text` of the parameter, not its number.
+TEXT_KINDS = {"Text", "Choice", "Material"}
+
+
+def param_value(p: dict):
+    """A parameter's value as the catalog lists it: its text for texts, choices and materials."""
+    if p.get("kind") in TEXT_KINDS:
+        return p.get("text", "")
+    if p.get("kind") == "Boolean":
+        return bool(p["value"])
+    return p["value"]
 
 
 class BuildError(Exception):
@@ -84,8 +98,25 @@ def build_script(src: dict, out: Path, existing_materials: set[str]) -> list[dic
             raise BuildError(f"type values for unknown parameters: {', '.join(sorted(unknown))}")
         d = json.loads(json.dumps(src["def"]))
         for p in d.get("params", []):
-            p["value"] = values.get(p["name"], p["value"])
+            if p["name"] not in values:
+                continue
+            v = values[p["name"]]
+            if p.get("kind") in TEXT_KINDS:
+                p["text"] = v  # a text, a choice's key or a material's name
+            elif p.get("kind") == "Boolean":
+                p["value"] = 1.0 if v else 0.0
+            else:
+                p["value"] = v
         return d
+
+    # A .ccomp keeps one number per parameter for each type; texts, choices and materials
+    # are the definition's, shared by every type (each placed element may still change them).
+    kinds = {p["name"]: p.get("kind") for p in params}
+    for t in types:
+        shared = sorted(n for n in t.get("values", {}) if kinds.get(n) in TEXT_KINDS)
+        if shared:
+            raise BuildError(f"type {t['name']!r}: {', '.join(shared)} cannot change by type "
+                             "(texts, choices and materials are shared by every type); set them in the definition")
 
     steps = []
     for m in src.get("materials", []):
@@ -176,7 +207,7 @@ def describe(exe: str, path: Path, tmp: Path, authors: dict) -> dict:
         "types": [
             {
                 "name": t["name"],
-                "values": {p["name"]: p["value"] for p in t["params"]["def"].get("params", [])},
+                "values": {p["name"]: param_value(p) for p in t["params"]["def"].get("params", [])},
                 "description": t["info"].get("description", ""),
             }
             for t in types

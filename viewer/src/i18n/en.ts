@@ -16,6 +16,7 @@ export const en: Strings = {
     doors: 'Doors',
     windows: 'Windows',
     vehicles: 'Vehicles',
+    site: 'Site',
   },
   shell: {
     skip: 'Skip to content',
@@ -125,6 +126,7 @@ export const en: Strings = {
       doors: 'Hinged, sliding, pivot, folding and an up-and-over garage door.',
       windows: 'Sliding, casement, hopper, awning, shuttered and fixed.',
       vehicles: 'To furnish garages and street fronts.',
+      site: 'Parking spaces, legends, arrows, crossings and speed humps, with editable text.',
     },
     quality: 'What every component brings',
     qualityNote: 'What a component needs to have to enter the library.',

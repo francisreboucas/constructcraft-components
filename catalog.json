@@ -3766,6 +3766,799 @@
       ]
     },
     {
+      "file": "components/site/area-zebrada.ccomp",
+      "thumbnail": "thumbnails/site/area-zebrada.png",
+      "component": "Área zebrada",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Comprimento",
+        "LarguraLinha",
+        "LarguraFaixa",
+        "Espacamento",
+        "AnguloFaixas"
+      ],
+      "types": [
+        {
+          "name": "Área zebrada 5,00 x 2,50",
+          "values": {
+            "Largura": 5.0,
+            "Comprimento": 2.5,
+            "LarguraLinha": 0.1,
+            "LarguraFaixa": 0.3,
+            "Espacamento": 0.9,
+            "AnguloFaixas": 45.0
+          },
+          "description": "Marcação de área de proibição de estacionamento e parada (zebrado amarelo): contorno de 0,10 m e faixas de 0,30 m a 45°, 5,00 x 2,50 m; faixas, espaço e ângulo ajustáveis"
+        },
+        {
+          "name": "Área zebrada 10,00 x 3,00",
+          "values": {
+            "Largura": 10.0,
+            "Comprimento": 3.0,
+            "LarguraLinha": 0.1,
+            "LarguraFaixa": 0.4,
+            "Espacamento": 1.1,
+            "AnguloFaixas": 45.0
+          },
+          "description": "Zebrado amarelo de 10,00 x 3,00 m, faixas de 0,40 m a 45°"
+        },
+        {
+          "name": "Área zebrada 2,50 x 2,50",
+          "values": {
+            "Largura": 2.5,
+            "Comprimento": 2.5,
+            "LarguraLinha": 0.1,
+            "LarguraFaixa": 0.3,
+            "Espacamento": 0.9,
+            "AnguloFaixas": 45.0
+          },
+          "description": "Zebrado amarelo quadrado de 2,50 m, para frente de portões e hidrantes"
+        }
+      ]
+    },
+    {
+      "file": "components/site/batente-estacionamento.ccomp",
+      "thumbnail": "thumbnails/site/batente-estacionamento.png",
+      "component": "Batente de estacionamento",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Comprimento",
+        "Largura",
+        "Altura"
+      ],
+      "types": [
+        {
+          "name": "Batente borracha 50 cm",
+          "values": {
+            "Comprimento": 0.5,
+            "Largura": 0.15,
+            "Altura": 0.1
+          },
+          "description": "Batente (trava) de roda de borracha para estacionamento, 50 x 15 x 10 cm, com duas faixas refletivas amarelas e dois furos rebaixados para chumbadores; o comprimento corre ao longo de X, o veículo chega por -Y"
+        },
+        {
+          "name": "Batente borracha 60 cm",
+          "values": {
+            "Comprimento": 0.6,
+            "Largura": 0.15,
+            "Altura": 0.1
+          },
+          "description": "Batente de roda de borracha de 60 x 15 x 10 cm"
+        },
+        {
+          "name": "Batente borracha 1,00 m",
+          "values": {
+            "Comprimento": 1.0,
+            "Largura": 0.15,
+            "Altura": 0.1
+          },
+          "description": "Batente de roda de borracha de 1,00 m x 15 x 10 cm, para as duas rodas de motos ou carrinhos"
+        },
+        {
+          "name": "Batente borracha 1,80 m",
+          "values": {
+            "Comprimento": 1.8,
+            "Largura": 0.18,
+            "Altura": 0.12
+          },
+          "description": "Batente contínuo de borracha de 1,80 m x 18 x 12 cm, para as duas rodas do carro"
+        }
+      ]
+    },
+    {
+      "file": "components/site/de-a-preferencia.ccomp",
+      "thumbnail": "thumbnails/site/de-a-preferencia.png",
+      "component": "Dê a preferência no piso",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Base",
+        "Comprimento",
+        "LarguraTraco",
+        "Vazado",
+        "Distancia",
+        "Linha",
+        "LarguraVia",
+        "LarguraLinha",
+        "Traco",
+        "Intervalo",
+        "Pintura"
+      ],
+      "types": [
+        {
+          "name": "Dê a preferência 1,50 x 3,60",
+          "values": {
+            "Base": 1.5,
+            "Comprimento": 3.6,
+            "LarguraTraco": 0.2,
+            "Vazado": true,
+            "Distancia": 1.0,
+            "Linha": true,
+            "LarguraVia": 3.5,
+            "LarguraLinha": 0.3,
+            "Traco": 0.5,
+            "Intervalo": 0.5,
+            "Pintura": ""
+          },
+          "description": "Símbolo triangular Dê a preferência (inscrição no pavimento) de 1,50 x 3,60 m com contorno de 0,20 m, apontando para o condutor, e a linha tracejada de dê a preferência à frente; a origem é o meio da linha"
+        },
+        {
+          "name": "Dê a preferência 1,00 x 2,40 cheio",
+          "values": {
+            "Base": 1.0,
+            "Comprimento": 2.4,
+            "LarguraTraco": 0.2,
+            "Vazado": false,
+            "Distancia": 0.0,
+            "Linha": false,
+            "LarguraVia": 3.5,
+            "LarguraLinha": 0.3,
+            "Traco": 0.5,
+            "Intervalo": 0.5,
+            "Pintura": ""
+          },
+          "description": "Triângulo Dê a preferência cheio de 1,00 x 2,40 m, sem a linha, para vias locais e estacionamentos"
+        }
+      ]
+    },
+    {
+      "file": "components/site/faixa-pedestres.ccomp",
+      "thumbnail": "thumbnails/site/faixa-pedestres.png",
+      "component": "Faixa de pedestres",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Tipo",
+        "LarguraVia",
+        "LarguraFaixa",
+        "LarguraBarra",
+        "Espacamento",
+        "LinhasRetencao",
+        "RetencaoDosDoisLados",
+        "DistanciaRetencao",
+        "LarguraRetencao",
+        "Pintura"
+      ],
+      "types": [
+        {
+          "name": "Faixa de pedestres 4,00 m via 7,00 m",
+          "values": {
+            "Tipo": "zebrada",
+            "LarguraVia": 7.0,
+            "LarguraFaixa": 4.0,
+            "LarguraBarra": 0.4,
+            "Espacamento": 0.6,
+            "LinhasRetencao": false,
+            "RetencaoDosDoisLados": true,
+            "DistanciaRetencao": 1.6,
+            "LarguraRetencao": 0.4,
+            "Pintura": ""
+          },
+          "description": "Faixa de travessia de pedestres zebrada (FTP-1): barras brancas de 0,40 m a cada 1,00 m paralelas ao trânsito, faixa de 4,00 m numa via de 7,00 m; o trânsito corre ao longo de Y; cada faixa pode ser trocada para paralela (FTP-2)"
+        },
+        {
+          "name": "Faixa de pedestres 3,00 m via 7,00 m",
+          "values": {
+            "Tipo": "zebrada",
+            "LarguraVia": 7.0,
+            "LarguraFaixa": 3.0,
+            "LarguraBarra": 0.4,
+            "Espacamento": 0.6,
+            "LinhasRetencao": false,
+            "RetencaoDosDoisLados": true,
+            "DistanciaRetencao": 1.6,
+            "LarguraRetencao": 0.4,
+            "Pintura": ""
+          },
+          "description": "Faixa zebrada de 3,00 m (largura mínima) numa via de 7,00 m"
+        },
+        {
+          "name": "Faixa de pedestres 4,00 m com retenção",
+          "values": {
+            "Tipo": "zebrada",
+            "LarguraVia": 7.0,
+            "LarguraFaixa": 4.0,
+            "LarguraBarra": 0.4,
+            "Espacamento": 0.6,
+            "LinhasRetencao": true,
+            "RetencaoDosDoisLados": true,
+            "DistanciaRetencao": 1.6,
+            "LarguraRetencao": 0.4,
+            "Pintura": ""
+          },
+          "description": "Faixa zebrada de 4,00 m com linhas de retenção de 0,40 m a 1,60 m dos dois lados, via de 7,00 m"
+        },
+        {
+          "name": "Faixa de pedestres 3,00 m via 3,50 m",
+          "values": {
+            "Tipo": "zebrada",
+            "LarguraVia": 3.5,
+            "LarguraFaixa": 3.0,
+            "LarguraBarra": 0.4,
+            "Espacamento": 0.6,
+            "LinhasRetencao": false,
+            "RetencaoDosDoisLados": true,
+            "DistanciaRetencao": 1.6,
+            "LarguraRetencao": 0.4,
+            "Pintura": ""
+          },
+          "description": "Faixa zebrada de 3,00 m sobre uma única faixa de 3,50 m (estacionamentos e vias locais)"
+        }
+      ]
+    },
+    {
+      "file": "components/site/legenda-pare.ccomp",
+      "thumbnail": "thumbnails/site/legenda-pare.png",
+      "component": "Legenda PARE com linha de retenção",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Texto",
+        "AlturaLetra",
+        "LarguraLetra",
+        "Espacamento",
+        "Distancia",
+        "LinhaRetencao",
+        "LarguraVia",
+        "LarguraLinha",
+        "Pintura"
+      ],
+      "types": [
+        {
+          "name": "PARE 1,60 m faixa 3,50 m",
+          "values": {
+            "Texto": "PARE",
+            "AlturaLetra": 1.6,
+            "LarguraLetra": 0.5,
+            "Espacamento": 0.12,
+            "Distancia": 1.0,
+            "LinhaRetencao": true,
+            "LarguraVia": 3.5,
+            "LarguraLinha": 0.4,
+            "Pintura": ""
+          },
+          "description": "Legenda PARE em letras de 1,60 m antes da linha de retenção (LRE) de 0,40 m numa faixa de 3,50 m (vias até 80 km/h); a origem é o meio da linha, o condutor chega por -Y; o texto é editável"
+        },
+        {
+          "name": "PARE 2,40 m faixa 3,60 m",
+          "values": {
+            "Texto": "PARE",
+            "AlturaLetra": 2.4,
+            "LarguraLetra": 0.75,
+            "Espacamento": 0.18,
+            "Distancia": 1.6,
+            "LinhaRetencao": true,
+            "LarguraVia": 3.6,
+            "LarguraLinha": 0.5,
+            "Pintura": ""
+          },
+          "description": "Legenda PARE em letras de 2,40 m (vias acima de 80 km/h) antes da linha de retenção de 0,50 m numa faixa de 3,60 m"
+        },
+        {
+          "name": "PARE 0,80 m estacionamento",
+          "values": {
+            "Texto": "PARE",
+            "AlturaLetra": 0.8,
+            "LarguraLetra": 0.35,
+            "Espacamento": 0.08,
+            "Distancia": 0.6,
+            "LinhaRetencao": true,
+            "LarguraVia": 3.0,
+            "LarguraLinha": 0.3,
+            "Pintura": ""
+          },
+          "description": "Legenda PARE de 0,80 m para estacionamentos e vias internas, com linha de retenção de 0,30 m em faixa de 3,00 m"
+        }
+      ]
+    },
+    {
+      "file": "components/site/legenda-piso.ccomp",
+      "thumbnail": "thumbnails/site/legenda-piso.png",
+      "component": "Legenda no piso",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Linha1",
+        "Linha2",
+        "Linha3",
+        "AlturaLetra",
+        "LarguraLetra",
+        "Espacamento",
+        "EntreLinhas",
+        "LarguraMaxima",
+        "Pintura"
+      ],
+      "types": [
+        {
+          "name": "Legenda 1,60 m",
+          "values": {
+            "Linha1": "ESCOLA",
+            "Linha2": "",
+            "Linha3": "",
+            "AlturaLetra": 1.6,
+            "LarguraLetra": 0.5,
+            "Espacamento": 0.12,
+            "EntreLinhas": 1.0,
+            "LarguraMaxima": 3.2,
+            "Pintura": ""
+          },
+          "description": "Inscrição no pavimento em letras alongadas de 1,60 m (vias até 80 km/h): ESCOLA, DEVAGAR, ÔNIBUS, TÁXI, CARGA E DESCARGA...; até três linhas de texto editáveis em cada elemento, a primeira a mais próxima do condutor"
+        },
+        {
+          "name": "Legenda 2,40 m",
+          "values": {
+            "Linha1": "ESCOLA",
+            "Linha2": "",
+            "Linha3": "",
+            "AlturaLetra": 2.4,
+            "LarguraLetra": 0.75,
+            "Espacamento": 0.18,
+            "EntreLinhas": 1.5,
+            "LarguraMaxima": 3.4,
+            "Pintura": ""
+          },
+          "description": "Inscrição no pavimento em letras de 2,40 m (vias acima de 80 km/h); texto editável"
+        },
+        {
+          "name": "Legenda 0,60 m estacionamento",
+          "values": {
+            "Linha1": "ESCOLA",
+            "Linha2": "",
+            "Linha3": "",
+            "AlturaLetra": 0.6,
+            "LarguraLetra": 0.3,
+            "Espacamento": 0.06,
+            "EntreLinhas": 0.4,
+            "LarguraMaxima": 2.2,
+            "Pintura": ""
+          },
+          "description": "Inscrição pequena para estacionamentos e áreas internas, letras de 0,60 m (SAÍDA, ENTRADA, VISITANTE...); texto editável"
+        }
+      ]
+    },
+    {
+      "file": "components/site/lombada.ccomp",
+      "thumbnail": "thumbnails/site/lombada.png",
+      "component": "Lombada",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "LarguraVia",
+        "Comprimento",
+        "Altura",
+        "LarguraFaixa",
+        "Espacamento",
+        "AnguloFaixas"
+      ],
+      "types": [
+        {
+          "name": "Lombada tipo A 3,70 m",
+          "values": {
+            "LarguraVia": 7.0,
+            "Comprimento": 3.7,
+            "Altura": 0.08,
+            "LarguraFaixa": 0.25,
+            "Espacamento": 0.5,
+            "AnguloFaixas": 45.0
+          },
+          "description": "Ondulação transversal tipo A (Resolução CONTRAN 600/2016): 3,70 m no sentido do trânsito e 8 cm de altura, em arco, numa via de 7,00 m, com faixas amarelas a 45° pintadas sobre ela; o trânsito corre ao longo de Y"
+        },
+        {
+          "name": "Lombada tipo B 1,50 m",
+          "values": {
+            "LarguraVia": 7.0,
+            "Comprimento": 1.5,
+            "Altura": 0.06,
+            "LarguraFaixa": 0.2,
+            "Espacamento": 0.4,
+            "AnguloFaixas": 45.0
+          },
+          "description": "Ondulação transversal tipo B (Resolução CONTRAN 600/2016): 1,50 m e 6 cm de altura, para vias locais, numa via de 7,00 m"
+        },
+        {
+          "name": "Lombada estacionamento 0,90 m",
+          "values": {
+            "LarguraVia": 3.0,
+            "Comprimento": 0.9,
+            "Altura": 0.05,
+            "LarguraFaixa": 0.15,
+            "Espacamento": 0.3,
+            "AnguloFaixas": 45.0
+          },
+          "description": "Redutor de velocidade de 0,90 m e 5 cm para estacionamentos e condomínios, faixa de 3,00 m"
+        }
+      ]
+    },
+    {
+      "file": "components/site/seta-direcional.ccomp",
+      "thumbnail": "thumbnails/site/seta-direcional.png",
+      "component": "Seta direcional no piso",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Tipo",
+        "Comprimento",
+        "Alongamento",
+        "Pintura"
+      ],
+      "types": [
+        {
+          "name": "Seta 5,00 m",
+          "values": {
+            "Tipo": "frente",
+            "Comprimento": 5.0,
+            "Alongamento": 3.0,
+            "Pintura": ""
+          },
+          "description": "Seta indicativa de posicionamento na pista de 5,00 m, alongada para a leitura do condutor; o movimento (siga em frente, vire à direita ou à esquerda, frente ou direita, frente ou esquerda, direita ou esquerda, retorno) é escolhido em cada seta"
+        },
+        {
+          "name": "Seta 7,50 m",
+          "values": {
+            "Tipo": "frente",
+            "Comprimento": 7.5,
+            "Alongamento": 3.0,
+            "Pintura": ""
+          },
+          "description": "Seta indicativa de 7,50 m, para vias de velocidade mais alta; movimento escolhido em cada seta"
+        },
+        {
+          "name": "Seta estacionamento 2,50 m",
+          "values": {
+            "Tipo": "frente",
+            "Comprimento": 2.5,
+            "Alongamento": 1.6,
+            "Pintura": ""
+          },
+          "description": "Seta de 2,50 m pouco alongada, para o sentido de circulação em estacionamentos; movimento escolhido em cada seta"
+        }
+      ]
+    },
+    {
+      "file": "components/site/simbolo-piso.ccomp",
+      "thumbnail": "thumbnails/site/simbolo-piso.png",
+      "component": "Símbolo no piso",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Simbolo",
+        "Largura",
+        "Alongamento",
+        "Pintura"
+      ],
+      "types": [
+        {
+          "name": "Símbolo bicicleta 1,20 m",
+          "values": {
+            "Simbolo": "bicicleta",
+            "Largura": 1.2,
+            "Alongamento": 1.0,
+            "Pintura": ""
+          },
+          "description": "Pictograma de bicicleta para ciclofaixas e ciclovias, 1,20 m de largura, a bicicleta de lado e o alto voltado para +Y; cada símbolo pode ser trocado pelo símbolo internacional de acesso (ABNT NBR 9050)"
+        },
+        {
+          "name": "Símbolo bicicleta alongado 1,00 m",
+          "values": {
+            "Simbolo": "bicicleta",
+            "Largura": 1.0,
+            "Alongamento": 2.0,
+            "Pintura": ""
+          },
+          "description": "Pictograma de bicicleta de 1,00 m alongado 2 vezes no sentido do trânsito, para a leitura do ciclista em movimento"
+        }
+      ]
+    },
+    {
+      "file": "components/site/tacha-refletiva.ccomp",
+      "thumbnail": "thumbnails/site/tacha-refletiva.png",
+      "component": "Tacha refletiva",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Comprimento",
+        "Altura"
+      ],
+      "types": [
+        {
+          "name": "Tacha bidirecional 10 x 10 cm",
+          "values": {
+            "Largura": 0.1,
+            "Comprimento": 0.1,
+            "Altura": 0.018
+          },
+          "description": "Tacha refletiva bidirecional de resina amarela, 10 x 10 cm e 1,8 cm de altura, com um refletor em cada face inclinada (para os dois sentidos do trânsito ao longo de Y)"
+        },
+        {
+          "name": "Tachão bidirecional 15 x 25 cm",
+          "values": {
+            "Largura": 0.15,
+            "Comprimento": 0.25,
+            "Altura": 0.046
+          },
+          "description": "Tachão refletivo bidirecional de resina amarela, 15 x 25 cm e 4,6 cm de altura, para canalização e divisão de fluxos"
+        }
+      ]
+    },
+    {
+      "file": "components/site/vaga-estacionamento.ccomp",
+      "thumbnail": "thumbnails/site/vaga-estacionamento.png",
+      "component": "Vaga de estacionamento",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Comprimento",
+        "Angulo",
+        "LarguraLinha",
+        "Demarcacao",
+        "Numero",
+        "AlturaNumero",
+        "Legenda",
+        "AlturaLegenda",
+        "Pintura"
+      ],
+      "types": [
+        {
+          "name": "Vaga 2,50 x 5,00",
+          "values": {
+            "Largura": 2.5,
+            "Comprimento": 5.0,
+            "Angulo": 90.0,
+            "LarguraLinha": 0.1,
+            "Demarcacao": "laterais",
+            "Numero": "01",
+            "AlturaNumero": 0.5,
+            "Legenda": "",
+            "AlturaLegenda": 0.6,
+            "Pintura": ""
+          },
+          "description": "Vaga de estacionamento perpendicular de 2,50 x 5,00 m, demarcada por linhas brancas de 10 cm; em cada vaga o número, a legenda (IDOSO, MOTO, VISITANTE...) e a demarcação (laterais, U ou retângulo) são editáveis"
+        },
+        {
+          "name": "Vaga 2,30 x 4,50",
+          "values": {
+            "Largura": 2.3,
+            "Comprimento": 4.5,
+            "Angulo": 90.0,
+            "LarguraLinha": 0.1,
+            "Demarcacao": "laterais",
+            "Numero": "01",
+            "AlturaNumero": 0.5,
+            "Legenda": "",
+            "AlturaLegenda": 0.6,
+            "Pintura": ""
+          },
+          "description": "Vaga perpendicular compacta de 2,30 x 4,50 m; número, legenda e demarcação editáveis em cada vaga"
+        },
+        {
+          "name": "Vaga 45° 2,50 x 5,00",
+          "values": {
+            "Largura": 2.5,
+            "Comprimento": 5.0,
+            "Angulo": 45.0,
+            "LarguraLinha": 0.1,
+            "Demarcacao": "laterais",
+            "Numero": "01",
+            "AlturaNumero": 0.5,
+            "Legenda": "",
+            "AlturaLegenda": 0.6,
+            "Pintura": ""
+          },
+          "description": "Vaga oblíqua a 45° do corredor, 2,50 m entre linhas e 5,00 m de comprimento; número, legenda e demarcação editáveis"
+        },
+        {
+          "name": "Vaga 60° 2,50 x 5,00",
+          "values": {
+            "Largura": 2.5,
+            "Comprimento": 5.0,
+            "Angulo": 60.0,
+            "LarguraLinha": 0.1,
+            "Demarcacao": "laterais",
+            "Numero": "01",
+            "AlturaNumero": 0.5,
+            "Legenda": "",
+            "AlturaLegenda": 0.6,
+            "Pintura": ""
+          },
+          "description": "Vaga oblíqua a 60° do corredor, 2,50 m entre linhas e 5,00 m de comprimento; número, legenda e demarcação editáveis"
+        },
+        {
+          "name": "Vaga paralela 5,50 x 2,20",
+          "values": {
+            "Largura": 5.5,
+            "Comprimento": 2.2,
+            "Angulo": 90.0,
+            "LarguraLinha": 0.1,
+            "Demarcacao": "laterais",
+            "Numero": "01",
+            "AlturaNumero": 0.4,
+            "Legenda": "",
+            "AlturaLegenda": 0.6,
+            "Pintura": ""
+          },
+          "description": "Vaga paralela ao meio-fio, 5,50 m ao longo da via e 2,20 m de largura; a entrada (-Y) é o lado da via"
+        },
+        {
+          "name": "Vaga moto 1,00 x 2,00",
+          "values": {
+            "Largura": 1.0,
+            "Comprimento": 2.0,
+            "Angulo": 90.0,
+            "LarguraLinha": 0.1,
+            "Demarcacao": "laterais",
+            "Numero": "01",
+            "AlturaNumero": 0.3,
+            "Legenda": "",
+            "AlturaLegenda": 0.4,
+            "Pintura": ""
+          },
+          "description": "Vaga para motocicleta de 1,00 x 2,00 m (escreva MOTO na legenda)"
+        }
+      ]
+    },
+    {
+      "file": "components/site/vaga-pcd.ccomp",
+      "thumbnail": "thumbnails/site/vaga-pcd.png",
+      "component": "Vaga PcD",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Comprimento",
+        "LarguraCirculacao",
+        "LarguraLinha",
+        "LadoSimbolo",
+        "Lado",
+        "LarguraZebrado",
+        "EspacamentoZebrado",
+        "Numero",
+        "AlturaNumero",
+        "Legenda",
+        "AlturaLegenda"
+      ],
+      "types": [
+        {
+          "name": "Vaga PcD 2,50 x 5,00",
+          "values": {
+            "Largura": 2.5,
+            "Comprimento": 5.0,
+            "LarguraCirculacao": 1.2,
+            "LarguraLinha": 0.1,
+            "LadoSimbolo": 1.2,
+            "Lado": "direita",
+            "LarguraZebrado": 0.1,
+            "EspacamentoZebrado": 0.4,
+            "Numero": "",
+            "AlturaNumero": 0.4,
+            "Legenda": "",
+            "AlturaLegenda": 0.4
+          },
+          "description": "Vaga reservada a pessoa com deficiência (Resolução CONTRAN 965/2022, ABNT NBR 9050): 2,50 x 5,00 m com faixa adicional de circulação de 1,20 m zebrada e o símbolo internacional de acesso em branco sobre quadrado azul de 1,20 m; a faixa pode ficar à direita, à esquerda ou dos dois lados; número e legenda editáveis"
+        },
+        {
+          "name": "Vaga PcD 3,70 x 5,00 sem faixa",
+          "values": {
+            "Largura": 3.7,
+            "Comprimento": 5.0,
+            "LarguraCirculacao": 0.0,
+            "LarguraLinha": 0.1,
+            "LadoSimbolo": 1.2,
+            "Lado": "direita",
+            "LarguraZebrado": 0.1,
+            "EspacamentoZebrado": 0.4,
+            "Numero": "",
+            "AlturaNumero": 0.4,
+            "Legenda": "",
+            "AlturaLegenda": 0.4
+          },
+          "description": "Vaga PcD de 3,70 x 5,00 m com a área de circulação incluída na própria vaga (sem faixa zebrada)"
+        }
+      ]
+    },
+    {
+      "file": "components/site/velocidade-piso.ccomp",
+      "thumbnail": "thumbnails/site/velocidade-piso.png",
+      "component": "Velocidade máxima no piso",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Velocidade",
+        "Unidade",
+        "AlturaNumero",
+        "LarguraNumero",
+        "AlturaUnidade",
+        "LarguraUnidade",
+        "Afastamento",
+        "LarguraMaxima",
+        "Pintura"
+      ],
+      "types": [
+        {
+          "name": "Velocidade 1,60 m",
+          "values": {
+            "Velocidade": "40",
+            "Unidade": "km/h",
+            "AlturaNumero": 1.6,
+            "LarguraNumero": 0.6,
+            "AlturaUnidade": 0.8,
+            "LarguraUnidade": 0.4,
+            "Afastamento": 0.4,
+            "LarguraMaxima": 3.2,
+            "Pintura": ""
+          },
+          "description": "Inscrição da velocidade máxima permitida no pavimento: algarismos de 1,60 m e km/h logo depois, no sentido do trânsito; velocidade (30, 40, 50, 60...) e unidade editáveis em cada elemento"
+        },
+        {
+          "name": "Velocidade 2,40 m",
+          "values": {
+            "Velocidade": "40",
+            "Unidade": "km/h",
+            "AlturaNumero": 2.4,
+            "LarguraNumero": 0.9,
+            "AlturaUnidade": 1.2,
+            "LarguraUnidade": 0.6,
+            "Afastamento": 0.6,
+            "LarguraMaxima": 3.4,
+            "Pintura": ""
+          },
+          "description": "Velocidade máxima no pavimento com algarismos de 2,40 m, para vias acima de 80 km/h"
+        },
+        {
+          "name": "Velocidade 0,80 m estacionamento",
+          "values": {
+            "Velocidade": "40",
+            "Unidade": "km/h",
+            "AlturaNumero": 0.8,
+            "LarguraNumero": 0.4,
+            "AlturaUnidade": 0.4,
+            "LarguraUnidade": 0.24,
+            "Afastamento": 0.25,
+            "LarguraMaxima": 2.4,
+            "Pintura": ""
+          },
+          "description": "Velocidade para estacionamentos e condomínios (10, 20 km/h), algarismos de 0,80 m"
+        }
+      ]
+    },
+    {
       "file": "components/vehicles/moto-custom.ccomp",
       "thumbnail": "thumbnails/vehicles/moto-custom.png",
       "component": "Moto custom",

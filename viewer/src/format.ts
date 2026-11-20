@@ -21,7 +21,9 @@ export function formatLength(metres: number): string {
 }
 
 /** A parameter value formatted by its kind (`Length` when unknown). */
-export function formatParamValue(value: number | undefined, kind = 'Length'): string {
+export function formatParamValue(value: number | string | boolean | undefined, kind = 'Length'): string {
+  if (typeof value === 'string') return value === '' ? '—' : value;
+  if (typeof value === 'boolean') return value ? t.common.yes : t.common.no;
   if (value === undefined || !Number.isFinite(value)) return '—';
   switch (kind) {
     case 'Length':

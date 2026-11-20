@@ -106,6 +106,20 @@ export const COMPONENT_NAMES_EN: Readonly<Record<string, string>> = {
   'plumbing/tanque': 'Laundry sink',
   'plumbing/tanquinho': 'Semi-automatic washer',
 
+  'site/area-zebrada': 'Hatched no-parking area',
+  'site/batente-estacionamento': 'Parking wheel stop',
+  'site/de-a-preferencia': 'Give way floor marking',
+  'site/faixa-pedestres': 'Pedestrian crossing',
+  'site/legenda-pare': 'STOP legend with stop line',
+  'site/legenda-piso': 'Floor legend',
+  'site/lombada': 'Speed hump',
+  'site/seta-direcional': 'Lane arrow',
+  'site/simbolo-piso': 'Floor symbol',
+  'site/tacha-refletiva': 'Reflective road stud',
+  'site/vaga-estacionamento': 'Parking space',
+  'site/vaga-pcd': 'Accessible parking space',
+  'site/velocidade-piso': 'Speed limit floor marking',
+
   'vehicles/moto-custom': 'Cruiser motorcycle',
 
   'windows/janela-abrir': 'Wooden casement window',

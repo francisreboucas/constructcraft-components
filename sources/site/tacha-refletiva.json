@@ -1,0 +1,160 @@
+{
+ "component": "Tacha refletiva",
+ "def": {
+  "kind": "Generic",
+  "params": [
+   {
+    "name": "Largura",
+    "value": 0.1,
+    "kind": "Length",
+    "instance": false
+   },
+   {
+    "name": "Comprimento",
+    "value": 0.1,
+    "kind": "Length",
+    "instance": false
+   },
+   {
+    "name": "Altura",
+    "value": 0.018,
+    "kind": "Length",
+    "instance": false
+   }
+  ],
+  "items": [
+   {
+    "name": "Corpo",
+    "material": "Resina amarela",
+    "in_plan": true,
+    "shape": {
+     "Profile": {
+      "plane": "Side",
+      "points": [
+       {
+        "u": "-Comprimento/2",
+        "v": "0"
+       },
+       {
+        "u": "Comprimento/2",
+        "v": "0"
+       },
+       {
+        "u": "Comprimento/2 - Altura*1.4",
+        "v": "Altura"
+       },
+       {
+        "u": "-Comprimento/2 + Altura*1.4",
+        "v": "Altura"
+       }
+      ],
+      "offset": "-Largura/2",
+      "depth": "Largura"
+     }
+    }
+   },
+   {
+    "name": "Refletor da frente",
+    "material": "Refletivo",
+    "in_plan": false,
+    "shape": {
+     "Profile": {
+      "plane": "Side",
+      "points": [
+       {
+        "u": "-1*(Comprimento/2 - Altura*1.4*0.22)",
+        "v": "Altura*0.22"
+       },
+       {
+        "u": "-1*(Comprimento/2 - Altura*1.4*0.86)",
+        "v": "Altura*0.86"
+       },
+       {
+        "u": "-1*(Comprimento/2 - Altura*1.4*0.86) + -0.000697",
+        "v": "Altura*0.86 + 0.000977"
+       },
+       {
+        "u": "-1*(Comprimento/2 - Altura*1.4*0.22) + -0.000697",
+        "v": "Altura*0.22 + 0.000977"
+       }
+      ],
+      "offset": "-Largura/2 + Largura*0.12",
+      "depth": "Largura*0.76"
+     }
+    }
+   },
+   {
+    "name": "Refletor de trás",
+    "material": "Refletivo",
+    "in_plan": false,
+    "shape": {
+     "Profile": {
+      "plane": "Side",
+      "points": [
+       {
+        "u": "1*(Comprimento/2 - Altura*1.4*0.22)",
+        "v": "Altura*0.22"
+       },
+       {
+        "u": "1*(Comprimento/2 - Altura*1.4*0.86)",
+        "v": "Altura*0.86"
+       },
+       {
+        "u": "1*(Comprimento/2 - Altura*1.4*0.86) + 0.000697",
+        "v": "Altura*0.86 + 0.000977"
+       },
+       {
+        "u": "1*(Comprimento/2 - Altura*1.4*0.22) + 0.000697",
+        "v": "Altura*0.22 + 0.000977"
+       }
+      ],
+      "offset": "-Largura/2 + Largura*0.12",
+      "depth": "Largura*0.76"
+     }
+    }
+   }
+  ]
+ },
+ "types": [
+  {
+   "name": "Tacha bidirecional 10 x 10 cm",
+   "values": {},
+   "info": {
+    "description": "Tacha refletiva bidirecional de resina amarela, 10 x 10 cm e 1,8 cm de altura, com um refletor em cada face inclinada (para os dois sentidos do trânsito ao longo de Y)"
+   }
+  },
+  {
+   "name": "Tachão bidirecional 15 x 25 cm",
+   "values": {
+    "Largura": 0.15,
+    "Comprimento": 0.25,
+    "Altura": 0.046
+   },
+   "info": {
+    "description": "Tachão refletivo bidirecional de resina amarela, 15 x 25 cm e 4,6 cm de altura, para canalização e divisão de fluxos"
+   }
+  }
+ ],
+ "materials": [
+  {
+   "name": "Resina amarela",
+   "color": [
+    240,
+    184,
+    24
+   ],
+   "class": "Plastic",
+   "finish": "Satin"
+  },
+  {
+   "name": "Refletivo",
+   "color": [
+    236,
+    236,
+    228
+   ],
+   "class": "Glass",
+   "finish": "Glossy"
+  }
+ ]
+}

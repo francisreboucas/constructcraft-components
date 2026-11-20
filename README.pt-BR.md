@@ -40,6 +40,7 @@ Cada arquivo traz um componente com vários tipos (tamanhos). Os tipos compartil
 | [`doors`](components/doors) | Portas de abrir de uma e duas folhas, pivotante, camarão, de vidro temperado, de correr simples e dupla, porta-janela de correr e portão basculante |
 | [`windows`](components/windows) | Janelas de correr (também com veneziana), de abrir, maxim-ar, basculante e fixa |
 | [`vehicles`](components/vehicles) | Motocicleta custom (cruiser), com guidão que esterça e descanso lateral que recolhe |
+| [`site`](components/site) | Elementos de piso externo: vagas de estacionamento (também oblíquas, PcD e de moto), legenda PARE com linha de retenção, legendas no piso, velocidade máxima, setas direcionais, faixas de pedestres, Dê a preferência, símbolos de bicicleta e de acesso, áreas zebradas, lombadas, batentes de roda e tachas refletivas. Toda palavra pintada (número da vaga, PARE, ESCOLA, 40 km/h…) é um parâmetro de texto que cada elemento posicionado pode mudar |
 
 As louças trazem as unidades Hunter de contribuição (NBR 8160) e os pesos relativos (NBR 5626), e os dispositivos elétricos o tipo e a potência em VA (NBR 5410), para o ConstructCraft dimensionar tubulações e circuitos.
 
@@ -58,9 +59,11 @@ Cada componente tem uma miniatura de 360x240 em [`thumbnails/`](thumbnails), des
 
 As fontes de paisagismo são geradas: [`tools/vegetation.py`](tools/vegetation.py) cria cada espécie como malha (galhos por colonização do espaço, massas de folhas, frondes de palmeira) e escreve `sources/planting/`. Altere o gerador e rode-o antes do `build.py`, não o JSON.
 
+As fontes de área externa também são geradas: [`tools/site.py`](tools/site.py) escreve `sources/site/` a partir dos scripts Lua de [`tools/site/`](tools/site). O texto pintado vem de uma tabela de glifos da IBM Plex Sans Condensed Bold (SIL OFL 1.1), triangulada por `tools/site/fonte.py`, e por isso continua editável no ConstructCraft. O `.ccomp` guarda só números por tipo: textos e escolhas são do componente e mudam em cada elemento posicionado.
+
 ## Compatibilidade
 
-Formato `.ccomp` versão 1, gerado com o ConstructCraft 0.12.0. Os componentes detalhados (peças por nível de detalhe, formas Blend e Sweep), que são todos menos os de paisagismo, exigem o ConstructCraft 0.12.0; os de paisagismo abrem no ConstructCraft 0.6.0 ou mais recente. A dianteira esterçável e o descanso lateral da motocicleta são peças em script Lua; o visualizador web as mostra como o ConstructCraft as gerou ([`tools/scripted.py`](tools/scripted.py)).
+Formato `.ccomp` versão 1, gerado com o ConstructCraft 0.12.0. Os componentes detalhados (peças por nível de detalhe, formas Blend e Sweep), que são todos menos os de paisagismo, exigem o ConstructCraft 0.12.0; os de paisagismo abrem no ConstructCraft 0.6.0 ou mais recente. A dianteira esterçável e o descanso lateral da motocicleta, e as marcações de piso externo, são peças em script Lua; o visualizador web as mostra como o ConstructCraft as gerou ([`tools/scripted.py`](tools/scripted.py)).
 
 ## Licença
 

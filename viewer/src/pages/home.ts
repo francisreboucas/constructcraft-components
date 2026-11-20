@@ -47,6 +47,7 @@ const COVERS: Record<FolderId, string> = {
   doors: 'porta-abrir',
   windows: 'janela-veneziana',
   vehicles: 'moto-custom',
+  site: 'vaga-pcd',
 };
 
 function link(className: string, text: string, href: string): HTMLAnchorElement {

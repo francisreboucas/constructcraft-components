@@ -3,7 +3,7 @@
 [![Validate](https://github.com/francisreboucas/constructcraft-components/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/francisreboucas/constructcraft-components/actions/workflows/validate.yml)
 [![License: CC BY 4.0](https://img.shields.io/badge/license-CC_BY_4.0-lightgrey.svg)](LICENSE)
 
-3D CraftHouse is the free library of parametric components for [ConstructCraft](https://github.com/francisreboucas/constructcraft): furniture, casework, plumbing fixtures, electrical devices, lighting and planting, ready to load into any project.
+3D CraftHouse is the free library of parametric components for [ConstructCraft](https://github.com/francisreboucas/constructcraft): furniture, casework, plumbing fixtures, electrical devices, lighting, planting and outdoor floor markings, ready to load into any project.
 
 [Português (Brasil)](README.pt-BR.md) · [Viewer](https://3dcrafthouse.constructcraft.net/) · [Catalog](CATALOG.md) · [Contributing](CONTRIBUTING.md)
 
@@ -40,6 +40,7 @@ Each file holds one component with several types (sizes). Types share the geomet
 | [`doors`](components/doors) | Single and double swing, pivot, folding, glass and sliding doors, glazed sliding doors, garage doors |
 | [`windows`](components/windows) | Sliding (also with shutters), casement, awning, hopper and fixed windows |
 | [`vehicles`](components/vehicles) | A custom (cruiser) motorcycle, with the handlebar that steers and the side stand that folds |
+| [`site`](components/site) | Outdoor floor elements: parking spaces (also angled, accessible and motorcycle), PARE legends with stop lines, floor legends, speed limits, lane arrows, pedestrian crossings, give-way triangles, bicycle and access symbols, hatched no-parking areas, speed humps, wheel stops and road studs. Every painted word (a space's number, PARE, ESCOLA, 40 km/h…) is a text parameter each placed element can change |
 
 Plumbing fixtures carry their drainage fixture units (NBR 8160) and supply weights (NBR 5626), and electrical devices their device kind and load in VA (NBR 5410), so ConstructCraft sizes pipes and circuits with them. Names and descriptions are in Brazilian Portuguese, following the standards they cite.
 
@@ -58,9 +59,11 @@ Each component has a 360x240 thumbnail in [`thumbnails/`](thumbnails), drawn by 
 
 The planting sources are generated: [`tools/vegetation.py`](tools/vegetation.py) grows each species as a mesh (branches by space colonization, foliage clumps, palm fronds) and writes `sources/planting/`. Edit the generator and run it before `build.py`, not the JSON.
 
+The outdoor floor sources are generated too: [`tools/site.py`](tools/site.py) writes `sources/site/` from the Lua scripts in [`tools/site/`](tools/site). Painted text is drawn from a glyph table of IBM Plex Sans Condensed Bold (SIL OFL 1.1), triangulated by `tools/site/fonte.py`, so the text stays editable in ConstructCraft. A `.ccomp` keeps only numbers per type: texts and choices belong to the component and are changed per placed element.
+
 ## Compatibility
 
-`.ccomp` format version 1, built with ConstructCraft 0.12.0. The detailed components (pieces shown by detail level, Blend and Sweep shapes), which are all but the planting ones, need ConstructCraft 0.12.0; the planting components load in ConstructCraft 0.6.0 and later. The motorcycle's steered front end and side stand are pieces scripted in Lua; the web viewer shows them as ConstructCraft baked them ([`tools/scripted.py`](tools/scripted.py)).
+`.ccomp` format version 1, built with ConstructCraft 0.12.0. The detailed components (pieces shown by detail level, Blend and Sweep shapes), which are all but the planting ones, need ConstructCraft 0.12.0; the planting components load in ConstructCraft 0.6.0 and later. The motorcycle's steered front end and side stand, and the outdoor floor markings, are pieces scripted in Lua; the web viewer shows them as ConstructCraft baked them ([`tools/scripted.py`](tools/scripted.py)).
 
 ## License
 

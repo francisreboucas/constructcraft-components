@@ -1,0 +1,160 @@
+{
+ "component": "Faixa de pedestres",
+ "def": {
+  "kind": "Generic",
+  "params": [
+   {
+    "name": "Tipo",
+    "value": 0.0,
+    "kind": "Choice",
+    "instance": true,
+    "label": "Tipo",
+    "from_script": true,
+    "text": "zebrada",
+    "choices": [
+     {
+      "key": "zebrada",
+      "label": "Zebrada (FTP-1)"
+     },
+     {
+      "key": "paralela",
+      "label": "Paralela (FTP-2)"
+     }
+    ]
+   },
+   {
+    "name": "LarguraVia",
+    "value": 7.0,
+    "kind": "Length",
+    "instance": false,
+    "label": "Largura da via",
+    "from_script": true
+   },
+   {
+    "name": "LarguraFaixa",
+    "value": 4.0,
+    "kind": "Length",
+    "instance": false,
+    "label": "Largura da faixa (no sentido da travessia)",
+    "from_script": true
+   },
+   {
+    "name": "LarguraBarra",
+    "value": 0.4,
+    "kind": "Length",
+    "instance": false,
+    "label": "Largura das barras",
+    "from_script": true
+   },
+   {
+    "name": "Espacamento",
+    "value": 0.6,
+    "kind": "Length",
+    "instance": false,
+    "label": "Espaço entre as barras",
+    "from_script": true
+   },
+   {
+    "name": "LinhasRetencao",
+    "value": 0.0,
+    "kind": "Boolean",
+    "instance": true,
+    "label": "Linha de retenção",
+    "from_script": true
+   },
+   {
+    "name": "RetencaoDosDoisLados",
+    "value": 1.0,
+    "kind": "Boolean",
+    "instance": true,
+    "label": "Retenção dos dois lados (mão dupla)",
+    "from_script": true
+   },
+   {
+    "name": "DistanciaRetencao",
+    "value": 1.6,
+    "kind": "Length",
+    "instance": false,
+    "label": "Distância da linha de retenção à faixa",
+    "from_script": true
+   },
+   {
+    "name": "LarguraRetencao",
+    "value": 0.4,
+    "kind": "Length",
+    "instance": false,
+    "label": "Largura da linha de retenção",
+    "from_script": true
+   },
+   {
+    "name": "Pintura",
+    "value": 0.0,
+    "kind": "Material",
+    "instance": false,
+    "label": "Pintura (vazio: a da peça)",
+    "from_script": true
+   }
+  ],
+  "items": [
+   {
+    "name": "Pintura (script)",
+    "material": "Tinta viária branca",
+    "in_plan": true,
+    "shape": {
+     "Script": {
+      "source": "-- Faixa de pedestres: floor marking scripted by tools/site.py from tools/site/lib.lua and\n-- tools/site/componentes.lua; edit those, not this text.\n-- Shared by the floor markings of sources/site/: painted figures and text as\n-- thin solids lying on the floor. Generated into each component by tools/site.py.\n\nlocal floor, abs, sqrt, cos, sin, rad, min, max = math.floor, math.abs, math.sqrt, math.cos, math.sin, math.rad, math.min, math.max\nlocal byte, sub = string.byte, string.sub\n\n-- Figures (glyphs, pictograms, arrows) are strings of base 64 pairs: see tools/site/fonte.py.\nlocal B64 = {}\ndo\n  local alphabet = \"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/\"\n  for i = 1, 64 do B64[byte(alphabet, i)] = i - 1 end\nend\n\nlocal function decode(s)\n  local n, pos = #s, 1\n  local function nxt()\n    local a, b = byte(s, pos, pos + 1)\n    pos = pos + 2\n    return B64[a] * 64 + B64[b] - 1024\n  end\n  local fig = { advance = nxt(), rings = {}, tris = {} }\n  local count = nxt()\n  local sizes = {}\n  for i = 1, count do sizes[i] = nxt() end\n  local xmin, xmax, ymin, ymax = 1e9, -1e9, 1e9, -1e9\n  for i = 1, count do\n    local ring = {}\n    for k = 1, sizes[i] do\n      local x, y = nxt(), nxt()\n      ring[#ring + 1] = x; ring[#ring + 1] = y\n      if x < xmin then xmin = x end; if x > xmax then xmax = x end\n      if y < ymin then ymin = y end; if y > ymax then ymax = y end\n    end\n    fig.rings[i] = ring\n  end\n  local nt = nxt()\n  for i = 1, nt * 3 do fig.tris[i] = nxt() end\n  fig.xmin, fig.xmax, fig.ymin, fig.ymax = xmin, xmax, ymin, ymax\n  if count == 0 then fig.xmin, fig.xmax, fig.ymin, fig.ymax = 0, 0, 0, 0 end\n  return fig\nend\n\n-- A mesh that figures are added to; `piece` returns it as one mesh piece.\nlocal function new_mesh()\n  local m = { v = {}, f = {}, empty = true }\n  -- Adds `fig` as a prism from z to z + h, its points (x, y) going to T(x, y).\n  function m.figure(fig, T, z, h, flip)\n    if #fig.rings == 0 then return end\n    m.empty = false\n    local v, f = m.v, m.f\n    local base = #v -- vertex numbers from base + 1\n    local pts = 0\n    local bottom, top = {}, {}\n    for _, ring in ipairs(fig.rings) do\n      for k = 1, #ring, 2 do\n        local x, y = T(ring[k], ring[k + 1])\n        pts = pts + 1\n        v[#v + 1] = { x, y, z }\n      end\n    end\n    for i = 1, pts do\n      local p = v[base + i]\n      v[#v + 1] = { p[1], p[2], z + h }\n    end\n    local tris = fig.tris\n    for i = 1, #tris, 3 do\n      local a, b, c = base + tris[i] + 1, base + tris[i + 1] + 1, base + tris[i + 2] + 1\n      if flip then b, c = c, b end\n      f[#f + 1] = { a + pts, b + pts, c + pts } -- top, counter-clockwise from above\n      f[#f + 1] = { a, c, b } -- bottom\n    end\n    local first = base\n    for _, ring in ipairs(fig.rings) do\n      local n = floor(#ring / 2)\n      for k = 0, n - 1 do\n        local a, b = first + k + 1, first + (k + 1) % n + 1\n        if flip then a, b = b, a end\n        f[#f + 1] = { a, b, b + pts, a + pts }\n      end\n      first = first + n\n    end\n  end\n  function m.piece(opts)\n    if m.empty then return nil end\n    local p = mesh { vertices = m.v, faces = m.f }\n    if opts then for k, val in pairs(opts) do p[k] = val end end\n    return p\n  end\n  return m\nend\n\n-- An affine map of figure units: scale (sx, sy), turn by `ang` degrees, move to (x0, y0).\nlocal function transform(x0, y0, sx, sy, ang, ox, oy)\n  local c, s = cos(rad(ang or 0)), sin(rad(ang or 0))\n  ox, oy = ox or 0, oy or 0\n  return function(x, y)\n    local u, w = (x - ox) * sx, (y - oy) * sy\n    return x0 + u * c - w * s, y0 + u * s + w * c\n  end\nend\n\n-- --- text -----------------------------------------------------------------------\n\nlocal glyph_cache = {}\nlocal function glyph(code)\n  local g = glyph_cache[code]\n  if g == nil then\n    local data = FONTE.glyphs[code]\n    g = data and decode(data) or false\n    glyph_cache[code] = g\n  end\n  return g or nil\nend\n\n-- The code points of a UTF-8 string (invalid bytes are skipped).\nlocal function codepoints(s)\n  local out, i, n = {}, 1, #s\n  while i <= n do\n    local c = byte(s, i)\n    local cp, len\n    if c < 0x80 then cp, len = c, 1\n    elseif c >= 0xC2 and c < 0xE0 then cp, len = c - 0xC0, 2\n    elseif c >= 0xE0 and c < 0xF0 then cp, len = c - 0xE0, 3\n    elseif c >= 0xF0 and c < 0xF5 then cp, len = c - 0xF0, 4\n    else cp, len = nil, 1 end\n    if cp and i + len - 1 <= n then\n      for k = 1, len - 1 do\n        local cc = byte(s, i + k)\n        if cc < 0x80 or cc > 0xBF then cp = nil; break end\n        cp = cp * 64 + (cc - 0x80)\n      end\n    else cp = nil end\n    if cp then out[#out + 1] = cp end\n    i = i + len\n  end\n  return out\nend\n\n-- Look-alikes for characters the font table lacks.\nlocal FALLBACK = { [0x2014] = 0x2013, [0x2010] = 45, [0x2011] = 45, [0x2212] = 45, [0x2018] = 39, [0x2019] = 39,\n  [0x201C] = 34, [0x201D] = 34, [0xA0] = 32, [0x2022] = 42, [0xB7] = 46 }\n\n-- Lays a line of text out on the floor and adds it to mesh `m`.\n-- o: x, y (the anchor), ang (degrees, the reading direction from +x), altura (the capital\n-- height, along the letters), largura (the width of an H; the other letters follow),\n-- espaco (extra space between letters), z, h (the paint's thickness), alinha (\"centro\",\n-- \"esquerda\" or \"direita\", where the anchor falls along the line) and base (\"centro\":\n-- the anchor halfway up the capitals, or \"linha\": on the baseline).\n-- Returns the width of the ink, or 0 for an empty text.\nlocal function layout(s, o)\n  local sy = (o.altura or 1) / FONTE.cap\n  local sx = (o.largura or (o.altura or 1) * FONTE.h_width / FONTE.cap) / FONTE.h_width\n  local gap = (o.espaco or 0) / sx\n  local items, pen = {}, 0\n  local ink0, ink1 = nil, nil\n  for _, cp in ipairs(codepoints(s or \"\")) do\n    if cp == 32 or cp == 9 or cp == 0xA0 then\n      pen = pen + FONTE.space + gap\n    else\n      local g = glyph(cp) or glyph(FALLBACK[cp] or 63)\n      if g then\n        items[#items + 1] = { g, pen }\n        if #g.rings > 0 then\n          local a, b = pen + g.xmin, pen + g.xmax\n          if ink0 == nil or a < ink0 then ink0 = a end\n          if ink1 == nil or b > ink1 then ink1 = b end\n        end\n        pen = pen + g.advance + gap\n      end\n    end\n  end\n  return items, ink0, ink1, sx, sy\nend\n\n-- The width of the ink of a line of text laid out with `o` (see `text`).\nlocal function text_width(s, o)\n  local _, ink0, ink1, sx = layout(s, o)\n  if ink0 == nil then return 0 end\n  return (ink1 - ink0) * sx\nend\n\n-- `o` with its letters narrowed (and their spacing) so the text is at most `limit` wide.\nlocal function fit(s, o, limit)\n  local w = text_width(s, o)\n  if limit and limit > 0 and w > limit then\n    local k = limit / w\n    local q = {}\n    for key, val in pairs(o) do q[key] = val end\n    q.largura = (o.largura or (o.altura or 1) * FONTE.h_width / FONTE.cap) * k\n    q.espaco = (o.espaco or 0) * k\n    return q\n  end\n  return o\nend\n\nlocal function text(m, s, o)\n  local items, ink0, ink1, sx, sy = layout(s, o)\n  if ink0 == nil then return 0 end\n  local width = ink1 - ink0\n  local start = ink0 + width / 2\n  if o.alinha == \"esquerda\" then start = ink0 elseif o.alinha == \"direita\" then start = ink1 end\n  local base = (o.base == \"linha\") and 0 or FONTE.cap / 2\n  for _, it in ipairs(items) do\n    local g, at = it[1], it[2]\n    m.figure(g, transform(o.x or 0, o.y or 0, sx, sy, o.ang or 0, start - at, base), o.z or 0, o.h or 0.003)\n  end\n  return width * sx\nend\n\n-- --- simple shapes -------------------------------------------------------------------\n\n-- A painted strip from (ax, ay) to (bx, by), w wide, as an extrusion.\nlocal function strip(ax, ay, bx, by, w, z, h, opts)\n  local dx, dy = bx - ax, by - ay\n  local l = sqrt(dx * dx + dy * dy)\n  if l < 1e-9 or w <= 0 then return nil end\n  local nx, ny = -dy / l * w / 2, dx / l * w / 2\n  local p = extrusion { points = { { ax + nx, ay + ny }, { ax - nx, ay - ny }, { bx - nx, by - ny }, { bx + nx, by + ny } }, z = z, height = h }\n  if opts then for k, val in pairs(opts) do p[k] = val end end\n  return p\nend\n\n-- A painted rectangle between x0..x1 and y0..y1.\nlocal function rect(x0, y0, x1, y1, z, h, opts)\n  if x1 - x0 <= 1e-9 or y1 - y0 <= 1e-9 then return nil end\n  local p = box { x0, y0, z, x1 - x0, y1 - y0, h }\n  if opts then for k, val in pairs(opts) do p[k] = val end end\n  return p\nend\n\n-- The part of the convex polygon `poly` ({{x, y}, ...}, counter-clockwise) on the left of a -> b.\nlocal function clip_half(poly, ax, ay, bx, by)\n  local out = {}\n  local n = #poly\n  if n == 0 then return out end\n  local function side(p) return (bx - ax) * (p[2] - ay) - (by - ay) * (p[1] - ax) end\n  for i = 1, n do\n    local p, q = poly[i], poly[i % n + 1]\n    local sp, sq = side(p), side(q)\n    if sp >= 0 then out[#out + 1] = p end\n    if (sp >= 0) ~= (sq >= 0) then\n      local t = sp / (sp - sq)\n      out[#out + 1] = { p[1] + (q[1] - p[1]) * t, p[2] + (q[2] - p[2]) * t }\n    end\n  end\n  return out\nend\n\n-- `poly` clipped to the convex polygon `region` (both counter-clockwise).\nlocal function clip(poly, region)\n  local out = poly\n  for i = 1, #region do\n    local a, b = region[i], region[i % #region + 1]\n    out = clip_half(out, a[1], a[2], b[1], b[2])\n    if #out < 3 then return {} end\n  end\n  return out\nend\n\nlocal function area(poly)\n  local s = 0\n  for i = 1, #poly do\n    local p, q = poly[i], poly[i % #poly + 1]\n    s = s + p[1] * q[2] - q[1] * p[2]\n  end\n  return s / 2\nend\n\n-- Parallel bands across the convex `region`, turned `ang` degrees from +x, `w` wide every\n-- `step` (centre to centre), one band centred on (cx, cy). Returns the band polygons.\nlocal function hatch(region, ang, w, step, cx, cy)\n  local c, s = cos(rad(ang)), sin(rad(ang))\n  local nx, ny = -s, c -- across the bands\n  local lo, hi, far = 1e9, -1e9, 0\n  for _, p in ipairs(region) do\n    local d = (p[1] - cx) * nx + (p[2] - cy) * ny\n    lo, hi = min(lo, d), max(hi, d)\n    far = max(far, abs(p[1] - cx) + abs(p[2] - cy))\n  end\n  local out = {}\n  local k0, k1 = floor(lo / step) - 1, floor(hi / step) + 1\n  for k = k0, k1 do\n    local d0, d1 = k * step - w / 2, k * step + w / 2\n    local L = far + 1\n    local band = {\n      { cx + nx * d0 - c * L, cy + ny * d0 - s * L },\n      { cx + nx * d0 + c * L, cy + ny * d0 + s * L },\n      { cx + nx * d1 + c * L, cy + ny * d1 + s * L },\n      { cx + nx * d1 - c * L, cy + ny * d1 - s * L },\n    }\n    if area(band) < 0 then band = { band[4], band[3], band[2], band[1] } end\n    local piece = clip(band, region)\n    if #piece >= 3 and abs(area(piece)) > 1e-5 then out[#out + 1] = piece end\n  end\n  return out\nend\n\nlocal function prism(poly, z, h, opts)\n  if #poly < 3 then return nil end\n  local p = extrusion { points = poly, z = z, height = h }\n  if opts then for k, val in pairs(opts) do p[k] = val end end\n  return p\nend\n\n-- Appends the pieces of `more` (skipping nils) to `list`.\nlocal function add(list, ...)\n  for i = 1, select(\"#\", ...) do\n    local p = select(i, ...)\n    if p then list[#list + 1] = p end\n  end\n  return list\nend\n\nparam.choice { \"Tipo\", { { \"zebrada\", \"Zebrada (FTP-1)\" }, { \"paralela\", \"Paralela (FTP-2)\" } }, label = \"Tipo\", default = \"zebrada\", instance = true }\nparam.length { \"LarguraVia\", label = \"Largura da via\", default = 7 }\nparam.length { \"LarguraFaixa\", label = \"Largura da faixa (no sentido da travessia)\", default = 4 }\nparam.length { \"LarguraBarra\", label = \"Largura das barras\", default = 0.4 }\nparam.length { \"Espacamento\", label = \"Espaço entre as barras\", default = 0.6 }\nparam.boolean { \"LinhasRetencao\", label = \"Linha de retenção\", default = false, instance = true }\nparam.boolean { \"RetencaoDosDoisLados\", label = \"Retenção dos dois lados (mão dupla)\", default = true, instance = true }\nparam.length { \"DistanciaRetencao\", label = \"Distância da linha de retenção à faixa\", default = 1.6 }\nparam.length { \"LarguraRetencao\", label = \"Largura da linha de retenção\", default = 0.4 }\nparam.material { \"Pintura\", label = \"Pintura (vazio: a da peça)\" }\n\nlocal THICK = 0.003\n\nfunction geometry(p)\n  local road, band = max(p.LarguraVia, 0.5), max(p.LarguraFaixa, 0.3)\n  local bw, gap = max(p.LarguraBarra, 0.05), max(p.Espacamento, 0.05)\n  local opts = (p.Pintura ~= \"\" and p.Pintura) and { material = p.Pintura } or nil\n  local out = {}\n  if p.Tipo == \"paralela\" then\n    -- Two lines across the road bounding the crossing.\n    add(out, rect(-road / 2, -band / 2, road / 2, -band / 2 + bw, 0, THICK, opts), rect(-road / 2, band / 2 - bw, road / 2, band / 2, 0, THICK, opts))\n  else\n    -- Bars along the traffic, centred across the road.\n    local n = floor((road + gap) / (bw + gap) + 1e-9)\n    local span = n * bw + (n - 1) * gap\n    for i = 0, n - 1 do\n      local x = -span / 2 + i * (bw + gap)\n      add(out, rect(x, -band / 2, x + bw, band / 2, 0, THICK, opts))\n    end\n  end\n  if p.LinhasRetencao then\n    local lw, d = max(p.LarguraRetencao, 0.05), max(p.DistanciaRetencao, 0)\n    add(out, rect(-road / 2, -band / 2 - d - lw, road / 2, -band / 2 - d, 0, THICK, opts))\n    if p.RetencaoDosDoisLados then\n      add(out, rect(-road / 2, band / 2 + d, road / 2, band / 2 + d + lw, 0, THICK, opts))\n    end\n  end\n  return out\nend\n"
+     }
+    }
+   }
+  ]
+ },
+ "types": [
+  {
+   "name": "Faixa de pedestres 4,00 m via 7,00 m",
+   "values": {},
+   "info": {
+    "description": "Faixa de travessia de pedestres zebrada (FTP-1): barras brancas de 0,40 m a cada 1,00 m paralelas ao trânsito, faixa de 4,00 m numa via de 7,00 m; o trânsito corre ao longo de Y; cada faixa pode ser trocada para paralela (FTP-2)"
+   }
+  },
+  {
+   "name": "Faixa de pedestres 3,00 m via 7,00 m",
+   "values": {
+    "LarguraFaixa": 3.0
+   },
+   "info": {
+    "description": "Faixa zebrada de 3,00 m (largura mínima) numa via de 7,00 m"
+   }
+  },
+  {
+   "name": "Faixa de pedestres 4,00 m com retenção",
+   "values": {
+    "LinhasRetencao": true
+   },
+   "info": {
+    "description": "Faixa zebrada de 4,00 m com linhas de retenção de 0,40 m a 1,60 m dos dois lados, via de 7,00 m"
+   }
+  },
+  {
+   "name": "Faixa de pedestres 3,00 m via 3,50 m",
+   "values": {
+    "LarguraVia": 3.5,
+    "LarguraFaixa": 3.0
+   },
+   "info": {
+    "description": "Faixa zebrada de 3,00 m sobre uma única faixa de 3,50 m (estacionamentos e vias locais)"
+   }
+  }
+ ],
+ "materials": [
+  {
+   "name": "Tinta viária branca",
+   "color": [
+    244,
+    244,
+    238
+   ],
+   "class": "Paint",
+   "finish": "Matte"
+  }
+ ]
+}

@@ -1,0 +1,254 @@
+(
+  format_version: 1,
+  generator: "ConstructCraft 0.12.0",
+  component: "Tacha refletiva",
+  def: (
+    kind: Generic,
+    params: [
+      (
+        name: "Largura",
+        value: 0.1,
+        kind: Length,
+        instance: false,
+      ),
+      (
+        name: "Comprimento",
+        value: 0.1,
+        kind: Length,
+        instance: false,
+      ),
+      (
+        name: "Altura",
+        value: 0.018,
+        kind: Length,
+        instance: false,
+      ),
+    ],
+    items: [
+      (
+        name: "Corpo",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-Comprimento/2",
+              v: "0",
+            ),
+            (
+              u: "Comprimento/2",
+              v: "0",
+            ),
+            (
+              u: "Comprimento/2 - Altura*1.4",
+              v: "Altura",
+            ),
+            (
+              u: "-Comprimento/2 + Altura*1.4",
+              v: "Altura",
+            ),
+          ],
+          offset: "-Largura/2",
+          depth: "Largura",
+        ),
+        material: "Resina amarela",
+        in_plan: true,
+      ),
+      (
+        name: "Refletor da frente",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-1*(Comprimento/2 - Altura*1.4*0.22)",
+              v: "Altura*0.22",
+            ),
+            (
+              u: "-1*(Comprimento/2 - Altura*1.4*0.86)",
+              v: "Altura*0.86",
+            ),
+            (
+              u: "-1*(Comprimento/2 - Altura*1.4*0.86) + -0.000697",
+              v: "Altura*0.86 + 0.000977",
+            ),
+            (
+              u: "-1*(Comprimento/2 - Altura*1.4*0.22) + -0.000697",
+              v: "Altura*0.22 + 0.000977",
+            ),
+          ],
+          offset: "-Largura/2 + Largura*0.12",
+          depth: "Largura*0.76",
+        ),
+        material: "Refletivo",
+        in_plan: false,
+      ),
+      (
+        name: "Refletor de trás",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "1*(Comprimento/2 - Altura*1.4*0.22)",
+              v: "Altura*0.22",
+            ),
+            (
+              u: "1*(Comprimento/2 - Altura*1.4*0.86)",
+              v: "Altura*0.86",
+            ),
+            (
+              u: "1*(Comprimento/2 - Altura*1.4*0.86) + 0.000697",
+              v: "Altura*0.86 + 0.000977",
+            ),
+            (
+              u: "1*(Comprimento/2 - Altura*1.4*0.22) + 0.000697",
+              v: "Altura*0.22 + 0.000977",
+            ),
+          ],
+          offset: "-Largura/2 + Largura*0.12",
+          depth: "Largura*0.76",
+        ),
+        material: "Refletivo",
+        in_plan: false,
+      ),
+    ],
+  ),
+  types: [
+    (
+      name: "Tacha bidirecional 10 x 10 cm",
+      values: {
+        "Altura": 0.018,
+        "Comprimento": 0.1,
+        "Largura": 0.1,
+      },
+      info: (
+        type_mark: "",
+        description: "Tacha refletiva bidirecional de resina amarela, 10 x 10 cm e 1,8 cm de altura, com um refletor em cada face inclinada (para os dois sentidos do trânsito ao longo de Y)",
+        manufacturer: "",
+        model: "",
+        url: "",
+        keynote: "",
+        classification: "",
+        fire_rating: "",
+        comments: "",
+        cost: None,
+      ),
+    ),
+    (
+      name: "Tachão bidirecional 15 x 25 cm",
+      values: {
+        "Altura": 0.046,
+        "Comprimento": 0.25,
+        "Largura": 0.15,
+      },
+      info: (
+        type_mark: "",
+        description: "Tachão refletivo bidirecional de resina amarela, 15 x 25 cm e 4,6 cm de altura, para canalização e divisão de fluxos",
+        manufacturer: "",
+        model: "",
+        url: "",
+        keynote: "",
+        classification: "",
+        fire_rating: "",
+        comments: "",
+        cost: None,
+      ),
+    ),
+  ],
+  materials: [
+    (
+      name: "Resina amarela",
+      color: (240, 184, 24),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (240, 184, 24),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Refletivo",
+      color: (236, 236, 228),
+      identity: (
+        description: "",
+        class: Glass,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (236, 236, 228),
+        finish: Glossy,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+  ],
+)

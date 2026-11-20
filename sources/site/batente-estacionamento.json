@@ -1,0 +1,241 @@
+{
+ "component": "Batente de estacionamento",
+ "def": {
+  "kind": "Generic",
+  "params": [
+   {
+    "name": "Comprimento",
+    "value": 0.5,
+    "kind": "Length",
+    "instance": false
+   },
+   {
+    "name": "Largura",
+    "value": 0.15,
+    "kind": "Length",
+    "instance": false
+   },
+   {
+    "name": "Altura",
+    "value": 0.1,
+    "kind": "Length",
+    "instance": false
+   }
+  ],
+  "items": [
+   {
+    "name": "Corpo",
+    "material": "Borracha preta",
+    "in_plan": true,
+    "shape": {
+     "Profile": {
+      "plane": "Side",
+      "points": [
+       {
+        "u": "-Largura/2 - 0",
+        "v": "0"
+       },
+       {
+        "u": "Largura/2 + 0",
+        "v": "0"
+       },
+       {
+        "u": "Largura*0.28 + 0",
+        "v": "Altura*0.97 + 0",
+        "radius": "Largura*1.6"
+       },
+       {
+        "u": "-Largura*0.28 - 0",
+        "v": "Altura*0.97 + 0"
+       }
+      ],
+      "offset": "-Comprimento/2",
+      "depth": "Comprimento"
+     }
+    }
+   },
+   {
+    "name": "Faixa refletiva 1",
+    "material": "Tinta viária amarela",
+    "in_plan": true,
+    "shape": {
+     "Profile": {
+      "plane": "Side",
+      "points": [
+       {
+        "u": "-Largura/2 - 0.0015",
+        "v": "0"
+       },
+       {
+        "u": "Largura/2 + 0.0015",
+        "v": "0"
+       },
+       {
+        "u": "Largura*0.28 + 0.0015",
+        "v": "Altura*0.97 + 0.0015",
+        "radius": "Largura*1.6"
+       },
+       {
+        "u": "-Largura*0.28 - 0.0015",
+        "v": "Altura*0.97 + 0.0015"
+       }
+      ],
+      "offset": "-Comprimento/4 - Comprimento*0.09",
+      "depth": "Comprimento*0.18"
+     }
+    }
+   },
+   {
+    "name": "Faixa refletiva 2",
+    "material": "Tinta viária amarela",
+    "in_plan": true,
+    "shape": {
+     "Profile": {
+      "plane": "Side",
+      "points": [
+       {
+        "u": "-Largura/2 - 0.0015",
+        "v": "0"
+       },
+       {
+        "u": "Largura/2 + 0.0015",
+        "v": "0"
+       },
+       {
+        "u": "Largura*0.28 + 0.0015",
+        "v": "Altura*0.97 + 0.0015",
+        "radius": "Largura*1.6"
+       },
+       {
+        "u": "-Largura*0.28 - 0.0015",
+        "v": "Altura*0.97 + 0.0015"
+       }
+      ],
+      "offset": "Comprimento/4 - Comprimento*0.09",
+      "depth": "Comprimento*0.18"
+     }
+    }
+   },
+   {
+    "name": "Furo do chumbador 1",
+    "material": "",
+    "in_plan": true,
+    "shape": {
+     "Cylinder": {
+      "x": "-(Comprimento/2 - 0.065)",
+      "y": "0",
+      "z": "-0.01",
+      "radius": "0.011",
+      "height": "Altura + 0.05"
+     }
+    },
+    "void": true
+   },
+   {
+    "name": "Rebaixo do chumbador 1",
+    "material": "",
+    "in_plan": true,
+    "shape": {
+     "Cylinder": {
+      "x": "-(Comprimento/2 - 0.065)",
+      "y": "0",
+      "z": "Altura*0.55",
+      "radius": "0.021",
+      "height": "Altura"
+     }
+    },
+    "void": true
+   },
+   {
+    "name": "Furo do chumbador 2",
+    "material": "",
+    "in_plan": true,
+    "shape": {
+     "Cylinder": {
+      "x": "(Comprimento/2 - 0.065)",
+      "y": "0",
+      "z": "-0.01",
+      "radius": "0.011",
+      "height": "Altura + 0.05"
+     }
+    },
+    "void": true
+   },
+   {
+    "name": "Rebaixo do chumbador 2",
+    "material": "",
+    "in_plan": true,
+    "shape": {
+     "Cylinder": {
+      "x": "(Comprimento/2 - 0.065)",
+      "y": "0",
+      "z": "Altura*0.55",
+      "radius": "0.021",
+      "height": "Altura"
+     }
+    },
+    "void": true
+   }
+  ]
+ },
+ "types": [
+  {
+   "name": "Batente borracha 50 cm",
+   "values": {},
+   "info": {
+    "description": "Batente (trava) de roda de borracha para estacionamento, 50 x 15 x 10 cm, com duas faixas refletivas amarelas e dois furos rebaixados para chumbadores; o comprimento corre ao longo de X, o veículo chega por -Y"
+   }
+  },
+  {
+   "name": "Batente borracha 60 cm",
+   "values": {
+    "Comprimento": 0.6
+   },
+   "info": {
+    "description": "Batente de roda de borracha de 60 x 15 x 10 cm"
+   }
+  },
+  {
+   "name": "Batente borracha 1,00 m",
+   "values": {
+    "Comprimento": 1.0
+   },
+   "info": {
+    "description": "Batente de roda de borracha de 1,00 m x 15 x 10 cm, para as duas rodas de motos ou carrinhos"
+   }
+  },
+  {
+   "name": "Batente borracha 1,80 m",
+   "values": {
+    "Comprimento": 1.8,
+    "Largura": 0.18,
+    "Altura": 0.12
+   },
+   "info": {
+    "description": "Batente contínuo de borracha de 1,80 m x 18 x 12 cm, para as duas rodas do carro"
+   }
+  }
+ ],
+ "materials": [
+  {
+   "name": "Tinta viária amarela",
+   "color": [
+    246,
+    186,
+    18
+   ],
+   "class": "Paint",
+   "finish": "Matte"
+  },
+  {
+   "name": "Borracha preta",
+   "color": [
+    34,
+    34,
+    36
+   ],
+   "class": "Plastic",
+   "finish": "Matte"
+  }
+ ]
+}
