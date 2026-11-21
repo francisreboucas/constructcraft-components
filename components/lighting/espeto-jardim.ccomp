@@ -1,0 +1,660 @@
+(
+  format_version: 1,
+  generator: "ConstructCraft 0.12.0",
+  component: "Espeto de jardim",
+  def: (
+    kind: Lighting,
+    params: [
+      (
+        name: "Inclinacao",
+        value: 60.0,
+        kind: Angle,
+        instance: false,
+      ),
+    ],
+    items: [
+      (
+        name: "Espeto simplificado",
+        shape: Box(
+          x: "-0.04",
+          y: "-0.06",
+          z: "0",
+          width: "0.08",
+          depth: "0.16",
+          height: "0.22",
+        ),
+        material: "Aço pintado preto",
+        in_plan: true,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
+      ),
+      (
+        name: "Espeto",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "0",
+              v: "-0.2",
+            ),
+            (
+              u: "0.012",
+              v: "-0.03",
+            ),
+            (
+              u: "0.016",
+              v: "0",
+            ),
+            (
+              u: "0",
+              v: "0",
+            ),
+          ],
+          offset: "0",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Haste",
+        shape: Cylinder(
+          x: "0",
+          y: "0",
+          z: "0",
+          radius: "0.012",
+          height: "0.09",
+        ),
+        material: "Aço pintado preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Articulação",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "0 - 0.016",
+              v: "0.1",
+              radius: "0.016",
+            ),
+            (
+              u: "0 + 0.016",
+              v: "0.1",
+              radius: "0.016",
+            ),
+          ],
+          offset: "-0.018",
+          depth: "0.036",
+        ),
+        material: "Aço pintado preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Corpo do projetor",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "(-0.04)*cos(Inclinacao) - (-0.034)*sin(Inclinacao)",
+              v: "0.1 + (-0.04)*sin(Inclinacao) + (-0.034)*cos(Inclinacao)",
+            ),
+            (
+              u: "(0.08)*cos(Inclinacao) - (-0.034)*sin(Inclinacao)",
+              v: "0.1 + (0.08)*sin(Inclinacao) + (-0.034)*cos(Inclinacao)",
+            ),
+            (
+              u: "(0.08)*cos(Inclinacao) - (0.034)*sin(Inclinacao)",
+              v: "0.1 + (0.08)*sin(Inclinacao) + (0.034)*cos(Inclinacao)",
+            ),
+            (
+              u: "(-0.04)*cos(Inclinacao) - (0.034)*sin(Inclinacao)",
+              v: "0.1 + (-0.04)*sin(Inclinacao) + (0.034)*cos(Inclinacao)",
+            ),
+          ],
+          offset: "-0.034",
+          depth: "0.068",
+        ),
+        material: "Aço pintado preto",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Aleta de dissipação 1",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "(-0.036)*cos(Inclinacao) - (-0.037)*sin(Inclinacao)",
+              v: "0.1 + (-0.036)*sin(Inclinacao) + (-0.037)*cos(Inclinacao)",
+            ),
+            (
+              u: "(-0.036 + 0.005)*cos(Inclinacao) - (-0.037)*sin(Inclinacao)",
+              v: "0.1 + (-0.036 + 0.005)*sin(Inclinacao) + (-0.037)*cos(Inclinacao)",
+            ),
+            (
+              u: "(-0.036 + 0.005)*cos(Inclinacao) - (0.037)*sin(Inclinacao)",
+              v: "0.1 + (-0.036 + 0.005)*sin(Inclinacao) + (0.037)*cos(Inclinacao)",
+            ),
+            (
+              u: "(-0.036)*cos(Inclinacao) - (0.037)*sin(Inclinacao)",
+              v: "0.1 + (-0.036)*sin(Inclinacao) + (0.037)*cos(Inclinacao)",
+            ),
+          ],
+          offset: "-0.037",
+          depth: "0.074",
+        ),
+        material: "Aço pintado preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Aleta de dissipação 2",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "(-0.022)*cos(Inclinacao) - (-0.037)*sin(Inclinacao)",
+              v: "0.1 + (-0.022)*sin(Inclinacao) + (-0.037)*cos(Inclinacao)",
+            ),
+            (
+              u: "(-0.022 + 0.005)*cos(Inclinacao) - (-0.037)*sin(Inclinacao)",
+              v: "0.1 + (-0.022 + 0.005)*sin(Inclinacao) + (-0.037)*cos(Inclinacao)",
+            ),
+            (
+              u: "(-0.022 + 0.005)*cos(Inclinacao) - (0.037)*sin(Inclinacao)",
+              v: "0.1 + (-0.022 + 0.005)*sin(Inclinacao) + (0.037)*cos(Inclinacao)",
+            ),
+            (
+              u: "(-0.022)*cos(Inclinacao) - (0.037)*sin(Inclinacao)",
+              v: "0.1 + (-0.022)*sin(Inclinacao) + (0.037)*cos(Inclinacao)",
+            ),
+          ],
+          offset: "-0.037",
+          depth: "0.074",
+        ),
+        material: "Aço pintado preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Aleta de dissipação 3",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "(-0.007999999999999997)*cos(Inclinacao) - (-0.037)*sin(Inclinacao)",
+              v: "0.1 + (-0.007999999999999997)*sin(Inclinacao) + (-0.037)*cos(Inclinacao)",
+            ),
+            (
+              u: "(-0.007999999999999997 + 0.005)*cos(Inclinacao) - (-0.037)*sin(Inclinacao)",
+              v: "0.1 + (-0.007999999999999997 + 0.005)*sin(Inclinacao) + (-0.037)*cos(Inclinacao)",
+            ),
+            (
+              u: "(-0.007999999999999997 + 0.005)*cos(Inclinacao) - (0.037)*sin(Inclinacao)",
+              v: "0.1 + (-0.007999999999999997 + 0.005)*sin(Inclinacao) + (0.037)*cos(Inclinacao)",
+            ),
+            (
+              u: "(-0.007999999999999997)*cos(Inclinacao) - (0.037)*sin(Inclinacao)",
+              v: "0.1 + (-0.007999999999999997)*sin(Inclinacao) + (0.037)*cos(Inclinacao)",
+            ),
+          ],
+          offset: "-0.037",
+          depth: "0.074",
+        ),
+        material: "Aço pintado preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Vidro",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "(0.08)*cos(Inclinacao) - (-0.028)*sin(Inclinacao)",
+              v: "0.1 + (0.08)*sin(Inclinacao) + (-0.028)*cos(Inclinacao)",
+            ),
+            (
+              u: "(0.084)*cos(Inclinacao) - (-0.028)*sin(Inclinacao)",
+              v: "0.1 + (0.084)*sin(Inclinacao) + (-0.028)*cos(Inclinacao)",
+            ),
+            (
+              u: "(0.084)*cos(Inclinacao) - (0.028)*sin(Inclinacao)",
+              v: "0.1 + (0.084)*sin(Inclinacao) + (0.028)*cos(Inclinacao)",
+            ),
+            (
+              u: "(0.08)*cos(Inclinacao) - (0.028)*sin(Inclinacao)",
+              v: "0.1 + (0.08)*sin(Inclinacao) + (0.028)*cos(Inclinacao)",
+            ),
+          ],
+          offset: "-0.028",
+          depth: "0.056",
+        ),
+        material: "Difusor opalino",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Aleta antiofuscamento",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "(0.08)*cos(Inclinacao) - (0.03)*sin(Inclinacao)",
+              v: "0.1 + (0.08)*sin(Inclinacao) + (0.03)*cos(Inclinacao)",
+            ),
+            (
+              u: "(0.115)*cos(Inclinacao) - (0.03)*sin(Inclinacao)",
+              v: "0.1 + (0.115)*sin(Inclinacao) + (0.03)*cos(Inclinacao)",
+            ),
+            (
+              u: "(0.115)*cos(Inclinacao) - (0.034)*sin(Inclinacao)",
+              v: "0.1 + (0.115)*sin(Inclinacao) + (0.034)*cos(Inclinacao)",
+            ),
+            (
+              u: "(0.08)*cos(Inclinacao) - (0.034)*sin(Inclinacao)",
+              v: "0.1 + (0.08)*sin(Inclinacao) + (0.034)*cos(Inclinacao)",
+            ),
+          ],
+          offset: "-0.034",
+          depth: "0.068",
+        ),
+        material: "Aço pintado preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "LED",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "(0.074)*cos(Inclinacao) - (-0.012)*sin(Inclinacao)",
+              v: "0.1 + (0.074)*sin(Inclinacao) + (-0.012)*cos(Inclinacao)",
+            ),
+            (
+              u: "(0.078)*cos(Inclinacao) - (-0.012)*sin(Inclinacao)",
+              v: "0.1 + (0.078)*sin(Inclinacao) + (-0.012)*cos(Inclinacao)",
+            ),
+            (
+              u: "(0.078)*cos(Inclinacao) - (0.012)*sin(Inclinacao)",
+              v: "0.1 + (0.078)*sin(Inclinacao) + (0.012)*cos(Inclinacao)",
+            ),
+            (
+              u: "(0.074)*cos(Inclinacao) - (0.012)*sin(Inclinacao)",
+              v: "0.1 + (0.074)*sin(Inclinacao) + (0.012)*cos(Inclinacao)",
+            ),
+          ],
+          offset: "-0.012",
+          depth: "0.024",
+        ),
+        material: "Fita de LED",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Cabo",
+        shape: Cylinder(
+          x: "0.03",
+          y: "0",
+          z: "-0.05",
+          radius: "0.004",
+          height: "0.08",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+    ],
+  ),
+  types: [
+    (
+      name: "Espeto de jardim 60°",
+      values: {
+        "Inclinacao": 60.0,
+      },
+      info: (
+        type_mark: "",
+        description: "Espeto de jardim de alumínio com projetor LED de 7 W, facho de 24°, aleta antiofuscamento e articulação, IP65",
+        manufacturer: "",
+        model: "",
+        url: "",
+        keynote: "",
+        classification: "",
+        fire_rating: "",
+        comments: "",
+        cost: None,
+      ),
+    ),
+    (
+      name: "Espeto de jardim 30°",
+      values: {
+        "Inclinacao": 30.0,
+      },
+      info: (
+        type_mark: "",
+        description: "Espeto de jardim de alumínio com projetor LED de 7 W, facho de 24°, aleta antiofuscamento e articulação, IP65; para fachadas e muros",
+        manufacturer: "",
+        model: "",
+        url: "",
+        keynote: "",
+        classification: "",
+        fire_rating: "",
+        comments: "",
+        cost: None,
+      ),
+    ),
+    (
+      name: "Espeto de jardim 85°",
+      values: {
+        "Inclinacao": 85.0,
+      },
+      info: (
+        type_mark: "",
+        description: "Espeto de jardim de alumínio com projetor LED de 7 W, facho de 24°, aleta antiofuscamento e articulação, IP65; para árvores e palmeiras",
+        manufacturer: "",
+        model: "",
+        url: "",
+        keynote: "",
+        classification: "",
+        fire_rating: "",
+        comments: "",
+        cost: None,
+      ),
+    ),
+  ],
+  materials: [
+    (
+      name: "Aço pintado preto",
+      color: (30, 30, 32),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (30, 30, 32),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Plástico preto",
+      color: (34, 34, 37),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (34, 34, 37),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Difusor opalino",
+      color: (250, 250, 245),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.3,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (250, 250, 245),
+        finish: Glossy,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Fita de LED",
+      color: (255, 244, 214),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.3,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (255, 244, 214),
+        finish: Glossy,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Borracha",
+      color: (30, 30, 30),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (30, 30, 30),
+        finish: Matte,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+  ],
+)

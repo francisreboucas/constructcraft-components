@@ -1,0 +1,688 @@
+{
+  "component": "Poste de jardim",
+  "def": {
+    "kind": "Lighting",
+    "params": [
+      {
+        "name": "Altura",
+        "value": 2.5,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Globo",
+        "value": 0,
+        "kind": "Number",
+        "instance": false
+      }
+    ],
+    "items": [
+      {
+        "name": "Poste simplificado",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0",
+            "z": "0",
+            "radius": "0.06",
+            "height": "Altura"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Base",
+        "shape": {
+          "Box": {
+            "x": "-0.12",
+            "y": "-0.12",
+            "z": "0",
+            "width": "0.24",
+            "depth": "0.24",
+            "height": "0.05"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pé da coluna",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "0.05"
+              },
+              {
+                "u": "0.09",
+                "v": "0.05"
+              },
+              {
+                "u": "0.09",
+                "v": "0.08"
+              },
+              {
+                "u": "0.075",
+                "v": "0.1"
+              },
+              {
+                "u": "0.055",
+                "v": "0.16"
+              },
+              {
+                "u": "0.045",
+                "v": "0.3"
+              },
+              {
+                "u": "0",
+                "v": "0.3"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Coluna",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "0.3"
+              },
+              {
+                "u": "0.042",
+                "v": "0.3"
+              },
+              {
+                "u": "0.034",
+                "v": "Altura - 0.45"
+              },
+              {
+                "u": "0",
+                "v": "Altura - 0.45"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Canelura 1",
+        "shape": {
+          "Box": {
+            "x": "0.038*cos(0) - 0.003",
+            "y": "0.038*sin(0) - 0.003",
+            "z": "0.35",
+            "width": "0.006",
+            "depth": "0.006",
+            "height": "Altura - 0.45 - 0.4"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Canelura 2",
+        "shape": {
+          "Box": {
+            "x": "0.038*cos(45) - 0.003",
+            "y": "0.038*sin(45) - 0.003",
+            "z": "0.35",
+            "width": "0.006",
+            "depth": "0.006",
+            "height": "Altura - 0.45 - 0.4"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Canelura 3",
+        "shape": {
+          "Box": {
+            "x": "0.038*cos(90) - 0.003",
+            "y": "0.038*sin(90) - 0.003",
+            "z": "0.35",
+            "width": "0.006",
+            "depth": "0.006",
+            "height": "Altura - 0.45 - 0.4"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Canelura 4",
+        "shape": {
+          "Box": {
+            "x": "0.038*cos(135) - 0.003",
+            "y": "0.038*sin(135) - 0.003",
+            "z": "0.35",
+            "width": "0.006",
+            "depth": "0.006",
+            "height": "Altura - 0.45 - 0.4"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Canelura 5",
+        "shape": {
+          "Box": {
+            "x": "0.038*cos(180) - 0.003",
+            "y": "0.038*sin(180) - 0.003",
+            "z": "0.35",
+            "width": "0.006",
+            "depth": "0.006",
+            "height": "Altura - 0.45 - 0.4"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Canelura 6",
+        "shape": {
+          "Box": {
+            "x": "0.038*cos(225) - 0.003",
+            "y": "0.038*sin(225) - 0.003",
+            "z": "0.35",
+            "width": "0.006",
+            "depth": "0.006",
+            "height": "Altura - 0.45 - 0.4"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Canelura 7",
+        "shape": {
+          "Box": {
+            "x": "0.038*cos(270) - 0.003",
+            "y": "0.038*sin(270) - 0.003",
+            "z": "0.35",
+            "width": "0.006",
+            "depth": "0.006",
+            "height": "Altura - 0.45 - 0.4"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Canelura 8",
+        "shape": {
+          "Box": {
+            "x": "0.038*cos(315) - 0.003",
+            "y": "0.038*sin(315) - 0.003",
+            "z": "0.35",
+            "width": "0.006",
+            "depth": "0.006",
+            "height": "Altura - 0.45 - 0.4"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Capitel",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "Altura - 0.45"
+              },
+              {
+                "u": "0.06",
+                "v": "Altura - 0.45"
+              },
+              {
+                "u": "0.06",
+                "v": "Altura - 0.45 + 0.04"
+              },
+              {
+                "u": "0",
+                "v": "Altura - 0.45 + 0.04"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lanterna - vidro",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0 + (min(1, max(0.005, 1 - Globo)))*(-0.09 - 0)",
+                "v": "0 + (min(1, max(0.005, 1 - Globo)))*(-0.09 - 0)"
+              },
+              {
+                "u": "0 + (min(1, max(0.005, 1 - Globo)))*(0.09 - 0)",
+                "v": "0 + (min(1, max(0.005, 1 - Globo)))*(-0.09 - 0)"
+              },
+              {
+                "u": "0 + (min(1, max(0.005, 1 - Globo)))*(0.09 - 0)",
+                "v": "0 + (min(1, max(0.005, 1 - Globo)))*(0.09 - 0)"
+              },
+              {
+                "u": "0 + (min(1, max(0.005, 1 - Globo)))*(-0.09 - 0)",
+                "v": "0 + (min(1, max(0.005, 1 - Globo)))*(0.09 - 0)"
+              }
+            ],
+            "offset": "(Altura - 0.45 + 0.02) + (min(1, max(0.005, 1 - Globo)))*(Altura - 0.45 + 0.04 - (Altura - 0.45 + 0.02))",
+            "depth": "(min(1, max(0.005, 1 - Globo)))*0.28"
+          }
+        },
+        "material": "Difusor opalino",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lanterna - montante 1",
+        "shape": {
+          "Box": {
+            "x": "0 + (min(1, max(0.005, 1 - Globo)))*(-0.1 - 0)",
+            "y": "0 + (min(1, max(0.005, 1 - Globo)))*(-0.1 - 0)",
+            "z": "(Altura - 0.45 + 0.02) + (min(1, max(0.005, 1 - Globo)))*(Altura - 0.45 + 0.04 - (Altura - 0.45 + 0.02))",
+            "width": "(min(1, max(0.005, 1 - Globo)))*0.015",
+            "depth": "(min(1, max(0.005, 1 - Globo)))*0.015",
+            "height": "(min(1, max(0.005, 1 - Globo)))*0.3"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lanterna - montante 2",
+        "shape": {
+          "Box": {
+            "x": "0 + (min(1, max(0.005, 1 - Globo)))*(0.085 - 0)",
+            "y": "0 + (min(1, max(0.005, 1 - Globo)))*(-0.1 - 0)",
+            "z": "(Altura - 0.45 + 0.02) + (min(1, max(0.005, 1 - Globo)))*(Altura - 0.45 + 0.04 - (Altura - 0.45 + 0.02))",
+            "width": "(min(1, max(0.005, 1 - Globo)))*0.015",
+            "depth": "(min(1, max(0.005, 1 - Globo)))*0.015",
+            "height": "(min(1, max(0.005, 1 - Globo)))*0.3"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lanterna - montante 3",
+        "shape": {
+          "Box": {
+            "x": "0 + (min(1, max(0.005, 1 - Globo)))*(-0.1 - 0)",
+            "y": "0 + (min(1, max(0.005, 1 - Globo)))*(0.085 - 0)",
+            "z": "(Altura - 0.45 + 0.02) + (min(1, max(0.005, 1 - Globo)))*(Altura - 0.45 + 0.04 - (Altura - 0.45 + 0.02))",
+            "width": "(min(1, max(0.005, 1 - Globo)))*0.015",
+            "depth": "(min(1, max(0.005, 1 - Globo)))*0.015",
+            "height": "(min(1, max(0.005, 1 - Globo)))*0.3"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lanterna - montante 4",
+        "shape": {
+          "Box": {
+            "x": "0 + (min(1, max(0.005, 1 - Globo)))*(0.085 - 0)",
+            "y": "0 + (min(1, max(0.005, 1 - Globo)))*(0.085 - 0)",
+            "z": "(Altura - 0.45 + 0.02) + (min(1, max(0.005, 1 - Globo)))*(Altura - 0.45 + 0.04 - (Altura - 0.45 + 0.02))",
+            "width": "(min(1, max(0.005, 1 - Globo)))*0.015",
+            "depth": "(min(1, max(0.005, 1 - Globo)))*0.015",
+            "height": "(min(1, max(0.005, 1 - Globo)))*0.3"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lanterna - base",
+        "shape": {
+          "Box": {
+            "x": "0 + (min(1, max(0.005, 1 - Globo)))*(-0.11 - 0)",
+            "y": "0 + (min(1, max(0.005, 1 - Globo)))*(-0.11 - 0)",
+            "z": "(Altura - 0.45 + 0.02) + (min(1, max(0.005, 1 - Globo)))*(Altura - 0.45 + 0.04 - (Altura - 0.45 + 0.02))",
+            "width": "(min(1, max(0.005, 1 - Globo)))*0.22",
+            "depth": "(min(1, max(0.005, 1 - Globo)))*0.22",
+            "height": "(min(1, max(0.005, 1 - Globo)))*0.02"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lanterna - beiral",
+        "shape": {
+          "Box": {
+            "x": "0 + (min(1, max(0.005, 1 - Globo)))*(-0.13 - 0)",
+            "y": "0 + (min(1, max(0.005, 1 - Globo)))*(-0.13 - 0)",
+            "z": "(Altura - 0.45 + 0.02) + (min(1, max(0.005, 1 - Globo)))*(Altura - 0.45 + 0.04 + 0.3 - (Altura - 0.45 + 0.02))",
+            "width": "(min(1, max(0.005, 1 - Globo)))*0.26",
+            "depth": "(min(1, max(0.005, 1 - Globo)))*0.26",
+            "height": "(min(1, max(0.005, 1 - Globo)))*0.02"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lanterna - telhado",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0 + (min(1, max(0.005, 1 - Globo)))*(0 - 0)",
+                "v": "(Altura - 0.45 + 0.02) + (min(1, max(0.005, 1 - Globo)))*(Altura - 0.45 + 0.04 + 0.32 - (Altura - 0.45 + 0.02))"
+              },
+              {
+                "u": "0 + (min(1, max(0.005, 1 - Globo)))*(0.13 - 0)",
+                "v": "(Altura - 0.45 + 0.02) + (min(1, max(0.005, 1 - Globo)))*(Altura - 0.45 + 0.04 + 0.32 - (Altura - 0.45 + 0.02))"
+              },
+              {
+                "u": "0 + (min(1, max(0.005, 1 - Globo)))*(0 - 0)",
+                "v": "(Altura - 0.45 + 0.02) + (min(1, max(0.005, 1 - Globo)))*(Altura - 0.45 + 0.04 + 0.42 - (Altura - 0.45 + 0.02))"
+              }
+            ],
+            "offset": "0 + (min(1, max(0.005, 1 - Globo)))*(0 - 0)",
+            "axis": "0 + (min(1, max(0.005, 1 - Globo)))*(0 - 0)",
+            "angle": "360"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lanterna - LED",
+        "shape": {
+          "Cylinder": {
+            "x": "0 + (min(1, max(0.005, 1 - Globo)))*(0 - 0)",
+            "y": "0 + (min(1, max(0.005, 1 - Globo)))*(0 - 0)",
+            "z": "(Altura - 0.45 + 0.02) + (min(1, max(0.005, 1 - Globo)))*(Altura - 0.45 + 0.04 + 0.05 - (Altura - 0.45 + 0.02))",
+            "radius": "(min(1, max(0.005, 1 - Globo)))*0.03",
+            "height": "(min(1, max(0.005, 1 - Globo)))*0.14"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Globo - colar",
+        "shape": {
+          "Cylinder": {
+            "x": "0 + (min(1, max(0.005, Globo)))*(0 - 0)",
+            "y": "0 + (min(1, max(0.005, Globo)))*(0 - 0)",
+            "z": "(Altura - 0.45 + 0.02) + (min(1, max(0.005, Globo)))*(Altura - 0.45 + 0.04 - (Altura - 0.45 + 0.02))",
+            "radius": "(min(1, max(0.005, Globo)))*0.07",
+            "height": "(min(1, max(0.005, Globo)))*0.04"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Globo",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0 + (min(1, max(0.005, Globo)))*(0 - 0)",
+                "v": "(Altura - 0.45 + 0.02) + (min(1, max(0.005, Globo)))*(Altura - 0.45 + 0.04 + 0.04 - (Altura - 0.45 + 0.02))"
+              },
+              {
+                "u": "0 + (min(1, max(0.005, Globo)))*(0.15*sin(20) - 0)",
+                "v": "(Altura - 0.45 + 0.02) + (min(1, max(0.005, Globo)))*(Altura - 0.45 + 0.04 + 0.19 - 0.15*cos(20) - (Altura - 0.45 + 0.02))"
+              },
+              {
+                "u": "0 + (min(1, max(0.005, Globo)))*(0.15*sin(40) - 0)",
+                "v": "(Altura - 0.45 + 0.02) + (min(1, max(0.005, Globo)))*(Altura - 0.45 + 0.04 + 0.19 - 0.15*cos(40) - (Altura - 0.45 + 0.02))"
+              },
+              {
+                "u": "0 + (min(1, max(0.005, Globo)))*(0.15*sin(60) - 0)",
+                "v": "(Altura - 0.45 + 0.02) + (min(1, max(0.005, Globo)))*(Altura - 0.45 + 0.04 + 0.19 - 0.15*cos(60) - (Altura - 0.45 + 0.02))"
+              },
+              {
+                "u": "0 + (min(1, max(0.005, Globo)))*(0.15*sin(80) - 0)",
+                "v": "(Altura - 0.45 + 0.02) + (min(1, max(0.005, Globo)))*(Altura - 0.45 + 0.04 + 0.19 - 0.15*cos(80) - (Altura - 0.45 + 0.02))"
+              },
+              {
+                "u": "0 + (min(1, max(0.005, Globo)))*(0.15*sin(100) - 0)",
+                "v": "(Altura - 0.45 + 0.02) + (min(1, max(0.005, Globo)))*(Altura - 0.45 + 0.04 + 0.19 - 0.15*cos(100) - (Altura - 0.45 + 0.02))"
+              },
+              {
+                "u": "0 + (min(1, max(0.005, Globo)))*(0.15*sin(120) - 0)",
+                "v": "(Altura - 0.45 + 0.02) + (min(1, max(0.005, Globo)))*(Altura - 0.45 + 0.04 + 0.19 - 0.15*cos(120) - (Altura - 0.45 + 0.02))"
+              },
+              {
+                "u": "0 + (min(1, max(0.005, Globo)))*(0.15*sin(140) - 0)",
+                "v": "(Altura - 0.45 + 0.02) + (min(1, max(0.005, Globo)))*(Altura - 0.45 + 0.04 + 0.19 - 0.15*cos(140) - (Altura - 0.45 + 0.02))"
+              },
+              {
+                "u": "0 + (min(1, max(0.005, Globo)))*(0.15*sin(160) - 0)",
+                "v": "(Altura - 0.45 + 0.02) + (min(1, max(0.005, Globo)))*(Altura - 0.45 + 0.04 + 0.19 - 0.15*cos(160) - (Altura - 0.45 + 0.02))"
+              },
+              {
+                "u": "0 + (min(1, max(0.005, Globo)))*(0.15*sin(180) - 0)",
+                "v": "(Altura - 0.45 + 0.02) + (min(1, max(0.005, Globo)))*(Altura - 0.45 + 0.04 + 0.19 - 0.15*cos(180) - (Altura - 0.45 + 0.02))"
+              }
+            ],
+            "offset": "0 + (min(1, max(0.005, Globo)))*(0 - 0)",
+            "axis": "0 + (min(1, max(0.005, Globo)))*(0 - 0)",
+            "angle": "360"
+          }
+        },
+        "material": "Difusor opalino",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      }
+    ]
+  },
+  "types": [
+    {
+      "name": "Poste de jardim com lanterna 2,5 m",
+      "values": {},
+      "info": {
+        "description": "Poste de jardim de alumínio fundido pintado de preto, base quadrada chumbada, coluna canelada e cabeça de lanterna com vidro, LED 15 W"
+      }
+    },
+    {
+      "name": "Poste de jardim com globo 2,5 m",
+      "values": {
+        "Globo": 1
+      },
+      "info": {
+        "description": "Poste de jardim de alumínio fundido pintado de preto, base quadrada chumbada, coluna canelada e cabeça de globo de policarbonato leitoso Ø30 cm, LED 15 W"
+      }
+    },
+    {
+      "name": "Poste de jardim com lanterna 3,0 m",
+      "values": {
+        "Altura": 3.0
+      },
+      "info": {
+        "description": "Poste de jardim de alumínio fundido pintado de preto, base quadrada chumbada, coluna canelada e cabeça de lanterna com vidro, LED 20 W"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "name": "Aço pintado preto",
+      "color": [
+        30,
+        30,
+        32
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Difusor opalino",
+      "color": [
+        250,
+        250,
+        245
+      ],
+      "class": "Plastic",
+      "finish": "Glossy",
+      "transparency": 0.3
+    },
+    {
+      "name": "Fita de LED",
+      "color": [
+        255,
+        244,
+        214
+      ],
+      "class": "Plastic",
+      "finish": "Glossy",
+      "transparency": 0.3
+    }
+  ]
+}

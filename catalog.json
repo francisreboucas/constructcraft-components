@@ -3458,6 +3458,176 @@
       ]
     },
     {
+      "file": "components/lighting/arandela-tartaruga.ccomp",
+      "thumbnail": "thumbnails/lighting/arandela-tartaruga.png",
+      "component": "Arandela tartaruga",
+      "author": "Francis Rebouças",
+      "kind": "Lighting",
+      "mep": {
+        "Device": {
+          "device": "WallLight",
+          "power": 12.0
+        }
+      },
+      "parameters": [
+        "Largura",
+        "Altura"
+      ],
+      "types": [
+        {
+          "name": "Arandela tartaruga oval",
+          "values": {
+            "Largura": 0.24,
+            "Altura": 0.16
+          },
+          "description": "Arandela tartaruga de alumínio fundido com grade e difusor opalino, LED 12 W, IP65, para áreas externas"
+        },
+        {
+          "name": "Arandela tartaruga grande",
+          "values": {
+            "Largura": 0.3,
+            "Altura": 0.2
+          },
+          "description": "Arandela tartaruga de alumínio fundido com grade e difusor opalino, LED 12 W, IP65, para áreas externas"
+        }
+      ]
+    },
+    {
+      "file": "components/lighting/balizador-jardim.ccomp",
+      "thumbnail": "thumbnails/lighting/balizador-jardim.png",
+      "component": "Balizador de jardim",
+      "author": "Francis Rebouças",
+      "kind": "Lighting",
+      "mep": null,
+      "parameters": [
+        "Altura",
+        "Diametro"
+      ],
+      "types": [
+        {
+          "name": "Balizador de jardim 80 cm",
+          "values": {
+            "Altura": 0.8,
+            "Diametro": 0.12
+          },
+          "description": "Balizador de jardim de alumínio pintado com cabeça de aletas que direciona a luz para o chão, LED 10 W, IP65"
+        },
+        {
+          "name": "Balizador de jardim 60 cm",
+          "values": {
+            "Altura": 0.6,
+            "Diametro": 0.12
+          },
+          "description": "Balizador de jardim de alumínio pintado com cabeça de aletas que direciona a luz para o chão, LED 10 W, IP65"
+        },
+        {
+          "name": "Balizador de jardim 1,0 m",
+          "values": {
+            "Altura": 1.0,
+            "Diametro": 0.15
+          },
+          "description": "Balizador de jardim de alumínio pintado com cabeça de aletas que direciona a luz para o chão, LED 10 W, IP65"
+        }
+      ]
+    },
+    {
+      "file": "components/lighting/balizador-parede.ccomp",
+      "thumbnail": "thumbnails/lighting/balizador-parede.png",
+      "component": "Balizador de parede",
+      "author": "Francis Rebouças",
+      "kind": "Lighting",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Altura",
+        "Elevacao"
+      ],
+      "types": [
+        {
+          "name": "Balizador de parede retangular",
+          "values": {
+            "Largura": 0.12,
+            "Altura": 0.08,
+            "Elevacao": 0.3
+          },
+          "description": "Balizador LED de embutir na parede com aletas que direcionam a luz para o chão, alumínio pintado, 3 W, IP65; para escadas e caminhos"
+        },
+        {
+          "name": "Balizador de parede quadrado",
+          "values": {
+            "Largura": 0.1,
+            "Altura": 0.1,
+            "Elevacao": 0.3
+          },
+          "description": "Balizador LED de embutir na parede com aletas que direcionam a luz para o chão, alumínio pintado, 3 W, IP65; para escadas e caminhos"
+        }
+      ]
+    },
+    {
+      "file": "components/lighting/embutido-piso.ccomp",
+      "thumbnail": "thumbnails/lighting/embutido-piso.png",
+      "component": "Luminária de embutir no piso",
+      "author": "Francis Rebouças",
+      "kind": "Lighting",
+      "mep": null,
+      "parameters": [
+        "Diametro",
+        "Profundidade"
+      ],
+      "types": [
+        {
+          "name": "Embutido de piso Ø12 cm",
+          "values": {
+            "Diametro": 0.12,
+            "Profundidade": 0.12
+          },
+          "description": "Luminária LED de embutir no piso com aro de aço inox e vidro temperado, 7 W, facho de 30°, IP67, suporta pisoteio"
+        },
+        {
+          "name": "Embutido de piso Ø18 cm",
+          "values": {
+            "Diametro": 0.18,
+            "Profundidade": 0.15
+          },
+          "description": "Luminária LED de embutir no piso com aro de aço inox e vidro temperado, 15 W, facho de 30°, IP67, suporta pisoteio"
+        }
+      ]
+    },
+    {
+      "file": "components/lighting/espeto-jardim.ccomp",
+      "thumbnail": "thumbnails/lighting/espeto-jardim.png",
+      "component": "Espeto de jardim",
+      "author": "Francis Rebouças",
+      "kind": "Lighting",
+      "mep": null,
+      "parameters": [
+        "Inclinacao"
+      ],
+      "types": [
+        {
+          "name": "Espeto de jardim 60°",
+          "values": {
+            "Inclinacao": 60.0
+          },
+          "description": "Espeto de jardim de alumínio com projetor LED de 7 W, facho de 24°, aleta antiofuscamento e articulação, IP65"
+        },
+        {
+          "name": "Espeto de jardim 30°",
+          "values": {
+            "Inclinacao": 30.0
+          },
+          "description": "Espeto de jardim de alumínio com projetor LED de 7 W, facho de 24°, aleta antiofuscamento e articulação, IP65; para fachadas e muros"
+        },
+        {
+          "name": "Espeto de jardim 85°",
+          "values": {
+            "Inclinacao": 85.0
+          },
+          "description": "Espeto de jardim de alumínio com projetor LED de 7 W, facho de 24°, aleta antiofuscamento e articulação, IP65; para árvores e palmeiras"
+        }
+      ]
+    },
+    {
       "file": "components/lighting/luminaria-linear.ccomp",
       "thumbnail": "thumbnails/lighting/luminaria-linear.png",
       "component": "Luminária linear LED",
@@ -3562,6 +3732,91 @@
             "Altura": 0.06
           },
           "description": "Ponto de luz no teto"
+        }
+      ]
+    },
+    {
+      "file": "components/lighting/poste-jardim.ccomp",
+      "thumbnail": "thumbnails/lighting/poste-jardim.png",
+      "component": "Poste de jardim",
+      "author": "Francis Rebouças",
+      "kind": "Lighting",
+      "mep": null,
+      "parameters": [
+        "Altura",
+        "Globo"
+      ],
+      "types": [
+        {
+          "name": "Poste de jardim com lanterna 2,5 m",
+          "values": {
+            "Altura": 2.5,
+            "Globo": 0.0
+          },
+          "description": "Poste de jardim de alumínio fundido pintado de preto, base quadrada chumbada, coluna canelada e cabeça de lanterna com vidro, LED 15 W"
+        },
+        {
+          "name": "Poste de jardim com globo 2,5 m",
+          "values": {
+            "Altura": 2.5,
+            "Globo": 1.0
+          },
+          "description": "Poste de jardim de alumínio fundido pintado de preto, base quadrada chumbada, coluna canelada e cabeça de globo de policarbonato leitoso Ø30 cm, LED 15 W"
+        },
+        {
+          "name": "Poste de jardim com lanterna 3,0 m",
+          "values": {
+            "Altura": 3.0,
+            "Globo": 0.0
+          },
+          "description": "Poste de jardim de alumínio fundido pintado de preto, base quadrada chumbada, coluna canelada e cabeça de lanterna com vidro, LED 20 W"
+        }
+      ]
+    },
+    {
+      "file": "components/lighting/refletor-led.ccomp",
+      "thumbnail": "thumbnails/lighting/refletor-led.png",
+      "component": "Refletor LED",
+      "author": "Francis Rebouças",
+      "kind": "Lighting",
+      "mep": {
+        "Device": {
+          "device": "WallLight",
+          "power": 50.0
+        }
+      },
+      "parameters": [
+        "Largura",
+        "Altura",
+        "Inclinacao"
+      ],
+      "types": [
+        {
+          "name": "Refletor LED 50 W",
+          "values": {
+            "Largura": 0.24,
+            "Altura": 0.19,
+            "Inclinacao": 25.0
+          },
+          "description": "Refletor LED de alumínio injetado com vidro temperado e alça articulada, IP66, para fachadas, muros e quintais"
+        },
+        {
+          "name": "Refletor LED 100 W",
+          "values": {
+            "Largura": 0.3,
+            "Altura": 0.24,
+            "Inclinacao": 25.0
+          },
+          "description": "Refletor LED de alumínio injetado com vidro temperado e alça articulada, IP66, para fachadas, muros e quintais"
+        },
+        {
+          "name": "Refletor LED 200 W",
+          "values": {
+            "Largura": 0.38,
+            "Altura": 0.3,
+            "Inclinacao": 25.0
+          },
+          "description": "Refletor LED de alumínio injetado com vidro temperado e alça articulada, IP66, para fachadas, muros e quintais"
         }
       ]
     },

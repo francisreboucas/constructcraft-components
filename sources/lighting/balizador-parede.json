@@ -1,0 +1,267 @@
+{
+  "component": "Balizador de parede",
+  "def": {
+    "kind": "Lighting",
+    "params": [
+      {
+        "name": "Largura",
+        "value": 0.12,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Altura",
+        "value": 0.08,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Elevacao",
+        "value": 0.3,
+        "kind": "Length",
+        "instance": true
+      }
+    ],
+    "items": [
+      {
+        "name": "Balizador simplificado",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2",
+            "y": "-0.006",
+            "z": "Elevacao - Altura/2",
+            "width": "Largura",
+            "depth": "0.066",
+            "height": "Altura"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Caixa de embutir",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.005",
+            "y": "0",
+            "z": "Elevacao - Altura/2 + 0.005",
+            "width": "Largura - 0.01",
+            "depth": "0.06",
+            "height": "Altura - 0.01"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Espelho",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2",
+            "y": "-0.006",
+            "z": "Elevacao - Altura/2",
+            "width": "Largura",
+            "depth": "0.006",
+            "height": "Altura"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Difusor",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.012",
+            "y": "-0.0065",
+            "z": "Elevacao - Altura/2 + 0.01",
+            "width": "Largura - 0.024",
+            "depth": "0.002",
+            "height": "Altura*0.45"
+          }
+        },
+        "material": "Difusor opalino",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Aleta 1",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-0.006",
+                "v": "Elevacao - Altura/2 + 0.012 + 0*Altura*0.15 + 0.012"
+              },
+              {
+                "u": "-0.006",
+                "v": "Elevacao - Altura/2 + 0.012 + 0*Altura*0.15 + 0.016"
+              },
+              {
+                "u": "-0.02",
+                "v": "Elevacao - Altura/2 + 0.012 + 0*Altura*0.15 + 0.008"
+              },
+              {
+                "u": "-0.02",
+                "v": "Elevacao - Altura/2 + 0.012 + 0*Altura*0.15 + 0.004"
+              }
+            ],
+            "offset": "-Largura/2 + 0.012",
+            "depth": "Largura - 0.024"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Aleta 2",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-0.006",
+                "v": "Elevacao - Altura/2 + 0.012 + 1*Altura*0.15 + 0.012"
+              },
+              {
+                "u": "-0.006",
+                "v": "Elevacao - Altura/2 + 0.012 + 1*Altura*0.15 + 0.016"
+              },
+              {
+                "u": "-0.02",
+                "v": "Elevacao - Altura/2 + 0.012 + 1*Altura*0.15 + 0.008"
+              },
+              {
+                "u": "-0.02",
+                "v": "Elevacao - Altura/2 + 0.012 + 1*Altura*0.15 + 0.004"
+              }
+            ],
+            "offset": "-Largura/2 + 0.012",
+            "depth": "Largura - 0.024"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Aleta 3",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-0.006",
+                "v": "Elevacao - Altura/2 + 0.012 + 2*Altura*0.15 + 0.012"
+              },
+              {
+                "u": "-0.006",
+                "v": "Elevacao - Altura/2 + 0.012 + 2*Altura*0.15 + 0.016"
+              },
+              {
+                "u": "-0.02",
+                "v": "Elevacao - Altura/2 + 0.012 + 2*Altura*0.15 + 0.008"
+              },
+              {
+                "u": "-0.02",
+                "v": "Elevacao - Altura/2 + 0.012 + 2*Altura*0.15 + 0.004"
+              }
+            ],
+            "offset": "-Largura/2 + 0.012",
+            "depth": "Largura - 0.024"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      }
+    ]
+  },
+  "types": [
+    {
+      "name": "Balizador de parede retangular",
+      "values": {},
+      "info": {
+        "description": "Balizador LED de embutir na parede com aletas que direcionam a luz para o chão, alumínio pintado, 3 W, IP65; para escadas e caminhos"
+      }
+    },
+    {
+      "name": "Balizador de parede quadrado",
+      "values": {
+        "Largura": 0.1,
+        "Altura": 0.1
+      },
+      "info": {
+        "description": "Balizador LED de embutir na parede com aletas que direcionam a luz para o chão, alumínio pintado, 3 W, IP65; para escadas e caminhos"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "name": "Aço pintado preto",
+      "color": [
+        30,
+        30,
+        32
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico preto",
+      "color": [
+        34,
+        34,
+        37
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Difusor opalino",
+      "color": [
+        250,
+        250,
+        245
+      ],
+      "class": "Plastic",
+      "finish": "Glossy",
+      "transparency": 0.3
+    }
+  ]
+}

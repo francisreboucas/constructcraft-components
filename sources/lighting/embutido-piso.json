@@ -1,0 +1,282 @@
+{
+  "component": "Luminária de embutir no piso",
+  "def": {
+    "kind": "Lighting",
+    "params": [
+      {
+        "name": "Diametro",
+        "value": 0.12,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Profundidade",
+        "value": 0.12,
+        "kind": "Length",
+        "instance": false
+      }
+    ],
+    "items": [
+      {
+        "name": "Embutido simplificado",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0",
+            "z": "-Profundidade",
+            "radius": "Diametro/2 + 0.01",
+            "height": "Profundidade"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Aro de inox",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "Diametro/2 - 0.012",
+                "v": "0"
+              },
+              {
+                "u": "Diametro/2 + 0.012",
+                "v": "0"
+              },
+              {
+                "u": "Diametro/2 + 0.012",
+                "v": "0.003"
+              },
+              {
+                "u": "Diametro/2 + 0.008",
+                "v": "0.005"
+              },
+              {
+                "u": "Diametro/2 - 0.012",
+                "v": "0.005"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Vidro",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0",
+            "z": "-0.002",
+            "radius": "Diametro/2 - 0.012",
+            "height": "0.006"
+          }
+        },
+        "material": "Difusor opalino",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Refletor",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0",
+            "z": "-0.03",
+            "radius": "Diametro/2 - 0.016",
+            "height": "0.026"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "LED",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0",
+            "z": "-0.031",
+            "radius": "Diametro/2*0.35",
+            "height": "0.003"
+          }
+        },
+        "material": "Fita de LED",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Corpo",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0",
+            "z": "-Profundidade",
+            "radius": "Diametro/2 - 0.01",
+            "height": "Profundidade - 0.03"
+          }
+        },
+        "material": "Alumínio fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Caixa de embutir",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0",
+            "z": "-Profundidade - 0.02",
+            "radius": "Diametro/2 + 0.006",
+            "height": "Profundidade + 0.018"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Prensa-cabo",
+        "shape": {
+          "Cylinder": {
+            "x": "Diametro/2*0.4",
+            "y": "0",
+            "z": "-Profundidade - 0.04",
+            "radius": "0.007",
+            "height": "0.02"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      }
+    ]
+  },
+  "types": [
+    {
+      "name": "Embutido de piso Ø12 cm",
+      "values": {},
+      "info": {
+        "description": "Luminária LED de embutir no piso com aro de aço inox e vidro temperado, 7 W, facho de 30°, IP67, suporta pisoteio"
+      }
+    },
+    {
+      "name": "Embutido de piso Ø18 cm",
+      "values": {
+        "Diametro": 0.18,
+        "Profundidade": 0.15
+      },
+      "info": {
+        "description": "Luminária LED de embutir no piso com aro de aço inox e vidro temperado, 15 W, facho de 30°, IP67, suporta pisoteio"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "name": "Inox escovado",
+      "color": [
+        198,
+        200,
+        203
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Difusor opalino",
+      "color": [
+        250,
+        250,
+        245
+      ],
+      "class": "Plastic",
+      "finish": "Glossy",
+      "transparency": 0.3
+    },
+    {
+      "name": "Alumínio anodizado",
+      "color": [
+        206,
+        208,
+        210
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Fita de LED",
+      "color": [
+        255,
+        244,
+        214
+      ],
+      "class": "Plastic",
+      "finish": "Glossy",
+      "transparency": 0.3
+    },
+    {
+      "name": "Alumínio fundido",
+      "color": [
+        172,
+        174,
+        177
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico preto",
+      "color": [
+        34,
+        34,
+        37
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    }
+  ]
+}

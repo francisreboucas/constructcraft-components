@@ -80,9 +80,16 @@ export const COMPONENT_NAMES_EN: Readonly<Record<string, string>> = {
   'furniture/tv-rack': 'TV with stand',
 
   'lighting/arandela-led': 'LED wall light',
+  'lighting/arandela-tartaruga': 'Outdoor bulkhead light',
+  'lighting/balizador-jardim': 'Garden bollard light',
+  'lighting/balizador-parede': 'Recessed step light',
+  'lighting/embutido-piso': 'In-ground uplight',
+  'lighting/espeto-jardim': 'Garden spike spotlight',
   'lighting/luminaria-linear': 'Linear LED light',
   'lighting/pendente': 'Pendant light',
   'lighting/plafon': 'Ceiling light',
+  'lighting/poste-jardim': 'Garden lamp post',
+  'lighting/refletor-led': 'LED floodlight',
   'lighting/spot-embutido': 'Recessed LED spot',
   'lighting/ventilador-teto': 'Ceiling fan with light',
 
