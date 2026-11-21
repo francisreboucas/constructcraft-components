@@ -11,6 +11,7 @@
 
 .home {
   max-width: 1200px;
+  margin-inline: auto;
   padding: 0 var(--space-6);
 }
 
