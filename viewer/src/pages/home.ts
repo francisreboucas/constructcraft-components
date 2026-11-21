@@ -50,6 +50,7 @@ const COVERS: Record<FolderId, string> = {
   site: 'vaga-pcd',
   signage: 'placa-pare',
   fire: 'abrigo-hidrante',
+  people: 'pessoa-caminhando',
 };
 
 function link(className: string, text: string, href: string): HTMLAnchorElement {

@@ -1,0 +1,784 @@
+{
+  "component": "Coletor solar",
+  "def": {
+    "kind": "Plumbing",
+    "params": [
+      {
+        "name": "Largura",
+        "value": 1.0,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Comprimento",
+        "value": 2.0,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Inclinacao",
+        "value": 25,
+        "kind": "Angle",
+        "instance": false
+      },
+      {
+        "name": "AlturaFrente",
+        "value": 0.25,
+        "kind": "Length",
+        "instance": false
+      }
+    ],
+    "items": [
+      {
+        "name": "Coletor simplificado",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2",
+            "y": "-Comprimento/2*cos(Inclinacao)",
+            "z": "AlturaFrente",
+            "width": "Largura",
+            "depth": "Comprimento*cos(Inclinacao)",
+            "height": "Comprimento*sin(Inclinacao) + 0.08"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Caixa",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (0)*cos(Inclinacao) - (0)*sin(Inclinacao)",
+                "v": "AlturaFrente + (0)*sin(Inclinacao) + (0)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (Comprimento)*cos(Inclinacao) - (0)*sin(Inclinacao)",
+                "v": "AlturaFrente + (Comprimento)*sin(Inclinacao) + (0)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (Comprimento)*cos(Inclinacao) - (0.08 - 0.01)*sin(Inclinacao)",
+                "v": "AlturaFrente + (Comprimento)*sin(Inclinacao) + (0.08 - 0.01)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (0)*cos(Inclinacao) - (0.08 - 0.01)*sin(Inclinacao)",
+                "v": "AlturaFrente + (0)*sin(Inclinacao) + (0.08 - 0.01)*cos(Inclinacao)"
+              }
+            ],
+            "offset": "-Largura/2",
+            "depth": "Largura"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Placa absorvedora",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (0.03)*cos(Inclinacao) - (0.08 - 0.012)*sin(Inclinacao)",
+                "v": "AlturaFrente + (0.03)*sin(Inclinacao) + (0.08 - 0.012)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.03)*cos(Inclinacao) - (0.08 - 0.012)*sin(Inclinacao)",
+                "v": "AlturaFrente + (Comprimento - 0.03)*sin(Inclinacao) + (0.08 - 0.012)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.03)*cos(Inclinacao) - (0.08 - 0.006)*sin(Inclinacao)",
+                "v": "AlturaFrente + (Comprimento - 0.03)*sin(Inclinacao) + (0.08 - 0.006)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (0.03)*cos(Inclinacao) - (0.08 - 0.006)*sin(Inclinacao)",
+                "v": "AlturaFrente + (0.03)*sin(Inclinacao) + (0.08 - 0.006)*cos(Inclinacao)"
+              }
+            ],
+            "offset": "-Largura/2 + 0.03",
+            "depth": "Largura - 0.06"
+          }
+        },
+        "material": "Placa absorvedora",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Vidro",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (0.02)*cos(Inclinacao) - (0.08 - 0.006)*sin(Inclinacao)",
+                "v": "AlturaFrente + (0.02)*sin(Inclinacao) + (0.08 - 0.006)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.02)*cos(Inclinacao) - (0.08 - 0.006)*sin(Inclinacao)",
+                "v": "AlturaFrente + (Comprimento - 0.02)*sin(Inclinacao) + (0.08 - 0.006)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.02)*cos(Inclinacao) - (0.08)*sin(Inclinacao)",
+                "v": "AlturaFrente + (Comprimento - 0.02)*sin(Inclinacao) + (0.08)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (0.02)*cos(Inclinacao) - (0.08)*sin(Inclinacao)",
+                "v": "AlturaFrente + (0.02)*sin(Inclinacao) + (0.08)*cos(Inclinacao)"
+              }
+            ],
+            "offset": "-Largura/2 + 0.02",
+            "depth": "Largura - 0.04"
+          }
+        },
+        "material": "Vidro temperado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tubo da placa 1",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (0.05)*cos(Inclinacao) - (0.08 - 0.006)*sin(Inclinacao)",
+                "v": "AlturaFrente + (0.05)*sin(Inclinacao) + (0.08 - 0.006)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.05)*cos(Inclinacao) - (0.08 - 0.006)*sin(Inclinacao)",
+                "v": "AlturaFrente + (Comprimento - 0.05)*sin(Inclinacao) + (0.08 - 0.006)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.05)*cos(Inclinacao) - (0.08 - 0.004)*sin(Inclinacao)",
+                "v": "AlturaFrente + (Comprimento - 0.05)*sin(Inclinacao) + (0.08 - 0.004)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (0.05)*cos(Inclinacao) - (0.08 - 0.004)*sin(Inclinacao)",
+                "v": "AlturaFrente + (0.05)*sin(Inclinacao) + (0.08 - 0.004)*cos(Inclinacao)"
+              }
+            ],
+            "offset": "-Largura/2 + 1*Largura/10 - 0.004",
+            "depth": "0.008"
+          }
+        },
+        "material": "Cobre",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tubo da placa 2",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (0.05)*cos(Inclinacao) - (0.08 - 0.006)*sin(Inclinacao)",
+                "v": "AlturaFrente + (0.05)*sin(Inclinacao) + (0.08 - 0.006)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.05)*cos(Inclinacao) - (0.08 - 0.006)*sin(Inclinacao)",
+                "v": "AlturaFrente + (Comprimento - 0.05)*sin(Inclinacao) + (0.08 - 0.006)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.05)*cos(Inclinacao) - (0.08 - 0.004)*sin(Inclinacao)",
+                "v": "AlturaFrente + (Comprimento - 0.05)*sin(Inclinacao) + (0.08 - 0.004)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (0.05)*cos(Inclinacao) - (0.08 - 0.004)*sin(Inclinacao)",
+                "v": "AlturaFrente + (0.05)*sin(Inclinacao) + (0.08 - 0.004)*cos(Inclinacao)"
+              }
+            ],
+            "offset": "-Largura/2 + 2*Largura/10 - 0.004",
+            "depth": "0.008"
+          }
+        },
+        "material": "Cobre",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tubo da placa 3",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (0.05)*cos(Inclinacao) - (0.08 - 0.006)*sin(Inclinacao)",
+                "v": "AlturaFrente + (0.05)*sin(Inclinacao) + (0.08 - 0.006)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.05)*cos(Inclinacao) - (0.08 - 0.006)*sin(Inclinacao)",
+                "v": "AlturaFrente + (Comprimento - 0.05)*sin(Inclinacao) + (0.08 - 0.006)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.05)*cos(Inclinacao) - (0.08 - 0.004)*sin(Inclinacao)",
+                "v": "AlturaFrente + (Comprimento - 0.05)*sin(Inclinacao) + (0.08 - 0.004)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (0.05)*cos(Inclinacao) - (0.08 - 0.004)*sin(Inclinacao)",
+                "v": "AlturaFrente + (0.05)*sin(Inclinacao) + (0.08 - 0.004)*cos(Inclinacao)"
+              }
+            ],
+            "offset": "-Largura/2 + 3*Largura/10 - 0.004",
+            "depth": "0.008"
+          }
+        },
+        "material": "Cobre",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tubo da placa 4",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (0.05)*cos(Inclinacao) - (0.08 - 0.006)*sin(Inclinacao)",
+                "v": "AlturaFrente + (0.05)*sin(Inclinacao) + (0.08 - 0.006)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.05)*cos(Inclinacao) - (0.08 - 0.006)*sin(Inclinacao)",
+                "v": "AlturaFrente + (Comprimento - 0.05)*sin(Inclinacao) + (0.08 - 0.006)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.05)*cos(Inclinacao) - (0.08 - 0.004)*sin(Inclinacao)",
+                "v": "AlturaFrente + (Comprimento - 0.05)*sin(Inclinacao) + (0.08 - 0.004)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (0.05)*cos(Inclinacao) - (0.08 - 0.004)*sin(Inclinacao)",
+                "v": "AlturaFrente + (0.05)*sin(Inclinacao) + (0.08 - 0.004)*cos(Inclinacao)"
+              }
+            ],
+            "offset": "-Largura/2 + 4*Largura/10 - 0.004",
+            "depth": "0.008"
+          }
+        },
+        "material": "Cobre",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tubo da placa 5",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (0.05)*cos(Inclinacao) - (0.08 - 0.006)*sin(Inclinacao)",
+                "v": "AlturaFrente + (0.05)*sin(Inclinacao) + (0.08 - 0.006)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.05)*cos(Inclinacao) - (0.08 - 0.006)*sin(Inclinacao)",
+                "v": "AlturaFrente + (Comprimento - 0.05)*sin(Inclinacao) + (0.08 - 0.006)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.05)*cos(Inclinacao) - (0.08 - 0.004)*sin(Inclinacao)",
+                "v": "AlturaFrente + (Comprimento - 0.05)*sin(Inclinacao) + (0.08 - 0.004)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (0.05)*cos(Inclinacao) - (0.08 - 0.004)*sin(Inclinacao)",
+                "v": "AlturaFrente + (0.05)*sin(Inclinacao) + (0.08 - 0.004)*cos(Inclinacao)"
+              }
+            ],
+            "offset": "-Largura/2 + 5*Largura/10 - 0.004",
+            "depth": "0.008"
+          }
+        },
+        "material": "Cobre",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tubo da placa 6",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (0.05)*cos(Inclinacao) - (0.08 - 0.006)*sin(Inclinacao)",
+                "v": "AlturaFrente + (0.05)*sin(Inclinacao) + (0.08 - 0.006)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.05)*cos(Inclinacao) - (0.08 - 0.006)*sin(Inclinacao)",
+                "v": "AlturaFrente + (Comprimento - 0.05)*sin(Inclinacao) + (0.08 - 0.006)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.05)*cos(Inclinacao) - (0.08 - 0.004)*sin(Inclinacao)",
+                "v": "AlturaFrente + (Comprimento - 0.05)*sin(Inclinacao) + (0.08 - 0.004)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (0.05)*cos(Inclinacao) - (0.08 - 0.004)*sin(Inclinacao)",
+                "v": "AlturaFrente + (0.05)*sin(Inclinacao) + (0.08 - 0.004)*cos(Inclinacao)"
+              }
+            ],
+            "offset": "-Largura/2 + 6*Largura/10 - 0.004",
+            "depth": "0.008"
+          }
+        },
+        "material": "Cobre",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tubo da placa 7",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (0.05)*cos(Inclinacao) - (0.08 - 0.006)*sin(Inclinacao)",
+                "v": "AlturaFrente + (0.05)*sin(Inclinacao) + (0.08 - 0.006)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.05)*cos(Inclinacao) - (0.08 - 0.006)*sin(Inclinacao)",
+                "v": "AlturaFrente + (Comprimento - 0.05)*sin(Inclinacao) + (0.08 - 0.006)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.05)*cos(Inclinacao) - (0.08 - 0.004)*sin(Inclinacao)",
+                "v": "AlturaFrente + (Comprimento - 0.05)*sin(Inclinacao) + (0.08 - 0.004)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (0.05)*cos(Inclinacao) - (0.08 - 0.004)*sin(Inclinacao)",
+                "v": "AlturaFrente + (0.05)*sin(Inclinacao) + (0.08 - 0.004)*cos(Inclinacao)"
+              }
+            ],
+            "offset": "-Largura/2 + 7*Largura/10 - 0.004",
+            "depth": "0.008"
+          }
+        },
+        "material": "Cobre",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tubo da placa 8",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (0.05)*cos(Inclinacao) - (0.08 - 0.006)*sin(Inclinacao)",
+                "v": "AlturaFrente + (0.05)*sin(Inclinacao) + (0.08 - 0.006)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.05)*cos(Inclinacao) - (0.08 - 0.006)*sin(Inclinacao)",
+                "v": "AlturaFrente + (Comprimento - 0.05)*sin(Inclinacao) + (0.08 - 0.006)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.05)*cos(Inclinacao) - (0.08 - 0.004)*sin(Inclinacao)",
+                "v": "AlturaFrente + (Comprimento - 0.05)*sin(Inclinacao) + (0.08 - 0.004)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (0.05)*cos(Inclinacao) - (0.08 - 0.004)*sin(Inclinacao)",
+                "v": "AlturaFrente + (0.05)*sin(Inclinacao) + (0.08 - 0.004)*cos(Inclinacao)"
+              }
+            ],
+            "offset": "-Largura/2 + 8*Largura/10 - 0.004",
+            "depth": "0.008"
+          }
+        },
+        "material": "Cobre",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tubo da placa 9",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (0.05)*cos(Inclinacao) - (0.08 - 0.006)*sin(Inclinacao)",
+                "v": "AlturaFrente + (0.05)*sin(Inclinacao) + (0.08 - 0.006)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.05)*cos(Inclinacao) - (0.08 - 0.006)*sin(Inclinacao)",
+                "v": "AlturaFrente + (Comprimento - 0.05)*sin(Inclinacao) + (0.08 - 0.006)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.05)*cos(Inclinacao) - (0.08 - 0.004)*sin(Inclinacao)",
+                "v": "AlturaFrente + (Comprimento - 0.05)*sin(Inclinacao) + (0.08 - 0.004)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (0.05)*cos(Inclinacao) - (0.08 - 0.004)*sin(Inclinacao)",
+                "v": "AlturaFrente + (0.05)*sin(Inclinacao) + (0.08 - 0.004)*cos(Inclinacao)"
+              }
+            ],
+            "offset": "-Largura/2 + 9*Largura/10 - 0.004",
+            "depth": "0.008"
+          }
+        },
+        "material": "Cobre",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Entrada de água fria",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(-Comprimento/2*cos(Inclinacao) + (0.06)*cos(Inclinacao) - (0.04)*sin(Inclinacao)) - 0.011",
+                "v": "AlturaFrente + (0.06)*sin(Inclinacao) + (0.04)*cos(Inclinacao)",
+                "radius": "0.011"
+              },
+              {
+                "u": "(-Comprimento/2*cos(Inclinacao) + (0.06)*cos(Inclinacao) - (0.04)*sin(Inclinacao)) + 0.011",
+                "v": "AlturaFrente + (0.06)*sin(Inclinacao) + (0.04)*cos(Inclinacao)",
+                "radius": "0.011"
+              }
+            ],
+            "offset": "-Largura/2 - 0.06",
+            "depth": "0.06"
+          }
+        },
+        "material": "Cobre",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída de água quente",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.06)*cos(Inclinacao) - (0.04)*sin(Inclinacao)) - 0.011",
+                "v": "AlturaFrente + (Comprimento - 0.06)*sin(Inclinacao) + (0.04)*cos(Inclinacao)",
+                "radius": "0.011"
+              },
+              {
+                "u": "(-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.06)*cos(Inclinacao) - (0.04)*sin(Inclinacao)) + 0.011",
+                "v": "AlturaFrente + (Comprimento - 0.06)*sin(Inclinacao) + (0.04)*cos(Inclinacao)",
+                "radius": "0.011"
+              }
+            ],
+            "offset": "Largura/2",
+            "depth": "0.06"
+          }
+        },
+        "material": "Cobre",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trilho esquerdo",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (0.05)*cos(Inclinacao) - (-0.03)*sin(Inclinacao)",
+                "v": "AlturaFrente + (0.05)*sin(Inclinacao) + (-0.03)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.05)*cos(Inclinacao) - (-0.03)*sin(Inclinacao)",
+                "v": "AlturaFrente + (Comprimento - 0.05)*sin(Inclinacao) + (-0.03)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.05)*cos(Inclinacao) - (0)*sin(Inclinacao)",
+                "v": "AlturaFrente + (Comprimento - 0.05)*sin(Inclinacao) + (0)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (0.05)*cos(Inclinacao) - (0)*sin(Inclinacao)",
+                "v": "AlturaFrente + (0.05)*sin(Inclinacao) + (0)*cos(Inclinacao)"
+              }
+            ],
+            "offset": "-Largura/2 + 0.05",
+            "depth": "0.03"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pé frontal esquerdo",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.05",
+            "y": "-Comprimento/2*cos(Inclinacao) + (0.12)*cos(Inclinacao) - (-0.03)*sin(Inclinacao) - 0.015",
+            "z": "0",
+            "width": "0.03",
+            "depth": "0.03",
+            "height": "AlturaFrente + (0.12)*sin(Inclinacao) + (-0.03)*cos(Inclinacao)"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pé traseiro esquerdo",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.05",
+            "y": "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.12)*cos(Inclinacao) - (-0.03)*sin(Inclinacao) - 0.015",
+            "z": "0",
+            "width": "0.03",
+            "depth": "0.03",
+            "height": "AlturaFrente + (Comprimento - 0.12)*sin(Inclinacao) + (-0.03)*cos(Inclinacao)"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Trilho direito",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (0.05)*cos(Inclinacao) - (-0.03)*sin(Inclinacao)",
+                "v": "AlturaFrente + (0.05)*sin(Inclinacao) + (-0.03)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.05)*cos(Inclinacao) - (-0.03)*sin(Inclinacao)",
+                "v": "AlturaFrente + (Comprimento - 0.05)*sin(Inclinacao) + (-0.03)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.05)*cos(Inclinacao) - (0)*sin(Inclinacao)",
+                "v": "AlturaFrente + (Comprimento - 0.05)*sin(Inclinacao) + (0)*cos(Inclinacao)"
+              },
+              {
+                "u": "-Comprimento/2*cos(Inclinacao) + (0.05)*cos(Inclinacao) - (0)*sin(Inclinacao)",
+                "v": "AlturaFrente + (0.05)*sin(Inclinacao) + (0)*cos(Inclinacao)"
+              }
+            ],
+            "offset": "Largura/2 - 0.08",
+            "depth": "0.03"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pé frontal direito",
+        "shape": {
+          "Box": {
+            "x": "Largura/2 - 0.08",
+            "y": "-Comprimento/2*cos(Inclinacao) + (0.12)*cos(Inclinacao) - (-0.03)*sin(Inclinacao) - 0.015",
+            "z": "0",
+            "width": "0.03",
+            "depth": "0.03",
+            "height": "AlturaFrente + (0.12)*sin(Inclinacao) + (-0.03)*cos(Inclinacao)"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pé traseiro direito",
+        "shape": {
+          "Box": {
+            "x": "Largura/2 - 0.08",
+            "y": "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.12)*cos(Inclinacao) - (-0.03)*sin(Inclinacao) - 0.015",
+            "z": "0",
+            "width": "0.03",
+            "depth": "0.03",
+            "height": "AlturaFrente + (Comprimento - 0.12)*sin(Inclinacao) + (-0.03)*cos(Inclinacao)"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      }
+    ],
+    "mep": {
+      "Fixture": {
+        "drain_units": 0,
+        "supply_weight": 0,
+        "hot_water": true
+      }
+    },
+    "connectors": [
+      {
+        "name": "Água fria",
+        "system": "ColdWater",
+        "x": "-Largura/2 - 0.06",
+        "y": "-Comprimento/2*cos(Inclinacao) + (0.06)*cos(Inclinacao) - (0.04)*sin(Inclinacao)",
+        "z": "AlturaFrente + (0.06)*sin(Inclinacao) + (0.04)*cos(Inclinacao)",
+        "direction": "Left",
+        "diameter": "0.022"
+      },
+      {
+        "name": "Água quente",
+        "system": "HotWater",
+        "x": "Largura/2 + 0.06",
+        "y": "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.06)*cos(Inclinacao) - (0.04)*sin(Inclinacao)",
+        "z": "AlturaFrente + (Comprimento - 0.06)*sin(Inclinacao) + (0.04)*cos(Inclinacao)",
+        "direction": "Right",
+        "diameter": "0.022"
+      }
+    ]
+  },
+  "types": [
+    {
+      "name": "Coletor solar 1,0 x 2,0 m",
+      "values": {},
+      "info": {
+        "description": "Coletor solar plano para aquecimento de água, caixa de alumínio com vidro e placa absorvedora de aletas de cobre, em suporte inclinado; inclinação ≈ latitude + 10° (NBR 15569)"
+      }
+    },
+    {
+      "name": "Coletor solar 1,0 x 1,5 m",
+      "values": {
+        "Comprimento": 1.5
+      },
+      "info": {
+        "description": "Coletor solar plano para aquecimento de água, caixa de alumínio com vidro e placa absorvedora de aletas de cobre, em suporte inclinado; inclinação ≈ latitude + 10° (NBR 15569)"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "name": "Alumínio anodizado",
+      "color": [
+        206,
+        208,
+        210
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Placa absorvedora",
+      "color": [
+        24,
+        26,
+        32
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Vidro temperado",
+      "color": [
+        205,
+        228,
+        232
+      ],
+      "class": "Glass",
+      "finish": "Polished",
+      "transparency": 0.7
+    },
+    {
+      "name": "Cobre",
+      "color": [
+        184,
+        115,
+        72
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Aço galvanizado",
+      "color": [
+        160,
+        165,
+        170
+      ],
+      "class": "Metal",
+      "finish": "Matte",
+      "transparency": 0
+    }
+  ]
+}

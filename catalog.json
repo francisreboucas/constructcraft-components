@@ -728,6 +728,47 @@
       ]
     },
     {
+      "file": "components/electrical/camera-cftv.ccomp",
+      "thumbnail": "thumbnails/electrical/camera-cftv.png",
+      "component": "Câmera de CFTV",
+      "author": "Francis Rebouças",
+      "kind": "Electrical",
+      "mep": null,
+      "parameters": [
+        "Elevacao"
+      ],
+      "types": [
+        {
+          "name": "Câmera bullet de CFTV",
+          "values": {
+            "Elevacao": 2.6
+          },
+          "description": "Câmera de segurança tipo bullet IP com infravermelho, caixa de passagem e suporte de parede articulado; inclinada 20° para baixo"
+        }
+      ]
+    },
+    {
+      "file": "components/electrical/carregador-veicular.ccomp",
+      "thumbnail": "thumbnails/electrical/carregador-veicular.png",
+      "component": "Carregador veicular (wallbox)",
+      "author": "Francis Rebouças",
+      "kind": "Electrical",
+      "mep": {
+        "Device": {
+          "device": "DedicatedOutlet",
+          "power": 7400.0
+        }
+      },
+      "parameters": [],
+      "types": [
+        {
+          "name": "Carregador veicular 7,4 kW",
+          "values": {},
+          "description": "Carregador veicular de parede (wallbox) monofásico de 7,4 kW (32 A, 230 V), cabo Tipo 2 de 5 m enrolado no suporte; circuito exclusivo com DR tipo A e DPS (NBR 5410, NBR 17019)"
+        }
+      ]
+    },
+    {
       "file": "components/electrical/interruptor.ccomp",
       "thumbnail": "thumbnails/electrical/interruptor.png",
       "component": "Interruptor de embutir",
@@ -789,6 +830,99 @@
       ]
     },
     {
+      "file": "components/electrical/inversor-solar.ccomp",
+      "thumbnail": "thumbnails/electrical/inversor-solar.png",
+      "component": "Inversor solar",
+      "author": "Francis Rebouças",
+      "kind": "Electrical",
+      "mep": null,
+      "parameters": [
+        "Elevacao"
+      ],
+      "types": [
+        {
+          "name": "Inversor solar 5 kW",
+          "values": {
+            "Elevacao": 1.2
+          },
+          "description": "Inversor fotovoltaico monofásico de 5 kW conectado à rede, com dissipador de aletas, visor e chave seccionadora CC, e string box com DPS e fusíveis ao lado; instalar à sombra, com 30 cm livres em volta"
+        }
+      ]
+    },
+    {
+      "file": "components/electrical/modulo-fotovoltaico.ccomp",
+      "thumbnail": "thumbnails/electrical/modulo-fotovoltaico.png",
+      "component": "Módulo fotovoltaico",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Comprimento",
+        "Inclinacao",
+        "AlturaFrente"
+      ],
+      "types": [
+        {
+          "name": "Módulo fotovoltaico 550 W - 20°",
+          "values": {
+            "Largura": 1.134,
+            "Comprimento": 2.278,
+            "Inclinacao": 20.0,
+            "AlturaFrente": 0.3
+          },
+          "description": "Módulo fotovoltaico monocristalino de 550 W (2,28 x 1,13 m, 144 meias-células) com moldura de alumínio, em estrutura de alumínio para solo ou laje inclinada; repita lado a lado para formar o arranjo"
+        },
+        {
+          "name": "Módulo fotovoltaico 550 W - 10°",
+          "values": {
+            "Largura": 1.134,
+            "Comprimento": 2.278,
+            "Inclinacao": 10.0,
+            "AlturaFrente": 0.3
+          },
+          "description": "Módulo fotovoltaico monocristalino de 550 W (2,28 x 1,13 m, 144 meias-células) com moldura de alumínio, em estrutura de alumínio para solo ou laje inclinada; repita lado a lado para formar o arranjo"
+        },
+        {
+          "name": "Módulo fotovoltaico 550 W - 30°",
+          "values": {
+            "Largura": 1.134,
+            "Comprimento": 2.278,
+            "Inclinacao": 30.0,
+            "AlturaFrente": 0.3
+          },
+          "description": "Módulo fotovoltaico monocristalino de 550 W (2,28 x 1,13 m, 144 meias-células) com moldura de alumínio, em estrutura de alumínio para solo ou laje inclinada; repita lado a lado para formar o arranjo"
+        }
+      ]
+    },
+    {
+      "file": "components/electrical/padrao-entrada.ccomp",
+      "thumbnail": "thumbnails/electrical/padrao-entrada.png",
+      "component": "Padrão de entrada de energia",
+      "author": "Francis Rebouças",
+      "kind": "Electrical",
+      "mep": null,
+      "parameters": [
+        "AlturaPoste"
+      ],
+      "types": [
+        {
+          "name": "Padrão de entrada monofásico",
+          "values": {
+            "AlturaPoste": 6.0
+          },
+          "description": "Padrão de entrada de energia monofásico em poste de aço galvanizado de 6 m acima do solo, armação secundária com isolador roldana, caixa de medição de policarbonato com visor e disjuntor geral, eletroduto de descida e haste de aterramento com caixa de inspeção; confira o padrão da concessionária local"
+        },
+        {
+          "name": "Padrão de entrada monofásico 7 m",
+          "values": {
+            "AlturaPoste": 7.0
+          },
+          "description": "Padrão de entrada monofásico com poste de 7 m acima do solo, para travessia de rua mais alta"
+        }
+      ]
+    },
+    {
       "file": "components/electrical/ponto-telecom.ccomp",
       "thumbnail": "thumbnails/electrical/ponto-telecom.png",
       "component": "Ponto de telecomunicações",
@@ -831,6 +965,26 @@
             "TV": 1.0
           },
           "description": "Tomada RJ45 e coaxial em caixa 4x4"
+        }
+      ]
+    },
+    {
+      "file": "components/electrical/porteiro-eletronico.ccomp",
+      "thumbnail": "thumbnails/electrical/porteiro-eletronico.png",
+      "component": "Videoporteiro",
+      "author": "Francis Rebouças",
+      "kind": "Electrical",
+      "mep": null,
+      "parameters": [
+        "Elevacao"
+      ],
+      "types": [
+        {
+          "name": "Videoporteiro de sobrepor",
+          "values": {
+            "Elevacao": 1.4
+          },
+          "description": "Módulo externo de videoporteiro de sobrepor em alumínio escovado, com câmera, alto-falante, microfone, botão de chamada iluminado e chapéu contra chuva; a central fica dentro do imóvel"
         }
       ]
     },
@@ -890,6 +1044,22 @@
             "AnguloPorta": 0.0
           },
           "description": "Quadro de distribuição de embutir, 36 módulos DIN"
+        }
+      ]
+    },
+    {
+      "file": "components/electrical/sensor-presenca.ccomp",
+      "thumbnail": "thumbnails/electrical/sensor-presenca.png",
+      "component": "Sensor de presença de teto",
+      "author": "Francis Rebouças",
+      "kind": "Electrical",
+      "mep": null,
+      "parameters": [],
+      "types": [
+        {
+          "name": "Sensor de presença 360°",
+          "values": {},
+          "description": "Sensor de presença infravermelho passivo de sobrepor no teto, 360°, alcance de 6 m de diâmetro a 2,5 m de altura, com fotocélula e temporizador; comanda a iluminação do ambiente"
         }
       ]
     },
@@ -1535,6 +1705,39 @@
             "AberturaGaveta": 0.0
           },
           "description": "Fritadeira elétrica sem óleo de 7 litros, com painel digital e gaveta com cesto antiaderente"
+        }
+      ]
+    },
+    {
+      "file": "components/furniture/ar-condicionado-cassete.ccomp",
+      "thumbnail": "thumbnails/furniture/ar-condicionado-cassete.png",
+      "component": "Ar-condicionado cassete",
+      "author": "Francis Rebouças",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Painel",
+        "Corpo",
+        "AlturaCorpo"
+      ],
+      "types": [
+        {
+          "name": "Ar-condicionado cassete 36.000 BTU/h",
+          "values": {
+            "Painel": 0.95,
+            "Corpo": 0.84,
+            "AlturaCorpo": 0.25
+          },
+          "description": "Unidade interna de ar-condicionado tipo cassete de 4 vias, corpo embutido no forro e painel com grelha de retorno e aletas"
+        },
+        {
+          "name": "Ar-condicionado cassete 18.000 BTU/h",
+          "values": {
+            "Painel": 0.62,
+            "Corpo": 0.57,
+            "AlturaCorpo": 0.26
+          },
+          "description": "Unidade interna de ar-condicionado tipo cassete de 4 vias, corpo embutido no forro e painel com grelha de retorno e aletas"
         }
       ]
     },
@@ -2367,6 +2570,26 @@
             "AlturaDivisoria": 0.35
           },
           "description": "Estação de trabalho de escritório: tampo de melamina com borda frontal arredondada, pés de aço em T com sapatas niveladoras, calha para cabos, painel frontal de chapa perfurada e divisória de tecido sobre o tampo"
+        }
+      ]
+    },
+    {
+      "file": "components/furniture/exaustor-banheiro.ccomp",
+      "thumbnail": "thumbnails/furniture/exaustor-banheiro.png",
+      "component": "Exaustor de banheiro",
+      "author": "Francis Rebouças",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Largura"
+      ],
+      "types": [
+        {
+          "name": "Exaustor de teto 150 m³/h",
+          "values": {
+            "Largura": 0.25
+          },
+          "description": "Exaustor axial de teto para banheiros sem janela, 150 m³/h, grelha quadrada e duto de 100 mm até a fachada ou o shaft; acionado com a luz ou por sensor de umidade"
         }
       ]
     },
@@ -3416,6 +3639,102 @@
       ]
     },
     {
+      "file": "components/people/cadeirante.ccomp",
+      "thumbnail": "thumbnails/people/cadeirante.png",
+      "component": "Pessoa em cadeira de rodas",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [],
+      "types": [
+        {
+          "name": "Pessoa em cadeira de rodas",
+          "values": {},
+          "description": "Figura genérica de pessoa em cadeira de rodas manual dobrável (rodas aro 24, 0,66 m de largura, 1,05 m de comprimento), com o módulo de referência de 0,80 x 1,20 m da NBR 9050 desenhado em planta; para verificar circulação, áreas de manobra e aproximação (a frente para -Y)"
+        }
+      ]
+    },
+    {
+      "file": "components/people/crianca.ccomp",
+      "thumbnail": "thumbnails/people/crianca.png",
+      "component": "Criança",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [],
+      "types": [
+        {
+          "name": "Criança 1,15 m",
+          "values": {},
+          "description": "Figura genérica de criança de cerca de 6 anos em pé, 1,15 m, para escala de playgrounds, escolas e áreas infantis"
+        }
+      ]
+    },
+    {
+      "file": "components/people/pessoa-caminhando.ccomp",
+      "thumbnail": "thumbnails/people/pessoa-caminhando.png",
+      "component": "Pessoa caminhando",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [],
+      "types": [
+        {
+          "name": "Pessoa caminhando 1,72 m",
+          "values": {},
+          "description": "Figura humana genérica caminhando, para escala e circulação, 1,72 m: camisa de manga longa e calça (a frente para -Y)"
+        }
+      ]
+    },
+    {
+      "file": "components/people/pessoa-em-pe-vestido.ccomp",
+      "thumbnail": "thumbnails/people/pessoa-em-pe-vestido.png",
+      "component": "Pessoa em pé de vestido",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [],
+      "types": [
+        {
+          "name": "Pessoa em pé de vestido 1,65 m",
+          "values": {},
+          "description": "Figura humana genérica em pé para escala, 1,65 m, de vestido e cabelo longo (a frente para -Y, a origem no chão entre os pés)"
+        }
+      ]
+    },
+    {
+      "file": "components/people/pessoa-em-pe.ccomp",
+      "thumbnail": "thumbnails/people/pessoa-em-pe.png",
+      "component": "Pessoa em pé",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [],
+      "types": [
+        {
+          "name": "Pessoa em pé 1,75 m",
+          "values": {},
+          "description": "Figura humana genérica em pé para escala, 1,75 m: camiseta, calça jeans e tênis (a frente para -Y, a origem no chão entre os pés)"
+        }
+      ]
+    },
+    {
+      "file": "components/people/pessoa-sentada.ccomp",
+      "thumbnail": "thumbnails/people/pessoa-sentada.png",
+      "component": "Pessoa sentada",
+      "author": "Francis Rebouças",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [],
+      "types": [
+        {
+          "name": "Pessoa sentada 1,70 m",
+          "values": {},
+          "description": "Figura humana genérica sentada, para colocar em cadeiras e sofás com assento a 45 cm: a origem fica no chão sob o quadril, que fica 7 cm atrás dela; os pés vão 45 cm à frente (a frente para -Y)"
+        }
+      ]
+    },
+    {
       "file": "components/planting/agapanto.ccomp",
       "thumbnail": "thumbnails/planting/agapanto.png",
       "component": "Agapanto",
@@ -4016,6 +4335,48 @@
       ]
     },
     {
+      "file": "components/plumbing/abrigo-gas.ccomp",
+      "thumbnail": "thumbnails/plumbing/abrigo-gas.png",
+      "component": "Abrigo de gás",
+      "author": "Francis Rebouças",
+      "kind": "Plumbing",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Profundidade",
+        "Altura",
+        "DiametroBotijao",
+        "AlturaBotijao",
+        "AnguloPorta"
+      ],
+      "types": [
+        {
+          "name": "Abrigo de gás 2 x P13",
+          "values": {
+            "Largura": 0.9,
+            "Profundidade": 0.45,
+            "Altura": 0.85,
+            "DiametroBotijao": 0.36,
+            "AlturaBotijao": 0.46,
+            "AnguloPorta": 0.0
+          },
+          "description": "Abrigo de concreto ventilado para dois botijões de GLP com regulador, coletor e válvula de bloqueio (NBR 13523); botijões de 13 kg"
+        },
+        {
+          "name": "Abrigo de gás 2 x P45",
+          "values": {
+            "Largura": 1.1,
+            "Profundidade": 0.55,
+            "Altura": 1.55,
+            "DiametroBotijao": 0.37,
+            "AlturaBotijao": 1.27,
+            "AnguloPorta": 0.0
+          },
+          "description": "Abrigo de concreto ventilado para dois botijões de GLP com regulador, coletor e válvula de bloqueio (NBR 13523); cilindros de 45 kg"
+        }
+      ]
+    },
+    {
       "file": "components/plumbing/aquecedor-gas.ccomp",
       "thumbnail": "thumbnails/plumbing/aquecedor-gas.png",
       "component": "Aquecedor a gás de passagem",
@@ -4378,6 +4739,32 @@
       ]
     },
     {
+      "file": "components/plumbing/cavalete-hidrometro.ccomp",
+      "thumbnail": "thumbnails/plumbing/cavalete-hidrometro.png",
+      "component": "Cavalete com hidrômetro",
+      "author": "Francis Rebouças",
+      "kind": "Plumbing",
+      "mep": {
+        "Fixture": {
+          "drain_units": 0.0,
+          "hot_water": false,
+          "supply_weight": 0.0
+        }
+      },
+      "parameters": [
+        "AnguloPorta"
+      ],
+      "types": [
+        {
+          "name": "Cavalete com hidrômetro DN 20",
+          "values": {
+            "AnguloPorta": 0.0
+          },
+          "description": "Cavalete de PVC DN 20 (3/4\") com registro de esfera, hidrômetro de 1,5 m³/h e tubete, em abrigo de concreto com porta de chapa e visor, no muro de divisa, conforme o padrão da concessionária"
+        }
+      ]
+    },
+    {
       "file": "components/plumbing/chuveiro-eletrico.ccomp",
       "thumbnail": "thumbnails/plumbing/chuveiro-eletrico.png",
       "component": "Chuveiro elétrico",
@@ -4402,6 +4789,48 @@
             "Braco": 0.3
           },
           "description": "Aquecimento no ponto: ligar também um ponto de TUE de 5500 W ou 7500 W"
+        }
+      ]
+    },
+    {
+      "file": "components/plumbing/coletor-solar.ccomp",
+      "thumbnail": "thumbnails/plumbing/coletor-solar.png",
+      "component": "Coletor solar",
+      "author": "Francis Rebouças",
+      "kind": "Plumbing",
+      "mep": {
+        "Fixture": {
+          "drain_units": 0.0,
+          "hot_water": true,
+          "supply_weight": 0.0
+        }
+      },
+      "parameters": [
+        "Largura",
+        "Comprimento",
+        "Inclinacao",
+        "AlturaFrente"
+      ],
+      "types": [
+        {
+          "name": "Coletor solar 1,0 x 2,0 m",
+          "values": {
+            "Largura": 1.0,
+            "Comprimento": 2.0,
+            "Inclinacao": 25.0,
+            "AlturaFrente": 0.25
+          },
+          "description": "Coletor solar plano para aquecimento de água, caixa de alumínio com vidro e placa absorvedora de aletas de cobre, em suporte inclinado; inclinação ≈ latitude + 10° (NBR 15569)"
+        },
+        {
+          "name": "Coletor solar 1,0 x 1,5 m",
+          "values": {
+            "Largura": 1.0,
+            "Comprimento": 1.5,
+            "Inclinacao": 25.0,
+            "AlturaFrente": 0.25
+          },
+          "description": "Coletor solar plano para aquecimento de água, caixa de alumínio com vidro e placa absorvedora de aletas de cobre, em suporte inclinado; inclinação ≈ latitude + 10° (NBR 15569)"
         }
       ]
     },
@@ -4960,6 +5389,50 @@
             "AnguloPortaFiltro": 0.0
           },
           "description": "Purificador de água compacto refrigerado por placa eletrônica, de bancada ou de parede, água natural e gelada; refil na lateral"
+        }
+      ]
+    },
+    {
+      "file": "components/plumbing/reservatorio-termico.ccomp",
+      "thumbnail": "thumbnails/plumbing/reservatorio-termico.png",
+      "component": "Reservatório térmico",
+      "author": "Francis Rebouças",
+      "kind": "Plumbing",
+      "mep": {
+        "Fixture": {
+          "drain_units": 0.0,
+          "hot_water": true,
+          "supply_weight": 0.0
+        }
+      },
+      "parameters": [
+        "Comprimento",
+        "Diametro"
+      ],
+      "types": [
+        {
+          "name": "Reservatório térmico 300 L",
+          "values": {
+            "Comprimento": 1.25,
+            "Diametro": 0.6
+          },
+          "description": "Reservatório térmico horizontal de aço inox isolado com poliuretano, revestimento de alumínio, resistência elétrica de apoio com termostato, para aquecimento solar de baixa pressão (NBR 15569)"
+        },
+        {
+          "name": "Reservatório térmico 200 L",
+          "values": {
+            "Comprimento": 0.95,
+            "Diametro": 0.6
+          },
+          "description": "Reservatório térmico horizontal de aço inox isolado com poliuretano, revestimento de alumínio, resistência elétrica de apoio com termostato, para aquecimento solar de baixa pressão (NBR 15569)"
+        },
+        {
+          "name": "Reservatório térmico 500 L",
+          "values": {
+            "Comprimento": 1.6,
+            "Diametro": 0.72
+          },
+          "description": "Reservatório térmico horizontal de aço inox isolado com poliuretano, revestimento de alumínio, resistência elétrica de apoio com termostato, para aquecimento solar de baixa pressão (NBR 15569)"
         }
       ]
     },

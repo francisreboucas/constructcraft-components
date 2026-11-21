@@ -21,7 +21,8 @@ export type FolderId =
   | 'vehicles'
   | 'site'
   | 'signage'
-  | 'fire';
+  | 'fire'
+  | 'people';
 
 export interface FolderInfo {
   id: FolderId;
@@ -43,6 +44,7 @@ const FOLDER_ORDER: readonly FolderId[] = [
   'site',
   'signage',
   'fire',
+  'people',
 ];
 
 export const FOLDERS: readonly FolderInfo[] = FOLDER_ORDER.map((id) => ({ id, label: t.folders[id] }));

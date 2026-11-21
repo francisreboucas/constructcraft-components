@@ -1,0 +1,1102 @@
+{
+  "component": "Abrigo de gás",
+  "def": {
+    "kind": "Plumbing",
+    "params": [
+      {
+        "name": "Largura",
+        "value": 0.9,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Profundidade",
+        "value": 0.45,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Altura",
+        "value": 0.85,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "DiametroBotijao",
+        "value": 0.36,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "AlturaBotijao",
+        "value": 0.46,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "AnguloPorta",
+        "value": 0,
+        "kind": "Angle",
+        "instance": true
+      }
+    ],
+    "items": [
+      {
+        "name": "Abrigo simplificado",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2",
+            "y": "-Profundidade",
+            "z": "0",
+            "width": "Largura",
+            "depth": "Profundidade",
+            "height": "Altura"
+          }
+        },
+        "material": "Concreto",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Fundo",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2",
+            "y": "-0.05",
+            "z": "0",
+            "width": "Largura",
+            "depth": "0.05",
+            "height": "Altura"
+          }
+        },
+        "material": "Concreto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lateral esquerda",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2",
+            "y": "-Profundidade",
+            "z": "0",
+            "width": "0.05",
+            "depth": "Profundidade - 0.05",
+            "height": "Altura"
+          }
+        },
+        "material": "Concreto",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lateral direita",
+        "shape": {
+          "Box": {
+            "x": "Largura/2 - 0.05",
+            "y": "-Profundidade",
+            "z": "0",
+            "width": "0.05",
+            "depth": "Profundidade - 0.05",
+            "height": "Altura"
+          }
+        },
+        "material": "Concreto",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Laje de cobertura",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 - 0.03",
+            "y": "-Profundidade - 0.04",
+            "z": "Altura",
+            "width": "Largura + 0.06",
+            "depth": "Profundidade + 0.04",
+            "height": "0.05"
+          }
+        },
+        "material": "Concreto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Piso",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.05",
+            "y": "-Profundidade",
+            "z": "0",
+            "width": "Largura - 0.1",
+            "depth": "Profundidade - 0.05",
+            "height": "0.05"
+          }
+        },
+        "material": "Concreto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porta esquerda",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-Largura/2 + 0.05) + 0.002*cos(AnguloPorta) - 0*sin(AnguloPorta)",
+                "v": "(-Profundidade) - 0.002*sin(AnguloPorta) - 0*cos(AnguloPorta)"
+              },
+              {
+                "u": "(-Largura/2 + 0.05) + ((Largura/2 - 0.05) - 0.004)*cos(AnguloPorta) - 0*sin(AnguloPorta)",
+                "v": "(-Profundidade) - ((Largura/2 - 0.05) - 0.004)*sin(AnguloPorta) - 0*cos(AnguloPorta)"
+              },
+              {
+                "u": "(-Largura/2 + 0.05) + ((Largura/2 - 0.05) - 0.004)*cos(AnguloPorta) - 0.004*sin(AnguloPorta)",
+                "v": "(-Profundidade) - ((Largura/2 - 0.05) - 0.004)*sin(AnguloPorta) - 0.004*cos(AnguloPorta)"
+              },
+              {
+                "u": "(-Largura/2 + 0.05) + 0.002*cos(AnguloPorta) - 0.004*sin(AnguloPorta)",
+                "v": "(-Profundidade) - 0.002*sin(AnguloPorta) - 0.004*cos(AnguloPorta)"
+              }
+            ],
+            "offset": "0.06",
+            "depth": "Altura - 0.08"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porta esquerda - veneziana 1",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-Largura/2 + 0.05) + 0.04*cos(AnguloPorta) - 0.004*sin(AnguloPorta)",
+                "v": "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.004*cos(AnguloPorta)"
+              },
+              {
+                "u": "(-Largura/2 + 0.05) + ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) - 0.004*sin(AnguloPorta)",
+                "v": "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.004*cos(AnguloPorta)"
+              },
+              {
+                "u": "(-Largura/2 + 0.05) + ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) - 0.016*sin(AnguloPorta)",
+                "v": "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.016*cos(AnguloPorta)"
+              },
+              {
+                "u": "(-Largura/2 + 0.05) + 0.04*cos(AnguloPorta) - 0.016*sin(AnguloPorta)",
+                "v": "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.016*cos(AnguloPorta)"
+              }
+            ],
+            "offset": "0.12 + 0*(Altura - 0.3)/5",
+            "depth": "0.012"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porta esquerda - veneziana 2",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-Largura/2 + 0.05) + 0.04*cos(AnguloPorta) - 0.004*sin(AnguloPorta)",
+                "v": "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.004*cos(AnguloPorta)"
+              },
+              {
+                "u": "(-Largura/2 + 0.05) + ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) - 0.004*sin(AnguloPorta)",
+                "v": "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.004*cos(AnguloPorta)"
+              },
+              {
+                "u": "(-Largura/2 + 0.05) + ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) - 0.016*sin(AnguloPorta)",
+                "v": "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.016*cos(AnguloPorta)"
+              },
+              {
+                "u": "(-Largura/2 + 0.05) + 0.04*cos(AnguloPorta) - 0.016*sin(AnguloPorta)",
+                "v": "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.016*cos(AnguloPorta)"
+              }
+            ],
+            "offset": "0.12 + 1*(Altura - 0.3)/5",
+            "depth": "0.012"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porta esquerda - veneziana 3",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-Largura/2 + 0.05) + 0.04*cos(AnguloPorta) - 0.004*sin(AnguloPorta)",
+                "v": "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.004*cos(AnguloPorta)"
+              },
+              {
+                "u": "(-Largura/2 + 0.05) + ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) - 0.004*sin(AnguloPorta)",
+                "v": "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.004*cos(AnguloPorta)"
+              },
+              {
+                "u": "(-Largura/2 + 0.05) + ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) - 0.016*sin(AnguloPorta)",
+                "v": "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.016*cos(AnguloPorta)"
+              },
+              {
+                "u": "(-Largura/2 + 0.05) + 0.04*cos(AnguloPorta) - 0.016*sin(AnguloPorta)",
+                "v": "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.016*cos(AnguloPorta)"
+              }
+            ],
+            "offset": "0.12 + 2*(Altura - 0.3)/5",
+            "depth": "0.012"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porta esquerda - veneziana 4",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-Largura/2 + 0.05) + 0.04*cos(AnguloPorta) - 0.004*sin(AnguloPorta)",
+                "v": "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.004*cos(AnguloPorta)"
+              },
+              {
+                "u": "(-Largura/2 + 0.05) + ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) - 0.004*sin(AnguloPorta)",
+                "v": "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.004*cos(AnguloPorta)"
+              },
+              {
+                "u": "(-Largura/2 + 0.05) + ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) - 0.016*sin(AnguloPorta)",
+                "v": "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.016*cos(AnguloPorta)"
+              },
+              {
+                "u": "(-Largura/2 + 0.05) + 0.04*cos(AnguloPorta) - 0.016*sin(AnguloPorta)",
+                "v": "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.016*cos(AnguloPorta)"
+              }
+            ],
+            "offset": "0.12 + 3*(Altura - 0.3)/5",
+            "depth": "0.012"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porta esquerda - veneziana 5",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-Largura/2 + 0.05) + 0.04*cos(AnguloPorta) - 0.004*sin(AnguloPorta)",
+                "v": "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.004*cos(AnguloPorta)"
+              },
+              {
+                "u": "(-Largura/2 + 0.05) + ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) - 0.004*sin(AnguloPorta)",
+                "v": "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.004*cos(AnguloPorta)"
+              },
+              {
+                "u": "(-Largura/2 + 0.05) + ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) - 0.016*sin(AnguloPorta)",
+                "v": "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.016*cos(AnguloPorta)"
+              },
+              {
+                "u": "(-Largura/2 + 0.05) + 0.04*cos(AnguloPorta) - 0.016*sin(AnguloPorta)",
+                "v": "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.016*cos(AnguloPorta)"
+              }
+            ],
+            "offset": "0.12 + 4*(Altura - 0.3)/5",
+            "depth": "0.012"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porta esquerda - veneziana 6",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-Largura/2 + 0.05) + 0.04*cos(AnguloPorta) - 0.004*sin(AnguloPorta)",
+                "v": "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.004*cos(AnguloPorta)"
+              },
+              {
+                "u": "(-Largura/2 + 0.05) + ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) - 0.004*sin(AnguloPorta)",
+                "v": "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.004*cos(AnguloPorta)"
+              },
+              {
+                "u": "(-Largura/2 + 0.05) + ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) - 0.016*sin(AnguloPorta)",
+                "v": "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.016*cos(AnguloPorta)"
+              },
+              {
+                "u": "(-Largura/2 + 0.05) + 0.04*cos(AnguloPorta) - 0.016*sin(AnguloPorta)",
+                "v": "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.016*cos(AnguloPorta)"
+              }
+            ],
+            "offset": "0.12 + 5*(Altura - 0.3)/5",
+            "depth": "0.012"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porta direita",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(Largura/2 - 0.05) - 0.002*cos(AnguloPorta) + 0*sin(AnguloPorta)",
+                "v": "(-Profundidade) - 0.002*sin(AnguloPorta) - 0*cos(AnguloPorta)"
+              },
+              {
+                "u": "(Largura/2 - 0.05) - ((Largura/2 - 0.05) - 0.004)*cos(AnguloPorta) + 0*sin(AnguloPorta)",
+                "v": "(-Profundidade) - ((Largura/2 - 0.05) - 0.004)*sin(AnguloPorta) - 0*cos(AnguloPorta)"
+              },
+              {
+                "u": "(Largura/2 - 0.05) - ((Largura/2 - 0.05) - 0.004)*cos(AnguloPorta) + 0.004*sin(AnguloPorta)",
+                "v": "(-Profundidade) - ((Largura/2 - 0.05) - 0.004)*sin(AnguloPorta) - 0.004*cos(AnguloPorta)"
+              },
+              {
+                "u": "(Largura/2 - 0.05) - 0.002*cos(AnguloPorta) + 0.004*sin(AnguloPorta)",
+                "v": "(-Profundidade) - 0.002*sin(AnguloPorta) - 0.004*cos(AnguloPorta)"
+              }
+            ],
+            "offset": "0.06",
+            "depth": "Altura - 0.08"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porta direita - veneziana 1",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(Largura/2 - 0.05) - 0.04*cos(AnguloPorta) + 0.004*sin(AnguloPorta)",
+                "v": "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.004*cos(AnguloPorta)"
+              },
+              {
+                "u": "(Largura/2 - 0.05) - ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) + 0.004*sin(AnguloPorta)",
+                "v": "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.004*cos(AnguloPorta)"
+              },
+              {
+                "u": "(Largura/2 - 0.05) - ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) + 0.016*sin(AnguloPorta)",
+                "v": "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.016*cos(AnguloPorta)"
+              },
+              {
+                "u": "(Largura/2 - 0.05) - 0.04*cos(AnguloPorta) + 0.016*sin(AnguloPorta)",
+                "v": "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.016*cos(AnguloPorta)"
+              }
+            ],
+            "offset": "0.12 + 0*(Altura - 0.3)/5",
+            "depth": "0.012"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porta direita - veneziana 2",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(Largura/2 - 0.05) - 0.04*cos(AnguloPorta) + 0.004*sin(AnguloPorta)",
+                "v": "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.004*cos(AnguloPorta)"
+              },
+              {
+                "u": "(Largura/2 - 0.05) - ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) + 0.004*sin(AnguloPorta)",
+                "v": "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.004*cos(AnguloPorta)"
+              },
+              {
+                "u": "(Largura/2 - 0.05) - ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) + 0.016*sin(AnguloPorta)",
+                "v": "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.016*cos(AnguloPorta)"
+              },
+              {
+                "u": "(Largura/2 - 0.05) - 0.04*cos(AnguloPorta) + 0.016*sin(AnguloPorta)",
+                "v": "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.016*cos(AnguloPorta)"
+              }
+            ],
+            "offset": "0.12 + 1*(Altura - 0.3)/5",
+            "depth": "0.012"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porta direita - veneziana 3",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(Largura/2 - 0.05) - 0.04*cos(AnguloPorta) + 0.004*sin(AnguloPorta)",
+                "v": "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.004*cos(AnguloPorta)"
+              },
+              {
+                "u": "(Largura/2 - 0.05) - ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) + 0.004*sin(AnguloPorta)",
+                "v": "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.004*cos(AnguloPorta)"
+              },
+              {
+                "u": "(Largura/2 - 0.05) - ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) + 0.016*sin(AnguloPorta)",
+                "v": "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.016*cos(AnguloPorta)"
+              },
+              {
+                "u": "(Largura/2 - 0.05) - 0.04*cos(AnguloPorta) + 0.016*sin(AnguloPorta)",
+                "v": "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.016*cos(AnguloPorta)"
+              }
+            ],
+            "offset": "0.12 + 2*(Altura - 0.3)/5",
+            "depth": "0.012"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porta direita - veneziana 4",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(Largura/2 - 0.05) - 0.04*cos(AnguloPorta) + 0.004*sin(AnguloPorta)",
+                "v": "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.004*cos(AnguloPorta)"
+              },
+              {
+                "u": "(Largura/2 - 0.05) - ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) + 0.004*sin(AnguloPorta)",
+                "v": "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.004*cos(AnguloPorta)"
+              },
+              {
+                "u": "(Largura/2 - 0.05) - ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) + 0.016*sin(AnguloPorta)",
+                "v": "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.016*cos(AnguloPorta)"
+              },
+              {
+                "u": "(Largura/2 - 0.05) - 0.04*cos(AnguloPorta) + 0.016*sin(AnguloPorta)",
+                "v": "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.016*cos(AnguloPorta)"
+              }
+            ],
+            "offset": "0.12 + 3*(Altura - 0.3)/5",
+            "depth": "0.012"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porta direita - veneziana 5",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(Largura/2 - 0.05) - 0.04*cos(AnguloPorta) + 0.004*sin(AnguloPorta)",
+                "v": "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.004*cos(AnguloPorta)"
+              },
+              {
+                "u": "(Largura/2 - 0.05) - ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) + 0.004*sin(AnguloPorta)",
+                "v": "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.004*cos(AnguloPorta)"
+              },
+              {
+                "u": "(Largura/2 - 0.05) - ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) + 0.016*sin(AnguloPorta)",
+                "v": "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.016*cos(AnguloPorta)"
+              },
+              {
+                "u": "(Largura/2 - 0.05) - 0.04*cos(AnguloPorta) + 0.016*sin(AnguloPorta)",
+                "v": "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.016*cos(AnguloPorta)"
+              }
+            ],
+            "offset": "0.12 + 4*(Altura - 0.3)/5",
+            "depth": "0.012"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porta direita - veneziana 6",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(Largura/2 - 0.05) - 0.04*cos(AnguloPorta) + 0.004*sin(AnguloPorta)",
+                "v": "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.004*cos(AnguloPorta)"
+              },
+              {
+                "u": "(Largura/2 - 0.05) - ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) + 0.004*sin(AnguloPorta)",
+                "v": "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.004*cos(AnguloPorta)"
+              },
+              {
+                "u": "(Largura/2 - 0.05) - ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) + 0.016*sin(AnguloPorta)",
+                "v": "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.016*cos(AnguloPorta)"
+              },
+              {
+                "u": "(Largura/2 - 0.05) - 0.04*cos(AnguloPorta) + 0.016*sin(AnguloPorta)",
+                "v": "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.016*cos(AnguloPorta)"
+              }
+            ],
+            "offset": "0.12 + 5*(Altura - 0.3)/5",
+            "depth": "0.012"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Botijão 1",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "-1*Largura/4",
+                "v": "0.05"
+              },
+              {
+                "u": "-1*Largura/4 + DiametroBotijao/2*0.85",
+                "v": "0.05"
+              },
+              {
+                "u": "-1*Largura/4 + DiametroBotijao/2",
+                "v": "0.09"
+              },
+              {
+                "u": "-1*Largura/4 + DiametroBotijao/2",
+                "v": "0.05 + AlturaBotijao*0.8"
+              },
+              {
+                "u": "-1*Largura/4 + DiametroBotijao/2*0.55",
+                "v": "0.05 + AlturaBotijao*0.92"
+              },
+              {
+                "u": "-1*Largura/4",
+                "v": "0.05 + AlturaBotijao*0.92"
+              }
+            ],
+            "offset": "-Profundidade/2",
+            "axis": "-1*Largura/4",
+            "angle": "360"
+          }
+        },
+        "material": "Botijão de GLP",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Alça do botijão 1",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "-1*Largura/4 + DiametroBotijao/2*0.42",
+                "v": "0.05 + AlturaBotijao*0.9"
+              },
+              {
+                "u": "-1*Largura/4 + DiametroBotijao/2*0.5",
+                "v": "0.05 + AlturaBotijao*0.9"
+              },
+              {
+                "u": "-1*Largura/4 + DiametroBotijao/2*0.5",
+                "v": "0.05 + AlturaBotijao"
+              },
+              {
+                "u": "-1*Largura/4 + DiametroBotijao/2*0.42",
+                "v": "0.05 + AlturaBotijao"
+              }
+            ],
+            "offset": "-Profundidade/2",
+            "axis": "-1*Largura/4",
+            "angle": "360"
+          }
+        },
+        "material": "Botijão de GLP",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Válvula do botijão 1",
+        "shape": {
+          "Cylinder": {
+            "x": "-1*Largura/4",
+            "y": "-Profundidade/2",
+            "z": "0.05 + AlturaBotijao*0.92",
+            "radius": "0.016",
+            "height": "0.04"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Mangueira 1",
+        "shape": {
+          "Cylinder": {
+            "x": "-1*Largura/4",
+            "y": "-Profundidade/2",
+            "z": "0.05 + AlturaBotijao*0.92 + 0.04",
+            "radius": "0.006",
+            "height": "Altura - 0.15 - (0.05 + AlturaBotijao*0.92 + 0.04)"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Botijão 2",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "1*Largura/4",
+                "v": "0.05"
+              },
+              {
+                "u": "1*Largura/4 + DiametroBotijao/2*0.85",
+                "v": "0.05"
+              },
+              {
+                "u": "1*Largura/4 + DiametroBotijao/2",
+                "v": "0.09"
+              },
+              {
+                "u": "1*Largura/4 + DiametroBotijao/2",
+                "v": "0.05 + AlturaBotijao*0.8"
+              },
+              {
+                "u": "1*Largura/4 + DiametroBotijao/2*0.55",
+                "v": "0.05 + AlturaBotijao*0.92"
+              },
+              {
+                "u": "1*Largura/4",
+                "v": "0.05 + AlturaBotijao*0.92"
+              }
+            ],
+            "offset": "-Profundidade/2",
+            "axis": "1*Largura/4",
+            "angle": "360"
+          }
+        },
+        "material": "Botijão de GLP",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Alça do botijão 2",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "1*Largura/4 + DiametroBotijao/2*0.42",
+                "v": "0.05 + AlturaBotijao*0.9"
+              },
+              {
+                "u": "1*Largura/4 + DiametroBotijao/2*0.5",
+                "v": "0.05 + AlturaBotijao*0.9"
+              },
+              {
+                "u": "1*Largura/4 + DiametroBotijao/2*0.5",
+                "v": "0.05 + AlturaBotijao"
+              },
+              {
+                "u": "1*Largura/4 + DiametroBotijao/2*0.42",
+                "v": "0.05 + AlturaBotijao"
+              }
+            ],
+            "offset": "-Profundidade/2",
+            "axis": "1*Largura/4",
+            "angle": "360"
+          }
+        },
+        "material": "Botijão de GLP",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Válvula do botijão 2",
+        "shape": {
+          "Cylinder": {
+            "x": "1*Largura/4",
+            "y": "-Profundidade/2",
+            "z": "0.05 + AlturaBotijao*0.92",
+            "radius": "0.016",
+            "height": "0.04"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Mangueira 2",
+        "shape": {
+          "Cylinder": {
+            "x": "1*Largura/4",
+            "y": "-Profundidade/2",
+            "z": "0.05 + AlturaBotijao*0.92 + 0.04",
+            "radius": "0.006",
+            "height": "Altura - 0.15 - (0.05 + AlturaBotijao*0.92 + 0.04)"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Coletor",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(-Profundidade/2) - 0.012",
+                "v": "Altura - 0.15",
+                "radius": "0.012"
+              },
+              {
+                "u": "(-Profundidade/2) + 0.012",
+                "v": "Altura - 0.15",
+                "radius": "0.012"
+              }
+            ],
+            "offset": "-Largura/4",
+            "depth": "Largura/2"
+          }
+        },
+        "material": "Cobre",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Regulador",
+        "shape": {
+          "Cylinder": {
+            "x": "Largura/4 + 0.08",
+            "y": "-Profundidade/2",
+            "z": "Altura - 0.15 - 0.04",
+            "radius": "0.035",
+            "height": "0.07"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída para a rede",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "Largura/4 + 0.08",
+                "v": "-Profundidade/2"
+              },
+              {
+                "u": "(Largura/4 + 0.08) + 0.011",
+                "v": "-Profundidade/2"
+              },
+              {
+                "u": "(Largura/4 + 0.08) + 0.011",
+                "v": "(-Profundidade/2) + (Profundidade/2)"
+              },
+              {
+                "u": "Largura/4 + 0.08",
+                "v": "(-Profundidade/2) + (Profundidade/2)"
+              }
+            ],
+            "offset": "Altura - 0.15",
+            "axis": "Largura/4 + 0.08",
+            "angle": "360"
+          }
+        },
+        "material": "Cobre",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Válvula de bloqueio",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "Largura/4 + 0.08",
+                "v": "-Profundidade/4 - 0.03"
+              },
+              {
+                "u": "(Largura/4 + 0.08) + 0.02",
+                "v": "-Profundidade/4 - 0.03"
+              },
+              {
+                "u": "(Largura/4 + 0.08) + 0.02",
+                "v": "(-Profundidade/4 - 0.03) + 0.06"
+              },
+              {
+                "u": "Largura/4 + 0.08",
+                "v": "(-Profundidade/4 - 0.03) + 0.06"
+              }
+            ],
+            "offset": "Altura - 0.15",
+            "axis": "Largura/4 + 0.08",
+            "angle": "360"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      }
+    ]
+  },
+  "types": [
+    {
+      "name": "Abrigo de gás 2 x P13",
+      "values": {},
+      "info": {
+        "description": "Abrigo de concreto ventilado para dois botijões de GLP com regulador, coletor e válvula de bloqueio (NBR 13523); botijões de 13 kg"
+      }
+    },
+    {
+      "name": "Abrigo de gás 2 x P45",
+      "values": {
+        "Largura": 1.1,
+        "Profundidade": 0.55,
+        "Altura": 1.55,
+        "DiametroBotijao": 0.37,
+        "AlturaBotijao": 1.27
+      },
+      "info": {
+        "description": "Abrigo de concreto ventilado para dois botijões de GLP com regulador, coletor e válvula de bloqueio (NBR 13523); cilindros de 45 kg"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "name": "Aço pintado cinza",
+      "color": [
+        128,
+        130,
+        134
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Botijão de GLP",
+      "color": [
+        40,
+        96,
+        168
+      ],
+      "class": "Paint",
+      "finish": "Glossy",
+      "transparency": 0
+    },
+    {
+      "name": "Latão",
+      "color": [
+        192,
+        160,
+        84
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Borracha",
+      "color": [
+        30,
+        30,
+        30
+      ],
+      "class": "Plastic",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Cobre",
+      "color": [
+        184,
+        115,
+        72
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Aço pintado preto",
+      "color": [
+        30,
+        30,
+        32
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    }
+  ]
+}

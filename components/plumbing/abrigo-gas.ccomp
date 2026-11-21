@@ -1,0 +1,1336 @@
+(
+  format_version: 1,
+  generator: "ConstructCraft 0.12.0",
+  component: "Abrigo de gás",
+  def: (
+    kind: Plumbing,
+    params: [
+      (
+        name: "Largura",
+        value: 0.9,
+        kind: Length,
+        instance: false,
+      ),
+      (
+        name: "Profundidade",
+        value: 0.45,
+        kind: Length,
+        instance: false,
+      ),
+      (
+        name: "Altura",
+        value: 0.85,
+        kind: Length,
+        instance: false,
+      ),
+      (
+        name: "DiametroBotijao",
+        value: 0.36,
+        kind: Length,
+        instance: false,
+      ),
+      (
+        name: "AlturaBotijao",
+        value: 0.46,
+        kind: Length,
+        instance: false,
+      ),
+      (
+        name: "AnguloPorta",
+        value: 0.0,
+        kind: Angle,
+        instance: true,
+      ),
+    ],
+    items: [
+      (
+        name: "Abrigo simplificado",
+        shape: Box(
+          x: "-Largura/2",
+          y: "-Profundidade",
+          z: "0",
+          width: "Largura",
+          depth: "Profundidade",
+          height: "Altura",
+        ),
+        material: "Concreto",
+        in_plan: true,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
+      ),
+      (
+        name: "Fundo",
+        shape: Box(
+          x: "-Largura/2",
+          y: "-0.05",
+          z: "0",
+          width: "Largura",
+          depth: "0.05",
+          height: "Altura",
+        ),
+        material: "Concreto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Lateral esquerda",
+        shape: Box(
+          x: "-Largura/2",
+          y: "-Profundidade",
+          z: "0",
+          width: "0.05",
+          depth: "Profundidade - 0.05",
+          height: "Altura",
+        ),
+        material: "Concreto",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Lateral direita",
+        shape: Box(
+          x: "Largura/2 - 0.05",
+          y: "-Profundidade",
+          z: "0",
+          width: "0.05",
+          depth: "Profundidade - 0.05",
+          height: "Altura",
+        ),
+        material: "Concreto",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Laje de cobertura",
+        shape: Box(
+          x: "-Largura/2 - 0.03",
+          y: "-Profundidade - 0.04",
+          z: "Altura",
+          width: "Largura + 0.06",
+          depth: "Profundidade + 0.04",
+          height: "0.05",
+        ),
+        material: "Concreto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Piso",
+        shape: Box(
+          x: "-Largura/2 + 0.05",
+          y: "-Profundidade",
+          z: "0",
+          width: "Largura - 0.1",
+          depth: "Profundidade - 0.05",
+          height: "0.05",
+        ),
+        material: "Concreto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Porta esquerda",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.05) + 0.002*cos(AnguloPorta) - 0*sin(AnguloPorta)",
+              v: "(-Profundidade) - 0.002*sin(AnguloPorta) - 0*cos(AnguloPorta)",
+            ),
+            (
+              u: "(-Largura/2 + 0.05) + ((Largura/2 - 0.05) - 0.004)*cos(AnguloPorta) - 0*sin(AnguloPorta)",
+              v: "(-Profundidade) - ((Largura/2 - 0.05) - 0.004)*sin(AnguloPorta) - 0*cos(AnguloPorta)",
+            ),
+            (
+              u: "(-Largura/2 + 0.05) + ((Largura/2 - 0.05) - 0.004)*cos(AnguloPorta) - 0.004*sin(AnguloPorta)",
+              v: "(-Profundidade) - ((Largura/2 - 0.05) - 0.004)*sin(AnguloPorta) - 0.004*cos(AnguloPorta)",
+            ),
+            (
+              u: "(-Largura/2 + 0.05) + 0.002*cos(AnguloPorta) - 0.004*sin(AnguloPorta)",
+              v: "(-Profundidade) - 0.002*sin(AnguloPorta) - 0.004*cos(AnguloPorta)",
+            ),
+          ],
+          offset: "0.06",
+          depth: "Altura - 0.08",
+        ),
+        material: "Aço pintado cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Porta esquerda - veneziana 1",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.05) + 0.04*cos(AnguloPorta) - 0.004*sin(AnguloPorta)",
+              v: "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.004*cos(AnguloPorta)",
+            ),
+            (
+              u: "(-Largura/2 + 0.05) + ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) - 0.004*sin(AnguloPorta)",
+              v: "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.004*cos(AnguloPorta)",
+            ),
+            (
+              u: "(-Largura/2 + 0.05) + ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) - 0.016*sin(AnguloPorta)",
+              v: "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.016*cos(AnguloPorta)",
+            ),
+            (
+              u: "(-Largura/2 + 0.05) + 0.04*cos(AnguloPorta) - 0.016*sin(AnguloPorta)",
+              v: "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.016*cos(AnguloPorta)",
+            ),
+          ],
+          offset: "0.12 + 0*(Altura - 0.3)/5",
+          depth: "0.012",
+        ),
+        material: "Aço pintado cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Porta esquerda - veneziana 2",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.05) + 0.04*cos(AnguloPorta) - 0.004*sin(AnguloPorta)",
+              v: "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.004*cos(AnguloPorta)",
+            ),
+            (
+              u: "(-Largura/2 + 0.05) + ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) - 0.004*sin(AnguloPorta)",
+              v: "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.004*cos(AnguloPorta)",
+            ),
+            (
+              u: "(-Largura/2 + 0.05) + ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) - 0.016*sin(AnguloPorta)",
+              v: "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.016*cos(AnguloPorta)",
+            ),
+            (
+              u: "(-Largura/2 + 0.05) + 0.04*cos(AnguloPorta) - 0.016*sin(AnguloPorta)",
+              v: "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.016*cos(AnguloPorta)",
+            ),
+          ],
+          offset: "0.12 + 1*(Altura - 0.3)/5",
+          depth: "0.012",
+        ),
+        material: "Aço pintado cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Porta esquerda - veneziana 3",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.05) + 0.04*cos(AnguloPorta) - 0.004*sin(AnguloPorta)",
+              v: "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.004*cos(AnguloPorta)",
+            ),
+            (
+              u: "(-Largura/2 + 0.05) + ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) - 0.004*sin(AnguloPorta)",
+              v: "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.004*cos(AnguloPorta)",
+            ),
+            (
+              u: "(-Largura/2 + 0.05) + ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) - 0.016*sin(AnguloPorta)",
+              v: "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.016*cos(AnguloPorta)",
+            ),
+            (
+              u: "(-Largura/2 + 0.05) + 0.04*cos(AnguloPorta) - 0.016*sin(AnguloPorta)",
+              v: "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.016*cos(AnguloPorta)",
+            ),
+          ],
+          offset: "0.12 + 2*(Altura - 0.3)/5",
+          depth: "0.012",
+        ),
+        material: "Aço pintado cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Porta esquerda - veneziana 4",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.05) + 0.04*cos(AnguloPorta) - 0.004*sin(AnguloPorta)",
+              v: "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.004*cos(AnguloPorta)",
+            ),
+            (
+              u: "(-Largura/2 + 0.05) + ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) - 0.004*sin(AnguloPorta)",
+              v: "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.004*cos(AnguloPorta)",
+            ),
+            (
+              u: "(-Largura/2 + 0.05) + ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) - 0.016*sin(AnguloPorta)",
+              v: "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.016*cos(AnguloPorta)",
+            ),
+            (
+              u: "(-Largura/2 + 0.05) + 0.04*cos(AnguloPorta) - 0.016*sin(AnguloPorta)",
+              v: "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.016*cos(AnguloPorta)",
+            ),
+          ],
+          offset: "0.12 + 3*(Altura - 0.3)/5",
+          depth: "0.012",
+        ),
+        material: "Aço pintado cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Porta esquerda - veneziana 5",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.05) + 0.04*cos(AnguloPorta) - 0.004*sin(AnguloPorta)",
+              v: "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.004*cos(AnguloPorta)",
+            ),
+            (
+              u: "(-Largura/2 + 0.05) + ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) - 0.004*sin(AnguloPorta)",
+              v: "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.004*cos(AnguloPorta)",
+            ),
+            (
+              u: "(-Largura/2 + 0.05) + ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) - 0.016*sin(AnguloPorta)",
+              v: "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.016*cos(AnguloPorta)",
+            ),
+            (
+              u: "(-Largura/2 + 0.05) + 0.04*cos(AnguloPorta) - 0.016*sin(AnguloPorta)",
+              v: "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.016*cos(AnguloPorta)",
+            ),
+          ],
+          offset: "0.12 + 4*(Altura - 0.3)/5",
+          depth: "0.012",
+        ),
+        material: "Aço pintado cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Porta esquerda - veneziana 6",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(-Largura/2 + 0.05) + 0.04*cos(AnguloPorta) - 0.004*sin(AnguloPorta)",
+              v: "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.004*cos(AnguloPorta)",
+            ),
+            (
+              u: "(-Largura/2 + 0.05) + ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) - 0.004*sin(AnguloPorta)",
+              v: "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.004*cos(AnguloPorta)",
+            ),
+            (
+              u: "(-Largura/2 + 0.05) + ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) - 0.016*sin(AnguloPorta)",
+              v: "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.016*cos(AnguloPorta)",
+            ),
+            (
+              u: "(-Largura/2 + 0.05) + 0.04*cos(AnguloPorta) - 0.016*sin(AnguloPorta)",
+              v: "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.016*cos(AnguloPorta)",
+            ),
+          ],
+          offset: "0.12 + 5*(Altura - 0.3)/5",
+          depth: "0.012",
+        ),
+        material: "Aço pintado cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Porta direita",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(Largura/2 - 0.05) - 0.002*cos(AnguloPorta) + 0*sin(AnguloPorta)",
+              v: "(-Profundidade) - 0.002*sin(AnguloPorta) - 0*cos(AnguloPorta)",
+            ),
+            (
+              u: "(Largura/2 - 0.05) - ((Largura/2 - 0.05) - 0.004)*cos(AnguloPorta) + 0*sin(AnguloPorta)",
+              v: "(-Profundidade) - ((Largura/2 - 0.05) - 0.004)*sin(AnguloPorta) - 0*cos(AnguloPorta)",
+            ),
+            (
+              u: "(Largura/2 - 0.05) - ((Largura/2 - 0.05) - 0.004)*cos(AnguloPorta) + 0.004*sin(AnguloPorta)",
+              v: "(-Profundidade) - ((Largura/2 - 0.05) - 0.004)*sin(AnguloPorta) - 0.004*cos(AnguloPorta)",
+            ),
+            (
+              u: "(Largura/2 - 0.05) - 0.002*cos(AnguloPorta) + 0.004*sin(AnguloPorta)",
+              v: "(-Profundidade) - 0.002*sin(AnguloPorta) - 0.004*cos(AnguloPorta)",
+            ),
+          ],
+          offset: "0.06",
+          depth: "Altura - 0.08",
+        ),
+        material: "Aço pintado cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Porta direita - veneziana 1",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(Largura/2 - 0.05) - 0.04*cos(AnguloPorta) + 0.004*sin(AnguloPorta)",
+              v: "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.004*cos(AnguloPorta)",
+            ),
+            (
+              u: "(Largura/2 - 0.05) - ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) + 0.004*sin(AnguloPorta)",
+              v: "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.004*cos(AnguloPorta)",
+            ),
+            (
+              u: "(Largura/2 - 0.05) - ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) + 0.016*sin(AnguloPorta)",
+              v: "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.016*cos(AnguloPorta)",
+            ),
+            (
+              u: "(Largura/2 - 0.05) - 0.04*cos(AnguloPorta) + 0.016*sin(AnguloPorta)",
+              v: "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.016*cos(AnguloPorta)",
+            ),
+          ],
+          offset: "0.12 + 0*(Altura - 0.3)/5",
+          depth: "0.012",
+        ),
+        material: "Aço pintado cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Porta direita - veneziana 2",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(Largura/2 - 0.05) - 0.04*cos(AnguloPorta) + 0.004*sin(AnguloPorta)",
+              v: "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.004*cos(AnguloPorta)",
+            ),
+            (
+              u: "(Largura/2 - 0.05) - ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) + 0.004*sin(AnguloPorta)",
+              v: "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.004*cos(AnguloPorta)",
+            ),
+            (
+              u: "(Largura/2 - 0.05) - ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) + 0.016*sin(AnguloPorta)",
+              v: "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.016*cos(AnguloPorta)",
+            ),
+            (
+              u: "(Largura/2 - 0.05) - 0.04*cos(AnguloPorta) + 0.016*sin(AnguloPorta)",
+              v: "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.016*cos(AnguloPorta)",
+            ),
+          ],
+          offset: "0.12 + 1*(Altura - 0.3)/5",
+          depth: "0.012",
+        ),
+        material: "Aço pintado cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Porta direita - veneziana 3",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(Largura/2 - 0.05) - 0.04*cos(AnguloPorta) + 0.004*sin(AnguloPorta)",
+              v: "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.004*cos(AnguloPorta)",
+            ),
+            (
+              u: "(Largura/2 - 0.05) - ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) + 0.004*sin(AnguloPorta)",
+              v: "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.004*cos(AnguloPorta)",
+            ),
+            (
+              u: "(Largura/2 - 0.05) - ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) + 0.016*sin(AnguloPorta)",
+              v: "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.016*cos(AnguloPorta)",
+            ),
+            (
+              u: "(Largura/2 - 0.05) - 0.04*cos(AnguloPorta) + 0.016*sin(AnguloPorta)",
+              v: "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.016*cos(AnguloPorta)",
+            ),
+          ],
+          offset: "0.12 + 2*(Altura - 0.3)/5",
+          depth: "0.012",
+        ),
+        material: "Aço pintado cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Porta direita - veneziana 4",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(Largura/2 - 0.05) - 0.04*cos(AnguloPorta) + 0.004*sin(AnguloPorta)",
+              v: "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.004*cos(AnguloPorta)",
+            ),
+            (
+              u: "(Largura/2 - 0.05) - ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) + 0.004*sin(AnguloPorta)",
+              v: "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.004*cos(AnguloPorta)",
+            ),
+            (
+              u: "(Largura/2 - 0.05) - ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) + 0.016*sin(AnguloPorta)",
+              v: "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.016*cos(AnguloPorta)",
+            ),
+            (
+              u: "(Largura/2 - 0.05) - 0.04*cos(AnguloPorta) + 0.016*sin(AnguloPorta)",
+              v: "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.016*cos(AnguloPorta)",
+            ),
+          ],
+          offset: "0.12 + 3*(Altura - 0.3)/5",
+          depth: "0.012",
+        ),
+        material: "Aço pintado cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Porta direita - veneziana 5",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(Largura/2 - 0.05) - 0.04*cos(AnguloPorta) + 0.004*sin(AnguloPorta)",
+              v: "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.004*cos(AnguloPorta)",
+            ),
+            (
+              u: "(Largura/2 - 0.05) - ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) + 0.004*sin(AnguloPorta)",
+              v: "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.004*cos(AnguloPorta)",
+            ),
+            (
+              u: "(Largura/2 - 0.05) - ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) + 0.016*sin(AnguloPorta)",
+              v: "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.016*cos(AnguloPorta)",
+            ),
+            (
+              u: "(Largura/2 - 0.05) - 0.04*cos(AnguloPorta) + 0.016*sin(AnguloPorta)",
+              v: "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.016*cos(AnguloPorta)",
+            ),
+          ],
+          offset: "0.12 + 4*(Altura - 0.3)/5",
+          depth: "0.012",
+        ),
+        material: "Aço pintado cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Porta direita - veneziana 6",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "(Largura/2 - 0.05) - 0.04*cos(AnguloPorta) + 0.004*sin(AnguloPorta)",
+              v: "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.004*cos(AnguloPorta)",
+            ),
+            (
+              u: "(Largura/2 - 0.05) - ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) + 0.004*sin(AnguloPorta)",
+              v: "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.004*cos(AnguloPorta)",
+            ),
+            (
+              u: "(Largura/2 - 0.05) - ((Largura/2 - 0.05) - 0.04)*cos(AnguloPorta) + 0.016*sin(AnguloPorta)",
+              v: "(-Profundidade) - ((Largura/2 - 0.05) - 0.04)*sin(AnguloPorta) - 0.016*cos(AnguloPorta)",
+            ),
+            (
+              u: "(Largura/2 - 0.05) - 0.04*cos(AnguloPorta) + 0.016*sin(AnguloPorta)",
+              v: "(-Profundidade) - 0.04*sin(AnguloPorta) - 0.016*cos(AnguloPorta)",
+            ),
+          ],
+          offset: "0.12 + 5*(Altura - 0.3)/5",
+          depth: "0.012",
+        ),
+        material: "Aço pintado cinza",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Botijão 1",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "-1*Largura/4",
+              v: "0.05",
+            ),
+            (
+              u: "-1*Largura/4 + DiametroBotijao/2*0.85",
+              v: "0.05",
+            ),
+            (
+              u: "-1*Largura/4 + DiametroBotijao/2",
+              v: "0.09",
+            ),
+            (
+              u: "-1*Largura/4 + DiametroBotijao/2",
+              v: "0.05 + AlturaBotijao*0.8",
+            ),
+            (
+              u: "-1*Largura/4 + DiametroBotijao/2*0.55",
+              v: "0.05 + AlturaBotijao*0.92",
+            ),
+            (
+              u: "-1*Largura/4",
+              v: "0.05 + AlturaBotijao*0.92",
+            ),
+          ],
+          offset: "-Profundidade/2",
+          axis: "-1*Largura/4",
+          angle: "360",
+        ),
+        material: "Botijão de GLP",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Alça do botijão 1",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "-1*Largura/4 + DiametroBotijao/2*0.42",
+              v: "0.05 + AlturaBotijao*0.9",
+            ),
+            (
+              u: "-1*Largura/4 + DiametroBotijao/2*0.5",
+              v: "0.05 + AlturaBotijao*0.9",
+            ),
+            (
+              u: "-1*Largura/4 + DiametroBotijao/2*0.5",
+              v: "0.05 + AlturaBotijao",
+            ),
+            (
+              u: "-1*Largura/4 + DiametroBotijao/2*0.42",
+              v: "0.05 + AlturaBotijao",
+            ),
+          ],
+          offset: "-Profundidade/2",
+          axis: "-1*Largura/4",
+          angle: "360",
+        ),
+        material: "Botijão de GLP",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Válvula do botijão 1",
+        shape: Cylinder(
+          x: "-1*Largura/4",
+          y: "-Profundidade/2",
+          z: "0.05 + AlturaBotijao*0.92",
+          radius: "0.016",
+          height: "0.04",
+        ),
+        material: "Latão",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Mangueira 1",
+        shape: Cylinder(
+          x: "-1*Largura/4",
+          y: "-Profundidade/2",
+          z: "0.05 + AlturaBotijao*0.92 + 0.04",
+          radius: "0.006",
+          height: "Altura - 0.15 - (0.05 + AlturaBotijao*0.92 + 0.04)",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Botijão 2",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "1*Largura/4",
+              v: "0.05",
+            ),
+            (
+              u: "1*Largura/4 + DiametroBotijao/2*0.85",
+              v: "0.05",
+            ),
+            (
+              u: "1*Largura/4 + DiametroBotijao/2",
+              v: "0.09",
+            ),
+            (
+              u: "1*Largura/4 + DiametroBotijao/2",
+              v: "0.05 + AlturaBotijao*0.8",
+            ),
+            (
+              u: "1*Largura/4 + DiametroBotijao/2*0.55",
+              v: "0.05 + AlturaBotijao*0.92",
+            ),
+            (
+              u: "1*Largura/4",
+              v: "0.05 + AlturaBotijao*0.92",
+            ),
+          ],
+          offset: "-Profundidade/2",
+          axis: "1*Largura/4",
+          angle: "360",
+        ),
+        material: "Botijão de GLP",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Alça do botijão 2",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "1*Largura/4 + DiametroBotijao/2*0.42",
+              v: "0.05 + AlturaBotijao*0.9",
+            ),
+            (
+              u: "1*Largura/4 + DiametroBotijao/2*0.5",
+              v: "0.05 + AlturaBotijao*0.9",
+            ),
+            (
+              u: "1*Largura/4 + DiametroBotijao/2*0.5",
+              v: "0.05 + AlturaBotijao",
+            ),
+            (
+              u: "1*Largura/4 + DiametroBotijao/2*0.42",
+              v: "0.05 + AlturaBotijao",
+            ),
+          ],
+          offset: "-Profundidade/2",
+          axis: "1*Largura/4",
+          angle: "360",
+        ),
+        material: "Botijão de GLP",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Válvula do botijão 2",
+        shape: Cylinder(
+          x: "1*Largura/4",
+          y: "-Profundidade/2",
+          z: "0.05 + AlturaBotijao*0.92",
+          radius: "0.016",
+          height: "0.04",
+        ),
+        material: "Latão",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Mangueira 2",
+        shape: Cylinder(
+          x: "1*Largura/4",
+          y: "-Profundidade/2",
+          z: "0.05 + AlturaBotijao*0.92 + 0.04",
+          radius: "0.006",
+          height: "Altura - 0.15 - (0.05 + AlturaBotijao*0.92 + 0.04)",
+        ),
+        material: "Borracha",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Coletor",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "(-Profundidade/2) - 0.012",
+              v: "Altura - 0.15",
+              radius: "0.012",
+            ),
+            (
+              u: "(-Profundidade/2) + 0.012",
+              v: "Altura - 0.15",
+              radius: "0.012",
+            ),
+          ],
+          offset: "-Largura/4",
+          depth: "Largura/2",
+        ),
+        material: "Cobre",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Regulador",
+        shape: Cylinder(
+          x: "Largura/4 + 0.08",
+          y: "-Profundidade/2",
+          z: "Altura - 0.15 - 0.04",
+          radius: "0.035",
+          height: "0.07",
+        ),
+        material: "Aço pintado preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Saída para a rede",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "Largura/4 + 0.08",
+              v: "-Profundidade/2",
+            ),
+            (
+              u: "(Largura/4 + 0.08) + 0.011",
+              v: "-Profundidade/2",
+            ),
+            (
+              u: "(Largura/4 + 0.08) + 0.011",
+              v: "(-Profundidade/2) + (Profundidade/2)",
+            ),
+            (
+              u: "Largura/4 + 0.08",
+              v: "(-Profundidade/2) + (Profundidade/2)",
+            ),
+          ],
+          offset: "Altura - 0.15",
+          axis: "Largura/4 + 0.08",
+          angle: "360",
+        ),
+        material: "Cobre",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Válvula de bloqueio",
+        shape: Revolution(
+          plane: Plan,
+          points: [
+            (
+              u: "Largura/4 + 0.08",
+              v: "-Profundidade/4 - 0.03",
+            ),
+            (
+              u: "(Largura/4 + 0.08) + 0.02",
+              v: "-Profundidade/4 - 0.03",
+            ),
+            (
+              u: "(Largura/4 + 0.08) + 0.02",
+              v: "(-Profundidade/4 - 0.03) + 0.06",
+            ),
+            (
+              u: "Largura/4 + 0.08",
+              v: "(-Profundidade/4 - 0.03) + 0.06",
+            ),
+          ],
+          offset: "Altura - 0.15",
+          axis: "Largura/4 + 0.08",
+          angle: "360",
+        ),
+        material: "Latão",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+    ],
+  ),
+  types: [
+    (
+      name: "Abrigo de gás 2 x P13",
+      values: {
+        "Altura": 0.85,
+        "AlturaBotijao": 0.46,
+        "AnguloPorta": 0.0,
+        "DiametroBotijao": 0.36,
+        "Largura": 0.9,
+        "Profundidade": 0.45,
+      },
+      info: (
+        type_mark: "",
+        description: "Abrigo de concreto ventilado para dois botijões de GLP com regulador, coletor e válvula de bloqueio (NBR 13523); botijões de 13 kg",
+        manufacturer: "",
+        model: "",
+        url: "",
+        keynote: "",
+        classification: "",
+        fire_rating: "",
+        comments: "",
+        cost: None,
+      ),
+    ),
+    (
+      name: "Abrigo de gás 2 x P45",
+      values: {
+        "Altura": 1.55,
+        "AlturaBotijao": 1.27,
+        "AnguloPorta": 0.0,
+        "DiametroBotijao": 0.37,
+        "Largura": 1.1,
+        "Profundidade": 0.55,
+      },
+      info: (
+        type_mark: "",
+        description: "Abrigo de concreto ventilado para dois botijões de GLP com regulador, coletor e válvula de bloqueio (NBR 13523); cilindros de 45 kg",
+        manufacturer: "",
+        model: "",
+        url: "",
+        keynote: "",
+        classification: "",
+        fire_rating: "",
+        comments: "",
+        cost: None,
+      ),
+    ),
+  ],
+  materials: [
+    (
+      name: "Concreto",
+      color: (170, 170, 165),
+      identity: (
+        description: "",
+        class: Concrete,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: Concrete,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (170, 170, 165),
+        finish: Matte,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: Some(2400.0),
+        thermal_conductivity: Some(1.75),
+        specific_heat: Some(1000.0),
+        thermal_expansion: None,
+        youngs_modulus: Some(25000.0),
+        poisson: None,
+        compressive_strength: Some(25.0),
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Aço pintado cinza",
+      color: (128, 130, 134),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (128, 130, 134),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Botijão de GLP",
+      color: (40, 96, 168),
+      identity: (
+        description: "",
+        class: Paint,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (40, 96, 168),
+        finish: Glossy,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Latão",
+      color: (192, 160, 84),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (192, 160, 84),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Borracha",
+      color: (30, 30, 30),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (30, 30, 30),
+        finish: Matte,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Cobre",
+      color: (184, 115, 72),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (184, 115, 72),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Aço pintado preto",
+      color: (30, 30, 32),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (30, 30, 32),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+  ],
+)

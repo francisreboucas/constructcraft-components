@@ -42,6 +42,7 @@ SECTIONS = {
     "site": "Área externa · Site",
     "signage": "Sinalização · Signage",
     "fire": "Incêndio · Fire protection",
+    "people": "Pessoas · People",
 }
 
 

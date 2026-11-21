@@ -1,0 +1,768 @@
+{
+  "component": "Padrão de entrada de energia",
+  "def": {
+    "kind": "Electrical",
+    "params": [
+      {
+        "name": "AlturaPoste",
+        "value": 6.0,
+        "kind": "Length",
+        "instance": false
+      }
+    ],
+    "items": [
+      {
+        "name": "Poste simplificado",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0",
+            "z": "0",
+            "radius": "0.05",
+            "height": "AlturaPoste"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Caixa de medição simplificada",
+        "shape": {
+          "Box": {
+            "x": "-0.18",
+            "y": "-0.25",
+            "z": "1.15",
+            "width": "0.36",
+            "depth": "0.2",
+            "height": "0.55"
+          }
+        },
+        "material": "Policarbonato cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Poste",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0",
+            "z": "0",
+            "radius": "0.05",
+            "height": "AlturaPoste"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Base de concreto",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0",
+            "z": "0",
+            "radius": "0.15",
+            "height": "0.08"
+          }
+        },
+        "material": "Concreto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa do poste",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0",
+            "z": "AlturaPoste",
+            "radius": "0.056",
+            "height": "0.02"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Armação secundária",
+        "shape": {
+          "Box": {
+            "x": "-0.03",
+            "y": "-0.12",
+            "z": "AlturaPoste - 0.25",
+            "width": "0.06",
+            "depth": "0.07",
+            "height": "0.16"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Isolador roldana",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "-0.14",
+            "z": "AlturaPoste - 0.25 + 0.03",
+            "radius": "0.04",
+            "height": "0.09"
+          }
+        },
+        "material": "Louça",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Isolador roldana - gola",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "AlturaPoste - 0.25 + 0.06"
+              },
+              {
+                "u": "0.028",
+                "v": "AlturaPoste - 0.25 + 0.06"
+              },
+              {
+                "u": "0.028",
+                "v": "AlturaPoste - 0.25 + 0.09"
+              },
+              {
+                "u": "0",
+                "v": "AlturaPoste - 0.25 + 0.09"
+              }
+            ],
+            "offset": "-0.14",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Louça",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ramal de ligação",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0",
+                "v": "-1.2"
+              },
+              {
+                "u": "0 + 0.007",
+                "v": "-1.2"
+              },
+              {
+                "u": "0 + 0.007",
+                "v": "(-1.2) + 1.06"
+              },
+              {
+                "u": "0",
+                "v": "(-1.2) + 1.06"
+              }
+            ],
+            "offset": "AlturaPoste - 0.25 + 0.075",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Eletroduto de entrada",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "-0.075",
+            "z": "1.7",
+            "radius": "0.019",
+            "height": "AlturaPoste - 0.55 - 1.7"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Curva de entrada",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "AlturaPoste - 0.55"
+              },
+              {
+                "u": "0.026",
+                "v": "AlturaPoste - 0.55"
+              },
+              {
+                "u": "0.026",
+                "v": "AlturaPoste - 0.45"
+              },
+              {
+                "u": "0",
+                "v": "AlturaPoste - 0.42"
+              }
+            ],
+            "offset": "-0.075",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Abraçadeira 1",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "-0.04",
+            "z": "2.2",
+            "radius": "0.075",
+            "height": "0.025"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Abraçadeira 2",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "-0.04",
+            "z": "3.2",
+            "radius": "0.075",
+            "height": "0.025"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Abraçadeira 3",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "-0.04",
+            "z": "4.2",
+            "radius": "0.075",
+            "height": "0.025"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Abraçadeira 4",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "-0.04",
+            "z": "AlturaPoste - 0.7",
+            "radius": "0.075",
+            "height": "0.025"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Caixa de medição",
+        "shape": {
+          "Box": {
+            "x": "-0.17",
+            "y": "-0.27",
+            "z": "1.15",
+            "width": "0.34",
+            "depth": "0.17",
+            "height": "0.55"
+          }
+        },
+        "material": "Policarbonato cinza",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Caixa de medição - suporte",
+        "shape": {
+          "Box": {
+            "x": "-0.04",
+            "y": "-0.1",
+            "z": "1.25",
+            "width": "0.08",
+            "depth": "0.06",
+            "height": "0.35"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Visor",
+        "shape": {
+          "Box": {
+            "x": "-0.11",
+            "y": "-0.275",
+            "z": "1.4",
+            "width": "0.22",
+            "depth": "0.006",
+            "height": "0.22"
+          }
+        },
+        "material": "Plástico translúcido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Medidor",
+        "shape": {
+          "Box": {
+            "x": "-0.08",
+            "y": "-0.24",
+            "z": "1.43",
+            "width": "0.16",
+            "depth": "0.03",
+            "height": "0.16"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Visor do medidor",
+        "shape": {
+          "Box": {
+            "x": "-0.04",
+            "y": "-0.245",
+            "z": "1.52",
+            "width": "0.08",
+            "depth": "0.005",
+            "height": "0.03"
+          }
+        },
+        "material": "Visor LCD",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porta do disjuntor",
+        "shape": {
+          "Box": {
+            "x": "-0.11",
+            "y": "-0.275",
+            "z": "1.2",
+            "width": "0.22",
+            "depth": "0.006",
+            "height": "0.14"
+          }
+        },
+        "material": "Policarbonato cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Disjuntor geral",
+        "shape": {
+          "Box": {
+            "x": "-0.02",
+            "y": "-0.2",
+            "z": "1.23",
+            "width": "0.036",
+            "depth": "0.06",
+            "height": "0.08"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lacre",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.12",
+                "v": "-0.28"
+              },
+              {
+                "u": "0.12 + 0.008",
+                "v": "-0.28"
+              },
+              {
+                "u": "0.12 + 0.008",
+                "v": "(-0.28) + 0.006"
+              },
+              {
+                "u": "0.12",
+                "v": "(-0.28) + 0.006"
+              }
+            ],
+            "offset": "1.55",
+            "axis": "0.12",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico vermelho",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Eletroduto de saída",
+        "shape": {
+          "Cylinder": {
+            "x": "0.1",
+            "y": "-0.18",
+            "z": "-0.3",
+            "radius": "0.019",
+            "height": "1.45"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Caixa de inspeção do aterramento",
+        "shape": {
+          "Box": {
+            "x": "0.2",
+            "y": "-0.45",
+            "z": "-0.3",
+            "width": "0.3",
+            "depth": "0.3",
+            "height": "0.32"
+          }
+        },
+        "material": "Concreto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tampa da caixa de inspeção",
+        "shape": {
+          "Box": {
+            "x": "0.21",
+            "y": "-0.44",
+            "z": "0.02",
+            "width": "0.28",
+            "depth": "0.28",
+            "height": "0.015"
+          }
+        },
+        "material": "Ferro fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Haste de aterramento",
+        "shape": {
+          "Cylinder": {
+            "x": "0.35",
+            "y": "-0.3",
+            "z": "-2.4",
+            "radius": "0.008",
+            "height": "2.4"
+          }
+        },
+        "material": "Cobre",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Condutor de aterramento",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "-0.1",
+            "z": "-0.3",
+            "radius": "0.004",
+            "height": "1.6"
+          }
+        },
+        "material": "Cobre",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      }
+    ]
+  },
+  "types": [
+    {
+      "name": "Padrão de entrada monofásico",
+      "values": {},
+      "info": {
+        "description": "Padrão de entrada de energia monofásico em poste de aço galvanizado de 6 m acima do solo, armação secundária com isolador roldana, caixa de medição de policarbonato com visor e disjuntor geral, eletroduto de descida e haste de aterramento com caixa de inspeção; confira o padrão da concessionária local"
+      }
+    },
+    {
+      "name": "Padrão de entrada monofásico 7 m",
+      "values": {
+        "AlturaPoste": 7.0
+      },
+      "info": {
+        "description": "Padrão de entrada monofásico com poste de 7 m acima do solo, para travessia de rua mais alta"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "name": "Aço galvanizado",
+      "color": [
+        160,
+        165,
+        170
+      ],
+      "class": "Metal",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Policarbonato cinza",
+      "color": [
+        196,
+        200,
+        202
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Borracha",
+      "color": [
+        30,
+        30,
+        30
+      ],
+      "class": "Plastic",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico translúcido",
+      "color": [
+        222,
+        236,
+        240
+      ],
+      "class": "Plastic",
+      "finish": "Glossy",
+      "transparency": 0.6
+    },
+    {
+      "name": "Plástico preto",
+      "color": [
+        34,
+        34,
+        37
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Visor LCD",
+      "color": [
+        70,
+        112,
+        92
+      ],
+      "class": "Glass",
+      "finish": "Glossy",
+      "transparency": 0
+    },
+    {
+      "name": "Branco",
+      "color": [
+        244,
+        244,
+        240
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico vermelho",
+      "color": [
+        196,
+        56,
+        48
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico cinza",
+      "color": [
+        120,
+        122,
+        126
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Ferro fundido",
+      "color": [
+        44,
+        44,
+        47
+      ],
+      "class": "Metal",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Cobre",
+      "color": [
+        184,
+        115,
+        72
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    }
+  ]
+}

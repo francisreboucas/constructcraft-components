@@ -1,0 +1,699 @@
+{
+  "component": "Carregador veicular (wallbox)",
+  "def": {
+    "kind": "Electrical",
+    "params": [],
+    "items": [
+      {
+        "name": "Carregador simplificado",
+        "shape": {
+          "Box": {
+            "x": "-0.12",
+            "y": "-0.11",
+            "z": "0.7",
+            "width": "0.24",
+            "depth": "0.11",
+            "height": "0.36"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Placa de fixação",
+        "shape": {
+          "Box": {
+            "x": "-0.11",
+            "y": "-0.012",
+            "z": "0.71",
+            "width": "0.22",
+            "depth": "0.012",
+            "height": "0.34"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Corpo",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(-0.12) + 0.04",
+                "v": "0.7"
+              },
+              {
+                "u": "0.12 - 0.04",
+                "v": "0.7",
+                "radius": "0.04"
+              },
+              {
+                "u": "0.12",
+                "v": "0.7 + 0.04"
+              },
+              {
+                "u": "0.12",
+                "v": "1.06 - 0.04",
+                "radius": "0.04"
+              },
+              {
+                "u": "0.12 - 0.04",
+                "v": "1.06"
+              },
+              {
+                "u": "(-0.12) + 0.04",
+                "v": "1.06",
+                "radius": "0.04"
+              },
+              {
+                "u": "-0.12",
+                "v": "1.06 - 0.04"
+              },
+              {
+                "u": "-0.12",
+                "v": "0.7 + 0.04",
+                "radius": "0.04"
+              }
+            ],
+            "offset": "-0.11",
+            "depth": "0.098"
+          }
+        },
+        "material": "Branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Frente de vidro",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(-0.102) + 0.025",
+                "v": "0.76"
+              },
+              {
+                "u": "0.102 - 0.025",
+                "v": "0.76",
+                "radius": "0.025"
+              },
+              {
+                "u": "0.102",
+                "v": "0.76 + 0.025"
+              },
+              {
+                "u": "0.102",
+                "v": "1.03 - 0.025",
+                "radius": "0.025"
+              },
+              {
+                "u": "0.102 - 0.025",
+                "v": "1.03"
+              },
+              {
+                "u": "(-0.102) + 0.025",
+                "v": "1.03",
+                "radius": "0.025"
+              },
+              {
+                "u": "-0.102",
+                "v": "1.03 - 0.025"
+              },
+              {
+                "u": "-0.102",
+                "v": "0.76 + 0.025",
+                "radius": "0.025"
+              }
+            ],
+            "offset": "-0.114",
+            "depth": "0.005"
+          }
+        },
+        "material": "Vidro preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Barra de status",
+        "shape": {
+          "Box": {
+            "x": "-0.05",
+            "y": "-0.1145",
+            "z": "0.98",
+            "width": "0.1",
+            "depth": "0.001",
+            "height": "0.008"
+          }
+        },
+        "material": "LED azul",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Botão",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0",
+                "v": "-0.116"
+              },
+              {
+                "u": "0 + 0.012",
+                "v": "-0.116"
+              },
+              {
+                "u": "0 + 0.012",
+                "v": "(-0.116) + 0.003"
+              },
+              {
+                "u": "0",
+                "v": "(-0.116) + 0.003"
+              }
+            ],
+            "offset": "0.8",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Prensa-cabo",
+        "shape": {
+          "Cylinder": {
+            "x": "0.06",
+            "y": "-0.055",
+            "z": "0.68",
+            "radius": "0.014",
+            "height": "0.02"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte do cabo - base",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.25",
+                "v": "-0.012"
+              },
+              {
+                "u": "0.25 + 0.04",
+                "v": "-0.012"
+              },
+              {
+                "u": "0.25 + 0.04",
+                "v": "(-0.012) + 0.012"
+              },
+              {
+                "u": "0.25",
+                "v": "(-0.012) + 0.012"
+              }
+            ],
+            "offset": "0.88",
+            "axis": "0.25",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Suporte do cabo - cubo",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.25",
+                "v": "-0.07"
+              },
+              {
+                "u": "0.25 + 0.03",
+                "v": "-0.07"
+              },
+              {
+                "u": "0.25 + 0.03",
+                "v": "(-0.07) + 0.058"
+              },
+              {
+                "u": "0.25",
+                "v": "(-0.07) + 0.058"
+              }
+            ],
+            "offset": "0.88",
+            "axis": "0.25",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cabo enrolado 1",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.25 + 0.09100000000000001",
+                "v": "-0.05"
+              },
+              {
+                "u": "0.25 + 0.109",
+                "v": "-0.05"
+              },
+              {
+                "u": "0.25 + 0.109",
+                "v": "-0.032"
+              },
+              {
+                "u": "0.25 + 0.09100000000000001",
+                "v": "-0.032"
+              }
+            ],
+            "offset": "0.88",
+            "axis": "0.25",
+            "angle": "360"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cabo enrolado 2",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.25 + 0.10300000000000001",
+                "v": "-0.07"
+              },
+              {
+                "u": "0.25 + 0.121",
+                "v": "-0.07"
+              },
+              {
+                "u": "0.25 + 0.121",
+                "v": "-0.052"
+              },
+              {
+                "u": "0.25 + 0.10300000000000001",
+                "v": "-0.052"
+              }
+            ],
+            "offset": "0.88",
+            "axis": "0.25",
+            "angle": "360"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cabo enrolado 3",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.25 + 0.115",
+                "v": "-0.09"
+              },
+              {
+                "u": "0.25 + 0.133",
+                "v": "-0.09"
+              },
+              {
+                "u": "0.25 + 0.133",
+                "v": "-0.072"
+              },
+              {
+                "u": "0.25 + 0.115",
+                "v": "-0.072"
+              }
+            ],
+            "offset": "0.88",
+            "axis": "0.25",
+            "angle": "360"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cabo - trecho até o suporte",
+        "shape": {
+          "Box": {
+            "x": "0.054",
+            "y": "-0.064",
+            "z": "0.64",
+            "width": "0.018",
+            "depth": "0.018",
+            "height": "0.045"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cabo - curva",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.11",
+                "v": "-0.064"
+              },
+              {
+                "u": "0.11 + 0.06",
+                "v": "-0.064"
+              },
+              {
+                "u": "0.11 + 0.06",
+                "v": "(-0.064) + 0.018"
+              },
+              {
+                "u": "0.11",
+                "v": "(-0.064) + 0.018"
+              }
+            ],
+            "offset": "0.64",
+            "axis": "0.11",
+            "angle": "360"
+          }
+        },
+        "material": "Borracha",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Coldre do conector",
+        "shape": {
+          "Box": {
+            "x": "0.215",
+            "y": "-0.06",
+            "z": "0.61",
+            "width": "0.07",
+            "depth": "0.06",
+            "height": "0.08"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Conector Tipo 2",
+        "shape": {
+          "Cylinder": {
+            "x": "0.25",
+            "y": "-0.04",
+            "z": "0.67",
+            "radius": "0.026",
+            "height": "0.11"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Caixa 4x2",
+        "shape": {
+          "Box": {
+            "x": "-0.03",
+            "y": "-0.004",
+            "z": "-0.06",
+            "width": "0.06",
+            "depth": "0.004",
+            "height": "0.12"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Eletroduto aparente",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "-0.02",
+            "z": "0.06",
+            "radius": "0.0125",
+            "height": "0.64"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Abraçadeira",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0",
+                "v": "-0.034"
+              },
+              {
+                "u": "0 + 0.015",
+                "v": "-0.034"
+              },
+              {
+                "u": "0 + 0.015",
+                "v": "(-0.034) + 0.03"
+              },
+              {
+                "u": "0",
+                "v": "(-0.034) + 0.03"
+              }
+            ],
+            "offset": "0.35",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      }
+    ],
+    "mep": {
+      "Device": {
+        "device": "DedicatedOutlet",
+        "power": 7400
+      }
+    },
+    "connectors": [
+      {
+        "name": "Alimentação",
+        "system": "Power",
+        "x": "0",
+        "y": "0",
+        "z": "0",
+        "direction": "Down"
+      }
+    ]
+  },
+  "types": [
+    {
+      "name": "Carregador veicular 7,4 kW",
+      "values": {},
+      "info": {
+        "description": "Carregador veicular de parede (wallbox) monofásico de 7,4 kW (32 A, 230 V), cabo Tipo 2 de 5 m enrolado no suporte; circuito exclusivo com DR tipo A e DPS (NBR 5410, NBR 17019)"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "name": "Plástico cinza claro",
+      "color": [
+        196,
+        198,
+        200
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico cinza",
+      "color": [
+        120,
+        122,
+        126
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Branco",
+      "color": [
+        244,
+        244,
+        240
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Vidro preto",
+      "color": [
+        14,
+        15,
+        18
+      ],
+      "class": "Glass",
+      "finish": "Glossy",
+      "transparency": 0
+    },
+    {
+      "name": "LED azul",
+      "color": [
+        60,
+        150,
+        240
+      ],
+      "class": "Glass",
+      "finish": "Glossy",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico preto",
+      "color": [
+        34,
+        34,
+        37
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Borracha",
+      "color": [
+        30,
+        30,
+        30
+      ],
+      "class": "Plastic",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Aço galvanizado",
+      "color": [
+        160,
+        165,
+        170
+      ],
+      "class": "Metal",
+      "finish": "Matte",
+      "transparency": 0
+    }
+  ]
+}

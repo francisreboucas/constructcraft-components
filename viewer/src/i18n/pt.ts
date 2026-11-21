@@ -14,6 +14,7 @@ const folders = {
   site: 'Área externa',
   signage: 'Sinalização',
   fire: 'Incêndio',
+  people: 'Pessoas',
 };
 
 export const pt = {
@@ -132,6 +133,7 @@ export const pt = {
       site: 'Vagas, legendas e setas no piso, lombadas, bancos, lixeiras, bicicletários, postes, playground e piso tátil.',
       signage: 'Placas de trânsito, de orientação, de emergência e de identificação tátil, com os textos editáveis.',
       fire: 'Extintores, abrigos de mangueira, hidrantes, sprinklers, detectores, alarme e iluminação de emergência.',
+      people: 'Figuras humanas genéricas para escala: em pé, caminhando, sentada, criança e cadeirante com o módulo de referência.',
     } as Record<keyof typeof folders, string>,
     quality: 'O que todo componente traz',
     qualityNote: 'O que um componente precisa ter para entrar na biblioteca.',

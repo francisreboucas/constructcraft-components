@@ -1,0 +1,436 @@
+{
+  "component": "Videoporteiro",
+  "def": {
+    "kind": "Electrical",
+    "params": [
+      {
+        "name": "Elevacao",
+        "value": 1.4,
+        "kind": "Length",
+        "instance": true
+      }
+    ],
+    "items": [
+      {
+        "name": "Videoporteiro simplificado",
+        "shape": {
+          "Box": {
+            "x": "-0.05",
+            "y": "-0.035",
+            "z": "Elevacao + -0.1",
+            "width": "0.1",
+            "depth": "0.035",
+            "height": "0.2"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Corpo",
+        "shape": {
+          "Profile": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "(-0.05) + 0.008",
+                "v": "Elevacao + -0.1"
+              },
+              {
+                "u": "0.05 - 0.008",
+                "v": "Elevacao + -0.1",
+                "radius": "0.008"
+              },
+              {
+                "u": "0.05",
+                "v": "(Elevacao + -0.1) + 0.008"
+              },
+              {
+                "u": "0.05",
+                "v": "(Elevacao + 0.1) - 0.008",
+                "radius": "0.008"
+              },
+              {
+                "u": "0.05 - 0.008",
+                "v": "Elevacao + 0.1"
+              },
+              {
+                "u": "(-0.05) + 0.008",
+                "v": "Elevacao + 0.1",
+                "radius": "0.008"
+              },
+              {
+                "u": "-0.05",
+                "v": "(Elevacao + 0.1) - 0.008"
+              },
+              {
+                "u": "-0.05",
+                "v": "(Elevacao + -0.1) + 0.008",
+                "radius": "0.008"
+              }
+            ],
+            "offset": "-0.035",
+            "depth": "0.035"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Chapéu",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-0.035 - 0.02",
+                "v": "Elevacao + 0.10200000000000001"
+              },
+              {
+                "u": "0",
+                "v": "Elevacao + 0.10200000000000001"
+              },
+              {
+                "u": "0",
+                "v": "Elevacao + 0.112"
+              },
+              {
+                "u": "-0.035 - 0.02",
+                "v": "Elevacao + 0.10600000000000001"
+              }
+            ],
+            "offset": "-0.056",
+            "depth": "0.112"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Moldura da câmera",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0",
+                "v": "-0.035 - 0.004"
+              },
+              {
+                "u": "0 + 0.018",
+                "v": "-0.035 - 0.004"
+              },
+              {
+                "u": "0 + 0.018",
+                "v": "(-0.035 - 0.004) + 0.004"
+              },
+              {
+                "u": "0",
+                "v": "(-0.035 - 0.004) + 0.004"
+              }
+            ],
+            "offset": "Elevacao + 0.055",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Câmera",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0",
+                "v": "-0.035 - 0.006"
+              },
+              {
+                "u": "0 + 0.007",
+                "v": "-0.035 - 0.006"
+              },
+              {
+                "u": "0 + 0.007",
+                "v": "(-0.035 - 0.006) + 0.002"
+              },
+              {
+                "u": "0",
+                "v": "(-0.035 - 0.006) + 0.002"
+              }
+            ],
+            "offset": "Elevacao + 0.055",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Lente",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade do alto-falante 1",
+        "shape": {
+          "Box": {
+            "x": "-0.025",
+            "y": "-0.035 - 0.001",
+            "z": "Elevacao + -0.005",
+            "width": "0.05",
+            "depth": "0.001",
+            "height": "0.003"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade do alto-falante 2",
+        "shape": {
+          "Box": {
+            "x": "-0.025",
+            "y": "-0.035 - 0.001",
+            "z": "Elevacao + -0.013000000000000001",
+            "width": "0.05",
+            "depth": "0.001",
+            "height": "0.003"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade do alto-falante 3",
+        "shape": {
+          "Box": {
+            "x": "-0.025",
+            "y": "-0.035 - 0.001",
+            "z": "Elevacao + -0.021",
+            "width": "0.05",
+            "depth": "0.001",
+            "height": "0.003"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade do alto-falante 4",
+        "shape": {
+          "Box": {
+            "x": "-0.025",
+            "y": "-0.035 - 0.001",
+            "z": "Elevacao + -0.029",
+            "width": "0.05",
+            "depth": "0.001",
+            "height": "0.003"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade do alto-falante 5",
+        "shape": {
+          "Box": {
+            "x": "-0.025",
+            "y": "-0.035 - 0.001",
+            "z": "Elevacao + -0.037",
+            "width": "0.05",
+            "depth": "0.001",
+            "height": "0.003"
+          }
+        },
+        "material": "Plástico preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Botão de chamada - anel",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0",
+                "v": "-0.035 - 0.004"
+              },
+              {
+                "u": "0 + 0.017",
+                "v": "-0.035 - 0.004"
+              },
+              {
+                "u": "0 + 0.017",
+                "v": "(-0.035 - 0.004) + 0.004"
+              },
+              {
+                "u": "0",
+                "v": "(-0.035 - 0.004) + 0.004"
+              }
+            ],
+            "offset": "Elevacao + -0.065",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "LED azul",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Botão de chamada",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0",
+                "v": "-0.035 - 0.007"
+              },
+              {
+                "u": "0 + 0.013",
+                "v": "-0.035 - 0.007"
+              },
+              {
+                "u": "0 + 0.013",
+                "v": "(-0.035 - 0.007) + 0.004"
+              },
+              {
+                "u": "0",
+                "v": "(-0.035 - 0.007) + 0.004"
+              }
+            ],
+            "offset": "Elevacao + -0.065",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      }
+    ]
+  },
+  "types": [
+    {
+      "name": "Videoporteiro de sobrepor",
+      "values": {},
+      "info": {
+        "description": "Módulo externo de videoporteiro de sobrepor em alumínio escovado, com câmera, alto-falante, microfone, botão de chamada iluminado e chapéu contra chuva; a central fica dentro do imóvel"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "name": "Alumínio anodizado",
+      "color": [
+        206,
+        208,
+        210
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico preto",
+      "color": [
+        34,
+        34,
+        37
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Lente",
+      "color": [
+        16,
+        18,
+        26
+      ],
+      "class": "Glass",
+      "finish": "Glossy",
+      "transparency": 0
+    },
+    {
+      "name": "LED azul",
+      "color": [
+        60,
+        150,
+        240
+      ],
+      "class": "Glass",
+      "finish": "Glossy",
+      "transparency": 0
+    },
+    {
+      "name": "Inox escovado",
+      "color": [
+        198,
+        200,
+        203
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    }
+  ]
+}

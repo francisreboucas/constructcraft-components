@@ -19,6 +19,7 @@ export const en: Strings = {
     site: 'Site',
     signage: 'Signage',
     fire: 'Fire protection',
+    people: 'People',
   },
   shell: {
     skip: 'Skip to content',
@@ -131,6 +132,7 @@ export const en: Strings = {
       site: 'Floor markings, speed humps, benches, bins, bike racks, street lights, playground and tactile paving.',
       signage: 'Traffic, guide, emergency and tactile room signs, with editable text.',
       fire: 'Extinguishers, hose cabinets, hydrants, sprinklers, detectors, alarm devices and emergency lighting.',
+      people: 'Generic human figures for scale: standing, walking, sitting, a child and a wheelchair user with the reference module.',
     },
     quality: 'What every component brings',
     qualityNote: 'What a component needs to have to enter the library.',

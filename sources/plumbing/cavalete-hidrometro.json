@@ -1,0 +1,647 @@
+{
+  "component": "Cavalete com hidrômetro",
+  "def": {
+    "kind": "Plumbing",
+    "params": [
+      {
+        "name": "AnguloPorta",
+        "value": 0,
+        "kind": "Angle",
+        "instance": true
+      }
+    ],
+    "items": [
+      {
+        "name": "Abrigo simplificado",
+        "shape": {
+          "Box": {
+            "x": "-0.3",
+            "y": "-0.35",
+            "z": "0",
+            "width": "0.6",
+            "depth": "0.35",
+            "height": "0.8"
+          }
+        },
+        "material": "Concreto",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Abrigo - fundo",
+        "shape": {
+          "Box": {
+            "x": "-0.3",
+            "y": "-0.05",
+            "z": "0",
+            "width": "0.6",
+            "depth": "0.05",
+            "height": "0.8"
+          }
+        },
+        "material": "Concreto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Abrigo - lateral esquerda",
+        "shape": {
+          "Box": {
+            "x": "-0.3",
+            "y": "-0.35",
+            "z": "0",
+            "width": "0.05",
+            "depth": "0.3",
+            "height": "0.8"
+          }
+        },
+        "material": "Concreto",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Abrigo - lateral direita",
+        "shape": {
+          "Box": {
+            "x": "0.25",
+            "y": "-0.35",
+            "z": "0",
+            "width": "0.05",
+            "depth": "0.3",
+            "height": "0.8"
+          }
+        },
+        "material": "Concreto",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Abrigo - topo",
+        "shape": {
+          "Box": {
+            "x": "-0.3",
+            "y": "-0.35",
+            "z": "0.75",
+            "width": "0.6",
+            "depth": "0.3",
+            "height": "0.05"
+          }
+        },
+        "material": "Concreto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Abrigo - base",
+        "shape": {
+          "Box": {
+            "x": "-0.25",
+            "y": "-0.35",
+            "z": "0",
+            "width": "0.5",
+            "depth": "0.3",
+            "height": "0.06"
+          }
+        },
+        "material": "Concreto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porta",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-0.25) + 0*cos(AnguloPorta) - 0*sin(AnguloPorta)",
+                "v": "(-0.35) - 0*sin(AnguloPorta) - 0*cos(AnguloPorta)"
+              },
+              {
+                "u": "(-0.25) + 0.5*cos(AnguloPorta) - 0*sin(AnguloPorta)",
+                "v": "(-0.35) - 0.5*sin(AnguloPorta) - 0*cos(AnguloPorta)"
+              },
+              {
+                "u": "(-0.25) + 0.5*cos(AnguloPorta) - 0.004*sin(AnguloPorta)",
+                "v": "(-0.35) - 0.5*sin(AnguloPorta) - 0.004*cos(AnguloPorta)"
+              },
+              {
+                "u": "(-0.25) + 0*cos(AnguloPorta) - 0.004*sin(AnguloPorta)",
+                "v": "(-0.35) - 0*sin(AnguloPorta) - 0.004*cos(AnguloPorta)"
+              }
+            ],
+            "offset": "0.08",
+            "depth": "0.65"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Visor da porta",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-0.25) + 0.175*cos(AnguloPorta) - 0.004*sin(AnguloPorta)",
+                "v": "(-0.35) - 0.175*sin(AnguloPorta) - 0.004*cos(AnguloPorta)"
+              },
+              {
+                "u": "(-0.25) + 0.325*cos(AnguloPorta) - 0.004*sin(AnguloPorta)",
+                "v": "(-0.35) - 0.325*sin(AnguloPorta) - 0.004*cos(AnguloPorta)"
+              },
+              {
+                "u": "(-0.25) + 0.325*cos(AnguloPorta) - 0.006*sin(AnguloPorta)",
+                "v": "(-0.35) - 0.325*sin(AnguloPorta) - 0.006*cos(AnguloPorta)"
+              },
+              {
+                "u": "(-0.25) + 0.175*cos(AnguloPorta) - 0.006*sin(AnguloPorta)",
+                "v": "(-0.35) - 0.175*sin(AnguloPorta) - 0.006*cos(AnguloPorta)"
+              }
+            ],
+            "offset": "0.42",
+            "depth": "0.12"
+          }
+        },
+        "material": "Vidro do hidrômetro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Fecho da porta",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-0.25) + 0.45*cos(AnguloPorta) - 0.004*sin(AnguloPorta)",
+                "v": "(-0.35) - 0.45*sin(AnguloPorta) - 0.004*cos(AnguloPorta)"
+              },
+              {
+                "u": "(-0.25) + 0.48*cos(AnguloPorta) - 0.004*sin(AnguloPorta)",
+                "v": "(-0.35) - 0.48*sin(AnguloPorta) - 0.004*cos(AnguloPorta)"
+              },
+              {
+                "u": "(-0.25) + 0.48*cos(AnguloPorta) - 0.02*sin(AnguloPorta)",
+                "v": "(-0.35) - 0.48*sin(AnguloPorta) - 0.02*cos(AnguloPorta)"
+              },
+              {
+                "u": "(-0.25) + 0.45*cos(AnguloPorta) - 0.02*sin(AnguloPorta)",
+                "v": "(-0.35) - 0.45*sin(AnguloPorta) - 0.02*cos(AnguloPorta)"
+              }
+            ],
+            "offset": "0.36",
+            "depth": "0.05"
+          }
+        },
+        "material": "Aço galvanizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tubo de entrada",
+        "shape": {
+          "Cylinder": {
+            "x": "-0.17",
+            "y": "-0.18",
+            "z": "0",
+            "radius": "0.0125",
+            "height": "0.42"
+          }
+        },
+        "material": "PVC marrom",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Tubo horizontal",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(-0.18) - 0.0125",
+                "v": "0.42",
+                "radius": "0.0125"
+              },
+              {
+                "u": "(-0.18) + 0.0125",
+                "v": "0.42",
+                "radius": "0.0125"
+              }
+            ],
+            "offset": "-0.17",
+            "depth": "0.34"
+          }
+        },
+        "material": "PVC marrom",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Saída para o imóvel",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0.17",
+                "v": "-0.18"
+              },
+              {
+                "u": "0.17 + 0.0125",
+                "v": "-0.18"
+              },
+              {
+                "u": "0.17 + 0.0125",
+                "v": "(-0.18) + 0.18"
+              },
+              {
+                "u": "0.17",
+                "v": "(-0.18) + 0.18"
+              }
+            ],
+            "offset": "0.42",
+            "axis": "0.17",
+            "angle": "360"
+          }
+        },
+        "material": "PVC marrom",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Joelho esquerdo",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "-0.17",
+                "v": "0.4"
+              },
+              {
+                "u": "-0.152",
+                "v": "0.4"
+              },
+              {
+                "u": "-0.152",
+                "v": "0.44"
+              },
+              {
+                "u": "-0.17",
+                "v": "0.44"
+              }
+            ],
+            "offset": "-0.18",
+            "axis": "-0.17",
+            "angle": "360"
+          }
+        },
+        "material": "PVC marrom",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Joelho direito",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0.17",
+                "v": "0.4"
+              },
+              {
+                "u": "0.188",
+                "v": "0.4"
+              },
+              {
+                "u": "0.188",
+                "v": "0.44"
+              },
+              {
+                "u": "0.17",
+                "v": "0.44"
+              }
+            ],
+            "offset": "-0.18",
+            "axis": "0.17",
+            "angle": "360"
+          }
+        },
+        "material": "PVC marrom",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Registro - corpo",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(-0.18) - 0.02",
+                "v": "0.42",
+                "radius": "0.02"
+              },
+              {
+                "u": "(-0.18) + 0.02",
+                "v": "0.42",
+                "radius": "0.02"
+              }
+            ],
+            "offset": "-0.13",
+            "depth": "0.05"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Registro - alavanca",
+        "shape": {
+          "Box": {
+            "x": "-0.115",
+            "y": "-0.24",
+            "z": "0.435",
+            "width": "0.02",
+            "depth": "0.06",
+            "height": "0.008"
+          }
+        },
+        "material": "Plástico vermelho",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Hidrômetro - porcas",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "(-0.18) - 0.018",
+                "v": "0.42",
+                "radius": "0.018"
+              },
+              {
+                "u": "(-0.18) + 0.018",
+                "v": "0.42",
+                "radius": "0.018"
+              }
+            ],
+            "offset": "-0.06",
+            "depth": "0.13"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Hidrômetro - corpo",
+        "shape": {
+          "Cylinder": {
+            "x": "0.005",
+            "y": "-0.18",
+            "z": "0.385",
+            "radius": "0.045",
+            "height": "0.07"
+          }
+        },
+        "material": "Latão",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Hidrômetro - mostrador",
+        "shape": {
+          "Cylinder": {
+            "x": "0.005",
+            "y": "-0.18",
+            "z": "0.455",
+            "radius": "0.04",
+            "height": "0.012"
+          }
+        },
+        "material": "Vidro do hidrômetro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Hidrômetro - tampa",
+        "shape": {
+          "Cylinder": {
+            "x": "0.005",
+            "y": "-0.18",
+            "z": "0.467",
+            "radius": "0.042",
+            "height": "0.006"
+          }
+        },
+        "material": "Plástico azul",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      }
+    ],
+    "mep": {
+      "Fixture": {
+        "drain_units": 0,
+        "supply_weight": 0,
+        "hot_water": false
+      }
+    },
+    "connectors": [
+      {
+        "name": "Rede pública",
+        "system": "ColdWater",
+        "x": "-0.17",
+        "y": "-0.18",
+        "z": "0",
+        "direction": "Down",
+        "diameter": "0.025"
+      },
+      {
+        "name": "Alimentação do imóvel",
+        "system": "ColdWater",
+        "x": "0.17",
+        "y": "0",
+        "z": "0.42",
+        "direction": "Back",
+        "diameter": "0.025"
+      }
+    ]
+  },
+  "types": [
+    {
+      "name": "Cavalete com hidrômetro DN 20",
+      "values": {},
+      "info": {
+        "description": "Cavalete de PVC DN 20 (3/4\") com registro de esfera, hidrômetro de 1,5 m³/h e tubete, em abrigo de concreto com porta de chapa e visor, no muro de divisa, conforme o padrão da concessionária"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "name": "Aço pintado cinza",
+      "color": [
+        128,
+        130,
+        134
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Vidro do hidrômetro",
+      "color": [
+        200,
+        220,
+        230
+      ],
+      "class": "Glass",
+      "finish": "Polished",
+      "transparency": 0.5
+    },
+    {
+      "name": "Aço galvanizado",
+      "color": [
+        160,
+        165,
+        170
+      ],
+      "class": "Metal",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "PVC marrom",
+      "color": [
+        120,
+        70,
+        46
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Latão",
+      "color": [
+        192,
+        160,
+        84
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico vermelho",
+      "color": [
+        196,
+        56,
+        48
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico azul",
+      "color": [
+        126,
+        176,
+        222
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    }
+  ]
+}

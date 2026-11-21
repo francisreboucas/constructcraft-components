@@ -1,0 +1,333 @@
+{
+  "component": "Exaustor de banheiro",
+  "def": {
+    "kind": "Furniture",
+    "params": [
+      {
+        "name": "Largura",
+        "value": 0.25,
+        "kind": "Length",
+        "instance": false
+      }
+    ],
+    "items": [
+      {
+        "name": "Exaustor simplificado",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2",
+            "y": "-Largura/2",
+            "z": "-0.02",
+            "width": "Largura",
+            "depth": "Largura",
+            "height": "0.2"
+          }
+        },
+        "material": "Branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Grelha - moldura",
+        "shape": {
+          "Profile": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "(-Largura/2) + 0.015",
+                "v": "-Largura/2"
+              },
+              {
+                "u": "(Largura/2) - 0.015",
+                "v": "-Largura/2",
+                "radius": "0.015"
+              },
+              {
+                "u": "Largura/2",
+                "v": "(-Largura/2) + 0.015"
+              },
+              {
+                "u": "Largura/2",
+                "v": "(Largura/2) - 0.015",
+                "radius": "0.015"
+              },
+              {
+                "u": "(Largura/2) - 0.015",
+                "v": "Largura/2"
+              },
+              {
+                "u": "(-Largura/2) + 0.015",
+                "v": "Largura/2",
+                "radius": "0.015"
+              },
+              {
+                "u": "-Largura/2",
+                "v": "(Largura/2) - 0.015"
+              },
+              {
+                "u": "-Largura/2",
+                "v": "(-Largura/2) + 0.015",
+                "radius": "0.015"
+              }
+            ],
+            "offset": "-0.015",
+            "depth": "0.015"
+          }
+        },
+        "material": "Branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha - aleta 1",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.025",
+            "y": "-Largura/2 + 0.03 + 0*(Largura - 0.06)/6 - 0.004",
+            "z": "-0.018",
+            "width": "Largura - 0.05",
+            "depth": "0.008",
+            "height": "0.004"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha - aleta 2",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.025",
+            "y": "-Largura/2 + 0.03 + 1*(Largura - 0.06)/6 - 0.004",
+            "z": "-0.018",
+            "width": "Largura - 0.05",
+            "depth": "0.008",
+            "height": "0.004"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha - aleta 3",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.025",
+            "y": "-Largura/2 + 0.03 + 2*(Largura - 0.06)/6 - 0.004",
+            "z": "-0.018",
+            "width": "Largura - 0.05",
+            "depth": "0.008",
+            "height": "0.004"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha - aleta 4",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.025",
+            "y": "-Largura/2 + 0.03 + 3*(Largura - 0.06)/6 - 0.004",
+            "z": "-0.018",
+            "width": "Largura - 0.05",
+            "depth": "0.008",
+            "height": "0.004"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha - aleta 5",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.025",
+            "y": "-Largura/2 + 0.03 + 4*(Largura - 0.06)/6 - 0.004",
+            "z": "-0.018",
+            "width": "Largura - 0.05",
+            "depth": "0.008",
+            "height": "0.004"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha - aleta 6",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.025",
+            "y": "-Largura/2 + 0.03 + 5*(Largura - 0.06)/6 - 0.004",
+            "z": "-0.018",
+            "width": "Largura - 0.05",
+            "depth": "0.008",
+            "height": "0.004"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grelha - aleta 7",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.025",
+            "y": "-Largura/2 + 0.03 + 6*(Largura - 0.06)/6 - 0.004",
+            "z": "-0.018",
+            "width": "Largura - 0.05",
+            "depth": "0.008",
+            "height": "0.004"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Caixa do ventilador",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.02",
+            "y": "-Largura/2 + 0.02",
+            "z": "0",
+            "width": "Largura - 0.04",
+            "depth": "Largura - 0.04",
+            "height": "0.12"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Colarinho",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0",
+            "z": "0.12",
+            "radius": "0.052",
+            "height": "0.04"
+          }
+        },
+        "material": "Plástico cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Duto flexível",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0",
+            "z": "0.16",
+            "radius": "0.05",
+            "height": "0.14"
+          }
+        },
+        "material": "Alumínio anodizado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      }
+    ]
+  },
+  "types": [
+    {
+      "name": "Exaustor de teto 150 m³/h",
+      "values": {},
+      "info": {
+        "description": "Exaustor axial de teto para banheiros sem janela, 150 m³/h, grelha quadrada e duto de 100 mm até a fachada ou o shaft; acionado com a luz ou por sensor de umidade"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "name": "Branco",
+      "color": [
+        244,
+        244,
+        240
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico cinza claro",
+      "color": [
+        196,
+        198,
+        200
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Alumínio anodizado",
+      "color": [
+        206,
+        208,
+        210
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    }
+  ]
+}

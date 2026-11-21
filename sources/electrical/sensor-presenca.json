@@ -1,0 +1,210 @@
+{
+  "component": "Sensor de presença de teto",
+  "def": {
+    "kind": "Electrical",
+    "params": [],
+    "items": [
+      {
+        "name": "Sensor simplificado",
+        "shape": {
+          "Cylinder": {
+            "x": "0",
+            "y": "0",
+            "z": "-0.045",
+            "radius": "0.055",
+            "height": "0.045"
+          }
+        },
+        "material": "Branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Base",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "0"
+              },
+              {
+                "u": "0.055",
+                "v": "0"
+              },
+              {
+                "u": "0.055",
+                "v": "-0.004"
+              },
+              {
+                "u": "0.05",
+                "v": "-0.022"
+              },
+              {
+                "u": "0",
+                "v": "-0.022"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lente",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "-0.022"
+              },
+              {
+                "u": "0.03",
+                "v": "-0.022"
+              },
+              {
+                "u": "0.03",
+                "v": "-0.028"
+              },
+              {
+                "u": "0.026",
+                "v": "-0.04",
+                "radius": "0.03"
+              },
+              {
+                "u": "0",
+                "v": "-0.046"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Plástico translúcido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ajuste 1",
+        "shape": {
+          "Cylinder": {
+            "x": "0.04*cos(0)",
+            "y": "0.04*sin(0)",
+            "z": "-0.0225",
+            "radius": "0.004",
+            "height": "0.001"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ajuste 2",
+        "shape": {
+          "Cylinder": {
+            "x": "0.04*cos(120)",
+            "y": "0.04*sin(120)",
+            "z": "-0.0225",
+            "radius": "0.004",
+            "height": "0.001"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ajuste 3",
+        "shape": {
+          "Cylinder": {
+            "x": "0.04*cos(240)",
+            "y": "0.04*sin(240)",
+            "z": "-0.0225",
+            "radius": "0.004",
+            "height": "0.001"
+          }
+        },
+        "material": "Plástico cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      }
+    ]
+  },
+  "types": [
+    {
+      "name": "Sensor de presença 360°",
+      "values": {},
+      "info": {
+        "description": "Sensor de presença infravermelho passivo de sobrepor no teto, 360°, alcance de 6 m de diâmetro a 2,5 m de altura, com fotocélula e temporizador; comanda a iluminação do ambiente"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "name": "Branco",
+      "color": [
+        244,
+        244,
+        240
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico translúcido",
+      "color": [
+        222,
+        236,
+        240
+      ],
+      "class": "Plastic",
+      "finish": "Glossy",
+      "transparency": 0.6
+    },
+    {
+      "name": "Plástico cinza",
+      "color": [
+        120,
+        122,
+        126
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    }
+  ]
+}

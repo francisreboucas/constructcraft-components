@@ -1,0 +1,1579 @@
+(
+  format_version: 1,
+  generator: "ConstructCraft 0.12.0",
+  component: "Módulo fotovoltaico",
+  def: (
+    kind: Generic,
+    params: [
+      (
+        name: "Largura",
+        value: 1.134,
+        kind: Length,
+        instance: false,
+      ),
+      (
+        name: "Comprimento",
+        value: 2.278,
+        kind: Length,
+        instance: false,
+      ),
+      (
+        name: "Inclinacao",
+        value: 20.0,
+        kind: Angle,
+        instance: false,
+      ),
+      (
+        name: "AlturaFrente",
+        value: 0.3,
+        kind: Length,
+        instance: false,
+      ),
+    ],
+    items: [
+      (
+        name: "Módulo simplificado",
+        shape: Box(
+          x: "-Largura/2",
+          y: "-Comprimento/2*cos(Inclinacao)",
+          z: "AlturaFrente",
+          width: "Largura",
+          depth: "Comprimento*cos(Inclinacao)",
+          height: "Comprimento*sin(Inclinacao) + 0.035",
+        ),
+        material: "Célula fotovoltaica",
+        in_plan: true,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
+      ),
+      (
+        name: "Moldura inferior",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0)*cos(Inclinacao) - (0)*sin(Inclinacao)",
+              v: "AlturaFrente + (0)*sin(Inclinacao) + (0)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03)*cos(Inclinacao) - (0)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03)*sin(Inclinacao) + (0)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03)*cos(Inclinacao) - (0.035)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03)*sin(Inclinacao) + (0.035)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0)*cos(Inclinacao) - (0.035)*sin(Inclinacao)",
+              v: "AlturaFrente + (0)*sin(Inclinacao) + (0.035)*cos(Inclinacao)",
+            ),
+          ],
+          offset: "-Largura/2",
+          depth: "Largura",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Moldura superior",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.03)*cos(Inclinacao) - (0)*sin(Inclinacao)",
+              v: "AlturaFrente + (Comprimento - 0.03)*sin(Inclinacao) + (0)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (Comprimento)*cos(Inclinacao) - (0)*sin(Inclinacao)",
+              v: "AlturaFrente + (Comprimento)*sin(Inclinacao) + (0)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (Comprimento)*cos(Inclinacao) - (0.035)*sin(Inclinacao)",
+              v: "AlturaFrente + (Comprimento)*sin(Inclinacao) + (0.035)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.03)*cos(Inclinacao) - (0.035)*sin(Inclinacao)",
+              v: "AlturaFrente + (Comprimento - 0.03)*sin(Inclinacao) + (0.035)*cos(Inclinacao)",
+            ),
+          ],
+          offset: "-Largura/2",
+          depth: "Largura",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Moldura esquerda",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03)*cos(Inclinacao) - (0)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03)*sin(Inclinacao) + (0)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.03)*cos(Inclinacao) - (0)*sin(Inclinacao)",
+              v: "AlturaFrente + (Comprimento - 0.03)*sin(Inclinacao) + (0)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.03)*cos(Inclinacao) - (0.035)*sin(Inclinacao)",
+              v: "AlturaFrente + (Comprimento - 0.03)*sin(Inclinacao) + (0.035)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03)*cos(Inclinacao) - (0.035)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03)*sin(Inclinacao) + (0.035)*cos(Inclinacao)",
+            ),
+          ],
+          offset: "-Largura/2",
+          depth: "0.03",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Moldura direita",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03)*cos(Inclinacao) - (0)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03)*sin(Inclinacao) + (0)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.03)*cos(Inclinacao) - (0)*sin(Inclinacao)",
+              v: "AlturaFrente + (Comprimento - 0.03)*sin(Inclinacao) + (0)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.03)*cos(Inclinacao) - (0.035)*sin(Inclinacao)",
+              v: "AlturaFrente + (Comprimento - 0.03)*sin(Inclinacao) + (0.035)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03)*cos(Inclinacao) - (0.035)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03)*sin(Inclinacao) + (0.035)*cos(Inclinacao)",
+            ),
+          ],
+          offset: "Largura/2 - 0.03",
+          depth: "0.03",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Vidro e células",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03)*cos(Inclinacao) - (0.012)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03)*sin(Inclinacao) + (0.012)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.03)*cos(Inclinacao) - (0.012)*sin(Inclinacao)",
+              v: "AlturaFrente + (Comprimento - 0.03)*sin(Inclinacao) + (0.012)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.03)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (Comprimento - 0.03)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+          ],
+          offset: "-Largura/2 + 0.03",
+          depth: "Largura - 0.06",
+        ),
+        material: "Célula fotovoltaica",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Linha das células 1",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 1*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 1*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 1*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 1*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 1*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 1*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 1*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 1*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+          ],
+          offset: "-Largura/2 + 0.03",
+          depth: "Largura - 0.06",
+        ),
+        material: "Grade das células",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Linha das células 2",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 2*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 2*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 2*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 2*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 2*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 2*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 2*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 2*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+          ],
+          offset: "-Largura/2 + 0.03",
+          depth: "Largura - 0.06",
+        ),
+        material: "Grade das células",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Linha das células 3",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 3*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 3*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 3*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 3*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 3*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 3*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 3*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 3*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+          ],
+          offset: "-Largura/2 + 0.03",
+          depth: "Largura - 0.06",
+        ),
+        material: "Grade das células",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Linha das células 4",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 4*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 4*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 4*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 4*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 4*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 4*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 4*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 4*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+          ],
+          offset: "-Largura/2 + 0.03",
+          depth: "Largura - 0.06",
+        ),
+        material: "Grade das células",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Linha das células 5",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 5*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 5*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 5*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 5*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 5*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 5*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 5*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 5*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+          ],
+          offset: "-Largura/2 + 0.03",
+          depth: "Largura - 0.06",
+        ),
+        material: "Grade das células",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Linha das células 6",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 6*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 6*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 6*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 6*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 6*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 6*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 6*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 6*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+          ],
+          offset: "-Largura/2 + 0.03",
+          depth: "Largura - 0.06",
+        ),
+        material: "Grade das células",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Linha das células 7",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 7*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 7*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 7*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 7*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 7*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 7*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 7*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 7*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+          ],
+          offset: "-Largura/2 + 0.03",
+          depth: "Largura - 0.06",
+        ),
+        material: "Grade das células",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Linha das células 8",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 8*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 8*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 8*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 8*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 8*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 8*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 8*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 8*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+          ],
+          offset: "-Largura/2 + 0.03",
+          depth: "Largura - 0.06",
+        ),
+        material: "Grade das células",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Linha das células 9",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 9*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 9*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 9*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 9*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 9*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 9*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 9*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 9*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+          ],
+          offset: "-Largura/2 + 0.03",
+          depth: "Largura - 0.06",
+        ),
+        material: "Grade das células",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Linha das células 10",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 10*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 10*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 10*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 10*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 10*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 10*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 10*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 10*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+          ],
+          offset: "-Largura/2 + 0.03",
+          depth: "Largura - 0.06",
+        ),
+        material: "Grade das células",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Linha das células 11",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 11*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 11*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 11*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 11*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 11*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 11*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 11*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 11*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+          ],
+          offset: "-Largura/2 + 0.03",
+          depth: "Largura - 0.06",
+        ),
+        material: "Grade das células",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Linha das células 12",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 12*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 12*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 12*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 12*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 12*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 12*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 12*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 12*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+          ],
+          offset: "-Largura/2 + 0.03",
+          depth: "Largura - 0.06",
+        ),
+        material: "Grade das células",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Linha das células 13",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 13*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 13*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 13*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 13*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 13*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 13*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 13*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 13*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+          ],
+          offset: "-Largura/2 + 0.03",
+          depth: "Largura - 0.06",
+        ),
+        material: "Grade das células",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Linha das células 14",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 14*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 14*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 14*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 14*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 14*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 14*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 14*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 14*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+          ],
+          offset: "-Largura/2 + 0.03",
+          depth: "Largura - 0.06",
+        ),
+        material: "Grade das células",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Linha das células 15",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 15*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 15*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 15*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 15*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 15*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 15*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 15*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 15*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+          ],
+          offset: "-Largura/2 + 0.03",
+          depth: "Largura - 0.06",
+        ),
+        material: "Grade das células",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Linha das células 16",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 16*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 16*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 16*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 16*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 16*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 16*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 16*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 16*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+          ],
+          offset: "-Largura/2 + 0.03",
+          depth: "Largura - 0.06",
+        ),
+        material: "Grade das células",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Linha das células 17",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 17*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 17*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 17*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 17*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 17*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 17*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 17*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 17*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+          ],
+          offset: "-Largura/2 + 0.03",
+          depth: "Largura - 0.06",
+        ),
+        material: "Grade das células",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Linha das células 18",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 18*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 18*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 18*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 18*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 18*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 18*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 18*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 18*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+          ],
+          offset: "-Largura/2 + 0.03",
+          depth: "Largura - 0.06",
+        ),
+        material: "Grade das células",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Linha das células 19",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 19*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 19*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 19*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 19*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 19*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 19*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 19*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 19*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+          ],
+          offset: "-Largura/2 + 0.03",
+          depth: "Largura - 0.06",
+        ),
+        material: "Grade das células",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Linha das células 20",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 20*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 20*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 20*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 20*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 20*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 20*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 20*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 20*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+          ],
+          offset: "-Largura/2 + 0.03",
+          depth: "Largura - 0.06",
+        ),
+        material: "Grade das células",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Linha das células 21",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 21*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 21*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 21*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 21*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 21*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 21*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 21*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 21*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+          ],
+          offset: "-Largura/2 + 0.03",
+          depth: "Largura - 0.06",
+        ),
+        material: "Grade das células",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Linha das células 22",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 22*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 22*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 22*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 22*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 22*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 22*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 22*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 22*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+          ],
+          offset: "-Largura/2 + 0.03",
+          depth: "Largura - 0.06",
+        ),
+        material: "Grade das células",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Linha das células 23",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 23*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 23*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 23*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.032)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 23*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.032)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 23*(Comprimento - 0.06)/24 + 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 23*(Comprimento - 0.06)/24 + 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.03 + 23*(Comprimento - 0.06)/24 - 0.0015)*cos(Inclinacao) - (0.0325)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.03 + 23*(Comprimento - 0.06)/24 - 0.0015)*sin(Inclinacao) + (0.0325)*cos(Inclinacao)",
+            ),
+          ],
+          offset: "-Largura/2 + 0.03",
+          depth: "Largura - 0.06",
+        ),
+        material: "Grade das células",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Caixa de junção",
+        shape: Box(
+          x: "-0.08",
+          y: "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.25)*cos(Inclinacao)",
+          z: "AlturaFrente + (Comprimento - 0.25)*sin(Inclinacao) - 0.025",
+          width: "0.16",
+          depth: "0.1",
+          height: "0.025",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Trilho esquerdo",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.1)*cos(Inclinacao) - (-0.04)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.1)*sin(Inclinacao) + (-0.04)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.1)*cos(Inclinacao) - (-0.04)*sin(Inclinacao)",
+              v: "AlturaFrente + (Comprimento - 0.1)*sin(Inclinacao) + (-0.04)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.1)*cos(Inclinacao) - (0)*sin(Inclinacao)",
+              v: "AlturaFrente + (Comprimento - 0.1)*sin(Inclinacao) + (0)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.1)*cos(Inclinacao) - (0)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.1)*sin(Inclinacao) + (0)*cos(Inclinacao)",
+            ),
+          ],
+          offset: "-Largura/4 - 0.02",
+          depth: "0.04",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Pé frontal esquerdo",
+        shape: Box(
+          x: "-Largura/4 - 0.02",
+          y: "-Comprimento/2*cos(Inclinacao) + (0.25)*cos(Inclinacao) - (-0.04)*sin(Inclinacao) - 0.02",
+          z: "0",
+          width: "0.04",
+          depth: "0.04",
+          height: "AlturaFrente + (0.25)*sin(Inclinacao) + (-0.04)*cos(Inclinacao)",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Sapata frontal esquerdo",
+        shape: Box(
+          x: "-Largura/4 - 0.06",
+          y: "-Comprimento/2*cos(Inclinacao) + (0.25)*cos(Inclinacao) - (-0.04)*sin(Inclinacao) - 0.06",
+          z: "0",
+          width: "0.12",
+          depth: "0.12",
+          height: "0.008",
+        ),
+        material: "Aço galvanizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Pé traseiro esquerdo",
+        shape: Box(
+          x: "-Largura/4 - 0.02",
+          y: "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.25)*cos(Inclinacao) - (-0.04)*sin(Inclinacao) - 0.02",
+          z: "0",
+          width: "0.04",
+          depth: "0.04",
+          height: "AlturaFrente + (Comprimento - 0.25)*sin(Inclinacao) + (-0.04)*cos(Inclinacao)",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Sapata traseiro esquerdo",
+        shape: Box(
+          x: "-Largura/4 - 0.06",
+          y: "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.25)*cos(Inclinacao) - (-0.04)*sin(Inclinacao) - 0.06",
+          z: "0",
+          width: "0.12",
+          depth: "0.12",
+          height: "0.008",
+        ),
+        material: "Aço galvanizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Diagonal esquerdo",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.25)*cos(Inclinacao) - (0)*sin(Inclinacao)",
+              v: "0.05",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.25)*cos(Inclinacao) - (0)*sin(Inclinacao) + 0.04",
+              v: "0.05",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.25)*cos(Inclinacao) - (-0.04)*sin(Inclinacao)",
+              v: "AlturaFrente + (Comprimento - 0.25)*sin(Inclinacao) + (-0.04)*cos(Inclinacao) - 0.05",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.25)*cos(Inclinacao) - (-0.04)*sin(Inclinacao) - 0.04",
+              v: "AlturaFrente + (Comprimento - 0.25)*sin(Inclinacao) + (-0.04)*cos(Inclinacao) - 0.05",
+            ),
+          ],
+          offset: "-Largura/4 - 0.012",
+          depth: "0.024",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Trilho direito",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.1)*cos(Inclinacao) - (-0.04)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.1)*sin(Inclinacao) + (-0.04)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.1)*cos(Inclinacao) - (-0.04)*sin(Inclinacao)",
+              v: "AlturaFrente + (Comprimento - 0.1)*sin(Inclinacao) + (-0.04)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.1)*cos(Inclinacao) - (0)*sin(Inclinacao)",
+              v: "AlturaFrente + (Comprimento - 0.1)*sin(Inclinacao) + (0)*cos(Inclinacao)",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.1)*cos(Inclinacao) - (0)*sin(Inclinacao)",
+              v: "AlturaFrente + (0.1)*sin(Inclinacao) + (0)*cos(Inclinacao)",
+            ),
+          ],
+          offset: "Largura/4 - 0.02",
+          depth: "0.04",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Pé frontal direito",
+        shape: Box(
+          x: "Largura/4 - 0.02",
+          y: "-Comprimento/2*cos(Inclinacao) + (0.25)*cos(Inclinacao) - (-0.04)*sin(Inclinacao) - 0.02",
+          z: "0",
+          width: "0.04",
+          depth: "0.04",
+          height: "AlturaFrente + (0.25)*sin(Inclinacao) + (-0.04)*cos(Inclinacao)",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Sapata frontal direito",
+        shape: Box(
+          x: "Largura/4 - 0.06",
+          y: "-Comprimento/2*cos(Inclinacao) + (0.25)*cos(Inclinacao) - (-0.04)*sin(Inclinacao) - 0.06",
+          z: "0",
+          width: "0.12",
+          depth: "0.12",
+          height: "0.008",
+        ),
+        material: "Aço galvanizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Pé traseiro direito",
+        shape: Box(
+          x: "Largura/4 - 0.02",
+          y: "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.25)*cos(Inclinacao) - (-0.04)*sin(Inclinacao) - 0.02",
+          z: "0",
+          width: "0.04",
+          depth: "0.04",
+          height: "AlturaFrente + (Comprimento - 0.25)*sin(Inclinacao) + (-0.04)*cos(Inclinacao)",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Sapata traseiro direito",
+        shape: Box(
+          x: "Largura/4 - 0.06",
+          y: "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.25)*cos(Inclinacao) - (-0.04)*sin(Inclinacao) - 0.06",
+          z: "0",
+          width: "0.12",
+          depth: "0.12",
+          height: "0.008",
+        ),
+        material: "Aço galvanizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Diagonal direito",
+        shape: Profile(
+          plane: Side,
+          points: [
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.25)*cos(Inclinacao) - (0)*sin(Inclinacao)",
+              v: "0.05",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (0.25)*cos(Inclinacao) - (0)*sin(Inclinacao) + 0.04",
+              v: "0.05",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.25)*cos(Inclinacao) - (-0.04)*sin(Inclinacao)",
+              v: "AlturaFrente + (Comprimento - 0.25)*sin(Inclinacao) + (-0.04)*cos(Inclinacao) - 0.05",
+            ),
+            (
+              u: "-Comprimento/2*cos(Inclinacao) + (Comprimento - 0.25)*cos(Inclinacao) - (-0.04)*sin(Inclinacao) - 0.04",
+              v: "AlturaFrente + (Comprimento - 0.25)*sin(Inclinacao) + (-0.04)*cos(Inclinacao) - 0.05",
+            ),
+          ],
+          offset: "Largura/4 - 0.012",
+          depth: "0.024",
+        ),
+        material: "Alumínio anodizado",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+    ],
+  ),
+  types: [
+    (
+      name: "Módulo fotovoltaico 550 W - 20°",
+      values: {
+        "AlturaFrente": 0.3,
+        "Comprimento": 2.278,
+        "Inclinacao": 20.0,
+        "Largura": 1.134,
+      },
+      info: (
+        type_mark: "",
+        description: "Módulo fotovoltaico monocristalino de 550 W (2,28 x 1,13 m, 144 meias-células) com moldura de alumínio, em estrutura de alumínio para solo ou laje inclinada; repita lado a lado para formar o arranjo",
+        manufacturer: "",
+        model: "",
+        url: "",
+        keynote: "",
+        classification: "",
+        fire_rating: "",
+        comments: "",
+        cost: None,
+      ),
+    ),
+    (
+      name: "Módulo fotovoltaico 550 W - 10°",
+      values: {
+        "AlturaFrente": 0.3,
+        "Comprimento": 2.278,
+        "Inclinacao": 10.0,
+        "Largura": 1.134,
+      },
+      info: (
+        type_mark: "",
+        description: "Módulo fotovoltaico monocristalino de 550 W (2,28 x 1,13 m, 144 meias-células) com moldura de alumínio, em estrutura de alumínio para solo ou laje inclinada; repita lado a lado para formar o arranjo",
+        manufacturer: "",
+        model: "",
+        url: "",
+        keynote: "",
+        classification: "",
+        fire_rating: "",
+        comments: "",
+        cost: None,
+      ),
+    ),
+    (
+      name: "Módulo fotovoltaico 550 W - 30°",
+      values: {
+        "AlturaFrente": 0.3,
+        "Comprimento": 2.278,
+        "Inclinacao": 30.0,
+        "Largura": 1.134,
+      },
+      info: (
+        type_mark: "",
+        description: "Módulo fotovoltaico monocristalino de 550 W (2,28 x 1,13 m, 144 meias-células) com moldura de alumínio, em estrutura de alumínio para solo ou laje inclinada; repita lado a lado para formar o arranjo",
+        manufacturer: "",
+        model: "",
+        url: "",
+        keynote: "",
+        classification: "",
+        fire_rating: "",
+        comments: "",
+        cost: None,
+      ),
+    ),
+  ],
+  materials: [
+    (
+      name: "Célula fotovoltaica",
+      color: (22, 32, 62),
+      identity: (
+        description: "",
+        class: Generic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (22, 32, 62),
+        finish: Glossy,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Alumínio anodizado",
+      color: (206, 208, 210),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (206, 208, 210),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Grade das células",
+      color: (190, 196, 206),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (190, 196, 206),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Plástico preto",
+      color: (34, 34, 37),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (34, 34, 37),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Aço galvanizado",
+      color: (160, 165, 170),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (160, 165, 170),
+        finish: Matte,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+  ],
+)

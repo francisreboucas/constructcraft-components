@@ -1,0 +1,333 @@
+{
+  "component": "Câmera de CFTV",
+  "def": {
+    "kind": "Electrical",
+    "params": [
+      {
+        "name": "Elevacao",
+        "value": 2.6,
+        "kind": "Length",
+        "instance": true
+      }
+    ],
+    "items": [
+      {
+        "name": "Câmera simplificada",
+        "shape": {
+          "Box": {
+            "x": "-0.04",
+            "y": "-0.3",
+            "z": "Elevacao + -0.05",
+            "width": "0.08",
+            "depth": "0.3",
+            "height": "0.1"
+          }
+        },
+        "material": "Branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Caixa de passagem",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0",
+                "v": "-0.035"
+              },
+              {
+                "u": "0 + 0.05",
+                "v": "-0.035"
+              },
+              {
+                "u": "0 + 0.05",
+                "v": "(-0.035) + 0.035"
+              },
+              {
+                "u": "0",
+                "v": "(-0.035) + 0.035"
+              }
+            ],
+            "offset": "Elevacao",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Braço do suporte",
+        "shape": {
+          "Revolution": {
+            "plane": "Plan",
+            "points": [
+              {
+                "u": "0",
+                "v": "-0.11"
+              },
+              {
+                "u": "0 + 0.012",
+                "v": "-0.11"
+              },
+              {
+                "u": "0 + 0.012",
+                "v": "(-0.11) + 0.08"
+              },
+              {
+                "u": "0",
+                "v": "(-0.11) + 0.08"
+              }
+            ],
+            "offset": "Elevacao",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Articulação",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "Elevacao + -0.02"
+              },
+              {
+                "u": "0.02",
+                "v": "Elevacao + -0.02"
+              },
+              {
+                "u": "0.022",
+                "v": "Elevacao + 0.0",
+                "radius": "0.03"
+              },
+              {
+                "u": "0.02",
+                "v": "Elevacao + 0.02"
+              },
+              {
+                "u": "0",
+                "v": "Elevacao + 0.02"
+              }
+            ],
+            "offset": "-0.115",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Corpo da câmera",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-0.121823",
+                "v": "Elevacao + -0.039729644594020175"
+              },
+              {
+                "u": "-0.290968",
+                "v": "Elevacao + -0.10129327039264055"
+              },
+              {
+                "u": "-0.314909",
+                "v": "Elevacao + -0.03551478693762695"
+              },
+              {
+                "u": "-0.145765",
+                "v": "Elevacao + 0.026048838860993424"
+              }
+            ],
+            "offset": "-0.035",
+            "depth": "0.07"
+          }
+        },
+        "material": "Branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Para-sol",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-0.164558",
+                "v": "Elevacao + 0.01920843599448005"
+              },
+              {
+                "u": "-0.352497",
+                "v": "Elevacao + -0.04919559267065369"
+              },
+              {
+                "u": "-0.354891",
+                "v": "Elevacao + -0.04261774432515233"
+              },
+              {
+                "u": "-0.166953",
+                "v": "Elevacao + 0.02578628433998141"
+              }
+            ],
+            "offset": "-0.042",
+            "depth": "0.084"
+          }
+        },
+        "material": "Branco",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Lente",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-0.294046",
+                "v": "Elevacao + -0.09283603680556736"
+              },
+              {
+                "u": "-0.298744",
+                "v": "Elevacao + -0.09454613752219569"
+              },
+              {
+                "u": "-0.31653",
+                "v": "Elevacao + -0.04568212124132846"
+              },
+              {
+                "u": "-0.311831",
+                "v": "Elevacao + -0.04397202052470013"
+              }
+            ],
+            "offset": "-0.026",
+            "depth": "0.052"
+          }
+        },
+        "material": "Lente",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Infravermelho",
+        "shape": {
+          "Profile": {
+            "plane": "Side",
+            "points": [
+              {
+                "u": "-0.291994",
+                "v": "Elevacao + -0.09847419253028282"
+              },
+              {
+                "u": "-0.294813",
+                "v": "Elevacao + -0.09950025296025983"
+              },
+              {
+                "u": "-0.296181",
+                "v": "Elevacao + -0.0957414824771162"
+              },
+              {
+                "u": "-0.293362",
+                "v": "Elevacao + -0.09471542204713918"
+              }
+            ],
+            "offset": "-0.03",
+            "depth": "0.06"
+          }
+        },
+        "material": "Plástico fumê",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      }
+    ]
+  },
+  "types": [
+    {
+      "name": "Câmera bullet de CFTV",
+      "values": {},
+      "info": {
+        "description": "Câmera de segurança tipo bullet IP com infravermelho, caixa de passagem e suporte de parede articulado; inclinada 20° para baixo"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "name": "Branco",
+      "color": [
+        244,
+        244,
+        240
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Lente",
+      "color": [
+        16,
+        18,
+        26
+      ],
+      "class": "Glass",
+      "finish": "Glossy",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico fumê",
+      "color": [
+        60,
+        62,
+        66
+      ],
+      "class": "Plastic",
+      "finish": "Glossy",
+      "transparency": 0.5
+    }
+  ]
+}
