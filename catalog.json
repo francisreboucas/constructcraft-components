@@ -1857,6 +1857,57 @@
       ]
     },
     {
+      "file": "components/furniture/armario-vestiario.ccomp",
+      "thumbnail": "thumbnails/furniture/armario-vestiario.png",
+      "component": "Armário de vestiário",
+      "author": "Francis Rebouças",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Colunas",
+        "Profundidade",
+        "Altura"
+      ],
+      "types": [
+        {
+          "name": "Armário de vestiário 2 colunas, 8 portas",
+          "values": {
+            "Colunas": 2.0,
+            "Profundidade": 0.4,
+            "Altura": 1.95
+          },
+          "description": "Armário roupeiro de aço para vestiário com quatro portas por coluna, venezianas de ventilação, porta-cadeado e base"
+        },
+        {
+          "name": "Armário de vestiário 1 coluna, 4 portas",
+          "values": {
+            "Colunas": 1.0,
+            "Profundidade": 0.4,
+            "Altura": 1.95
+          },
+          "description": "Armário roupeiro de aço para vestiário com quatro portas por coluna, venezianas de ventilação, porta-cadeado e base"
+        },
+        {
+          "name": "Armário de vestiário 3 colunas, 12 portas",
+          "values": {
+            "Colunas": 3.0,
+            "Profundidade": 0.4,
+            "Altura": 1.95
+          },
+          "description": "Armário roupeiro de aço para vestiário com quatro portas por coluna, venezianas de ventilação, porta-cadeado e base"
+        },
+        {
+          "name": "Armário de vestiário 4 colunas, 16 portas",
+          "values": {
+            "Colunas": 4.0,
+            "Profundidade": 0.4,
+            "Altura": 1.95
+          },
+          "description": "Armário roupeiro de aço para vestiário com quatro portas por coluna, venezianas de ventilação, porta-cadeado e base"
+        }
+      ]
+    },
+    {
       "file": "components/furniture/arquivo-aco.ccomp",
       "thumbnail": "thumbnails/furniture/arquivo-aco.png",
       "component": "Arquivo de aço",
@@ -1898,6 +1949,71 @@
             "AberturaGaveta4": 0.0
           },
           "description": "Arquivo de aço com quatro gavetas para pastas suspensas em corrediças telescópicas, porta-etiquetas, puxadores e fechadura central que trava todas as gavetas; para pastas tamanho ofício"
+        }
+      ]
+    },
+    {
+      "file": "components/furniture/balcao-atendimento.ccomp",
+      "thumbnail": "thumbnails/furniture/balcao-atendimento.png",
+      "component": "Balcão de atendimento",
+      "author": "Francis Rebouças",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Profundidade"
+      ],
+      "types": [
+        {
+          "name": "Balcão de atendimento 2,0 m",
+          "values": {
+            "Largura": 2.0,
+            "Profundidade": 0.7
+          },
+          "description": "Balcão de atendimento de melamina com tampo de transação a 1,10 m, mesa de trabalho a 0,75 m atrás e trecho rebaixado acessível de 0,90 m com tampo a 0,85 m e vão livre para as pernas (NBR 9050)"
+        },
+        {
+          "name": "Balcão de atendimento 2,6 m",
+          "values": {
+            "Largura": 2.6,
+            "Profundidade": 0.7
+          },
+          "description": "Balcão de atendimento de melamina com tampo de transação a 1,10 m, mesa de trabalho a 0,75 m atrás e trecho rebaixado acessível de 0,90 m com tampo a 0,85 m e vão livre para as pernas (NBR 9050)"
+        },
+        {
+          "name": "Balcão de atendimento 3,2 m",
+          "values": {
+            "Largura": 3.2,
+            "Profundidade": 0.7
+          },
+          "description": "Balcão de atendimento de melamina com tampo de transação a 1,10 m, mesa de trabalho a 0,75 m atrás e trecho rebaixado acessível de 0,90 m com tampo a 0,85 m e vão livre para as pernas (NBR 9050)"
+        }
+      ]
+    },
+    {
+      "file": "components/furniture/banqueta-alta.ccomp",
+      "thumbnail": "thumbnails/furniture/banqueta-alta.png",
+      "component": "Banqueta alta",
+      "author": "Francis Rebouças",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "AlturaAssento"
+      ],
+      "types": [
+        {
+          "name": "Banqueta alta 75 cm (balcão)",
+          "values": {
+            "AlturaAssento": 0.75
+          },
+          "description": "Banqueta de aço pintado com assento redondo estofado Ø36 cm, quatro pés abertos e aro de apoio para os pés; para bancadas a 1,05 m"
+        },
+        {
+          "name": "Banqueta alta 65 cm (cozinha)",
+          "values": {
+            "AlturaAssento": 0.65
+          },
+          "description": "Banqueta de aço pintado com assento redondo estofado Ø36 cm, quatro pés abertos e aro de apoio para os pés; para bancadas a 0,90 m"
         }
       ]
     },
@@ -2176,6 +2292,26 @@
       ]
     },
     {
+      "file": "components/furniture/cama-hospitalar.ccomp",
+      "thumbnail": "thumbnails/furniture/cama-hospitalar.png",
+      "component": "Cama hospitalar",
+      "author": "Francis Rebouças",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "AnguloEncosto"
+      ],
+      "types": [
+        {
+          "name": "Cama hospitalar Fowler",
+          "values": {
+            "AnguloEncosto": 0.0
+          },
+          "description": "Cama hospitalar de aço pintado tipo Fowler com cabeceira e peseira removíveis, grades laterais basculantes, colchão de espuma D33, rodízios de 5\" com freio e suporte de soro; 2,10 x 1,00 m"
+        }
+      ]
+    },
+    {
       "file": "components/furniture/cama.ccomp",
       "thumbnail": "thumbnails/furniture/cama.png",
       "component": "Cama com cabeceira",
@@ -2236,6 +2372,33 @@
       ]
     },
     {
+      "file": "components/furniture/checkout.ccomp",
+      "thumbnail": "thumbnails/furniture/checkout.png",
+      "component": "Caixa de supermercado",
+      "author": "Francis Rebouças",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Comprimento"
+      ],
+      "types": [
+        {
+          "name": "Caixa de supermercado 2,4 m",
+          "values": {
+            "Comprimento": 2.4
+          },
+          "description": "Checkout de supermercado com esteira de alimentação, leitor de código de barras, terminal de vendas, gaveta de dinheiro, banco do operador e mesa de empacotamento"
+        },
+        {
+          "name": "Caixa de supermercado 3,0 m",
+          "values": {
+            "Comprimento": 3.0
+          },
+          "description": "Checkout com esteira mais longa"
+        }
+      ]
+    },
+    {
       "file": "components/furniture/coifa-parede.ccomp",
       "thumbnail": "thumbnails/furniture/coifa-parede.png",
       "component": "Coifa de parede",
@@ -2280,6 +2443,44 @@
             "AlturaChamineInferior": 0.34
           },
           "description": "Coifa de parede piramidal em inox, 90 x 50 cm, chaminé telescópica, 3 velocidades, filtros metálicos e LED"
+        }
+      ]
+    },
+    {
+      "file": "components/furniture/conjunto-escolar.ccomp",
+      "thumbnail": "thumbnails/furniture/conjunto-escolar.png",
+      "component": "Conjunto escolar",
+      "author": "Francis Rebouças",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "AlturaMesa",
+        "AlturaAssento"
+      ],
+      "types": [
+        {
+          "name": "Conjunto escolar CJA-06 (adulto)",
+          "values": {
+            "AlturaMesa": 0.76,
+            "AlturaAssento": 0.46
+          },
+          "description": "Conjunto escolar (mesa e cadeira) de tubo de aço com tampo de MDF revestido de laminado, porta-livros, assento e encosto de polipropileno; tamanho 6, para alunos de 1,59 a 1,88 m (NBR 14006)"
+        },
+        {
+          "name": "Conjunto escolar CJA-04",
+          "values": {
+            "AlturaMesa": 0.64,
+            "AlturaAssento": 0.38
+          },
+          "description": "Conjunto escolar (mesa e cadeira) de tubo de aço com tampo de MDF revestido de laminado, porta-livros, assento e encosto de polipropileno; tamanho 4, para alunos de 1,33 a 1,59 m"
+        },
+        {
+          "name": "Conjunto escolar CJA-03",
+          "values": {
+            "AlturaMesa": 0.59,
+            "AlturaAssento": 0.35
+          },
+          "description": "Conjunto escolar (mesa e cadeira) de tubo de aço com tampo de MDF revestido de laminado, porta-livros, assento e encosto de polipropileno; tamanho 3, para alunos de 1,19 a 1,42 m"
         }
       ]
     },
@@ -2574,6 +2775,48 @@
       ]
     },
     {
+      "file": "components/furniture/estante-aco.ccomp",
+      "thumbnail": "thumbnails/furniture/estante-aco.png",
+      "component": "Estante de aço",
+      "author": "Francis Rebouças",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Profundidade",
+        "Altura"
+      ],
+      "types": [
+        {
+          "name": "Estante de aço 92 x 30 x 198 cm",
+          "values": {
+            "Largura": 0.92,
+            "Profundidade": 0.3,
+            "Altura": 1.98
+          },
+          "description": "Estante de aço com colunas de cantoneira perfurada, cinco bandejas reforçadas e sapatas plásticas, carga de 50 kg por bandeja"
+        },
+        {
+          "name": "Estante de aço 92 x 40 x 198 cm",
+          "values": {
+            "Largura": 0.92,
+            "Profundidade": 0.4,
+            "Altura": 1.98
+          },
+          "description": "Estante de aço com colunas de cantoneira perfurada, cinco bandejas reforçadas e sapatas plásticas, carga de 50 kg por bandeja"
+        },
+        {
+          "name": "Estante de aço 92 x 60 x 198 cm",
+          "values": {
+            "Largura": 0.92,
+            "Profundidade": 0.6,
+            "Altura": 1.98
+          },
+          "description": "Estante de aço com colunas de cantoneira perfurada, cinco bandejas reforçadas e sapatas plásticas, carga de 50 kg por bandeja; para depósito"
+        }
+      ]
+    },
+    {
       "file": "components/furniture/exaustor-banheiro.ccomp",
       "thumbnail": "thumbnails/furniture/exaustor-banheiro.png",
       "component": "Exaustor de banheiro",
@@ -2801,6 +3044,48 @@
       ]
     },
     {
+      "file": "components/furniture/gondola.ccomp",
+      "thumbnail": "thumbnails/furniture/gondola.png",
+      "component": "Gôndola",
+      "author": "Francis Rebouças",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Profundidade",
+        "Altura"
+      ],
+      "types": [
+        {
+          "name": "Gôndola dupla 1,0 x 1,6 m",
+          "values": {
+            "Largura": 1.0,
+            "Profundidade": 0.9,
+            "Altura": 1.6
+          },
+          "description": "Gôndola dupla de aço pintado com costas perfuradas, base e quatro prateleiras de cada lado com porta-etiquetas de preço"
+        },
+        {
+          "name": "Gôndola dupla 1,0 x 2,0 m",
+          "values": {
+            "Largura": 1.0,
+            "Profundidade": 0.9,
+            "Altura": 2.0
+          },
+          "description": "Gôndola dupla de aço pintado com costas perfuradas, base e quatro prateleiras de cada lado com porta-etiquetas de preço"
+        },
+        {
+          "name": "Gôndola dupla 1,2 x 1,6 m",
+          "values": {
+            "Largura": 1.2,
+            "Profundidade": 0.9,
+            "Altura": 1.6
+          },
+          "description": "Gôndola dupla de aço pintado com costas perfuradas, base e quatro prateleiras de cada lado com porta-etiquetas de preço"
+        }
+      ]
+    },
+    {
       "file": "components/furniture/lava-loucas.ccomp",
       "thumbnail": "thumbnails/furniture/lava-loucas.png",
       "component": "Lava-louças",
@@ -2894,6 +3179,47 @@
       ]
     },
     {
+      "file": "components/furniture/longarina.ccomp",
+      "thumbnail": "thumbnails/furniture/longarina.png",
+      "component": "Longarina",
+      "author": "Francis Rebouças",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Lugares"
+      ],
+      "types": [
+        {
+          "name": "Longarina 3 lugares",
+          "values": {
+            "Lugares": 3.0
+          },
+          "description": "Longarina de espera com assentos e encostos de polipropileno sobre viga de aço e dois pés em T, com braços nas pontas"
+        },
+        {
+          "name": "Longarina 2 lugares",
+          "values": {
+            "Lugares": 2.0
+          },
+          "description": "Longarina de espera com assentos e encostos de polipropileno sobre viga de aço e dois pés em T, com braços nas pontas"
+        },
+        {
+          "name": "Longarina 4 lugares",
+          "values": {
+            "Lugares": 4.0
+          },
+          "description": "Longarina de espera com assentos e encostos de polipropileno sobre viga de aço e dois pés em T, com braços nas pontas"
+        },
+        {
+          "name": "Longarina 5 lugares",
+          "values": {
+            "Lugares": 5.0
+          },
+          "description": "Longarina de espera com assentos e encostos de polipropileno sobre viga de aço e dois pés em T, com braços nas pontas"
+        }
+      ]
+    },
+    {
       "file": "components/furniture/mesa-centro.ccomp",
       "thumbnail": "thumbnails/furniture/mesa-centro.png",
       "component": "Mesa de centro",
@@ -2966,6 +3292,36 @@
             "Altura": 0.75
           },
           "description": "Mesa redonda, 6 lugares"
+        }
+      ]
+    },
+    {
+      "file": "components/furniture/mesa-restaurante.ccomp",
+      "thumbnail": "thumbnails/furniture/mesa-restaurante.png",
+      "component": "Mesa de restaurante",
+      "author": "Francis Rebouças",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Lugares"
+      ],
+      "types": [
+        {
+          "name": "Mesa de restaurante 4 lugares",
+          "values": {
+            "Largura": 0.7,
+            "Lugares": 4.0
+          },
+          "description": "Mesa de restaurante com tampo de madeira sobre pé central de ferro fundido e cadeiras de aço com assento e encosto de madeira"
+        },
+        {
+          "name": "Mesa de restaurante 2 lugares",
+          "values": {
+            "Largura": 0.6,
+            "Lugares": 2.0
+          },
+          "description": "Mesa de restaurante com tampo de madeira sobre pé central de ferro fundido e cadeiras de aço com assento e encosto de madeira"
         }
       ]
     },
@@ -3210,6 +3566,48 @@
             "Elevacao": 1.2
           },
           "description": "Prateleira de banheiro de vidro temperado de 8 mm com bordas lapidadas, suportes e grade frontal de latão cromado"
+        }
+      ]
+    },
+    {
+      "file": "components/furniture/quadro-branco.ccomp",
+      "thumbnail": "thumbnails/furniture/quadro-branco.png",
+      "component": "Quadro branco",
+      "author": "Francis Rebouças",
+      "kind": "Furniture",
+      "mep": null,
+      "parameters": [
+        "Largura",
+        "Altura",
+        "Elevacao"
+      ],
+      "types": [
+        {
+          "name": "Quadro branco 200 x 120 cm",
+          "values": {
+            "Largura": 2.0,
+            "Altura": 1.2,
+            "Elevacao": 0.9
+          },
+          "description": "Quadro branco de laminado melamínico brilhante com moldura de alumínio anodizado e porta-pincel"
+        },
+        {
+          "name": "Quadro branco 120 x 90 cm",
+          "values": {
+            "Largura": 1.2,
+            "Altura": 0.9,
+            "Elevacao": 0.9
+          },
+          "description": "Quadro branco de laminado melamínico brilhante com moldura de alumínio anodizado e porta-pincel"
+        },
+        {
+          "name": "Quadro branco 300 x 120 cm",
+          "values": {
+            "Largura": 3.0,
+            "Altura": 1.2,
+            "Elevacao": 0.9
+          },
+          "description": "Quadro branco de laminado melamínico brilhante com moldura de alumínio anodizado e porta-pincel; para salas de aula"
         }
       ]
     },
@@ -4823,6 +5221,28 @@
             "Altura": 0.55
           },
           "description": "Banheira de embutir em acrílico, com saia frontal, válvula com ladrão e misturador de parede"
+        }
+      ]
+    },
+    {
+      "file": "components/plumbing/bebedouro.ccomp",
+      "thumbnail": "thumbnails/plumbing/bebedouro.png",
+      "component": "Bebedouro",
+      "author": "Francis Rebouças",
+      "kind": "Plumbing",
+      "mep": {
+        "Fixture": {
+          "drain_units": 1.0,
+          "hot_water": false,
+          "supply_weight": 0.1
+        }
+      },
+      "parameters": [],
+      "types": [
+        {
+          "name": "Bebedouro de pressão duplo acessível",
+          "values": {},
+          "description": "Bebedouro de pressão de aço inox de parede com duas cubas: uma a 1,00 m e outra acessível a 0,90 m com vão livre de 0,73 m, válvulas de jato e torneira para copo; água gelada (NBR 9050)"
         }
       ]
     },

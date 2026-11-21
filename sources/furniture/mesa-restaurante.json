@@ -1,0 +1,672 @@
+{
+  "component": "Mesa de restaurante",
+  "def": {
+    "kind": "Furniture",
+    "params": [
+      {
+        "name": "Largura",
+        "value": 0.7,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Lugares",
+        "value": 4,
+        "kind": "Number",
+        "instance": false
+      }
+    ],
+    "items": [
+      {
+        "name": "Conjunto simplificado",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2",
+            "y": "-Largura/2",
+            "z": "0",
+            "width": "Largura",
+            "depth": "Largura",
+            "height": "0.75"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Tampo",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2",
+            "y": "-Largura/2",
+            "z": "0.72",
+            "width": "Largura",
+            "depth": "Largura",
+            "height": "0.03"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Borda do tampo",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.005",
+            "y": "-Largura/2 + 0.005",
+            "z": "0.715",
+            "width": "Largura - 0.01",
+            "depth": "Largura - 0.01",
+            "height": "0.005"
+          }
+        },
+        "material": "Madeira escura",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pé central",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0",
+                "v": "0"
+              },
+              {
+                "u": "0.25",
+                "v": "0"
+              },
+              {
+                "u": "0.25",
+                "v": "0.015"
+              },
+              {
+                "u": "0.06",
+                "v": "0.04"
+              },
+              {
+                "u": "0.035",
+                "v": "0.08"
+              },
+              {
+                "u": "0.035",
+                "v": "0.7"
+              },
+              {
+                "u": "0.1",
+                "v": "0.705"
+              },
+              {
+                "u": "0.1",
+                "v": "0.72"
+              },
+              {
+                "u": "0",
+                "v": "0.72"
+              }
+            ],
+            "offset": "0",
+            "axis": "0",
+            "angle": "360"
+          }
+        },
+        "material": "Ferro fundido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cadeira 1 - assento",
+        "shape": {
+          "Box": {
+            "x": "0 - 0.21",
+            "y": "-Largura/2 - 0.21 + 0.12 - 0.21",
+            "z": "0.42",
+            "width": "0.42",
+            "depth": "0.42",
+            "height": "0.03"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cadeira 1 - encosto",
+        "shape": {
+          "Box": {
+            "x": "0 - 0.21 + 0.02",
+            "y": "-Largura/2 - 0.21 + 0.12 + -0.19 - 0.01",
+            "z": "0.63",
+            "width": "0.38",
+            "depth": "0.02",
+            "height": "0.2"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cadeira 1 - pé 1",
+        "shape": {
+          "Box": {
+            "x": "0 + -0.19 - 0.0125",
+            "y": "-Largura/2 - 0.21 + 0.12 + -0.19 - 0.0125",
+            "z": "0",
+            "width": "0.025",
+            "depth": "0.025",
+            "height": "0.85"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cadeira 1 - pé 2",
+        "shape": {
+          "Box": {
+            "x": "0 + 0.19 - 0.0125",
+            "y": "-Largura/2 - 0.21 + 0.12 + -0.19 - 0.0125",
+            "z": "0",
+            "width": "0.025",
+            "depth": "0.025",
+            "height": "0.85"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cadeira 1 - pé 3",
+        "shape": {
+          "Box": {
+            "x": "0 + -0.19 - 0.0125",
+            "y": "-Largura/2 - 0.21 + 0.12 + 0.19 - 0.0125",
+            "z": "0",
+            "width": "0.025",
+            "depth": "0.025",
+            "height": "0.42"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cadeira 1 - pé 4",
+        "shape": {
+          "Box": {
+            "x": "0 + 0.19 - 0.0125",
+            "y": "-Largura/2 - 0.21 + 0.12 + 0.19 - 0.0125",
+            "z": "0",
+            "width": "0.025",
+            "depth": "0.025",
+            "height": "0.42"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cadeira 2 - assento",
+        "shape": {
+          "Box": {
+            "x": "0 - 0.21",
+            "y": "Largura/2 + 0.21 - 0.12 - 0.21",
+            "z": "0.42",
+            "width": "0.42",
+            "depth": "0.42",
+            "height": "0.03"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cadeira 2 - encosto",
+        "shape": {
+          "Box": {
+            "x": "0 - 0.21 + 0.02",
+            "y": "Largura/2 + 0.21 - 0.12 + 0.19 - 0.01",
+            "z": "0.63",
+            "width": "0.38",
+            "depth": "0.02",
+            "height": "0.2"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cadeira 2 - pé 1",
+        "shape": {
+          "Box": {
+            "x": "0 + -0.19 - 0.0125",
+            "y": "Largura/2 + 0.21 - 0.12 + -0.19 - 0.0125",
+            "z": "0",
+            "width": "0.025",
+            "depth": "0.025",
+            "height": "0.42"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cadeira 2 - pé 2",
+        "shape": {
+          "Box": {
+            "x": "0 + 0.19 - 0.0125",
+            "y": "Largura/2 + 0.21 - 0.12 + -0.19 - 0.0125",
+            "z": "0",
+            "width": "0.025",
+            "depth": "0.025",
+            "height": "0.42"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cadeira 2 - pé 3",
+        "shape": {
+          "Box": {
+            "x": "0 + -0.19 - 0.0125",
+            "y": "Largura/2 + 0.21 - 0.12 + 0.19 - 0.0125",
+            "z": "0",
+            "width": "0.025",
+            "depth": "0.025",
+            "height": "0.85"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cadeira 2 - pé 4",
+        "shape": {
+          "Box": {
+            "x": "0 + 0.19 - 0.0125",
+            "y": "Largura/2 + 0.21 - 0.12 + 0.19 - 0.0125",
+            "z": "0",
+            "width": "0.025",
+            "depth": "0.025",
+            "height": "0.85"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cadeira 3 - assento",
+        "shape": {
+          "Box": {
+            "x": "0 + (min(1, max(0.005, Lugares - 2)))*(-Largura/2 - 0.21 + 0.12 - 0.21 - 0)",
+            "y": "0 + (min(1, max(0.005, Lugares - 2)))*(0 - 0.21 - 0)",
+            "z": "0.73 + (min(1, max(0.005, Lugares - 2)))*(0.42 - 0.73)",
+            "width": "(min(1, max(0.005, Lugares - 2)))*0.42",
+            "depth": "(min(1, max(0.005, Lugares - 2)))*0.42",
+            "height": "(min(1, max(0.005, Lugares - 2)))*0.03"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cadeira 3 - encosto",
+        "shape": {
+          "Box": {
+            "x": "0 + (min(1, max(0.005, Lugares - 2)))*(-Largura/2 - 0.21 + 0.12 + -0.19 - 0.01 - 0)",
+            "y": "0 + (min(1, max(0.005, Lugares - 2)))*(0 - 0.21 + 0.02 - 0)",
+            "z": "0.73 + (min(1, max(0.005, Lugares - 2)))*(0.63 - 0.73)",
+            "width": "(min(1, max(0.005, Lugares - 2)))*0.02",
+            "depth": "(min(1, max(0.005, Lugares - 2)))*0.38",
+            "height": "(min(1, max(0.005, Lugares - 2)))*0.2"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cadeira 3 - pé 1",
+        "shape": {
+          "Box": {
+            "x": "0 + (min(1, max(0.005, Lugares - 2)))*(-Largura/2 - 0.21 + 0.12 + -0.19 - 0.0125 - 0)",
+            "y": "0 + (min(1, max(0.005, Lugares - 2)))*(0 + -0.19 - 0.0125 - 0)",
+            "z": "0.73 + (min(1, max(0.005, Lugares - 2)))*(0 - 0.73)",
+            "width": "(min(1, max(0.005, Lugares - 2)))*0.025",
+            "depth": "(min(1, max(0.005, Lugares - 2)))*0.025",
+            "height": "(min(1, max(0.005, Lugares - 2)))*0.85"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cadeira 3 - pé 2",
+        "shape": {
+          "Box": {
+            "x": "0 + (min(1, max(0.005, Lugares - 2)))*(-Largura/2 - 0.21 + 0.12 + 0.19 - 0.0125 - 0)",
+            "y": "0 + (min(1, max(0.005, Lugares - 2)))*(0 + -0.19 - 0.0125 - 0)",
+            "z": "0.73 + (min(1, max(0.005, Lugares - 2)))*(0 - 0.73)",
+            "width": "(min(1, max(0.005, Lugares - 2)))*0.025",
+            "depth": "(min(1, max(0.005, Lugares - 2)))*0.025",
+            "height": "(min(1, max(0.005, Lugares - 2)))*0.42"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cadeira 3 - pé 3",
+        "shape": {
+          "Box": {
+            "x": "0 + (min(1, max(0.005, Lugares - 2)))*(-Largura/2 - 0.21 + 0.12 + -0.19 - 0.0125 - 0)",
+            "y": "0 + (min(1, max(0.005, Lugares - 2)))*(0 + 0.19 - 0.0125 - 0)",
+            "z": "0.73 + (min(1, max(0.005, Lugares - 2)))*(0 - 0.73)",
+            "width": "(min(1, max(0.005, Lugares - 2)))*0.025",
+            "depth": "(min(1, max(0.005, Lugares - 2)))*0.025",
+            "height": "(min(1, max(0.005, Lugares - 2)))*0.85"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cadeira 3 - pé 4",
+        "shape": {
+          "Box": {
+            "x": "0 + (min(1, max(0.005, Lugares - 2)))*(-Largura/2 - 0.21 + 0.12 + 0.19 - 0.0125 - 0)",
+            "y": "0 + (min(1, max(0.005, Lugares - 2)))*(0 + 0.19 - 0.0125 - 0)",
+            "z": "0.73 + (min(1, max(0.005, Lugares - 2)))*(0 - 0.73)",
+            "width": "(min(1, max(0.005, Lugares - 2)))*0.025",
+            "depth": "(min(1, max(0.005, Lugares - 2)))*0.025",
+            "height": "(min(1, max(0.005, Lugares - 2)))*0.42"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cadeira 4 - assento",
+        "shape": {
+          "Box": {
+            "x": "0 + (min(1, max(0.005, Lugares - 2)))*(Largura/2 + 0.21 - 0.12 - 0.21 - 0)",
+            "y": "0 + (min(1, max(0.005, Lugares - 2)))*(0 - 0.21 - 0)",
+            "z": "0.73 + (min(1, max(0.005, Lugares - 2)))*(0.42 - 0.73)",
+            "width": "(min(1, max(0.005, Lugares - 2)))*0.42",
+            "depth": "(min(1, max(0.005, Lugares - 2)))*0.42",
+            "height": "(min(1, max(0.005, Lugares - 2)))*0.03"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cadeira 4 - encosto",
+        "shape": {
+          "Box": {
+            "x": "0 + (min(1, max(0.005, Lugares - 2)))*(Largura/2 + 0.21 - 0.12 + 0.19 - 0.01 - 0)",
+            "y": "0 + (min(1, max(0.005, Lugares - 2)))*(0 - 0.21 + 0.02 - 0)",
+            "z": "0.73 + (min(1, max(0.005, Lugares - 2)))*(0.63 - 0.73)",
+            "width": "(min(1, max(0.005, Lugares - 2)))*0.02",
+            "depth": "(min(1, max(0.005, Lugares - 2)))*0.38",
+            "height": "(min(1, max(0.005, Lugares - 2)))*0.2"
+          }
+        },
+        "material": "Madeira",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cadeira 4 - pé 1",
+        "shape": {
+          "Box": {
+            "x": "0 + (min(1, max(0.005, Lugares - 2)))*(Largura/2 + 0.21 - 0.12 + -0.19 - 0.0125 - 0)",
+            "y": "0 + (min(1, max(0.005, Lugares - 2)))*(0 + -0.19 - 0.0125 - 0)",
+            "z": "0.73 + (min(1, max(0.005, Lugares - 2)))*(0 - 0.73)",
+            "width": "(min(1, max(0.005, Lugares - 2)))*0.025",
+            "depth": "(min(1, max(0.005, Lugares - 2)))*0.025",
+            "height": "(min(1, max(0.005, Lugares - 2)))*0.42"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cadeira 4 - pé 2",
+        "shape": {
+          "Box": {
+            "x": "0 + (min(1, max(0.005, Lugares - 2)))*(Largura/2 + 0.21 - 0.12 + 0.19 - 0.0125 - 0)",
+            "y": "0 + (min(1, max(0.005, Lugares - 2)))*(0 + -0.19 - 0.0125 - 0)",
+            "z": "0.73 + (min(1, max(0.005, Lugares - 2)))*(0 - 0.73)",
+            "width": "(min(1, max(0.005, Lugares - 2)))*0.025",
+            "depth": "(min(1, max(0.005, Lugares - 2)))*0.025",
+            "height": "(min(1, max(0.005, Lugares - 2)))*0.85"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cadeira 4 - pé 3",
+        "shape": {
+          "Box": {
+            "x": "0 + (min(1, max(0.005, Lugares - 2)))*(Largura/2 + 0.21 - 0.12 + -0.19 - 0.0125 - 0)",
+            "y": "0 + (min(1, max(0.005, Lugares - 2)))*(0 + 0.19 - 0.0125 - 0)",
+            "z": "0.73 + (min(1, max(0.005, Lugares - 2)))*(0 - 0.73)",
+            "width": "(min(1, max(0.005, Lugares - 2)))*0.025",
+            "depth": "(min(1, max(0.005, Lugares - 2)))*0.025",
+            "height": "(min(1, max(0.005, Lugares - 2)))*0.42"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cadeira 4 - pé 4",
+        "shape": {
+          "Box": {
+            "x": "0 + (min(1, max(0.005, Lugares - 2)))*(Largura/2 + 0.21 - 0.12 + 0.19 - 0.0125 - 0)",
+            "y": "0 + (min(1, max(0.005, Lugares - 2)))*(0 + 0.19 - 0.0125 - 0)",
+            "z": "0.73 + (min(1, max(0.005, Lugares - 2)))*(0 - 0.73)",
+            "width": "(min(1, max(0.005, Lugares - 2)))*0.025",
+            "depth": "(min(1, max(0.005, Lugares - 2)))*0.025",
+            "height": "(min(1, max(0.005, Lugares - 2)))*0.85"
+          }
+        },
+        "material": "Aço pintado preto",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      }
+    ]
+  },
+  "types": [
+    {
+      "name": "Mesa de restaurante 4 lugares",
+      "values": {},
+      "info": {
+        "description": "Mesa de restaurante com tampo de madeira sobre pé central de ferro fundido e cadeiras de aço com assento e encosto de madeira"
+      }
+    },
+    {
+      "name": "Mesa de restaurante 2 lugares",
+      "values": {
+        "Largura": 0.6,
+        "Lugares": 2
+      },
+      "info": {
+        "description": "Mesa de restaurante com tampo de madeira sobre pé central de ferro fundido e cadeiras de aço com assento e encosto de madeira"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "name": "Madeira escura",
+      "color": [
+        92,
+        62,
+        40
+      ],
+      "class": "Wood",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Ferro fundido",
+      "color": [
+        44,
+        44,
+        47
+      ],
+      "class": "Metal",
+      "finish": "Matte",
+      "transparency": 0
+    },
+    {
+      "name": "Aço pintado preto",
+      "color": [
+        30,
+        30,
+        32
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    }
+  ]
+}

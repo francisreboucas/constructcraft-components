@@ -1,0 +1,446 @@
+{
+  "component": "Conjunto escolar",
+  "def": {
+    "kind": "Furniture",
+    "params": [
+      {
+        "name": "AlturaMesa",
+        "value": 0.76,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "AlturaAssento",
+        "value": 0.46,
+        "kind": "Length",
+        "instance": false
+      }
+    ],
+    "items": [
+      {
+        "name": "Conjunto simplificado",
+        "shape": {
+          "Box": {
+            "x": "-0.3",
+            "y": "-0.75",
+            "z": "0",
+            "width": "0.6",
+            "depth": "1.05",
+            "height": "AlturaMesa"
+          }
+        },
+        "material": "Laminado branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Tampo",
+        "shape": {
+          "Box": {
+            "x": "-0.3",
+            "y": "-0.15",
+            "z": "AlturaMesa - 0.022",
+            "width": "0.6",
+            "depth": "0.45",
+            "height": "0.022"
+          }
+        },
+        "material": "Laminado branco",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Fita de borda",
+        "shape": {
+          "Box": {
+            "x": "-0.3",
+            "y": "-0.152",
+            "z": "AlturaMesa - 0.022",
+            "width": "0.6",
+            "depth": "0.002",
+            "height": "0.022"
+          }
+        },
+        "material": "Plástico azul",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pé da mesa 1",
+        "shape": {
+          "Box": {
+            "x": "-0.28",
+            "y": "-0.13",
+            "z": "0",
+            "width": "0.02",
+            "depth": "0.02",
+            "height": "AlturaMesa - 0.022"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pé da mesa 2",
+        "shape": {
+          "Box": {
+            "x": "0.26",
+            "y": "-0.13",
+            "z": "0",
+            "width": "0.02",
+            "depth": "0.02",
+            "height": "AlturaMesa - 0.022"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pé da mesa 3",
+        "shape": {
+          "Box": {
+            "x": "-0.28",
+            "y": "0.27",
+            "z": "0",
+            "width": "0.02",
+            "depth": "0.02",
+            "height": "AlturaMesa - 0.022"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pé da mesa 4",
+        "shape": {
+          "Box": {
+            "x": "0.26",
+            "y": "0.27",
+            "z": "0",
+            "width": "0.02",
+            "depth": "0.02",
+            "height": "AlturaMesa - 0.022"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porta-livros",
+        "shape": {
+          "Box": {
+            "x": "-0.27",
+            "y": "0",
+            "z": "AlturaMesa - 0.16",
+            "width": "0.54",
+            "depth": "0.28",
+            "height": "0.003"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travessa da mesa",
+        "shape": {
+          "Box": {
+            "x": "-0.27",
+            "y": "0.27",
+            "z": "0.12",
+            "width": "0.54",
+            "depth": "0.02",
+            "height": "0.02"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travessa lateral esquerda",
+        "shape": {
+          "Box": {
+            "x": "-0.28",
+            "y": "-0.13",
+            "z": "0.12",
+            "width": "0.02",
+            "depth": "0.4",
+            "height": "0.02"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travessa lateral direita",
+        "shape": {
+          "Box": {
+            "x": "0.26",
+            "y": "-0.13",
+            "z": "0.12",
+            "width": "0.02",
+            "depth": "0.4",
+            "height": "0.02"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Assento",
+        "shape": {
+          "Box": {
+            "x": "-0.2",
+            "y": "-0.5 - 0.2",
+            "z": "AlturaAssento - 0.02",
+            "width": "0.4",
+            "depth": "0.4",
+            "height": "0.02"
+          }
+        },
+        "material": "Plástico azul",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Encosto",
+        "shape": {
+          "Box": {
+            "x": "-0.19",
+            "y": "-0.5 - 0.22",
+            "z": "AlturaAssento + 0.15",
+            "width": "0.38",
+            "depth": "0.02",
+            "height": "0.22"
+          }
+        },
+        "material": "Plástico azul",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pé da cadeira 1",
+        "shape": {
+          "Box": {
+            "x": "-0.18",
+            "y": "-0.67",
+            "z": "0",
+            "width": "0.02",
+            "depth": "0.02",
+            "height": "AlturaAssento + 0.36"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pé da cadeira 2",
+        "shape": {
+          "Box": {
+            "x": "0.16",
+            "y": "-0.67",
+            "z": "0",
+            "width": "0.02",
+            "depth": "0.02",
+            "height": "AlturaAssento + 0.36"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pé da cadeira 3",
+        "shape": {
+          "Box": {
+            "x": "-0.18",
+            "y": "-0.35",
+            "z": "0",
+            "width": "0.02",
+            "depth": "0.02",
+            "height": "AlturaAssento + -0.02"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pé da cadeira 4",
+        "shape": {
+          "Box": {
+            "x": "0.16",
+            "y": "-0.35",
+            "z": "0",
+            "width": "0.02",
+            "depth": "0.02",
+            "height": "AlturaAssento + -0.02"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travessa da cadeira",
+        "shape": {
+          "Box": {
+            "x": "-0.17",
+            "y": "-0.67",
+            "z": "0.15",
+            "width": "0.34",
+            "depth": "0.02",
+            "height": "0.02"
+          }
+        },
+        "material": "Aço pintado cinza",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      }
+    ]
+  },
+  "types": [
+    {
+      "name": "Conjunto escolar CJA-06 (adulto)",
+      "values": {},
+      "info": {
+        "description": "Conjunto escolar (mesa e cadeira) de tubo de aço com tampo de MDF revestido de laminado, porta-livros, assento e encosto de polipropileno; tamanho 6, para alunos de 1,59 a 1,88 m (NBR 14006)"
+      }
+    },
+    {
+      "name": "Conjunto escolar CJA-04",
+      "values": {
+        "AlturaMesa": 0.64,
+        "AlturaAssento": 0.38
+      },
+      "info": {
+        "description": "Conjunto escolar (mesa e cadeira) de tubo de aço com tampo de MDF revestido de laminado, porta-livros, assento e encosto de polipropileno; tamanho 4, para alunos de 1,33 a 1,59 m"
+      }
+    },
+    {
+      "name": "Conjunto escolar CJA-03",
+      "values": {
+        "AlturaMesa": 0.59,
+        "AlturaAssento": 0.35
+      },
+      "info": {
+        "description": "Conjunto escolar (mesa e cadeira) de tubo de aço com tampo de MDF revestido de laminado, porta-livros, assento e encosto de polipropileno; tamanho 3, para alunos de 1,19 a 1,42 m"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "name": "Laminado branco",
+      "color": [
+        238,
+        238,
+        234
+      ],
+      "class": "Wood",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Plástico azul",
+      "color": [
+        126,
+        176,
+        222
+      ],
+      "class": "Plastic",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Aço pintado cinza",
+      "color": [
+        128,
+        130,
+        134
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    }
+  ]
+}

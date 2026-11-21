@@ -1,0 +1,630 @@
+{
+  "component": "Gôndola",
+  "def": {
+    "kind": "Furniture",
+    "params": [
+      {
+        "name": "Largura",
+        "value": 1.0,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Profundidade",
+        "value": 0.9,
+        "kind": "Length",
+        "instance": false
+      },
+      {
+        "name": "Altura",
+        "value": 1.6,
+        "kind": "Length",
+        "instance": false
+      }
+    ],
+    "items": [
+      {
+        "name": "Gôndola simplificada",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2",
+            "y": "-Profundidade/2",
+            "z": "0",
+            "width": "Largura",
+            "depth": "Profundidade",
+            "height": "Altura"
+          }
+        },
+        "material": "Aço pintado cinza claro",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Coluna esquerda",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2",
+            "y": "-0.03",
+            "z": "0",
+            "width": "0.03",
+            "depth": "0.06",
+            "height": "Altura"
+          }
+        },
+        "material": "Aço pintado cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pé esquerda",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2",
+            "y": "-Profundidade/2",
+            "z": "0",
+            "width": "0.03",
+            "depth": "Profundidade",
+            "height": "0.12"
+          }
+        },
+        "material": "Aço pintado cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Coluna direita",
+        "shape": {
+          "Box": {
+            "x": "Largura/2 - 0.03",
+            "y": "-0.03",
+            "z": "0",
+            "width": "0.03",
+            "depth": "0.06",
+            "height": "Altura"
+          }
+        },
+        "material": "Aço pintado cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Pé direita",
+        "shape": {
+          "Box": {
+            "x": "Largura/2 - 0.03",
+            "y": "-Profundidade/2",
+            "z": "0",
+            "width": "0.03",
+            "depth": "Profundidade",
+            "height": "0.12"
+          }
+        },
+        "material": "Aço pintado cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Costas perfuradas",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.03",
+            "y": "-0.01",
+            "z": "0.12",
+            "width": "Largura - 0.06",
+            "depth": "0.02",
+            "height": "Altura - 0.12"
+          }
+        },
+        "material": "Tela perfurada",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Travessa superior",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.03",
+            "y": "-0.02",
+            "z": "Altura - 0.04",
+            "width": "Largura - 0.06",
+            "depth": "0.04",
+            "height": "0.04"
+          }
+        },
+        "material": "Aço pintado cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Base - frente",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.03",
+            "y": "-Profundidade/2",
+            "z": "0.12",
+            "width": "Largura - 0.06",
+            "depth": "Profundidade/2 - 0.02",
+            "height": "0.02"
+          }
+        },
+        "material": "Aço pintado cinza claro",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Rodapé - frente",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.03",
+            "y": "-1*Profundidade/2 - 0",
+            "z": "0",
+            "width": "Largura - 0.06",
+            "depth": "0.02",
+            "height": "0.12"
+          }
+        },
+        "material": "Aço pintado cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Prateleira 1 - frente",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.03",
+            "y": "-0.02 - (Profundidade/2 - 0.02)*(1 - 0.12*1)",
+            "z": "0.12 + 1*(Altura - 0.25)/4.6",
+            "width": "Largura - 0.06",
+            "depth": "(Profundidade/2 - 0.02)*(1 - 0.12*1)",
+            "height": "0.02"
+          }
+        },
+        "material": "Aço pintado cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porta-etiqueta 1 - frente",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.03",
+            "y": "-0.02 - (Profundidade/2 - 0.02)*(1 - 0.12*1) - 0.004",
+            "z": "0.12 + 1*(Altura - 0.25)/4.6 - 0.02",
+            "width": "Largura - 0.06",
+            "depth": "0.004",
+            "height": "0.04"
+          }
+        },
+        "material": "Plástico translúcido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Prateleira 2 - frente",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.03",
+            "y": "-0.02 - (Profundidade/2 - 0.02)*(1 - 0.12*2)",
+            "z": "0.12 + 2*(Altura - 0.25)/4.6",
+            "width": "Largura - 0.06",
+            "depth": "(Profundidade/2 - 0.02)*(1 - 0.12*2)",
+            "height": "0.02"
+          }
+        },
+        "material": "Aço pintado cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porta-etiqueta 2 - frente",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.03",
+            "y": "-0.02 - (Profundidade/2 - 0.02)*(1 - 0.12*2) - 0.004",
+            "z": "0.12 + 2*(Altura - 0.25)/4.6 - 0.02",
+            "width": "Largura - 0.06",
+            "depth": "0.004",
+            "height": "0.04"
+          }
+        },
+        "material": "Plástico translúcido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Prateleira 3 - frente",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.03",
+            "y": "-0.02 - (Profundidade/2 - 0.02)*(1 - 0.12*3)",
+            "z": "0.12 + 3*(Altura - 0.25)/4.6",
+            "width": "Largura - 0.06",
+            "depth": "(Profundidade/2 - 0.02)*(1 - 0.12*3)",
+            "height": "0.02"
+          }
+        },
+        "material": "Aço pintado cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porta-etiqueta 3 - frente",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.03",
+            "y": "-0.02 - (Profundidade/2 - 0.02)*(1 - 0.12*3) - 0.004",
+            "z": "0.12 + 3*(Altura - 0.25)/4.6 - 0.02",
+            "width": "Largura - 0.06",
+            "depth": "0.004",
+            "height": "0.04"
+          }
+        },
+        "material": "Plástico translúcido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Prateleira 4 - frente",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.03",
+            "y": "-0.02 - (Profundidade/2 - 0.02)*(1 - 0.12*4)",
+            "z": "0.12 + 4*(Altura - 0.25)/4.6",
+            "width": "Largura - 0.06",
+            "depth": "(Profundidade/2 - 0.02)*(1 - 0.12*4)",
+            "height": "0.02"
+          }
+        },
+        "material": "Aço pintado cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porta-etiqueta 4 - frente",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.03",
+            "y": "-0.02 - (Profundidade/2 - 0.02)*(1 - 0.12*4) - 0.004",
+            "z": "0.12 + 4*(Altura - 0.25)/4.6 - 0.02",
+            "width": "Largura - 0.06",
+            "depth": "0.004",
+            "height": "0.04"
+          }
+        },
+        "material": "Plástico translúcido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Base - verso",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.03",
+            "y": "1*0.02",
+            "z": "0.12",
+            "width": "Largura - 0.06",
+            "depth": "Profundidade/2 - 0.02",
+            "height": "0.02"
+          }
+        },
+        "material": "Aço pintado cinza claro",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Rodapé - verso",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.03",
+            "y": "1*Profundidade/2 - 0.02",
+            "z": "0",
+            "width": "Largura - 0.06",
+            "depth": "0.02",
+            "height": "0.12"
+          }
+        },
+        "material": "Aço pintado cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Prateleira 1 - verso",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.03",
+            "y": "1*0.02",
+            "z": "0.12 + 1*(Altura - 0.25)/4.6",
+            "width": "Largura - 0.06",
+            "depth": "(Profundidade/2 - 0.02)*(1 - 0.12*1)",
+            "height": "0.02"
+          }
+        },
+        "material": "Aço pintado cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porta-etiqueta 1 - verso",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.03",
+            "y": "0.02 + (Profundidade/2 - 0.02)*(1 - 0.12*1)",
+            "z": "0.12 + 1*(Altura - 0.25)/4.6 - 0.02",
+            "width": "Largura - 0.06",
+            "depth": "0.004",
+            "height": "0.04"
+          }
+        },
+        "material": "Plástico translúcido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Prateleira 2 - verso",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.03",
+            "y": "1*0.02",
+            "z": "0.12 + 2*(Altura - 0.25)/4.6",
+            "width": "Largura - 0.06",
+            "depth": "(Profundidade/2 - 0.02)*(1 - 0.12*2)",
+            "height": "0.02"
+          }
+        },
+        "material": "Aço pintado cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porta-etiqueta 2 - verso",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.03",
+            "y": "0.02 + (Profundidade/2 - 0.02)*(1 - 0.12*2)",
+            "z": "0.12 + 2*(Altura - 0.25)/4.6 - 0.02",
+            "width": "Largura - 0.06",
+            "depth": "0.004",
+            "height": "0.04"
+          }
+        },
+        "material": "Plástico translúcido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Prateleira 3 - verso",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.03",
+            "y": "1*0.02",
+            "z": "0.12 + 3*(Altura - 0.25)/4.6",
+            "width": "Largura - 0.06",
+            "depth": "(Profundidade/2 - 0.02)*(1 - 0.12*3)",
+            "height": "0.02"
+          }
+        },
+        "material": "Aço pintado cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porta-etiqueta 3 - verso",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.03",
+            "y": "0.02 + (Profundidade/2 - 0.02)*(1 - 0.12*3)",
+            "z": "0.12 + 3*(Altura - 0.25)/4.6 - 0.02",
+            "width": "Largura - 0.06",
+            "depth": "0.004",
+            "height": "0.04"
+          }
+        },
+        "material": "Plástico translúcido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Prateleira 4 - verso",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.03",
+            "y": "1*0.02",
+            "z": "0.12 + 4*(Altura - 0.25)/4.6",
+            "width": "Largura - 0.06",
+            "depth": "(Profundidade/2 - 0.02)*(1 - 0.12*4)",
+            "height": "0.02"
+          }
+        },
+        "material": "Aço pintado cinza claro",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Porta-etiqueta 4 - verso",
+        "shape": {
+          "Box": {
+            "x": "-Largura/2 + 0.03",
+            "y": "0.02 + (Profundidade/2 - 0.02)*(1 - 0.12*4)",
+            "z": "0.12 + 4*(Altura - 0.25)/4.6 - 0.02",
+            "width": "Largura - 0.06",
+            "depth": "0.004",
+            "height": "0.04"
+          }
+        },
+        "material": "Plástico translúcido",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      }
+    ]
+  },
+  "types": [
+    {
+      "name": "Gôndola dupla 1,0 x 1,6 m",
+      "values": {},
+      "info": {
+        "description": "Gôndola dupla de aço pintado com costas perfuradas, base e quatro prateleiras de cada lado com porta-etiquetas de preço"
+      }
+    },
+    {
+      "name": "Gôndola dupla 1,0 x 2,0 m",
+      "values": {
+        "Altura": 2.0
+      },
+      "info": {
+        "description": "Gôndola dupla de aço pintado com costas perfuradas, base e quatro prateleiras de cada lado com porta-etiquetas de preço"
+      }
+    },
+    {
+      "name": "Gôndola dupla 1,2 x 1,6 m",
+      "values": {
+        "Largura": 1.2
+      },
+      "info": {
+        "description": "Gôndola dupla de aço pintado com costas perfuradas, base e quatro prateleiras de cada lado com porta-etiquetas de preço"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "name": "Aço pintado cinza claro",
+      "color": [
+        196,
+        198,
+        196
+      ],
+      "class": "Paint",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Tela perfurada",
+      "color": [
+        24,
+        24,
+        26
+      ],
+      "class": "Metal",
+      "finish": "Matte",
+      "transparency": 0.4
+    },
+    {
+      "name": "Plástico translúcido",
+      "color": [
+        222,
+        236,
+        240
+      ],
+      "class": "Plastic",
+      "finish": "Glossy",
+      "transparency": 0.6
+    }
+  ]
+}

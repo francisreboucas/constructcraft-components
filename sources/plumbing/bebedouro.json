@@ -1,0 +1,436 @@
+{
+  "component": "Bebedouro",
+  "def": {
+    "kind": "Plumbing",
+    "params": [],
+    "items": [
+      {
+        "name": "Bebedouro simplificado",
+        "shape": {
+          "Box": {
+            "x": "-0.42",
+            "y": "-0.45",
+            "z": "0.73",
+            "width": "0.84",
+            "depth": "0.45",
+            "height": "0.32"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": true,
+        "detail": {
+          "coarse": true,
+          "medium": false,
+          "fine": false
+        }
+      },
+      {
+        "name": "Gabinete acessível",
+        "shape": {
+          "Box": {
+            "x": "-0.42",
+            "y": "-0.42",
+            "z": "0.78",
+            "width": "0.42",
+            "depth": "0.42",
+            "height": "0.12"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cuba acessível",
+        "shape": {
+          "Box": {
+            "x": "-0.38",
+            "y": "-0.38",
+            "z": "0.865",
+            "width": "0.34",
+            "depth": "0.32",
+            "height": "0.036"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ralo acessível",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "-0.21",
+                "v": "0.865"
+              },
+              {
+                "u": "-0.19",
+                "v": "0.865"
+              },
+              {
+                "u": "-0.19",
+                "v": "0.867"
+              },
+              {
+                "u": "-0.21",
+                "v": "0.867"
+              }
+            ],
+            "offset": "-0.22",
+            "axis": "-0.21",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Bico acessível",
+        "shape": {
+          "Cylinder": {
+            "x": "-0.21",
+            "y": "-0.3",
+            "z": "0.865",
+            "radius": "0.012",
+            "height": "0.05"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Botão acessível",
+        "shape": {
+          "Box": {
+            "x": "-0.27",
+            "y": "-0.432",
+            "z": "0.82",
+            "width": "0.12",
+            "depth": "0.012",
+            "height": "0.04"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Gabinete padrão",
+        "shape": {
+          "Box": {
+            "x": "0",
+            "y": "-0.42",
+            "z": "0.88",
+            "width": "0.42",
+            "depth": "0.42",
+            "height": "0.12"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": true,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Cuba padrão",
+        "shape": {
+          "Box": {
+            "x": "0.04",
+            "y": "-0.38",
+            "z": "0.965",
+            "width": "0.34",
+            "depth": "0.32",
+            "height": "0.036"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Ralo padrão",
+        "shape": {
+          "Revolution": {
+            "plane": "Front",
+            "points": [
+              {
+                "u": "0.21",
+                "v": "0.965"
+              },
+              {
+                "u": "0.23",
+                "v": "0.965"
+              },
+              {
+                "u": "0.23",
+                "v": "0.967"
+              },
+              {
+                "u": "0.21",
+                "v": "0.967"
+              }
+            ],
+            "offset": "-0.22",
+            "axis": "0.21",
+            "angle": "360"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Bico padrão",
+        "shape": {
+          "Cylinder": {
+            "x": "0.21",
+            "y": "-0.3",
+            "z": "0.965",
+            "radius": "0.012",
+            "height": "0.05"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Botão padrão",
+        "shape": {
+          "Box": {
+            "x": "0.15",
+            "y": "-0.432",
+            "z": "0.92",
+            "width": "0.12",
+            "depth": "0.012",
+            "height": "0.04"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Unidade de refrigeração",
+        "shape": {
+          "Box": {
+            "x": "0.04",
+            "y": "-0.36",
+            "z": "0.25",
+            "width": "0.34",
+            "depth": "0.33",
+            "height": "0.6"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Grade de ventilação",
+        "shape": {
+          "Box": {
+            "x": "0.08",
+            "y": "-0.362",
+            "z": "0.32",
+            "width": "0.26",
+            "depth": "0.002",
+            "height": "0.2"
+          }
+        },
+        "material": "Tela perfurada",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Torneira para copo",
+        "shape": {
+          "Cylinder": {
+            "x": "0.33",
+            "y": "-0.35",
+            "z": "1",
+            "radius": "0.012",
+            "height": "0.12"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": true,
+          "fine": true
+        }
+      },
+      {
+        "name": "Placa de fixação",
+        "shape": {
+          "Box": {
+            "x": "-0.4",
+            "y": "-0.01",
+            "z": "0.7",
+            "width": "0.8",
+            "depth": "0.01",
+            "height": "0.36"
+          }
+        },
+        "material": "Inox escovado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      },
+      {
+        "name": "Sifão",
+        "shape": {
+          "Cylinder": {
+            "x": "-0.21",
+            "y": "-0.12",
+            "z": "0.45",
+            "radius": "0.016",
+            "height": "0.33"
+          }
+        },
+        "material": "Cromado",
+        "in_plan": false,
+        "detail": {
+          "coarse": false,
+          "medium": false,
+          "fine": true
+        }
+      }
+    ],
+    "mep": {
+      "Fixture": {
+        "drain_units": 1,
+        "supply_weight": 0.1,
+        "hot_water": false
+      }
+    },
+    "connectors": [
+      {
+        "name": "Água fria",
+        "system": "ColdWater",
+        "x": "0",
+        "y": "0",
+        "z": "0.6",
+        "direction": "Back",
+        "diameter": "0.02"
+      },
+      {
+        "name": "Esgoto",
+        "system": "Sanitary",
+        "x": "0",
+        "y": "0",
+        "z": "0.45",
+        "direction": "Back",
+        "diameter": "0.04"
+      },
+      {
+        "name": "Alimentação",
+        "system": "Power",
+        "x": "0.25",
+        "y": "0",
+        "z": "0.3",
+        "direction": "Back"
+      }
+    ]
+  },
+  "types": [
+    {
+      "name": "Bebedouro de pressão duplo acessível",
+      "values": {},
+      "info": {
+        "description": "Bebedouro de pressão de aço inox de parede com duas cubas: uma a 1,00 m e outra acessível a 0,90 m com vão livre de 0,73 m, válvulas de jato e torneira para copo; água gelada (NBR 9050)"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "name": "Inox escovado",
+      "color": [
+        198,
+        200,
+        203
+      ],
+      "class": "Metal",
+      "finish": "Satin",
+      "transparency": 0
+    },
+    {
+      "name": "Cromado",
+      "color": [
+        226,
+        229,
+        233
+      ],
+      "class": "Metal",
+      "finish": "Polished",
+      "transparency": 0
+    },
+    {
+      "name": "Tela perfurada",
+      "color": [
+        24,
+        24,
+        26
+      ],
+      "class": "Metal",
+      "finish": "Matte",
+      "transparency": 0.4
+    }
+  ]
+}

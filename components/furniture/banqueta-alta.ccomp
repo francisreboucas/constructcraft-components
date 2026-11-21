@@ -1,0 +1,513 @@
+(
+  format_version: 1,
+  generator: "ConstructCraft 0.12.0",
+  component: "Banqueta alta",
+  def: (
+    kind: Furniture,
+    params: [
+      (
+        name: "AlturaAssento",
+        value: 0.75,
+        kind: Length,
+        instance: false,
+      ),
+    ],
+    items: [
+      (
+        name: "Banqueta simplificada",
+        shape: Cylinder(
+          x: "0",
+          y: "0",
+          z: "0",
+          radius: "0.2",
+          height: "AlturaAssento",
+        ),
+        material: "Aço pintado preto",
+        in_plan: true,
+        detail: (
+          coarse: true,
+          medium: false,
+          fine: false,
+        ),
+      ),
+      (
+        name: "Assento",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "0",
+              v: "AlturaAssento - 0.05",
+            ),
+            (
+              u: "0.17",
+              v: "AlturaAssento - 0.05",
+            ),
+            (
+              u: "0.18",
+              v: "AlturaAssento - 0.02",
+              radius: "0.03",
+            ),
+            (
+              u: "0.16",
+              v: "AlturaAssento",
+            ),
+            (
+              u: "0",
+              v: "AlturaAssento + 0.005",
+            ),
+          ],
+          offset: "0",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "Tecido estofado preto",
+        in_plan: true,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Base do assento",
+        shape: Cylinder(
+          x: "0",
+          y: "0",
+          z: "AlturaAssento - 0.07",
+          radius: "0.15",
+          height: "0.02",
+        ),
+        material: "Aço pintado preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Pé 1",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "0.15*cos(45) - 0.01",
+              v: "0.15*sin(45) - 0.01",
+            ),
+            (
+              u: "0.15*cos(45) + 0.01",
+              v: "0.15*sin(45) - 0.01",
+            ),
+            (
+              u: "0.15*cos(45) + 0.01",
+              v: "0.15*sin(45) + 0.01",
+            ),
+            (
+              u: "0.15*cos(45) - 0.01",
+              v: "0.15*sin(45) + 0.01",
+            ),
+          ],
+          offset: "0",
+          depth: "0.01",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Haste 1",
+        shape: Box(
+          x: "0.15*cos(45) - 0.01",
+          y: "0.15*sin(45) - 0.01",
+          z: "0",
+          width: "0.02",
+          depth: "0.02",
+          height: "AlturaAssento - 0.07",
+        ),
+        material: "Aço pintado preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Pé 2",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "0.15*cos(135) - 0.01",
+              v: "0.15*sin(135) - 0.01",
+            ),
+            (
+              u: "0.15*cos(135) + 0.01",
+              v: "0.15*sin(135) - 0.01",
+            ),
+            (
+              u: "0.15*cos(135) + 0.01",
+              v: "0.15*sin(135) + 0.01",
+            ),
+            (
+              u: "0.15*cos(135) - 0.01",
+              v: "0.15*sin(135) + 0.01",
+            ),
+          ],
+          offset: "0",
+          depth: "0.01",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Haste 2",
+        shape: Box(
+          x: "0.15*cos(135) - 0.01",
+          y: "0.15*sin(135) - 0.01",
+          z: "0",
+          width: "0.02",
+          depth: "0.02",
+          height: "AlturaAssento - 0.07",
+        ),
+        material: "Aço pintado preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Pé 3",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "0.15*cos(225) - 0.01",
+              v: "0.15*sin(225) - 0.01",
+            ),
+            (
+              u: "0.15*cos(225) + 0.01",
+              v: "0.15*sin(225) - 0.01",
+            ),
+            (
+              u: "0.15*cos(225) + 0.01",
+              v: "0.15*sin(225) + 0.01",
+            ),
+            (
+              u: "0.15*cos(225) - 0.01",
+              v: "0.15*sin(225) + 0.01",
+            ),
+          ],
+          offset: "0",
+          depth: "0.01",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Haste 3",
+        shape: Box(
+          x: "0.15*cos(225) - 0.01",
+          y: "0.15*sin(225) - 0.01",
+          z: "0",
+          width: "0.02",
+          depth: "0.02",
+          height: "AlturaAssento - 0.07",
+        ),
+        material: "Aço pintado preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Pé 4",
+        shape: Profile(
+          plane: Plan,
+          points: [
+            (
+              u: "0.15*cos(315) - 0.01",
+              v: "0.15*sin(315) - 0.01",
+            ),
+            (
+              u: "0.15*cos(315) + 0.01",
+              v: "0.15*sin(315) - 0.01",
+            ),
+            (
+              u: "0.15*cos(315) + 0.01",
+              v: "0.15*sin(315) + 0.01",
+            ),
+            (
+              u: "0.15*cos(315) - 0.01",
+              v: "0.15*sin(315) + 0.01",
+            ),
+          ],
+          offset: "0",
+          depth: "0.01",
+        ),
+        material: "Plástico preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: false,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Haste 4",
+        shape: Box(
+          x: "0.15*cos(315) - 0.01",
+          y: "0.15*sin(315) - 0.01",
+          z: "0",
+          width: "0.02",
+          depth: "0.02",
+          height: "AlturaAssento - 0.07",
+        ),
+        material: "Aço pintado preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+      (
+        name: "Aro de apoio dos pés",
+        shape: Revolution(
+          plane: Front,
+          points: [
+            (
+              u: "0.17",
+              v: "0.27",
+            ),
+            (
+              u: "0.19",
+              v: "0.27",
+            ),
+            (
+              u: "0.19",
+              v: "0.29",
+            ),
+            (
+              u: "0.17",
+              v: "0.29",
+            ),
+          ],
+          offset: "0",
+          axis: "0",
+          angle: "360",
+        ),
+        material: "Aço pintado preto",
+        in_plan: false,
+        detail: (
+          coarse: false,
+          medium: true,
+          fine: true,
+        ),
+      ),
+    ],
+  ),
+  types: [
+    (
+      name: "Banqueta alta 75 cm (balcão)",
+      values: {
+        "AlturaAssento": 0.75,
+      },
+      info: (
+        type_mark: "",
+        description: "Banqueta de aço pintado com assento redondo estofado Ø36 cm, quatro pés abertos e aro de apoio para os pés; para bancadas a 1,05 m",
+        manufacturer: "",
+        model: "",
+        url: "",
+        keynote: "",
+        classification: "",
+        fire_rating: "",
+        comments: "",
+        cost: None,
+      ),
+    ),
+    (
+      name: "Banqueta alta 65 cm (cozinha)",
+      values: {
+        "AlturaAssento": 0.65,
+      },
+      info: (
+        type_mark: "",
+        description: "Banqueta de aço pintado com assento redondo estofado Ø36 cm, quatro pés abertos e aro de apoio para os pés; para bancadas a 0,90 m",
+        manufacturer: "",
+        model: "",
+        url: "",
+        keynote: "",
+        classification: "",
+        fire_rating: "",
+        comments: "",
+        cost: None,
+      ),
+    ),
+  ],
+  materials: [
+    (
+      name: "Aço pintado preto",
+      color: (30, 30, 32),
+      identity: (
+        description: "",
+        class: Metal,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (30, 30, 32),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Tecido estofado preto",
+      color: (38, 38, 42),
+      identity: (
+        description: "",
+        class: Generic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (38, 38, 42),
+        finish: Matte,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+    (
+      name: "Plástico preto",
+      color: (34, 34, 37),
+      identity: (
+        description: "",
+        class: Plastic,
+        comments: "",
+        keywords: "",
+        manufacturer: "",
+        model: "",
+        cost: None,
+        url: "",
+        keynote: "",
+        mark: "",
+      ),
+      graphics: (
+        use_appearance: false,
+        transparency: 0.0,
+        surface: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+        cut: (
+          foreground: r#None,
+          foreground_color: (0, 0, 0),
+          background: r#None,
+          background_color: (255, 255, 255),
+        ),
+      ),
+      appearance: (
+        color: (34, 34, 37),
+        finish: Satin,
+        description: "",
+      ),
+      physical: (
+        behavior: Isotropic,
+        density: None,
+        thermal_conductivity: None,
+        specific_heat: None,
+        thermal_expansion: None,
+        youngs_modulus: None,
+        poisson: None,
+        compressive_strength: None,
+        tensile_strength: None,
+      ),
+    ),
+  ],
+)
