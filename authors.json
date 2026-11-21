@@ -1,4 +1,19 @@
 {
   "default": "Francis Rebouças",
-  "components": {}
+  "components": {
+    "people/cidadao-terno-cinza": "00amza (Sketchfab), CC BY 4.0",
+    "people/cidadao-blusa-branca-saia": "00amza (Sketchfab), CC BY 4.0",
+    "people/cidadao-blazer-camiseta": "00amza (Sketchfab), CC BY 4.0",
+    "people/cidadao-terno-preto": "00amza (Sketchfab), CC BY 4.0",
+    "people/cidadao-tailleur": "00amza (Sketchfab), CC BY 4.0",
+    "people/cidadao-sueter-vermelho": "00amza (Sketchfab), CC BY 4.0",
+    "people/cidadao-saia-clara": "00amza (Sketchfab), CC BY 4.0",
+    "people/cidadao-saia-laranja": "00amza (Sketchfab), CC BY 4.0",
+    "people/cidadao-camisa-verde": "00amza (Sketchfab), CC BY 4.0",
+    "people/cidadao-camisa-azul": "00amza (Sketchfab), CC BY 4.0",
+    "people/cidadao-saia-vinho": "00amza (Sketchfab), CC BY 4.0",
+    "people/cidadao-calca-clara": "00amza (Sketchfab), CC BY 4.0",
+    "people/cidadao-blazer-gravata": "00amza (Sketchfab), CC BY 4.0",
+    "people/cidadao-camisa-aberta": "00amza (Sketchfab), CC BY 4.0"
+  }
 }

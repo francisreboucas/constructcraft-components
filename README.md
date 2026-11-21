@@ -43,7 +43,7 @@ Each file holds one component with several types (sizes). Types share the geomet
 | [`site`](components/site) | Outdoor floor elements: parking spaces (also angled, accessible and motorcycle), PARE legends with stop lines, floor legends, speed limits, lane arrows, pedestrian crossings, give-way triangles, bicycle and access symbols, hatched no-parking areas, speed humps, wheel stops and road studs. Every painted word (a space's number, PARE, ESCOLA, 40 km/h…) is a text parameter each placed element can change. Also park benches, litter and recycling bins, bike racks, bollards, picnic tables, street lights, swings, pergolas and tactile paving (NBR 16537) |
 | [`signage`](components/signage) | Signs with editable text: regulatory (speed limit, no parking, no turns…), STOP, give way, warning, regulated parking with additional information, green guide and blue services signs, emergency exit and fire equipment signs (NBR 13434), tactile room signs with braille (NBR 9050) and house numbers |
 | [`fire`](components/fire) | Fire protection: portable extinguishers (dry powder, CO2, water) on a wall bracket or a floor stand with the optional floor marking, hose cabinets with the angle valve, rolled hose and nozzle, a sidewalk fire department connection and a pillar hydrant, pendent sprinklers, smoke and heat detectors, manual call points, sounder beacons, an alarm control panel and emergency lights. The words on them (INCÊNDIO on the cabinet's glass and the connection's cover, the call point's and the panel's labels, FOGO on the beacon) are editable per element |
-| [`people`](components/people) | Generic human figures for scale: two people standing, a person walking, a person sitting (for seats at 45 cm), a child and a wheelchair user in a folding wheelchair with the NBR 9050 reference module (0.80 x 1.20 m) drawn in plan; smooth featureless mannequins (one continuous surface, the joints blended) in varied skin tones and clothes |
+| [`people`](components/people) | Fourteen low-poly people standing (men in suits, blazers and shirts, women in skirts, suits and trousers), from the Citizen NPC Pack by 00amza (CC BY 4.0, see below); and generic human figures for scale: two people standing, a person walking, a person sitting (for seats at 45 cm), a child and a wheelchair user in a folding wheelchair with the NBR 9050 reference module (0.80 x 1.20 m) drawn in plan; smooth featureless mannequins (one continuous surface, the joints blended) in varied skin tones and clothes |
 
 Plumbing fixtures carry their drainage fixture units (NBR 8160) and supply weights (NBR 5626), and electrical devices their device kind and load in VA (NBR 5410), so ConstructCraft sizes pipes and circuits with them. Names and descriptions are in Brazilian Portuguese, following the standards they cite.
 
@@ -67,6 +67,10 @@ The outdoor floor sources are generated too: [`tools/site.py`](tools/site.py) wr
 ## Compatibility
 
 `.ccomp` format version 1, built with ConstructCraft 0.12.0. Every component needs ConstructCraft 0.12.0 or later: they show different pieces at each detail level and use Blend and Sweep shapes. The motorcycle's steered front end and side stand, and the outdoor floor markings, are pieces scripted in Lua; the web viewer shows them as ConstructCraft baked them ([`tools/scripted.py`](tools/scripted.py)).
+
+## Third-party models
+
+The fourteen `people/cidadao-*` components come from ["Citizen NPC Pack 1 Character Lowpoly Mobile"](https://sketchfab.com/3d-models/citizen-npc-pack-1-character-lowpoly-mobile-711ee48bcf80426bbf98ad01e1b9da1c) by [00amza](https://sketchfab.com/00amza), licensed under [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/). Changes: turned to ConstructCraft's frame, the arms lowered from the A pose, and the photo textures reduced to flat colours ([`tools/pessoas_glb.py`](tools/pessoas_glb.py)).
 
 ## License
 

@@ -4308,6 +4308,230 @@
       ]
     },
     {
+      "file": "components/people/cidadao-blazer-camiseta.ccomp",
+      "thumbnail": "thumbnails/people/cidadao-blazer-camiseta.png",
+      "component": "Homem de blazer e camiseta",
+      "author": "00amza (Sketchfab), CC BY 4.0",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [],
+      "types": [
+        {
+          "name": "Homem de blazer e camiseta 1,90 m",
+          "values": {},
+          "description": "Pessoa em pé para escala, homem de blazer escuro sobre camiseta e calça, 1,90 m de altura (a frente para -Y). Modelo \"Citizen NPC Pack 1 Character Lowpoly Mobile\" de 00amza (sketchfab.com/00amza), CC BY 4.0; alterado: braços abaixados e texturas convertidas em cores sólidas"
+        }
+      ]
+    },
+    {
+      "file": "components/people/cidadao-blazer-gravata.ccomp",
+      "thumbnail": "thumbnails/people/cidadao-blazer-gravata.png",
+      "component": "Homem de blazer e gravata",
+      "author": "00amza (Sketchfab), CC BY 4.0",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [],
+      "types": [
+        {
+          "name": "Homem de blazer e gravata 1,88 m",
+          "values": {},
+          "description": "Pessoa em pé para escala, homem de blazer escuro, gravata e calça cinza, 1,88 m de altura (a frente para -Y). Modelo \"Citizen NPC Pack 1 Character Lowpoly Mobile\" de 00amza (sketchfab.com/00amza), CC BY 4.0; alterado: braços abaixados e texturas convertidas em cores sólidas"
+        }
+      ]
+    },
+    {
+      "file": "components/people/cidadao-blusa-branca-saia.ccomp",
+      "thumbnail": "thumbnails/people/cidadao-blusa-branca-saia.png",
+      "component": "Mulher de blusa branca e saia",
+      "author": "00amza (Sketchfab), CC BY 4.0",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [],
+      "types": [
+        {
+          "name": "Mulher de blusa branca e saia 1,81 m",
+          "values": {},
+          "description": "Pessoa em pé para escala, mulher de blusa branca, saia escura e salto, 1,81 m de altura (a frente para -Y). Modelo \"Citizen NPC Pack 1 Character Lowpoly Mobile\" de 00amza (sketchfab.com/00amza), CC BY 4.0; alterado: braços abaixados e texturas convertidas em cores sólidas"
+        }
+      ]
+    },
+    {
+      "file": "components/people/cidadao-calca-clara.ccomp",
+      "thumbnail": "thumbnails/people/cidadao-calca-clara.png",
+      "component": "Mulher de calça clara",
+      "author": "00amza (Sketchfab), CC BY 4.0",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [],
+      "types": [
+        {
+          "name": "Mulher de calça clara 1,80 m",
+          "values": {},
+          "description": "Pessoa em pé para escala, mulher de blusa clara, cinto vermelho e calça clara, 1,80 m de altura (a frente para -Y). Modelo \"Citizen NPC Pack 1 Character Lowpoly Mobile\" de 00amza (sketchfab.com/00amza), CC BY 4.0; alterado: braços abaixados e texturas convertidas em cores sólidas"
+        }
+      ]
+    },
+    {
+      "file": "components/people/cidadao-camisa-aberta.ccomp",
+      "thumbnail": "thumbnails/people/cidadao-camisa-aberta.png",
+      "component": "Homem de camisa aberta",
+      "author": "00amza (Sketchfab), CC BY 4.0",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [],
+      "types": [
+        {
+          "name": "Homem de camisa aberta 1,88 m",
+          "values": {},
+          "description": "Pessoa em pé para escala, homem de camisa azul-marinho aberta sobre camiseta e calça clara, 1,88 m de altura (a frente para -Y). Modelo \"Citizen NPC Pack 1 Character Lowpoly Mobile\" de 00amza (sketchfab.com/00amza), CC BY 4.0; alterado: braços abaixados e texturas convertidas em cores sólidas"
+        }
+      ]
+    },
+    {
+      "file": "components/people/cidadao-camisa-azul.ccomp",
+      "thumbnail": "thumbnails/people/cidadao-camisa-azul.png",
+      "component": "Homem de camisa azul",
+      "author": "00amza (Sketchfab), CC BY 4.0",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [],
+      "types": [
+        {
+          "name": "Homem de camisa azul 1,91 m",
+          "values": {},
+          "description": "Pessoa em pé para escala, homem de camisa azul e calça preta, 1,91 m de altura (a frente para -Y). Modelo \"Citizen NPC Pack 1 Character Lowpoly Mobile\" de 00amza (sketchfab.com/00amza), CC BY 4.0; alterado: braços abaixados e texturas convertidas em cores sólidas"
+        }
+      ]
+    },
+    {
+      "file": "components/people/cidadao-camisa-verde.ccomp",
+      "thumbnail": "thumbnails/people/cidadao-camisa-verde.png",
+      "component": "Homem de camisa verde",
+      "author": "00amza (Sketchfab), CC BY 4.0",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [],
+      "types": [
+        {
+          "name": "Homem de camisa verde 1,90 m",
+          "values": {},
+          "description": "Pessoa em pé para escala, homem de camisa verde aberta sobre camiseta, 1,90 m de altura (a frente para -Y). Modelo \"Citizen NPC Pack 1 Character Lowpoly Mobile\" de 00amza (sketchfab.com/00amza), CC BY 4.0; alterado: braços abaixados e texturas convertidas em cores sólidas"
+        }
+      ]
+    },
+    {
+      "file": "components/people/cidadao-saia-clara.ccomp",
+      "thumbnail": "thumbnails/people/cidadao-saia-clara.png",
+      "component": "Mulher de saia clara",
+      "author": "00amza (Sketchfab), CC BY 4.0",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [],
+      "types": [
+        {
+          "name": "Mulher de saia clara 1,80 m",
+          "values": {},
+          "description": "Pessoa em pé para escala, mulher de blusa branca e saia clara, 1,80 m de altura (a frente para -Y). Modelo \"Citizen NPC Pack 1 Character Lowpoly Mobile\" de 00amza (sketchfab.com/00amza), CC BY 4.0; alterado: braços abaixados e texturas convertidas em cores sólidas"
+        }
+      ]
+    },
+    {
+      "file": "components/people/cidadao-saia-laranja.ccomp",
+      "thumbnail": "thumbnails/people/cidadao-saia-laranja.png",
+      "component": "Mulher de saia laranja",
+      "author": "00amza (Sketchfab), CC BY 4.0",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [],
+      "types": [
+        {
+          "name": "Mulher de saia laranja 1,79 m",
+          "values": {},
+          "description": "Pessoa em pé para escala, mulher de blusa rosada e saia laranja, 1,79 m de altura (a frente para -Y). Modelo \"Citizen NPC Pack 1 Character Lowpoly Mobile\" de 00amza (sketchfab.com/00amza), CC BY 4.0; alterado: braços abaixados e texturas convertidas em cores sólidas"
+        }
+      ]
+    },
+    {
+      "file": "components/people/cidadao-saia-vinho.ccomp",
+      "thumbnail": "thumbnails/people/cidadao-saia-vinho.png",
+      "component": "Mulher de saia vinho",
+      "author": "00amza (Sketchfab), CC BY 4.0",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [],
+      "types": [
+        {
+          "name": "Mulher de saia vinho 1,77 m",
+          "values": {},
+          "description": "Pessoa em pé para escala, mulher de blusa clara e saia vinho, 1,77 m de altura (a frente para -Y). Modelo \"Citizen NPC Pack 1 Character Lowpoly Mobile\" de 00amza (sketchfab.com/00amza), CC BY 4.0; alterado: braços abaixados e texturas convertidas em cores sólidas"
+        }
+      ]
+    },
+    {
+      "file": "components/people/cidadao-sueter-vermelho.ccomp",
+      "thumbnail": "thumbnails/people/cidadao-sueter-vermelho.png",
+      "component": "Homem de suéter vermelho",
+      "author": "00amza (Sketchfab), CC BY 4.0",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [],
+      "types": [
+        {
+          "name": "Homem de suéter vermelho 1,90 m",
+          "values": {},
+          "description": "Pessoa em pé para escala, homem de suéter vermelho e calça cinza, 1,90 m de altura (a frente para -Y). Modelo \"Citizen NPC Pack 1 Character Lowpoly Mobile\" de 00amza (sketchfab.com/00amza), CC BY 4.0; alterado: braços abaixados e texturas convertidas em cores sólidas"
+        }
+      ]
+    },
+    {
+      "file": "components/people/cidadao-tailleur.ccomp",
+      "thumbnail": "thumbnails/people/cidadao-tailleur.png",
+      "component": "Mulher de tailleur",
+      "author": "00amza (Sketchfab), CC BY 4.0",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [],
+      "types": [
+        {
+          "name": "Mulher de tailleur 1,81 m",
+          "values": {},
+          "description": "Pessoa em pé para escala, mulher de tailleur cinza com saia, 1,81 m de altura (a frente para -Y). Modelo \"Citizen NPC Pack 1 Character Lowpoly Mobile\" de 00amza (sketchfab.com/00amza), CC BY 4.0; alterado: braços abaixados e texturas convertidas em cores sólidas"
+        }
+      ]
+    },
+    {
+      "file": "components/people/cidadao-terno-cinza.ccomp",
+      "thumbnail": "thumbnails/people/cidadao-terno-cinza.png",
+      "component": "Homem de terno cinza",
+      "author": "00amza (Sketchfab), CC BY 4.0",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [],
+      "types": [
+        {
+          "name": "Homem de terno cinza 1,90 m",
+          "values": {},
+          "description": "Pessoa em pé para escala, homem de terno cinza e gravata, 1,90 m de altura (a frente para -Y). Modelo \"Citizen NPC Pack 1 Character Lowpoly Mobile\" de 00amza (sketchfab.com/00amza), CC BY 4.0; alterado: braços abaixados e texturas convertidas em cores sólidas"
+        }
+      ]
+    },
+    {
+      "file": "components/people/cidadao-terno-preto.ccomp",
+      "thumbnail": "thumbnails/people/cidadao-terno-preto.png",
+      "component": "Homem de terno preto",
+      "author": "00amza (Sketchfab), CC BY 4.0",
+      "kind": "Generic",
+      "mep": null,
+      "parameters": [],
+      "types": [
+        {
+          "name": "Homem de terno preto 1,92 m",
+          "values": {},
+          "description": "Pessoa em pé para escala, homem de terno preto e camisa branca, 1,92 m de altura (a frente para -Y). Modelo \"Citizen NPC Pack 1 Character Lowpoly Mobile\" de 00amza (sketchfab.com/00amza), CC BY 4.0; alterado: braços abaixados e texturas convertidas em cores sólidas"
+        }
+      ]
+    },
+    {
       "file": "components/people/crianca.ccomp",
       "thumbnail": "thumbnails/people/crianca.png",
       "component": "Criança",
