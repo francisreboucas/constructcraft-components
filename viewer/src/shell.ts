@@ -33,6 +33,40 @@ function el<K extends keyof HTMLElementTagNameMap>(tag: K, className?: string, t
   return node;
 }
 
+/** Sites of the ConstructCraft network, in the order of the bar every one of them shows. */
+const NETWORK = [
+  { label: 'ConstructCraft', href: 'https://constructcraft.net/', current: false },
+  { label: '3D CraftHouse', href: '#/', current: true },
+  { label: 'Marketplace', href: 'https://marketplace.constructcraft.net/', current: false },
+  { label: 'Docs', href: 'https://constructcraft.net/#docs', current: false },
+] as const;
+
+/**
+ * The network bar: a thin dark strip above the frame, identical on
+ * constructcraft.net, 3D CraftHouse and the marketplace, with this site marked.
+ * Its few words live here rather than in the string tables.
+ */
+function networkBar(): HTMLElement {
+  const pt = lang === 'pt';
+  const bar = el('div', 'netbar');
+  const nav = el('nav', 'netbar-nav');
+  nav.setAttribute('aria-label', pt ? 'Rede ConstructCraft' : 'ConstructCraft network');
+  nav.append(el('span', 'netbar-label', pt ? 'Rede' : 'Network'));
+  for (const site of NETWORK) {
+    const link = el('a', undefined, site.label);
+    link.href = site.href;
+    if (site.current) link.setAttribute('aria-current', 'page');
+    nav.append(link);
+  }
+  const community = el('a', undefined, pt ? 'Comunidade' : 'Community');
+  community.href = 'https://constructcraft.net/#community';
+  nav.append(community);
+  const download = el('a', 'netbar-cta', pt ? 'Baixar o ConstructCraft' : 'Get ConstructCraft');
+  download.href = 'https://constructcraft.net/#download';
+  bar.append(nav, download);
+  return bar;
+}
+
 function footerLinks(className: string): HTMLElement {
   const box = el('div', className);
   const license = el('a', undefined, t.shell.license);
@@ -108,7 +142,7 @@ export function createShell(root: HTMLElement): Shell {
   pageFoot.append(footerLinks('page-foot-links'));
 
   app.append(skip, rail, main, pageFoot);
-  root.append(app);
+  root.append(networkBar(), app);
 
   // The sticky top bar's height, for elements that stick below it on narrow screens.
   new ResizeObserver(() => {
