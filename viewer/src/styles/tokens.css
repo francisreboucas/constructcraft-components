@@ -2,38 +2,52 @@
  * Design tokens. Light theme only.
  * The scene (grid, edges, dimension lines) reads its colours from these
  * properties through src/theme.ts, so change them here, not in TypeScript.
+ *
+ * The ConstructCraft Network palette, shared with constructcraft.net and the
+ * plugin marketplace: technical graphite, one construction-orange accent.
  */
 :root {
   /* Colour */
-  /* Palette taken from the logo (src/logo.png): its gradient runs from sky
-     blue #4cc0fd through #418dfb to indigo #6447fb. Neutrals are tinted
-     toward the same blue-violet hue. */
-  --paper: #eceff8;
-  --paper-raised: #f7f8fd;
-  --ink: #141a3a;
-  --ink-soft: #4a5276;
-  --rule: #c8cde3;
-  --accent: #4157ee; /* the only accent: dimension lines, the active marker and the primary action */
-  /* Text on the accent: white passes WCAG AA (5.5:1). The accent as text on
-     --paper (dimension labels) passes too (4.8:1). */
+  --paper: #ffffff;
+  --paper-raised: #f5f6f8;
+  --ink: #0b1220;
+  --ink-soft: #4a5468; /* 7.4:1 on --paper */
+  --rule: #e4e7ec;
+  --rule-strong: #d5dae2;
+  /* The orange for marks: dimension lines and labels, the active marker, focus.
+     As text on --paper it passes WCAG AA (5.2:1). */
+  --accent: #c2410c;
   --on-accent: #ffffff;
-  --rule-faint: color-mix(in srgb, var(--rule) 45%, transparent);
+  /* The orange of the primary action, with dark text on it (8.4:1). */
+  --action: #ff7a1a;
+  --action-hover: #ff8c3a;
+  --on-action: #0b1220;
+  --rule-faint: color-mix(in srgb, var(--rule) 70%, transparent);
+
+  /* The network bar, the same on every ConstructCraft site. */
+  --night-0: #05080f;
+  --night-line: #1a2233;
+  --night-line-2: #263048;
+  --night-muted: #9aa4b8;
+  --net-h: 40px;
 
   /* Layout */
-  --rail-width: 232px;
+  --rail-width: 248px;
   --panel-width: 360px;
-  --radius: 2px;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --shadow: 0 1px 2px rgba(11, 18, 32, 0.05), 0 16px 40px rgba(11, 18, 32, 0.08);
   --focus-ring: 2px solid var(--accent);
 
   /* Font families */
-  --font-display: 'Barlow Condensed', 'Arial Narrow', sans-serif;
-  --font-body: 'IBM Plex Sans', system-ui, sans-serif;
-  --font-data: 'IBM Plex Mono', ui-monospace, monospace;
+  --font-display: 'Inter Tight', Inter, system-ui, sans-serif;
+  --font-body: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-data: 'JetBrains Mono', ui-monospace, SFMono-Regular, Consolas, monospace;
 
-  /* Display text is set in uppercase with slight tracking (see .display). */
+  /* Display text: tight, sentence case (see .display). */
   --display-weight: 600;
-  --display-tracking: 0.04em;
-  --display-transform: uppercase;
+  --display-tracking: -0.02em;
+  --display-transform: none;
 
   /* Type scale (rem, ~1.25 ratio) */
   --text-xs: 0.75rem;
@@ -45,7 +59,7 @@
   --text-3xl: 2.441rem;
 
   --leading-tight: 1.15;
-  --leading-body: 1.5;
+  --leading-body: 1.55;
 
   /* Spacing scale (4 px base) */
   --space-1: 0.25rem;
