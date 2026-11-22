@@ -4,7 +4,7 @@
 
 import { ALL_ROUTE, FOLDERS, folderRoute, loadCatalog, type FolderId } from './catalog';
 import { LANGS, lang, setLang, t } from './i18n';
-import logoUrl from './logo.png';
+import logoUrl from './logo.svg';
 
 export const REPO_URL = 'https://github.com/francisreboucas/constructcraft-components';
 export const LICENSE_URL = `${REPO_URL}/blob/main/LICENSE`;
@@ -94,8 +94,8 @@ export function createShell(root: HTMLElement): Shell {
   const logo = el('img', 'brand-logo');
   logo.src = logoUrl;
   logo.alt = '';
-  logo.width = 40;
-  logo.height = 40;
+  logo.width = 30;
+  logo.height = 30;
   const brandText = el('span', 'brand-text');
   brandText.append(el('span', 'brand-name display', '3D CraftHouse'), el('span', 'brand-sub', t.shell.brandSub));
   brand.append(logo, brandText);
